@@ -3,15 +3,26 @@
     "title": "Renoir Boulanger",
     "description": "My personal website"
   },
+  "source": "./_content",
   "plugins": {
+    "metalsmith-drafts": true,
+    "metalsmith-slug": {},
+    "metalsmith-permalinks": {
+      "pattern": ":date/:slug",
+      "date": "YYYY/MM"
+    },
     "metalsmith-markdown-remarkable": {
        "breaks": true,
        "typographer": true
     },
+    "metalsmith-templates":  {
+      "engine": "handlebars"
+    },
     "./scripts/metalsmith-browserify.js": {
       "files": ["../scripts/loader.js"],
-      "dest": "bundle.js",
+      "dest": "js/main.js",
       "transforms": ["babelify"]
-    }
+    },
+    "metalsmith-html-minifier": {}
   }
 }
