@@ -8,15 +8,15 @@ slug: index
 <b class="pull-left" style="display:block;"><img width="150" alt="" itemprop="image" src="//www.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=500" /></b>
 
 My name’s [<span itemprop="givenName">Renoir</span> <span itemprop="familyName">Boulanger</span>][renoirboulanger-site],
-and I’m currently <em itemprop="jobTitle">Developer Operations Engineer</em> on the
-[WebPlatform project][webplatform] as part of the [<span itemprop-reverse="member"><abbr title="World Wide Web Consortium">W3C</abbr></span> Team][w3t].
-I have been building web sites for over <data value="14">fourteen</data> years at many levels such as backend,
-frontend and server deployment automation programming.
+and I’m currently <em itemprop="jobTitle">Developer Operations Engineer</em> on the [WebPlatform project][webplatform] as part of the [<span itemprop-reverse="member"><abbr title="World Wide Web Consortium">W3C</abbr></span> Team][w3t].
+
+I have been building web sites for over&nbsp;<data value="14">fourteen</data>&nbsp;years at many levels such as backend, frontend and server deployment automation programming.
+
 Prior to my current position, I’ve worked with several design studios in the province of Quebec.
+
 You can get my resume from my website in both [english][resume-english] and [french][resume-french].
 
-In addition to having an easily identifiable name on the web, you can find me on [Twitter][renoirb-twitter], [GitHub][renoirb-github]
-or at <a href="https://renoirboulanger.com/">renoirboulanger.com</a>.
+In addition to having an easily identifiable name on the web, you can find me on [Twitter][renoirb-twitter], [GitHub][renoirb-gh] or at <a href="https://renoirboulanger.com/">renoirboulanger.com</a>.
 
 </section>
 
