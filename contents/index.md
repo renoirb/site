@@ -1,5 +1,7 @@
 ---
 template: naked.html
+title: Myself
+slug: index
 ---
 
 <section class="about" itemscope id="is" itemtype="http://schema.org/Person">
