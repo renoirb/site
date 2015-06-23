@@ -4,5 +4,14 @@
     "description": "My personal website"
   },
   "plugins": {
+    "metalsmith-markdown-remarkable": {
+       "breaks": true,
+       "typographer": true
+    },
+    "./scripts/metalsmith-browserify.js": {
+      "files": ["../scripts/loader.js"],
+      "dest": "bundle.js",
+      "transforms": ["babelify"]
+    }
   }
 }
