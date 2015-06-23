@@ -3,17 +3,18 @@
     "title": "Renoir Boulanger",
     "description": "My personal website"
   },
-  "source": "./_content",
+  "source": "./contents",
   "plugins": {
     "metalsmith-drafts": true,
     "metalsmith-slug": {},
     "metalsmith-permalinks": {
-      "pattern": ":date/:slug",
+      "pattern": ":date/:title",
       "date": "YYYY/MM"
     },
     "metalsmith-markdown-remarkable": {
        "breaks": true,
-       "typographer": true
+       "typographer": true,
+       "html": true
     },
     "metalsmith-templates":  {
       "engine": "handlebars"

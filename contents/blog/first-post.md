@@ -1,6 +1,7 @@
 ---
-template: base.html
 title: Premier billet
+date: 2005-09-12
+template: base.html
 ---
 # Mon premier billet
 

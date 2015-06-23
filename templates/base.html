@@ -3,11 +3,72 @@
   <head>
     <meta charset=utf-8 />
     <title>{{ title }} ✪  Renoir Boulanger, Web Developer &amp; Operations engineer</title>
+    <link rel=stylesheet href="//renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
   </head>
-  <body>
-    <div id="contents">
-      {{{contents}}}
-    </div>
+  <body class="home page">
+    <header>
+        <div class="zone">
+            <div class="zone-tools container">
+                <div class="row">
+                    <nav class="span12">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="http://feeds.feedburner.com/RenoirBoulanger"><i class="icon-rss"></i> RSS</a></li>
+                            <li class="tooltipify" title="Me rejoindre"><a href="/fr/me-joindre"><i class="icon-envelope"></i> Me joindre</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="zone">
+            <div class="zone-top container">
+                <div class="row">
+                    <div class="span4 behavior-fade">
+                        <h1>
+                            <a href="https://renoirboulanger.com/">Renoir Boulanger</a>
+                            <small>Un geek social et Linuxien de nature</small>
+                        </h1>
+                    </div>
+                    <nav class="span8 behavior-fade">
+                      <ul id="menu-primary_navigation" class="nav nav-horiz nav-pills pull-right">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/resume">Resume</a></li>
+                      </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main" role="main" class="zone">
+      <div class="zone-content container">
+        <div class="wrap container" role="document">
+          <div class="content row">
+            <div class="main span12" role="main">
+              <div class=boxes>
+                {{{contents}}}
+              </div><!-- /.boxes -->
+            </div><!-- /.main -->
+          </div><!-- /.content -->
+        </div><!-- /.wrap -->
+      </div><!-- end of .zone-content.container -->
+    </div><!-- end of #main.zone -->
+    <footer id="content-info" role="contentinfo">
+        <div class="zone">
+            <div class="zone-bottom container">
+                <div class="zone-bottom-padding"></div>
+                <div class="zone-bottom-content">
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="copyrights span12">
+                            <small>© 2005-2015 <strong>Renoir Boulanger</strong>&nbsp;—&nbsp;<span>Déposé sous licence <abbr title="Creative Commons">CC</abbr>, Paternité <a href="http://creativecommons.org/licenses/by-sa/2.0/ca/deed.fr_CA" rel="external nofollow license">Partage des Conditions Initiales à l'Identique 2.0</a> (Canada)</span></small>
+                        </div>
+                        <div class="copyrights span12" style="font-size:0.8em;color:#C3C3C3;">
+                            <p>Designed by <a href="http://gabiviana.com/">@gabiviana</a>. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="/js/main.js"></script>
   </body>
 </html>

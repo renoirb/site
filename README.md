@@ -1,3 +1,4 @@
 # Renoir Boulanger personal Web Site
 
-Stuff
+My personal website, running as a static site.
+
