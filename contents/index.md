@@ -3,7 +3,7 @@ template: naked.html
 ---
 
 <section class="about" itemscope id="is" itemtype="http://schema.org/Person">
-<b class="pull-left" style="display:block;"><img width="150" height="200" alt="" itemprop="image" src="//www.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=500" /></b>
+<b class="pull-left" style="display:block;"><img width="150" alt="" itemprop="image" src="//www.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=500" /></b>
 
 My name’s [<span itemprop="givenName">Renoir</span> <span itemprop="familyName">Boulanger</span>][renoirboulanger-site],
 and I’m currently <em itemprop="jobTitle">Developer Operations Engineer</em> on the
