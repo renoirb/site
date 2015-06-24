@@ -1,5 +1,5 @@
 ---
-title: Curriculum Vit&aelig;
+title: Resume
 template: base.html
 ---
 
