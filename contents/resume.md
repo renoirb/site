@@ -5,7 +5,7 @@ template: base.html
 
 ## <span style="font-size:0.8em;">WEB DEVELOPER & OPERATIONS ENGINEER</span>
 
-*Note*: [English version available](/resume)
+*Note*: [Version française aussi disponible](/cv)
 
 ### Availability
 
@@ -14,7 +14,7 @@ Not available at the moment. Expected renewal date: August 2015
 
 ## Summary
 
-* ***Currently under contract for the W3C***, the international web standards organization chartering how web the web works
+* ***Currently under contract for the W3C***, the international web standards organization chartering the web
 * Maintained notably WebPlatform.org, the Web’s 25th anniversary site webat25.org (2014), the French Canadian artist union [«Union des Artistes»](https://uda.ca/) (2009), and the [City of Sherbrooke](http://www.ville.sherbrooke.qc.ca/) (2005)
 * **Zend Certified Engineer** PHP 5.3
 * **14 years of professional experience** in web development
@@ -410,9 +410,7 @@ CVS, Subversion, MySQL, Adobe Photoshop, CSS, HTML, Red Hat Linux 9
 
 ## Misc.
 
-<img style="float:right" src="/wp-content/themes/renoirb/assets/img/zce_logo.jpg" alt="Zend Certified Engineer PHP 5.3" lang="en" width="80" />
-
-### Certifications
+### Certifications <img style="float:right" src="//renoirboulanger.com/wp-content/themes/renoirb/assets/img/zce_logo.jpg" alt="Zend Certified Engineer PHP 5.3" lang="en" width="80" />
 
 * **2013** *Zend Certified Engineer PHP 5.3* ([Certification link](https://www.zend.com/en/yellow-pages/ZEND011184))
 * **2011** *Security clearance* checked by [PWGSC](http://www.tpsgc-pwgsc.gc.ca/comm/index-eng.html "Public Works and Government Services Canada"), required for all federal government providers
@@ -437,4 +435,4 @@ CVS, Subversion, MySQL, Adobe Photoshop, CSS, HTML, Red Hat Linux 9
 * Talk [How to manage a big scale HTML/CSS project](http://www.slideshare.net/renoirb/how-to-manage-a-big-scale-htmlcss-project), given at Make Web Not War 2011
 * [devLAB: Montreal’s latest developer meet-up](http://www.webnotwar.ca/devlab-montreals-latest-developer-meetup/) on Web Not War blog
 * Co-written an article about Open source software and the impacts while starting out a business (in french) [Logiciels libres en affaire](http://www.rezopointzero.com/2010/11/24/rien-quune-question-de-gros-bon-sens/)
-* Video interviews with the speakers during 2011 ConFoo Web Techno Conference
+

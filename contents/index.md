@@ -22,8 +22,8 @@ In addition to having an easily identifiable name on the web, you can find me on
 
   [renoirboulanger-site]: https://renoirboulanger.com/about/
   [w3t]: http://w3.org/People/#renoirb
-  [resume-english]: /resume.html
-  [resume-french]: /cv.html "C.V. de Renoir Boulanger en français"
+  [resume-english]: /resume
+  [resume-french]: /cv "C.V. de Renoir Boulanger en français"
   [renoirb-twitter]: https://twitter.com/renoirb "@renoirb on Twitter"
   [renoirb-gh]: https://github.com/renoirb "@renoirb on GitHub"
   [webplatform]: https://www.webplatform.org/

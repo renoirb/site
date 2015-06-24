@@ -1,8 +1,7 @@
 ---
-title: Curriculum Vit&aelig;
+title: Curriculum Vitæ
 template: base.html
 ---
-# RENOIR BOULANGER
 
 ## <span style="font-size:0.8em;">PROGRAMMEUR WEB & OPERATIONS</span>
 
@@ -370,32 +369,20 @@ CVS, Subversion, MySQL, Adobe Photoshop, CSS, HTML, RedHat Linux 9
 
 
 
-## Academique
+## Divers
 
-### Certifications
-<a href="https://www.zend.com/en/yellow-pages/ZEND011184" style="float:right"><img src="/wp-content/themes/renoirb/assets/img/zce_logo.jpg" alt="Zend Certified Engineer PHP 5.3" lang="en" width="80" /></a>
+### Certifications <img style="float:right" src="//renoirboulanger.com/wp-content/themes/renoirb/assets/img/zce_logo.jpg" alt="Zend Certified Engineer PHP 5.3" lang="en" width="80" />
 
 * **2013** *Zend Certified Engineer PHP 5.3* [Certification link](https://www.zend.com/en/yellow-pages/ZEND011184)
 * **2011** *Cote de sécurité* validée par service [PWGSC](http://www.tpsgc-pwgsc.gc.ca/comm/index-fra.html "Public Works and Government Services Canada"), requise pour les fournisseurs au Gouvernement fédéral
+* **2007** *IBM WebSphere DataPower* SOA Appliance (training)
 * **2008** *Accessibilité du web* (WCAG 1) à l’Institut Nazareth & Louis Braille (Université de Montreal)
 * **2004** Linux System Administration General (Brainbench Individual certification)
 
 
-### Formation
-
-* *2007* Formation «IBM WebSphere DataPower SOA Appliance»
-
-
-------------------------------------
-
-
-
-## Divers
-
 ### Merites et honneurs
 
 * **2011 Prix Grenier d’Or** catégorie Jeu et interactivité, pour l’application *Échange pas très équitable* [RED l’agence](http://agencered.ca/)
-* **2011** Élu au Conseil d’Administration de *W3Québec*
 
 
 ### Implications
@@ -408,10 +395,11 @@ CVS, Subversion, MySQL, Adobe Photoshop, CSS, HTML, RedHat Linux 9
 
 
 ### Publications
+
 * André Santanchè, (2013), chapitres traitant de «Markup architecture», «Events», et «Web Storage» dans  «[Mobile development using web technologies focusing on games](http://dl.acm.org/citation.cfm?doid=2526188.2528541&preflayout=flat)». [ACM](http://www.acm.org/) library
 * Conférence: [Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite), présenté au WebIn 2013, et au Web à Québec (WAQ) 2013
 * Conférence: [Comment gérer un projet grande échelle en HTML/CSS](http://www.slideshare.net/renoirb/how-to-manage-a-big-scale-htmlcss-project), présenté au Make Web Not War 2011
 * [devLAB: Montreal’s latest developer meetup](http://www.webnotwar.ca/devlab-montreals-latest-developer-meetup/) sur le site WebNotWar.ca
 * [Traduction libre de l’article: Why Microsoft is doing all this](http://www.webnotwar.ca/traduction-libre-de-l-article-171-why-the-amp-is-microsoft-doing-all-this-187/) sur le site WebNotWar.ca
 * Article o-écrit dans rezopointzero.ca: [Logiciels libres en affaire](http://www.rezopointzero.com/2010/11/24/rien-quune-question-de-gros-bon-sens/)
-* Entrevues avec conférenciers lors de ConFoo 2011
+
