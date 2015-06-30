@@ -1,8 +1,13 @@
+THIS_DIR:=$(shell pwd)
+
 build: node_modules/
-	node_modules/.bin/metalsmith
+		node build
 
 node_modules: package.json
-	npm install
+		npm install
+
+serve:
+		node serve
 
 rsync: build
 	@rsync --progress --delete -az -e ssh build/ newvm:/var/www/renoirb/

@@ -10,7 +10,7 @@ template: base.html
 
 ## <span id="availability">Disponibilité</span>
 
-Non-Disponible pour le moment. Date de renouvellement de contrat: Août 2015
+Non-Disponible pour le moment. Date de renouvellement de contrat: Février 2016
 
 
 
