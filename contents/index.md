@@ -10,7 +10,7 @@ slug: index
 My name’s [<span itemprop="givenName">Renoir</span> <span itemprop="familyName">Boulanger</span>][renoirboulanger-site],
 and I’m currently <em itemprop="jobTitle">Developer Operations Engineer</em> on the [WebPlatform project][webplatform] as part of the [<span itemprop-reverse="member"><abbr title="World Wide Web Consortium">W3C</abbr></span> Team][w3t].
 
-I have been building web sites for over&nbsp;<data value="14">fourteen</data>&nbsp;years at many levels such as backend, frontend and server deployment automation programming.
+I have been building web sites for over  <data value="14">fourteen</data>  years at many levels such as backend, frontend and server deployment automation programming.
 
 Prior to my current position, I’ve worked with several design studios in the province of Quebec.
 

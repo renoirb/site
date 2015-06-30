@@ -14,7 +14,8 @@ Not available at the moment. Expected renewal date: August 2015
 
 ## Summary
 
-* ***Currently under contract for the W3C***, the international web standards organization chartering the web
+* ***Currently under contract for the W3C***, the international web standards organization
+* **Contributor** to a number of **open-source** projects including *Mozilla Firefox Accounts*
 * Maintained notably WebPlatform.org, the Web’s 25th anniversary site webat25.org (2014), the French Canadian artist union [«Union des Artistes»](https://uda.ca/) (2009), and the [City of Sherbrooke](http://www.ville.sherbrooke.qc.ca/) (2005)
 * **Zend Certified Engineer** PHP 5.3
 * **14 years of professional experience** in web development
@@ -48,8 +49,7 @@ Not available at the moment. Expected renewal date: August 2015
 #### Most experienced with
 
 * PHP, HTML, CSS, Git
-* MySQL/MariaDB and replication
-* Frameworks: Symfony2, BackboneJS
+* Frameworks: Symfony2, WordPress
 
 
 #### Also worked with
@@ -77,7 +77,7 @@ You can review all **Salt-Stack configuration** states in [the **webplatform/sal
 
 ##### WebPlatform Accounts
 
-[Forked and deployed *Mozilla Firefox Accounts*][wpd-fxa-fork] to provide decoupled Identity service for WebPlatform.org.
+[Forked and deployed *Mozilla Firefox Accounts*][wpd-fxa-fork] to provide decoupled Identity service for **WebPlatform.org**.
 
 WebPlatform uses multiple separate web applications such as WordPress, MediaWiki, an annotation system written in Python and a few others.
 
@@ -88,12 +88,17 @@ the W3C has [one of their specs using it][w3c-notes-spec].
 
 Proof of concept was made for MediaWiki in PHP, you can [see it in action from this YouTube video][fxa-wiki-yt].
 
+My work caught attention and they [appreciated my contribution][mozillan-renoirb].
+
 See some code:
 
 * [FxA content server][gh-fxa-content]
 * [FxA auth server][gh-fxa-auth]
 * [FxA profile server][gh-fxa-profile] (note; we are using the profile server as the "source of truth")
+* [Pull request (in progress) to merge upstream to Firefox Accounts][fxa-pr]
+* **Also related;** an upcoming Composer module is in the works to allow SSO using this system. Two plusings will be published in the same time as the module: One for MediaWiki, and another for WordPress
 
+  [mozillan-renoirb]: https://mozillians.org/en-US/u/renoirb/ "Link to my Mozillan profile"
   [fxa-how]: https://docs.webplatform.org/wiki/WPD:Projects/SSO/How_we_implemented_it
   [wpd-notes]: https://notes.webplatform.org/stream
   [w3c-notes-spec]: http://www.w3.org/TR/annotation-model/
@@ -102,7 +107,7 @@ See some code:
   [gh-fxa-content]: https://github.com/webplatform/fxa-content-server/compare/master...webplatform:webplatform-customizations
   [gh-fxa-auth]: https://github.com/webplatform/fxa-auth-server/compare/master...webplatform:webplatform-customizations
   [gh-fxa-profile]: https://github.com/mozilla/fxa-profile-server/compare/master...webplatform:webplatform-customizations
-
+  [fxa-pr]: https://github.com/mozilla/fxa-content-server/pull/2637
 
 ##### Billing system <small>PHP coding sandbox</small>
 
