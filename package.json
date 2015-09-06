@@ -6,13 +6,16 @@
   "license": "CC-BY-4.0",
   "dependencies": {
     "babelify": "^6.0.2",
+    "bower-files": "^3.11.1",
     "browserify": "^10.2.4",
     "handlebars": "^2.0",
     "metalsmith": "1.7.0",
+    "metalsmith-changed": "~0.2",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-html-minifier": "^1.1.0",
     "metalsmith-markdown-remarkable": "^0.1.1",
     "metalsmith-permalinks": "^0.1.1",
+    "metalsmith-serve": "0.0.3",
     "metalsmith-slug": "0.0.5",
     "metalsmith-templates": "^0.7.0",
     "mkdirp": "^0.5.0",
@@ -21,8 +24,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/renoirb/site.git"
-  },
-  "scripts": {
-    "build": "node index.js"
   }
 }

@@ -1,20 +1,18 @@
 ---
-title: Resume
-template: base.html
+title: Resumé
+template: resume.html
 ---
-<style>body { line-height: 30px; font-size: 16px; } li { line-height: 30px; }</style>
 
-## <span style="font-size:0.8em;" id="availability">WEB DEVELOPER & OPERATIONS ENGINEER</span>
-
-* **Next availability** around September 2015
+* **Next availability** around Feb. 2016
 * **Home** Montréal, Québec, Canada
 * [Curriculum vitæe aussi disponible en français](http://renoirb.com/cv "Resume also available in french")
 * Native french speaker, fluent in English
 * To reach me, please use *hello* AT my *full name* DOT *com*
+* You can also [use this calendar tool](https://calendly.com/renoirb) to have a chat with me
 * [`BC06 4BAD 27BF 89C1`](https://renoirboulanger.com/.well-known/keybase.txt)
 
 
-<div id="summary">
+<section id="summary">
 
 
 ## Summary
@@ -36,7 +34,7 @@ Prior to shift my focus on operations and performance, I’ve worked with severa
 * Familiar with issues in large-scale systems
 
 
-</div><div id="skills">
+</section><section id="skills">
 
 
 ## Skills
@@ -50,7 +48,7 @@ Prior to shift my focus on operations and performance, I’ve worked with severa
 </table>
 
 
-</div><div id="code">
+</section><section id="work-samples">
 
 
 ## Work samples
@@ -113,9 +111,11 @@ My contributions to this project was the following;
 * [Create a MariaDB cluster with replication over SSL with Salt Stack](https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/)
 
 
-</div>
+</section><section id="experience">
 
 ## Work experience
+
+<div class="experience-block">
 
 ### Developer Operations Engineer <small>**W3C/MIT**, *aug 2013 - current*</small>
 
@@ -156,6 +156,8 @@ During that time, my responsibilities also included to:
 
 Salt Stack, Vagrant, Grunt, MediaWiki, Hypothes.is, Git, Gerrit, NGINX, Varnish, Fastly, NodeJS, ElasticSearch, BackboneJS, Firefox Accounts
 
+</div><div class="experience-block">
+
 ### JavaScript developer <small>**TEKsystems**, *jun 2013 - aug 2013*</small>
 
 Montreal, Quebec
@@ -165,6 +167,7 @@ Develop JavaScript modules for an existing web application managing user account
 * Set in place processes and improved existing code to improve quality and automate migration into the client’s infrastructure
 * Built a few modules: AJAX communication layer, API communication management layer with an existing ODAF layer.
 
+</div><div class="experience-block">
 
 ### Web developer <small>**Ericsson**, *feb 2012 - jun 2013* (consultant)</small>
 
@@ -182,6 +185,8 @@ Participated in a cloud management web application that could control VMs in mul
 
 Symfony2, Doctrine 2, Git, Sublime Text 2, LESS, Twitter Bootstrap, NodeJS, Puppet, Vagrant, jQuery, UnderscoreJS, Chef
 
+
+</div><div class="experience-block">
 
 
 
@@ -258,6 +263,7 @@ The version I worked on isn’t online anymore, but you [can still see a few scr
 Git, Balsamiq mockups, Adobe Photoshop, SMACSS, OOCSS, Twitter Bootstrap, Apache Solr, JavaScript, PHP, symfony 1.x, Atlassian Jira, Atlassian Confluence, Netbeans, VirtualBox, Compass, SASS, SCSS
 
 
+</div><div class="experience-block">
 
 
 ### Web developer <small>**Groupe Informatique TechSolCom Inc.**,  *oct 2006 - aug 2009*</small>
@@ -326,9 +332,11 @@ Participated in the web based back-office portal providing data to a outlet geo-
 
 ##### Jacob.ca
 
-* Store locator utility
-* Built XML schemas and XSL stylesheets and JavaScript clients
-* Contact us form communicating to a cross-origin site endpoint
+* Built a JavaScript AJAX Outlet locator, reading data from XML files
+
+* Built XML schema and XSL stylesheets
+
+* Contact us form, using cross-origin frame communication
 
 
 ##### Téléfilm Canada
@@ -343,6 +351,7 @@ Integrated two web application mockups, creating a theme for the YUI2 markup lib
 JSF, Struts, Agile, Ant, IBM WebSphere DataPower, Apache Tomcat, JDBC, SNMP, Maven2, Adobe Photoshop, WAI WCAG, Balsamiq mockups, XML, XSL, YUI2, Mootools, Debian Linux, RedHat Enterprise Linux, Confluence, Jira, jQuery, MySQL, JSON, WSDL, Subversion, CVS
 
 
+</div><div class="experience-block">
 
 ### Web developer <small>**Câble Axion Digitel Inc.**,  *oct 2005 - nov 2006*</small>
 
@@ -363,9 +372,10 @@ Câble Axion is a cable service provider. Their network coverage goes from Montr
 * Time sheet and intervention report views
 
 
+</div><div class="experience-block">
 
 
-### Web developer <small>**Inexis solution web Inc.**, *feb 2003 - nov 2006* (Self employed)</small>
+### Web developer <small>**Inexis solution web Inc.**, *feb 2002 - nov 2006* (Self employed)</small>
 
 Sherbrooke, Québec
 
@@ -407,6 +417,10 @@ Participated in a few of their OSCommerce modules and also upgraded their intern
 #### Tools
 
 CVS, Subversion, MySQL, Adobe Photoshop, CSS, HTML, Red Hat Linux 9
+
+</div><div class="experience-block">
+</section>
+
 
 ------------------------------------
 

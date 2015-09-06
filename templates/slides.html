@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>{{ title }} — by Renoir Boulanger</title>
+  </head>
+  <body>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    <script>
+      var hljs = remark.highlighter.engine;
+      var slideshow = remark.create({
+          highlightStyle: 'mookai',
+          highlightLanguage: 'remark',
+          sourceUrl: 'slides.txt'
+        }) ;
+      hljs.registerLanguage('remark', function () {
+        return {
+          contains: [
+            {
+              className: 'keyword',
+              begin: '^#+[^\n]+',
+              relevance: 10
+            },
+            {
+              className: 'comment',
+              begin: '^---?'
+            },
+            {
+              className: 'string',
+              begin: '^\\w+:'
+            },
+            {
+              className: 'literal',
+              begin: '\\{\\{', end: '\\}\\}'
+            },
+            {
+              className: 'string',
+              begin: '\\.\\w+'
+            }
+          ]
+        };
+      });
+    </script>
+  </body>
+</html>
