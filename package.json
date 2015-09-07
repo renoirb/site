@@ -6,7 +6,6 @@
   "license": "CC-BY-4.0",
   "dependencies": {
     "babelify": "^6.0.2",
-    "bower-files": "^3.11.1",
     "browserify": "^10.2.4",
     "express": "^4.13.3",
     "handlebars": "^2.0",
