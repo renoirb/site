@@ -1,6 +1,6 @@
 ---
-title: Curriculum Vitæ
-template: base.html
+title: Curriculum Vitae
+layout: base.html
 ---
 
 ## <span style="font-size:0.8em;">PROGRAMMEUR WEB & OPERATIONS</span>

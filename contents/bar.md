@@ -1,6 +1,6 @@
 ---
 title: bar
-template: base.html
+layout: base.html
 draft: true
 ---
 

@@ -1,6 +1,6 @@
 ---
-template: naked.html
 title: Myself
+layout: naked.html
 slug: index
 ---
 

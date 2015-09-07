@@ -1,6 +1,6 @@
 ---
 title: Resumé
-template: resume.html
+layout: resume.html
 ---
 
 * **Next availability** around Feb. 2016

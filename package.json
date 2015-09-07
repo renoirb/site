@@ -5,21 +5,23 @@
   "author": "Renoir Boulanger <hello@renoirboulanger.com>",
   "license": "CC-BY-4.0",
   "dependencies": {
-    "babelify": "^6.0.2",
-    "browserify": "^10.2.4",
-    "express": "^4.13.3",
-    "handlebars": "^2.0",
-    "metalsmith": "1.7.0",
-    "metalsmith-changed": "~0.2",
-    "metalsmith-drafts": "0.0.1",
-    "metalsmith-html-minifier": "^1.1.0",
-    "metalsmith-markdown-remarkable": "^0.1.1",
-    "metalsmith-permalinks": "^0.1.1",
-    "metalsmith-slug": "0.0.5",
-    "metalsmith-templates": "^0.7.0",
-    "metalsmith-prism": "^2.0.0",
+    "promise": "^7.0",
     "mkdirp": "^0.5.0",
-    "promise": "^7.0"
+    "express": "^4.13.3",
+    "babelify": "~6",
+    "browserify": "~11",
+    "handlebars": "~4.0",
+    "metalsmith": "~2",
+    "metalsmith-prism": "~2.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-changed": "~0.2",
+    "metalsmith-layouts": "~1.4",
+    "metalsmith-html-minifier": "^1.1.0",
+    "metalsmith-markdown-remarkable": "^0.1.1"
+  },
+  "scripts": {
+    "build": "node --harmony build",
+    "serve": "node serve"
   },
   "repository": {
     "type": "git",

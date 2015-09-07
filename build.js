@@ -1,20 +1,17 @@
-var  metalsmith = require('metalsmith')
-    ,babelify = require('babelify')
-    ,handlebars = require('handlebars')
-    ,drafts = require('metalsmith-drafts')
-    ,minifier = require('metalsmith-html-minifier')
-    ,permalinks = require('metalsmith-permalinks')
-    ,markdown = require('metalsmith-markdown-remarkable')
-    ,slug = require('metalsmith-slug')
-    ,templates = require('metalsmith-templates')
-    ,changed = require('metalsmith-changed')
+var  fs         = require('fs')
+    ,metalsmith = require('metalsmith')
+    ,babelify   = require('babelify')
+    ,Handlebars = require('handlebars')
+    ,drafts     = require('metalsmith-drafts')
+    ,minifier   = require('metalsmith-html-minifier')
+    ,markdown   = require('metalsmith-markdown-remarkable')
+    ,layouts    = require('metalsmith-layouts')
+    ,changed    = require('metalsmith-changed')
     ,browserify = require('./lib/metalsmith/browserify.js')
-    ,prism = require('metalsmith-prism')
-    ,pkg = require('./package.json');
+    ,prism      = require('metalsmith-prism')
+    ,pkg        = require('./package.json');
 
-var siteBuild = metalsmith(__dirname)
-  .clean(false)
-  .use(changed())
+metalsmith(__dirname)
   .metadata({
     site: {
       title: pkg.name,
@@ -24,26 +21,26 @@ var siteBuild = metalsmith(__dirname)
   })
   .source('./contents')
   .destination('./build')
+  .clean(false)
+  .use(changed())
   .use(drafts())
-  .use(permalinks({
-    pattern: ":date/:title",
-    date: "YYYY/MM"
-  }))
-  .use(browserify({
-    files: ["../lib/loader.js"],
-    dest: "js/main.js",
-    transforms: ["babelify"]
-  }))
   .use(markdown('full', {
     breaks: true,
     typographer: true,
     html: true
   }))
   .use(prism())
-  .use(templates({
-    engine: "handlebars"
+  .use(layouts({
+    engine: "handlebars",
+    default: "base.html",
+    pattern: "**/*.md"
   }))
-  .use(minifier())
+  .use(browserify({
+    files: ["../lib/loader.js"],
+    dest: "js/main.js",
+    transforms: ["babelify"]
+  }))
+  //.use(minifier())
   .build(function (err) {
     if (err) {
       console.log(err);

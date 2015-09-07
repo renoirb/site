@@ -1,6 +1,6 @@
 ---
-template: base.html
 title: foo
+layout: base.html
 draft: true
 ---
 
