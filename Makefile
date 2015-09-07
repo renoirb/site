@@ -1,16 +1,13 @@
 THIS_DIR:=$(shell pwd)
 
 build: node_modules/
-	node build
+		node build
 
 node_modules: package.json
-	npm install
+		npm install
 
 local:
-			docker run -ti --rm \
-			-p 80:80 \
-			-v $(THIS_DIR)/build:/usr/share/nginx/html \
-			nginx
+		node serve
 
 rsync: build
 	@rsync --progress --delete -az -e ssh build/ newvm:/var/www/renoirb/
