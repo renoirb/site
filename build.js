@@ -9,6 +9,7 @@ var  metalsmith = require('metalsmith')
     ,templates = require('metalsmith-templates')
     ,changed = require('metalsmith-changed')
     ,browserify = require('./lib/metalsmith/browserify.js')
+    ,prism = require('metalsmith-prism')
     ,pkg = require('./package.json');
 
 var siteBuild = metalsmith(__dirname)
@@ -38,6 +39,7 @@ var siteBuild = metalsmith(__dirname)
     typographer: true,
     html: true
   }))
+  .use(prism())
   .use(templates({
     engine: "handlebars"
   }))
