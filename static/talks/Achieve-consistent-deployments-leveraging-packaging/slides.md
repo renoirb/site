@@ -1,23 +1,40 @@
-class: first-slide
+class: first-slide mozilla-branded center
 # Achieve *consistent* deployments by leveraging<br/> *packaging*
 
+![Mozilla](images/mdn-logo.png)
 
 .footnote[
-  [@renoirb][renoirb] DevOps Montreal ✪ Sept. 2015
+ **bit.ly/2015-devopsmtl-packaging** ✪ [@renoirb](https://renoirboulanger.com/) ✪ *DevOps* Montréal ✪ Sept. 2015
 ]
 
 
+
+---
+class: webplatform invert-slide-number
+
+# Last two years for me...
+
+.footnote[
+ **hint** press "*p*" to see speaker notes.
+]
+
 ???
 
-* What I dived in...
-** Set of ~20 VMs with configuration management
-** Not everything was  systematically source-controlled and automated
-** Lots of patched-up code forking original project
-** Lots of manual operations; secrets, hosts file, etc.
-** But. It was great, *almost* all VMs could be built from scratch
-** If Salt Master break ... recreate everything.
-** If wiki break ... add another backend, update Fastly.
-** If service died, ... aremysitesup.com would tell me ... *NO* monitoring.
+- Set of ~20 VMs with configuration management
+
+- Not everything was  systematically source-controlled and automated
+
+- Lots of patched-up code forking original project
+
+- Lots of manual operations; secrets, hosts file, etc.
+
+- But. It was great, *almost* all VMs could be built from scratch
+
+- If Salt Master break ... recreate everything.
+
+- If wiki break ... add another backend, update Fastly.
+
+- If service died, ... aremysitesup.com would tell me ... *NO* monitoring.
 
 
 
@@ -27,29 +44,44 @@ class: webat25
 
 ???
 
-* Had to learn quickly how HTTP caching works
-* Could not trust all metrics, under the "fire"
+- Had to learn quickly how HTTP caching works
+
+- Could not trust all metrics, under the "fire"
 
 
 
 ---
 class: center spike
 
-# Spike!
 
 ![Requests burst during worldwide announcement of Web 25th anniversary, recorded by Piwik](images/webat25_requests_mar_may_2014.png)
 --
 ![Requests between March 9th to 15, recorded by Fastly, the site's CDN](images/webat25-fastly-caching-overview-20140309.png)
 
 
+
+---
+class: toc
+
+## Contents
+
+1. **Quick theory**
+1. Live demo!
+
+
+
 ---
 class: brave-new-world
 
 
+
 ???
-* VMs are cheap
-* Code as infrastructure
-* Lots of tools
+
+- VMs are cheap
+
+- Code as infrastructure
+
+- Lots of tools
 
 
 
@@ -63,7 +95,7 @@ class: brave-new-world
 
 
 ---
-## Package management is borken
+## Package management is *borken*
 
 --
 * Can’t rely on OS level packages
@@ -77,30 +109,24 @@ class: brave-new-world
 
 
 ---
-class: all-the-things center
+## Goals
 
-## Package *ALL THE THINGS* !!1
+--
+* Can reproduce any component. Anytime.
+
+--
+* As **FAST** as possible
+
+--
+* Reduce risk of broken dependencies
+
 
 
 
 ---
-## Objectives
+class: rules
 
-* Can reproduce any component
-
---
-* Each web app has its VCS repo
-
---
-* Consistent web app deployment
-
---
-* *NO* manual operations
-
-
-
----
-## Enforce rules
+## Rules
 
 --
 1. Give yourself tools to work *locally*
@@ -109,9 +135,82 @@ class: all-the-things center
 2. Build from vanilla, Config. Manager sets a "base" system
 
 --
-3. Package everything
+3. *NO* manual operations
+
+--
+4. **Don’t** rely on external
+
+--
+5. Source control everything
+
+--
+6. **Package \*everything\***
 
 
+---
+class: all-the-things center
+
+## Package *ALL THE THINGS* !!1
+
+
+
+---
+## Deployment flow
+
+--
+1. Get code from VCS
+
+--
+2. Create runtime environment (e.g. nvm, rvm, virtualenv)
+
+--
+3. Initialize dependency managers (e.g. npm, bower, browserify)
+
+--
+4. Install web app utilities (e.g. pm2, systemd) + Service watcher (e.g. Monit)
+
+--
+5. ...
+
+--
+6. Make it a package, upload for HTTP download
+
+
+???
+
+**Containers**
+
+- Steps 2-5 would be launched within `Dockerfile`
+
+- Step 6 End with commit + tag
+
+- If your project has tests (lucky you!) stop everything
+
+- Push to package repository
+
+**Don’t use containers**
+
+- Make it a tarball
+
+- Push to package repository
+
+**Combine**
+
+- Steps 2-3 generates an output directory
+
+- Step 4, tag, make a tarball, use SHA
+
+- Push to package repository
+
+
+---
+
+## Go crazy!
+
+--
+```terminal
+make init && make deps && make install
+```
 
 ---
 
@@ -144,38 +243,6 @@ runtime, etc.
 
 
 
-
----
-## Deployment flow
-
-1. Get code from VCS
-2. Create runtime environment (e.g. nvm, rvm, virtualenv)
-3. Initialize dependency managers (e.g. npm, bower, browserify)
-4. Install web app utilities (e.g. pm2, systemd) + Service watcher (e.g. Monit)
-5. Do anything you want!
-6. Make it a package!
-7. Upload it to your own repository!
-
-**If you have QA tools, make it break!**
-
-        make init && make deps && make install
-
-.footnote[\* speaker notes, "p"]
-???
-**Containers**
-* Steps 2-5 would be launched within `Dockerfile`
-* Step 6 End with commit + tag
-* If your project has tests (lucky you!) stop everything
-* Push to package repository
-
-**Don’t use containers**
-* Make it a tarball
-* Push to package repository
-
-**Combine**
-* Steps 2-3 generates an output directory
-* Step 4, tag, make a tarball, use SHA
-* Push to package repository
 
 ---
 ## Do not rely on external!
