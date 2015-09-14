@@ -12,6 +12,17 @@ var server = app.listen(process.env.PORT || 4000, function() {
 
         console.log('Connection from ', socket.id);
 
+        /**
+         * Sync slides state accross different browsers.
+         *
+         * Server side forwarder. This is what takes care of forwarding
+         * send events to other browsers.
+         *
+         * Thanks to:
+         * - https://github.com/outsideris/Socket.IO-Slide
+         * - https://bocoup.com/weblog/synchronizing-html5-slides-with-node-js/
+         * - https://github.com/epeli/geekslides
+         */
         socket.on('nextSlide', function slideshowSocketFooHandler (eventObj) {
             socket.broadcast.emit('triggerSlide', eventObj);
             console.log('triggerSlide emitted', eventObj);

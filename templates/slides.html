@@ -14,23 +14,59 @@
         var  slideshow = remark.create({
                 sourceUrl: 'slides.md'
              })
-            ,_id = 1234
             ,clientId = null
-            ,socket = io.connect();
+            ,socket = io.connect()
+            ,currentSlide = 1;
 
+        /**
+         * Parse query param to retrieve the ?id= value from address bar.
+         */
+        var parseQueryParams = function(queryString) {
+            var match = queryString.match(/([^?#]*)(#.*)?$/);
+            if (!match) return null;
+            var queryParams = match[1].split("&");
+            var id;
+            for (var idx in queryParams) {
+                var param = queryParams[idx];
+                if (param.split("=")[0] === "id") {
+                    id = param.split("=")[1];
+                }
+            }
+            return id;
+        }
+        // We set an id so that we can give same URL of the slides to the audience
+        // without risking too much confusion. Unless they have very good eyes :)
+        var _id = parseQueryParams(window.location.search);
+
+        /**
+         * Sync slides state accross different browsers.
+         *
+         * Client code. Should work only when using `make serve` from a local clone.
+         *
+         * See `serve.js` at the root of this project to see how events are forwarded.
+         *
+         * Thanks to:
+         * - https://github.com/outsideris/Socket.IO-Slide
+         * - https://bocoup.com/weblog/synchronizing-html5-slides-with-node-js/
+         * - https://github.com/epeli/geekslides
+         */
         socket.on('connect', function socketConnectHandler () {
             clientId = socket.id||null;
+
+            console.log('Hi, this is ' + clientId + ' connected to session ' + _id);
+
             socket.on('triggerSlide', function socketioTriggerSlideHandler (obj) {
-                console.log('triggerSlide received by', obj);
-                if (obj.nextSlide && obj.id === _id) {
+                if (obj.nextSlide && obj.id === _id && clientId !== obj.clientId) {
+                    console.log('triggerSlide received and forwarded by', clientId, currentSlide, obj.nextSlide);
                     slideshow.gotoSlide(obj.nextSlide);
                 }
             });
 
-            slideshow.on('showSlide', function slideshowShowSlideHandler (slide) {
-                var nextSlide = slide.getSlideIndex() + 1;
+            slideshow.on('beforeShowSlide', function slideshowShowSlideHandler (slide) {
+                currentSlide = slide.getSlideIndex();
+                var nextSlide = currentSlide + 1;
                 socket.emit('nextSlide', {id: _id, nextSlide: nextSlide, clientId: clientId});
-                console.log('slideshow.on showSlide emitted');
+                console.log('slideshow.on beforeShowSlide emitted by', clientId, slide.getSlideIndex());
             });
         });
 

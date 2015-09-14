@@ -1,6 +1,8 @@
 class: first-slide mozilla-branded center
 # Achieve *consistent* deployments by leveraging<br/> *packaging*
 
+
+
 ![Mozilla](images/mdn-logo.png)
 
 .footnote[
@@ -27,6 +29,10 @@ class: first-slide mozilla-branded center
 >
 > — Edsger Dijkstra
 
+.footnote[
+ **hint** press "*p*" to see speaker notes.
+]
+
 ???
 
 - Think again on how you do things
@@ -42,8 +48,9 @@ background-image: url(images/webplatform-docsprint-perk.jpg)
 
 # My last two years
 
+
 .footnote[
- **hint** press "*p*" to see speaker notes.
+ **webplatform.org** perk given during our first *DocSprint*
 ]
 
 ???
@@ -56,11 +63,12 @@ background-image: url(images/webplatform-docsprint-perk.jpg)
 - To change secrets or add servers, had to find the right file and edit manually
 - Not *everything* was source-controlled
 - Patched-up code forking original project
+- Adding SSL to the whole site was a lot of work!
 
 
 
 ---
-class: webplatform-components invert-text
+class: center middle background-title invert-text webplatform-components
 background-image: url(images/webplatform-components.jpg)
 
 # Lots of moving parts
@@ -75,13 +83,20 @@ background-image: url(images/webplatform-components.jpg)
 **The stack**
 
 - Running almost every web technology
--
+- Not all projects were easy put a theme on
+- Running Salt Stack, with bunch of repo clones rsyncing' around
+
 
 
 ---
 class: center
 
 ## Re-build every service from scratch *still* takes *~5 hours!*
+
+???
+
+- Most of what takes time is dependencies
+- Had to do two full datacenter migration(!)
 
 
 
@@ -91,12 +106,13 @@ class: toc
 ## Contents
 
 1. **Why packaging?**
+1. Ideas
 1. Live demo!
 
 
 
 ---
-class: center middle content-step
+class: center middle
 
 # Why packaging?
 
@@ -109,12 +125,17 @@ background-image: url(images/Aldous_Huxley_Brave_New_World_cover.jpg)
 
 ???
 
+**Pros**
 - VMs are cheap
-
 - Code as infrastructure
+- Lots of tools at many levels
+- Automation is easier than before
 
-- Lots of tools
+**Cons**
+- automation waste
+- dependency on Heroic efforts
 
+ref: [Forbes 11 DevOps bottlenecks][forbes-common-devops-bottlenecks]
 
 
 
@@ -128,7 +149,11 @@ background-image: url(images/Aldous_Huxley_Brave_New_World_cover.jpg)
 * Version pinning == unreliable
 
 --
-* Runtime environments
+* Don’t rely on OS level runtime!
+
+???
+
+In order to consistently rebuild a server you have to question everything, all the time.
 
 
 
@@ -185,6 +210,7 @@ class: all-the-things center
 ]
 
 
+
 ---
 ### ... tools to help you not rely on external
 
@@ -217,39 +243,37 @@ class: all-the-things center
 
 **Containers**
 
-- Steps 2-5 would be launched within `Dockerfile`
+- Steps 2-4 would be launched within `Dockerfile`
+- Results in a commit + tag
+- If your project has tests (lucky you!) and breaks, stop everything
+- Push to package Docker Hub
 
-- Step 6 End with commit + tag
-
-- If your project has tests (lucky you!) stop everything
-
-- Push to package repository
 
 **Don’t use containers**
 
 - Make it a tarball
-
 - Push to package repository
+- Make it a DEB/RPM
+
 
 **Combine**
 
-- Steps 2-3 generates an output directory
-
-- Step 4, tag, make a tarball, use SHA
-
+- Steps 1-3 fills a directory
+- Then; tag, tarball, use SHA
 - Push to package repository
+- Use package to deploy
 
 
+**NEXT Slide** is about *Schrodigner's box*
 
 ---
 class: middle
 
-<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/Sysadmin?src=hash">#Sysadmin</a> <a href="https://twitter.com/hashtag/Truth?src=hash">#Truth</a> <a href="https://twitter.com/hashtag/Backup?src=hash">#Backup</a> <a href="https://twitter.com/hashtag/Unix?src=hash">#Unix</a> <a href="https://twitter.com/hashtag/Linux?src=hash">#Linux</a> <a href="http://t.co/suCT9ME58V">pic.twitter.com/suCT9ME58V</a></p>&mdash; nixCraft (@nixcraft) <a href="https://twitter.com/nixcraft/status/613636528439345152">June 24, 2015</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><img src="images/schrodigner-backup.png" alt="Schrodigner's Backup. The condition of any backup is unknown until a restore is attempted." style="max-width:100%;max-height:100%;" /><a href="https://twitter.com/hashtag/Sysadmin?src=hash">#Sysadmin</a> <a href="https://twitter.com/hashtag/Truth?src=hash">#Truth</a> <a href="https://twitter.com/hashtag/Backup?src=hash">#Backup</a> <a href="https://twitter.com/hashtag/Unix?src=hash">#Unix</a> <a href="https://twitter.com/hashtag/Linux?src=hash">#Linux</a> <a href="http://t.co/suCT9ME58V">pic.twitter.com/suCT9ME58V</a></p>&mdash; nixCraft (@nixcraft) <a href="https://twitter.com/nixcraft/status/613636528439345152">June 24, 2015</a></blockquote>
 
 
 
 ---
-
 ## Go crazy!
 
 --
@@ -260,236 +284,99 @@ make init && make deps && make install
 
 
 ---
+class: center middle background-title invert-text
+background-image: url(images/build-your-server-with-git-repos.png)
+
+### Build systematically from **VCS**
+
+
+
+---
+class: center middle background-title invert-text
+background-image: url(images/build-assets-steps.png)
+
+### As long as you **enable** your colleagues
+
+
+
+---
+class: center middle background-title invert-text
+background-image: url(images/encapsulating-complexity.png)
+
+### And **encapsulate** complexity
+
+
+
+---
+class: toc
+
+## Contents
+
+1. Why packaging?
+1. **Ideas**
+1. Live demo!
+
+
+
+---
 class: middle center
-# Not finished yet
+
+# Ideas
 
 
 
 ---
 
-You need a *basesystem* for ALL nodes, monitoring,
-runtime, etc.
+## Some I experimented with
 
-* Local **Vagrant Sandbox**
- * Build packages
- * Work on service specific scripts
-* Use the same in any environment!
-
-### 1. Give yourself tools to work locally
-
-### 2. Build from vanilla, CM to setup "base" system
-
-.footnote[Try it yourself in Vagrant [renoirb/salt-basesystem][basesystem-example]]
-
----
-### 3. Package everything; think self-contained!
-
-1. Leverage dependency management and env vars (e.g. .npmrc)
-
-2. Be explicit with everything (e.g. npm shrinkwrap)
-
-3. Expose as possible web server to private network
+--
+* [Using configuration management to apply Docker state](https://github.com/renoirb/fxa/tree/renoirb/docker-build-system)?
 
 
+--
+* [Containerizing webapps with multiple stacks](https://hub.docker.com/r/webspecs/publican/) <small>`docker pull webspecs/publican`</small>
+
+--
+* Create zip files and sync scripts <small>... yeah.</small>
 
 
 
 ---
-### Automate even more w/ Salt Stack
 
-**DISCLAIMER** I’m unsure if Chef/Ansible/Puppet
-has equivalent. Hopefully they do :)
-
-Once push of the package/container is finished;
-Use Salt’s `state.event` system!
-
-* Use native:
- * emmit a command `salt-call state.event 'foo/bar/bazz/package/uploaded'` from minion
-* Use salt-api:
- * expose hook to launch triggers on salt master
- * anything can make HTTP requests to trigger events!
-
-
----
-##  How to deploy Python
-
-Compile your own Python environment packaged
-with pip and virtualenv
-
-> DO NOT **CHANGE** internal Python!!1
-
-
-.footnotes[*CAUTION* The following hasn’t been fully tested yet.]
-
-
-
+## Talking about containers
 
 
 
 ---
-### 1. Use pre packaged python compiled from source
-
-```terminal
-python -V
-> Python 2.7.6
-
-sudo dpkg -i /vagrant/clones/python_2.7.9-wpd_amd64.deb
-
-/opt/python2.7.9/bin/virtualenv /vagrant/sandboxes/myenv
-> New python executable in /vagrant/sandboxes/myenv/bin/python
-> Installing setuptools, pip...done.
-```
-
-
-
-
----
-### 2. Use that new Python to setup your environment
-
-```terminal
-cd /vagrant/sandboxes/myenv/
-source bin/activate
-
-python -V
-> Python 2.7.9
-
-pip list
-> pip (6.1.1)
-> setuptools (15.0)
-```
-
-Then you can run your dependency manager.
-
-
----
-### 3. Do not rely on external resource
-
-... rely on your own [PyPi mirror w/ **DevPi**][devpi]
-
-Promise is that it acts as a repository which fetches
-dependencies it doesn’t have and keeps them for you.
-
-
-
-
-
-
-
-
-
----
-### 4. Get your code, bootrap build process
-
-```terminal
-git clone ...
-make
-```
-
-
-
-
-
-
-
-
-
----
-# Live Demo Time!
-
-.footnote[Try it yourself in Vagrant [renoirb/salt-basesystem][basesystem-example]]
-
-
-
----
-## www.webplatform.org
-
-```terminal
-vagrant up
-vagrant ssh
-cd /var
-ls | grep www
-sudo salt-call state.sls vagrantsandbox.homepage
-```
-
-
-
----
+class: middle
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">announcing `npm install linux -g` - installs tiny linux on Yosemite in under a minute <a href="https://t.co/rjVMyjzePs">https://t.co/rjVMyjzePs</a> <a href="http://t.co/wnsFHXCS8b">pic.twitter.com/wnsFHXCS8b</a></p>&mdash; maxwell ogden (@denormalize) <a href="https://twitter.com/denormalize/status/642043310173913088">10 Septembre 2015</a></blockquote>
 
 
 
 ---
-### Use FPM to install Python package, convert as deb
+class: toc
 
-Would be great if the following worked. But it doesnt :(
+## Contents
 
-```terminal
-fpm -s python -t deb devpi-server
-```
-
-Problem with Python is that dependencies are generally bound to the OS packages. There are alternatives
-and solutions but I couldn’t make better example so far.
-
-
-
-
+1. Why packaging?
+1. Ideas
+1. **Live demo**!
 
 
 
 ---
-### Use FPM to build your own Twemproxy .deb
+class: middle center
 
-What’s wrong with this?
+# Live demo!
 
-    add-apt-repository -y ppa:twemproxy/stable
-
-Look how they do it, replicate.
-
-
-
-
-
+* [packman][packman]
+* [fpm][fpm-repo]
 
 
 
 ---
-Look for the source
-
-```terminal
-dpkg -c apt/nutcracker_0.3.0-1_amd64.deb
-> ./usr/
-> ./usr/share/
-> ./usr/share/doc/
-> ./usr/share/doc/nutcracker/
-> ./usr/share/doc/nutcracker/README.md
-> ./usr/share/doc/nutcracker/ChangeLog
-> ./usr/share/doc/nutcracker/LICENSE
-> ./usr/local/
-> ./usr/local/sbin/
-> ./usr/local/sbin/nutcracker
-...
-```
-
----
-### Building your own apt repository
-
-
-Assuming you are on the web server and you expose
-at `http://foo.com/apt`, let’s refresh
-the `Packages.gz` index.
-
-```terminal
-cd apt/
-dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
-```
-
-Refer to [Create a local private apt repository][own-apt-repo](https://help.ubuntu.com/community/Repositories/Personal)
-
-
-
----
-# Links
+# Thank you!
 
 Links are [available here](links.html).
 
@@ -502,6 +389,8 @@ Links are [available here](links.html).
   [composer-registry]: https://github.com/composer/satis
   [ruby-registry]: http://guides.rubygems.org/run-your-own-gem-server/ "RoR registry. Warning, i’m unsure if there’s something more complete than this one"
   [fpm-repo]: https://github.com/jordansissel/fpm
+  [forbes-common-devops-bottlenecks]: http://www.forbes.com/sites/mikekavis/2014/12/18/11-common-devops-bottlenecks "11 Common DevOps Bottlenecks"
+  [packman]: https://github.com/cloudify-cosmo/packman
 
 See also DevOpsNotes.md
 

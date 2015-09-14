@@ -27,3 +27,4 @@ template: resume.html
   [composer-registry]: https://github.com/composer/satis
   [ruby-registry]: http://guides.rubygems.org/run-your-own-gem-server/ "RoR registry. Warning, i’m unsure if there’s something more complete than this one"
   [fpm-repo]: https://github.com/jordansissel/fpm
+  [forbes-common-devops-bottlenecks]: http://www.forbes.com/sites/mikekavis/2014/12/18/11-common-devops-bottlenecks "11 Common DevOps Bottlenecks"
