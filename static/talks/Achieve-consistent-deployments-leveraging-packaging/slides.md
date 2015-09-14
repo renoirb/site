@@ -7,12 +7,40 @@ class: first-slide mozilla-branded center
  **bit.ly/2015-devopsmtl-packaging** ✪ [@renoirb](https://renoirboulanger.com/) ✪ *DevOps* Montréal ✪ Sept. 2015
 ]
 
+???
+
+- Ask *switch to french*
+- Slides available, link at the bottom
+- Automation is nice, but how much is it helping you?
+- Ever been caught
+  - (dependencies) while trying to rebuild service host
+  - (dependencies) onto something then *provider asks you to move* all services elsewhere
+  - to cross-fingers because you don't remember what magic you did?
+- It's all about making things consistent.
+
 
 
 ---
-class: webplatform invert-slide-number
+## Easy != Simple
 
-# Last two years for me...
+> Simplicity is prerequisite for reliability.
+>
+> — Edsger Dijkstra
+
+???
+
+- Think again on how you do things
+- Is this component crucial to the infrastructure.
+- What if HELL break loose
+- How long can I recover from that component?
+
+
+
+---
+class: webplatform center invert-slide-number
+background-image: url(images/webplatform-docsprint-perk.jpg)
+
+# My last two years
 
 .footnote[
  **hint** press "*p*" to see speaker notes.
@@ -20,43 +48,40 @@ class: webplatform invert-slide-number
 
 ???
 
-- Set of ~20 VMs with configuration management
+**When I arrived**
 
-- Not everything was  systematically source-controlled and automated
-
-- Lots of patched-up code forking original project
-
-- Lots of manual operations; secrets, hosts file, etc.
-
-- But. It was great, *almost* all VMs could be built from scratch
-
-- If Salt Master break ... recreate everything.
-
-- If wiki break ... add another backend, update Fastly.
-
-- If service died, ... aremysitesup.com would tell me ... *NO* monitoring.
+- ~20 VMs
+- If Salt Master break. Doom.
+- If service died, ... *only* aremysitesup.com would tell me ... *NO* monitoring
+- To change secrets or add servers, had to find the right file and edit manually
+- Not *everything* was source-controlled
+- Patched-up code forking original project
 
 
 
 ---
-class: webat25
+class: webplatform-components invert-text
+background-image: url(images/webplatform-components.jpg)
 
+# Lots of moving parts
 
 ???
 
-- Had to learn quickly how HTTP caching works
+**Wasn't that bad**
 
-- Could not trust all metrics, under the "fire"
+- If X break ... add another origin, update Varnish
+- *Almost* all VMs could be built from scratch
 
+**The stack**
+
+- Running almost every web technology
+-
 
 
 ---
-class: center spike
+class: center
 
-
-![Requests burst during worldwide announcement of Web 25th anniversary, recorded by Piwik](images/webat25_requests_mar_may_2014.png)
---
-![Requests between March 9th to 15, recorded by Fastly, the site's CDN](images/webat25-fastly-caching-overview-20140309.png)
+## Re-build every service from scratch *still* takes *~5 hours!*
 
 
 
@@ -65,14 +90,21 @@ class: toc
 
 ## Contents
 
-1. **Quick theory**
+1. **Why packaging?**
 1. Live demo!
 
 
 
 ---
-class: brave-new-world
+class: center middle content-step
 
+# Why packaging?
+
+
+
+---
+class: brave-new-world
+background-image: url(images/Aldous_Huxley_Brave_New_World_cover.jpg)
 
 
 ???
@@ -83,14 +115,6 @@ class: brave-new-world
 
 - Lots of tools
 
-
-
----
-## Easy != Simple
-
-> Simplicity is prerequisite for reliability.
->
-> — Edsger Dijkstra
 
 
 
@@ -112,7 +136,7 @@ class: brave-new-world
 ## Goals
 
 --
-* Can reproduce any component. Anytime.
+* Can rebuild any service. *Anytime*.
 
 --
 * As **FAST** as possible
@@ -122,35 +146,54 @@ class: brave-new-world
 
 
 
+---
+class: ping-pong
+background-image: url(images/ping-pong-plates-and-pack-of-gravity.gif)
+
+
 
 ---
 class: rules
+background-image: url(images/movie-saw-doll-puppet-on-bike.jpg)
 
 ## Rules
 
 --
-1. Give yourself tools to work *locally*
+1. Give yourself tools to **work locally**
 
 --
-2. Build from vanilla, Config. Manager sets a "base" system
+2. Build from vanilla, set a "*base*" system, ...
 
 --
-3. *NO* manual operations
-
---
-4. **Don’t** rely on external
+3. **NO** manual operations
 
 --
 5. Source control everything
 
 --
-6. **Package \*everything\***
+4. **DON'T** rely on external.
+
 
 
 ---
 class: all-the-things center
 
-## Package *ALL THE THINGS* !!1
+### Package *ALL THE THINGS* !!1
+
+.footnote[
+  ... and make **’em available** to *download through* **HTTP**
+]
+
+
+---
+### ... tools to help you not rely on external
+
+* [Python **PyPI** devpi][devpi]
+* [Docker distribution][docker-registry]
+* [NPM][npm-registry]
+* [PHP Composer][composer-registry]
+* [Ruby Gems][ruby-registry]
+* [Create your own DEB/RPM **jordansissel/fpm**][fpm-repo]
 
 
 
@@ -158,22 +201,16 @@ class: all-the-things center
 ## Deployment flow
 
 --
-1. Get code from VCS
+1. Get code from VCS <small>or *prebuilt* package</small>
 
 --
-2. Create runtime environment (e.g. nvm, rvm, virtualenv)
+2. Initialize runtime environment <small>(e.g. *virtualenv*)</small>
 
 --
-3. Initialize dependency managers (e.g. npm, bower, browserify)
+3. Initialize dependency managers <small>(e.g. *npm*)</small>
 
 --
-4. Install web app utilities (e.g. pm2, systemd) + Service watcher (e.g. Monit)
-
---
-5. ...
-
---
-6. Make it a package, upload for HTTP download
+4. Install **utilities** and **monitoring** <small>(e.g. *pm2*, *systemd*, *Monit*)</small>
 
 
 ???
@@ -203,6 +240,14 @@ class: all-the-things center
 - Push to package repository
 
 
+
+---
+class: middle
+
+<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/Sysadmin?src=hash">#Sysadmin</a> <a href="https://twitter.com/hashtag/Truth?src=hash">#Truth</a> <a href="https://twitter.com/hashtag/Backup?src=hash">#Backup</a> <a href="https://twitter.com/hashtag/Unix?src=hash">#Unix</a> <a href="https://twitter.com/hashtag/Linux?src=hash">#Linux</a> <a href="http://t.co/suCT9ME58V">pic.twitter.com/suCT9ME58V</a></p>&mdash; nixCraft (@nixcraft) <a href="https://twitter.com/nixcraft/status/613636528439345152">June 24, 2015</a></blockquote>
+
+
+
 ---
 
 ## Go crazy!
@@ -211,6 +256,14 @@ class: all-the-things center
 ```terminal
 make init && make deps && make install
 ```
+
+
+
+---
+class: middle center
+# Not finished yet
+
+
 
 ---
 
@@ -240,18 +293,6 @@ runtime, etc.
 
 
 
-
-
-
-
----
-## Do not rely on external!
-
-* Python; [**DevPi**][devpi]
-* [Docker registry][docker-registry]
-* [NPM][npm-registry]
-* [PHP ("Composer")][composer-registry]
-* [Ruby Gems][ruby-registry]
 
 ---
 ### Automate even more w/ Salt Stack
@@ -357,6 +398,8 @@ make
 
 .footnote[Try it yourself in Vagrant [renoirb/salt-basesystem][basesystem-example]]
 
+
+
 ---
 ## www.webplatform.org
 
@@ -367,6 +410,13 @@ cd /var
 ls | grep www
 sudo salt-call state.sls vagrantsandbox.homepage
 ```
+
+
+
+---
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">announcing `npm install linux -g` - installs tiny linux on Yosemite in under a minute <a href="https://t.co/rjVMyjzePs">https://t.co/rjVMyjzePs</a> <a href="http://t.co/wnsFHXCS8b">pic.twitter.com/wnsFHXCS8b</a></p>&mdash; maxwell ogden (@denormalize) <a href="https://twitter.com/denormalize/status/642043310173913088">10 Septembre 2015</a></blockquote>
+
 
 
 ---
@@ -441,16 +491,17 @@ Refer to [Create a local private apt repository][own-apt-repo](https://help.ubun
 ---
 # Links
 
-Links are in the Markdown source at the bottom.
+Links are [available here](links.html).
 
   [basesystem-example]: https://github.com/renoirb/salt-basesystem "Renoir’s basesystem which also acts as a local workbench"
   [devpi]: http://doc.devpi.net/latest/quickstart-pypimirror.html "devpi, an utility to make your own mirror"
   [renoirb]: http://renoirb.com/#is
   [own-apt-repo]: https://help.ubuntu.com/community/Repositories/Personal "Debian reference document on how to make your own APT repository"
-  [docker-registry]: https://github.com/docker/docker-registry
+  [docker-registry]: https://github.com/docker/distribution
   [npm-registry]: https://github.com/mixu/npm_lazy
   [composer-registry]: https://github.com/composer/satis
   [ruby-registry]: http://guides.rubygems.org/run-your-own-gem-server/ "RoR registry. Warning, i’m unsure if there’s something more complete than this one"
+  [fpm-repo]: https://github.com/jordansissel/fpm
 
 See also DevOpsNotes.md
 

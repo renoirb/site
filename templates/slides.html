@@ -3,48 +3,37 @@
   <head>
     <title>{{ title }} — by Renoir Boulanger</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
-    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
-    <link rel=stylesheet href="https://cdn.rawgit.com/PrismJS/prism-themes/master/themes/prism.css" />
-    <link rel=stylesheet href="https://cdn.rawgit.com/PrismJS/prism-themes/master/themes/prism-atom-dark.css" />
-    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+    {{#if keywords }}<meta name="keywords" content="{{keywords}}" />{{/if}}
+    {{#if description }}<meta name="description" content="{{description}}" />{{/if}}
+    <script src="/talks/js/remark.js"></script>
+    <script src="/talks/js/socket.js"></script>
   </head>
   <body>
     {{{ contents }}}
     <script>
-      var hljs = remark.highlighter.engine;
-      var slideshow = remark.create({
-          highlightStyle: 'mookai',
-          highlightLanguage: 'remark',
-          sourceUrl: 'slides.md'
-        }) ;
-      hljs.registerLanguage('remark', function () {
-        return {
-          contains: [
-            {
-              className: 'keyword',
-              begin: '^#+[^\n]+',
-              relevance: 10
-            },
-            {
-              className: 'comment',
-              begin: '^---?'
-            },
-            {
-              className: 'string',
-              begin: '^\\w+:'
-            },
-            {
-              className: 'literal',
-              begin: '\\{\\{', end: '\\}\\}'
-            },
-            {
-              className: 'string',
-              begin: '\\.\\w+'
-            }
-          ]
-        };
-      });
+        var  slideshow = remark.create({
+                sourceUrl: 'slides.md'
+             })
+            ,_id = 1234
+            ,clientId = null
+            ,socket = io.connect();
+
+        socket.on('connect', function socketConnectHandler () {
+            clientId = socket.id||null;
+            socket.on('triggerSlide', function socketioTriggerSlideHandler (obj) {
+                console.log('triggerSlide received by', obj);
+                if (obj.nextSlide && obj.id === _id) {
+                    slideshow.gotoSlide(obj.nextSlide);
+                }
+            });
+
+            slideshow.on('showSlide', function slideshowShowSlideHandler (slide) {
+                var nextSlide = slide.getSlideIndex() + 1;
+                socket.emit('nextSlide', {id: _id, nextSlide: nextSlide, clientId: clientId});
+                console.log('slideshow.on showSlide emitted');
+            });
+        });
+
     </script>
   </body>
 </html>
