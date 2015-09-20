@@ -218,7 +218,7 @@ class: all-the-things center
 * [Docker distribution][docker-registry]
 * [NPM][npm-registry]
 * [PHP Composer][composer-registry]
-* [Ruby Gems][ruby-registry]
+* [Ruby Gems w/ Bundler][ruby-registry]
 * [Create your own DEB/RPM **jordansissel/fpm**][fpm-repo]
 
 
@@ -366,7 +366,7 @@ class: toc
 
 
 ---
-class: middle center
+class: middle
 
 # Live demo!
 
@@ -376,7 +376,13 @@ class: middle center
 
 
 ---
+class: middle center
+
 # Thank you!
+
+
+**Questions?**
+
 
 Links are [available here](links.html).
 
@@ -391,6 +397,4 @@ Links are [available here](links.html).
   [fpm-repo]: https://github.com/jordansissel/fpm
   [forbes-common-devops-bottlenecks]: http://www.forbes.com/sites/mikekavis/2014/12/18/11-common-devops-bottlenecks "11 Common DevOps Bottlenecks"
   [packman]: https://github.com/cloudify-cosmo/packman
-
-See also DevOpsNotes.md
 
