@@ -3,34 +3,49 @@ title: Resumé
 template: resume.html
 ---
 
-* **Next availability** around Feb. 2016
-* **Home** Montréal, Québec, Canada
-* [Curriculum vitæe aussi disponible en français](http://renoirb.com/cv "Resume also available in french")
-* Native french speaker, fluent in English
-* To reach me, please use *hello* AT my *full name* DOT *com*
-* You can also [use this calendar tool](https://calendly.com/renoirb) to have a chat with me
-* [`BC06 4BAD 27BF 89C1`](https://renoirboulanger.com/.well-known/keybase.txt)
+<em id="availability">Next availability</em>
+:    Feb. 2016
 
+Location
+:    Montréal, Québec, Canada
+
+Languages
+:    *Français* langue maternelle
+:    *English*  very fluent
+
+Preffered contact method
+:    Send an e-mail using *hello* AT my *full name* DOT *com*
+
+Quick chat
+:    [book an appointment](https://calendly.com/renoirb)
+
+GPG public key
+:    [`BC06 4BAD 27BF 89C1`](https://renoirboulanger.com/.well-known/keybase.txt)
+
+[Mon curriculum vitæ aussi disponible en français](http://renoirb.com/cv "Resume also available in french")
 
 <section id="summary">
 
 
 ## Summary
 
-Hello! My name is Renoir Boulanger and I have been the lead DevOps on [WebPlatform.org](https://www.webplatform.org/) for the past two years.  My experience ranges from frontend, backend, to server deployment and automation for over thirteen years.
+Hello!
 
-On my spare time I enjoy reading about systems engineering and also to contribute to open-source projects.
+My name’s <a href="https://renoirboulanger.com/about/"><span itemprop="givenName">Renoir</span> <span itemprop="familyName">Boulanger</span></a> and in my spare time I enjoy reading about systems engineering and also to contribute to open-source projects.
 
-Prior to shift my focus on operations and performance, I’ve worked with several design agencies in the province of Québec making their PSDs look exactly the same in every browsers.
+I have been building websites for over  <data value="13">thirteen</data>  years and had been filling different roles such as *Frontend* and *Backend* development, but also to *manage cloud clusters* and *orchestration systems*.
 
-* **Currently under contract for the W3C**, the international web standards organization
-* **Contributor** to a number of **open-source** projects including *Mozilla Firefox Accounts*
-* Maintained notably WebPlatform.org, the Web’s 25th anniversary site webat25.org (2014), the French Canadian artist union [«Union des Artistes»](https://uda.ca/) (2009), and the [City of Sherbrooke](http://www.ville.sherbrooke.qc.ca/) (2005)
-* Built more than 150 web sites between 2002 and 2009
+I’m currently <em itemprop="jobTitle">Web Browser Compatibility Data Lead</em> at <a href="http://mozillians.org/en-US/u/renoirb/">Mozilla</a> as part of the <a href="https://developer.mozilla.org/"><span itemprop-reverse="member"><abbr title="Mozilla Developer Network">MDN</abbr></span></a> project.
+
+Prior to shifting my focus on operations and performance, I’ve worked with several design agencies in the province of Québec making their PSDs look exactly the same in every Web browser.
+
+* **Occasional contributor** to **open-source projects** including MediaWiki and *Mozilla Firefox Accounts*
+* Maintained some high-visibility sites such as [WebPlatform.org](http://www.webplatform.org), the [Web’s 25th-anniversary](http://www.webat25.org) site (2014), the *French Canadian* artist union [«Union des Artistes»](https://uda.ca/) (2009), and the [City of Sherbrooke](http://www.ville.sherbrooke.qc.ca/) (2005)
+* Built more than 150 websites between 2002 and 2009
 * **Zend Certified Engineer** PHP 5.3
 * Experience with **cloud IaaS**, **Containers**, and maintenance of **continuous deployment** systems
 * Experience working in the open within a geographically distributed team
-* Able to direct my own work and pro-active in asking for input
+* Able to direct my work and pro-active in asking for input
 * Familiar with issues in large-scale systems
 
 
@@ -117,7 +132,12 @@ My contributions to this project was the following;
 
 <div class="experience-block">
 
-### Developer Operations Engineer <small>**W3C/MIT**, *aug 2013 - current*</small>
+### Web Browser Compatibility Data Lead <small>**Mozilla/MDN**, *sept. 2015 - current*</small>
+
+My involvement with Mozilla is to lead the Compatibility Data Project within the MDN documentation site. My role is to provide oversight of the development, report on the status and make sure correct people are involved in decision-making and review of the Web Browser compatibility feature support data.
+
+
+### Developer Operations Engineer <small>**W3C/MIT**, *aug 2013 - aug 2015*</small>
 
 Montreal, Quebec
 

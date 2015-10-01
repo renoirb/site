@@ -26,10 +26,10 @@ h1,h2,h3,h4,h5 { font-weight:bold; }
 .remark-slide .first-slide h1 { text-align:center; }
 .remark-slide .first-slide h1 em { color:#0095DD; }
 .remark-slide .mozilla-branded { color:#5C5353; background:#EAEFF2 url("images/mdn-header-background.png") repeat; }
-.remark-slide .mozilla-branded img[alt=Mozilla] { margin:10% 0; }
+.remark-slide .mozilla-branded img { margin:10% 0; width:60%; }
 .remark-slide .background-title { background-size:100%; padding:0 !important; }
 .remark-slide .background-title h1, .remark-slide .background-title h2, .remark-slide .background-title h3 { background-color:rgba(255, 255, 255, 0.8) !important; padding:10px 0;}
-.remark-slide .spike img { padding:20px; }
+.remark-slide .spike img+img { margin-top:30px; }
 .remark-slide .brave-new-world h2 { visibility:hidden; }
 .remark-slide .brave-new-world { background-position: middle center; }
 .remark-slide .all-the-things { background-position:center bottom !important; background-image:url("images/all-the-things.jpg"); background-color:#FFFFFF; color:#ED006C; }

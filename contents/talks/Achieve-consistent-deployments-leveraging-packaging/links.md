@@ -23,6 +23,11 @@ All of the commands I issued during the talk were run from a Vagrant sandbox usi
 [my "basesystem" salt formula](https://github.com/renoirb/salt-basesystem) as a workstation.
 
 
+## How to configure NGINX 1.9.5 with NGINX
+
+* https://ma.ttias.be/view-http-spdy-http2-protocol-google-chrome/
+* https://www.nginx.com/resources/wiki/start/topics/tutorials/installoptions/
+
 
 ## References
 

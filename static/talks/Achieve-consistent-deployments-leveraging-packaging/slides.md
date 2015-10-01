@@ -3,10 +3,10 @@ class: first-slide mozilla-branded center
 
 
 
-![Mozilla](images/mdn-logo.png)
+![Mozilla Developer Network](images/mdn-logo.png)
 
 .footnote[
- **bit.ly/2015-devopsmtl-packaging** ✪ [@renoirb](https://renoirboulanger.com/) ✪ *DevOps* Montréal ✪ Sept. 2015
+ **bit.ly/2015-renoirb-talk-packaging** ✪ [@renoirb](https://renoirboulanger.com/)
 ]
 
 ???
@@ -23,22 +23,40 @@ class: first-slide mozilla-branded center
 
 
 ---
-## Easy != Simple
+class: mozilla-branded center
+![Mozilla Firefox](images/firefox_logo.png)
 
-> Simplicity is prerequisite for reliability.
->
-> — Edsger Dijkstra
 
-.footnote[
- **hint** press "*p*" to see speaker notes.
-]
+
+---
+background-image: url(images/People-of-the-W3C-2013.png)
+
+
+
+---
+background-image: url(images/webat25_browser.png)
+
+
+
+---
+class: webat25
+background-image: url(images/google-doodle-webat25-browser.png)
 
 ???
 
-- Think again on how you do things
-- Is this component crucial to the infrastructure.
-- What if HELL break loose
-- How long can I recover from that component?
+- Had to learn quickly how HTTP caching works
+
+- Could not trust all metrics, under the "fire"
+
+
+
+---
+class: center spike
+
+
+![Requests burst during worldwide announcement of Web 25th anniversary, recorded by Piwik](images/webat25_requests_mar_may_2014.png)
+--
+![Requests between March 9th to 15, recorded by Fastly, the site's CDN](images/webat25-fastly-caching-overview-20140309.png)
 
 
 
@@ -68,6 +86,11 @@ background-image: url(images/webplatform-docsprint-perk.jpg)
 
 
 ---
+background-image: url(images/poorman-monitoring.png)
+
+
+
+---
 class: center middle background-title invert-text webplatform-components
 background-image: url(images/webplatform-components.jpg)
 
@@ -85,6 +108,26 @@ background-image: url(images/webplatform-components.jpg)
 - Running almost every web technology
 - Not all projects were easy put a theme on
 - Running Salt Stack, with bunch of repo clones rsyncing' around
+
+
+
+---
+## Easy != Simple
+
+> Simplicity is prerequisite for reliability.
+>
+> — Edsger Dijkstra
+
+.footnote[
+ **hint** press "*p*" to see speaker notes.
+]
+
+???
+
+- Think again on how you do things
+- Is this component crucial to the infrastructure.
+- What if HELL break loose
+- How long can I recover from that component?
 
 
 
@@ -293,6 +336,14 @@ background-image: url(images/build-your-server-with-git-repos.png)
 
 ---
 class: center middle background-title invert-text
+background-image: url(images/desktop-terminal-deployment-run.png)
+
+### Leverage your configuration manager tool of choice
+
+
+
+---
+class: center middle background-title invert-text
 background-image: url(images/build-assets-steps.png)
 
 ### As long as you **enable** your colleagues
@@ -336,21 +387,36 @@ class: middle center
 --
 * [Containerizing webapps with multiple stacks](https://hub.docker.com/r/webspecs/publican/) <small>`docker pull webspecs/publican`</small>
 
---
+???
+
+Docker is great to do separation of concern and encapsulate.
+
+
+
+---
+background-image: url(images/docker-container-too-many-layers.png)
+
+???
+Other problem is they become cluttered with too many layers
+
+
+
+---
+background-image: url(images/docker-copy-files-around-manually.png)
+
+???
+* Copy manually files around
+* Treat them as Virtual Machine
+
+
+
+---
+
+## Some I experimented with
+
+* [Using configuration management to apply Docker state](https://github.com/renoirb/fxa/tree/renoirb/docker-build-system)?
+* [Containerizing webapps with multiple stacks](https://hub.docker.com/r/webspecs/publican/) <small>`docker pull webspecs/publican`</small>
 * Create zip files and sync scripts <small>... yeah.</small>
-
-
-
----
-
-## Talking about containers
-
-
-
----
-class: middle
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">announcing `npm install linux -g` - installs tiny linux on Yosemite in under a minute <a href="https://t.co/rjVMyjzePs">https://t.co/rjVMyjzePs</a> <a href="http://t.co/wnsFHXCS8b">pic.twitter.com/wnsFHXCS8b</a></p>&mdash; maxwell ogden (@denormalize) <a href="https://twitter.com/denormalize/status/642043310173913088">10 Septembre 2015</a></blockquote>
 
 
 
@@ -366,12 +432,36 @@ class: toc
 
 
 ---
-class: middle
+class: middle center
 
 # Live demo!
 
-* [packman][packman]
-* [fpm][fpm-repo]
+
+
+---
+class: middle center
+## Create an archive of your SSL certificates
+
+
+---
+background-image: url(images/sharing-certificates-archive.gif)
+
+
+
+---
+class: middle center
+## Deploy a webserver with specific featues
+
+
+
+---
+class: middle center
+### Let’s [build this](compile-nginx-video.html)!
+
+
+
+---
+background-image: url(images/nginx-firefox-protocol-http2.png)
 
 
 

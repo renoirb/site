@@ -1,12 +1,11 @@
 ---
 title: Curriculum Vitæ
-template: base.html
+template: resume.html
 ---
-
-## <span style="font-size:0.8em;">PROGRAMMEUR WEB & OPERATIONS</span>
 
 *Note*: [English version available](/resume)
 
+**IMPORTANT**: Veuillez consulter la [version *anglaise*](/resume) car elle est présentement plus à jour que la version française.
 
 ## <span id="availability">Disponibilité</span>
 
