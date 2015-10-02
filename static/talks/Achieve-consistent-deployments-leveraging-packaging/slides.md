@@ -11,7 +11,7 @@ class: first-slide mozilla-branded center
 
 ???
 
-- Ask *switch to french*
+- Ask *switch to French*
 - Slides available, link at the bottom
 - Automation is nice, but how much is it helping you?
 - Ever been caught
@@ -51,7 +51,7 @@ background-image: url(images/google-doodle-webat25-browser.png)
 
 - Had to learn quickly how HTTP caching works
 
-- Could not trust all metrics, under the "fire"
+- Could not trust all metrics, under the "fire."
 
 
 
@@ -81,7 +81,7 @@ background-image: url(images/webplatform-docsprint-perk.jpg)
 
 - ~20 VMs
 - If Salt Master break. Doom.
-- If service died, ... *only* aremysitesup.com would tell me ... *NO* monitoring
+- If service died, *only* aremysitesup.com would tell me
 - To change secrets or add servers, had to find the right file and edit manually
 - Not *everything* was source-controlled
 - Patched-up code forking original project
@@ -128,7 +128,7 @@ background-image: url(images/webplatform-components.jpg)
 ---
 ## Easy != Simple
 
-> Simplicity is prerequisite for reliability.
+> Simplicity is a prerequisite for reliability.
 >
 > — Edsger Dijkstra
 
@@ -136,7 +136,7 @@ background-image: url(images/webplatform-components.jpg)
 
 - Think again on how you do things
 - Is this component crucial to the infrastructure.
-- What if HELL break loose
+- What if HELL breaks loose
 - How long can I recover from that component?
 
 
@@ -144,7 +144,7 @@ background-image: url(images/webplatform-components.jpg)
 ---
 class: center
 
-## Re-build every service from scratch *still* takes *~5 hours!*
+## build from scratch every service takes *~5 hours!*
 
 ???
 
@@ -196,7 +196,7 @@ ref: [Forbes 11 DevOps bottlenecks][forbes-common-devops-bottlenecks]
 ## Package management is *borken* <small>(sic)</small>
 
 --
-* Can’t rely on OS level packages
+* Can’t rely on OS-level packages
 
 --
 * Version pinning == \[can be\] unreliable
@@ -206,7 +206,7 @@ ref: [Forbes 11 DevOps bottlenecks][forbes-common-devops-bottlenecks]
 
 ???
 
-In order to consistently rebuild a server you have to question everything, all the time.
+To consistently rebuild a server you have to question everything, all the time.
 
 
 
@@ -249,7 +249,7 @@ background-image: url(images/movie-saw-doll-puppet-on-bike.jpg)
 1. Give yourself tools to **work locally**
 
 --
-2. Build from vanilla, set a "*base*" system, ...
+2. Build from vanilla set a "*base*" system, ...
 
 --
 3. **NO** manual operations
@@ -305,7 +305,7 @@ class: all-the-things center
 
 **Containers**
 
-- Steps 2-4 would be launched within `Dockerfile`
+- Steps 2-4 can be automated with a `Dockerfile`
 - Results in a commit + tag
 - If your project has tests (lucky you!) and breaks, stop everything
 - Push to package Docker Hub
@@ -326,7 +326,7 @@ class: all-the-things center
 - Use package to deploy
 
 
-**NEXT Slide** is about *Schrodigner's box*
+**NEXT Slide** is about *Schrodinger's box*
 
 ---
 class: middle
@@ -416,7 +416,7 @@ Docker is great to do separation of concern and encapsulate.
 background-image: url(images/docker-container-too-many-layers.png)
 
 ???
-Other problem is they become cluttered with too many layers
+Another problem is they become cluttered with too many layers
 
 
 
@@ -482,7 +482,7 @@ background-image: url(images/sharing-certificates-archive.gif)
 
 ---
 class: middle center
-## Deploy a webserver with specific featues
+## Deploy a web server with specific features
 
 
 
@@ -512,7 +512,7 @@ background-image: url(images/mediawiki-git-comparing-commits.png)
 
 ---
 class: middle center
-## Create your own apt repo
+## Create your *private* `Apt` repo
 
 
 
@@ -568,4 +568,3 @@ Links are [available here](links.html).
   [fpm-repo]: https://github.com/jordansissel/fpm
   [forbes-common-devops-bottlenecks]: http://www.forbes.com/sites/mikekavis/2014/12/18/11-common-devops-bottlenecks "11 Common DevOps Bottlenecks"
   [packman]: https://github.com/cloudify-cosmo/packman
-
