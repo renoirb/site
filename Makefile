@@ -10,6 +10,6 @@ serve:
 		node serve
 
 rsync: build
-	@rsync --progress --delete -az -e ssh build/ newvm:/var/www/renoirb/
+	@rsync --exclude=".DS_Store" --progress --delete -az -e ssh build/ newvm:/var/www/renoirb/
 
 .PHONY: build

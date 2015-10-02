@@ -3,7 +3,20 @@ title: Talk summary
 template: resume.html
 ---
 
-# Talk summary
+# [Talk summary](index.html)
+
+Version française plus bas
+
+## English version
+
+### Description
+
+In this short talk we will be covering a crucial step to ensure your infrastructure is always consistent and fast to re-deploy; packaging.
+
+Maybe your setup has to have a very specific run-time engine extension that has to be compiled at every install, or a service package is only available as a zip file or as sources.
+
+We’ll be covering how to use make, fpm and setup your own Debian repository. Also, I´ll show how you can leverage your CDN to store files for you.
+
 
 ## Version française
 

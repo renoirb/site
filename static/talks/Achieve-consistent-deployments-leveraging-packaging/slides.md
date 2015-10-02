@@ -504,19 +504,6 @@ background-image: url(images/nginx-firefox-protocol-http2.png)
 
 
 ---
-class: center middle background-title invert-text
-background-image: url(images/slow-site.png)
-
-### Deploying a web app
-
-
-
----
-background-image: url(images/mediawiki-git-comparing-commits.png)
-
-
-
----
 class: middle center
 ## Create your *private* `Apt` repo
 
