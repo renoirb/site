@@ -34,6 +34,11 @@ background-image: url(images/People-of-the-W3C-2013.png)
 
 
 ---
+background-image: url(images/webplatform-homepage.png)
+
+
+
+---
 background-image: url(images/webat25_browser.png)
 
 
@@ -55,7 +60,6 @@ class: center spike
 
 
 ![Requests burst during worldwide announcement of Web 25th anniversary, recorded by Piwik](images/webat25_requests_mar_may_2014.png)
---
 ![Requests between March 9th to 15, recorded by Fastly, the site's CDN](images/webat25-fastly-caching-overview-20140309.png)
 
 
@@ -86,7 +90,17 @@ background-image: url(images/webplatform-docsprint-perk.jpg)
 
 
 ---
+background-image: url(images/all-vms.png)
+
+
+
+---
 background-image: url(images/poorman-monitoring.png)
+
+
+
+---
+background-image: url(images/monitoring-peaks.png)
 
 
 
@@ -117,10 +131,6 @@ background-image: url(images/webplatform-components.jpg)
 > Simplicity is prerequisite for reliability.
 >
 > — Edsger Dijkstra
-
-.footnote[
- **hint** press "*p*" to see speaker notes.
-]
 
 ???
 
@@ -183,13 +193,13 @@ ref: [Forbes 11 DevOps bottlenecks][forbes-common-devops-bottlenecks]
 
 
 ---
-## Package management is *borken*
+## Package management is *borken* <small>(sic)</small>
 
 --
 * Can’t rely on OS level packages
 
 --
-* Version pinning == unreliable
+* Version pinning == \[can be\] unreliable
 
 --
 * Don’t rely on OS level runtime!
@@ -215,8 +225,17 @@ In order to consistently rebuild a server you have to question everything, all t
 
 
 ---
-class: ping-pong
+class: center
 background-image: url(images/ping-pong-plates-and-pack-of-gravity.gif)
+
+### It’s all a set of hacks put together
+
+
+---
+class: center
+background-image: url(images/Child_Escape_From_The_Crib.gif)
+
+### So many things can go wrong
 
 
 
@@ -438,9 +457,22 @@ class: middle center
 
 
 
+
+---
+class: middle center
+## Create a local workbench
+
+
+
+---
+background-image: url(images/webplatform-operations-workbench.png)
+
+
+
 ---
 class: middle center
 ## Create an archive of your SSL certificates
+
 
 
 ---
@@ -462,6 +494,55 @@ class: middle center
 
 ---
 background-image: url(images/nginx-firefox-protocol-http2.png)
+
+
+
+---
+class: center middle background-title invert-text
+background-image: url(images/slow-site.png)
+
+### Deploying a web app
+
+
+
+---
+background-image: url(images/mediawiki-git-comparing-commits.png)
+
+
+
+---
+class: middle center
+## Create your own apt repo
+
+
+
+---
+
+`$ cat /etc/apt/sources.list.d/webplatform.list`
+
+
+--
+
+`deb file:/srv/webplatform/apt ./` 
+
+
+--
+
+`$ mkdir -p /srv/webplatform/apt && cd /srv/webplatform/apt`
+
+
+--
+
+`$ dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz`
+
+
+--
+
+`$ sudo apt-get update`
+
+
+---
+background-image: url(images/custom-package-available.png)
 
 
 
