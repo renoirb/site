@@ -160,7 +160,7 @@ background-image: url(images/the-odds-against-navigating-this-asteroid-field-are
 
 
 ---
-class: middle center
+class: middle
 
 ### Takeaway
 
@@ -177,7 +177,7 @@ class: toc
 
 1. **Why packaging?**
 1. Ideas
-1. Live demo!
+1. Demo!
 
 
 
@@ -401,7 +401,7 @@ class: toc
 
 1. Why packaging?
 1. **Ideas**
-1. Live demo!
+1. Demo!
 
 
 
@@ -463,15 +463,18 @@ class: toc
 
 1. Why packaging?
 1. Ideas
-1. **Live demo**!
+1. **Demo**!
 
 
 
 ---
 class: middle center
 
-# Live demo!
+# Demo!
 
+.footnote[
+[Links are available here](links.html), and the [procedure to make your own package too](compile-nginx-procedure.html)
+]
 
 
 
@@ -501,11 +504,19 @@ background-image: url(images/sharing-certificates-archive.gif)
 class: middle center
 ## Deploy a web server with specific features
 
+.footnote[
+[Links are available here](links.html), and the [procedure to make your own package too](compile-nginx-procedure.html)
+]
+
 
 
 ---
 class: middle center
 ### Let’s [build this](compile-nginx-video.html)!
+
+.footnote[
+[Links are available here](links.html), and the [procedure to make your own package too](compile-nginx-procedure.html)
+]
 
 
 
@@ -527,7 +538,7 @@ class: middle center
 
 --
 
-`deb file:/srv/webplatform/apt ./` 
+`deb file:/srv/webplatform/apt ./`
 
 
 --
@@ -551,7 +562,7 @@ background-image: url(images/custom-package-available.png)
 
 
 ---
-class: middle center
+class: middle
 
 ### Takeaway
 
