@@ -160,6 +160,17 @@ background-image: url(images/the-odds-against-navigating-this-asteroid-field-are
 
 
 ---
+class: middle center
+
+### Takeaway
+
+* Explicitly package **every** dependency, and host them
+* **Mirror external dependencies** for your organization
+* Enable your team to **rebuild every components** *easily*
+
+
+
+---
 class: toc
 
 ## Contents
@@ -536,6 +547,17 @@ class: middle center
 
 ---
 background-image: url(images/custom-package-available.png)
+
+
+
+---
+class: middle center
+
+### Takeaway
+
+* Explicitly package **every** dependency, and host them
+* **Mirror external dependencies** for your organization
+* Enable your team to **rebuild every components** *easily*
 
 
 
