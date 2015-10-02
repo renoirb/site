@@ -6,7 +6,7 @@
     {{#if keywords }}<meta name="keywords" content="{{keywords}}" />{{/if}}
     {{#if description }}<meta name="description" content="{{description}}" />{{/if}}
     <script src="/talks/js/remark.js"></script>
-    <script src="/talks/js/socket.js"></script>
+    <script src="/talks/js/socket.js" id="socketio"></script>
   </head>
   <body>
     {{{ contents }}}
@@ -50,26 +50,37 @@
          * - https://bocoup.com/weblog/synchronizing-html5-slides-with-node-js/
          * - https://github.com/epeli/geekslides
          */
-        socket.on('connect', function socketConnectHandler () {
-            clientId = socket.id||null;
+        if (document.location.port === "4000") {
+            socket.on('connect', function socketConnectHandler () {
+                clientId = socket.id||null;
 
-            console.log('Hi, this is ' + clientId + ' connected to session ' + _id);
+                console.log('Hi, this is ' + clientId + ' connected to session ' + _id);
 
-            socket.on('triggerSlide', function socketioTriggerSlideHandler (obj) {
-                if (obj.nextSlide && obj.id === _id && clientId !== obj.clientId) {
-                    console.log('triggerSlide received and forwarded by', clientId, currentSlide, obj.nextSlide);
-                    slideshow.gotoSlide(obj.nextSlide);
+                socket.on('triggerSlide', function socketioTriggerSlideHandler (obj) {
+                    if (obj.nextSlide && obj.id === _id && clientId !== obj.clientId) {
+                        console.log('triggerSlide received and forwarded by', clientId, currentSlide, obj.nextSlide);
+                        slideshow.gotoSlide(obj.nextSlide);
+                    }
+                });
+
+                slideshow.on('beforeShowSlide', function slideshowShowSlideHandler (slide) {
+                    currentSlide = slide.getSlideIndex();
+                    var nextSlide = currentSlide + 1;
+                    socket.emit('nextSlide', {id: _id, nextSlide: nextSlide, clientId: clientId});
+                    console.log('slideshow.on beforeShowSlide emitted by', clientId, slide.getSlideIndex());
+                });
+            });
+        } else {
+            /** we are not in presenter mode, remove websockets! */
+            document.scripts.forEach(function(domNode){
+                if (!!domNode.getAttribute('id') && domNode.getAttribute('id') === "socketio") {
+                    domNode.parentElement.removeChild(domNode);
                 }
             });
-
-            slideshow.on('beforeShowSlide', function slideshowShowSlideHandler (slide) {
-                currentSlide = slide.getSlideIndex();
-                var nextSlide = currentSlide + 1;
-                socket.emit('nextSlide', {id: _id, nextSlide: nextSlide, clientId: clientId});
-                console.log('slideshow.on beforeShowSlide emitted by', clientId, slide.getSlideIndex());
-            });
-        });
-
+            try {
+                socket.destroy();
+            } catch(e){}
+        }
     </script>
   </body>
 </html>

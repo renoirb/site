@@ -90,6 +90,7 @@ background-image: url(images/webplatform-docsprint-perk.jpg)
 
 
 ---
+class: center
 background-image: url(images/all-vms.png)
 
 
@@ -150,6 +151,11 @@ class: center
 
 - Most of what takes time is dependencies
 - Had to do two full datacenter migration(!)
+
+
+
+---
+background-image: url(images/the-odds-against-navigating-this-asteroid-field-are-too-damn-high.jpg)
 
 
 
@@ -228,7 +234,7 @@ To consistently rebuild a server you have to question everything, all the time.
 class: center
 background-image: url(images/ping-pong-plates-and-pack-of-gravity.gif)
 
-### It’s all a set of hacks put together
+### After-all, computers are a set of hacks put together
 
 
 ---
