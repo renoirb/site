@@ -5,9 +5,24 @@ template: resume.html
 
 # Compile NGINX from source and create your own package
 
-[Download NGINX source](http://nginx.org/en/download.html)
+This is the procedure I wrote while preparing my [recent talk about **packaging**](index.html).
 
-Steps
+You can use it as a reference on how to create your own package and superseed the ones from your server environment.
+
+
+## Procedure
+
+* [Download NGINX source](http://nginx.org/en/download.html)
+
+Get modules you want to use;
+
+```
+git clone https://github.com/openresty/headers-more-nginx-module.git
+git clone https://github.com/giom/nginx_accept_language_module.git
+git clone https://github.com/aperezdc/ngx-fancyindex.git nginx-fancyindex
+```
+
+Uncompress NGINX package, and prepare for compilation
 
 ```
 gunzip nginx-1.9.5.tar.gz
@@ -15,10 +30,28 @@ tar xf nginx-1.9.5.tar
 cd nginx-1.9.5
 ll /opt
 sudo apt-get -y install build-essential zlib1g-dev libpcre3 libpcre3-dev libbz2-dev libssl-dev tar unzip
-cat /vagrant/talk-packages/nginx/configure.sh
-# configure
+```
+
+Run `./configure` with the following options:
+
+```
+./configure --prefix=/opt/nginx \
+            --with-ipv6 \
+            --with-http_ssl_module \
+            --with-http_v2_module \
+            --with-http_realip_module \
+            --with-http_gunzip_module \
+            --with-http_gzip_static_module \
+            --add-module=../headers-more-nginx-module \
+            --add-module=../nginx_accept_language_module \
+            --add-module=../nginx-fancyindex
+```
+
+Make, make install
+
+```
 make
-sudo
+sudo -s
 make install
 ll /opt/nginx
 cd /opt/nginx
@@ -30,7 +63,7 @@ Test it
 sbin/nginx -g 'daemon off;'
 ```
 
-add into location block
+add into `location` block
 
 ```
 vi conf/nginx.conf
@@ -57,9 +90,33 @@ vi html/foo/bar/somefile.txt
 sbin/nginx -g 'daemon off;'
 ```
 
+Create your init script
 
-## Add testing SSL certificates
+```
+# file: /etc/init/nginx.conf
+description "nginx - small, powerful, scalable web/proxy server"
 
+start on filesystem and static-network-up
+stop on runlevel [016]
+
+expect fork
+respawn
+
+# NGINX already sets uid to nobody
+chdir /opt/nginx
+
+pre-start script
+  [ -x /opt/nginx/sbin/nginx ] || { stop; exit 0; }
+  /opt/nginx/sbin/nginx -q -t -g 'daemon on; master_process on;' || { stop; exit 0; }
+end script
+
+exec /opt/nginx/sbin/nginx -g 'daemon on; master_process on;'
+
+pre-stop exec /opt/nginx/sbin/nginx -s quit
+```
+
+
+### Add testing SSL certificates
 
     apt-get install ssl-cert
     ll /etc/ssl/private
@@ -67,7 +124,9 @@ sbin/nginx -g 'daemon off;'
     ll /etc/ssl/certs/|grep snake
 
 
-## Enabling HTTP2
+### Enable HTTP/2.0?
+
+This server block would enable both FancyIndex module and the use of the shiny new HTTP/2.0 module available in NGINX 1.9.5.
 
 
     # Copy of a vhost, make sure listen and ssl_* are there as it is.
@@ -89,17 +148,40 @@ sbin/nginx -g 'daemon off;'
         ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
     }
 
-## Create a .deb package using FPM
+### Create a .deb package using FPM
 
-### NGINX package to superseed distribution version
+Create the base package to superseed distribution version.
 
-    fpm -s dir -t deb -n nginx-core -v 1.9.5-wpd -m '<hello@renoirboulanger.com>' --description 'Custom build of NGINX with FancyIndex. NGINX is a small, powerful, scalable web/proxy server Nginx ("engine X") is a high-performance web and reverse proxy server created by Igor Sysoev. It can be used both as a standalone web server and as a proxy to reduce the load on back-end HTTP or mail servers.' --replaces nginx-core --vendor 'renoirb@mozilla.org' --url 'http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging' --config-files opt/nginx/conf/nginx.conf opt/nginx/
+    fpm -s dir -t deb -n nginx-core -v 1.9.5-wpd \
+        -m '<hello@renoirboulanger.com>' \
+        --description 'Custom build of NGINX with FancyIndex. NGINX' \
+        --replaces nginx-core --vendor 'renoirb@mozilla.org' \
+        --url 'http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging' \
+        --config-files opt/nginx/conf/nginx.conf \
+        opt/nginx/
 
-### Separate configuration package
+Separate configuration package
 
-    fpm -s dir -t deb -n nginx-configs -v 1.9.5-wpd -m '<hello@renoirboulanger.com>' --description 'Configuration files on top of custom built NGINX package' -d 'nginx-core = 1.9.5-wpd' --vendor 'renoirb@mozilla.org' --url 'http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging' --config-files opt/nginx/conf/nginx.conf etc/ opt/
+    fpm -s dir -t deb -n nginx-configs -v 1.9.5-wpd \
+        -m '<hello@renoirboulanger.com>' \
+        --description 'Configuration files on top of custom built NGINX package' \
+        -d 'nginx-core = 1.9.5-wpd' --vendor 'renoirb@mozilla.org' \
+        --url 'http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging' \
+        --config-files opt/nginx/conf/nginx.conf \
+        etc/ opt/
 
-### Install packages
+Try it out!
 
     apt-get install -o Dpkg::Options::="--force-overwrite" -y nginx-configs=1.9.5-wpd
+
+
+# Reference
+
+* [nginx source](http://nginx.org/en/download.html)
+* [build debian squeeze](https://www.howtoforge.com/building-nginx-from-source-on-debian-squeeze)
+* [nginx 3rd party modules](http://wiki.nginx.org/3rdPartyModules)
+* [Enable HTTP/2.0 in NGINX](https://ma.ttias.be/enable-http2-in-nginx/)
+* [nginx.com Install and Compile-time options](https://www.nginx.com/resources/wiki/start/topics/tutorials/installoptions/)
+
+
 
