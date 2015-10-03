@@ -22,6 +22,9 @@ git clone https://github.com/giom/nginx_accept_language_module.git
 git clone https://github.com/aperezdc/ngx-fancyindex.git nginx-fancyindex
 ```
 
+* https://github.com/openresty/memc-nginx-module/releases
+* https://github.com/openresty/lua-nginx-module/releases
+
 Uncompress NGINX package, and prepare for compilation
 
 ```
@@ -30,22 +33,26 @@ tar xf nginx-1.9.5.tar
 cd nginx-1.9.5
 ll /opt
 sudo apt-get -y install build-essential zlib1g-dev libpcre3 libpcre3-dev libbz2-dev libssl-dev tar unzip
+sudo apt-get -y install lua5.1 liblua5.1-0 liblua5.1-0-dev
 ```
 
 Run `./configure` with the following options:
 
-```
-./configure --prefix=/opt/nginx \
-            --with-ipv6 \
-            --with-http_ssl_module \
-            --with-http_v2_module \
-            --with-http_realip_module \
-            --with-http_gunzip_module \
-            --with-http_gzip_static_module \
-            --add-module=../headers-more-nginx-module \
-            --add-module=../nginx_accept_language_module \
-            --add-module=../nginx-fancyindex
-```
+
+    ./configure --prefix=/opt/nginx \
+                --with-cc-opt="-DNGX_LUA_USE_ASSERT -DNGX_LUA_ABORT_AT_PANIC" \
+                --with-ipv6 \
+                --with-http_ssl_module \
+                --with-http_v2_module \
+                --with-http_realip_module \
+                --with-http_gunzip_module \
+                --with-http_gzip_static_module \
+                --with-http_auth_request_module \
+                --add-module=../headers-more-nginx-module \
+                --add-module=../nginx_accept_language_module \
+                --add-module=../nginx-fancyindex \
+                --add-module=../lua-nginx-module-0.9.16 \
+                --add-module=../memc-nginx-module-0.16
 
 Make, make install
 
@@ -153,12 +160,13 @@ This server block would enable both FancyIndex module and the use of the shiny n
 Create the base package to superseed distribution version.
 
     fpm -s dir -t deb -n nginx-core -v 1.9.5-wpd \
-        -m '<hello@renoirboulanger.com>' \
-        --description 'Custom build of NGINX with FancyIndex. NGINX' \
-        --replaces nginx-core --vendor 'renoirb@mozilla.org' \
-        --url 'http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging' \
-        --config-files opt/nginx/conf/nginx.conf \
-        opt/nginx/
+        -m 'Renoir Boulanger <hello@renoirboulanger.com>' \
+        --description 'Custom build of NGINX with FancyIndex, HTTP/2.0, OpenResty Memcached module, Lua, SSL, gzip_static, gunzip, headers_more, realip, accept_language modules enabled' \
+        --replaces nginx-core \
+        --vendor 'hello@renoirboulanger.com' \
+        -d lua5.1 -d liblua5.1-0 \
+        --url 'http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/compile-nginx-procedure.html' \
+        opt/nginx
 
 Separate configuration package
 
@@ -182,6 +190,14 @@ Try it out!
 * [nginx 3rd party modules](http://wiki.nginx.org/3rdPartyModules)
 * [Enable HTTP/2.0 in NGINX](https://ma.ttias.be/enable-http2-in-nginx/)
 * [nginx.com Install and Compile-time options](https://www.nginx.com/resources/wiki/start/topics/tutorials/installoptions/)
+* [Use NGINX with Memcached](http://blog.octo.com/en/http-caching-with-nginx-and-memcached/)
+  * [nginx memc module](https://github.com/openresty/memc-nginx-module)
+* [Embed LUA within NGINX with OpenResty](https://github.com/openresty/lua-nginx-module#installation)
 
 
+## Maybe someday
+
+Things I didn't know but might be very powerful.
+
+* [Embed JavaScript scripting within NGINX with SpiderMonkey](https://github.com/peter-leonov/ngx_http_js_module#readme)
 
