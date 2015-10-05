@@ -6,13 +6,17 @@
     {{#if keywords }}<meta name="keywords" content="{{keywords}}" />{{/if}}
     {{#if description }}<meta name="description" content="{{description}}" />{{/if}}
     <script src="/talks/js/remark.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
     <script src="/talks/js/socket.js" id="socketio"></script>
   </head>
   <body>
     {{{ contents }}}
     <script>
         var  slideshow = remark.create({
-                sourceUrl: 'slides.md'
+                sourceUrl: 'slides.md',
+                highlightStyle: 'monokai',
+                highlightLines: true
              })
             ,clientId = null
             ,socket = io.connect()
@@ -81,6 +85,31 @@
                 socket.destroy();
             } catch(e){}
         }
+        document.addEventListener('readystatechange', function(e){
+            if ( !!window.talk ) {
+                return;
+            }
+            var talk = {chapters:[]};
+            document.querySelectorAll('.chapter').forEach(function( chapterNode ){
+                var idString = chapterNode.getAttribute('id')
+                  , textContent = chapterNode.querySelector('h1').textContent;
+                if (!!idString) {
+                    var slideIdentifier = idString.replace('slide-','');
+                    talk.chapters.push([slideIdentifier, textContent]);
+                }
+            });
+            window.talk = talk;
+            var evtData = {detail: {data: talk, subName: 'init'}}
+              , evt = new CustomEvent('talk', evtData);
+            document.querySelectorAll('.remark-slide-number').forEach(function(elem){
+                    var tocLink = document.createElement('a');
+                    tocLink.setAttribute('href', '#toc');
+                    tocLink.innerHTML = elem.textContent;
+                    elem.innerHTML = '';
+                    elem.appendChild(tocLink);
+                });
+            e.target.dispatchEvent(evt);
+        });
     </script>
   </body>
 </html>

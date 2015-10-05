@@ -192,7 +192,12 @@ Try it out!
 * [nginx.com Install and Compile-time options](https://www.nginx.com/resources/wiki/start/topics/tutorials/installoptions/)
 * [Use NGINX with Memcached](http://blog.octo.com/en/http-caching-with-nginx-and-memcached/)
   * [nginx memc module](https://github.com/openresty/memc-nginx-module)
+
+## NGINX and Lua
+
+* [Scripting NGINX with Lua talk slides](http://www.londonlua.org/scripting_nginx_with_lua/slides.html)
 * [Embed LUA within NGINX with OpenResty](https://github.com/openresty/lua-nginx-module#installation)
+* [nginx lua documentation](https://www.nginx.com/resources/wiki/modules/lua/)
 
 
 ## Maybe someday
