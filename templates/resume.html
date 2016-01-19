@@ -3,12 +3,10 @@
   <head>
     <meta charset=utf-8 />
     <title>{{ title }} ✪  Renoir Boulanger, Web Developer &amp; Operations engineer</title>
-    <link rel=stylesheet href="//renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
-    <link rel=stylesheet href="https://cdn.rawgit.com/PrismJS/prism-themes/master/themes/prism.css" />
-    <link rel=stylesheet href="https://cdn.rawgit.com/PrismJS/prism-themes/master/themes/prism-atom-dark.css" />
-    <style>body { line-height: 30px; font-size: 16px; } li { line-height: 30px; }</style>
+    <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
-  <body class="home page">
+  <body class="page resume">
     <header>
         <div class="zone">
             <div class="zone-tools container">
@@ -57,21 +55,112 @@
     <footer id="content-info" role="contentinfo">
         <div class="zone">
             <div class="zone-bottom container">
-                <div class="zone-bottom-padding"></div>
-                <div class="zone-bottom-content">
-                    <div class="row"></div>
-                    <div class="row">
-                        <div class="copyrights span12">
-                            <small>© 2005-2015 <strong>Renoir Boulanger</strong>&nbsp;—&nbsp;<span>Déposé sous licence <a href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow license" title="Creative Commons">CC</a> (Canada)</span></small>
-                        </div>
-                        <div class="copyrights span12" style="font-size:0.8em;color:#C3C3C3;">
-                            <p>Designed by <a href="http://gabiviana.com/">@gabiviana</a>. </p>
-                        </div>
-                    </div>
-                </div>
+                <div class="zone-bottom-padding">&nbsp;</div>
             </div>
         </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script>
+    function querySelectorApply(selectorString, closure) {
+      Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
+    }
+    function openAllDetailsElements() {
+      querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
+        HTMLDetailsElement.setAttribute('open','');
+      });
+    }
+    window.onload = function resumeOnloadHandler() {
+      var hasClassClassName = ' no-details',
+          bodyClassesNames = document.body.getAttribute('class');
+      /**
+       * Test for existence of details element
+       *     !!window.HTMLDetailsElement
+       * or like this
+       *     !!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement
+       */
+       if (!!window.HTMLDetailsElement === true) {
+         hasClassClassName = ' has-details';
+         var heading = [
+                         '<div class="warn no-print">',
+                           '<strong>Heads up</strong> — If you want details on a section of my resume.',
+                           'Make sure you click on the expand triangle (&nbsp;▶&nbsp;).',
+                           'You can also <button onclick="openAllDetailsElements()">expan them all</button>',
+                         '</div>'
+                       ];
+       } else {
+       var heading = [
+                       '<div class="warn no-print">',
+                         '<strong>Heads up</strong> — Unfortunately this browser doesn’t support details HTML5 element.',
+                         'Don’t worry, not all recent browsers supports it. Yet. You lose nothing, everything is already expanded.',
+                         'If you want to get a shorter version of this CV, and cherry-pick which sections you want expanded,',
+                         'try this page with another web browser.',
+                       '</div>'
+                     ];
+
+       }
+       document.body.setAttribute('class', bodyClassesNames + hasClassClassName);
+       // I really should stop using jQuery.
+       $(heading.join(' ')).prependTo('body');
+    }
+    </script>
+    <style>
+    body { line-height: 30px; font-size: 16px; }
+    li { line-height: 30px; }
+    .warn {
+      padding:10px;
+      background:#333;
+      color:#FFF;
+      font-size:0.9em;
+      content: "";
+      line-height:18px;
+    }
+    body.has-details summary:before { content: "(click to expand) "; }
+    @media print {
+      body.has-details summary:before { display:none; }
+      .warn.no-print { display:none; }
+      section[id] { page-break-after: always; }
+      summary { page-break-before: avoid; }
+      h3,h4 { page-break-after: avoid; }
+      .job li, .job { page-break-inside: avoid; }
+      a[href*="renoirboulanger"]:after { display: none; }
+      .table li { line-height: 18px; }
+      @page {
+        margin: 1.1cm;
+      }
+    }
+
+    [data-xp="3"]:after { content: '\00a0\00a0\00a0\00a0\02605'; }
+    [data-xp="4"]:after { content: '\00a0\00a0\00a0\02605\02605'; }
+    [data-xp="5"]:after { content: '\00a0\00a0\02605\02605\02605'; }
+
+    .resume .zone .zone-top { padding: 20px; }
+    .resume .job details { clear:none; }
+    .resume .content [role="main"] .boxes > dl,
+    .resume .job dl {
+      float: right;
+      width: 45%;
+      margin: 50px 0 20px 20px;
+      border-left: 1px dashed #ddd;
+      padding: 10px;
+    }
+    .resume .job dl {
+      margin-top: -36px; /* Which is line-height of h1,h2,h3 */
+      padding-top: 0;
+    }
+    .resume .job {
+      overflow: hidden;
+    }
+    .resume .job + .job {
+      border-top: 1px dashed #ddd;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+    .resume details[open] {
+      margin-left: 30px;
+    }
+    .resume details[open] summary {
+      margin-left: -30px;
+    }
+    </style>
   </body>
 </html>

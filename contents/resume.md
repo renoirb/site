@@ -34,7 +34,7 @@ Hello! My name is [<span itemprop="givenName" lang="fr">Renoir</span> <span item
 
 I have been building Web sites professionally for over  <data value="14">fourteen</data>  years for several design agencies and various types of organizations.
 
-In 2013, [I got a position with the <abbr title="World Wide Web Consortium">W3C</abbr>][w3c-alumni] as a [**Developer Operations** *engineer*][renoirb-webplatform-devops]. This allowed me to shift focus to my favourite hobby; managing Linux servers. I’ve learned a lot about optimization techniques for Web sites under heavy traffic.
+In 2013, [I got a position with the <abbr title="World Wide Web Consortium">W3C</abbr>][w3c-alumni] as a [**Developer Operations** *engineer*][renoirb-webplatform-devops]. This allowed me to shift focus to my favourite hobby; managing Linux servers. I’ve learned a lot about optimization techniques for Web sites under heavy traffic. I’m now ready to bring my experience in both operations and development to a new level.
 
 You’ll quickly notice with me that I’m fascinated about anything related to Open Web technologies, and how adamant I can be about finding ways to make Web sites run fast, and to deploy them consistently!
 
@@ -61,6 +61,7 @@ You’ll quickly notice with me that I’m fascinated about anything related to 
 ## Professional experience
 
 
+<section class="job">
 
 ### Product-Owner/Tech Lead
 
@@ -76,9 +77,7 @@ Type
 Location
 :    Montreal, Quebec
 
-<details>
-<summary>My role was to provide oversight of the development, report on the status and make sure correct people are involved in decision-making and review of the [Web Browser compatibility feature support data](http://browsercompat.herokuapp.com/). The project is intended to be an independent compatibility data source for the web, but the first client will be the well-known [Mozilla Developer Network](http://developer.mozilla.org/) ("MDN") project.
-</summary>
+<details><summary>My role was to provide oversight of the development, report on the status and make sure correct people are involved in decision-making and review of the [Web Browser compatibility feature support data](http://browsercompat.herokuapp.com/). The project is intended to be an independent compatibility data source for the web, but the first client will be the well-known [Mozilla Developer Network](http://developer.mozilla.org/) ("MDN") project.</summary>
 
 #### Responsibilities
 
@@ -88,6 +87,8 @@ Location
 * Review code (written in Python)
 </details>
 
+
+</section><section class="job">
 
 
 ### Developer Operations Engineer
@@ -104,11 +105,9 @@ Type
 Location
 :    Montreal, Quebec
 
-<details>
-<summary>My role was to maintain stability, improve features, strengthen the infrastructure of the site, and act as a technical liaison with Open-source communities on the [WebPlatform Docs project](http://www.webplatform.org). The *WebPlatform Docs project* was funded by members of the *W3C*, sponsors were: Adobe, Apple, DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and Opera.
+<details><summary>My role was to maintain stability, improve features, strengthen the infrastructure of the site, and act as a technical liaison with Open-source communities on the [WebPlatform Docs project](http://www.webplatform.org). The *WebPlatform Docs project* was funded by members of the *W3C*, sponsors were: Adobe, Apple, DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and Opera.
 
-Unfortunately the sponsors retracted from the project and the site is maintained on volunteer basis by myself and my former manager.
-</summary>
+Unfortunately the sponsors retracted from the project and the site is maintained on volunteer basis by myself and my former manager.</summary>
 
 #### Responsibilities
 
@@ -148,6 +147,8 @@ Unfortunately the sponsors retracted from the project and the site is maintained
 </details>
 
 
+</section><section class="job">
+
 
 ### Web developer
 
@@ -163,17 +164,19 @@ Type
 Location
 :    Montreal, Quebec
 
-<details>
-<summary>TEKSystems is a software development agency with offices in the USA, Canada and India. TEKSystems has a number of multi-disciplinary teams where they collaborate with the project sponsor ("client") to make the desired outcome following *Agile* methodologies.
+<details><summary>TEKSystems is a software development agency with offices in the USA, Canada and India. TEKSystems has a number of multi-disciplinary teams where they collaborate with the project sponsor ("client") to make the desired outcome following *Agile* methodologies.
 
-I was a programmer in a team of 8, that had QA, DBA, Business analyst, programmers, and a SCRUM master/Project manager. My role was to program in PHP and JavaScript to add features to their web platform.
-</summary>
+I was a programmer in a team of 8, that had QA, DBA, Business analyst, programmers, and a SCRUM master/Project manager. My role was to program in PHP and JavaScript to add features to their web platform.</summary>
 
 #### Achievements
 
 * Participated in deployment strategy changes
 * Improved parts of an AJAX communication subsystem that handled SSO features
 </details>
+
+
+</section><section class="job">
+
 
 ### Web developer
 
@@ -189,9 +192,7 @@ Type
 Location
 :    Montreal, Quebec
 
-<details>
-<summary>Participated in a cloud management web application that could control VMs in multiple geographical data centers, and had to support two cloud provider platform APIs (OpenStack, VMWare).
-</summary>
+<details><summary>Participated in a cloud management web application that could control VMs in multiple geographical data centers, and had to support two cloud provider platform APIs (OpenStack, VMWare).</summary>
 
 #### Responsibilities
 
@@ -199,6 +200,10 @@ Location
 * Design a management abstraction layer proxying request to different vendor platform APIs
 * Coach Ericsson employees about the Open Web Platform and current web development methodologies
 </details>
+
+
+</section><section class="job">
+
 
 ### Web developer
 
@@ -214,11 +219,9 @@ Type
 Location
 :    Montreal, Quebec
 
-<details>
-<summary>Co-founded *Evocatio* with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees in our payroll. My responsibility was to find new projects and lead work related to frontend development.
+<details><summary>Co-founded *Evocatio* with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees in our payroll. My responsibility was to find new projects and lead work related to frontend development.
 
-Unfortunately I can’t outline some client projects due to past non-disclosure agreements.
-</summary>
+Unfortunately I can’t outline some client projects due to past non-disclosure agreements.</summary>
 
 #### Achievements
 
@@ -274,6 +277,9 @@ The version I worked on isn’t online anymore, but you [can still see a few scr
 </details>
 
 
+</section><section class="job">
+
+
 ### Web developer
 
 Employer
@@ -288,9 +294,7 @@ Type
 Location
 :    Montreal, Quebec
 
-<details>
-<summary>My role was to maintain the company corporate image on the web, maintain their Web site, participate in projects run internally. The management also allowed me to use my Linux system-administration skills to maintain the company internal network and inventory.
-</summary>
+<details><summary>My role was to maintain the company corporate image on the web, maintain their Web site, participate in projects run internally. The management also allowed me to use my Linux system-administration skills to maintain the company internal network and inventory.</summary>
 
 #### Responsibilities
 
@@ -364,6 +368,9 @@ Integrated two web application mockups, creating a theme for the YUI2 markup lib
 </details>
 
 
+</section><section class="job">
+
+
 ### Web developer
 
 Employer
@@ -378,9 +385,7 @@ Type
 Location
 :    Magog, Quebec
 
-<details>
-<summary>Câble Axion is a cable service provider. Their network coverage goes from Montreal South shore, follows the US borders, and go up until the Beauce area.
-</summary>
+<details><summary>Câble Axion is a cable service provider. Their network coverage goes from Montreal South shore, follows the US borders, and go up until the Beauce area.</summary>
 
 #### Responsibilities
 
@@ -390,6 +395,8 @@ Location
 * Answer level 2 tech-support phone calls from customers
 </details>
 
+
+</section><section class="job">
 
 
 ### Web developer
@@ -406,14 +413,11 @@ Type
 Location
 :    Sherbrooke, Quebec
 
-<details>
-<summary>Inexis solution web Inc., was a one-man firm web development service provider to Eastern Townships graphic design agencies.
+<details><summary>Inexis solution web Inc., was a one-man firm web development service provider to Eastern Townships graphic design agencies.
 
-Services typically included to creating HTML/CSS based on Adobe Photoshop/Illustrator mockups designers were making, creating e-mail templates, and managing hosting services. The company owned a few rack servers and was reselling its hosting service as white label to its clients.
-</summary>
+Services typically included to creating HTML/CSS based on Adobe Photoshop/Illustrator mockups designers were making, creating e-mail templates, and managing hosting services. The company owned a few rack servers and was reselling its hosting service as white label to its clients.</summary>
 
 #### Achievements
-
 
 ##### Managed sites for well-known local organizations
 
@@ -430,8 +434,8 @@ Inexis was publisher of its own proprietary *Client Relationship Management Solu
 The *CRM* distribution was used internally so that I could manage sales and work with 4 partners in the same time. At its peak, the company served more than 60 Web sites with all related services.
 
 The *CMS* distribution had been deployed until 2008. It started as a full featured CMS, and became a static site generator in 2006.
-
 </details>
+</section>
 
 
 ----
@@ -442,7 +446,7 @@ The *CMS* distribution had been deployed until 2008. It started as a full featur
 
 ## Technologies
 
-<table class="table">
+<table class="table table-condensed">
 <caption>An opinionated and noncomprehensive list of technologies I worked with.</caption>
 <tr><td>&nbsp</td><th>Most familiar</th><th>Some experience</th></tr>
 <tr>
@@ -485,9 +489,7 @@ The *CMS* distribution had been deployed until 2008. It started as a full featur
 
 ### Convert content and history of MediaWiki into Static site-generator and Git
 
-<details>
-<summary>Work done while working for the W3C. I wrote an *abstract library "content converter"* and a *MediaWiki converter*  system with which I could convert each wiki page and write contents into a text file. I preserved history for each edit using Git. The conversion takes into account every special URLs MediaWiki allowed (i.e. non ASCII fragments) and generates a rewrite map for NGINX. Last conversion step was to convert last version of each page into Markdown.
-</summary>
+<details><summary>Work done while working for the W3C. I wrote an *abstract library "content converter"* and a *MediaWiki converter*  system with which I could convert each wiki page and write contents into a text file. I preserved history for each edit using Git. The conversion takes into account every special URLs MediaWiki allowed (i.e. non ASCII fragments) and generates a rewrite map for NGINX. Last conversion step was to convert last version of each page into Markdown.</summary>
 
 See the code
 :    [*New* WebPlatform Docs content repository](https://github.com/webplatform/docs)
@@ -507,11 +509,9 @@ See the code
 
 ### Infrastructure deployment code
 
-<details>
-<summary>Work done while working for the W3C. WebPlatform.org relied on a number of Open-Source projects, written in different languages. Each component had a set of adjustments to maintain the site image.
+<details><summary>Work done while working for the W3C. WebPlatform.org relied on a number of Open-Source projects, written in different languages. Each component had a set of adjustments to maintain the site image.
 
-The objective of this project was to improve [WebPlatform.org](https://www.webplatform.org/) deployment system in order to work with the same code *locally* or *in the cloud* so that I could work on configuration locally and test them in staging prior to deploy changes in production.
-</summary>
+The objective of this project was to improve [WebPlatform.org](https://www.webplatform.org/) deployment system in order to work with the same code *locally* or *in the cloud* so that I could work on configuration locally and test them in staging prior to deploy changes in production.</summary>
 
 See the code
 :    [Configuration scripts](https://github.com/webplatform/salt-states/)
@@ -526,11 +526,9 @@ See the code
 
 ### Single Sign-On and Firefox Accounts
 
-<details>
-<summary>Work done while working for the W3C. As previously said, WebPlatform.org relied on a number of Open-Source projects, written in different languages. We wanted to simplify authentication, and had to create a way to share session state between different stacks.
+<details><summary>Work done while working for the W3C. As previously said, WebPlatform.org relied on a number of Open-Source projects, written in different languages. We wanted to simplify authentication, and had to create a way to share session state between different stacks.
 
-In order to allow users to use *one set of credentials* on separate web applications, [I developed a mechanism to implement a Single Sign On][fxa-how] using [Mozilla Firefox Accounts][wpd-fxa-fork]. My work [caught attention of the Accounts team at Mozilla][mozillan-renoirb], but [hasn’t been merged yet][fxa-pr].
-</summary>
+In order to allow users to use *one set of credentials* on separate web applications, [I developed a mechanism to implement a Single Sign On][fxa-how] using [Mozilla Firefox Accounts][wpd-fxa-fork]. My work [caught attention of the Accounts team at Mozilla][mozillan-renoirb], but [hasn’t been merged yet][fxa-pr].</summary>
 
 The objective has been achieved, but isn't in use because we migrated WebPlatform into a static site-generator driven publishing and no longer support any backends.
 
@@ -558,9 +556,7 @@ See the code
 
 ### RoughDraft.js
 
-<details>
-<summary>RoughDraft allows to create HTML documents without any backend — All in the browser!. It makes it possible to create  simple static HTML files with loops, Lorem Ipsum and placeholder images without having to copy paste boilerplate code.
-</summary>
+<details><summary>RoughDraft allows to create HTML documents without any backend — All in the browser!. It makes it possible to create  simple static HTML files with loops, "*Lorem Ipsum*" and placeholder images without having to copy paste boilerplate code.</summary>
 
 See in action
 :    [my wedding RSVP web site](https://sweetieandsweetie.com/styleguide/)
@@ -637,24 +633,3 @@ See in action
 * Co-written an article about Open source software and the impacts while starting out a business (in french) [Logiciels libres en affaire](http://www.rezopointzero.com/2010/11/24/rien-quune-question-de-gros-bon-sens/)
 
 </section>
-
-<script>
-function querySelectorApply(selectorString, closure) {
-  Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
-}
-function openAllDetailsElements() {
-  querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
-    HTMLDetailsElement.setAttribute('open','');
-  });
-}
-window.onload = function resumeOnloadHandler() {
-  /*!!window.HTMLDetailsElement*/
-  /*!!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement*/
-  /*openAllDetails()*/
-}</script>
-<style>
-[data-xp="3"]:after { content: '\00a0\00a0\00a0\00a0\02605'; }
-[data-xp="4"]:after { content: '\00a0\00a0\00a0\02605\02605'; }
-[data-xp="5"]:after { content: '\00a0\00a0\02605\02605\02605'; }
-a[href*="renoirboulanger"]:after { display:none; }
-</style>
