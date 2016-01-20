@@ -5,6 +5,170 @@
     <title>{{ title }} ✪  Renoir Boulanger, Web Developer &amp; Operations engineer</title>
     <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
     <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+
+      /* Far reaching ones */
+      body { line-height: 30px; font-size: 16px; }
+      li { line-height: 30px; }
+      .table li { line-height: 20px; }
+
+
+      /* Too much padding for the resume version of the main layout */
+      .resume .zone .zone-top { padding: 20px; }
+
+
+      /* Hopefully I won't get more spam than I already get */
+      [foudelapouitte]:after {
+        content:"moc.regnaluobrioner\0040olleh";
+        unicode-bidi:bidi-override;
+        direction: rtl;
+      }
+
+
+      /* Definition list, they all get no padding or margin adjustment. */
+      dt,
+      dd {
+        line-height: 24px;
+      }
+      dd + dt { margin-top: 16px; }
+      dd { margin-left: 0; }
+      /* /Definition list, they all get no padding... */
+
+
+      /* Page top warning */
+      .warn {
+        padding:10px;
+        background:#333;
+        color:#FFF;
+        font-size:0.9em;
+        content: "";
+        line-height:18px;
+      }
+      /* /Page top warning */
+
+
+      /* summary arrow replacement */
+      details summary::-webkit-details-marker {
+        /* Hide summary arrow at beginning.
+           Non blink/webkit browsers will have two arrows. */
+          display:none;
+      }
+      .has-details details summary:after {
+        content: "\25BA"; /* ► */
+        display: block;
+      }
+      .has-details details[open] summary:after { content: "\25BC"; /* ▼ */ }
+      .has-details details[open] summary { margin-left: -30px; }
+      .has-details details[open] { margin-left: 30px; }
+      .has-details details summary { cursor: zoom-in; }
+      .has-details details[open] { cursor: zoom-out; }
+      /* /summary arrow replacement */
+
+
+      /* Float dl on the right */
+      #summary dl,
+      #work-experience dl,
+      #selected-projects dl {
+        float: right;
+        width: 45%;
+        margin: 50px 0 20px 20px;
+        border-left: 1px dashed #ddd;
+        padding: 0 20px;
+      }
+      #work-experience dl,
+      #selected-projects dl  {
+        margin-top: -36px; /* Which is line-height of h1,h2,h3 */
+        padding-top: 0;
+      }
+      #work-experience details,
+      #selected-project details {
+        clear:none;
+      }
+      #work-experience section,
+      #selected-projects section {
+        overflow: hidden;
+      }
+      #work-experience section + section,
+      #selected-projects section + section {
+        border-top: 1px dashed #ddd;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+      /* /Float dl on the right */
+
+
+      /* Adjust past-employers SVG logos to harmonize them visually */
+      #past-employers img {
+        max-height: 80px;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        opacity: 0.7;
+      }
+      #past-employers a:hover img {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+        opacity: 1;
+      }
+      #past-employers img[alt="Mozilla"] { max-height:57px; }
+      #past-employers img[alt="W3C"] { max-height:57px; }
+      #past-employers a:hover { background: none; }
+      #past-employers a + a {
+        margin-left: 4%;
+      }
+      #past-employers p {
+        text-align: center;
+      }
+      /* /Adjust past-employers SVG logos */
+
+
+      @media print {
+        h3,h4 {
+          page-break-after: avoid;
+        }
+        @page {
+          margin: 1.1cm;
+        }
+        summary {
+          page-break-before: avoid;
+        }
+
+        /* Hide some links location in print media */
+        a[href*="renoirboulanger"]:after,
+        a[href^="/"]:after,
+        a[href^="#"]:after {
+          display: none;
+        }
+
+        /* Hide meta stuff that doesn't make sense in print */
+        .no-print {
+          display:none;
+        }
+
+        .has-details summary:before {
+          display:none;
+        }
+        .has-details details:not([open]) summary:after {
+          content: "\25B7   (More details available online, you can expand this section if you load my resume in your Web browser)";
+          font-size: 0.8em;
+        }
+
+        [role="main"] > .boxes > section[id]:not(:last-child) {
+          page-break-after: always;
+        }
+
+        #work-experience,
+        #work-experience li,
+        #selected-projects li {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
   </head>
   <body class="page resume">
     <header>
@@ -88,7 +252,7 @@
                          '</div>'
                        ];
        } else {
-       var heading = [
+         var heading = [
                        '<div class="warn no-print">',
                          '<strong>Heads up</strong> — Unfortunately this browser doesn’t support details HTML5 element.',
                          'Don’t worry, not all recent browsers supports it. Yet. You lose nothing, everything is already expanded.',
@@ -96,71 +260,11 @@
                          'try this page with another web browser.',
                        '</div>'
                      ];
-
        }
        document.body.setAttribute('class', bodyClassesNames + hasClassClassName);
        // I really should stop using jQuery.
        $(heading.join(' ')).prependTo('body');
     }
     </script>
-    <style>
-    body { line-height: 30px; font-size: 16px; }
-    li { line-height: 30px; }
-    .warn {
-      padding:10px;
-      background:#333;
-      color:#FFF;
-      font-size:0.9em;
-      content: "";
-      line-height:18px;
-    }
-    body.has-details summary:before { content: "(click to expand) "; }
-    @media print {
-      body.has-details summary:before { display:none; }
-      .warn.no-print { display:none; }
-      section[id] { page-break-after: always; }
-      summary { page-break-before: avoid; }
-      h3,h4 { page-break-after: avoid; }
-      .job li, .job { page-break-inside: avoid; }
-      a[href*="renoirboulanger"]:after { display: none; }
-      .table li { line-height: 18px; }
-      @page {
-        margin: 1.1cm;
-      }
-    }
-
-    [data-xp="3"]:after { content: '\00a0\00a0\00a0\00a0\02605'; }
-    [data-xp="4"]:after { content: '\00a0\00a0\00a0\02605\02605'; }
-    [data-xp="5"]:after { content: '\00a0\00a0\02605\02605\02605'; }
-
-    .resume .zone .zone-top { padding: 20px; }
-    .resume .job details { clear:none; }
-    .resume .content [role="main"] .boxes > dl,
-    .resume .job dl {
-      float: right;
-      width: 45%;
-      margin: 50px 0 20px 20px;
-      border-left: 1px dashed #ddd;
-      padding: 10px;
-    }
-    .resume .job dl {
-      margin-top: -36px; /* Which is line-height of h1,h2,h3 */
-      padding-top: 0;
-    }
-    .resume .job {
-      overflow: hidden;
-    }
-    .resume .job + .job {
-      border-top: 1px dashed #ddd;
-      margin-top: 10px;
-      padding-top: 10px;
-    }
-    .resume details[open] {
-      margin-left: 30px;
-    }
-    .resume details[open] summary {
-      margin-left: -30px;
-    }
-    </style>
   </body>
 </html>
