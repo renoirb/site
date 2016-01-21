@@ -30,6 +30,8 @@ PGP public key
 
 Hello! My name is [<span itemprop="givenName" lang="fr">Renoir</span>](https://renoirboulanger.com/about/) and I’m a <span itemprop="jobTitle">web developer</span> from <span lang="fr" typeof="PostalAddress"><span itemprop="addressLocality">Montréal</span>, <span itemprop="addressRegion">Québec</span>, <span itemprop="addressCountry">Canada</span></span>. In the recent past, I have been working at for the [<abbr title="World Wide Web Consortium">W3C</abbr>][w3c-alumni] on the [WebPlatform Docs project](http://www.webplatform.org/) and had a short [*Product-Owner* contract for *Mozilla*][mozillan-renoirb]. I have a broad understanding of the Open Web stack and techniques to deploy and build Web sites that scales.
 
+The ideal workplace for me would be for a company or project where most of the members works from home, heavily uses tools to collaborate *asynchronously* with each others so that we can have consistent focus periods. We can’t plan when we’ll be optimal to work solving problem, can we? I care really much about quality of my work, so I hope my future employer does too.
+
 **Career highlights**
 
 * **Occasional contributor** to **open-source projects** such as MediaWiki and *Mozilla Firefox Accounts*
@@ -77,7 +79,7 @@ Location
 During my contract I published a few documents, prepared a [project status slide deck](http://renoirb.com/talks/2015-Mozilla-MDN-Browser-Compatibility-Data-Project-vision/) and [a few prototypes](http://renoirb.com/prototypes/2015/browsercompat/)
 
 #### Responsibilities
-* Drive the overall project forward, serving as key stakeholder/subject matter expert, and make key decisions on all aspects of version 1 (V1) of the project.
+* Drive the overall project forward, serving as key stakeholder/subject matter expert, and make key decisions on all aspects of v1
 * Oversee and report status on all deliverables of the launch version
 * Help identify where decisions and resources are needed to launch and report to the business and engineering manager
 * Organize and chair meetings with stakeholders, developers, etc.
@@ -151,7 +153,7 @@ Unfortunately the sponsors retracted from the project and the site is maintained
 </section><section>
 
 
-### Web developer
+### Software Developer
 
 Employer
 :    [TEKSystems](http://www.teksystems.com/)
@@ -175,7 +177,7 @@ I was a programmer in a team of 8, that had <abbr title="Quality Assurance analy
 </section><section id="ericsson-2012">
 
 
-### Web developer
+### Software Developer
 
 Employer
 :    [Ericsson](http://www.ericsson.com/)
@@ -202,13 +204,13 @@ Location
 </section><section>
 
 
-### Web developer
+### Web Developer
 
 Employer
 :    *Evocatio Solutions technologiques Inc.*
 
 Duration
-:    Jan 2010 &ndash; Feb 2012 (2 years 1 month)
+:    Jan 2010 &ndash; Feb 2012 (2 years 2 months)
 
 Type
 :    Co-Founder
@@ -216,11 +218,15 @@ Type
 Location
 :    Montreal, Quebec
 
-<details><summary>Co-founded *Evocatio* with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees in our payroll. My responsibility was to find new projects and lead work related to frontend development.
+<details><summary>Co-founded *Evocatio* with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees in our payroll, some of our work won prizes in local industry competitions and other projects got deployed in cities around the globe.
 
 The company worked on projects for: Canadian Museum of History, <abbr lang="fr" title="Union des Artistes">UDA</abbr> (French-Canadian Artist union), Astral Media, Equisoft, Rolls-Royce, and Rogers Media.
 
 Unfortunately I can’t outline some projects due to past non-disclosure agreements.</summary>
+
+#### Responsibilities
+* Coach graphic designers about making websites with the Open Web Platform
+* Participate in software requirements, R&D documentation, and project bids
 
 #### Achievements
 * Participated in a major Web site rewrite for [UDA.ca](http://uniondesartistes.com/) from .NET into PHP with Symfony 1.x
@@ -265,7 +271,7 @@ Unfortunately I can’t outline some projects due to past non-disclosure agreeme
 </section><section>
 
 
-### Web developer
+### Web Integrator &<br/> Linux System Administrator
 
 Employer
 :    [Groupe Informatique TechSolCom](http://www.techsolcom.ca/)
@@ -581,24 +587,20 @@ See in action
 ### Academic
 * [**ACM** library](http://www.acm.org/), André Santanchè, (2013), in chapters "Markup architecture", "Events", et "Web Storage" in "[Mobile development using web technologies focusing on games](http://dl.acm.org/citation.cfm?doid=2526188.2528541&preflayout=flat)"
 
+### Review
+* Reviewed [Apache Solr PHP Integration](https://www.packtpub.com/books/content/apache-solr-php-integration) by *Pakt publishing*
+
 ### Talks
 * [Packaging for easier redeployment](http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/) (2015), DevOps Montréal, Montreal’s PHP Québec meetup
 * [Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite), presented during 2013 WebIn, and also at 2013 Web à Québec (WAQ)
 * [How to manage a big scale HTML/CSS project](http://www.slideshare.net/renoirb/how-to-manage-a-big-scale-htmlcss-project), given at Make Web Not War 2011
-
-### Published elsewhere
-* [devLAB: Montreal’s latest developer meet-up](http://www.webnotwar.ca/devlab-montreals-latest-developer-meetup/) on Web Not War blog
-* Co-written an article about Open source software and the impacts while starting out a business (in french) [Logiciels libres en affaire](http://www.rezopointzero.com/2010/11/24/rien-quune-question-de-gros-bon-sens/)
 
 ### Technical blog posts
 * [Add OpenStack instance meta-data into SaltStack grains store](https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/)
 * [Run a NodeJS process through forever from within a Docker container](https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/)
 * [Make Discourse “long polling” work behind Fastly](https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/)
 * [Create a MariaDB cluster with replication over SSL with Salt Stack](https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/)
-
-### Review
-* Reviewed [Apache Solr PHP Integration](https://www.packtpub.com/books/content/apache-solr-php-integration) by *Pakt publishing*
-
+</details>
 
 ----
 
