@@ -1,55 +1,64 @@
 ---
-title: Resumé
+title: Curriculum vitæ (detailed)
 template: resume.html
+description: Experienced full-stack developer with broad and deep understanding of the Open Web stack. Cares and enjoys maintaining Web sites to make them scale
 ---
 
-<section id="summary" itemscope itemtype="http://schema.org/Person">
+<section id="summary">
 
-<span id="availability">Next availability</span>
-:    March 2016
+<span id="availability">Availability</span>
+:    Open to opportunities
 
-Online
+Preferred contact method
+:    Write me <em foudelapouitte title="Please type this manually"></em>
+
+Phone number
+:    [<tt>+1 (438) 239-9341</tt>](tel:+14382399341)
+
+Elsewhere
+:    [<i class="icon-github"></i> GitHub](https://github.com/renoirb?tab=repositories "My code on GitHub")
 :    [<i class="icon-linkedin"></i> LinkedIn](https://linkedin.com/in/renoirb "My LinkedIn profile")
-:    [<i class="icon-github"></i> GitHub](https://github.com/renoirb "My code on GitHub")
+:    [<i class="icon-book"></i> Wikimedia Foundation](https://gerrit.wikimedia.org/r/#/q/owner:%22Renoirb+%253Crenoir%2540w3.org%253E%22,n,z)
 
 Languages
 :    *Français* <span lang="fr">langue maternelle</span>
 :    *English*  fluent
 
-Preferred contact method
-:    Write me <em foudelapouitte title="Please type this manually"></em>
-:    [<i class="icon-calendar"></i> **schedule** an appointment](https://freebusy.io/renoirb@gmail.com)
+Experienced full-stack developer looking for a position on a conscientious collaborative team. I have a broad and deep understanding of the Open Web stack and font-end and server techniques to build, deploy, and maintain Web sites that scale. I work effectively remotely or on-site.
 
-Job-hunting phone number
-:    <tt>438-239-9341</tt> <small>(temporary number, please use e-mail)</small>
+## Highlights
 
-PGP public key
-:    [<i class="icon-key"></i> <tt title="783E 74CE 1042 6F9F 2E2C  572A BC06 4BAD 27BF 89C1">BC06 4BAD 27BF 89C1</tt>](/files/renoirb.pub)
+* Created and maintained **architecture for high-performance sites**, including  [WebPlatform.org](http://www.webplatform.org/), and the [World Wide Web’s 25th anniversary](http://www.webat25.org) site
+* Built more than **150 websites** between 2002 and 2009
+* GNU/Linux user **since 1998**
+* Contributor to open-source projects such as **MediaWiki** and **Mozilla Firefox Accounts**
+* Experience with Cloud, **IaaS**, **Containers** and maintenance of **continuous deployment** systems
 
-## Career summary
 
-Hello! My name is [<span itemprop="givenName" lang="fr">Renoir</span>](https://renoirboulanger.com/about/) and I’m a <span itemprop="jobTitle">web developer</span> from <span lang="fr" typeof="PostalAddress"><span itemprop="addressLocality">Montréal</span>, <span itemprop="addressRegion">Québec</span>, <span itemprop="addressCountry">Canada</span></span>. In the recent past, I have been working at for the [<abbr title="World Wide Web Consortium">W3C</abbr>][w3c-alumni] on the [WebPlatform Docs project](http://www.webplatform.org/) and had a short [*Product-Owner* contract for *Mozilla*][mozillan-renoirb]. I have a broad understanding of the Open Web stack and techniques to deploy and build Web sites that scales.
+## Certifications
 
-The ideal workplace for me would be for a company or project where most of the members works from home, heavily uses tools to collaborate *asynchronously* with each others so that we can have consistent focus periods. We can’t plan when we’ll be optimal to work solving problem, can we? I care really much about quality of my work, so I hope my future employer does too.
+* **2013**: &nbsp;&nbsp; *Zend Certified Engineer PHP 5.3* <small>(Vue, [certificate][zce-link])</small>
+* **2012**: &nbsp;&nbsp; *Written English in Communication Contexts* <small>(McGill University)</small>
+* **2008**: &nbsp;&nbsp; *Web Accessibility* (WCAG 1) at the *Nazareth & Louis Braille* institute <small>(University of Montréal)</small>
+* **2007**: &nbsp;&nbsp; IBM *WebSphere DataPower* SOA Appliance <small>(IBM)</small>
 
-**Career highlights**
 
-* **Occasional contributor** to **open-source projects** such as MediaWiki and *Mozilla Firefox Accounts*
-* Working knowledge of modern "*vanilla*" JavaScript
-* **Zend Certified Engineer** PHP 5.3
-* Built more than 150 websites between 2002 and 2009
-* Maintained two highly visible sites; [WebPlatform.org](http://www.webplatform.org/), and the [World Wide Web’s 25th-anniversary](http://www.webat25.org) site (2014)
-* Experience working remotely, **in the open** within a **geographically distributed** team
-* Experience with **cloud IaaS**, **Containers**, and maintenance of **continuous deployment** systems
-* Familiar with large system issues and how to scale them
+## Publications
 
-**Past employers**
+* **Adacemic**: **[ACM library](http://www.acm.org/)**, André Santanchè, (2013), in chapters "Markup architecture", "Events", et "Web Storage" in "[Mobile development using web technologies focusing on games](http://dl.acm.org/citation.cfm?doid=2526188.2528541&preflayout=flat)"
+* **Book Review**: [Apache Solr PHP Integration](https://www.packtpub.com/books/content/apache-solr-php-integration) by *Pakt publishing*
+* **Talk**: [Packaging for easier redeployment](http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/) (2015), presented at *DevOps Montréal* and *PHP Québec* meetups
+* **Talk**: [Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite) (2013), presented during *Montreal WebIn* 2013, and *Web à Québec* (WAQ 2013)
+
+
+## Past employers
 
 <section id="past-employers">
 
-[![W3C](/assets/logos/w3c.svg)](#w3c-2013)[![Mozilla](/assets/logos/mozilla.svg)](#mozilla-2015)[![Ericsson](/assets/logos/ericsson.svg)](#ericsson-2012)
+[![Mozilla](../assets/logos/mozilla.svg)](#mozilla-2015)[![W3C](../assets/logos/w3c.svg)](#w3c-2013)[![Ericsson](../assets/logos/ericsson.svg)](#ericsson-2012)
 
 </section>
+
 
 ----
 
@@ -74,27 +83,25 @@ Type
 Location
 :    *Remote work*, Montreal, Quebec
 
-<details><summary>My role was to provide oversight of the development, report on the status and make sure correct people are involved in decision-making and review of the [Web Browser compatibility feature support data](http://browsercompat.herokuapp.com/). The project is intended to be an independent compatibility data source for the web, but the first client will be the well-known [<abbr title="Mozilla Developer Network">MDN</abbr>](http://developer.mozilla.org/) project.</summary>
+<details><summary>The [Web Browser compatibility data project](http://browsercompat.herokuapp.com/) "BrowserCompat" is a Python based Web application specifically designed to store and serve Web Browser feature support information. Its objective is to improve accuracy and maintenance of browser feature support information data for Web developer documentation sites.
 
-During my contract I published a few documents, prepared a [project status slide deck](http://renoirb.com/talks/2015-Mozilla-MDN-Browser-Compatibility-Data-Project-vision/) and [a few prototypes](http://renoirb.com/prototypes/2015/browsercompat/)
+My role was to provide oversight of the development, report on the status, make sure correct people are involved in decision-making, act as subject matter expert, and participate in software architecture discussions.</summary>
 
 #### Responsibilities
-* Drive the overall project forward, serving as key stakeholder/subject matter expert, and make key decisions on all aspects of v1
-* Oversee and report status on all deliverables of the launch version
+* Drive the overall project forward, serving as key stakeholder/subject matter expert, and make key decisions on all aspects
+* Oversee and report status on all deliverables
 * Help identify where decisions and resources are needed to launch and report to the business and engineering manager
 * Organize and chair meetings with stakeholders, developers, etc.
-* Maintain project’s product-backlog
-* Review code (written in Python)
 </details>
 
 
 </section><section id="w3c-2013">
 
 
-### Developer Operations Engineer
+### Developer Operations Engineer <small>(i.e. DevOps)</small>
 
 Employer
-:    [<abbr title="World Wide Web Consortium">W3C</abbr>](http://www.w3.org/)/<abbr title="Massachusetts Institute of Technology">MIT</abbr>
+:    [W3C/MIT](http://www.w3.org/)
 
 Duration
 :    Aug 2013 &ndash; Aug 2015 (2 years)
@@ -105,18 +112,15 @@ Type
 Location
 :    *Remote work*, Montreal, Quebec
 
-<details><summary>My role was to maintain stability, improve features, strengthen the infrastructure of the site, and act as a technical liaison with Open-source communities on the [WebPlatform Docs project](http://www.webplatform.org). The *WebPlatform Docs project* was funded by members of the *W3C*, sponsors were: Adobe, Apple, DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and Opera.
+Technologies
+:    <span class="label label-info">Apache 2.4</span> <span class="label label-info">Backbone.js</span> <span class="label label-info">gDNSd</span> <span class="label label-info">Bower</span> <span class="label label-info">Browserify/Rollup.js</span> <span class="label label-info">Cinder</span> <span class="label label-info">Compass</span> <span class="label label-info">Discourse</span> <span class="label label-info">DocPad</span> <span class="label label-info">Docker</span> <span class="label label-info">Docker Machine</span> <span class="label label-info">ElasticSearch</span> <span class="label label-info">Express.js</span> <span class="label label-info">Fastly (VCL)</span> <span class="label label-info">Gerrit</span> <span class="label label-info">Grunt/Gulp</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">Horizon</span> <span class="label label-info">HTTP/2</span> <span class="label label-info">Hypothes.is</span> <span class="label label-info">JavaScript</span> <span class="label label-info">MediaWiki</span> <span class="label label-info">Memcached</span> <span class="label label-info">Metalsmith</span> <span class="label label-info">Monit</span> <span class="label label-info">MySQL/MariaDB</span> <span class="label label-info">NGINX</span> <span class="label label-info">Node.js</span> <span class="label label-info">Nova</span> <span class="label label-info">PHP</span> <span class="label label-info">Python</span> <span class="label label-info">Redis</span> <span class="label label-info">SASS</span> <span class="label label-info">SaltStack</span> <span class="label label-info">Swift</span> <span class="label label-info">TwemProxy</span> <span class="label label-info">Vagrant</span> <span class="label label-info">WordPress</span> <span class="label label-info">jordansissel/fpm</span> <span class="label label-info">Git</span>
 
-Unfortunately the sponsors retracted from the project and the site is maintained on a volunteer basis by myself and my former manager.</summary>
 
-#### Responsibilities
-* Evaluate, configure, and maintain server and services
-* Analyze, develop, and maintain software running the site
-* Manage technical relationships with hosting and related service providers
-* Contribute to relevant Open-Source projects and collaborate with their communities
-* Help improve developer relationships with the W3C
+<details open><summary>The W3C typically works around specifications with its members. The [WebPlatform Docs project](http://www.webplatform.org) was meant to become an independent Web Developer documentation site maintained by an International community of contributors. Sponsors were: Adobe, Apple, DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and Opera.
 
-#### Projects
+My role was to maintain stability, improve features, strengthen the infrastructure of the site, and act as a technical liaison with Open-source communities.</summary>
+
+#### Achievements
 
 * **Convert content and history of MediaWiki into Static site-generator and Git** (2015)
 
@@ -150,30 +154,6 @@ Unfortunately the sponsors retracted from the project and the site is maintained
 </details>
 
 
-</section><section>
-
-
-### Software Developer
-
-Employer
-:    [TEKSystems](http://www.teksystems.com/)
-
-Duration
-:    Jun 2013 &ndash; Aug 2013 (2 months)
-
-Location
-:    Montreal, Quebec
-
-<details><summary>TEKSystems is a software development agency with offices in the USA, Canada and India. TEKSystems has a number of multi-disciplinary teams where they collaborate with the project sponsor ("client") to make the desired outcome following *Agile* methodologies.
-
-I was a programmer in a team of 8, that had <abbr title="Quality Assurance analyst">QA</abbr>, <abbr title="Database Administrator">DBA</abbr>, Business analyst, programmers, and a SCRUM master/Project manager.</summary>
-
-#### Achievements
-* Participated in deployment strategy changes
-* Improved parts of an <abbr title="Asynchronous JavaScript And XML">AJAX</abbr> communication subsystem that handled SSO features
-</details>
-
-
 </section><section id="ericsson-2012">
 
 
@@ -191,13 +171,20 @@ Type
 Location
 :    Montreal, Quebec
 
-<details><summary>Architect, build and lead a Web-based provisioning portal. The project goal was to create a server on-demand provisioning portal managing cloud computing cluster hosted in data centers geographically dispersed. Essential requirement was that it had to support more than one cloud provider platform such that the portal could initiate VMs on any data centers, on any cloud provider platforms such as OpenStack and VMWare.</summary>
+Technologies
+:    <span class="label label-info">Doctrine2</span> <span class="label label-info">Git</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">JMS Serializer</span> <span class="label label-info">JavaScript</span> <span class="label label-info">LESSCSS</span> <span class="label label-info">MySQL</span> <span class="label label-info">OpenStack Grizzly</span> <span class="label label-info">PHP</span> <span class="label label-info">Puppet</span> <span class="label label-info">Symfony2</span> <span class="label label-info">Twitter Bootstrap</span> <span class="label label-info">VMWare ESXi/vCloud Director</span> <span class="label label-info">Vagrant</span> <span class="label label-info">jQuery</span>
 
-#### Achievements
-* Analysis at a few levels; Interface, functional decomposition, non-functional requirements
-* Initial observation starting from a few PHP files
-* Design a management abstraction layer proxying request supporting different vendor APIs
-* Coach Ericsson employees about the Open Web Platform and current web development methodologies
+
+<details><summary>The project goal was to create a server on-demand provisioning portal managing cloud computing cluster hosted in data centers geographically dispersed.
+
+My role was to Architect, build and lead a Web-based virtualization self-service portal. A key feature I worked on was to allow users to initiate VMs from any data centers, on any cloud provider platforms (e.g. VMWare, OpenStack).</summary>
+
+When I joined the project, it was roughly a handful of PHP files and I created a complete solution. After Ericsson wide launch, other members joined.
+
+#### Responsibilities
+* Analyzed; Interface, functional decomposition, non-functional requirements
+* Designed and implemented an abstraction layer to support different vendor APIs
+* Coached Ericsson employees about the Open Web Platform and Web development methodologies
 </details>
 
 
@@ -218,11 +205,14 @@ Type
 Location
 :    Montreal, Quebec
 
-<details><summary>Co-founded *Evocatio* with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees in our payroll, some of our work won prizes in local industry competitions and other projects got deployed in cities around the globe.
+Technologies
+:    <span class="label label-info">Apache Solr</span> <span class="label label-info">Bower</span> <span class="label label-info">Compass</span> <span class="label label-info">EJS</span> <span class="label label-info">Git</span> <span class="label label-info">Grunt</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">JavaScript</span> <span class="label label-info">LESSCSS</span> <span class="label label-info">MySQL</span> <span class="label label-info">Node.js</span> <span class="label label-info">PHP</span> <span class="label label-info">SASS</span> <span class="label label-info">Subversion</span> <span class="label label-info">Symfony2</span> <span class="label label-info">Tiki Wiki CMS/Groupware</span> <span class="label label-info">Twitter Bootstrap</span> <span class="label label-info">VMWare ESXi</span> <span class="label label-info">Vagrant</span> <span class="label label-info">WordPress</span> <span class="label label-info">Yeoman</span> <span class="label label-info">jQuery</span> <span class="label label-info">symfony1.x</span>
 
-The company worked on projects for: Canadian Museum of History, <abbr lang="fr" title="Union des Artistes">UDA</abbr> (French-Canadian Artist union), Astral Media, Equisoft, Rolls-Royce, and Rogers Media.
 
-Unfortunately I can’t outline some projects due to past non-disclosure agreements.</summary>
+<details><summary>Co-founded *Evocatio Technological Solutions Inc.* with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees on our payroll, some of our work won prizes in local industry competitions and other projects got deployed in cities around the globe.
+
+The company worked on projects namely for: Canadian Museum of History, UDA (French-Canadian Artist Union), Astral Media, Equisoft, UPA (Quebec Province professional farmers’ union), Rolls-Royce and Rogers Media. </summary>
+
 
 #### Responsibilities
 * Coach graphic designers about making websites with the Open Web Platform
@@ -282,7 +272,11 @@ Duration
 Location
 :    Montreal, Quebec
 
-<details><summary>My role was to maintain the company corporate image on the web, maintain their Web site, participate in projects run internally as a Web developer. My employer also allowed me to use my Linux system-administration skills to maintain the company internal network and inventory.</summary>
+Technologies
+:    <span class="label label-info">Ant</span> <span class="label label-info">Apache 2.x</span> <span class="label label-info">Apache Tomcat</span> <span class="label label-info">Bind</span> <span class="label label-info">CentOS GNU/Linux</span> <span class="label label-info">CVS</span> <span class="label label-info">Debian GNU/Linux</span> <span class="label label-info">Exim</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">IBM WebSphere DataPower</span> <span class="label label-info">JavaScript</span> <span class="label label-info">Jaws</span> <span class="label label-info">Maven2</span> <span class="label label-info">Mootools</span> <span class="label label-info">Nagios/Centreon</span> <span class="label label-info">RHEL GNU/Linux</span> <span class="label label-info">PHP</span> <span class="label label-info">jQuery</span> <span class="label label-info">SNMP</span> <span class="label label-info">Subversion</span> <span class="label label-info">SpamAssassin</span> <span class="label label-info">Struts/JSF</span> <span class="label label-info">SUN Glassfish</span> <span class="label label-info">Syslog</span> <span class="label label-info">Ubuntu GNU/Linux</span> <span class="label label-info">VMWare Server</span> <span class="label label-info">WCAG</span> <span class="label label-info">XML/XSL/XSLT</span> <span class="label label-info">YUI2</span>
+
+
+<details><summary>My role was to maintain the company corporate image on the Web, maintain their Web site, participate in projects run internally as a Web developer and contribute to the maintenance of the company network infrastructure.</summary>
 
 #### Responsibilities
 * Participate as frontend developer to assigned projects
@@ -338,20 +332,16 @@ Location
     * Built a monitoring service using the SNMP protocol, centralized syslog server, and configured a Nagios monitoring service
     * Managed and tested **SOA integration** patterns with the company's **IBM WebSphere DataPower** development blade
     * Built an SMTP e-mail relay server, using SpamAssassin, and other filtering technologies
-
-#### Tools
-
-    JSF, Struts, Agile, Ant, IBM WebSphere DataPower, Apache Tomcat, JDBC, SNMP, Maven2, WAI WCAG, Balsamiq mockups, XML, XSL, YUI2, Mootools, Debian Linux, RedHat Enterprise Linux, Confluence, Jira, jQuery, MySQL, JSON, WSDL, Subversion, CVS
 </details>
 
 
 </section><section>
 
 
-### Web developer
+### Web Developer
 
 Employer
-:    [Câble Axion Digitel Inc.](http://www.axion.ca/)
+:    [Câble Axion Digitel](http://www.axion.ca/)
 
 Duration
 :    Oct 2005 &ndash; Nov 2006 (1 year 1 month)
@@ -359,20 +349,25 @@ Duration
 Location
 :    Magog, Quebec
 
-<details><summary>Câble Axion is a cable service provider. Their network coverage goes from Montreal South Shore, follows the US borders, and go up until the Beauce area.</summary>
+Technologies
+:    <span class="label label-info">CentOS GNU/Linux</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">Microsoft Access</span> <span class="label label-info">MySQL</span> <span class="label label-info">PHP</span> <span class="label label-info">Qmail</span> <span class="label label-info">SpamAssassin</span> <span class="label label-info">Subversion</span> <span class="label label-info">Sun OS (Solaris)</span>
 
-#### Responsibilities
-* Maintenance of the company website
-* Work with the company’s graphic design agency and integrate from their *Adobe Photoshop* mockups
-* Maintenance of the internal *Microsoft Access* support dashboard software
-* Answer level 2 tech-support phone calls from customers
+
+<details><summary>Câble Axion is a cable service provider. Their network coverage goes from Montreal South Shore, follows the US borders, and go up until the Beauce area in the province of Quebec.
+
+My role was to rewrite the corporate website, maintain internal applications and do level-2 support calls from subscribers. </summary>
+
+
+#### Achievements
+* Maintained the company website
+* Maintained of the internal *Microsoft Access* support dashboard software
 </details>
 
 
 </section><section>
 
 
-### Web developer
+### Web Developer
 
 Employer
 :    *Inexis solution web Inc.*
@@ -386,9 +381,12 @@ Type
 Location
 :    Sherbrooke, Quebec
 
-<details><summary>*Inexis solution web Inc.*, was a one-man web development service provider form I founded to serve graphic design agencies in the region of the Eastern Townships.
+Technologies
+:    <span class="label label-info">CentOS GNU/Linux</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">MySQL</span> <span class="label label-info">PHP</span> <span class="label label-info">Qmail</span> <span class="label label-info">RedHat GNU/Linux</span> <span class="label label-info">Subversion</span>
 
-Services typically included creating HTML/CSS based on Adobe Photoshop/Illustrator mockup designers were making, creating e-mail templates, and managing hosting services. The company owned a few rack servers and was reselling its hosting service as a white label to its clients.</summary>
+
+<details><summary>*INEXIS solution web Inc.*, was a one-man web development service provider form I founded to serve graphic design agencies in the region of the Eastern Townships. Services typically included creating HTML/CSS based on Adobe Photoshop/Illustrator mockup designers were making, creating e-mail templates, and managing hosting services.</summary>
+
 
 #### Achievements
 
@@ -419,49 +417,9 @@ Services typically included creating HTML/CSS based on Adobe Photoshop/Illustrat
 ----
 
 
-<!-- end of #work-experience --></section><section id="technologies">
-
-## Technologies
-
-<table class="table table-condensed">
-<caption>A cherry-picked list of technologies, organized by proficiency.</caption>
-<tr><td>&nbsp</td><th>Most familiar</th><th>Some experience</th></tr>
-<tr>
-<th>Programming</th>
-<td><ul><li data-xp=5><abbr title="Hyper Text Markup Language">HTML</abbr> <small>(<abbr title="Document Object Model">DOM</abbr>, APIs, etc.)</small></li><li data-xp=5><abbr title="Cascading Style Sheets">CSS</abbr></li><li data-xp=5>LESS/SASS/Compass</li><li data-xp=4>PHP</li><li data-xp=4>JavaScript <small>(ECMAScript 2005, Promise, etc.)</small></li><li data-xp=4>Bash scripting</li></ul></td>
-<td><ul><li data-xp=2>Varnish VCL</li><li data-xp=1>Python</li><li data-xp=1>Lua</li></ul></td>
-</tr><tr>
-<th>Frameworks</th>
-<td><ul><li data-xp=4>Symfony 2</li><li data-xp=4>Backbone.js</li><li data-xp=4>Metalsmith</li><li data-xp=4>MediaWiki</li></ul></td>
-<td><ul><li data-xp=3>PHPUnit</li><li data-xp=2>Karma</li><li data-xp=2>Mocha/Chai</li></ul></td>
-</tr><tr>
-<th>Servers</th>
-<td><ul><li data-xp=5>Node.js</li><li data-xp=4>NGINX</li><li data-xp=4>MySQL/MariaDB</li><li data-xp=4>Memcached</li></ul></td>
-<td><ul><li data-xp=3>ElasticSearch</li><li data-xp=3>Redis</li><li data-xp=3>Logstash</li><li data-xp=2><em>Self-hosted OpenStack cluster</em>: Cinder, Swift, Keystone</li></ul></td>
-</tr><tr>
-<th>Automation</th>
-<td><ul><li data-xp=5>Salt Stack</li><li data-xp=4>Monit</li></ul></td>
-<td><ul><li data-xp=2>Puppet</li><li data-xp=1>Consul</li><li data-xp=1>Etcd</li></ul></td>
-</tr><tr>
-<th>Tools</th>
-<td><ul><li data-xp=5>Git</li><li data-xp=4>Grunt/Gulp</li><li data-xp=4>Bower</li><li data-xp=4>Docker</li><li data-xp=4>Vagrant</li><li data-xp=3>GNU Make</li></ul></td>
-<td><ul><li data-xp=2>Babel</li><li data-xp=2>Rollup</li><li data-xp=2>Browserify</li></ul></td>
-</tr><tr>
-<th>Services</th>
-<td><ul><li data-xp=5>Fastly</li><li data-xp=4><em>OpenStack type providers</em>: HPCloud, DreamCompute</li></ul></td>
-<td><ul><li data-xp=4>AWS</li><li data-xp=3>CircleCI</li><li data-xp=3>Travis</li></ul></td>
-</tr></table>
-
-
-----
-
-
-<!-- end of #technologies --></section><section id="selected-projects">
+<!-- end of #work-experience --></section><section id="selected-projects">
 
 ## Selected projects
-
-* On [**GitHub**](https://github.com/renoirb?tab=activity)
-* On [**Wikimedia foundation**’s Gerrit](https://gerrit.wikimedia.org/r/#/q/owner:%22Renoirb+%253Crenoir%2540w3.org%253E%22,n,z)
 
 <section id="content-converter">
 
@@ -472,6 +430,9 @@ Project
 
 Sponsor
 :    W3C/MIT, Volunteer
+
+Technologies
+:    <span class="label label-info">MediaWiki</span> <span class="label label-info">Pandoc</span> <span class="label label-info">PHP 5.3</span>
 
 See the code
 :    [*New* WebPlatform Docs content repository](https://github.com/webplatform/docs)
@@ -490,8 +451,7 @@ See the code
 * Support compilation into static HTML
 </details>
 
-</section>
-<section id="webplatform-ops">
+</section><section id="webplatform-ops">
 
 ### Infrastructure deployment code<br/> with Salt Stack
 
@@ -500,6 +460,9 @@ Project
 
 Sponsor
 :    W3C/MIT
+
+Technologies
+:    <span class="label label-info">Python</span> <span class="label label-info">SaltStack</span>
 
 See the code
 :    [Configuration scripts](https://github.com/webplatform/salt-states/)
@@ -526,6 +489,9 @@ Project
 Sponsor
 :    W3C/MIT
 
+Technologies
+:    <span class="label label-info">Mozilla Firefox Accounts</span> <span class="label label-info">Express.js</span> <span class="label label-info">Backbone.js</span> <span class="label label-info">OAuth2</span> <span class="label label-info">JavaScript</span>
+
 See the code
 :    [GitHub Pull request][fxa-pr]
 
@@ -536,7 +502,7 @@ See in action
 
 In order to allow users to use *one set of credentials* on separate web applications, [I developed a mechanism to implement a Single Sign On][fxa-how] using [Mozilla Firefox Accounts][wpd-fxa-fork]. My work [caught attention of the Accounts team at Mozilla][mozillan-renoirb], but [hasn’t been merged yet][fxa-pr].</summary>
 
-The objective has been achieved, but isn't in use because we migrated WebPlatform into a static site-generator driven publishing and no longer support any backends.
+The objective has been achieved, but isn't in use because we migrated WebPlatform [into a static site-generator driven](#content-converter) publishing and no longer support any backends.
 
 #### Requirements
 * Possibility for a configured web application to get user session and data associated to a shared token from an authoritative server
@@ -556,6 +522,9 @@ Project
 
 Sponsor
 :    Volunteer
+
+Technologies
+:    <span class="label label-info">JavaScript</span>
 
 See in action
 :    [Mockup of my wedding RSVP Web site](https://sweetieandsweetie.com/styleguide/)
@@ -580,71 +549,8 @@ See in action
 ----
 
 
-<!-- end of #selected-projects --></section><section id="publications">
+<!-- end of #selected-projects --></section>
 
-## Publications
-
-### Academic
-* [**ACM** library](http://www.acm.org/), André Santanchè, (2013), in chapters "Markup architecture", "Events", et "Web Storage" in "[Mobile development using web technologies focusing on games](http://dl.acm.org/citation.cfm?doid=2526188.2528541&preflayout=flat)"
-
-### Review
-* Reviewed [Apache Solr PHP Integration](https://www.packtpub.com/books/content/apache-solr-php-integration) by *Pakt publishing*
-
-### Talks
-* [Packaging for easier redeployment](http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/) (2015), DevOps Montréal, Montreal’s PHP Québec meetup
-* [Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite), presented during 2013 WebIn, and also at 2013 Web à Québec (WAQ)
-* [How to manage a big scale HTML/CSS project](http://www.slideshare.net/renoirb/how-to-manage-a-big-scale-htmlcss-project), given at Make Web Not War 2011
-
-### Technical blog posts
-* [Add OpenStack instance meta-data into SaltStack grains store](https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/)
-* [Run a NodeJS process through forever from within a Docker container](https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/)
-* [Make Discourse “long polling” work behind Fastly](https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/)
-* [Create a MariaDB cluster with replication over SSL with Salt Stack](https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/)
-</details>
-
-----
-
-
-<!-- end of #publications --></section><section id="miscellany">
-
-## Miscellany
-
-### Certifications
-
-<img style="float:right" src="https://renoirboulanger.com/wp-content/themes/renoirb/assets/img/zce_logo.jpg" alt="Zend Certified Engineer PHP 5.3" lang="en" width="80" />
-
-**2013**
-:   *Zend Certified Engineer PHP 5.3* ([certificate][zce-link])
-
-**2011**
-:    *Security clearance* checked by [Public Works and Government Services Canada](http://www.tpsgc-pwgsc.gc.ca/comm/index-eng.html), required for all federal government providers
-
-**2008**
-:    *Web Accessibility* (WCAG 1) at the *Nazareth & Louis Braille* institute (University of Montreal)
-
-**2007**
-:    IBM WebSphere DataPower SOA Appliance
-
-
-### Volunteer
-
-**2013..**
-:    W3C’s WebPlatform Docs project contributor
-
-**2011 &ndash; 2013**
-:    Member of the board of directors W3Québec
-
-**2010 &ndash; 2012**
-:    Weekly local meet-up organizer
-
-**2010**
-:    Member of the organization of a Code-Fest during [Make Web Not War](http://www.webnotwar.ca/), an event organized by *Microsoft*
-
-**2008 &ndash; 2010**
-:    Unit leader, Scouts of Canada
-
-
-<!-- end of #miscellany --></section>
 
   [w3c-alumni]: https://www.w3.org/People/Alumni#Boulanger "Link to W3C Team member Alumni"
   [renoirb-webplatform-devops]: https://blog.webplatform.org/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/

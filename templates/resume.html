@@ -2,9 +2,10 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset=utf-8 />
-    <title>{{ title }} ✪  Renoir Boulanger, Web Developer &amp; Operations engineer</title>
-    <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
-    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <title>{{ title }} ✪  Renoir Boulanger</title>
+    <meta property="og:image" content="http://renoirb.com/assets/avatars/201507.jpg" />
+    <link rel=stylesheet href="../assets/main.css" />
+    <script type='text/javascript' src="../assets/bliss.min.js"></script>
     <style>
 
       /* Far reaching ones */
@@ -19,7 +20,6 @@
 
       /* Hopefully I won't get more spam than I already get */
       [foudelapouitte]:after {
-        content:"moc.regnaluobrioner\0040olleh";
         unicode-bidi:bidi-override;
         direction: rtl;
       }
@@ -48,40 +48,40 @@
 
 
       /* summary arrow replacement */
-      details summary::-webkit-details-marker {
+      .details details summary::-webkit-details-marker {
         /* Hide summary arrow at beginning.
            Non blink/webkit browsers will have two arrows. */
           display:none;
       }
-      .has-details details summary:after {
+      .details details summary:after {
         content: "\25BA"; /* ► */
         display: block;
       }
-      .has-details details[open] summary:after { content: "\25BC"; /* ▼ */ }
-      .has-details details[open] summary { margin-left: -30px; }
-      .has-details details[open] { margin-left: 30px; }
-      .has-details details summary { cursor: zoom-in; }
-      .has-details details[open] { cursor: zoom-out; }
+      .details details[open] summary:after { content: "\25BC"; /* ▼ */ }
+      .details details[open] summary { margin-left: -30px; }
+      .details details[open] { margin-left: 30px; }
+      .details details summary { cursor: zoom-in; }
+      .details details[open] { cursor: zoom-out; }
       /* /summary arrow replacement */
 
 
       /* Float dl on the right */
       #summary dl,
-      #work-experience dl,
-      #selected-projects dl {
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl {
         float: right;
         width: 45%;
-        margin: 50px 0 20px 20px;
+        margin: 0 0 20px 20px;
         border-left: 1px dashed #ddd;
         padding: 0 20px;
       }
-      #work-experience dl,
-      #selected-projects dl  {
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl  {
         margin-top: -36px; /* Which is line-height of h1,h2,h3 */
         padding-top: 0;
       }
-      #work-experience details,
-      #selected-project details {
+      .detailed #work-experience details,
+      .detailed #selected-project details {
         clear:none;
       }
       #work-experience section,
@@ -96,6 +96,30 @@
       }
       /* /Float dl on the right */
 
+      /* On non detailed resume, compact things up */
+      .not-detailed section:not(#summary) dl { margin-top: -10px; }
+      .not-detailed section:not(#summary) dt:first-child { display:none; }
+      .not-detailed section:not(#summary) dt { float:left; padding-right: 10px; }
+      .not-detailed section:not(#summary) dt:after { content: ":   "; }
+      .not-detailed section:not(#summary) dd + dt { margin-top: 0 !important; }
+
+      /* On non detailed resume, remove line separator between sections */
+      .not-detailed #work-experience section + section,
+      .not-detailed #selected-projects section + section {
+        border-top: none !important;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      /* On non detailed resume, let's put experience in two columns */
+      .not-detailed #work-experience, .not-detailed #technologies { clear: both; }
+      .not-detailed #work-experience section {
+        float: left;
+        width: 50%;
+      }
+      .not-detailed #work-experience section:nth-child(2n+0) {
+        clear: left;
+      }
 
       /* Adjust past-employers SVG logos to harmonize them visually */
       #past-employers img {
@@ -126,48 +150,29 @@
       }
       /* /Adjust past-employers SVG logos */
 
+      .label {
+        border-radius: 5px;
+      }
+
 
       @media print {
-        h3,h4 {
-          page-break-after: avoid;
-        }
         @page {
           margin: 1.1cm;
-        }
-        summary {
-          page-break-before: avoid;
         }
 
         /* Hide some links location in print media */
         a[href*="renoirboulanger"]:after,
+        a[href^="tel"]:after,
         a[href^="/"]:after,
-        a[href^="#"]:after {
-          display: none;
-        }
-
-        /* Hide meta stuff that doesn't make sense in print */
-        .no-print {
+        a[href^="#"]:after,
+        .no-print ,
+        .details .detailed summary:before {
           display:none;
         }
 
-        .has-details summary:before {
-          display:none;
-        }
-        .has-details details:not([open]) summary:after {
+        .details .detailed details:not([open]) summary:after {
           content: "\25B7   (More details available online, you can expand this section if you load my resume in your Web browser)";
           font-size: 0.8em;
-        }
-
-        [role="main"] > .boxes > section[id]:not(:last-child) {
-          page-break-after: always;
-        }
-
-        #work-experience,
-        #work-experience li,
-        #selected-projects li,
-        #work-experience > section,
-        #selected-projects > section {
-          page-break-inside: avoid;
         }
       }
     </style>
@@ -192,15 +197,12 @@
                     <div class="span4">
                         <h1>
                             <a href="https://renoirboulanger.com/">Renoir Boulanger</a>
-                            <small style="font-size: 0.6em;">WEB DEVELOPER &amp; OPERATIONS ENGINEER</small>
                         </h1>
                     </div>
-                    <!-- nav class="span8 behavior-fade">
-                      <ul id="menu-primary_navigation" class="nav nav-horiz nav-pills pull-right">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/resume">Resume</a></li>
-                      </ul>
-                    </nav -->
+                    <div class="span8 behavior-fade">
+                      <!-- Same margin and line-height as title, it's fine to tagsoup here I say. -->
+                      <p class="pull-right" style="font-size: 1.5em; font-weight: 100; margin: 10px 0px;">FULL-STACK-DEVELOPER &amp; DEVOPS ENGINEER</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,48 +227,46 @@
             </div>
         </div>
     </footer>
-    <script src="/js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <style>[foudelapouitte]:after {content:"moc.regnaluobrioner\0040olleh";}</style>
     <script>
-    function querySelectorApply(selectorString, closure) {
-      Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
-    }
-    function openAllDetailsElements() {
-      querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
-        HTMLDetailsElement.setAttribute('open','');
-      });
-    }
-    window.onload = function resumeOnloadHandler() {
-      var hasClassClassName = ' no-details',
-          bodyClassesNames = document.body.getAttribute('class');
-      /**
-       * Test for existence of details element
-       *     !!window.HTMLDetailsElement
-       * or like this
-       *     !!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement
-       */
-       if (!!window.HTMLDetailsElement === true) {
-         hasClassClassName = ' has-details';
-         var heading = [
-                         '<div class="warn no-print">',
-                           '<strong>Heads up</strong> — If you want details on a section of my resume.',
-                           'Make sure you click on the expand triangle (&nbsp;▶&nbsp;).',
-                           'You can also <button onclick="openAllDetailsElements()">expan them all</button>',
-                         '</div>'
-                       ];
-       } else {
-         var heading = [
-                       '<div class="warn no-print">',
-                         '<strong>Heads up</strong> — Unfortunately this browser doesn’t support details HTML5 element.',
-                         'Don’t worry, not all recent browsers supports it. Yet. You lose nothing, everything is already expanded.',
-                         'If you want to get a shorter version of this CV, and cherry-pick which sections you want expanded,',
-                         'try this page with another web browser.',
-                       '</div>'
-                     ];
-       }
-       document.body.setAttribute('class', bodyClassesNames + hasClassClassName);
-       // I really should stop using jQuery.
-       $(heading.join(' ')).prependTo('body');
-    }
+        function querySelectorApply(selectorString, closure) {
+          Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
+        }
+        function openAllDetailsElements() {
+          querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
+            HTMLDetailsElement.setAttribute('open','');
+          });
+        }
+        window.onload = function resumeOnloadHandler() {
+          var documentClassNames = document.getElementsByTagName('html')[0].getAttribute('class'),
+              bodyClassesNames = document.body.getAttribute('class');
+
+          /**
+           * Test if we’re reading the detailed resume or not. Add different className on body
+           **/
+          if (/detailed(|\.html)$/.test(window.location.pathname) === true) {
+            bodyClassesNames += ' detailed';
+          } else {
+            bodyClassesNames += ' not-detailed';
+          }
+
+          /**
+           * Very minimal feature detect for details HTML5 tag
+           *
+           * Test for existence of details element
+           *     !!window.HTMLDetailsElement
+           * or like this
+           *     !!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement
+           */
+           if (!!window.HTMLDetailsElement === true) {
+             documentClassNames += ' details';
+           } else {
+             documentClassNames += ' no-details';
+           }
+           document.body.setAttribute('class', bodyClassesNames);
+           document.getElementsByTagName('html')[0].setAttribute('class', documentClassNames);
+        };
     </script>
   </body>
 </html>
