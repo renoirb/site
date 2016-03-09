@@ -1,18 +1,16 @@
 ---
-title: Premier billet
-date: 2005-09-12
 template: base.html
-tag: life-events
+date: 2005-09-16 20:23:22
+tags:
+- life-events
+categories:
+  - Tranche de vie
 ---
-# Mon premier billet
 
-Mon premier billet.
-
-Je ne sais pas si je réussirai a sortir un contenu qui risquerait d'intéresser les gens. Voyons ce que cela va donner!
+C'est mon premier billet de blogue. Je ne sais pas si je réussirai à écrire un des billets qui sauront intéresser. Voyons ce que cela va donner!
 
 <!--more-->
-Ca y est! le saut est fait. Je commence a faire mon premier blog! J'ai install&eacute; le th&egrave;me et j'ai m&ecirc;me invit&eacute; du monde a &eacute;diter dans le truc.<br />
 
-J'ai commenc&eacute; aujourd'hui a sortir quelques cat&eacute;gories qui me tiennent a coeur!
+Ca y est! le saut est fait, c'est mon premier blog!
 
-Alors voilà, c’était mon premier billet!
+Au plaisir, tous!
