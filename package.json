@@ -1,5 +1,6 @@
 {
-  "name": "renoirb-site",
+  "name": "renoirb.com",
+  "private": true,
   "version": "1.0.0",
   "description": "Renoir Boulanger personal website",
   "author": "Renoir Boulanger <hello@renoirboulanger.com>",
@@ -16,12 +17,15 @@
     "metalsmith-drafts": "0.0.1",
     "metalsmith-html-minifier": "^1.1.0",
     "metalsmith-markdown-remarkable": "^0.1.1",
-    "metalsmith-permalinks": "^0.1.1",
     "metalsmith-prism": "^2.0.0",
     "metalsmith-slug": "0.0.5",
     "metalsmith-templates": "^0.7.0",
     "mkdirp": "^0.5.0",
-    "promise": "^7.0"
+    "promise": "^7.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-archive": "^0.1.1",
+    "metalsmith-permalinks": "^0.4.1",
+    "metalsmith-tags": "^1.2.0"
   },
   "repository": {
     "type": "git",

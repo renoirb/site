@@ -3,7 +3,6 @@ var  metalsmith = require('metalsmith')
     ,handlebars = require('handlebars')
     ,drafts = require('metalsmith-drafts')
     ,minifier = require('metalsmith-html-minifier')
-    ,permalinks = require('metalsmith-permalinks')
     ,markdown = require('metalsmith-markdown-remarkable')
     ,slug = require('metalsmith-slug')
     ,templates = require('metalsmith-templates')
@@ -11,11 +10,19 @@ var  metalsmith = require('metalsmith')
     ,browserify = require('./lib/metalsmith/browserify.js')
     ,prism = require('metalsmith-prism')
     ,assets = require('metalsmith-assets')
+    ,permalinks = require('metalsmith-permalinks')
+    ,collections = require('metalsmith-collections')
+    ,tags = require('metalsmith-tags')
+    ,archive = require('metalsmith-archive')
     ,pkg = require('./package.json');
 
 metalsmith(__dirname)
   .clean(false)
-  .use(changed())
+  .use(changed({
+    extnames: {
+        '.md': '.html' // build if src/file.md is newer than build/file.html
+    }
+  }))
   .metadata({
     site: {
       title: pkg.name,
@@ -26,15 +33,6 @@ metalsmith(__dirname)
   .source('./contents')
   .destination('./build')
   .use(drafts())
-  .use(permalinks({
-    pattern: ":date/:title",
-    date: "YYYY/MM"
-  }))
-  .use(browserify({
-    files: ["../lib/loader.js"],
-    dest: "js/main.js",
-    transforms: ["babelify"]
-  }))
   .use(markdown('full', {
     breaks: true,
     typographer: true,
@@ -45,6 +43,29 @@ metalsmith(__dirname)
     engine: "handlebars"
   }))
   //.use(minifier())
+  .use(collections({
+    posts: {
+      pattern: 'blog/*.md',
+      sortyBy: 'date',
+      reverse: true
+    }
+  }))
+  .use(permalinks({
+    pattern: 'blog/:date/:title',
+    date: 'YYYY/MM',
+    relative: true
+  }))
+  .use(tags({
+    layout: '/layouts/tagindex.hbs'
+  }))
+  .use(archive({
+    collections: ['posts']
+  }))
+  .use(browserify({
+    files: ["../lib/loader.js"],
+    dest: "js/main.js",
+    transforms: ["babelify"]
+  }))
   .use(assets({
     source: "./static",
     destination: "./"

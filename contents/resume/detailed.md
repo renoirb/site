@@ -7,13 +7,10 @@ description: Experienced full-stack developer with broad and deep understanding 
 <section id="summary">
 
 <span id="availability">Availability</span>
-:    Open to opportunities
+:    *Not available* for new opportunities at the moment
 
 Preferred contact method
 :    Write me <em foudelapouitte title="Please type this manually"></em>
-
-Phone number
-:    [<tt>+1 (438) 239-9341</tt>](tel:+14382399341)
 
 Elsewhere
 :    [<i class="icon-github"></i> GitHub](https://github.com/renoirb?tab=repositories "My code on GitHub")
@@ -55,7 +52,7 @@ Experienced full-stack developer looking for a position on a conscientious colla
 
 <section id="past-employers">
 
-[![Mozilla](../assets/logos/mozilla.svg)](#mozilla-2015)[![W3C](../assets/logos/w3c.svg)](#w3c-2013)[![Ericsson](../assets/logos/ericsson.svg)](#ericsson-2012)
+[![Mozilla](../../assets/logos/mozilla.svg)](#mozilla-2015)[![W3C](../../assets/logos/w3c.svg)](#w3c-2013)[![Ericsson](../../assets/logos/ericsson.svg)](#ericsson-2012)
 
 </section>
 

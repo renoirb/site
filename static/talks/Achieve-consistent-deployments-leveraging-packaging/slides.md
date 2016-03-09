@@ -210,16 +210,16 @@ ref: [Forbes 11 DevOps bottlenecks][forbes-common-devops-bottlenecks]
 
 
 ---
-## Package management is *borken* <small>(sic)</small>
+## Package management is broken
 
 --
-* Can’t rely on OS-level packages
+* Can’t *always* rely on OS level packages
 
 --
 * Version pinning == \[can be\] unreliable
 
 --
-* Don’t rely on OS level runtime!
+* Better not rely on OS level runtime!
 
 ???
 

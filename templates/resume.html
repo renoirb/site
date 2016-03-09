@@ -4,7 +4,8 @@
     <meta charset=utf-8 />
     <title>{{ title }} ✪  Renoir Boulanger</title>
     <meta property="og:image" content="http://renoirb.com/assets/avatars/201507.jpg" />
-    <link rel=stylesheet href="../assets/main.css" />
+    <!-- link rel=stylesheet href="../assets/main.css" /-->
+    <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
     <script type='text/javascript' src="../assets/bliss.min.js"></script>
     <style>
 
@@ -238,6 +239,31 @@
             HTMLDetailsElement.setAttribute('open','');
           });
         }
+        /**
+         * Make label looking tags and
+         * append as child to a QuerySelector friendly location
+         * in the DOM
+         */
+        function addLabelTo(text_or_array, qs, tag) {
+          var tagType = tag||'span',
+              tagElement = document.createElement(tagType),
+              whereSelector = document.querySelector(qs||'body'),
+              tagsTexts = [],
+              loopCounter = -1;
+          tagElement.setAttribute('class', 'label label-success');
+          if (!!text_or_array &&  text_or_array.constructor == String) {
+            tagsTexts = [text_or_array];
+          }
+          if (!!text_or_array && text_or_array.constructor == Array) {
+            tagsTexts = text_or_array;
+          }
+
+          while (++loopCounter < tagsTexts.length){
+            var newTag = tagElement.cloneNode(false);
+            newTag.textContent = String(tagsTexts[loopCounter]);
+            whereSelector.appendChild(newTag);
+          }
+        }
         window.onload = function resumeOnloadHandler() {
           var documentClassNames = document.getElementsByTagName('html')[0].getAttribute('class'),
               bodyClassesNames = document.body.getAttribute('class');
@@ -245,8 +271,9 @@
           /**
            * Test if we’re reading the detailed resume or not. Add different className on body
            **/
-          if (/detailed(|\.html)$/.test(window.location.pathname) === true) {
+          if (/detailed(\/|\.html)$/.test(window.location.pathname)) {
             bodyClassesNames += ' detailed';
+            addLabelTo('Detailed resume', '.zone-top h1:first-child', 'sup');
           } else {
             bodyClassesNames += ' not-detailed';
           }

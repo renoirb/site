@@ -2,6 +2,7 @@
 title: Premier billet
 date: 2005-09-12
 template: base.html
+tag: life-events
 ---
 # Mon premier billet
 
@@ -15,4 +16,3 @@ Ca y est! le saut est fait. Je commence a faire mon premier blog! J'ai install&e
 J'ai commenc&eacute; aujourd'hui a sortir quelques cat&eacute;gories qui me tiennent a coeur!
 
 Alors voilà, c’était mon premier billet!
-

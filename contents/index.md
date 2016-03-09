@@ -9,9 +9,7 @@ slug: index
 
 My name’s [<span itemprop="givenName">Renoir</span> <span itemprop="familyName">Boulanger</span>][renoirboulanger-site] and in my spare time I enjoy reading about systems engineering and also to contribute to open-source projects.
 
-I have been building websites for over  <data value="13">thirteen</data>  years and had been filling different roles such as *Frontend* and *Backend* development, but also to *manage cloud clusters* and *orchestration systems*.
-
-I’m currently <em itemprop="jobTitle">Web Browser Compatibility Data Lead</em> at [Mozilla][mozilla] as part of the <a href="https://developer.mozilla.org/"><span itemprop-reverse="member"><abbr title="Mozilla Developer Network">MDN</abbr></a> project.
+I have been building websites for over  <data value="14">fourteen</data>  years and had been filling different roles such as *Front-End* and *Back-End* development, but also to *manage cloud clusters* and *orchestration systems*.
 
 You can get my resume from my website in both [English][resume-english] and [French][resume-french]. If you want to get in touch with me <em>for a position</em>, please make sure to see if the opportunity wouldn’t conflict with my current project. You can find my renewal date at the <a href="/resume#availability"><em>top</em> of my resumé</a>.
 
