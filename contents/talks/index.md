@@ -5,6 +5,7 @@ template: resume.html
 
 # Talks
 
+* [Delivery engineering and workspace conventions](/talks/2016-Delivery-engineering-and-workspace-conventions) (2016)
 * [**Mozilla Browser Compatibility Data** project](/talks/2015-Mozilla-MDN-Browser-Compatibility-Data-Project-vision) (2015)
 * [Achieve **consistent** deployments leveraging **packaging**](/talks/Achieve-consistent-deployments-leveraging-packaging) (2015)
 * [Comment **évaluer** la **qualité** d'un site selon les techniques d'intégration web d'**actualité**](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite) (2013)

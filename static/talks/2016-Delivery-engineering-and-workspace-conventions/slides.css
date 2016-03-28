@@ -1,0 +1,161 @@
+/*
+ * color palette: 070707 (7,7,7)   232323 (35,35,35)   101010 (16,16,16)   171717 (23,23,23)   0C0000 (12,0,0)
+ * complementary: 5C5353 (92,83,83)   5C5C5C (92,92,92)   101010 (16,16,16)   4A5C4F (74,92,79)
+ */
+@font-face {
+   font-family: 'exo_2.0regular';
+   src: url('/assets/fonts/exo2/exo2_regular/Exo2.0-Regular-webfont.eot');
+   src: url('/assets/fonts/exo2/exo2_regular/Exo2.0-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/exo2/exo2_regular/Exo2.0-Regular-webfont.woff') format('woff'),
+        url('/assets/fonts/exo2/exo2_regular/Exo2.0-Regular-webfont.ttf') format('truetype'),
+        url('/assets/fonts/exo2/exo2_regular/Exo2.0-Regular-webfont.svg#exo_2.0regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'exo_2.0thin';
+   src: url('/assets/fonts/exo2/exo2_thin/Exo2.0-Thin-webfont.eot');
+   src: url('/assets/fonts/exo2/exo2_thin/Exo2.0-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/exo2/exo2_thin/Exo2.0-Thin-webfont.woff') format('woff'),
+        url('/assets/fonts/exo2/exo2_thin/Exo2.0-Thin-webfont.ttf') format('truetype'),
+        url('/assets/fonts/exo2/exo2_thin/Exo2.0-Thin-webfont.svg#exo_2.0thin') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'exo_2.0medium';
+   src: url('/assets/fonts/exo2/exo2_medium/Exo2.0-Medium-webfont.eot');
+   src: url('/assets/fonts/exo2/exo2_medium/Exo2.0-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/exo2/exo2_medium/Exo2.0-Medium-webfont.woff') format('woff'),
+        url('/assets/fonts/exo2/exo2_medium/Exo2.0-Medium-webfont.ttf') format('truetype'),
+        url('/assets/fonts/exo2/exo2_medium/Exo2.0-Medium-webfont.svg#exo_2.0medium') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'exo_2.0bold';
+   src: url('/assets/fonts/exo2/exo2_bold/Exo2.0-Bold-webfont.eot');
+   src: url('/assets/fonts/exo2/exo2_bold/Exo2.0-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/exo2/exo2_bold/Exo2.0-Bold-webfont.woff') format('woff'),
+        url('/assets/fonts/exo2/exo2_bold/Exo2.0-Bold-webfont.ttf') format('truetype'),
+        url('/assets/fonts/exo2/exo2_bold/Exo2.0-Bold-webfont.svg#exo_2.0bold') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'exo_2.0extra_bold';
+   src: url('/assets/fonts/exo2/exo2_extrabold/Exo2.0-ExtraBold-webfont.eot');
+   src: url('/assets/fonts/exo2/exo2_extrabold/Exo2.0-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/exo2/exo2_extrabold/Exo2.0-ExtraBold-webfont.woff') format('woff'),
+        url('/assets/fonts/exo2/exo2_extrabold/Exo2.0-ExtraBold-webfont.ttf') format('truetype'),
+        url('/assets/fonts/exo2/exo2_extrabold/Exo2.0-ExtraBold-webfont.svg#exo_2.0extra_bold') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+
+.remark-slide-content,
+.black-background { background-color: #272822; color: #FFF; }
+.black-background { background-color: #000; }
+.chapter { border-top: 30px solid #E6DB74; }
+
+body,
+.remark-container { font-family: "exo_2.0regular", sans-serif; background-color: rgba(39, 40, 34, 0.8) !important;  /* #23241f */ color:#444; }
+.remark-slide-number { font-size: 20px; font-weight: bold; }
+.remark-slide-scaler { box-shadow:none; }
+.remark-slide-content { background-repeat:no-repeat; }
+
+a { color: #A37EF2; }
+a:visited { color: #785DB2; text-decoration: line-through; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong { font-family: "exo_2.0bold", sans-serif; font-weight: bold; }
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong { font-family: "exo_2.0extra_bold", sans-serif; font-weight: bold; }
+
+
+em,
+.keyword { color: #0095DD; }
+
+.remark-slide-content em,
+.black-background em,
+.remark-slide-content .keyword,
+.black-background .keyword { color: #E6DB74; }
+
+li+li { margin-top:2%; }
+li small { opacity:0.6; }
+
+
+
+.figure { width:90%; margin:15% auto; border: 1px solid #444; border-radius: 5px; background-color: #FFF; padding: 10px;}
+.figure img { width: 100%; }
+
+.center { text-align: center; }
+.pull-right { text-align: right; }
+.middle { font-size: 2em; text-align: center; padding: 6%; }
+
+.footnote { bottom: 12px; position:absolute; left:20px; padding:10px; font-size:0.7em; }
+.footnote h1,
+.footnote h2,
+.footnote h3 { padding: 10px 40px; }
+
+
+
+.adjust-title-overlay { padding:0; }
+.adjust-title-overlay h1,
+.adjust-title-overlay h2,
+.adjust-title-overlay h3,
+.adjust-title-overlay h4,
+.adjust-title-overlay h5,
+.adjust-title-overlay h6 { padding: 20px 80px; }
+
+.adjust-title-overlay h1,
+.adjust-title-overlay h2,
+.adjust-title-overlay h3,
+.adjust-title-overlay h4,
+.adjust-title-overlay h5,
+.adjust-title-overlay h6 { color:#444; background-color: rgba(255, 255, 255, 0.8) !important; }
+
+.remark-slide .background-title { background-size:100%; padding:0 !important; }
+.remark-slide .background-title h1,
+.remark-slide .background-title h2,
+.remark-slide .background-title h3 { background-color:rgba(255, 255, 255, 0.8) !important; padding:10px 0;}
+.remark-slide .background-title.remark-slide-content h1,
+.remark-slide .background-title.remark-slide-content h2,
+.remark-slide .background-title.remark-slide-content h3 { color: #272822; }
+
+
+
+.left-column { width: 40%; float: left; padding-top: 20px; padding-left: 50px; margin-right: -50px; }
+.right-column { width: 50%; float: right; padding-top: 20px; }
+
+.split-two { padding:0 30px; height:100%; }
+.split-two .right-column { background-color: #272822; margin-left: -10px;  padding-left: 30px; min-height: 800px; height: 100%; padding-right:30px; margin-right: -30px; color: #FFF; }
+.split-two .footnote { color:#E6DB74; }
+
+.right-column,
+.right-column-img { width: 50%; float: right; padding-top: 20px; }
+
+.split-two .right-column,
+.split-two .right-column-img { background-color: #272822; margin-left: -10px;  padding-left: 30px; min-height: 800px; height: 100%; padding-right:30px; margin-right: -30px; color: #FFF; }
+.split-two .right-column-img { padding:0; }
+
+
+.split-two .right-column { background-color: #FFF; color: #272822; }
+
+
+.remark-slide .first-slide h1 { text-align:center; }
+.remark-slide .first-slide h1 em { color:#E6DB74; }
+
+.remark-code-line-highlighted { background-color: #474721; }

@@ -64,7 +64,22 @@ Experienced full-stack developer looking for a position on a conscientious colla
 
 ## Work experience
 
-<section id="mozilla-2015">
+
+<section>
+
+### Web Architect
+
+Duration
+:    Feb 2016 &ndash; current
+
+Type
+:    Contract
+
+Location
+:    *Remote work*, Montreal, Quebec
+
+
+</section><section id="mozilla-2015">
 
 ### Product-Owner
 
