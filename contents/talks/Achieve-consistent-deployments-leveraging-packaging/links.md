@@ -6,7 +6,7 @@ template: resume.html
 # [Talk](index.html) reference links
 
 * [basesystem example][basesystem-example]
-* [*devpi*: PyPI server and packaging/testing/release tool][devpi]
+* [*devpi* PyPI server and packaging/testing/release tool][devpi]
 * [Ubuntu community wiki **Creating a Personal Repository**][own-apt-repo]
 * [Create your own *Docker registry*][docker-registry]
 * [Create your own *NPM registry*][npm-registry]

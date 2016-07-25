@@ -11,7 +11,7 @@ My name’s [<span itemprop="givenName">Renoir</span> <span itemprop="familyName
 
 I have been building websites for over  <data value="14">fourteen</data>  years and had been filling different roles such as *Front-End* and *Back-End* development, but also to *manage cloud clusters* and *orchestration systems*.
 
-You can get my resume from my website in both [English][resume-english] and [French][resume-french]. If you want to get in touch with me <em>for a position</em>, please make sure to see if the opportunity wouldn’t conflict with my current project. You can find my renewal date at the <a href="/resume#availability"><em>top</em> of my resumé</a>.
+You can get my resume from my website in either [detailed version][detailed-resume-english], or [short format][resume-english]. There is also an [outdated version in French that's available][resume-french] <span lang=fr>(SVP, Utilisez la version anglaise!)</span>. If you want to get in touch with me <em>for a position</em>, please make sure to see if the opportunity wouldn’t conflict with my current project. You can find my renewal date at the <a href="/resume#availability"><em>top</em> of my resumé</a>.
 
 You may also find me on [Twitter][renoirb-twitter], [GitHub][renoirb-gh] or through my personal site <a href="https://renoirboulanger.com/">renoirboulanger.com</a>.
 
@@ -20,6 +20,7 @@ You may also find me on [Twitter][renoirb-twitter], [GitHub][renoirb-gh] or thro
   [renoirboulanger-site]: https://renoirboulanger.com/about/
   [mozilla]: http://mozillians.org/en-US/u/renoirb/
   [resume-english]: /resume
+  [detailed-resume-english]: /resume/detailed
   [resume-french]: /cv "C.V. de Renoir Boulanger en français"
   [renoirb-twitter]: https://twitter.com/renoirb "@renoirb on Twitter"
   [renoirb-gh]: https://github.com/renoirb "@renoirb on GitHub"

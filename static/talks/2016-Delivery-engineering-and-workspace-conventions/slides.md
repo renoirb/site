@@ -12,7 +12,27 @@ background-image: url(images/MustangJoe-gears-1236578_1920.jpg)
 ---
 class: center middle
 
+> “ We reject kings, presidents and voting. We believe in rough consensus and running code. ”
+
+.footnote[
+IETF "founding beliefs" is embodied in an [early quote about the IETF from David Clark](http://www.ietf.org/tao.html#rfc.section.2)
+]
+
+
+---
+class: center middle
+
 > “ Left unchecked, *technical debt* will ensure that<br/> the **only work** that gets done<br/> is *unplanned work*! ”
+
+.footnote[
+<small>[**Gene KIM**](http://itrevolution.com/), [The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](http://itrevolution.com/books/phoenix-project-devops-book/)</small>
+]
+
+
+---
+class: center middle
+
+> “ If you're telling me that *all of our organization can’t do anything without him*, we’ve got a big problem! ”
 
 .footnote[
 <small>[**Gene KIM**](http://itrevolution.com/), [The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](http://itrevolution.com/books/phoenix-project-devops-book/)</small>
@@ -23,12 +43,6 @@ class: center middle
 
 # Set things up while talking
 
-.footnote[
-A reminder to make the workspace setup while presenting
-]
-
---
-
 ```terminal
 # Open up VirtualBox, and a Terminal
 
@@ -38,6 +52,18 @@ vagrant up
 
 # Get back to the talk. We’ll talk about this later
 ```
+
+.footnote[
+A reminder to make the workspace setup while presenting
+]
+
+
+
+
+
+
+
+
 
 
 ---
@@ -50,125 +76,11 @@ name: toc
 ]
 
 
----
-name: technical-debt
-class: center chapter middle
-
-# Technical *debt*
 
 
----
-class: middle
-
-## *Web* kicked in daily work at design agencies, *scaling is an afterthought*
-
-.footnote[
-<small>Not a quote, but rather a personal observation.</small>
-]
-
-???
-
-- Web isn't print
-- Focus on visuals more than features
-- Expects quick and simple but IT isn’t
 
 
----
-class: middle
 
-## Agency *isn’t* like a <br/>*one-product* shop
-
-???
-
-- Projects in parallel
-- Many One off projects
-- Has to maintain past projects
-
-Making features and performant sites requires engineering
-
-
----
-
-# Symptoms
-
-* Only a few can maintain the system <br/><small>~60% of reason is due to complexity</small>
-
-???
-
-* Security, but also complexity
-
---
-
-* Some errors are found **only when deployed**
-
-???
-
-* It worked on **my machine**
-
---
-
-* Not everybody can **configure QA tools**
-
-???
-
-* There are tools for Desktop computers
-* differs from what's in production.
-
-
----
-
-# *Why* don’t we?
-
-* But we *do* have automation!
-
-???
-
-* I don’t *have time* to set in place
-* *Internal project not as important as business project*
-
---
-
-* I’ve *always* worked like that
-
---
-
-* We *can’t* deploy exactly the same as in development
-
-???
-
-* It’s *difficult* to automate well.
-  * Dependencies *aren’t the same*
-  * Lots of hardcoded details that *changes between projects*
-
-
----
-class: middle
-
-<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><img src="images/schrodigner-backup.png" alt="Schrodigner's Backup. The condition of any backup is unknown until a restore is attempted." style="max-width:100%;max-height:100%;" /><a href="https://twitter.com/hashtag/Sysadmin?src=hash">#Sysadmin</a> <a href="https://twitter.com/hashtag/Truth?src=hash">#Truth</a> <a href="https://twitter.com/hashtag/Backup?src=hash">#Backup</a> <a href="https://twitter.com/hashtag/Unix?src=hash">#Unix</a> <a href="https://twitter.com/hashtag/Linux?src=hash">#Linux</a> <a href="http://t.co/suCT9ME58V">pic.twitter.com/suCT9ME58V</a></p>&mdash; nixCraft (@nixcraft) <a href="https://twitter.com/nixcraft/status/613636528439345152">June 24, 2015</a></blockquote>
-
-
----
-class: split-two
-
-.left-column[## Murphy’s law
-* Service we rely goes for maintenance
-
-* Package dependency retired
-
-* Major server outage, we need to rebuild everything!
-]
-
---
-
-.right-column[## Recovery plan!
-* Mirror libraries our company depends on
-
-* Set in place **systems** to **package what we deploy**
-
-* Ability to run code **in the same environment** it'll run
-
-* Make deployment easy, recovery will be like a normal day
-]
 
 
 ---
@@ -176,7 +88,7 @@ name: the-phoenix-project-tldr
 class: adjust-title-overlay chapter
 background-image: url(images/the-phoenix-project-novel.png)
 
-# A TL;DR summary
+# The Phoenix Project <br/><small>A TL;DR summary</small>
 
 ???
 
@@ -199,19 +111,19 @@ Types of work AND The Three ways are **heavily inspired** by the *Theory of cons
 <small>[**Gene KIM**](http://itrevolution.com/), [The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](http://itrevolution.com/books/phoenix-project-devops-book/)</small>
 ]
 
-1. *Business* projects
+1. **Business** *projects*
 
 --
 
-2. *Internal* projects <br/><small>Improve our infrastructure</small>
+2. **Internal** *projects* <br/><small>Improve our infrastructure</small>
 
 --
 
-3. *Operational* change <br/><small>“Deploy-day”</small>
+3. Operational *change* <br/><small>Deploy-day, hotfix, server reorganization</small>
 
 --
 
-4. *Unplanned* work <br/><small>Outage!</small>
+4. *Unplanned work* <br/><small>Outage! Deadline</small>
 
 
 ---
@@ -296,12 +208,145 @@ class: center middle
 ]
 
 
+
+
+
+
+
+
+
+
+---
+name: technical-debt
+class: center chapter middle
+
+# Technical *debt*
+
+
+
+---
+class: middle
+
+## *Web* kicked in daily work at design agencies, *scaling is an afterthought*
+
+.footnote[
+<small>Not a quote, but rather a personal observation.</small>
+]
+
+???
+
+- Web isn't print
+- Focus on visuals more than features
+- Expects quick and simple but IT isn’t
+
+
+---
+class: middle
+
+## Agency *isn’t* like a <br/>*one-product* shop
+
+???
+
+- Projects in parallel
+- Many One off projects
+- Has to maintain past projects
+
+Making features and performant sites requires engineering
+
+
+---
+
+# *You’ve got **constraints**!* <br/><small>Symptoms</small>
+
+* Only a few can maintain the system
+
+???
+
+* Security, but also complexity
+
+--
+
+* Errors are found **only when deployed**
+
+--
+
+* It works on **my machine** <small>“it’s not that hard to setup”</small>
+
+???
+
+* There are tools for Desktop computers
+* differs from what's in production.
+
+
+---
+
+# *Why* don’t we?
+
+* But we *do* have automation!
+
+???
+
+* I don’t *have time* to set in place
+* *Internal project not as important as business project*
+
+--
+
+* I’ve *always* worked like that
+
+--
+
+* We *can’t* deploy exactly the same as in development
+
+???
+
+* It’s *difficult* to automate well.
+  * Dependencies *aren’t the same*
+  * Lots of hardcoded details that *changes between projects*
+
+
+---
+class: middle
+
+<blockquote class="twitter-tweet" lang="en"><p lang="und" dir="ltr"><img src="images/schrodigner-backup.png" alt="Schrodigner's Backup. The condition of any backup is unknown until a restore is attempted." style="max-width:100%;max-height:100%;" /><a href="https://twitter.com/hashtag/Sysadmin?src=hash">#Sysadmin</a> <a href="https://twitter.com/hashtag/Truth?src=hash">#Truth</a> <a href="https://twitter.com/hashtag/Backup?src=hash">#Backup</a> <a href="https://twitter.com/hashtag/Unix?src=hash">#Unix</a> <a href="https://twitter.com/hashtag/Linux?src=hash">#Linux</a> <a href="http://t.co/suCT9ME58V">pic.twitter.com/suCT9ME58V</a></p>&mdash; nixCraft (@nixcraft) <a href="https://twitter.com/nixcraft/status/613636528439345152">June 24, 2015</a></blockquote>
+
+
+---
+class: split-two
+
+.left-column[## Murphy’s law
+* Service we rely goes for maintenance
+
+* Package dependency retired
+
+* Major server outage, we need to rebuild everything!
+]
+
+--
+
+.right-column[## Recovery plan!
+* Mirror libraries our company depends on
+
+* Set in place **systems** to **package what we deploy**
+
+* Ability to run code **in the same environment** it'll run
+
+* Make deployment easy, recovery will be like a normal day
+]
+
+
+
+
+
+
+
+
+
+
 ---
 name: introducing-the-workspace
 class: center chapter middle
 
 # Introducing the Workspace
-
 
 ???
 
@@ -310,26 +355,52 @@ class: center chapter middle
  * Separation of concerns
  * Deployment topology (one server, multiple sites, etc.)
 
+
 ---
-class:
 
-# Requirements
+# Benefits
 
-Project repository should
+* *Won’t mess* your local machine
 
-* *describe* what it needs
-* Encapsulate how we *manage protected secrets*
-* Encapsulate *packaging* routines
-* Install dependencies and Run code from within
-* *Should work* on *any* cloud provider
+???
+
+**Won’t mess**: Should even be untouched!
 
 --
 
-Allowing us to
+* *Levels the ground* for people using Windows, Mac, Linux
 
-* *build quickly* a workspace
-* Keep our computers uncluttered, we can *trash* the VM safely
-* *opt-in* to run we may need, locally
+--
+
+* *Save time setting up* a project and tools to start working
+
+???
+
+**Save time**:
+* environment state: scratch everything or library version difference
+* Testing tools, linters, ...
+* Test in same environment (versions) as in production
+
+--
+
+* Save disk space. *No need to keep a VM* in case of need
+
+???
+
+**Save disk**: Because lowest common denominator, the OS.
+
+--
+
+* Improvements outside of code can be brought in right away
+
+--
+
+* Scripts out what’s then needed to run in production
+
+???
+
+**Script out**: e.g. schema migration
+
 
 
 ---
@@ -350,13 +421,103 @@ class: center middle
 
 ---
 
+# Requirements
+
+*Project repository* should
+
+* *Describe* what it needs
+
+--
+
+* Encapsulate how we *manage protected secrets*
+
+--
+
+* Encapsulate *packaging* routines
+
+--
+
+* Install dependencies and Run code from within
+
+???
+
+* **Install dependencies**: We could even zip the folder, and re-open it in a few years and be able to Run
+
+--
+
+* *Should work* on *any* cloud provider
+
+???
+
+Whether or not the project to contain the Vagrant is up for debate.
+
+* How do we want to deploy ideally?
+
+
+---
+
+# Requirements
+
+*Configuration management* should
+
+* Be as simple as possible
+
+.footnote[
+<small>**Ryan Lane**, [Moving away from Puppet: SaltStack or Ansible?](http://ryandlane.com/blog/2014/08/04/moving-away-from-puppet-saltstack-or-ansible/)</small>
+]
+
+???
+
+* *As simple*: Syntax, not too heavy, easy to grasp for newbies,
+
+--
+
+* *No optimizations* that would make the code read in an *illogical order*
+
+--
+
+* Should be read in a *sequential order*
+
+--
+
+* *Split in parts*: **base** for what’s common and **service-specific** for each project, etc.
+
+--
+
+* Must work for *multiple deployment levels* (development, staging, etc)
+
+--
+
+* Should support managing *infrastructure dependencies*
+
+
+---
+
 # Assumptions
 
-* [Vagrant](https://www.vagrantup.com/), [Oracle VirtualBox](https://www.virtualbox.org/) installed
-* Some Vagrant plugins <small>(described in README, of course!)</small>
+* [Oracle VirtualBox](https://www.virtualbox.org/), [Vagrant](https://www.vagrantup.com/) with a few plugins
+
+???
+
+Works on Windows, Linux and Macs
+
+Requires a few Vagrant plugins.
+
+--
+
+* Fresh Ubuntu Long-Term Support release VM
+
+???
+
+No need to copy VM images around!
+
+--
+
 * Use *relative git* repository remotes references as *git@bitbucket.org*
-* Everybody runs the code within this *sandbox*
-* Make the workspace *describe what it needs* <br/><small>...the follow-up after we start using this</small>
+
+???
+
+Git supports non-changing format
 
 
 ---
@@ -452,7 +613,6 @@ class: center middle
     +-- configuration/
 ```
 
-
 ---
 
 # Configuration management
@@ -468,6 +628,18 @@ class: center middle
     +-- configuration/
 ```
 
+???
+
+Load order
+
+    cat /etc/salt/minion.d/roots.conf
+    ll /vagrant/ops/orchestration/
+    cat /vagrant/ops/orchestration/vagrant/database/wordpress/anonymize.sls
+
+We can use like this
+
+    salt-call state.sls database.wordpress.anonymize
+    salt-call state.sls wip.sysdig
 
 ---
 
@@ -491,6 +663,14 @@ class: center middle
     |
     +-- configuration/
 ```
+
+???
+
+Provision sample
+
+    more ops/provision/vagrant/bootstrap.sh
+    more ops/provision/cloud/bootstrap.sh
+    more ops/provision/init.sh
 
 
 ---
@@ -564,6 +744,12 @@ class: middle center
 class: middle
 
 # EOF
+
+
+
+
+
+
 
 
 

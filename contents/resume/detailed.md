@@ -42,10 +42,12 @@ Experienced full-stack developer looking for a position on a conscientious colla
 
 ## Publications
 
-* **Adacemic**: **[ACM library](http://www.acm.org/)**, André Santanchè, (2013), in chapters "Markup architecture", "Events", et "Web Storage" in "[Mobile development using web technologies focusing on games](http://dl.acm.org/citation.cfm?doid=2526188.2528541&preflayout=flat)"
-* **Book Review**: [Apache Solr PHP Integration](https://www.packtpub.com/books/content/apache-solr-php-integration) by *Pakt publishing*
-* **Talk**: [Packaging for easier redeployment](http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/) (2015), presented at *DevOps Montréal* and *PHP Québec* meetups
-* **Talk**: [Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite) (2013), presented during *Montreal WebIn* 2013, and *Web à Québec* (WAQ 2013)
+* **Talk**: 2016, [Delivery Engineering and a Workspace convention proposal](http://renoirb.com/talks/2016-Delivery-engineering-and-workspace-conventions/), presented to contract work clients to better understand what "Dev Ops" is about and a place to start from
+* **Talk**: 2015, [*Browser Compatibility* Data Project vision](http://renoirb.com/talks/2015-Mozilla-MDN-Browser-Compatibility-Data-Project-vision/), presented to stakeholders during contract work for Mozilla
+* **Talk**: 2015, [Packaging for easier redeployment](http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/) (2015), presented at *DevOps Montréal* and *PHP Québec* meetups
+* **Adacemic**: 2013, **[ACM library](http://www.acm.org/)**, André Santanchè, in chapters "Markup architecture", "Events", et "Web Storage" in "[Mobile development using web technologies focusing on games](http://dl.acm.org/citation.cfm?doid=2526188.2528541&preflayout=flat)"
+* **Book Review**: 2013, [Apache Solr PHP Integration](https://www.packtpub.com/books/content/apache-solr-php-integration) by *Pakt publishing*
+* **Talk**: 2013, [Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité](https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite) (2013), presented during *Montreal WebIn* 2013, and *Web à Québec* (WAQ 2013)
 
 
 ## Past employers

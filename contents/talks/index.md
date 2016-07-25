@@ -5,6 +5,7 @@ template: resume.html
 
 # Talks
 
+* [**WordCamp Montréal** Techniques pour deployer WordPress de façon consistante et le rendre résilient](/talks/2016-Techniques-pour-deployer-WordPress-de-facon-consistante-et-le-rendre-resilient) (2016)
 * [Delivery engineering and workspace conventions](/talks/2016-Delivery-engineering-and-workspace-conventions) (2016)
 * [**Mozilla Browser Compatibility Data** project](/talks/2015-Mozilla-MDN-Browser-Compatibility-Data-Project-vision) (2015)
 * [Achieve **consistent** deployments leveraging **packaging**](/talks/Achieve-consistent-deployments-leveraging-packaging) (2015)

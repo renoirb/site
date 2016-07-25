@@ -6,8 +6,8 @@
     {{#if keywords }}<meta name="keywords" content="{{keywords}}" />{{/if}}
     {{#if description }}<meta name="description" content="{{description}}" />{{/if}}
     <script src="/talks/js/remark.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    <script src="/talks/css/highlight.min.js"></script>
+    <link rel="stylesheet" href="/talks/js/highlight.min.css">
     <script src="/talks/js/socket.js" id="socketio"></script>
   </head>
   <body>
@@ -89,6 +89,17 @@
             if ( !!window.talk ) {
                 return;
             }
+            document.addEventListener('talk-toc', function(e){
+                var list = document.querySelector('.toc-items ul');
+                e.detail.data.chapters.forEach(function(listEl){
+                    var aElemTemplate  = document.createElement('a')
+                      , liElemTemplate = document.createElement('li');
+                    aElemTemplate.setAttribute('href', '#' + listEl[0]);
+                    aElemTemplate.innerHTML = listEl[1];
+                    liElemTemplate.appendChild(aElemTemplate);
+                    list.appendChild(liElemTemplate);
+                });
+            });
             var talk = {chapters:[]};
             document.querySelectorAll('.chapter').forEach(function( chapterNode ){
                 var idString = chapterNode.getAttribute('id')
@@ -100,7 +111,7 @@
             });
             window.talk = talk;
             var evtData = {detail: {data: talk, subName: 'init'}}
-              , evt = new CustomEvent('talk', evtData);
+              , evt = new CustomEvent('talk-toc', evtData);
             document.querySelectorAll('.remark-slide-number').forEach(function(elem){
                     var tocLink = document.createElement('a');
                     tocLink.setAttribute('href', '#toc');

@@ -473,7 +473,7 @@ class: middle center
 # Demo!
 
 .footnote[
-[Links are available here](links.html), and the [procedure to make your own package too](compile-nginx-procedure.html)
+[Links are available here](links/), and the [procedure to make your own package too](compile-nginx-procedure.html)
 ]
 
 
@@ -505,7 +505,7 @@ class: middle center
 ## Deploy a web server with specific features
 
 .footnote[
-[Links are available here](links.html), and the [procedure to make your own package too](compile-nginx-procedure.html)
+[Links are available here](links/), and the [procedure to make your own package too](compile-nginx-procedure.html)
 ]
 
 
@@ -515,7 +515,7 @@ class: middle center
 ### Let’s [build this](compile-nginx-video.html)!
 
 .footnote[
-[Links are available here](links.html), and the [procedure to make your own package too](compile-nginx-procedure.html)
+[Links are available here](links/), and the [procedure to make your own package too](compile-nginx-procedure.html)
 ]
 
 
@@ -581,7 +581,7 @@ class: middle center
 **Questions?**
 
 
-Links are [available here](links.html).
+Links are [available here](links/).
 
   [basesystem-example]: https://github.com/renoirb/salt-basesystem "Renoir’s basesystem which also acts as a local workbench"
   [devpi]: http://doc.devpi.net/latest/quickstart-pypimirror.html "devpi, an utility to make your own mirror"
