@@ -1,22 +1,21 @@
-# renoirb-site
+# Renoir Boulanger&#39;s WebSites
 
-> Renoir Boulanger&#39;s WebSites
+Rewriting [renoirb/site][github-renoirb-site]
+
+**STATUS** Under **HEAVY** Development.
 
 ## Build Setup
 
 ```bash
-# install dependencies
-$ yarn install
+yarn
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
+yarn dev
 
 # generate static project
-$ yarn run generate
+$ yarn generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+[github-renoirb-site]: https://github.com/renoirb/site

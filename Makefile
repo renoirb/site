@@ -9,9 +9,12 @@ googleFontsBaseUrl := https://google-webfonts-helper.herokuapp.com/api/fonts
 %.js: node_modules
 	node_modules/.bin/prettier --parser babylon --write '**/*.js'
 
+%.scss: node_modules
+	node_modules/.bin/stylelint '**/*.scss'
+
 .DEFAULT: fix
 .PHONY: fix
-fix: node_modules %.md %.js
+fix: node_modules %.md %.js %.scss
 	yarn lint
 
 .PHONY: generate

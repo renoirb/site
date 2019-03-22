@@ -5,6 +5,13 @@ import { name, description, browserslist } from './package.json'
 
 const dev = process.env.NODE_ENV !== 'production'
 
+/**
+ * TODO:
+ * - Make Nuxt work with TypeScript
+ *
+ * Links:
+ * - https://medium.com/@Al_un/nuxt-vuex-jest-tested-powered-by-typescript-70441600ef39
+ */
 export default {
   mode: 'universal',
 
@@ -37,6 +44,7 @@ export default {
     '@nuxtjs/axios',
     // https://github.com/nuxt-community/blog-module
     // '@nuxtjs/blog',
+    '@nuxtjs/component-cache',
     // https://github.com/gbouteiller/nuxt-element-ui
     [
       'nuxt-element-ui',
@@ -45,6 +53,7 @@ export default {
         locale: 'fr',
       },
     ],
+    // TODO: See https://github.com/chymz/nuxt-starter/blob/7ecd808885e14ca6a03c3462bad9a7d814ec150f/internals/nuxt.js#L44
   ],
 
   axios: {

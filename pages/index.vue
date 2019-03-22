@@ -9,18 +9,16 @@
         Renoir Boulanger&#39;s WebSites
       </h2>
       <div class="links">
-      <el-button>Hi</el-button>
-    <el-date-picker
-      type="datetime"
-      placeholder="Select date and time">
-    </el-date-picker>
+        <el-button>Hi</el-button>
+        <el-date-picker type="datetime" placeholder="Select date and time">
+        </el-date-picker>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+const Logo = () => import('~/components/Logo.vue')
 
 export default {
   components: {
