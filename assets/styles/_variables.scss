@@ -1,0 +1,37 @@
+/**
+ ** ************************************************************************ **
+ *
+ * CSS Variables
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/var
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+ */
+
+:root {
+  --branding-primary: rgb(50, 126, 177); // #327eb1
+}
+
+/**
+ * See element-ui/packages/theme-chalk/src/common/var.scss
+ */
+
+$--color-primary: #327eb1;
+$--color-success: #53d192;
+$--color-warning: #f2a200;
+$--color-danger: #9a1f3e;
+$--color-info: #a1c4d0;
+$--color-text-primary: #333;
+$--color-text-regular: #555;
+$--color-text-secondary: #888;
+$--color-text-placeholder: #aaa;
+
+$--badge-fill: var(--branding-primary);
+$--color-text-primary: var(--branding-primary);
+$--color-text-primary: var(--branding-primary);
+$--link-color: var(--branding-primary);
+
+$--font-path: '~assets/fonts';
+
+
+// Import Element UI’s
+@import '~element-ui/packages/theme-chalk/src/common/var.scss';

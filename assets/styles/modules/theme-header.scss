@@ -1,0 +1,12 @@
+.app-theme {
+  .el-header {
+    background-color: var(--branding-primary);
+    color: #fff;
+    line-height: 60px;
+    .el-dropdown {
+      // Instead of using Element's $--color-text-regular, inherit from parent!
+      color: inherit;
+      cursor: crosshair;
+    }
+  }
+}

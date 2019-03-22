@@ -1,0 +1,72 @@
+/**
+ * Which fonts do we support.
+ *
+ * https://google-webfonts-helper.herokuapp.com/api/fonts/oxygen?download=zip&subsets=latin&variants=300,300i,400,400i,500,500i,700,regular,italic,500italic,700italic
+ * https://fonts.google.com/specimen/Oxygen?selection.family=Oxygen:300,300i,400,400i,500,500i,700,regular,italic,500italic,700italic
+ * https://fonts.googleapis.com/css?family=Oxygen:300,300i,400,400i,500,500i,700,regular,italic,500italic,700italic
+ *
+ * Because google-fonts-webpack-plugin was just doing[1] this below, anyway.
+ * We can just do only what we need.
+ *
+ * [1]: https://github.com/gabiseabra/google-fonts-webpack-plugin/blob/master/src/GoogleWebfonts.js#L8
+ */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oxygen Light'), local('Oxygen-Light'), url('~assets/fonts/oxygen-v8-latin-300.woff2') format('woff2');
+
+  src: local('Oxygen Light'), local('Oxygen-Light'),
+  url('~assets/fonts/oxygen-v8-latin-300.eot?#iefix')
+    format('embedded-opentype'),
+  /* IE6-IE8 */ url('~assets/fonts/oxygen-v8-latin-300.woff2')
+    format('woff2'),
+  /* Super Modern Browsers */
+    url('~assets/fonts/oxygen-v8-latin-300.woff') format('woff'),
+  /* Modern Browsers */ url('~assets/fonts/oxygen-v8-latin-300.ttf')
+    format('truetype'),
+  /* Safari, Android, iOS */
+    url('~assets/fonts/oxygen-v8-latin-300.svg#Oxygen') format('svg'); /* Legacy iOS */
+
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen Regular'), local('Oxygen-Regular'),
+  url('~assets/fonts/oxygen-v8-latin-regular.eot?#iefix')
+    format('embedded-opentype'),
+  /* IE6-IE8 */ url('~assets/fonts/oxygen-v8-latin-regular.woff2')
+    format('woff2'),
+  /* Super Modern Browsers */
+    url('~assets/fonts/oxygen-v8-latin-regular.woff') format('woff'),
+  /* Modern Browsers */ url('~assets/fonts/oxygen-v8-latin-regular.ttf')
+    format('truetype'),
+  /* Safari, Android, iOS */
+    url('~assets/fonts/oxygen-v8-latin-regular.svg#Oxygen') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'),
+  url('~assets/fonts/oxygen-v8-latin-700.eot?#iefix')
+    format('embedded-opentype'),
+  /* IE6-IE8 */ url('~assets/fonts/oxygen-v8-latin-700.woff2')
+    format('woff2'),
+  /* Super Modern Browsers */
+    url('~assets/fonts/oxygen-v8-latin-700.woff') format('woff'),
+  /* Modern Browsers */ url('~assets/fonts/oxygen-v8-latin-700.ttf')
+    format('truetype'),
+  /* Safari, Android, iOS */
+    url('~assets/fonts/oxygen-v8-latin-700.svg#Oxygen') format('svg'); /* Legacy iOS */
+}
+
+
+html {
+  // See nuxt.config.js
+  font-family: "Oxygen", -apple-system, BlinkMacSystemFont,
+  "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
