@@ -11,34 +11,26 @@
       <section>
         <h3>Articles</h3>
         <ul>
-          <li
-            v-for="post in posts"
-            :key="post.slug"
-          >
-          {{ post.slug }}
+          <li v-for="post in posts" :key="post.slug">
+            {{ post.slug }}
           </li>
         </ul>
       </section>
       <div class="links">
         <h3>Element UI imported stuff</h3>
         <el-button>Hi</el-button>
-        <el-date-picker type="datetime" placeholder="Select date and time">
-        </el-date-picker>
+        <el-date-picker type="datetime" placeholder="Select date and time" />
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import {
-  Component,
-  Vue
-} from "nuxt-property-decorator"
+import { Component, Vue } from 'nuxt-property-decorator'
+import { State } from 'vuex-class'
+import { Post } from '~/types'
 
 const Logo = () => import('~/components/Logo.vue')
-
-import { State } from "vuex-class"
-import { Post } from "~/types";
 
 @Component({
   components: {

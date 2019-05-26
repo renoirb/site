@@ -6,16 +6,16 @@ googleFontsBaseUrl := https://google-webfonts-helper.herokuapp.com/api/fonts
 %.md: node_modules
 	node_modules/.bin/prettier --parser markdown --write '**/*.md'
 
-%.js: node_modules
-	node_modules/.bin/prettier --parser babylon --write '**/*.js'
+%.json: node_modules
+	node_modules/.bin/prettier --parser json --write '**/*.json'
 
 %.scss: node_modules
 	node_modules/.bin/stylelint '**/*.scss'
 
 .DEFAULT: fix
 .PHONY: fix
-fix: node_modules %.md %.js %.scss
-	yarn lint
+fix: node_modules %.md %.json %.scss
+	yarn lint:fix
 
 .PHONY: generate
 generate: node_modules

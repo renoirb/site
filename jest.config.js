@@ -1,27 +1,40 @@
+const { pathsToModuleNameMapper } = require('ts-jest/utils')
+
+// In the following statement, replace `./tsconfig` with the path to your `tsconfig` file
+// which contains the path mapping (ie the `compilerOptions.paths` option):
+const { compilerOptions } = require('./tsconfig')
+
 /**
  * See other nicely done configs:
  * - https://github.com/chymz/nuxt-starter/blob/7ecd808/package.json#L83
+ * - https://github.com/nuxt-community/hackernews-nuxt-ts
+ * - https://kulshekhar.github.io/ts-jest/user/config/
  */
-module.exports = {
+const main = {
+  preset: 'ts-jest',
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '<rootDir>/components/**/*.vue',
+    '<rootDir>/lib/**/*.[tj]s',
+  ],
+  globals: {
+    'ts-jest': {
+      diagnostics: true,
+    },
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'vue', 'json'],
   moduleNameMapper: {
+    ...pathsToModuleNameMapper(compilerOptions.paths),
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js',
   },
+  snapshotSerializers: ['jest-serializer-vue'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest',
     '^.+\\.tsx?$': 'ts-jest',
   },
-  collectCoverage: true,
-  collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue',
-  ],
-  globals: {
-    __TS_CONFIG__: 'tsconfig.json',
-    __TRANSFORM_HTML__: true,
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'vue', 'json'],
-  testRegex: '/test/unit/.*\\.(ts|js)$',
+  // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.[tj]sx?$',
 }
+
+module.exports = main

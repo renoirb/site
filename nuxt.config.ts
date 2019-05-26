@@ -1,14 +1,14 @@
-import NuxtConfiguration from '@nuxt/config'
 import { resolve } from 'path'
+import NuxtConfiguration from '@nuxt/config'
 
 // @ts-ignore
 import { name, description, browserslist } from './package.json'
-const dev = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV !== 'production'
 
-const main = (): NuxtConfiguration => ({
-  // mode: 'spa',
-
-  dev,
+const main: NuxtConfiguration = {
+  mode: 'spa',
+  dev: isDev,
+  modern: true,
 
   head: {
     title: name,
@@ -16,6 +16,19 @@ const main = (): NuxtConfiguration => ({
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: description },
+      {
+        property: 'og:image',
+        content:
+          'https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400',
+      },
+      {
+        property: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        property: 'twitter:site',
+        content: '@renoirb',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -44,7 +57,7 @@ const main = (): NuxtConfiguration => ({
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     // See "Apply defaults" in node_modules/@nuxtjs/axios/lib/module.js
-    debug: dev,
+    debug: isDev,
   },
 
   build: {
@@ -173,6 +186,24 @@ const main = (): NuxtConfiguration => ({
       }
     },
   },
-})
 
-export default main()
+  render: {
+    http2: {
+      push: true,
+    },
+    static: {
+      maxAge: '1d',
+      /*
+      setHeaders(res, path) {
+        if (path) {
+          if (path.includes('sw.js')) {
+            res.setHeader('Cache-Control', `public, max-age=${15 * 60}`)
+          }
+        }
+      },
+      */
+    },
+  },
+}
+
+export default main
