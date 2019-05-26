@@ -21,8 +21,37 @@
       "stopOnEntry": false,
       "sourceMaps": true,
       "env": {
+        "PATH": "/usr/local/bin:$PATH",
         "NODE_ENV": "development",
         "DEBUG": "*,-babel,-snapdragon:*,-vue-eslint-parser,-eslint:*"
+      }
+    },
+    {
+      "name": "Run dev:debug",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/node_modules/.bin/nodemon",
+      "stopOnEntry": false,
+      "sourceMaps": true,
+      "env": {
+        "PATH": "/usr/local/bin:$PATH",
+        "NODE_ENV": "development",
+        "DEBUG": "*,-babel,-snapdragon:*,-vue-eslint-parser,-eslint:*"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch current file w/ ts-node",
+      "protocol": "inspector",
+      "args": ["${relativeFile}"],
+      "cwd": "${workspaceRoot}",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "PATH": "/usr/local/bin:$PATH"
       }
     }
   ]

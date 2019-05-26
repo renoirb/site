@@ -1,19 +1,12 @@
+import NuxtConfiguration from '@nuxt/config'
 import { resolve } from 'path'
 
-import VueI18nExtensions from 'vue-i18n-extensions'
+// @ts-ignore
 import { name, description, browserslist } from './package.json'
-
 const dev = process.env.NODE_ENV !== 'production'
 
-/**
- * TODO:
- * - Make Nuxt work with TypeScript
- *
- * Links:
- * - https://medium.com/@Al_un/nuxt-vuex-jest-tested-powered-by-typescript-70441600ef39
- */
-export default {
-  mode: 'universal',
+const main = (): NuxtConfiguration => ({
+  // mode: 'spa',
 
   dev,
 
@@ -29,21 +22,13 @@ export default {
 
   loading: { color: '#fff' },
 
-  css: [
-    'normalize.css/normalize.css',
-    {
-      src: '@/assets/styles/index.scss',
-      lang: 'scss',
-    },
-  ],
+  css: ['normalize.css/normalize.css', '@/assets/styles/index.scss'],
 
   plugins: [],
 
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // https://github.com/nuxt-community/blog-module
-    // '@nuxtjs/blog',
     '@nuxtjs/component-cache',
     // https://github.com/gbouteiller/nuxt-element-ui
     [
@@ -65,6 +50,7 @@ export default {
   build: {
     transpile: [/^element-ui/],
     extractCSS: true,
+
     postcss: {
       /**
        * Adjust compiled CSS to support older User-Agents.
@@ -75,18 +61,17 @@ export default {
       preset: {
         browserslist,
       },
-    },
-    babel: {
-      presets({ isServer }) {
-        const targets = isServer ? { node: '10' } : { ie: '11' }
-        return [
-          [
-            require.resolve('@nuxt/babel-preset-app'),
-            { targets, corejs: 'core-js@3' },
-          ],
-        ]
+      plugins: {
+        'postcss-cssnext': {
+          browsers: ['> 1%', 'not op_mini all'],
+          warnForDuplicates: false,
+        },
+        cssnano: {
+          zindex: false,
+        },
       },
     },
+
     /**
      * How to handle JavaScript support for server and client bundles[1].
      *
@@ -124,7 +109,7 @@ export default {
       },
     },
 
-    extend(config, ctx) {
+    extend(webpackConfig) {
       /**
        * Extend build.
        *
@@ -162,39 +147,32 @@ export default {
        * https://vue-svg-loader.js.org/#nuxt.js
        * https://github.com/nuxt/nuxt.js/blob/2.x/examples/custom-build/nuxt.config.js#L13
        */
-      config.module.rules.some(loader => {
-        if (loader.use) {
-          const urlLoaderCheck = use => use.loader === 'url-loader'
-          const urlLoader = loader.use.find(urlLoaderCheck)
-          if (urlLoader) {
-            // Uncomment to see in build output (visualizeConfig) the effect.
-            // urlLoader.options.limit = 101001
-            return true
+      /*
+      if (webpackConfig.module) {
+        webpackConfig.module.rules.some(loader => {
+          if (loader.use) {
+            const urlLoaderCheck = use => use.loader === 'url-loader'
+            const urlLoader = loader.use.find(urlLoaderCheck)
+            if (urlLoader) {
+              // Uncomment to see in build output (visualizeConfig) the effect.
+              // urlLoader.options.limit = 101001
+              return true
+            }
           }
-        }
-      })
-
-      // This line allows us to use `@import "~assets/..."` in components <style> tags:
-      config.resolve.alias['~assets'] = resolve(__dirname, 'assets')
-
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
         })
+      } else {
+        throw new Error(`Something is missing`)
+      }
+      */
+
+      if (webpackConfig.resolve && webpackConfig.resolve.alias) {
+        // This line allows us to use `@import "~assets/..."` in components <style> tags:
+        webpackConfig.resolve.alias['~assets'] = resolve(__dirname, 'assets')
+      } else {
+        throw new Error(`Something is missing`)
       }
     },
   },
+})
 
-  render: {
-    // see Nuxt.js docs: https://nuxtjs.org/api/configuration-render#bundleRenderer
-    bundleRenderer: {
-      directives: {
-        t: VueI18nExtensions.directive,
-      },
-    },
-  },
-}
+export default main()

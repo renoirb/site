@@ -1,13 +1,18 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "tslint.autoFixOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "editor.detectIndentation": true,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
   "editor.formatOnType": false,
   "editor.insertSpaces": true,
   "editor.renderControlCharacters": true,
-  "editor.renderWhitespace": "all",
-  "editor.trimAutoWhitespace": true,
   "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
   "eslint.enable": true,
@@ -46,8 +51,13 @@
       "autoFix": true
     }
   ],
-  "files.trimTrailingWhitespace": true,
   "vetur.validation.style": true,
   "vetur.validation.template": true,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "files.associations": {
+    ".vscode/*.json": "jsonc",
+    "ts*.json": "jsonc",
+    "Makefile*": "makefile"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
