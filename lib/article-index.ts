@@ -15,6 +15,27 @@ export const extractThreeFirstNumbers = (line: string): number[] | boolean => {
   }
 }
 
+export const createFindByDate = (items: string[]) => (
+  year: number,
+  month: number = 0
+): string[] => {
+  const lines = [...items].filter(line => {
+    const dateTuple = extractThreeFirstNumbers(line)
+    if (dateTuple[0] === year) {
+      if (month > 0) {
+        if (dateTuple[1] === month) {
+          return true
+        } else {
+          return false
+        }
+      }
+      return true
+    }
+    return false
+  })
+  return lines
+}
+
 export class ArticleIndex {
   private lines: string[] = []
 
@@ -78,20 +99,6 @@ export class ArticleIndex {
       const message = `This method can only be used when the collection has lines with first part containing a date format (e.g. 2019-05-21-Foo)`
       throw new Error(message)
     }
-    const lines = [...this.lines].filter(line => {
-      const dateTuple = extractThreeFirstNumbers(line)
-      if (dateTuple[0] === year) {
-        if (month > 0) {
-          if (dateTuple[1] === month) {
-            return true
-          } else {
-            return false
-          }
-        }
-        return true
-      }
-      return false
-    })
-    return lines
+    return createFindByDate(this.lines)(year, month)
   }
 }

@@ -6,7 +6,7 @@ import { name, description, browserslist } from './package.json'
 const isDev = process.env.NODE_ENV !== 'production'
 
 const main: NuxtConfiguration = {
-  mode: 'spa',
+  // mode: 'spa',
   dev: isDev,
   modern: true,
 
@@ -40,6 +40,7 @@ const main: NuxtConfiguration = {
   plugins: [],
 
   modules: [
+    '~/modules/webpack-loaders',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/component-cache',
@@ -160,11 +161,12 @@ const main: NuxtConfiguration = {
        * https://vue-svg-loader.js.org/#nuxt.js
        * https://github.com/nuxt/nuxt.js/blob/2.x/examples/custom-build/nuxt.config.js#L13
        */
-      /*
       if (webpackConfig.module) {
+        // @ts-ignore
         webpackConfig.module.rules.some(loader => {
           if (loader.use) {
             const urlLoaderCheck = use => use.loader === 'url-loader'
+            // @ts-ignore
             const urlLoader = loader.use.find(urlLoaderCheck)
             if (urlLoader) {
               // Uncomment to see in build output (visualizeConfig) the effect.
@@ -176,7 +178,6 @@ const main: NuxtConfiguration = {
       } else {
         throw new Error(`Something is missing`)
       }
-      */
 
       if (webpackConfig.resolve && webpackConfig.resolve.alias) {
         // This line allows us to use `@import "~assets/..."` in components <style> tags:

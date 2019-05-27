@@ -5,9 +5,6 @@
       <h1 class="title">
         renoirb-site
       </h1>
-      <h2 class="subtitle">
-        Renoir Boulanger&#39;s WebSite
-      </h2>
       <section>
         <h3>Articles</h3>
         <ul>
@@ -26,15 +23,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import { State } from 'vuex-class'
+import { Component, Vue, State } from 'nuxt-property-decorator'
 import { Post } from '~/types'
-
-const Logo = () => import('~/components/Logo.vue')
 
 @Component({
   components: {
-    Logo
+    Logo: () => import('~/components/Logo.vue')
   }
 })
 export default class extends Vue {

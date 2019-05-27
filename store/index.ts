@@ -1,34 +1,28 @@
-import { ActionTree, MutationTree } from 'vuex'
-import { Post, RootState } from '~/types'
+import { PostsState } from './posts'
 
-// @ts-ignore
-import postsCsv = require('~/static/blog/index.csv')
+/**
+ * related:
+ * - https://github.com/nuxt-community/nuxt-property-decorator
+ * - https://nuxtjs.org/examples/typescript-vuex
+ * - https://github.com/nuxt-community/typescript-template/blob/master/template/store/index.ts
+ * - https://github.com/nuxt-community/hackernews-nuxt-ts/issues/11
+ *
+ * next?:
+ * - https://gist.github.com/mrcrowl/d7fd8d0369759a9fe315dbf27dc1bced
+ * - https://github.com/championswimmer/vuex-module-decorators/issues/80#issuecomment-493786726
+ * - https://championswimmer.in/vuex-module-decorators/
+ */
 
-export const state = (): RootState => ({
-  posts: [],
-})
+export const strict = true
 
-export const mutations: MutationTree<RootState> = {
-  setPosts(rootState: RootState, posts: Post[]): void {
-    rootState.posts = posts
-  },
+export interface RootState {
+  posts: PostsState
 }
 
-export const actions: ActionTree<RootState, RootState> = {
-  async nuxtServerInit({ commit }, context) {
-    const { isStatic = false, app } = context
-    const posts: Post[] = []
+export const state = () => ({})
 
-    // If you serve the site statically with `nuxt generate`, you can't use HTTP requests for local
-    const lines = isStatic
-      ? postsCsv
-      : await app.$axios.$get('./blog/index.csv')
-
-    lines.forEach(slug => {
-      const p: Post = { slug }
-      posts.push(p)
-    })
-
-    commit('setPosts', posts)
+export const actions = {
+  async nuxtServerInit({ dispatch }) {
+    await dispatch('posts/hydrate')
   },
 }

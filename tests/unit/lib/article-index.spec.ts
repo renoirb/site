@@ -118,6 +118,7 @@ describe('ArticleIndex', () => {
         ])
       )
       expect(found).toHaveLength(1)
+      expect(subject.getLines()).toHaveLength(fixture.length)
     })
   })
 })
