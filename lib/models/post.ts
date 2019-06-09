@@ -3,7 +3,6 @@ import { Category } from './category'
 import { Tag } from './tag'
 
 export interface Post extends Article {
-  readonly slug: string
   readonly categories?: Category[]
   readonly date?: string
   readonly featured?: boolean

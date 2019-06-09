@@ -20,11 +20,11 @@ ArticleIndex {
   "hasPaths": true,
   "indexFile": "bogus",
   "lines": Array [
-    "archive/2013/02/21/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
-    "archive/2012/11/22/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
-    "archive/2012/10/27/my-first-introduction-to-the-hypermedia",
-    "archive/2007/06/26/une-boite-qui-traine",
-    "archive/2009/09/14/je-prefere-le-pingouin-design-cool-de-tee-shirt",
+    "anything-here-goes/2013/02/21/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
+    "anything-here-goes/2012/11/22/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
+    "anything-here-goes/2012/10/27/my-first-introduction-to-the-hypermedia",
+    "anything-here-goes/2007/06/26/une-boite-qui-traine",
+    "anything-here-goes/2009/09/14/je-prefere-le-pingouin-design-cool-de-tee-shirt",
   ],
   "threeFirstAreNumbers": false,
 }

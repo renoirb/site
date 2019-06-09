@@ -1,26 +1,13 @@
-export const extractThreeFirstNumbers = (line: string): number[] | boolean => {
-  const pipeline = String(line)
-    .split('-')
-    .slice(0, 3)
-    .map(n => parseInt(n, 10))
+import { extractDateTuple } from './models/article'
 
-  const threeFirstAreNotNumbers = pipeline
-    .map(i => Number.isInteger(i))
-    .includes(false)
-  const threeFirstAreNumbers = threeFirstAreNotNumbers === false
-  if (threeFirstAreNumbers && pipeline.length === 3) {
-    return pipeline
-  } else {
-    return false
-  }
-}
+export type FilterTypeFindByDate = (year: number, month?: number) => string[]
 
-export const createFindByDate = (items: string[]) => (
+export const createFindByDate = (items: string[]): FilterTypeFindByDate => (
   year: number,
   month: number = 0
 ): string[] => {
   const lines = [...items].filter(line => {
-    const dateTuple = extractThreeFirstNumbers(line)
+    const dateTuple = extractDateTuple(line)
     if (dateTuple[0] === year) {
       if (month > 0) {
         if (dateTuple[1] === month) {
@@ -62,7 +49,7 @@ export class ArticleIndex {
   add(line: string): void {
     const isFirstAdd = this.lines.length < 1
     const hasPaths = /\//.test(line)
-    const threeFirstAreNumbers = extractThreeFirstNumbers(line) !== false
+    const threeFirstAreNumbers = extractDateTuple(line) !== false
     if (isFirstAdd) {
       this.hasPaths = hasPaths
       this.threeFirstAreNumbers = threeFirstAreNumbers
