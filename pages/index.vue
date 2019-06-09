@@ -8,7 +8,7 @@
       <section>
         <h3>Articles</h3>
         <ul>
-          <li v-for="post in posts" :key="post.slug">
+          <li v-for="post in items" :key="post.slug">
             {{ post.slug }}
           </li>
         </ul>
@@ -23,16 +23,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, State } from 'nuxt-property-decorator'
-import { Post } from '~/types'
+import { Vue, Component } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
+
+import * as posts from '~/store/posts'
+const Posts = namespace(posts.name)
 
 @Component({
   components: {
-    Logo: () => import('~/components/Logo.vue')
-  }
+    Logo: () => import('~/components/Logo.vue'),
+  },
 })
-export default class extends Vue {
-  @State posts!: Post[]
+export default class Index extends Vue {
+  @Posts.State items
+  @Posts.Action('hydrate') hydratePosts
+
+  created() {
+    this.hydratePosts()
+  }
 }
 </script>
 

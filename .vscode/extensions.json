@@ -1,16 +1,17 @@
 {
   "recommendations": [
     "christian-kohler.path-intellisense",
-    "CoenraadS.bracket-pair-colorizer",
     "dariofuzinato.vue-peek",
-    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
     "gamunu.vscode-yarn",
-    "humao.rest-client",
     "jasonnutter.search-node-modules",
     "kisstkondoros.vscode-codemetrics",
     "mrmlnc.vscode-attrs-sorter",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "nobelhuang.tslint-vue-tsx",
     "octref.vetur",
     "sdras.vue-vscode-snippets",
-    "wix.vscode-import-cost"
+    "wix.vscode-import-cost",
+    "zuoez02.tslint-snippets"
   ]
 }

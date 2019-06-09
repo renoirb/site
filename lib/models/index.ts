@@ -1,4 +1,7 @@
 export * from './article'
 export * from './category'
 export * from './post'
+export * from './store'
 export * from './tag'
+export * from './types'
+export * from './route'

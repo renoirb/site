@@ -1,17 +1,54 @@
 import { resolve } from 'path'
 import NuxtConfiguration from '@nuxt/config'
 
+import { LogLevel, ensureValidLogLevel } from './lib/runtime'
+import { workbox } from './lib/runtime/nuxt/config'
+
 // @ts-ignore
 import { name, description, browserslist } from './package.json'
-const isDev = process.env.NODE_ENV !== 'production'
+
+const {
+  NODE_ENV = 'production',
+  NUXT_ENV_LOG_LEVEL = 'error',
+  NUXT_ENV_ENABLE_WORKBOX = 'nope',
+} = process.env
+
+// https://nuxtjs.org/api/configuration-env/
+const enableWorkbox: boolean = NUXT_ENV_ENABLE_WORKBOX === 'true'
+const isDev: boolean = NODE_ENV !== 'production'
+const logLevel: LogLevel = ensureValidLogLevel(NUXT_ENV_LOG_LEVEL)
+
+/**
+ * Docs:
+ *   @nuxtjs/axios: https://axios.nuxtjs.org/usage
+ */
+const modules: string[] = ['@nuxtjs/component-cache', '@nuxtjs/axios']
+if (enableWorkbox) {
+  modules.push('@nuxtjs/pwa')
+}
+
+if (NUXT_ENV_LOG_LEVEL === 'debug') {
+  // We want to set the process environment
+  process.env.DEBUG = '*,-babel,-snapdragon:*,-vue-eslint-parser,-eslint:*'
+}
+
+const runtimeSwitches: { [key: string]: string | boolean } = {
+  DEBUG: String(process.env.DEBUG), // And visualize what's been setup
+  enableWorkbox,
+  isDev,
+  logLevel,
+  modules: (modules || []).join(', '),
+}
+
+console.table({ ...runtimeSwitches }) // tslint:disable-line
 
 const main: NuxtConfiguration = {
-  // mode: 'spa',
+  mode: 'spa',
   dev: isDev,
   modern: true,
 
   head: {
-    title: name,
+    title: `${name} | %s`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -39,11 +76,16 @@ const main: NuxtConfiguration = {
 
   plugins: [],
 
+  manifest: {
+    description,
+    name,
+    short_name: 'renoirb.com',
+    theme_color: '#188269',
+  },
+
   modules: [
     '~/modules/webpack-loaders',
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/component-cache',
+    ...modules,
     // https://github.com/gbouteiller/nuxt-element-ui
     [
       'nuxt-element-ui',
@@ -60,6 +102,8 @@ const main: NuxtConfiguration = {
     // See "Apply defaults" in node_modules/@nuxtjs/axios/lib/module.js
     debug: isDev,
   },
+
+  workbox: workbox(enableWorkbox, isDev),
 
   build: {
     transpile: [/^element-ui/],
@@ -125,25 +169,10 @@ const main: NuxtConfiguration = {
 
     extend(webpackConfig) {
       /**
-       * Extend build.
-       *
        * There are two builds, one for "client", one "server".
        * This part is executed for both cases.
        *
        * See ./node_modules/nuxt/lib/builder/webpack/base.js
-       *
-       * loaders from context above has, among others, the following keys;
-       *
-       *  * imgUrl
-       *  * file
-       *  * fontUrl
-       *  * pugPlain
-       *  * vue
-       *  * css
-       *  * cssModules
-       *  * scss
-       *  * vueStyle
-       *  * ...
        *
        * ```
        * loaders[imgUrl] { limit: 101001, name: '[path][name].[ext]' }
@@ -194,15 +223,13 @@ const main: NuxtConfiguration = {
     },
     static: {
       maxAge: '1d',
-      /*
       setHeaders(res, path) {
-        if (path) {
+        if (enableWorkbox) {
           if (path.includes('sw.js')) {
             res.setHeader('Cache-Control', `public, max-age=${15 * 60}`)
           }
         }
       },
-      */
     },
   },
 }

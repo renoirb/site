@@ -3,17 +3,12 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "lib": [
-      "es2015",
-      "es2016",
-      "es2017",
-      "es2018",
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
     "allowJs": true,
     "resolveJsonModule": true,
     "sourceMap": true,
@@ -25,14 +20,7 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": [
-      "@types/jest",
-      "@types/node",
-      "@nuxt/vue-app",
-      "@nuxtjs/axios",
-      "@types/webpack-env"
-    ]
+    "types": ["@types/jest", "@types/node", "@nuxt/vue-app"]
   },
-  "include": ["**/*.ts", "**/*.vue"],
-  "exclude": ["node_modules"]
+  "include": ["./**/*.ts"]
 }

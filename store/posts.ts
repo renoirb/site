@@ -1,6 +1,6 @@
 import { MutationTree, ActionTree } from 'vuex'
-import { RootState } from '.'
-import { Post } from '~/types'
+import { StoreStateRoot, StoreStatePosts, Post } from '~/lib/models/store'
+import { csvToSlugCollection } from '~/lib/csv'
 
 export const strict = true
 export const namespaced = true
@@ -12,51 +12,46 @@ export const types = {
   SET: 'SET',
 }
 
-export interface PostsState {
-  selected: string
-  posts: Post[]
-}
-
-export const state = (): PostsState => ({
-  selected: '',
-  posts: [],
+export const state = (): StoreStatePosts => ({
+  selected: '' /* 'hello-world' */,
+  items: [
+    /* {slug: 'hello-world', published: true, title: 'Hello World'} */
+  ],
 })
 
 export const getters = {
   // tslint:disable-next-line:no-shadowed-variable no-any
   currentlySelected: state => {
-    const p = (state.posts as Post[]).find(item => item.slug === state.selected)
-    return p ? p : { slug: '...' }
+    const p = (state.items as Post[]).find(item => item.slug === state.selected)
+    return p ? p : { slug: '' }
   },
 }
 
-export const actions: ActionTree<PostsState, RootState> = {
+export const actions: ActionTree<StoreStatePosts, StoreStateRoot> = {
   select({ commit }, slug: string) {
     commit(types.SELECT, slug)
   },
   // tslint:disable-next-line:no-shadowed-variable no-any
   async hydrate({ commit, state }) {
-    const isHydrated = state.posts.length > 0
+    const isHydrated = state.items.length > 0
     if (!isHydrated) {
-      const posts: Post[] = []
       // @ts-ignore
-      const lines: string[] = await this.$axios.$get('./blog/index.csv')
-      lines.forEach(slug => {
-        const p: Post = { slug }
-        posts.push(p)
-      })
-      commit(`${types.SET}`, posts)
+      const items: SlugInterface[] = await this.$axios
+        .$get('/blog/index.csv')
+        .then(csvToSlugCollection)
+
+      commit(`${types.SET}`, items)
     }
   },
 }
 
-export const mutations: MutationTree<PostsState> = {
+export const mutations: MutationTree<StoreStatePosts> = {
   // tslint:disable-next-line:no-shadowed-variable no-any
-  [types.SELECT](state: PostsState, slug: string = '') {
+  [types.SELECT](state: StoreStatePosts, slug: string = '') {
     state.selected = slug
   },
   // tslint:disable-next-line:no-shadowed-variable no-any
-  [types.SET](state: PostsState, items: Post[]): void {
-    state.posts = items
+  [types.SET](state: StoreStatePosts, items: Post[]): void {
+    state.items = items
   },
 }

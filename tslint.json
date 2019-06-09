@@ -23,12 +23,6 @@
     "no-bitwise": false
   },
   "linterOptions": {
-    "exclude": [
-      "node_modules/**",
-      "dist/**",
-      "dist.js/**",
-      ".nuxt/**",
-      "tests/**"
-    ]
+    "exclude": [".nuxt/", "dist/", "coverage/", "node_modules/", "_packages/"]
   }
 }

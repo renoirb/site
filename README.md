@@ -18,4 +18,14 @@ $ yarn generate
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
+## Docs
+
+- [kaorun343/vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
+- [vuejs/vue-class-component](https://github.com/vuejs/vue-class-component)
+- [vue-i18n](https://github.com/kazupon/vue-i18n) ([docs](https://kazupon.github.io/vue-i18n/))
+
+### Useful _TypeScript_ + _Nuxt.js_ community curated examples
+
+Started off from [nuxt-community/hackernews-nuxt-ts](https://github.com/nuxt-community/hackernews-nuxt-ts)
+
 [github-renoirb-site]: https://github.com/renoirb/site

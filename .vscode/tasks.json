@@ -4,7 +4,44 @@
     {
       "type": "npm",
       "script": "dev",
-      "problemMatcher": ["$eslint-stylish"]
+      "problemMatcher": ["$tsc-watch"],
+      "options": {
+        "env": {
+          "NUXT_ENV_LOG_LEVEL": "${input:NUXT_ENV_LOG_LEVEL}"
+        }
+      }
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "env": {
+          "NODE_ENV": "${input:NODE_ENV}",
+          "NUXT_ENV_LOG_LEVEL": "${input:NUXT_ENV_LOG_LEVEL}"
+        }
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "NODE_ENV",
+      "description": "What NODE_ENV value do you want to use?",
+      "options": ["development", "production", "test"],
+      "default": "development"
+    },
+    {
+      "type": "pickString",
+      "id": "NUXT_ENV_LOG_LEVEL",
+      "description": "What Jest test task strategy to use?",
+      // https://jestjs.io/docs/en/cli.html
+      "options": ["error", "warn", "info", "debug"],
+      "default": "warn"
     }
   ]
 }

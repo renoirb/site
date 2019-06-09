@@ -34,7 +34,6 @@ const main = {
     '.*\\.(vue)$': 'vue-jest',
     '^.+\\.tsx?$': 'ts-jest',
   },
-  // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.[tj]sx?$',
 }
 
 module.exports = main
