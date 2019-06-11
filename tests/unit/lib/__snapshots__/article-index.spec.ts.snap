@@ -39,3 +39,37 @@ Array [
   "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md",
 ]
 `;
+
+exports[`getYears Happy-Path 1`] = `
+Array [
+  2007,
+  2009,
+  2012,
+  2013,
+]
+`;
+
+exports[`getYears Looping for findByDate(2007) 1`] = `
+Array [
+  "2007-06-26-une-boite-qui-traine.md",
+]
+`;
+
+exports[`getYears Looping for findByDate(2009) 1`] = `
+Array [
+  "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md",
+]
+`;
+
+exports[`getYears Looping for findByDate(2012) 1`] = `
+Array [
+  "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md",
+  "2012-10-27-my-first-introduction-to-the-hypermedia.md",
+]
+`;
+
+exports[`getYears Looping for findByDate(2013) 1`] = `
+Array [
+  "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite.md",
+]
+`;

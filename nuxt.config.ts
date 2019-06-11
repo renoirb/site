@@ -9,7 +9,7 @@ import { name, description, browserslist } from './package.json'
 
 const {
   NODE_ENV = 'production',
-  NUXT_ENV_LOG_LEVEL = 'error',
+  NUXT_ENV_LOG_LEVEL = 'debug',
   NUXT_ENV_ENABLE_WORKBOX = 'nope',
 } = process.env
 

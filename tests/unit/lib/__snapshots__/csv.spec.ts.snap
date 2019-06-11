@@ -2,17 +2,25 @@
 
 exports[`csvToSlugCollection Happy-Path 1`] = `
 Array [
-  Object {
+  Article {
+    "path": "blog/2013/2/21/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
     "slug": "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite.md",
+    "type": "post",
   },
-  Object {
+  Article {
+    "path": "blog/2012/11/22/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
     "slug": "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md",
+    "type": "post",
   },
-  Object {
+  Article {
+    "path": "blog/2012/10/27/my-first-introduction-to-the-hypermedia",
     "slug": "2012-10-27-my-first-introduction-to-the-hypermedia.md",
+    "type": "post",
   },
-  Object {
+  Article {
+    "path": "blog/2007/6/26/une-boite-qui-traine",
     "slug": "2007-06-26-une-boite-qui-traine.md",
+    "type": "post",
   },
 ]
 `;

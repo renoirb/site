@@ -122,3 +122,24 @@ describe('ArticleIndex', () => {
     })
   })
 })
+
+describe('getYears', () => {
+  let subject: ArticleIndex = new ArticleIndex()
+  subject.setLines([...fixture])
+  let years: number[] = subject.getYears()
+
+  for (const year of years) {
+    test(`Looping for findByDate(${year})`, () => {
+      const items = subject.findByDate(year)
+      expect(items).toMatchSnapshot()
+    })
+  }
+
+  test('Happy-Path', () => {
+    subject = new ArticleIndex()
+    subject.setLines([...fixture])
+    years = subject.getYears()
+    expect(years).toMatchObject([2007, 2009, 2012, 2013])
+    expect(years).toMatchSnapshot()
+  })
+})

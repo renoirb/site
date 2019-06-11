@@ -28,4 +28,6 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 Started off from [nuxt-community/hackernews-nuxt-ts](https://github.com/nuxt-community/hackernews-nuxt-ts)
 
+- https://medium.com/@Al_un/nuxt-vuex-jest-tested-powered-by-typescript-70441600ef39
+
 [github-renoirb-site]: https://github.com/renoirb/site

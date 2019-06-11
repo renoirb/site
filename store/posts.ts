@@ -1,6 +1,13 @@
 import { MutationTree, ActionTree } from 'vuex'
 import { StoreStateRoot, StoreStatePosts, Post } from '~/lib/models/store'
 import { csvToSlugCollection } from '~/lib/csv'
+import {
+  axiosTextCsvResponseHandler,
+  createAxiosRequestConfig,
+  axiosTextCsvResponseTransformer,
+} from '~/lib/runtime/axios'
+
+export { Post }
 
 export const strict = true
 export const namespaced = true
@@ -35,10 +42,15 @@ export const actions: ActionTree<StoreStatePosts, StoreStateRoot> = {
   async hydrate({ commit, state }) {
     const isHydrated = state.items.length > 0
     if (!isHydrated) {
+      const where = '/articles/blog/index.csv'
+      const requestConfig = createAxiosRequestConfig('GET', where)
+      requestConfig.addTransformer(axiosTextCsvResponseTransformer)
+      const toCollection = csvToSlugCollection('post')
       // @ts-ignore
-      const items: SlugInterface[] = await this.$axios
-        .$get('/blog/index.csv')
-        .then(csvToSlugCollection)
+      const items = await this.$axios
+        .request(requestConfig)
+        .then(axiosTextCsvResponseHandler)
+        .then(({ data }) => toCollection(data))
 
       commit(`${types.SET}`, items)
     }

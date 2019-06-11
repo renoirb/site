@@ -1,19 +1,17 @@
-import { SlugInterface } from './models'
+import { SlugInterface, ArticleFactory, ArticleType } from './models'
 import { NuxtRouteInterface } from './runtime'
 
-export function csvToSlugCollection(
-  stringContents: string = ''
-): SlugInterface[] {
-  // [].filter(Boolean) removes any empty members
-  const lines = (stringContents || '').split('\n').filter(Boolean)
-  const items: SlugInterface[] = []
-  lines.forEach((slug, index) => {
-    // console.log('slug', index, slug)
-    const p: SlugInterface = { slug }
-    items.push(p)
-  })
+export const csvToSlugCollection = (type: ArticleType) => {
+  const factory = new ArticleFactory(type)
+  return (recv: string[]): SlugInterface[] => {
+    const articles: SlugInterface[] = []
+    recv.forEach(slug => {
+      const article = factory.create(slug)
+      articles.push(article)
+    })
 
-  return items
+    return articles
+  }
 }
 
 export function routesCollection(

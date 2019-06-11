@@ -6,12 +6,7 @@
         renoirb-site
       </h1>
       <section>
-        <h3>Articles</h3>
-        <ul>
-          <li v-for="post in items" :key="post.slug">
-            {{ post.slug }}
-          </li>
-        </ul>
+        <nuxt-link to="/blog">Blog</nuxt-link>
       </section>
       <div class="links">
         <h3>Element UI imported stuff</h3>
@@ -24,24 +19,13 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import { namespace } from 'vuex-class'
-
-import * as posts from '~/store/posts'
-const Posts = namespace(posts.name)
 
 @Component({
   components: {
     Logo: () => import('~/components/Logo.vue'),
   },
 })
-export default class Index extends Vue {
-  @Posts.State items
-  @Posts.Action('hydrate') hydratePosts
-
-  created() {
-    this.hydratePosts()
-  }
-}
+export default class Index extends Vue {}
 </script>
 
 <style>

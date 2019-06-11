@@ -75,16 +75,20 @@ export class ArticleFactory {
   }
 
   create(slug: string): Article {
+    const type = this.type
     const path = this.formatPath(slug)
-    return new Article(slug, path)
+    return new Article(type, slug, path)
   }
 }
 
 export class Article implements SlugInterface {
+  readonly type: ArticleType
+
   readonly slug: string
   readonly path: string
 
-  constructor(slug: string, path: string) {
+  constructor(type: ArticleType, slug: string, path: string) {
+    this.type = type
     this.path = path
     this.slug = slug
   }
