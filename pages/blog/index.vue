@@ -1,16 +1,16 @@
 <template>
-    <section>
-      <h3>Articles</h3>
-      <ul>
-        <li v-for="item in years" :key="item">
-          <nuxt-link
-            :to="toLocation(item)"
-          >
-            {{ item }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </section>
+  <div class="pages--blog-index">
+    <h3>Articles</h3>
+    <ul>
+      <li v-for="item in years" :key="item">
+        <nuxt-link
+          :to="toLocation(item)"
+        >
+          {{ item }}
+        </nuxt-link>
+      </li>
+    </ul>
+  </div>
 </template>
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'

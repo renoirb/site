@@ -1,7 +1,7 @@
 <template>
-    <section>
-      <h3>{{ slug }}</h3>
-    </section>
+  <div class="pages--blog-_year-_month-_slug-index">
+    <h3>{{ slug }}</h3>
+  </div>
 </template>
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'

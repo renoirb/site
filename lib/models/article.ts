@@ -7,7 +7,7 @@ export type ArticleType =
   | 'contribution'
   | 'job-position'
 
-export const extractDateTuple = (line: string): number[] | boolean => {
+export const extractDateTuple = (line: string): number[] | false => {
   const pipeline = String(line)
     .split('-')
     .slice(0, 3)
@@ -87,9 +87,12 @@ export class Article implements SlugInterface {
   readonly slug: string
   readonly path: string
 
+  readonly dateTuple: number[] | false
+
   constructor(type: ArticleType, slug: string, path: string) {
     this.type = type
     this.path = path
     this.slug = slug
+    this.dateTuple = extractDateTuple(slug)
   }
 }

@@ -113,7 +113,7 @@ export class ArticleIndex {
     return extractYears(this.lines)
   }
 
-  getMontsFor(year: number): number[] {
+  getMonthsFor(year: number): number[] {
     return extractMonths(this.lines)(year)
   }
 

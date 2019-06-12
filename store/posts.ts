@@ -28,9 +28,20 @@ export const state = (): StoreStatePosts => ({
 
 export const getters = {
   // tslint:disable-next-line:no-shadowed-variable no-any
-  currentlySelected: state => {
-    const p = (state.items as Post[]).find(item => item.slug === state.selected)
-    return p ? p : { slug: '' }
+  currentlySelected: gettersStateCurrentlySelected => {
+    const items: Post[] = gettersStateCurrentlySelected.items
+    const selected: string = gettersStateCurrentlySelected.selected
+    const foundItem = items.find(item => item.slug === selected)
+    return foundItem ? foundItem : { slug: '' }
+  },
+  selectedMonthAndYear: gettersStateSelectedMonthAndYear => (
+    year: number,
+    month: number
+  ): Post[] => {
+    const items: Post[] = gettersStateSelectedMonthAndYear.items
+    return items.filter(
+      item => item.dateTuple[0] === year && item.dateTuple[1] === month
+    )
   },
 }
 
@@ -42,7 +53,7 @@ export const actions: ActionTree<StoreStatePosts, StoreStateRoot> = {
   async hydrate({ commit, state }) {
     const isHydrated = state.items.length > 0
     if (!isHydrated) {
-      const where = '/articles/blog/index.csv'
+      const where = '/articles/blog.csv'
       const requestConfig = createAxiosRequestConfig('GET', where)
       requestConfig.addTransformer(axiosTextCsvResponseTransformer)
       const toCollection = csvToSlugCollection('post')
