@@ -5,7 +5,7 @@ export type LogLevel = 'debug' | 'info' | 'warn' | 'error' | 'fatal'
 
 export const levels: ReadonlyArray<string> = [...possibleLevels]
 
-const isLogLevel = (x: any): x is LogLevel => levels.includes(x)
+export const isLogLevel = (x: any): x is LogLevel => levels.includes(x)
 
 export const ensureValidLogLevel = (input: string): LogLevel => {
   const fallbackValue: LogLevel = 'info'

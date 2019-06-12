@@ -5,11 +5,11 @@ ArticleIndex {
   "hasPaths": false,
   "indexFile": "bogus",
   "lines": Array [
-    "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite.md",
-    "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md",
-    "2012-10-27-my-first-introduction-to-the-hypermedia.md",
-    "2007-06-26-une-boite-qui-traine.md",
-    "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md",
+    "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
+    "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
+    "2012-10-27-my-first-introduction-to-the-hypermedia",
+    "2007-06-26-une-boite-qui-traine",
+    "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt",
   ],
   "threeFirstAreNumbers": true,
 }
@@ -32,11 +32,11 @@ ArticleIndex {
 
 exports[`ArticleIndex getLines Snapshot when hasPaths is false 1`] = `
 Array [
-  "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite.md",
-  "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md",
-  "2012-10-27-my-first-introduction-to-the-hypermedia.md",
-  "2007-06-26-une-boite-qui-traine.md",
-  "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md",
+  "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
+  "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
+  "2012-10-27-my-first-introduction-to-the-hypermedia",
+  "2007-06-26-une-boite-qui-traine",
+  "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt",
 ]
 `;
 
@@ -51,25 +51,25 @@ Array [
 
 exports[`getYears Looping for findByDate(2007) 1`] = `
 Array [
-  "2007-06-26-une-boite-qui-traine.md",
+  "2007-06-26-une-boite-qui-traine",
 ]
 `;
 
 exports[`getYears Looping for findByDate(2009) 1`] = `
 Array [
-  "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md",
+  "2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt",
 ]
 `;
 
 exports[`getYears Looping for findByDate(2012) 1`] = `
 Array [
-  "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md",
-  "2012-10-27-my-first-introduction-to-the-hypermedia.md",
+  "2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
+  "2012-10-27-my-first-introduction-to-the-hypermedia",
 ]
 `;
 
 exports[`getYears Looping for findByDate(2013) 1`] = `
 Array [
-  "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite.md",
+  "2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
 ]
 `;

@@ -1,11 +1,11 @@
 import { ArticleIndex } from '~/lib/article-index'
 
 const fixture: ReadonlyArray<string> = [
-  '2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite.md',
-  '2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md',
-  '2012-10-27-my-first-introduction-to-the-hypermedia.md',
-  '2007-06-26-une-boite-qui-traine.md',
-  '2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md',
+  '2013-02-21-conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite',
+  '2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client',
+  '2012-10-27-my-first-introduction-to-the-hypermedia',
+  '2007-06-26-une-boite-qui-traine',
+  '2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt',
 ]
 
 const fixtureWithPaths: ReadonlyArray<string> = [
@@ -41,7 +41,7 @@ describe('ArticleIndex', () => {
     test('add enforce consistency when hasPaths is false', () => {
       const subject = new ArticleIndex('bogus')
       // add lines with no slash in them
-      // e.g. 2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md
+      // e.g. 2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt
       fixture.forEach(l => subject.add(l))
       expect(() => {
         subject.add('foo/bar/baz/buzz')
@@ -65,7 +65,7 @@ describe('ArticleIndex', () => {
     test('add enforce consistency when threeFirstAreNumbers is true', () => {
       const subject = new ArticleIndex('bogus')
       // add lines with no slash in them
-      // e.g. 2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt.md
+      // e.g. 2009-09-14-je-prefere-le-pingouin-design-cool-de-tee-shirt
       fixture.forEach(l => subject.add(l))
       expect(() => {
         subject.add('foo-bar-baz-buzz')
@@ -108,13 +108,13 @@ describe('ArticleIndex', () => {
       fixture.forEach(l => subject.add(l))
       let found = subject.findByDate(2007)
       expect(found).toEqual(
-        expect.arrayContaining(['2007-06-26-une-boite-qui-traine.md'])
+        expect.arrayContaining(['2007-06-26-une-boite-qui-traine'])
       )
       expect(found).toHaveLength(1)
       found = subject.findByDate(2012, 11)
       expect(found).toEqual(
         expect.arrayContaining([
-          '2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client.md',
+          '2012-11-22-why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client',
         ])
       )
       expect(found).toHaveLength(1)
