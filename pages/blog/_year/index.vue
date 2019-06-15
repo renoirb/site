@@ -21,14 +21,14 @@ import { namespace } from 'vuex-class'
 import * as postsStore from '~/store/posts'
 const posts = namespace(postsStore.name)
 
-import { Post } from '~/lib/models/store'
+import { Article } from '~/lib/models'
 
 import { VueRouterLocationInterface } from '~/lib/runtime'
 import { ArticleIndex } from '~/lib/article-index'
 
 @Component
-export default class BlogItem extends Vue {
-  @posts.State items!: Post[]
+export default class BlogYearPage extends Vue {
+  @posts.State items!: Article[]
   @posts.Action('hydrate') hydrate
   async mounted() {
     await this.hydrate()

@@ -1,11 +1,4 @@
-export interface NuxtRouteInterface {
-  name: string
-  path: string
-  component?: string
-  children?: NuxtRouteInterface[]
-}
-
-export interface VueRouterLocationQueryParamsInterface {
+export interface VueRouterPropertyDictionary {
   [key: string]: string | number | boolean
 }
 
@@ -16,10 +9,13 @@ export interface VueRouterLocationQueryParamsInterface {
  * ```
  *
  * https://router.vuejs.org/api/#to
+ * https://github.com/vuejs/vue-router/blob/dev/src/util/location.js
  */
 export interface VueRouterLocationInterface {
   name?: string
   path: string
-  query?: VueRouterLocationQueryParamsInterface
-  params?: VueRouterLocationQueryParamsInterface
+  query?: VueRouterPropertyDictionary
+  params?: VueRouterPropertyDictionary
+  props?: VueRouterPropertyDictionary
+  meta?: VueRouterPropertyDictionary
 }

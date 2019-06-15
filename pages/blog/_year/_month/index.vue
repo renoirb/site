@@ -1,10 +1,19 @@
 <template>
   <div class="pages--blog-_year-_month-index">
-    <h3>{{ month }}</h3>
+    <h3>{{ year }}-{{ month }}</h3>
     <ul>
-      <li><nuxt-link :to="`/blog/${year}`">..</nuxt-link></li>
-      <li v-for="item in subset" :key="item.slug">
-        <article-link v-bind="item" />
+      <li>
+        <nuxt-link :to="`/${base}/${year}`">..</nuxt-link>
+      </li>
+      <li
+        v-for="(article, index) in articles"
+        :key="index"
+      >
+        <article-link
+          :base="base"
+          :article="article"
+          @route-changed="selectArticle"
+        />
       </li>
     </ul>
   </div>
@@ -17,7 +26,7 @@ import { namespace } from 'vuex-class'
 import * as postsStore from '~/store/posts'
 const posts = namespace(postsStore.name)
 
-import { Post } from '~/lib/models/store'
+import { Article } from '~/lib/models'
 
 import { VueRouterLocationInterface } from '~/lib/runtime'
 import { ArticleIndex } from '~/lib/article-index'
@@ -27,15 +36,18 @@ import { ArticleIndex } from '~/lib/article-index'
     ArticleLink: () => import('~/components/ArticleLink.vue'),
   },
 })
-export default class BlogItem extends Vue {
-  @posts.State items!: Post[]
+export default class BlogYearMonthPage extends Vue {
+  base: string = 'blog'
+
+  @posts.State items!: Article[]
   @posts.Action('hydrate') hydrate
+  @posts.Action('select') select
   @posts.Getter('selectedMonthAndYear') selectedMonthAndYear
   async mounted() {
     await this.hydrate()
   }
 
-  get subset(): Post[] {
+  get articles(): Article[] {
     const year = this.year
     const month = this.month
     return this.selectedMonthAndYear(year, month)
@@ -50,8 +62,15 @@ export default class BlogItem extends Vue {
     const { year } = this.$route.params
     return +year
   }
+
   validate({ params }): boolean {
     return /^\d+$/.test(params.month) && /^\d+$/.test(params.year)
+  }
+
+  async selectArticle(foo) {
+    // const slug = article.slug
+    console.log('selectArticle', foo)
+    // await this.select(slug)
   }
 }
 </script>

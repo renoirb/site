@@ -1,5 +1,4 @@
 import {
-  extractDateTuple,
   dateTupleSlugToPath,
   articleFormatPathHelper,
   ArticleType,
@@ -12,33 +11,19 @@ const fixture: ReadonlyArray<string> = [
   '2007-06-26-une-boite-qui-traine',
 ]
 
-const fixtureExpectedOutcome: ReadonlyArray<[number, number, number]> = [
-  [2013, 2, 21],
-  [2012, 11, 22],
-  [2012, 10, 27],
-  [2007, 6, 26],
-]
-
 // There must be a way to extract strings using TypeScript ReturnType and other Advanced Types
 // But not today.
 // https://www.typescriptlang.org/docs/handbook/advanced-types.html
-const possibleArticleTypes: ArticleType[] = [
+const possibleArticleTypeFixture: ArticleType[] = [
   'archive',
   'project',
   'contribution',
 ]
 
 const randomlyPickPossibleArticleType = () =>
-  possibleArticleTypes[Math.floor(Math.random() * possibleArticleTypes.length)]
-
-describe('extractDateTuple', () => {
-  test('Happy-Path', () => {
-    fixture.forEach((value, index) => {
-      const extracted = extractDateTuple(value)
-      expect(extracted).toMatchObject(fixtureExpectedOutcome[index])
-    })
-  })
-})
+  possibleArticleTypeFixture[
+    Math.floor(Math.random() * possibleArticleTypeFixture.length)
+  ]
 
 describe('dateTupleSlugToPath', () => {
   test('Happy-Path', () => {

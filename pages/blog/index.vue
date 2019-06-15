@@ -2,6 +2,7 @@
   <div class="pages--blog-index">
     <h3>Articles</h3>
     <ul>
+      <li><nuxt-link to="/">..</nuxt-link></li>
       <li v-for="item in years" :key="item">
         <nuxt-link
           :to="toLocation(item)"
@@ -19,14 +20,14 @@ import { namespace } from 'vuex-class'
 import * as postsStore from '~/store/posts'
 const posts = namespace(postsStore.name)
 
-import { Post } from '~/lib/models/store'
+import { Article } from '~/lib/models'
 
 import { VueRouterLocationInterface } from '~/lib/runtime'
 import { ArticleIndex } from '~/lib/article-index'
 
 @Component
 export default class Index extends Vue {
-  @posts.State items!: Post[]
+  @posts.State items!: Article[]
   @posts.Action('hydrate') hydrate
   async mounted() {
     await this.hydrate()

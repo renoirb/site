@@ -1,5 +1,5 @@
 import { SlugInterface, ArticleFactory, ArticleType } from './models'
-import { NuxtRouteInterface } from './runtime'
+import { VueRouterLocationInterface } from '~/lib/runtime'
 
 export const csvToSlugCollection = (type: ArticleType) => {
   const factory = new ArticleFactory(type)
@@ -16,8 +16,8 @@ export const csvToSlugCollection = (type: ArticleType) => {
 
 export function routesCollection(
   slugs: SlugInterface[] = []
-): NuxtRouteInterface[] {
-  const routes: NuxtRouteInterface[] = []
+): VueRouterLocationInterface[] {
+  const routes: VueRouterLocationInterface[] = []
 
   return routes
 }

@@ -1,6 +1,14 @@
 import { MutationTree, ActionTree } from 'vuex'
-import { StoreStateRoot, StoreStatePosts, Post } from '~/lib/models/store'
+import {
+  StoreStateRoot,
+  StoreStatePosts,
+  Post,
+  Article,
+  ArticleContentStorePayload,
+  ArticleMetadataStorePayload,
+} from '~/lib/models/store'
 import { csvToSlugCollection } from '~/lib/csv'
+import { extractFrontMatter, extractMarkdown } from '~/lib/article-reader'
 import {
   axiosTextCsvResponseHandler,
   createAxiosRequestConfig,
@@ -14,8 +22,12 @@ export const namespaced = true
 
 export const name = 'posts'
 
+const base = 'blog'
+
 export const types = {
+  CONTENT: 'CONTENT',
   SELECT: 'SELECT',
+  META: 'META',
   SET: 'SET',
 }
 
@@ -66,15 +78,55 @@ export const actions: ActionTree<StoreStatePosts, StoreStateRoot> = {
       commit(`${types.SET}`, items)
     }
   },
+
+  async read({ commit }, article: Article) {
+    const slug = article.slug
+    const dataSource = `/articles/${base}/${slug}`
+    const recv = await (this as any).$axios.$get(dataSource)
+    const [fm, firstLine] = extractFrontMatter(recv)
+    const content = extractMarkdown(recv, firstLine)
+    const { title = '' } = fm
+    const meta: ArticleMetadataStorePayload = { slug, ...fm }
+    const payload: ArticleContentStorePayload = {
+      content,
+      slug,
+      title,
+    }
+    commit(`${types.CONTENT}`, payload)
+    commit(`${types.META}`, meta)
+  },
 }
 
 export const mutations: MutationTree<StoreStatePosts> = {
   // tslint:disable-next-line:no-shadowed-variable no-any
-  [types.SELECT](state: StoreStatePosts, slug: string = '') {
-    state.selected = slug
+  [types.SELECT](mutationStateArg: StoreStatePosts, slug: string = '') {
+    mutationStateArg.selected = slug
   },
   // tslint:disable-next-line:no-shadowed-variable no-any
-  [types.SET](state: StoreStatePosts, items: Post[]): void {
-    state.items = items
+  [types.SET](mutationStateArg: StoreStatePosts, items: Post[]): void {
+    mutationStateArg.items = items
+  },
+  [types.CONTENT](
+    mutationStateArg: StoreStatePosts,
+    payload: ArticleContentStorePayload
+  ): void {
+    const article = mutationStateArg.items.find(a => a.slug === payload.slug)
+    if (article) {
+      article.content = payload.content
+    }
+  },
+  [types.META](
+    mutationStateArg: StoreStatePosts,
+    payload: ArticleMetadataStorePayload
+  ): void {
+    const article = mutationStateArg.items.find(a => a.slug === payload.slug)
+    if (article) {
+      for (const [key, valueObj] of Object.entries(payload)) {
+        const hasKey = Reflect.has(article, key) && key !== 'slug'
+        if (hasKey) {
+          article[key] = JSON.parse(JSON.stringify(valueObj))
+        }
+      }
+    }
   },
 }

@@ -1,72 +1,76 @@
 <template>
-    <nuxt-link :to="location">{{ textContent }}</nuxt-link>
+    <nuxt-link
+      :to="location"
+    >
+      {{ textContent }}
+    </nuxt-link>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
 
-import { VueRouterLocationInterface } from '~/lib/runtime'
+import * as postsStore from '~/store/posts'
+const posts = namespace(postsStore.name)
 
-// tslint:disable-next-line: variable-name
-const ArticleLink = Vue.extend({
+import { Article } from '~/lib/models'
+
+import {
+  VueRouterLocationInterface,
+  VueRouterPropertyDictionary,
+} from '~/lib/runtime/nuxt'
+
+@Component({
   props: {
-    base: {
-      type: String,
-      default: '',
-    },
-    path: {
-      type: String,
-      default: '',
-    },
-    slug: {
-      type: String,
-      default: '',
-    },
-    title: {
-      type: String,
-      default: '',
-    },
-  },
-  computed: {
-    location(): VueRouterLocationInterface {
-      const path: string[] = []
-      if (this.base) {
-        path.push(this.base)
-      }
-      path.push(this.path)
-
-      const out: VueRouterLocationInterface = {
-        path: '/' + path.join('/'),
-      }
-
-      return out
-    },
-    textContent(): string {
-      const title = this.title
-      const hasTitle = title !== ''
-
-      return hasTitle ? title : this.slug
+    article: {
+      type: Article,
     },
   },
 })
-/*
-class ArticleLink extends Vue {
-  @Prop(String) readonly basePath: string = ''
-  @Prop(String) readonly path: string = ''
-  @Prop(String) readonly slug: string = ''
+export default class ArticleLink extends Vue {
+  base: string = ''
+  article!: Article
+
+  @posts.Action('read') getContent
 
   get location(): VueRouterLocationInterface {
-    const path = []
-    path.push(this.basePath)
+    const pathParts: string[] = []
+    if (this.base) {
+      pathParts.push(this.base)
+    }
+    pathParts.push(this.article.path)
+
+    const path: string = '/' + pathParts.join('/')
+    const meta: VueRouterPropertyDictionary = {
+      slug: this.id,
+      title: this.article.title,
+    }
+
+    console.log('computed.location', path)
 
     const out: VueRouterLocationInterface = {
-      path: path.join('/'),
+      path,
+      meta,
     }
 
     return out
   }
-}
-*/
 
-export default ArticleLink
+  get id(): string {
+    const { slug = '' } = this.article
+    return slug
+  }
+
+  get textContent(): string {
+    const { title = '', slug = '' } = this.article
+    const hasTitle = title !== ''
+
+    return hasTitle ? title : slug
+  }
+
+  async beforeMount() {
+    const { slug } = this.article
+    await this.getContent(this.article)
+  }
+}
 </script>

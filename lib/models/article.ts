@@ -1,3 +1,4 @@
+import { extractDateTuple } from '~/lib/date-time'
 import { SlugInterface } from './slug'
 
 export type ArticleType =
@@ -6,23 +7,6 @@ export type ArticleType =
   | 'project'
   | 'contribution'
   | 'job-position'
-
-export const extractDateTuple = (line: string): number[] | false => {
-  const pipeline = String(line)
-    .split('-')
-    .slice(0, 3)
-    .map(n => parseInt(n, 10))
-
-  const threeFirstAreNotNumbers = pipeline
-    .map(i => Number.isInteger(i))
-    .includes(false)
-  const threeFirstAreNumbers = threeFirstAreNotNumbers === false
-  if (threeFirstAreNumbers && pipeline.length === 3) {
-    return pipeline
-  } else {
-    return false
-  }
-}
 
 export const dateTupleSlugToPath = (slug: string): string => {
   let slugCopy: string = `${slug}`
@@ -75,22 +59,26 @@ export class ArticleFactory {
   }
 
   create(slug: string): Article {
-    const type = this.type
     const path = this.formatPath(slug)
-    return new Article(type, slug, path)
+    const out: Article = new Article(slug, path)
+    out.type = this.type
+    return out
   }
 }
 
 export class Article implements SlugInterface {
-  readonly type: ArticleType
+  type: ArticleType = 'post'
 
   readonly slug: string
   readonly path: string
 
+  title: string = ''
+
+  content: string = ''
+
   readonly dateTuple: number[] | false
 
-  constructor(type: ArticleType, slug: string, path: string) {
-    this.type = type
+  constructor(slug: string, path: string) {
     this.path = path
     this.slug = slug
     this.dateTuple = extractDateTuple(slug)
