@@ -1,5 +1,5 @@
 import { extractDateTuple } from '~/lib/date-time'
-import { SlugInterface } from './slug'
+import { SlugInterface, DateTupleSlug } from './slug'
 
 export type ArticleType =
   | 'post'
@@ -7,6 +7,22 @@ export type ArticleType =
   | 'project'
   | 'contribution'
   | 'job-position'
+
+export const dateTupleSlugToString = (dto: DateTupleSlug): string | null => {
+  const keys: string[] = ['year', 'month', 'day', 'slug']
+  const out: string[] = []
+  for (const key of keys) {
+    if (dto[key]) {
+      out.push(String(dto[key]).padStart(2, '0'))
+    }
+  }
+
+  if (out.length !== keys.length) {
+    return null
+  }
+
+  return out.join('-')
+}
 
 export const dateTupleSlugToPath = (slug: string): string => {
   let slugCopy: string = `${slug}`
@@ -69,18 +85,26 @@ export class ArticleFactory {
 export class Article implements SlugInterface {
   type: ArticleType = 'post'
 
-  readonly slug: string
-  readonly path: string
-
   title: string = ''
 
   content: string = ''
 
   readonly dateTuple: number[] | false
 
-  constructor(slug: string, path: string) {
+  constructor(readonly slug: string, readonly path: string) {
     this.path = path
     this.slug = slug
     this.dateTuple = extractDateTuple(slug)
   }
+}
+
+export interface ArticleContentStorePayload {
+  readonly content: string
+  readonly slug: string
+  readonly title: string
+}
+
+export interface ArticleMetadataStorePayload {
+  readonly slug: string
+  readonly [key: string]: string[] | boolean | string | number
 }

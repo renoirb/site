@@ -4,9 +4,7 @@
     {
       "type": "npm",
       "script": "dev",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
+      "problemMatcher": ["$tsc-watch"],
       "options": {
         "env": {
           "NUXT_ENV_LOG_LEVEL": "${input:NUXT_ENV_LOG_LEVEL}"
@@ -16,15 +14,14 @@
     {
       "type": "npm",
       "script": "build",
-      "problemMatcher": [
-        "$tsc"
-      ],
+      "problemMatcher": ["$tsc"],
       "group": {
         "kind": "build",
         "isDefault": true
       },
       "options": {
         "env": {
+          "API_URL_BROWSER": "https://renoirb.com",
           "NODE_ENV": "${input:NODE_ENV}",
           "NUXT_ENV_LOG_LEVEL": "${input:NUXT_ENV_LOG_LEVEL}"
         }
@@ -33,9 +30,7 @@
     {
       "type": "npm",
       "script": "test:watch",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
+      "problemMatcher": ["$tsc-watch"],
       "isBackground": true
     }
   ],
@@ -53,7 +48,7 @@
       "description": "What Jest test task strategy to use?",
       // https://jestjs.io/docs/en/cli.html
       "options": ["error", "warn", "info", "debug"],
-      "default": "warn"
+      "default": "debug"
     }
   ]
 }

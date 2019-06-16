@@ -1,3 +1,13 @@
+import { AxiosInstance } from 'axios'
+
+import {
+  axiosTextCsvResponseHandler,
+  createAxiosRequestConfig,
+  axiosTextCsvResponseTransformer,
+} from '~/lib/runtime/axios'
+
+import { csvToSlugCollection } from '~/lib/csv'
+
 import { Article, ArticleType } from './article'
 import { Category } from './category'
 import { Tag } from './tag'
@@ -15,4 +25,20 @@ export class Post extends Article {
   constructor(readonly slug: string, readonly path: string) {
     super(slug, path)
   }
+}
+
+export const postFetchService = (
+  httpClient: AxiosInstance
+) => async (): Promise<Post[]> => {
+  const where = '/articles/blog.csv'
+  const requestConfig = createAxiosRequestConfig('GET', where)
+  requestConfig.addTransformer(axiosTextCsvResponseTransformer)
+  const toCollection = csvToSlugCollection('post')
+  const items = await httpClient
+    .request(requestConfig)
+    .then(axiosTextCsvResponseHandler)
+    .then(({ data }) => toCollection(data))
+
+  // @ts-ignore
+  return items
 }

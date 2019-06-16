@@ -1,52 +1,58 @@
 <template>
-    <nuxt-link
-      :to="location"
-    >
-      {{ textContent }}
-    </nuxt-link>
+  <nuxt-link
+    @click.native="clickHandler"
+    :to="location"
+    :slug="value.slug"
+    v-bind="value"
+  >
+    {{ textContent }}
+  </nuxt-link>
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
-import { namespace } from 'vuex-class'
-
-import * as postsStore from '~/store/posts'
-const posts = namespace(postsStore.name)
-
-import { Article } from '~/lib/models'
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
 
 import {
   VueRouterLocationInterface,
   VueRouterPropertyDictionary,
 } from '~/lib/runtime/nuxt'
 
+import { Post, Article } from '~/lib/models'
+import { blogModule } from '~/store/blog/const'
+
 @Component({
   props: {
-    article: {
-      type: Article,
+    value: {
+      type: [Post, Article],
     },
   },
 })
 export default class ArticleLink extends Vue {
   base: string = ''
-  article!: Article
 
-  @posts.Action('read') getContent
+  @Prop({ type: Object })
+  value!: Post | Article
+
+  @blogModule.Action('load')
+  private getContent!: (value: Post | Article) => void
+
+  @blogModule.Action('select')
+  private select!: (slug: string) => void
 
   get location(): VueRouterLocationInterface {
     const pathParts: string[] = []
     if (this.base) {
       pathParts.push(this.base)
     }
-    pathParts.push(this.article.path)
+    pathParts.push(this.value.path)
 
     const path: string = '/' + pathParts.join('/')
     const meta: VueRouterPropertyDictionary = {
-      slug: this.id,
-      title: this.article.title,
+      slug: this.value.slug,
+      title: this.value.title,
     }
 
-    console.log('computed.location', path)
+    // console.log('computed.location', { path, value: { ...this.value } })
 
     const out: VueRouterLocationInterface = {
       path,
@@ -56,21 +62,23 @@ export default class ArticleLink extends Vue {
     return out
   }
 
-  get id(): string {
-    const { slug = '' } = this.article
-    return slug
-  }
-
   get textContent(): string {
-    const { title = '', slug = '' } = this.article
+    const { title = '', slug = '' } = this.value
     const hasTitle = title !== ''
 
     return hasTitle ? title : slug
   }
 
   async beforeMount() {
-    const { slug } = this.article
-    await this.getContent(this.article)
+    const { slug } = this.value
+    await this.getContent(this.value)
+  }
+
+  async clickHandler(click: MouseEvent) {
+    const { slug = '' } = this.value
+    // console.log(`clickHandler will $emit("article-select", "${slug}")`, click)
+    this.$emit('article-select', slug)
+    await this.select(slug)
   }
 }
 </script>

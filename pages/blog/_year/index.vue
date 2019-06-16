@@ -15,24 +15,26 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
-import { namespace } from 'vuex-class'
-
-import * as postsStore from '~/store/posts'
-const posts = namespace(postsStore.name)
-
-import { Article } from '~/lib/models'
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
 
 import { VueRouterLocationInterface } from '~/lib/runtime'
 import { ArticleIndex } from '~/lib/article-index'
 
-@Component
+import { Post } from '~/lib/models'
+import { blogModule } from '~/store/blog/const'
+
+@Component({})
 export default class BlogYearPage extends Vue {
-  @posts.State items!: Article[]
-  @posts.Action('hydrate') hydrate
+  @blogModule.State
+  private items!: Post[]
+
+  @blogModule.Action('hydrate')
+  private hydrate!: () => void
+
   async mounted() {
     await this.hydrate()
   }
+
   toLocation(month: number): VueRouterLocationInterface {
     const path: string[] = []
     path.push('blog')
@@ -46,18 +48,21 @@ export default class BlogYearPage extends Vue {
   }
 
   get year(): number {
-    const fallbackYear = new Date().getFullYear()
-    const { year = String(fallbackYear) } = this.$route.params
+    const fallback = new Date().getFullYear()
+    const { params = {} } = this.$route
+    const { year = String(fallback) } = params
     return +year
   }
+
   get months(): number[] {
     const year = this.year
     const index = new ArticleIndex('')
-    const i = [...this.items].map(i => i.slug)
-    index.setLines(i)
+    const items = [...this.items].map(i => i.slug)
+    index.setLines(items)
     const out: number[] = index.getMonthsFor(year)
     return out
   }
+
   validate({ params }): boolean {
     return /^\d+$/.test(params.year)
   }
