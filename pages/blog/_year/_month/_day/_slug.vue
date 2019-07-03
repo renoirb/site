@@ -3,11 +3,11 @@
     :key="post.title"
     class="pages--blog-_year-_month-_slug-index"
   >
+    <nuxt-link :to="up">back</nuxt-link>
     <h3>{{ post.title }}</h3>
     <vue-markdown>
 {{ post.content }}
     </vue-markdown>
-    <nuxt-link :to="up">back</nuxt-link>
   </div>
 </template>
 
@@ -24,9 +24,11 @@ import { VueRouterLocationInterface } from '~/lib/runtime'
 
 import { blogModule } from '~/store/blog/const'
 
+const markdown = () => import('vue-markdown')
+
 @Component({
   components: {
-    'vue-markdown': () => import('vue-markdown'),
+    'vue-markdown': markdown,
   },
 })
 export default class BlogYearMonthDaySlugPage extends Vue {

@@ -70,6 +70,10 @@ const main: NuxtConfiguration = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  router: {
+    middleware: 'data-source',
+  },
+
   loading: { color: '#fff' },
 
   css: ['normalize.css/normalize.css', '@/assets/styles/index.scss'],

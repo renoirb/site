@@ -1,4 +1,5 @@
 export * from './article'
+export * from './data-source'
 export * from './category'
 export * from './post'
 export * from './slug'

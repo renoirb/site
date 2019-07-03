@@ -25,6 +25,7 @@ import { blogModule } from '~/store/blog/const'
 
 @Component({})
 export default class BlogYearPage extends Vue {
+
   @blogModule.State
   private items!: Post[]
 
