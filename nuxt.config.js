@@ -1,7 +1,6 @@
 import { resolve } from 'path'
-import NuxtConfiguration from '@nuxt/config'
 
-import { LogLevel, ensureValidLogLevel } from './lib/runtime'
+import { ensureValidLogLevel } from './lib/runtime'
 import { workbox } from './lib/runtime/nuxt/config'
 
 // @ts-ignore
@@ -14,15 +13,15 @@ const {
 } = process.env
 
 // https://nuxtjs.org/api/configuration-env/
-const enableWorkbox: boolean = NUXT_ENV_ENABLE_WORKBOX === 'true'
-const isDev: boolean = NODE_ENV !== 'production'
-const logLevel: LogLevel = ensureValidLogLevel(NUXT_ENV_LOG_LEVEL)
+const enableWorkbox = NUXT_ENV_ENABLE_WORKBOX === 'true'
+const isDev = NODE_ENV !== 'production'
+const logLevel = ensureValidLogLevel(NUXT_ENV_LOG_LEVEL)
 
 /**
  * Docs:
  *   @nuxtjs/axios: https://axios.nuxtjs.org/usage
  */
-const modules: string[] = ['@nuxtjs/component-cache', '@nuxtjs/axios']
+const modules = ['@nuxtjs/component-cache', '@nuxtjs/axios']
 if (enableWorkbox) {
   modules.push('@nuxtjs/pwa')
 }
@@ -32,7 +31,7 @@ if (NUXT_ENV_LOG_LEVEL === 'debug') {
   process.env.DEBUG = '*,-babel,-snapdragon:*,-vue-eslint-parser,-eslint:*'
 }
 
-const runtimeSwitches: { [key: string]: string | boolean } = {
+const runtimeSwitches = {
   DEBUG: String(process.env.DEBUG), // And visualize what's been setup
   enableWorkbox,
   isDev,
@@ -42,7 +41,7 @@ const runtimeSwitches: { [key: string]: string | boolean } = {
 
 console.table({ ...runtimeSwitches }) // tslint:disable-line
 
-const main: NuxtConfiguration = {
+const main = {
   mode: 'spa',
   dev: isDev,
   modern: true,
@@ -70,9 +69,9 @@ const main: NuxtConfiguration = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  router: {
-    middleware: 'data-source',
-  },
+  // router: {
+  //   middleware: 'data-source',
+  // },
 
   loading: { color: '#fff' },
 
@@ -88,6 +87,7 @@ const main: NuxtConfiguration = {
   },
 
   modules: [
+    '@nuxt/press',
     '~/modules/webpack-loaders',
     ...modules,
     // https://github.com/gbouteiller/nuxt-element-ui
@@ -180,6 +180,8 @@ const main: NuxtConfiguration = {
 
   workbox: workbox(enableWorkbox, isDev),
 
+  buildModules: ['@nuxt/typescript-build'],
+
   build: {
     transpile: [/^element-ui/],
     extractCSS: true,
@@ -195,10 +197,6 @@ const main: NuxtConfiguration = {
         browserslist,
       },
       plugins: {
-        'postcss-cssnext': {
-          browsers: ['> 1%', 'not op_mini all'],
-          warnForDuplicates: false,
-        },
         cssnano: {
           zindex: false,
         },

@@ -55,6 +55,6 @@ export interface BlogMutations extends MutationTree<BlogState> {
 export interface BlogGetters extends GetterTree<BlogState, RootState> {
   currentlySelected: (state: BlogState) => Post
   selectedMonthAndYear: (
-    state: BlogState
+    state: BlogState,
   ) => (year: number, month: number) => Post[]
 }

@@ -8,12 +8,12 @@ import {
 } from '~/lib/models'
 
 export type monthAndYearFunctionType = (
-  items: Post[]
+  items: Post[],
 ) => (year?: string, month?: string) => Post[]
 
 const createFilteringHelper: monthAndYearFunctionType = (items: Post[]) => (
   year?: string,
-  month?: string
+  month?: string,
 ): Post[] => {
   const pickedYear: number | false = year ? parseInt(year, 10) : false
   const pickedMonth: number | false = month ? parseInt(month, 10) : false

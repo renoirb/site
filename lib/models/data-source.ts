@@ -3,8 +3,8 @@
  * (i.e. what you see below)
  *
  * Thank you so much:
- * - https://github.com/Microsoft/TypeScript/pull/29510
  * - https://stackoverflow.com/a/45486495
+ * - https://github.com/Microsoft/TypeScript/pull/29510#issuecomment-492795957
  */
 
 /**
