@@ -1,4 +1,4 @@
-module.exports = {
+const main = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
@@ -16,3 +16,5 @@ module.exports = {
     '<rootDir>/pages/**/*.vue',
   ],
 }
+
+module.exports = main

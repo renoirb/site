@@ -3,23 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
     "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
+    "commit": "npx git-cz",
+    "dev": "nuxt-ts",
+    "fix": "use-cross-env use-prettier '**/*.{vue,tsx,scss,js,ts,json,md}' --write",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint": "yarn lint:js && yarn lint:style",
-    "test": "jest"
-  },
-  "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Dependencies must be installed with Yarn: https://yarnpkg.com/')\"",
+    "lint": "use-cross-env use-run-all lint:* fix",
+    "lint:js": "use-cross-env eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:style": "use-cross-env stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "start": "nuxt-ts start",
+    "test": "use-cross-env jest --detectOpenHandles",
+    "test:snapshots": "use-cross-env jest --detectOpenHandles -u"
   },
   "dependencies": {
     "@nuxt/content": "^1.5.0",
@@ -29,6 +24,10 @@
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.0",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@commitlint/prompt-cli": "^9.1.1",
     "@nuxt/types": "^2.14.0",
     "@nuxt/typescript-build": "^2.0.2",
     "@nuxtjs/eslint-config": "^3.1.0",
@@ -36,10 +35,15 @@
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/vuetify": "^1.11.2",
+    "@renoirb/conventions-use-prettier": "^1.1.1",
+    "@renoirb/conventions-use-typescript-3": "^1.1.1",
+    "@renoirb/tools-bundling-helpers": "^1.1.1",
     "@vue/test-utils": "^1.0.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
+    "commitlint-config-cz": "^0.12.1",
+    "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
