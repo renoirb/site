@@ -12,7 +12,7 @@
     "generate": "nuxt-ts generate",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Dependencies must be installed with Yarn: https://yarnpkg.com/')\"",
     "lint": "use-cross-env use-run-all lint:* fix",
-    "lint:js": "use-cross-env conventions-use-eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:js": "use-cross-env conventions-use-eslint --fix --ext .ts,.tsx,.js,.vue --ignore-path .gitignore .",
     "lint:style": "use-cross-env stylelint **/*.{vue,css} --ignore-path .gitignore",
     "start": "nuxt-ts start",
     "test": "use-cross-env jest --detectOpenHandles",
@@ -21,6 +21,8 @@
   "dependencies": {
     "@nuxt/content": "^1.5.0",
     "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/pwa": "^3.0.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {

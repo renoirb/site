@@ -6,9 +6,7 @@
     fixed
     app
   >
-    <v-list
-      v-if="(items||[]).length > 0"
-    >
+    <v-list v-if="(items || []).length > 0">
       <v-list-item
         v-for="(item, i) in items"
         :key="i"
@@ -24,10 +22,8 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
-    <v-list dense v-else>
-      <v-list-item>
-        Nothing
-      </v-list-item>
+    <v-list v-else dense>
+      <v-list-item> Nothing </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -39,7 +35,11 @@ export default Vue.extend({
     items: {
       type: Array,
       required: false,
-      default: () => ([]),
+      default: () => [],
+    },
+    fixed: {
+      type: Boolean,
+      default: false,
     },
     clipped: {
       type: Boolean,
@@ -53,6 +53,6 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
-  }
+  },
 })
 </script>

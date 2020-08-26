@@ -8,5 +8,9 @@
  */
 declare module '*.vue' {
   import Vue from 'vue'
+  // Place any unimported plugins here
+  // TODO: See why we can't put in tsconfig.js in types
+  import '@nuxtjs/axios'
+  import 'vuetify'
   export default Vue
 }

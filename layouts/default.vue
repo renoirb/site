@@ -2,6 +2,7 @@
   <v-app dark>
     <DefaultHeader
       :clipped="clipped"
+      :fixed="fixed"
       :drawer="drawer"
       :mini-variant="miniVariant"
       :items="items"
@@ -38,7 +39,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <DefaultFooter />
+    <DefaultFooter :fixed="fixed" />
   </v-app>
 </template>
 
@@ -64,6 +65,16 @@ export default Vue.extend({
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
           to: '/inspire',
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Splash',
+          to: '/splash',
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Splash alternate',
+          to: '/splash/alternate',
         },
       ],
       miniVariant: false,

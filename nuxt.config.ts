@@ -69,9 +69,17 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/pwa',
   ],
+  /*
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {},
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
@@ -90,6 +98,15 @@ export default {
           primary: colors.blue.darken4,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+        },
+        light: {
+          primary: colors.blue.lighten3,
+          accent: colors.grey.lighten3,
+          secondary: colors.amber.lighten3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
