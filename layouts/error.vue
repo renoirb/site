@@ -6,14 +6,13 @@
     <h1 v-else>
       {{ otherError }}
     </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
+    <NuxtLink to="/"> Home page </NuxtLink>
   </v-app>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
   layout: 'empty',
   props: {
     error: {
@@ -34,7 +33,7 @@ export default {
       title,
     }
   },
-}
+})
 </script>
 
 <style scoped>

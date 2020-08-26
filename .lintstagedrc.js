@@ -1,9 +1,9 @@
 module.exports = {
-  '*.{scss,css,vue}': ['use-cross-env stylelint'],
-  '*.{js,vue}': ['use-cross-env eslint'],
+  '*.{scss,css,vue}': ['yarn run lint:style'],
+  '*.{ts,tsx,js,vue}': ['yarn run lint'],
   '*.{md,json,js,ts}': [
-    'use-cross-env use-prettier "**/*.{md,json,js,ts}" --write',
+    'yarn run fix',
     'git add',
   ],
-  'package.json': ['npx sort-package-json', 'git add'],
+  'package.json': ['yarn run fix:sort-package-json', 'git add'],
 }

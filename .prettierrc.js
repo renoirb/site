@@ -1,4 +1,4 @@
-const base = require('@renoirb/conventions-use-prettier')
+const base = require('@renoirb/conventions-use-prettier/prettier.config')
 
 const main = {
   ...base,
