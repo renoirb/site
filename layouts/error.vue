@@ -15,44 +15,44 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
-  export interface Data {
-    pageNotFound: string
-    otherError: string
-  }
-  export interface Methods {}
-  export interface Computed {}
-  export interface Props {
-    error: null | { statusCode: number }
-  }
-  export default Vue.extend<Data, Methods, Computed, Props>({
-    layout: 'blank',
-    props: {
-      error: {
-        type: Object,
-        default: null,
-      },
+import Vue from 'vue'
+export interface Data {
+  pageNotFound: string
+  otherError: string
+}
+export interface Methods {}
+export interface Computed {}
+export interface Props {
+  error: null | { statusCode: number }
+}
+export default Vue.extend<Data, Methods, Computed, Props>({
+  layout: 'blank',
+  props: {
+    error: {
+      type: Object,
+      default: null,
     },
-    data() {
-      return {
-        pageNotFound: '404 Not Found',
-        otherError: 'An error occurred',
-      }
-    },
-    head() {
-      const title =
-        this.error && this.error.statusCode === 404
-          ? this.pageNotFound
-          : this.otherError
-      return {
-        title,
-      }
-    },
-  })
+  },
+  data() {
+    return {
+      pageNotFound: '404 Not Found',
+      otherError: 'An error occurred',
+    }
+  },
+  head() {
+    const title =
+      this.error && this.error.statusCode === 404
+        ? this.pageNotFound
+        : this.otherError
+    return {
+      title,
+    }
+  },
+})
 </script>
 
 <style scoped>
-  h1 {
-    font-size: 20px;
-  }
+h1 {
+  font-size: 20px;
+}
 </style>

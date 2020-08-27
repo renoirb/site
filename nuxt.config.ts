@@ -56,6 +56,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-components
    */
   components: true,
+  router: {
+    middleware: ['redirects'],
+  },
   /*
    ** Nuxt.js dev-modules
    */
@@ -63,6 +66,7 @@ export default {
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/composition-api',
     '@nuxtjs/vuetify',
   ],
   /*
@@ -73,6 +77,8 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    // Doc: https://content.nuxtjs.org/integrations#nuxtjsfeed
+    // '@nuxtjs/feed',
     '@nuxtjs/pwa',
   ],
   /*
@@ -82,7 +88,9 @@ export default {
   axios: {},
   /*
    ** Content module configuration
-   ** See https://content.nuxtjs.org/configuration
+   ** See:
+   ** - https://content.nuxtjs.org/configuration
+   ** - https://content.nuxtjs.org/configuration#defaults
    */
   content: {},
   /*
@@ -92,7 +100,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken4,
@@ -123,6 +131,14 @@ export default {
     analyze: {
       analyzerMode: 'static',
     },
+  },
+  generate: {
+    async routes () {
+      // https://github.com/nuxt/content/issues/129#issuecomment-643614564
+      const { $content } = require('@nuxt/content');
+      const files = await $content('', { deep: true }).only(['slug', 'dir']).fetch();
+      return files.map(file => '/' + (file.dir.includes('blog') ? 'blog' : file.dir.includes('projects') ? 'projects' : '') + '/' + (file.slug === '/index' ? '/' : file.slug));
+    }
   },
   // typescript: {
   //   typeCheck: {
