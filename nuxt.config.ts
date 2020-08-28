@@ -79,7 +79,7 @@ export default {
     '@nuxt/content',
     // Doc: https://content.nuxtjs.org/integrations#nuxtjsfeed
     // '@nuxtjs/feed',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
   ],
   /*
    ** Axios module configuration
@@ -133,12 +133,31 @@ export default {
     },
   },
   generate: {
-    async routes () {
-      // https://github.com/nuxt/content/issues/129#issuecomment-643614564
-      const { $content } = require('@nuxt/content');
-      const files = await $content('', { deep: true }).only(['slug', 'dir']).fetch();
-      return files.map(file => '/' + (file.dir.includes('blog') ? 'blog' : file.dir.includes('projects') ? 'projects' : '') + '/' + (file.slug === '/index' ? '/' : file.slug));
-    }
+    dir: 'docs',
+    // async routes() {
+    //   // https://github.com/nuxt/content/issues/129#issuecomment-643614564
+    //   const { $content } = require('@nuxt/content')
+    //   const files = await $content('', { deep: true })
+    //     .only(['slug', 'dir'])
+    //     .fetch()
+    //   const routes = files.map(
+    //     (file) =>
+    //       '/' +
+    //       (file.dir.includes('blog')
+    //         ? 'blog'
+    //         : file.dir.includes('projects')
+    //         ? 'projects'
+    //         : '') + '/' +
+    //         (file.slug === '/index' ? '' : file.slug),
+    //   )
+
+    //   // @ts-ignore
+    //   const isStatic = process.static ? process.static : 'NOPE'
+    //   // @ts-ignore
+    //   console.log('HONK-1: nuxt.config generate.routes', { routes, 'process.static': isStatic }, `\n\n\n`)
+
+    //   return routes
+    // },
   },
   // typescript: {
   //   typeCheck: {

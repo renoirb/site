@@ -12,5 +12,6 @@ declare module '*.vue' {
   // TODO: See why we can't put in tsconfig.js in types
   import '@nuxtjs/axios'
   import 'vuetify'
+  import '@nuxtjs/composition-api'
   export default Vue
 }

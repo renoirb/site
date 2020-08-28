@@ -64,8 +64,8 @@ export default Vue.extend({
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Splash',
-          to: '/splash',
+          title: 'Hello',
+          to: '/hello',
         },
         {
           icon: 'mdi-chart-bubble',
@@ -76,6 +76,11 @@ export default Vue.extend({
           icon: 'mdi-chart-bubble',
           title: 'Resume',
           to: '/resume',
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'cv',
+          to: '/cv',
         },
       ],
       miniVariant: false,

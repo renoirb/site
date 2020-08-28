@@ -7,25 +7,25 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  async asyncData ({ $content, params, error }) {
-    const { year, month, slug } = params
+  import Vue from 'vue'
+  export default Vue.extend({
+    async asyncData({ $content, params, error }) {
+      const { year, month, slug } = params
 
-    let article
+      let article
 
-    try {
-      article = await $content('blog', year, month, slug).fetch()
-    } catch (e) {
-      error({ message: 'Article not found' })
-    }
+      try {
+        article = await $content('blog', year, month, slug).fetch()
+      } catch (e) {
+        error({ message: 'Article not found' })
+      }
 
-    return {
-      year,
-      month,
-      slug,
-      article,
-    }
-  }
-})
+      return {
+        year,
+        month,
+        slug,
+        article,
+      }
+    },
+  })
 </script>

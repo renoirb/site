@@ -11,23 +11,21 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  watchQuery: true,
-  async asyncData ({ $content, params }) {
-    const { year, month } = params
+  import Vue from 'vue'
+  export default Vue.extend({
+    watchQuery: true,
+    async asyncData({ $content, params }) {
+      const { year, month } = params
 
-    const articles = await $content('blog', year, month, { deep: true })
-      .sortBy('date', 'desc')
-      .fetch()
+      const articles = await $content('blog', year, month, { deep: true })
+        .sortBy('date', 'desc')
+        .fetch()
 
-
-
-    return {
-      articles,
-      year,
-      month,
-    }
-  }
-})
+      return {
+        articles,
+        year,
+        month,
+      }
+    },
+  })
 </script>

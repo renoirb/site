@@ -1,9 +1,10 @@
 <template>
-  <div class="pages-projects--slug">
-    <nuxt-link to="/projects">Projects</nuxt-link>
-    <h2>{{ document.title }}</h2>
+  <section id="is" class="about" itemscope itemtype="http://schema.org/Person">
+    <b class="pull-left" style="display: block">
+      <img width="150" alt itemprop="image" src="@/assets/images/avatar.jpg" />
+    </b>
     <nuxt-content :document="document" />
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -16,19 +17,16 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    async asyncData({ $content, params, error }) {
-      const { slug } = params
-      let document
-
-      try {
-        document = await $content('projects', slug).fetch()
-      } catch (e) {
-        error({ message: 'Project not found' })
-      }
-
+    layout: 'blank',
+    async asyncData({ $content }) {
+      let document = await $content('hello').fetch()
       return {
         document,
       }
     },
   })
 </script>
+
+<style lang="scss" scoped>
+  @import './style.scss';
+</style>
