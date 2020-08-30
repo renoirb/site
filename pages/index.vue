@@ -20,11 +20,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  components: {
-    Logo: () => import('~/components/Logo.vue'),
-    VuetifyLogo: () => import('~/components/VuetifyLogo.vue'),
-  },
-})
+  import Vue from 'vue'
+  export default Vue.extend({
+    components: {
+      Logo: () => import('~/components/Logo.vue'),
+      VuetifyLogo: () => import('~/components/VuetifyLogo.vue'),
+    },
+  })
 </script>

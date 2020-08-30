@@ -13,11 +13,7 @@
 <script lang="ts">
   import { defineComponent, h, useMeta } from '@nuxtjs/composition-api'
   import { VNode } from 'vue'
-  import {
-    isVueRouterLocation,
-    IVueRouterLocation,
-    RE_BASE_URL,
-  } from '~/lib'
+  import { isVueRouterLocation, IVueRouterLocation, RE_BASE_URL } from '~/lib'
   interface Props {
     to: IVueRouterLocation
     baseurl: string
@@ -42,13 +38,12 @@
       const baseurl = props.baseurl
       const to = props.to.path
       const href = `${baseurl}${to}`
-      meta.value.push(...[
-        { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=${href}` },
-      ])
-      link.value.push(...[
-        { rel: 'canonical', href },
-      ])
-
+      meta.value.push(
+        ...[
+          { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=${href}` },
+        ],
+      )
+      link.value.push(...[{ rel: 'canonical', href }])
     },
     render(): VNode {
       return h('div', [
@@ -59,10 +54,8 @@
               href: this.href,
             },
           },
-          [
-            `${this.href}`,
-          ]
-        )
+          [`${this.href}`],
+        ),
       ])
     },
   })

@@ -29,30 +29,30 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  props: {
-    items: {
-      type: Array,
-      required: false,
-      default: () => [],
+  import Vue from 'vue'
+  export default Vue.extend({
+    props: {
+      items: {
+        type: Array,
+        required: false,
+        default: () => [],
+      },
+      fixed: {
+        type: Boolean,
+        default: false,
+      },
+      clipped: {
+        type: Boolean,
+        default: false,
+      },
+      miniVariant: {
+        type: Boolean,
+        default: false,
+      },
+      drawer: {
+        type: Boolean,
+        default: false,
+      },
     },
-    fixed: {
-      type: Boolean,
-      default: false,
-    },
-    clipped: {
-      type: Boolean,
-      default: false,
-    },
-    miniVariant: {
-      type: Boolean,
-      default: false,
-    },
-    drawer: {
-      type: Boolean,
-      default: false,
-    },
-  },
-})
+  })
 </script>

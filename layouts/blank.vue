@@ -13,11 +13,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  beforeCreate() {
-    // See vue-shims.d.ts!
-    this.$vuetify.theme.dark = false
-  },
-})
+  import Vue from 'vue'
+  export default Vue.extend({
+    beforeCreate() {
+      // See vue-shims.d.ts!
+      this.$vuetify.theme.dark = false
+    },
+  })
 </script>
