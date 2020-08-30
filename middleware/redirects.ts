@@ -14,7 +14,7 @@ const maybeRedirectTo = createMaybeRedirectTo(redirects)
 
 export default (ctx: Context) => {
   const { route = { path: '' } } = ctx
-  const maybeRedirectPath = maybeRedirectTo(redirects, route)
+  const maybeRedirectPath = maybeRedirectTo(route)
   if (maybeRedirectPath) {
     return ctx.redirect(maybeRedirectPath)
   }

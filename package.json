@@ -7,7 +7,7 @@
     "commit": "npx git-cz",
     "dev": "nuxt-ts",
     "fix": "use-run-all fix:*",
-    "fix:prettier": "use-cross-env prettier '**/*.{vue,scss,js,ts,json,md}' --write",
+    "fix:prettier": "use-cross-env prettier --ignore-path .prettierignore --ignore-unknown --write '**/*.{vue,scss,js,ts,json,md}'",
     "fix:sort-package-json": "use-cross-env conventions-code-formatter sort-package-json",
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('Dependencies must be installed with Yarn: https://yarnpkg.com/')\"",
     "lint": "use-cross-env use-run-all lint:* fix",
