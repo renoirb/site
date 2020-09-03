@@ -21,10 +21,17 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  export default Vue.extend({
-    components: {
-      Logo: () => import('~/components/Logo.vue'),
-      VuetifyLogo: () => import('~/components/VuetifyLogo.vue'),
+  export interface Data {
+    baseUrl: string
+  }
+  export interface Methods {}
+  export interface Computed {}
+  export interface Props {}
+  export default Vue.extend<Data, Methods, Computed, Props>({
+    head: {
+      meta: [
+        { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=/hello` },
+      ],
     },
   })
 </script>

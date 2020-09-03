@@ -18,6 +18,7 @@ export default {
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
+    base: '/',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -58,6 +59,7 @@ export default {
   components: true,
   router: {
     middleware: ['redirects'],
+    base: '/',
   },
   /*
    ** Nuxt.js dev-modules
@@ -128,6 +130,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
+    extractCSS: true,
     analyze: {
       analyzerMode: 'static',
     },
