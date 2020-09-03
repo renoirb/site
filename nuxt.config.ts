@@ -1,5 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
+const PRODUCTION_BASE_PATH = '/site'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -18,7 +20,6 @@ export default {
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
-    base: '/',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -59,7 +60,7 @@ export default {
   components: true,
   router: {
     middleware: ['redirects'],
-    base: '/',
+    base: process.env.NODE_ENV === 'production' ? PRODUCTION_BASE_PATH : '/',
   },
   /*
    ** Nuxt.js dev-modules

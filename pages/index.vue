@@ -28,10 +28,19 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    head: {
-      meta: [
-        { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=/hello` },
-      ],
+    asyncData(ctx) {
+      const baseUrl = ctx.base
+      return {
+        baseUrl,
+      }
+    },
+    head() {
+      const to = this.baseUrl.replace(/\/$/, '') + '/hello'
+      return {
+        meta: [
+          { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=${to}` },
+        ],
+      }
     },
   })
 </script>
