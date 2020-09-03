@@ -1,7 +1,7 @@
 <template>
   <div class="pages-blog-year--index">
     <nuxt-link to="/blog">Blog</nuxt-link>
-    <h2>{{ year }}</h2>
+    <h2>{{ $route.params.year }}</h2>
     <ul>
       <li v-for="document in documents" :key="document.slug">
         <nuxt-link :to="document.path">

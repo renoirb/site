@@ -7,9 +7,9 @@ keywords:
   - fausse représentation
 canonical: 'https://renoirboulanger.com/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations/'
 title: La publicite du monde celibataire sur Facebook et les fausses representations
+date: '2008-04-30T21:23:35-04:00'
 categories: ['Tranche de vie']
 tags: []
-date: '2008-04-30T21:23:35-04:00'
 ---
 
 J'était en train de me promener dans [Facebook][0] ce soir et j'ai cliqué sur une annonce pensant qu'elle me dirigerait sur un site, et le lien m'a redirigé sur un tout autre site.

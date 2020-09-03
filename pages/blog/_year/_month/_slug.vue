@@ -1,8 +1,13 @@
 <template>
   <div class="pages-blog-year-month--slug">
-    <nuxt-link to="/blog">Blog</nuxt-link>
-    <h2>{{ article.title }}</h2>
-    <nuxt-content :document="article" />
+    <very-old-article
+      :locale="article.locale || 'en-CA'"
+      :date="article.date"
+    />
+    <div>
+      <h2>{{ article.title }}</h2>
+      <nuxt-content :document="article" />
+    </div>
   </div>
 </template>
 

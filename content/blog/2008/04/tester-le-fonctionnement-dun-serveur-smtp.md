@@ -6,9 +6,9 @@ keywords:
   - email
 canonical: 'https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/'
 title: Tester le fonctionnement d’un serveur SMTP
+date: '2008-04-19T16:07:45-04:00'
 categories: ['Tranche de vie']
 tags: []
-date: '2008-04-19T16:07:45-04:00'
 ---
 
 ### Vérifier si le Firewall bloque certains services
