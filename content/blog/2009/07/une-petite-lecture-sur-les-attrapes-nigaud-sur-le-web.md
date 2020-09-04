@@ -2,7 +2,8 @@
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web/'
 title: Une petite lecture sur les attrapes-nigaud sur le web
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 tags: []
 date: '2009-07-02T22:17:40-04:00'
 ---

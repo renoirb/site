@@ -1,24 +1,28 @@
 ---
 locale: en-CA
 keywords:
-  [
-    'php',
-    'framework',
-    'good',
-    'post',
-    'web',
-    'process',
-    'people',
-    'important',
-    'community',
-    'code',
-    'quality',
-  ]
+  - php
+  - framework
+  - good
+  - post
+  - web
+  - process
+  - people
+  - important
+  - community
+  - code
+  - quality
 canonical: 'https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process/'
 title: Choosing a framework, how I personally define what is “hot” about them, an evaluation process (part 1)
-categories: ['Web Integration Review']
+categories:
+  - Web Integration Review
 date: '2012-07-23'
-# tags: ['architecture', 'Favourites', 'frameworks', 'php', 'symfony2']
+tags:
+  - architecture
+  - Favourites
+  - frameworks
+  - php
+  - symfony2
 ---
 
 This post is all about what **I** think should be used to define quality in your choice of programming framework tool-set. This post is the first one of a collection of (unknown for now) number of posts.
@@ -145,10 +149,10 @@ As it happens, I had the chance to meet them during my two last years as organiz
 [0]: http://www.codinghorror.com/blog/2012/06/the-php-singularity.html
 [1]: http://fabien.potencier.org/article/64/php-is-much-better-than-you-think#comments
 [2]: http://fabien.potencier.org/
-[3]: /blog#tag/geranium
+[3]: /blog/tag/geranium
 [4]: http://beta.renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo
 [5]: http://confoo.ca/en/
-[6]: /blog#tag/devlab
+[6]: /blog/tag/devlab
 [7]: https://www.w3schools.com/php/default.asp 'Shining example of a proliferation of bad code example, not just for HTML'
 
 choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process#my-favourites-contributors

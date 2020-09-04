@@ -29,7 +29,7 @@
         query = query.search(q)
         // OR query = query.search('title', q)
       }
-      const documents = await query.fetch()
+      const documents = (await query.fetch()) as INuxtContentResult[]
       return {
         q,
         documents,

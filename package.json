@@ -2,6 +2,24 @@
   "name": "renoirb.com",
   "version": "1.0.0",
   "private": true,
+  "description": "Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional",
+  "keywords": [
+    "personal-site",
+    "web developer",
+    "quebec",
+    "canada"
+  ],
+  "homepage": "https://renoirb.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renoirb/site.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Renoir Boulanger",
+    "email": "contribs@renoirboulanger.com",
+    "url": "https://renoirb.com"
+  },
   "scripts": {
     "build": "nuxt-ts generate",
     "commit": "npx git-cz",

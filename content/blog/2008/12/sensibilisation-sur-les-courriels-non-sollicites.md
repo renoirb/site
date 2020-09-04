@@ -2,7 +2,8 @@
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/'
 title: Sensibilisation sur les courriels non sollicités
-categories: ['Techniques']
+categories:
+  - Techniques
 tags: []
 date: '2008-12-03T00:58:06-04:00'
 ---

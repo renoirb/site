@@ -9,7 +9,8 @@ keywords:
   - Mozilla Thunderbird
 canonical: 'https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix/'
 title: Les navigateurs web, programmes de courriels, vous avez le choix!!
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 tags: []
 date: '2008-12-05T12:06:01-04:00'
 ---

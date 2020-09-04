@@ -1,9 +1,10 @@
 ---
 locale: fr-CA
-keywords: ['au']
+keywords: []
 canonical: 'https://renoirboulanger.com/blog/2005/09/first-post/'
 title: Premier billet
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 tags: []
 date: '2005-09-16T20:23:22-04:00'
 ---

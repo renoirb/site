@@ -8,7 +8,8 @@ keywords:
 canonical: 'https://renoirboulanger.com/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations/'
 title: La publicite du monde celibataire sur Facebook et les fausses representations
 date: '2008-04-30T21:23:35-04:00'
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 tags: []
 ---
 

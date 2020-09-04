@@ -8,8 +8,10 @@ keywords:
 canonical: 'https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/'
 title: Effacer complètement un disque dur de façon sécuritaire
 date: '2008-04-16T00:45:08-04:00'
-categories: ['Techniques']
-#tags: ['Tutoriels']
+categories:
+  - Techniques
+tags:
+  - tutoriels
 ---
 
 Lorsqu'on se préocupe de ses informations personnelles et qu'on veut se débarrasser d'un ordinateur ou d'un vieux disque dur il faut, idéalement, le vider. J'ai une petite méthode pour le faire pas trop compliqué et totalement sécuritaire pour les données.

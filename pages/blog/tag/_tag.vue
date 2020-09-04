@@ -1,10 +1,11 @@
 <template>
-  <div class="pages-blog-year--index">
+  <div class="pages-blog-tag--index">
     <nuxt-link to="/blog">Blog</nuxt-link>
-    <h2>{{ year }}</h2>
+    <nuxt-link to="/blog/tag">tag</nuxt-link>
+    <h2>{{ tag }}</h2>
     <ul>
       <li v-for="document in documents" :key="document.slug">
-        <nuxt-link :to="document.path">
+        <nuxt-link :to="formatTo(document)">
           {{ document.title }}
         </nuxt-link>
       </li>
@@ -17,23 +18,33 @@
   import { INuxtContentResult } from '~/lib'
   export interface Data {
     documents: INuxtContentResult
-    year: string
+    tag: string
   }
-  export interface Methods {}
+  export interface Methods {
+    formatTo(document: INuxtContentResult): string
+  }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content, params }) {
-      const { year } = params
+      const { tag } = params
 
-      const documents = (await $content('blog', year, { deep: true })
+      const documents = (await $content('blog', { deep: true })
+        .where({ tags: { $contains: tag } })
         .sortBy('date', 'desc')
         .fetch()) as INuxtContentResult[]
 
       return {
         documents,
-        year,
+        tag,
       }
+    },
+    methods: {
+      formatTo(document: INuxtContentResult): string {
+        const [year, month] = String(document.date).split('-')
+        const { slug } = document
+        return `/blog/${year}/${month}/${slug}`
+      },
     },
   })
 </script>

@@ -2,7 +2,8 @@
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/'
 title: Quelques indices pour savoir si un message courriel est une chaîne de lettre
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 tags: []
 date: '2008-12-04T00:03:34-04:00'
 ---

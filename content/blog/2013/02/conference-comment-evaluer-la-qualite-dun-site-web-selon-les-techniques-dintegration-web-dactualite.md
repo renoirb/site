@@ -1,22 +1,21 @@
 ---
 locale: fr-CA
 keywords:
-  [
-    'web',
-    'renoirb',
-    'au',
-    'techniques',
-    'niveau',
-    'qualit',
-    'site',
-    'confrence',
-    'prsentation',
-    'comment',
-    'valuer',
-  ]
+  - web
+  - renoirb
+  - au
+  - techniques
+  - niveau
+  - qualit
+  - site
+  - confrence
+  - prsentation
+  - comment
+  - valuer
 canonical: 'https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/'
 title: 'Conférence: Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité'
-categories: ['Portfolio']
+categories:
+  - Portfolio
 date: '2013-02-21T22:21:10-04:00'
 # tags: ['Favourites', 'good-practices', 'Integration', 'Slides', 'Talk']
 ---

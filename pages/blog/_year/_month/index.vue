@@ -4,7 +4,9 @@
     <h2>{{ year }}/{{ month }}</h2>
     <ul>
       <li v-for="article in articles" :key="article.slug">
-        <nuxt-link :to="article.path">{{ article.title }}</nuxt-link>
+        <nuxt-link :to="article.path">
+          {{ article.title }}
+        </nuxt-link>
       </li>
     </ul>
   </div>
@@ -12,17 +14,26 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  export default Vue.extend({
+  import { INuxtContentResult } from '~/lib'
+  export interface Data {
+    documents: INuxtContentResult[]
+    year: string
+    month: string
+  }
+  export interface Methods {}
+  export interface Computed {}
+  export interface Props {}
+  export default Vue.extend<Data, Methods, Computed, Props>({
     watchQuery: true,
     async asyncData({ $content, params }) {
       const { year, month } = params
 
-      const articles = await $content('blog', year, month, { deep: true })
+      const documents = (await $content('blog', year, month, { deep: true })
         .sortBy('date', 'desc')
-        .fetch()
+        .fetch()) as INuxtContentResult[]
 
       return {
-        articles,
+        documents,
         year,
         month,
       }

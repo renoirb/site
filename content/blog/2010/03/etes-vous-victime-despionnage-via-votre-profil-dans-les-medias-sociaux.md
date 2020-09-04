@@ -8,9 +8,12 @@ keywords:
   - publicité ciblée
 canonical: 'https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux/'
 title: Êtes-vous victime d’espionnage via votre profil dans les médias sociaux
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 date: '2010-03-22T06:11:35-04:00'
-# tags: ['fraude', 'vie-privée']
+tags:
+  - fraude
+  - vie-privée
 ---
 
 [![Crédit: Spy Vs. Spy (c) Antonio Prohías](spy_vs_spy.jpg)][1]

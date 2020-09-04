@@ -6,10 +6,12 @@ keywords:
   - linux
   - hardy heron
   - montral
+  - event
 canonical: 'https://renoirboulanger.com/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice/'
 title: Jeudi 24 avril 2008 Party de lancement de Hardy Heron an Ubuntu Linux Party au Saint-Sulpice
 date: '2008-04-14T22:48:36-04:00'
-categories: ['Tranche de vie']
+categories:
+  - Tranche de vie
 tags: []
 ---
 
