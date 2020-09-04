@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
+import { PRODUCTION_BASE_PATH } from './lib/consts'
 
-const PRODUCTION_BASE_PATH = '/site'
+const isProduction = process.env.NODE_ENV === 'production'
 
 export default {
   /*
@@ -60,7 +61,7 @@ export default {
   components: true,
   router: {
     middleware: ['redirects'],
-    base: process.env.NODE_ENV === 'production' ? PRODUCTION_BASE_PATH : '/',
+    base: isProduction ? PRODUCTION_BASE_PATH : '/',
   },
   /*
    ** Nuxt.js dev-modules
@@ -137,37 +138,7 @@ export default {
     },
   },
   generate: {
-    dir: 'docs',
-    // async routes() {
-    //   // https://github.com/nuxt/content/issues/129#issuecomment-643614564
-    //   const { $content } = require('@nuxt/content')
-    //   const files = await $content('', { deep: true })
-    //     .only(['slug', 'dir'])
-    //     .fetch()
-    //   const routes = files.map(
-    //     (file) =>
-    //       '/' +
-    //       (file.dir.includes('blog')
-    //         ? 'blog'
-    //         : file.dir.includes('projects')
-    //         ? 'projects'
-    //         : '') + '/' +
-    //         (file.slug === '/index' ? '' : file.slug),
-    //   )
-
-    //   // @ts-ignore
-    //   const isStatic = process.static ? process.static : 'NOPE'
-    //   // @ts-ignore
-    //   console.log('HONK-1: nuxt.config generate.routes', { routes, 'process.static': isStatic }, `\n\n\n`)
-
-    //   return routes
-    // },
+    dir: 'dist',
   },
-  // typescript: {
-  //   typeCheck: {
-  //     eslint: {
-  //       files: './**/*.{ts,js,vue}',
-  //     },
-  //   },
-  // },
+  typescript: {},
 }

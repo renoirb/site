@@ -10,6 +10,12 @@ const main = {
         vueIndentScriptAndStyle: true,
       },
     },
+    {
+      files: '*.md',
+      options: {
+        proseWrap: 'always',
+      },
+    },
   ],
 }
 

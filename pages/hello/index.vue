@@ -19,7 +19,7 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     layout: 'blank',
     async asyncData({ $content }) {
-      let document = await $content('hello').fetch()
+      const document = await $content('hello').fetch()
       return {
         document,
       }
@@ -27,6 +27,6 @@
   })
 </script>
 
-<style lang="scss" scoped>
-  @import './style.scss';
+<style lang="css" scoped>
+  @import './style.css';
 </style>

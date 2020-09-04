@@ -20,10 +20,15 @@
     "email": "contribs@renoirboulanger.com",
     "url": "https://renoirb.com"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "nuxt-ts generate",
+    "build": "use-cross-env use-run-all clean build:*",
+    "build:generate": "nuxt-ts generate",
+    "clean": "use-cross-env use-rimraf .nuxt dist",
     "commit": "npx git-cz",
-    "deploy": "push-dir --dir=docs --branch=gh-pages --local-branch-name=2020 --cleanup",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --local-branch-name=2020 --cleanup",
     "dev": "nuxt-ts",
     "fix": "use-run-all fix:*",
     "fix:prettier": "use-cross-env prettier --ignore-path .prettierignore --ignore-unknown --write '**/*.{vue,scss,js,ts,json,md}'",
@@ -36,6 +41,11 @@
     "test": "use-cross-env jest --detectOpenHandles",
     "test:snapshots": "use-cross-env jest --detectOpenHandles -u"
   },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.10.0",
     "@commitlint/cli": "^9.1.1",
@@ -43,8 +53,8 @@
     "@commitlint/prompt-cli": "^9.1.1",
     "@nuxt/content": "^1.5.0",
     "@nuxt/types": "^2.14.0",
-    "@nuxt/typescript-build": "^2.0.2",
-    "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/composition-api": "^0.12.3",
     "@nuxtjs/eslint-config": "^3.1.0",
@@ -70,6 +80,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "git-cz": "^4.7.1",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "jsonresume-from-yaml": "^1.0.0-alpha",
@@ -83,7 +94,7 @@
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.1.3",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.5",
+    "typescript": "^4.0.0",
     "vue": "^2.6.0",
     "vue-jest": "^3.0.4"
   }

@@ -15,8 +15,12 @@
 
 <script lang="ts">
   import Vue from 'vue'
-
-  const OLDER_THAN_YEAR: number = 2017
+  import {
+    FALLBACK_LANG_CODE,
+    FALLBACK_LOCALE,
+    YEAR_CONSIDERED_OLD,
+    FALLBACK_TODAY_DATE,
+  } from '~/lib'
 
   export interface Data {}
   export interface Methods {}
@@ -60,11 +64,11 @@
     props: {
       locale: {
         type: String,
-        default: 'fr-CA',
+        default: FALLBACK_LOCALE,
       },
       date: {
         type: String,
-        default: '2005-09-16T20:23:22-04:00',
+        default: FALLBACK_TODAY_DATE,
       },
     },
     computed: {
@@ -80,7 +84,7 @@
         const locale = this.locale
         let candidate = String(locale).split('-')[0]
         if (['fr', 'en'].includes(candidate) === false) {
-          candidate = 'fr'
+          candidate = FALLBACK_LANG_CODE
         }
         return candidate
       },
@@ -90,7 +94,7 @@
         const maybeTextContent =
           typeof lc === 'string' && titles.has(lc)
             ? titles.get(lc)
-            : titles.get('fr')
+            : titles.get(FALLBACK_LANG_CODE)
         if (typeof maybeTextContent === 'string') {
           textContent = maybeTextContent
         }
@@ -102,7 +106,7 @@
         const maybeTextContent =
           typeof lc === 'string' && messages.has(lc)
             ? messages.get(lc)
-            : messages.get('fr')
+            : messages.get(FALLBACK_LANG_CODE)
         if (typeof maybeTextContent === 'string') {
           const yyyy = String(this.year)
           textContent = maybeTextContent
@@ -111,7 +115,7 @@
         return textContent
       },
       isOldEnough(): boolean {
-        return OLDER_THAN_YEAR < this.year
+        return YEAR_CONSIDERED_OLD < this.year
       },
     },
   })
