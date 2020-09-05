@@ -1,6 +1,11 @@
 <template>
-  <section id="is" class="about" itemscope itemtype="http://schema.org/Person">
-    <b class="pull-left" style="display: block">
+  <section
+    id="is"
+    class="content-center w-2/3 m-20 mx-auto font-sans text-xs"
+    itemscope
+    itemtype="http://schema.org/Person"
+  >
+    <b class="w-150 float-left my-2 mr-4">
       <img width="150" alt itemprop="image" src="@/assets/images/avatar.jpg" />
     </b>
     <nuxt-content :document="document" />
@@ -27,6 +32,12 @@
   })
 </script>
 
-<style lang="css" scoped>
-  @import './style.css';
+<style scoped>
+  [itemprop='image'] {
+    border-radius: 100%;
+    background-clip: padding-box;
+    border-color: #fff;
+    border-style: solid;
+    padding: 3px;
+  }
 </style>

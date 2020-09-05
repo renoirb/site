@@ -63,10 +63,11 @@ export const isVueRouterLocation = (
   const hasPath = typeof path === 'string'
   let out: boolean = hasPath
   try {
-    const _ = assertOnlyHasKeysOfVueRouterLocation(input as unknown)
+    // @ts-ignore
+    assertOnlyHasKeysOfVueRouterLocation(input as unknown)
   } catch (e) {
     out = false
   }
 
-  return hasPath
+  return out
 }

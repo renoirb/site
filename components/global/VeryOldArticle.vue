@@ -1,16 +1,20 @@
 <template>
-  <el-alert
-    v-if="isOldEnough === true"
-    :title="title"
-    type="warning"
-    :closable="false"
-    :show-icon="false"
+  <div
+    v-if="isOldEnough === true || !!$slots.default"
+    :class="styleMap.outer"
+    class="relative border rounded"
+    role="alert"
   >
-    {{ message }}
-    <div v-if="$slots.default" class="addemdum">
+    <div class="px-2 py-1 font-bold" :class="styleMap.heading">
+      {{ title }}
+    </div>
+    <div class="px-2 py-1">
+      {{ message }}
+    </div>
+    <div v-if="$slots.default" class="addemdum px-2 py-1">
       <slot />
     </div>
-  </el-alert>
+  </div>
 </template>
 
 <script lang="ts">
@@ -20,11 +24,14 @@
     FALLBACK_LOCALE,
     YEAR_CONSIDERED_OLD,
     FALLBACK_TODAY_DATE,
+    styleMapAlert,
+    IStyleMapAlert,
   } from '~/lib'
 
   export interface Data {}
   export interface Methods {}
   export interface Computed {
+    styleMap: IStyleMapAlert
     langCode: string
     title: string
     message: string
@@ -72,6 +79,10 @@
       },
     },
     computed: {
+      styleMap(): IStyleMapAlert {
+        const map = styleMapAlert('warn')
+        return map
+      },
       year(): number {
         let out: number = new Date().getFullYear()
         if (/\d{0,4}/.test(this.date || '')) {

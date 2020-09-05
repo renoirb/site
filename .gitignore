@@ -50,12 +50,6 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# nuxt.js build output
-.nuxt
-
-# Nuxt generate
-dist
-
 # Serverless directories
 .serverless
 
@@ -67,3 +61,12 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Build output
+dist
+
+# Nuxt specific
+.nuxt
+.nuxt-storybook
+storybook-static
+

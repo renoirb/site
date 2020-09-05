@@ -1,46 +1,37 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text> Hello world </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <div>
+    <h1>Renoir Boulanger’s upcoming site <small>Work in progress</small></h1>
+    <ul>
+      <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+      <li><nuxt-link to="/hello">Hello</nuxt-link></li>
+    </ul>
+  </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
+  import { defineComponent } from '@nuxtjs/composition-api'
   export interface Data {
     baseUrl: string
   }
-  export interface Methods {}
-  export interface Computed {}
   export interface Props {}
-  export default Vue.extend<Data, Methods, Computed, Props>({
+  export default defineComponent<Props, Data>({
+    layout: 'blank',
     asyncData(ctx) {
       const baseUrl = ctx.base
+      if (ctx.isDev) {
+        return ctx.redirect(307, '/hello')
+      }
       return {
         baseUrl,
       }
     },
-    head() {
-      const to = this.baseUrl.replace(/\/$/, '') + '/hello'
-      return {
-        meta: [
-          { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=${to}` },
-        ],
-      }
-    },
+    // head() {
+    //   const to = this.baseUrl.replace(/\/$/, '') + '/hello'
+    //   return {
+    //     meta: [
+    //       { hid: 'http-equiv', name: 'http-equiv', content: `0; URL=${to}` },
+    //     ],
+    //   }
+    // },
   })
 </script>

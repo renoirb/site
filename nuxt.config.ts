@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+import NuxtTailwindModule from '@nuxtjs/tailwindcss'
 import { PRODUCTION_BASE_PATH } from './lib/consts'
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -71,7 +71,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/composition-api',
-    '@nuxtjs/vuetify',
+    NuxtTailwindModule,
   ],
   /*
    ** Nuxt.js modules
@@ -98,34 +98,39 @@ export default {
    */
   content: {},
   /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
+   ** TailWind CSS
+   ** https://tailwindcss.nuxtjs.org/setup/
    */
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken4,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-        light: {
-          primary: colors.blue.lighten3,
-          accent: colors.grey.lighten3,
-          secondary: colors.amber.lighten3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
+  tailwindcss: {
+    cssPath: '~/assets/styles/tailwind.css',
+    configPath: 'tailwind.config.ts',
+    exposeConfig: true,
+    config: {
+      purge: {
+        // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
+        enabled: isProduction,
+        content: [
+          'components/**/*.vue',
+          'layouts/**/*.vue',
+          'pages/**/*.vue',
+          'plugins/**/*.ts',
+          'nuxt.config.ts',
+        ],
       },
     },
+  },
+  /*
+   ** Storybook Nuxt
+   ** https://storybook.nuxtjs.org/setup
+   */
+  storybook: {
+    // https://storybook.nuxtjs.org/options#addons
+    addons: [
+      '@storybook/addon-knobs/register',
+      '@storybook/addon-viewport/register',
+      '@storybook/addon-storysource/register',
+      '@storybook/addon-notes/register',
+    ],
   },
   /*
    ** Build configuration
@@ -133,9 +138,6 @@ export default {
    */
   build: {
     extractCSS: true,
-    analyze: {
-      analyzerMode: 'static',
-    },
   },
   generate: {
     dir: 'dist',
