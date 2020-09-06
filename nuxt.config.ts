@@ -1,4 +1,4 @@
-import NuxtTailwindModule from '@nuxtjs/tailwindcss'
+import { join } from 'path'
 import { PRODUCTION_BASE_PATH } from './lib/consts'
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -71,7 +71,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/composition-api',
-    NuxtTailwindModule,
+    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -105,32 +105,6 @@ export default {
     cssPath: '~/assets/styles/tailwind.css',
     configPath: 'tailwind.config.ts',
     exposeConfig: true,
-    config: {
-      purge: {
-        // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-        enabled: isProduction,
-        content: [
-          'components/**/*.vue',
-          'layouts/**/*.vue',
-          'pages/**/*.vue',
-          'plugins/**/*.ts',
-          'nuxt.config.ts',
-        ],
-      },
-    },
-  },
-  /*
-   ** Storybook Nuxt
-   ** https://storybook.nuxtjs.org/setup
-   */
-  storybook: {
-    // https://storybook.nuxtjs.org/options#addons
-    addons: [
-      '@storybook/addon-knobs/register',
-      '@storybook/addon-viewport/register',
-      '@storybook/addon-storysource/register',
-      '@storybook/addon-notes/register',
-    ],
   },
   /*
    ** Build configuration
@@ -138,6 +112,28 @@ export default {
    */
   build: {
     extractCSS: true,
+    /*
+     ** PostCSS setup
+     */
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Disable a plugin by passing false as value
+      plugins: {
+        cssnano: {
+          preset: 'default',
+          discardComments: { removeAll: true },
+          zIndex: false,
+        },
+        tailwindcss: join(__dirname, './tailwind.config.ts'),
+      },
+      // Change the postcss-preset-env settings
+      preset: {
+        autoprefixer: {
+          cascade: false,
+          grid: true,
+        },
+      },
+    },
   },
   generate: {
     dir: 'dist',

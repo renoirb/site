@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="isOldEnough === true || !!$slots.default"
+    v-if="isOldEnough === true"
     :class="styleMap.outer"
     class="relative border rounded"
     role="alert"
@@ -22,10 +22,10 @@
   import {
     FALLBACK_LANG_CODE,
     FALLBACK_LOCALE,
-    YEAR_CONSIDERED_OLD,
     FALLBACK_TODAY_DATE,
-    styleMapAlert,
     IStyleMapAlert,
+    styleMapAlert,
+    YEAR_CONSIDERED_OLD,
   } from '~/lib'
 
   export interface Data {}
