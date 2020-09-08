@@ -1,6 +1,5 @@
 <template>
-  <div class="pages-blog-tag--index">
-    <nuxt-link to="/blog">Blog</nuxt-link>
+  <div class="pages__blog__tag--index">
     <ul>
       <li v-for="tag in tags" :key="tag">
         <nuxt-link :to="`/blog/tag/${tag}`">

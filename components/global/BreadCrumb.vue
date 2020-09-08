@@ -44,7 +44,7 @@
                 'nuxt-link',
                 {
                   props: {
-                    to: p.crumb,
+                    to: { path: p.crumb },
                   },
                 },
                 p.param,
@@ -78,7 +78,7 @@
     display: inline-block;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    color: #6c757d;
     content: '/';
+    @apply text-purple-500;
   }
 </style>

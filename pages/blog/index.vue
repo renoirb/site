@@ -1,10 +1,14 @@
 <template>
   <div class="pages-blog--index">
-    <nuxt-link to="/">Home</nuxt-link>
-    <input id="search" v-model="q" placeholder="Search..." />
     <ul>
-      <li v-for="document in documents" :key="document.slug">
-        <nuxt-link :to="document.path">{{ document.title }}</nuxt-link>
+      <li
+        v-for="document in documents"
+        :key="document.slug"
+        :lang="document.locale ? document.locale : 'en-CA'"
+      >
+        <nuxt-link :to="document.path">
+          {{ document.title }}
+        </nuxt-link>
       </li>
     </ul>
   </div>
@@ -23,11 +27,10 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     watchQuery: true,
     async asyncData({ $content, route }) {
-      const q = route.query.q
+      const q = route.query.q || ''
       let query = $content('blog', { deep: true }).sortBy('date', 'desc')
       if (q) {
         query = query.search(q)
-        // OR query = query.search('title', q)
       }
       const documents = (await query.fetch()) as INuxtContentResult[]
       return {

@@ -31,6 +31,35 @@ export interface IRoutePartial {
   path: RouteRecord['path']
 }
 
+/**
+ * Extract from Vue-Router collection of
+ * parts of URL for a bread-crumb.
+ *
+ * Partially inspired by a question on StackOverflow, but
+ * found after having written this.
+ *
+ * Notice that in order for this to work, it expects
+ * all files to exist.
+ *
+ * e.g. for path "/blog/:year/:month/:slug"
+ *
+ * There has to be the following files:
+ * - pages/blog.vue
+ * - pages/blog/index.vue
+ * - pages/blog/_year.vue
+ * - pages/blog/_year/index.vue
+ * - pages/blog/_year/_month.vue
+ * - pages/blog/_year/_month/index.vue
+ * - pages/blog/_year/_month/_slug.vue
+ * - pages/blog/_year/_month/_slug/index.vue
+ *
+ * Which may feel cumbersome, but doesn't need to be a full page
+ * component. Besides, it's useful for inserting parts of pages
+ * that are common per where you are on the app.
+ *
+ * Bookmarks:
+ * - https://stackoverflow.com/a/57689774
+ */
 export const pickMatchedToRoutePartialCollection = (
   route: Route,
 ): IRoutePartial[] => {
@@ -38,9 +67,10 @@ export const pickMatchedToRoutePartialCollection = (
     params = {} as Route['params'],
     matched = [] as Route['matched'],
   } = route
+
   const mapper = (r: RouteRecord, index: number): IRoutePartial => {
     const { name, path } = r
-    const parts = path.split('/').filter((p) => p !== '')
+    const parts = path.split('/')
     let part = parts.slice().pop()
     if (part.startsWith(':')) {
       part = (part || '').replace(/^:/, '')
@@ -48,20 +78,20 @@ export const pickMatchedToRoutePartialCollection = (
       part = parts[index]
     }
     const urlParts = parts.slice().map((p) => {
-      const paramName = p.replace(/^:/, '')
-      const value = params[paramName]
-      return !value ? paramName : value
+      let value = p
+      if (p.startsWith(':')) {
+        const paramName = p.replace(/^:/, '')
+        value = params[paramName]
+      }
+      return value
     })
 
-    const nameRewritten = parts
-      .slice()
-      .map((p) => {
-        return p.replace(/^:/, '')
-      })
-      .join('-')
+    const nameRewritten = parts.slice().map((p) => {
+      return p.replace(/^:/, '')
+    })
 
-    const crumb = ['', ...urlParts].join('/')
-    const nameValue = name || nameRewritten
+    const crumb = urlParts.join('/')
+    const nameValue = name || nameRewritten[nameRewritten.length - 1]
     const paramValue = params[part] ? params[part] : nameValue
     const out: IRoutePartial = {
       crumb,
@@ -73,5 +103,6 @@ export const pickMatchedToRoutePartialCollection = (
     return out
   }
   const collection = matched.map(mapper)
+  collection.pop()
   return collection
 }

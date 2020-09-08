@@ -1,10 +1,14 @@
 <template>
-  <div class="pages-blog-tag--index">
-    <nuxt-link to="/blog">Blog</nuxt-link>
-    <nuxt-link to="/blog/tag">tag</nuxt-link>
-    <h2>{{ tag }}</h2>
+  <div class="pages__blog__tag--item">
+    <h2>
+      Under tag <em>{{ tag }}</em>
+    </h2>
     <ul>
-      <li v-for="document in documents" :key="document.slug">
+      <li
+        v-for="document in documents"
+        :key="document.slug"
+        :lang="document.locale ? document.locale : 'en-CA'"
+      >
         <nuxt-link :to="formatTo(document)">
           {{ document.title }}
         </nuxt-link>

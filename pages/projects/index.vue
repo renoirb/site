@@ -1,5 +1,5 @@
 <template>
-  <div class="pages-blog--index">
+  <div class="pages__blog--index">
     <nuxt-link to="/">Home</nuxt-link>
     <input id="search" v-model="q" placeholder="Search..." />
     <ul>

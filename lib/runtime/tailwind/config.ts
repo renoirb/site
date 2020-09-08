@@ -1,6 +1,5 @@
 /**
- * Bookmarks:
- * - https://tailwindcss.nuxtjs.org/setup/
+ * Color palettes tools:
  * - https://tailwind-colors.meidev.co/
  * - https://coolors.co/0d0a0b-2e3338-f3eff5-a77e58-ba3f1d
  * - https://colors.lol/compulsive
@@ -38,17 +37,15 @@ export interface ITailwindThemeConfig {
   variants?: Record<string, string[]>
 }
 
-export const tailwindTheme: ITailwindThemeRoot = {
-  backgroundColor: '#F4F7F3',
-  extend: {
-    colors: {
-      charlie: '#BB3F3F',
-      bravo: '#CB7723',
-      alpha: '#214761',
-      backdrop: {
-        100: '#F4F7F3',
-        200: '#E5E5E5',
-      },
+export const tailwindThemeExtend: ITailwindThemeExtend = {
+  colors: {
+    charlie: '#BB3F3F',
+    bravo: '#CB7723',
+    alpha: '#214761',
+    body: '#ececec',
+    backdrop: {
+      100: '#F4F7F3',
+      200: '#E5E5E5',
     },
   },
 }

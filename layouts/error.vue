@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <div>
     <h1
       v-if="error.statusCode === 404"
       :data-error="JSON.stringify(error || {})"
@@ -11,7 +11,7 @@
       {{ otherError }}
     </h1>
     <NuxtLink to="/"> Home page </NuxtLink>
-  </v-app>
+  </div>
 </template>
 
 <script lang="ts">

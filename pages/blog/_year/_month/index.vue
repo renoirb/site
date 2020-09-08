@@ -1,11 +1,14 @@
 <template>
-  <div class="pages-blog-year-month--index">
-    <nuxt-link to="/blog">Blog</nuxt-link>
+  <div class="pages__blog__year__month--index">
     <h2>{{ year }}/{{ month }}</h2>
     <ul>
-      <li v-for="article in articles" :key="article.slug">
-        <nuxt-link :to="article.path">
-          {{ article.title }}
+      <li
+        v-for="document in documents"
+        :key="document.slug"
+        :lang="document.locale ? document.locale : 'en-CA'"
+      >
+        <nuxt-link :to="document.path">
+          {{ document.title }}
         </nuxt-link>
       </li>
     </ul>
@@ -24,7 +27,6 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    watchQuery: true,
     async asyncData({ $content, params }) {
       const { year, month } = params
 

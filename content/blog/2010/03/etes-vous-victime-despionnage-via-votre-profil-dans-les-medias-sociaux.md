@@ -16,7 +16,7 @@ tags:
   - vie-privée
 ---
 
-[![Crédit: Spy Vs. Spy (c) Antonio Prohías](spy_vs_spy.jpg)][1]
+<AppImage src="/blog/2010/03/spy_vs_spy.jpg" alt="Crédit: Spy Vs. Spy (c) Antonio Prohías"></AppImage>
 
 J'ai reçu hier une invitation d'amitié sur Facebook. Un prénom féminin que je ne
 me rappelle pas avoir connu. Pas de photos, ou presque. Au début je me suis dit
@@ -80,24 +80,24 @@ Voici quelques unes de mes pistes...
 #### En général
 
 1. **Écrit dans une langue douteuse avec des «m0t5 su bs7iu é5» (mots
-   substitués)**  
-   Quoi qu'aujourd'hui c'est beaucoup moins fréquent.
+   substitués)** Quoi qu'aujourd'hui c'est beaucoup moins fréquent.
 2. **Vous correspondez uniquement en français et la communication est clairement
-   remplie de fautes ou dans une autre langue.**  
-   Celle là elle est facile!
+   remplie de fautes ou dans une autre langue.** Celle là elle est facile!
 3. **Un courriel ou une communication qui vous invite a communiquer «plus
-   facilement» sur un autre site qui est inconnu. **  
-   Celui la je pourrai en parler longtemps. Surtout que le plus facile c'est le
-   téléphone ou le courriel. Si une personne vous rejoint par courriel...
-   pourquoi retourner sur un site communiquer?
+   facilement» sur un autre site qui est inconnu. ** Celui la je pourrai en
+   parler longtemps. Surtout que le plus facile c'est le téléphone ou le
+   courriel. Si une personne vous rejoint par courriel... pourquoi retourner sur
+   un site communiquer?
 4. **Le courriel ressemble réellement a une invitation d'un site que vous
-   utilisez** (Phishing)  
-   Il arrive parfois de recevoir des invitations a se connecter au compte en
-   banque d'une banque X connue mais que je sais pertinemment que je n'ai aucun
-   avoirs.
-   ![Dialogue Facebook, Accès au Parametres de confidentialité](277c345c4600aa60f996428df1f1a5e115ad6e4a.png)Dialogue
-   Facebook, Accès au Parametres de confidentialité
-   ![Dialogue Facebook, bouton Amis uniquement](7a5256d19243bdfd2afdd77ced006ec88d4e9382.png)
+   utilisez** (Phishing) Il arrive parfois de recevoir des invitations a se
+   connecter au compte en banque d'une banque X connue mais que je sais
+   pertinemment que je n'ai aucun avoirs.
+
+   <AppImage src="/blog/2010/03/277c345c4600aa60f996428df1f1a5e115ad6e4a.png" alt="Dialogue Facebook, Accès au Parametres de confidentialité"></AppImage>
+
+   Dialogue Facebook, Accès au Parametres de confidentialité
+
+   <AppImage src="/blog/2010/03/7a5256d19243bdfd2afdd77ced006ec88d4e9382.png" alt="Dialogue Facebook, bouton Amis uniquement"></AppImage>
    Dialogue Facebook, bouton Amis uniquement
 
 Je crois avoir fait le tour de mes indices.

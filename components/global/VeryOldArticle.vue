@@ -44,14 +44,14 @@
   }
 
   const titles = new Map<string, string>()
-  titles.set('fr', 'Attention: Vieil article')
-  titles.set('en', 'Warning: Old article')
+  titles.set('fr', 'Attention: Vieux contenu')
+  titles.set('en', 'Warning: Old content')
 
   const messages = new Map<string, string>()
   messages.set(
     'fr',
     `
-      Cet article date de YEAR.
+      Ceci date de YEAR.
       Comparé a aujourd’hui et les langages web modernes et typés depuis TypeScript et PHP 7,
       tout est différent.
       Il est possible qu'il y ait une meilleure méthode ailleurs.
@@ -60,7 +60,7 @@
   messages.set(
     'en',
     `
-      This article is dating from YEAR.
+      This is dating from YEAR.
       This was a very different time from nowadays with strictly typed PHP 7 and TypeScript.
       I recommend you do not take this as advice too seriously, there might be a better way elsewhere.
     `,
@@ -126,7 +126,7 @@
         return textContent
       },
       isOldEnough(): boolean {
-        return YEAR_CONSIDERED_OLD < this.year
+        return YEAR_CONSIDERED_OLD > this.year
       },
     },
   })

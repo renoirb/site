@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="pages__about--parent">
     <nuxt-content :document="document" />
   </section>
 </template>

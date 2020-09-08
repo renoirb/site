@@ -2,6 +2,7 @@ import { join } from 'path'
 import { PRODUCTION_BASE_PATH } from './lib/consts'
 
 const isProduction = process.env.NODE_ENV === 'production'
+const isCi = 'IS_CI' in process.env && typeof process.env.IS_CI === 'string'
 
 export default {
   /*
@@ -48,7 +49,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/styles/tailwind.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -61,7 +62,7 @@ export default {
   components: true,
   router: {
     middleware: ['redirects'],
-    base: isProduction ? PRODUCTION_BASE_PATH : '/',
+    base: isProduction && isCi ? PRODUCTION_BASE_PATH : '/',
   },
   /*
    ** Nuxt.js dev-modules
@@ -84,6 +85,8 @@ export default {
     // Doc: https://content.nuxtjs.org/integrations#nuxtjsfeed
     // '@nuxtjs/feed',
     // '@nuxtjs/pwa',
+    'nuxt-purgecss',
+    'nuxt-webfontloader',
   ],
   /*
    ** Axios module configuration
@@ -102,9 +105,19 @@ export default {
    ** https://tailwindcss.nuxtjs.org/setup/
    */
   tailwindcss: {
-    cssPath: '~/assets/styles/tailwind.css',
-    configPath: 'tailwind.config.ts',
+    cssPath: '~/assets/styles/tailwind.scss',
+    configPath: '~/tailwind.config.ts',
+    // add '~tailwind.config` alias
     exposeConfig: true,
+  },
+  webfontloader: {
+    google: {
+      families: ['Satisfy:400,500,700'],
+    },
+  },
+  purgeCSS: {
+    mode: 'postcss',
+    enabled: isProduction,
   },
   /*
    ** Build configuration
@@ -119,18 +132,34 @@ export default {
       // Add plugin names as key and arguments as value
       // Disable a plugin by passing false as value
       plugins: {
+        'postcss-import': {},
+        tailwindcss: join(__dirname, './tailwind.config.ts'),
+        'postcss-nested': {},
         cssnano: {
           preset: 'default',
           discardComments: { removeAll: true },
           zIndex: false,
         },
-        tailwindcss: join(__dirname, './tailwind.config.ts'),
       },
       // Change the postcss-preset-env settings
       preset: {
+        // stage 1: https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
+        stage: 1,
         autoprefixer: {
           cascade: false,
           grid: true,
+        },
+      },
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          tailwindConfig: {
+            test: /tailwind\.config/,
+            chunks: 'all',
+            priority: 10,
+            name: true,
+          },
         },
       },
     },

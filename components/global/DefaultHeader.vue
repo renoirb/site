@@ -1,58 +1,27 @@
 <template>
-  <v-navigation-drawer
-    v-model="drawer"
-    :mini-variant="miniVariant"
-    :clipped="clipped"
-    fixed
-    app
-  >
-    <v-list v-if="(items || []).length > 0">
-      <v-list-item
-        v-for="(item, i) in items"
-        :key="i"
-        :to="item.to"
-        router
-        exact
-      >
-        <v-list-item-action>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title v-text="item.title" />
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
-    <v-list v-else dense>
-      <v-list-item> Nothing </v-list-item>
-    </v-list>
-  </v-navigation-drawer>
+  <nav class="border-b">
+    <div class="container px-4 mx-auto">
+      <div class="md:justify-between flex items-center py-4">
+        <div class="md:hidden w-1/4" title="collapse">
+          <svg
+            class="w-8 h-8 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M16.4 9H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zm0 4H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1zM3.6 7h12.8c.552 0 .6-.447.6-1 0-.553-.048-1-.6-1H3.6c-.552 0-.6.447-.6 1 0 .553.048 1 .6 1z"
+            />
+          </svg>
+        </div>
+        <div class="md:w-auto w-1/2 font-medium text-center">
+          <nuxt-link to="/">Renoir Boulanger</nuxt-link>
+        </div>
+        <div class="md:w-auto md:flex w-1/4 text-right">
+          <div class="md:block md:flex md:items-center hidden ml-2">
+            <nuxt-link to="/blog">Blog</nuxt-link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 </template>
-
-<script lang="ts">
-  import Vue from 'vue'
-  export default Vue.extend({
-    props: {
-      items: {
-        type: Array,
-        required: false,
-        default: () => [],
-      },
-      fixed: {
-        type: Boolean,
-        default: false,
-      },
-      clipped: {
-        type: Boolean,
-        default: false,
-      },
-      miniVariant: {
-        type: Boolean,
-        default: false,
-      },
-      drawer: {
-        type: Boolean,
-        default: false,
-      },
-    },
-  })
-</script>

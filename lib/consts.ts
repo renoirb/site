@@ -14,9 +14,9 @@ export const RE_BASE_URL = /^https?:\/\/[a-z0-9\-_.]+(?::\d+)?$/i
  */
 export const PUBLIC_BASE_URL = 'https://renoirb.com'
 
-export const FALLBACK_LANG_CODE = 'en'
-
 export const FALLBACK_LOCALE = 'en-CA'
+
+export const FALLBACK_LANG_CODE = FALLBACK_LOCALE.split('-')[0]
 
 export const FALLBACK_TODAY_DATE = new Date().toISOString()
 

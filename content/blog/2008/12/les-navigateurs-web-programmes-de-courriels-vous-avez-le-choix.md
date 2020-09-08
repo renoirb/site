@@ -11,13 +11,14 @@ canonical: 'https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-program
 title: Les navigateurs web, programmes de courriels, vous avez le choix!!
 categories:
   - Tranche de vie
-tags: []
+tags:
+  - vulgarization
 date: '2008-12-05T12:06:01-04:00'
 ---
 
-En fait, il y en a plus d'un. À mes yeux, n'importe lequel est mieux qu'Internet
-Explorer 6\. Mais si tu n'as pas le choix, essaie d'avoir la version la plus
-récente!
+En fait, il y en a plus d'un. À mes yeux, n'importe lequel est mieux qu’Internet
+Explorer 6 ("_IE 6_"). Mais si tu n'as pas le choix, essaie d'avoir la version
+la plus récente!
 
 Si vous êtes curieux de l'histoire du web et [des navigateurs][0]. Vous pouvez
 même essayer [d'anciennes versions conservées dans un site d'archives][1].

@@ -1,9 +1,14 @@
 <template>
-  <div class="pages-blog-year--index">
-    <nuxt-link to="/blog">Blog</nuxt-link>
-    <h2>{{ year }}</h2>
+  <div class="pages__blog__year--index">
+    <h2>
+      Published in <em>{{ year }}</em>
+    </h2>
     <ul>
-      <li v-for="document in documents" :key="document.slug">
+      <li
+        v-for="document in documents"
+        :key="document.slug"
+        :lang="document.locale ? document.locale : 'en-CA'"
+      >
         <nuxt-link :to="document.path">
           {{ document.title }}
         </nuxt-link>

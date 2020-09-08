@@ -1,3 +1,3 @@
 <template>
-  <nuxt class="naked" />
+  <nuxt />
 </template>

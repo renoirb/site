@@ -1,3 +1,3 @@
 <template>
-  <nuxt-child class="pages-projects--parent" />
+  <nuxt-child class="pages__projects--parent" />
 </template>

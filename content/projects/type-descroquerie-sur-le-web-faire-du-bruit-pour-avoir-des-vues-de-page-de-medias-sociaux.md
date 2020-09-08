@@ -1,5 +1,4 @@
 ---
-keywords: ['site', 'video']
 canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/type-descroquerie-sur-le-web-faire-du-bruit-pour-avoir-des-vues-de-page-de-medias-sociaux/'
 title:
   'Type d’escroquerie sur le web: Faire du bruit pour avoir des vues de page de
