@@ -1,19 +1,25 @@
 <template>
-  <img v-if="imgSrc !== ''" :src="imgSrc" :alt="alt" />
-  <img v-else :src="fallbackSrc" alt="" />
+  <img v-if="!hasErrored" :src="srcAttr()" :alt="altAttr" class="app-image" />
+  <img
+    v-else
+    :src="fallbackSrc"
+    :alt="altAttr"
+    class="app-image app-image-error"
+  />
 </template>
 
 <script lang="ts">
-  /**
-   * Thank you: https://github.com/nuxt/content/issues/106#issuecomment-663873586
-   */
   import Vue from 'vue'
   export interface Data {
+    altAttr: string
     fallbackSrc: string
+    errored: boolean
   }
-  export interface Methods {}
+  export interface Methods {
+    srcAttr(): Promise<string>
+  }
   export interface Computed {
-    imgSrc: string
+    hasErrored: boolean
   }
   export interface Props {
     src: string
@@ -40,16 +46,45 @@
     data() {
       return {
         fallbackSrc,
+        errored: false,
+        altAttr: '',
       }
     },
     computed: {
-      imgSrc(): string {
+      hasErrored(): boolean {
+        return this.src === '' || this.errored === true
+      },
+    },
+    methods: {
+      async srcAttr(): Promise<string> {
+        this.altAttr = this.alt
+        /**
+         * Using a method because of its asynchronous nature
+         * Bookmarks:
+         * - https://github.com/nuxt/content/issues/106#issuecomment-663873586
+         * - https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234
+         * - https://github.com/webpack/webpack/issues/4807
+         * - https://webpack.js.org/api/module-methods/#magic-comments
+         */
         try {
-          return require(`~/content${this.src}`)
+          // WebPack, plz
+          const resource: string = await import(`~/content/${this.src}`)
+          return resource
         } catch (error) {
+          this.errored = true
+          // eslint-disable-next-line
+          console.error('app-image error', error)
+          this.altAttr = String(error)
           return this.fallbackSrc
         }
       },
     },
   })
 </script>
+
+<style lang="scss" scoped>
+  .app-image {
+    min-height: 100px;
+    min-width: 100px;
+  }
+</style>

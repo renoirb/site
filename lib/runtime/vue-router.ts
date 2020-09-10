@@ -8,7 +8,7 @@ export const typeGuardIsRoute = (maybe: any): maybe is Route => {
   return outcome
 }
 
-export interface IRoutePartial {
+export interface IRouteCrumb {
   /**
    * The filled path from root up to this item
    * e.g. "/blog/2020/08/some-article-slug"
@@ -60,15 +60,13 @@ export interface IRoutePartial {
  * Bookmarks:
  * - https://stackoverflow.com/a/57689774
  */
-export const pickMatchedToRoutePartialCollection = (
-  route: Route,
-): IRoutePartial[] => {
+export const routeToCrumbs = (route: Route): IRouteCrumb[] => {
   const {
     params = {} as Route['params'],
     matched = [] as Route['matched'],
   } = route
 
-  const mapper = (r: RouteRecord, index: number): IRoutePartial => {
+  const mapper = (r: RouteRecord, index: number): IRouteCrumb => {
     const { name, path } = r
     const parts = path.split('/')
     let part = parts.slice().pop()
@@ -93,7 +91,7 @@ export const pickMatchedToRoutePartialCollection = (
     const crumb = urlParts.join('/')
     const nameValue = name || nameRewritten[nameRewritten.length - 1]
     const paramValue = params[part] ? params[part] : nameValue
-    const out: IRoutePartial = {
+    const out: IRouteCrumb = {
       crumb,
       index,
       name: nameValue,

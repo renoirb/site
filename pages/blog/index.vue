@@ -1,5 +1,10 @@
 <template>
   <div class="pages-blog--index">
+    <h2>
+      Search results for "
+      <tt>{{ q }}</tt>
+      "
+    </h2>
     <ul>
       <li
         v-for="document in documents"
@@ -18,31 +23,38 @@
   import Vue from 'vue'
   import { INuxtContentResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentResult
-    q: string
+    documents: INuxtContentResult[]
   }
   export interface Methods {}
   export interface Computed {}
-  export interface Props {}
+  export interface Props {
+    q: string
+  }
   export default Vue.extend<Data, Methods, Computed, Props>({
-    watchQuery: true,
-    async asyncData({ $content, route }) {
-      const q = route.query.q || ''
-      let query = $content('blog', { deep: true }).sortBy('date', 'desc')
-      if (q) {
-        query = query.search(q)
-      }
-      const documents = (await query.fetch()) as INuxtContentResult[]
+    props: {
+      q: {
+        type: String,
+        default: '',
+      },
+    },
+    data() {
       return {
-        q,
-        documents,
+        documents: [],
       }
     },
     watch: {
-      q() {
-        this.$router
-          .replace({ query: this.q ? { q: this.q } : undefined })
-          .catch(() => {})
+      async q(q) {
+        if (!q) {
+          this.documents = []
+          return
+        }
+        let documents: INuxtContentResult[] = []
+        documents = await this.$content('blog', { deep: true })
+          .sortBy('date', 'desc')
+          .search(q)
+          .fetch()
+
+        this.documents = documents
       },
     },
   })

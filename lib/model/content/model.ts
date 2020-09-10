@@ -9,3 +9,18 @@ export interface INuxtContentResult extends Result {
   locale: string
   date: Date | string
 }
+
+export const typeGuardNuxtContentResult = (
+  maybe: any,
+): maybe is INuxtContentResult => {
+  let outcome = false
+  const hasTitle =
+    Reflect.has(maybe, 'title') && typeof maybe.title === 'string'
+  const hasLocale =
+    Reflect.has(maybe, 'locale') && typeof maybe.locale === 'string'
+  const hasTags = Reflect.has(maybe, 'tags') && Array.isArray(maybe.tags)
+  if (maybe && hasTitle && hasLocale && hasTags) {
+    outcome = true
+  }
+  return outcome
+}

@@ -1,7 +1,7 @@
 <template>
   <section class="pages__blog--parent">
     <div class="pages-blog--parent--top">
-      <bread-crumb :route="$route" />
+      <app-bread-crumb :route="$route" />
       <form @submit.prevent="submit()">
         <label for="search">blog:</label>
         <input
@@ -14,13 +14,14 @@
       </form>
     </div>
     <div class="pages-blog--parent--bottom">
-      <nuxt-child />
+      <nuxt-child :q="q" />
     </div>
   </section>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
+  import AppBreadCrumb from '@/components/AppBreadCrumb.vue'
   export interface Data {
     q: string
   }
@@ -28,11 +29,28 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    asyncData({ route }) {
-      const q = route.query.q || ''
+    components: {
+      'app-bread-crumb': AppBreadCrumb,
+    },
+    data() {
       return {
-        q,
+        q: '',
       }
+    },
+    watch: {
+      q: {
+        immediate: true,
+        handler() {
+          const q = this.$route.query.q || ''
+          this.$router
+            .replace({ query: q !== '' ? { q } : undefined })
+            .catch(() => {})
+        },
+      },
+    },
+    beforeMount() {
+      const q = this.$route.query.q || ''
+      this.q = q
     },
     methods: {
       submit() {

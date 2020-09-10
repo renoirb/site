@@ -78,13 +78,10 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    // Doc: https://content.nuxtjs.org/integrations#nuxtjsfeed
-    // '@nuxtjs/feed',
-    // '@nuxtjs/pwa',
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios',
     'nuxt-purgecss',
     'nuxt-webfontloader',
   ],
@@ -99,7 +96,13 @@ export default {
    ** - https://content.nuxtjs.org/configuration
    ** - https://content.nuxtjs.org/configuration#defaults
    */
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-synthwave84.css',
+      },
+    },
+  },
   /*
    ** TailWind CSS
    ** https://tailwindcss.nuxtjs.org/setup/

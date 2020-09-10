@@ -2,21 +2,15 @@
   import { VNode } from 'vue'
   import { Route } from 'vue-router'
   import { defineComponent } from '@nuxtjs/composition-api'
-  import {
-    IRoutePartial,
-    pickMatchedToRoutePartialCollection,
-    typeGuardIsRoute,
-  } from '~/lib'
+  import { routeToCrumbs, typeGuardIsRoute } from '~/lib'
 
   export interface Props {
     route: Route
   }
   export interface Data {}
-  export interface Computed {
-    parts: IRoutePartial[]
-  }
+  export interface Computed {}
   export default defineComponent<Props, Data, Computed>({
-    layout: 'bread-crumb',
+    name: 'AppBreadCrumb',
     props: {
       route: {
         type: Object,
@@ -24,16 +18,11 @@
         required: true,
       },
     },
-    computed: {
-      parts(): IRoutePartial[] {
-        const parts = pickMatchedToRoutePartialCollection(this.route)
-        return parts
-      },
-    },
     render(h): VNode {
       const items: VNode[] = []
+      const crumbs = routeToCrumbs(this.route)
       items.push(
-        ...this.parts.map((p) => {
+        ...crumbs.map((p) => {
           return h(
             'li',
             {
