@@ -25,6 +25,7 @@ tags:
   - frameworks
   - php
   - symfony2
+  - with-images
 ---
 
 This post is all about what **I** think should be used to define quality in your
@@ -36,7 +37,7 @@ framework and why I am sold. I am aware that I may sound blinded with my choice,
 but this post is about explaining my own guidelines about my choice. I work with
 them since many years and that made me try many in the PHP ecosystem.
 
-![Everything goes with PHP Sauce](everything-with-php-sauce.png)
+![Everything goes with PHP Sauce](blog/2012/07/everything-with-php-sauce.png)
 
 Things can get messy with PHP, that's why we have to be very cautious on how we
 structure and consider recommendations from other good programmers.

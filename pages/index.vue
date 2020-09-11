@@ -11,6 +11,7 @@
           >Projets (permalink legacy to migrate from in french)</nuxt-link
         >
       </li>
+      <li><nuxt-link to="/styleguide">styleguide</nuxt-link></li>
     </ul>
   </div>
 </template>

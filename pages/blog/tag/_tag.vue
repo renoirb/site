@@ -1,19 +1,25 @@
 <template>
   <div class="pages__blog__tag--item">
-    <h2>
-      Under tag <em>{{ tag }}</em>
-    </h2>
-    <ul>
-      <li
-        v-for="document in documents"
-        :key="document.slug"
-        :lang="document.locale ? document.locale : 'en-CA'"
-      >
-        <nuxt-link :to="formatTo(document)">
-          {{ document.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <div class="document document--collection">
+      <div class="title page-title">
+        <h1>
+          Under tag <em>{{ tag }}</em>
+        </h1>
+      </div>
+      <div class="body">
+        <ul>
+          <li
+            v-for="document in documents"
+            :key="document.slug"
+            :lang="document.locale ? document.locale : 'en-CA'"
+          >
+            <nuxt-link :to="formatTo(document)">
+              {{ document.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 

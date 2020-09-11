@@ -9,10 +9,11 @@ categories:
   - Tranche de vie
 tags:
   - evenements
+  - with-images
 date: '2010-03-03T08:41:27-04:00'
 ---
 
-![Ignite Montréal](giw_montreal.png)
+![Ignite Montréal](blog/2010/03/giw_montreal.png)
 
 Mardi 2 Mars 2010 avait lieu la première soirée de [Ignite Montréal][0]. Il
 s'agit dune soirée ou les participants ont 5 minutes pour nous parler d'un sujet
@@ -47,8 +48,7 @@ utilisateurs comment replacer Qui, quoi, quand, comment aux bons endroits. Il a
 surpris la salle avec un simple cercle sur fond blanc en disant: «_The Nipple is
 the only intuitive user-interface_».
 
-> The Nipple is the only intuitive user-interface  
-> --- [Jonathan Karpfen][4]
+> The Nipple is the only intuitive user-interface --- [Jonathan Karpfen][4]
 
 [Max Finder][5] qui expliquait comment a son avis le modèle des université est
 pas si merveilleux que ça et ce qu'il y a appris.

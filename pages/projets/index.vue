@@ -20,7 +20,7 @@
     <p>Quelques projets personnels que j'ai publié.</p>
     <div v-for="document in documents" :key="document.slug">
       <h3 class="mb-2 text-lg">
-        <nuxt-link :to="document.to" v-if="document.to">
+        <nuxt-link v-if="document.to" :to="document.to">
           {{ document.title }}
         </nuxt-link>
         <span v-else>{{ document.title }}</span>

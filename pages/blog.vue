@@ -1,18 +1,20 @@
 <template>
   <section class="pages__blog--parent">
     <div class="pages-blog--parent--top">
-      <app-bread-crumb :route="$route" />
-      <form @submit.prevent="submit()">
+      <form @submit.prevent="submit">
         <label for="search">blog:</label>
         <input
           id="search"
           v-model="q"
+          type="search"
+          autocomplete="off"
           name="q"
           placeholder="e.g. linux"
           class="focus:outline-none focus:shadow-outline px-4 py-2 leading-normal border border-gray-300 rounded"
         />
       </form>
     </div>
+    <app-bread-crumb :route="$route" class="my-4" />
     <div class="pages-blog--parent--bottom">
       <nuxt-child :q="q" />
     </div>
@@ -42,7 +44,6 @@
         immediate: true,
         handler() {
           const q = this.$route.query.q || ''
-          console.log('pages/blog.vue watch.q.handler', q) // eslint-disable-line
           this.$router
             .replace({ query: q !== '' ? { q } : undefined })
             .catch(() => {})
@@ -51,7 +52,6 @@
     },
     beforeMount() {
       const q = this.$route.query.q || ''
-      console.log('pages/blog.vue beforeMount', q) // eslint-disable-line
       this.q = q
     },
     methods: {

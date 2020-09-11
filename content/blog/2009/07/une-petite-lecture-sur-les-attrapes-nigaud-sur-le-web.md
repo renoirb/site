@@ -4,11 +4,12 @@ canonical: 'https://renoirboulanger.com/blog/2009/07/une-petite-lecture-sur-les-
 title: Une petite lecture sur les attrapes-nigaud sur le web
 categories:
   - Tranche de vie
-tags: []
+tags:
+  - with-images
 date: '2009-07-02T22:17:40-04:00'
 ---
 
-![A DVD Rewinder](dvd_rewinder.jpg)
+![A DVD Rewinder](blog/2009/07/dvd_rewinder.jpg)
 
 Cette semaine j'ai vu deux annonces de statut dans [Mon profil Facebook][0] qui
 disaient quelque chose de similaire à ...

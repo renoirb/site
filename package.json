@@ -56,7 +56,7 @@
     "@nuxt/types": "^2.14.0",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxt/typescript-runtime": "^2.0.0",
-    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/color-mode": "^1.0.3",
     "@nuxtjs/composition-api": "^0.12.3",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
@@ -67,6 +67,7 @@
     "@renoirb/conventions-use-eslint": "^1.2.1",
     "@renoirb/conventions-use-typescript-3": "^1.2.1",
     "@renoirb/tools-bundling-helpers": "^1.2.1",
+    "@tailwindcss/typography": "^0.2.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^12.12.0",
     "@vue/test-utils": "^1.0.3",
@@ -106,6 +107,7 @@
     "tslib": "^2.0.0",
     "typescript": "^4.0.0",
     "vue": "^2.6.0",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.4",
+    "webpack": "^4.44.1"
   }
 }

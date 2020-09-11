@@ -39,9 +39,9 @@ export interface ITailwindThemeConfig {
 
 export const tailwindThemeExtend: ITailwindThemeExtend = {
   colors: {
-    charlie: '#BB3F3F',
-    bravo: '#CB7723',
-    alpha: '#214761',
+    secondary: '#BB3F3F',
+    tertiary: '#CB7723',
+    primary: '#214761' /* #5E8A8F */,
     body: '#ececec',
     backdrop: {
       100: '#F4F7F3',

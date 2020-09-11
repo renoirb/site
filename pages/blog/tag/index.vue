@@ -1,12 +1,19 @@
 <template>
   <div class="pages__blog__tag--index">
-    <ul>
-      <li v-for="tag in tags" :key="tag">
-        <nuxt-link :to="`/blog/tag/${tag}`">
-          {{ tag }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <div class="document document--collection">
+      <div class="title page-title">
+        <h1>All tags</h1>
+      </div>
+      <div class="body">
+        <ul>
+          <li v-for="tag in tags" :key="tag">
+            <nuxt-link :to="`/blog/tag/${tag}`">
+              {{ tag }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 

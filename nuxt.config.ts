@@ -49,7 +49,8 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/styles/tailwind.scss'],
+  css: ['~assets/styles/main.scss'],
+  loading: { color: '#CB7723' /* charlie */ },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -68,11 +69,13 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    '@nuxtjs/tailwindcss',
+    // Doc: https://github.com/nuxt-community/color-mode-module
+    '@nuxtjs/color-mode',
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/composition-api',
-    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -80,16 +83,9 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
     'nuxt-purgecss',
     'nuxt-webfontloader',
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
   /*
    ** Content module configuration
    ** See:
@@ -99,7 +95,7 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-synthwave84.css',
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
   },
@@ -108,14 +104,14 @@ export default {
    ** https://tailwindcss.nuxtjs.org/setup/
    */
   tailwindcss: {
-    cssPath: '~/assets/styles/tailwind.scss',
-    configPath: '~/tailwind.config.ts',
+    cssPath: '~/assets/styles/main.scss',
+    configPath: '~/tailwind.config.js',
     // add '~tailwind.config` alias
     exposeConfig: true,
   },
   webfontloader: {
     google: {
-      families: ['Satisfy:400,500,700'],
+      families: ['Roboto:400,500,700', 'Roboto Mono'],
     },
   },
   purgeCSS: {
@@ -136,7 +132,7 @@ export default {
       // Disable a plugin by passing false as value
       plugins: {
         'postcss-import': {},
-        tailwindcss: join(__dirname, './tailwind.config.ts'),
+        tailwindcss: join(__dirname, './tailwind.config.js'),
         'postcss-nested': {},
         cssnano: {
           preset: 'default',

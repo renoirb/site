@@ -13,6 +13,7 @@ categories:
   - Tranche de vie
 tags:
   - vulgarization
+  - with-images
 date: '2008-12-05T12:06:01-04:00'
 ---
 
@@ -77,7 +78,7 @@ l'interpréteur («ce qui fait fonctionner») JavaScript.
 
 J'ai seulement cette image, et je la trouve drôle:
 
-![HA HA! I'm using «the Internet»](fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg)
+![HA HA! I'm using «the Internet»](blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg)
 
 C'est, au final, une question de choix
 

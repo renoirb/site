@@ -1,21 +1,27 @@
 <template>
   <div class="pages-blog--index">
-    <h2>
-      Search results for "
-      <tt>{{ q }}</tt>
-      "
-    </h2>
-    <ul>
-      <li
-        v-for="document in documents"
-        :key="document.slug"
-        :lang="document.locale ? document.locale : 'en-CA'"
-      >
-        <nuxt-link :to="document.path">
-          {{ document.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <div class="document document--item">
+      <div class="title page-title">
+        <h1 v-if="q !== ''">
+          Search results for "
+          <tt>{{ q }}</tt>
+          "
+        </h1>
+      </div>
+      <div class="body">
+        <ul>
+          <li
+            v-for="document in documents"
+            :key="document.slug"
+            :lang="document.locale ? document.locale : 'en-CA'"
+          >
+            <nuxt-link :to="document.path">
+              {{ document.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,14 +60,11 @@
           .search(q)
           .fetch()
 
-        console.log('pages/blog/index.vue watch.q', q) // eslint-disable-line
-
         this.documents = documents
       },
     },
     async beforeMount() {
       const q = this.$route.query.q || ''
-      console.log('pages/blog/index.vue beforeMount', q) // eslint-disable-line
       let documents: INuxtContentResult[] = []
       let query = this.$content('blog', { deep: true }).sortBy('date', 'desc')
       if (q) {

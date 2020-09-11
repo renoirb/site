@@ -1,17 +1,23 @@
 <template>
   <div class="pages__blog__year__month--index">
-    <h2>{{ year }}/{{ month }}</h2>
-    <ul>
-      <li
-        v-for="document in documents"
-        :key="document.slug"
-        :lang="document.locale ? document.locale : 'en-CA'"
-      >
-        <nuxt-link :to="document.path">
-          {{ document.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <div class="document document--collection">
+      <div class="title page-title">
+        <h1>{{ year }}/{{ month }}</h1>
+      </div>
+      <div class="body">
+        <ul>
+          <li
+            v-for="document in documents"
+            :key="document.slug"
+            :lang="document.locale ? document.locale : 'en-CA'"
+          >
+            <nuxt-link :to="document.path">
+              {{ document.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 

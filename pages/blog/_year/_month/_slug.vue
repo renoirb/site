@@ -3,16 +3,19 @@
     <very-old-article
       :locale="document.locale || 'en-CA'"
       :date="document.date"
+      class="my-4"
     />
-    <app-article-tags :document="document" />
-    <div class="document">
-      <div class="title">
-        <h2>{{ document.title }}</h2>
+    <div class="document document--item">
+      <div class="title page-title">
+        <h1>
+          {{ document.title }}
+        </h1>
       </div>
       <div class="body">
         <nuxt-content :document="document" />
       </div>
     </div>
+    <app-article-tags :document="document" class="my-4" />
   </div>
 </template>
 

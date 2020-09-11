@@ -13,6 +13,7 @@ tags:
   - Integration
   - Slides
   - Talk
+  - with-images
 ---
 
 Cette semaine, je fait une conférence pour la deuxième fois de ma présentation
@@ -70,7 +71,7 @@ conférence, c'était une belle surprise.
 
 Mon ami [François Légaré][4] a pris cette photo:
 
-![Il y avait foule lors de ma présentation au Web à Québec](/wp-content/uploads/http://renoirboulanger.com/wp-content/uploads/2013/02/presentation-renoir-web-a-quebec-qualite-integration-web.jpg?err=CouldNotFind)
+![Il y avait foule lors de ma présentation au Web à Québec](blog/2013/02/presentation-renoir-web-a-quebec-qualite-integration-web.jpg)
 
 ## Merci à
 

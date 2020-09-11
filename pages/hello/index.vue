@@ -1,7 +1,7 @@
 <template>
   <section
     id="is"
-    class="content-center w-2/3 m-20 mx-auto font-sans text-xs"
+    class="content-center w-2/3 m-20 mx-auto font-sans text-xl"
     itemscope
     itemtype="http://schema.org/Person"
   >

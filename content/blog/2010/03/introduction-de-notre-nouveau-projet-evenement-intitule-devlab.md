@@ -11,12 +11,13 @@ categories:
   - Tranche de vie
 tags:
   - geeknight
+  - with-images
 date: '2010-03-17T11:29:41-04:00'
 ---
 
-![devLabMtl.org](devLAB_LogoURL_Coul_small.png) Moi et mes partenaires
-d’affaries des [GeekNights][1] (_Stéphan Champagne_, _Etienne Lachance_)
-planifions un projet qu'on a baptisé <em lang="en">devLab</em>.
+![devLabMtl.org](blog/2010/03/devLAB_LogoURL_Coul_small.png) Moi et mes
+partenaires d’affaries des [GeekNights][1] (_Stéphan Champagne_, _Etienne
+Lachance_) planifions un projet qu'on a baptisé <em lang="en">devLab</em>.
 
 Nos [GeekNights][1] étaient bien plaisants a nous trois mais nous voulons
 partager avec d'autres passionnés. C'est l'origine de l'idée du DevLab.
@@ -72,10 +73,10 @@ les alliances pour permettre ce type d'événement d'une façon récurrente.
 
 ### Première sortie publique
 
-![MonDev Open Source Week Montreal](mondev_logo.jpg) Nous serons présents lors
-de la première de [MonDev][5] et nous participerons aussi à la compétition «[For
-the Web coding competition][6]» sponsorisé par Microsoft Canada. Venez nous
-voir!
+![MonDev Open Source Week Montreal](blog/2010/03/mondev_logo.jpg) Nous serons
+présents lors de la première de [MonDev][5] et nous participerons aussi à la
+compétition «[For the Web coding competition][6]» sponsorisé par Microsoft
+Canada. Venez nous voir!
 
 ### Appel a la collaboration
 
