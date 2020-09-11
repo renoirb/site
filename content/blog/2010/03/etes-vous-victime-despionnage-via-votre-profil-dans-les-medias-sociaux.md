@@ -6,7 +6,7 @@ keywords:
   - vie privée
   - fausse représentation
   - publicité ciblée
-canonical: 'https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux/'
+canonical: 'https://renoirboulanger.comblog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux/'
 title: Êtes-vous victime d’espionnage via votre profil dans les médias sociaux
 categories:
   - Tranche de vie
@@ -16,7 +16,7 @@ tags:
   - vie-privée
 ---
 
-![Crédit: Spy Vs. Spy (c) Antonio Prohías](/blog/2010/03/spy_vs_spy.jpg)
+![Crédit: Spy Vs. Spy (c) Antonio Prohías](blog/2010/03/spy_vs_spy.jpg)
 
 J'ai reçu hier une invitation d'amitié sur Facebook. Un prénom féminin que je ne
 me rappelle pas avoir connu. Pas de photos, ou presque. Au début je me suis dit
@@ -93,11 +93,11 @@ Voici quelques unes de mes pistes...
    connecter au compte en banque d'une banque X connue mais que je sais
    pertinemment que je n'ai aucun avoirs.
 
-   ![Dialogue Facebook, Accès au Parametres de confidentialité](/blog/2010/03/277c345c4600aa60f996428df1f1a5e115ad6e4a.png)
+   ![Dialogue Facebook, Accès au Parametres de confidentialité](blog/2010/03/277c345c4600aa60f996428df1f1a5e115ad6e4a.png)
 
    Dialogue Facebook, Accès au Parametres de confidentialité
 
-   ![Dialogue Facebook, bouton Amis uniquement](/blog/2010/03/7a5256d19243bdfd2afdd77ced006ec88d4e9382.png)
+   ![Dialogue Facebook, bouton Amis uniquement](blog/2010/03/7a5256d19243bdfd2afdd77ced006ec88d4e9382.png)
 
 Je crois avoir fait le tour de mes indices.
 
@@ -114,4 +114,4 @@ de commentaires][3].
 [1]: https://en.wikipedia.org/wiki/Spy_vs._Spy
 [2]: https://fr.wikipedia.org/wiki/Spam
 [3]:
-  http://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux#comments
+  http://renoirboulanger.comblog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux#comments

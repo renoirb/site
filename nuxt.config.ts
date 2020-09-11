@@ -62,7 +62,7 @@ export default {
   components: true,
   router: {
     middleware: ['redirects'],
-    base: isProduction && isCi ? PRODUCTION_BASE_PATH : '/',
+    base: isCi ? PRODUCTION_BASE_PATH : '/',
   },
   /*
    ** Nuxt.js dev-modules

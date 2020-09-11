@@ -5,7 +5,7 @@ keywords:
   - publicitée ciblée
   - célibatariat
   - fausse représentation
-canonical: 'https://renoirboulanger.com/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations/'
+canonical: 'https://renoirboulanger.comblog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations/'
 title:
   La publicite du monde celibataire sur Facebook et les fausses representations
 date: '2008-04-30T21:23:35-04:00'
@@ -84,7 +84,7 @@ Donc, j'était sur _facebook_, je voulait aller voir mes messages sur
 [eHarmony][4] puis justement, à gauche il y avait une de ces annonces
 publicitaires qui me dérangent.
 
-![Annonce faussement représentée de eHarmony sur facebook](/blog/2008/04/17ba8b12736f11d0a4b9e4995bef7af52c10ccbf.png)
+![Annonce faussement représentée de eHarmony sur facebook](blog/2008/04/17ba8b12736f11d0a4b9e4995bef7af52c10ccbf.png)
 
 Il était écrit sur l'image clairement «[eHarmony][6]». Je me suis dit, tiens je
 vais aller voir mes messages! Puis je me suis ramassé sur un autre site. Un site

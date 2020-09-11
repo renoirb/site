@@ -54,8 +54,21 @@
           .search(q)
           .fetch()
 
+        console.log('pages/blog/index.vue watch.q', q) // eslint-disable-line
+
         this.documents = documents
       },
+    },
+    async beforeMount() {
+      const q = this.$route.query.q || ''
+      console.log('pages/blog/index.vue beforeMount', q) // eslint-disable-line
+      let documents: INuxtContentResult[] = []
+      let query = this.$content('blog', { deep: true }).sortBy('date', 'desc')
+      if (q) {
+        query = query.search(q)
+      }
+      documents = await query.fetch()
+      this.documents = documents
     },
   })
 </script>

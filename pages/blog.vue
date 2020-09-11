@@ -42,6 +42,7 @@
         immediate: true,
         handler() {
           const q = this.$route.query.q || ''
+          console.log('pages/blog.vue watch.q.handler', q) // eslint-disable-line
           this.$router
             .replace({ query: q !== '' ? { q } : undefined })
             .catch(() => {})
@@ -50,6 +51,7 @@
     },
     beforeMount() {
       const q = this.$route.query.q || ''
+      console.log('pages/blog.vue beforeMount', q) // eslint-disable-line
       this.q = q
     },
     methods: {
