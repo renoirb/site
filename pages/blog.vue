@@ -51,8 +51,8 @@
       },
     },
     beforeMount() {
-      const q = this.$route.query.q || ''
-      this.q = q
+      const { q = '' } = this.$route.query
+      this.q = typeof q === 'string' ? q : ''
     },
     methods: {
       submit() {

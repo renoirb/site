@@ -31,12 +31,6 @@
               About
             </nuxt-link>
           </div>
-          <!--
-          <div class="md:block md:flex md:items-center hidden ml-2">
-            <nuxt-link to="/blog">Blog</nuxt-link>
-            <nuxt-link to="/hello">About</nuxt-link>
-          </div>
-          -->
         </div>
       </div>
     </div>

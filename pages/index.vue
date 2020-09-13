@@ -7,9 +7,9 @@
       <li><nuxt-link to="/ligne-editoriale">Ligne éditoriale</nuxt-link></li>
       <li><nuxt-link to="/about">About me</nuxt-link></li>
       <li>
-        <nuxt-link to="/projets"
-          >Projets (permalink legacy to migrate from in french)</nuxt-link
-        >
+        <nuxt-link to="/projets">
+          Projets (permalink legacy to migrate from in french)
+        </nuxt-link>
       </li>
       <li><nuxt-link to="/styleguide">styleguide</nuxt-link></li>
     </ul>

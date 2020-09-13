@@ -10,6 +10,7 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  const RE_WEBPACK_ASSETS = /^@\/assets\/images\//i
   export interface Data {
     altAttr: string
     fallbackSrc: string
@@ -68,7 +69,18 @@
          */
         try {
           // WebPack, plz
-          const resource: string = await import(`~/content/${this.src}`)
+          let src = this.src
+          if (RE_WEBPACK_ASSETS.test(src)) {
+            src = src.replace(RE_WEBPACK_ASSETS, '')
+          } else {
+            const message = `
+              Path "${src}" does not start by "@/assets/images/",
+              For WebPack/Nuxt/Vue loading purposes,
+              load images only to files stored into assets/images folder
+            `.replace(/[\n\s]/g, '')
+            throw new Error(message)
+          }
+          const resource: string = await import(`@/assets/images/${src}`)
           return resource
         } catch (error) {
           this.errored = true

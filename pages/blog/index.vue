@@ -64,7 +64,8 @@
       },
     },
     async beforeMount() {
-      const q = this.$route.query.q || ''
+      let { q = '' } = this.$route.query
+      q = typeof q === 'string' ? q : ''
       let documents: INuxtContentResult[] = []
       let query = this.$content('blog', { deep: true }).sortBy('date', 'desc')
       if (q) {

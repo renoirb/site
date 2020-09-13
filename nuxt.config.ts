@@ -1,5 +1,6 @@
 import { join } from 'path'
 import { PRODUCTION_BASE_PATH } from './lib/consts'
+import tailwindConfig from './tailwind.config'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const isCi = 'IS_CI' in process.env && typeof process.env.IS_CI === 'string'
@@ -108,6 +109,7 @@ export default {
     configPath: '~/tailwind.config.js',
     // add '~tailwind.config` alias
     exposeConfig: true,
+    config: tailwindConfig,
   },
   webfontloader: {
     google: {
