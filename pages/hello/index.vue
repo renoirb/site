@@ -6,11 +6,7 @@
     itemtype="http://schema.org/Person"
   >
     <b class="w-150 float-left my-2 mr-4">
-      <app-image
-        width="150"
-        itemprop="image"
-        src="@/assets/images/avatar.jpg"
-      />
+      <img width="150" itemprop="image" src="@/assets/images/avatar.jpg" />
     </b>
     <nuxt-content :document="document" />
   </section>

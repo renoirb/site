@@ -1,7 +1,9 @@
-import { join } from 'path'
+/* eslint-disable camelcase */
+
 import { PRODUCTION_BASE_PATH } from './lib/consts'
 import tailwindConfig from './tailwind.config'
 
+const { npm_package_author_name = 'Renoir Boulanger' } = process.env
 const isProduction = process.env.NODE_ENV === 'production'
 const isCi = 'IS_CI' in process.env && typeof process.env.IS_CI === 'string'
 
@@ -21,8 +23,8 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - ' + npm_package_author_name,
+    title: npm_package_author_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -50,7 +52,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~assets/styles/main.scss'],
+  css: ['~assets/styles/main.css'],
   loading: { color: '#CB7723' /* charlie */ },
   /*
    ** Plugins to load before mounting the App
@@ -63,7 +65,7 @@ export default {
    */
   components: true,
   router: {
-    middleware: ['redirects'],
+    middleware: ['redirects', 'init'],
     base: isCi ? PRODUCTION_BASE_PATH : '/',
   },
   /*
@@ -100,12 +102,9 @@ export default {
       },
     },
   },
-  /*
-   ** TailWind CSS
-   ** https://tailwindcss.nuxtjs.org/setup/
-   */
+  // https://tailwindcss.nuxtjs.org/setup/
   tailwindcss: {
-    cssPath: '~/assets/styles/main.scss',
+    cssPath: '~/assets/styles/main.css',
     configPath: '~/tailwind.config.js',
     // add '~tailwind.config` alias
     exposeConfig: true,
@@ -126,44 +125,6 @@ export default {
    */
   build: {
     extractCSS: true,
-    /*
-     ** PostCSS setup
-     */
-    postcss: {
-      // Add plugin names as key and arguments as value
-      // Disable a plugin by passing false as value
-      plugins: {
-        'postcss-import': {},
-        tailwindcss: join(__dirname, './tailwind.config.js'),
-        'postcss-nested': {},
-        cssnano: {
-          preset: 'default',
-          discardComments: { removeAll: true },
-          zIndex: false,
-        },
-      },
-      // Change the postcss-preset-env settings
-      preset: {
-        // stage 1: https://tailwindcss.com/docs/using-with-preprocessors#future-css-featuress
-        stage: 1,
-        autoprefixer: {
-          cascade: false,
-          grid: true,
-        },
-      },
-    },
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          tailwindConfig: {
-            test: /tailwind\.config/,
-            chunks: 'all',
-            priority: 10,
-            name: true,
-          },
-        },
-      },
-    },
   },
   generate: {
     dir: 'dist',

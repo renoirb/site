@@ -7,6 +7,7 @@
           <tt>{{ q }}</tt>
           "
         </h1>
+        <h1 v-else>Blog</h1>
       </div>
       <div class="body">
         <ul>

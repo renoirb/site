@@ -1,5 +1,5 @@
 <template>
-  <div class="layouts--default">
+  <div>
     <default-header />
     <main class="container px-2 mx-auto">
       <div class="grid">
@@ -17,7 +17,7 @@
     head() {
       // https://vue-meta.nuxtjs.org/api/#htmlattrs
       const htmlAttrs = {
-        class: ['layout--default'],
+        class: ['layout--homepage'],
       }
 
       const out = {

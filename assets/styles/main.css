@@ -1,0 +1,60 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --sandwich-color: #000;
+  --bg: #fff;
+  --color: #577f79;
+  --color-primary: #214761;
+  --color-secondary: #bb3f3f;
+  --color-tertiary: #cb7723;
+  --bg-secondary: #e5e5e5;
+  --border-color: #aaa;
+}
+
+.dark-mode {
+  --sandwich-color: #fff;
+  --bg: #000;
+  --color: #f4f7f3;
+  --color-primary: #577f79;
+  --color-secondary: #fdf9f3;
+  --bg-secondary: #214761;
+  --border-color: #061a17;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s;
+}
+
+.taxonomy .taxonomy-label {
+  @apply inline font-bold text-base;
+}
+.taxonomy .taxonomy-items li {
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2;
+}
+
+.document .title {
+  @apply font-bold py-4 font-serif text-xl;
+}
+.document .body {
+  @apply font-light;
+}
+
+.document .body li {
+  @apply list-inside;
+
+  color: inherit;
+}
+.document .body ul {
+  list-style-type: disc;
+}
+.document .body ol {
+  list-style-type: decimal-leading-zero;
+}
+.document .body li,
+.document .body blockquote {
+  @apply pl-4;
+}

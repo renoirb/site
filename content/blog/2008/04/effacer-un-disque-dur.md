@@ -66,9 +66,9 @@ version fera l'affaire.
 Les commandes nécessaires seront celles de base pour n'importe quel Linux depuis
 ses débuts :
 
-- /dev/urandom, ou
-- /dev/zero
-- dd
+- `/dev/urandom`, ou
+- `/dev/zero`
+- <abbr lang="en" title="Device to Device command">`dd`</abbr>
 
 Je ne me rappelle pas quand Linux en général a inclus ces trucs mais c'est ce
 qu'il faut.
@@ -113,7 +113,7 @@ Si vous avez vidé vos disques durs le disque dur a vider devraît être /dev/hd
 
 Pour vous en assurer, faites
 
-    root@debian: ~# file /dev/hda
+    file /dev/hda
 
 Un output similaire ceci devrait sortir...
 
@@ -145,22 +145,30 @@ La première partition du premier disque sera donc: /dev/sda1
 
 Si tout est beau... on continue.
 
-    root@debian: ~# vi wipedisk.sh
+    vi wipedisk.sh
 
-En VI, il faut faire 'i' avant de commencer d'écrire...
+En <em title="Vim Editor">vi</em>, il faut faire 'i' (lettre _i_ minuscule, pour
+entrer en mode "_insert_") avant de commencer d'écrire...
 
-    #!/bin/bash for ((i=1;i&lt;=10;i+=1)); do echo "Passe $i" dd if=/dev/urandom of=/dev/hda sleep 1 done
+```bash
+#!/bin/bash
+for (( i = 1 ; i <= 10 ; i += 1 )); do
+  echo "Passe $i"
+  dd if=/dev/urandom of=/dev/hda
+  sleep 1
+done
+```
 
-Ensuite on quitte **en faisant** **\[escape\]** on **écrit** "**:wq**" (deux
-points... "w" et "q"... qui signifie commande write quit)
+Ensuite on quitte **en faisant** <kbd title="Escape">ESC</kbd> "`:wq`" (deux
+points... "w" et "q"... qui signifie commande _write_ and _quit_)
 
-    root@debian: ~# chmod 755 wipedisk.sh
+    chmod 755 wipedisk.sh
 
 Qui va rendre le fichier exécutable.
 
 ### ÉTAPE SIX... on exécute.
 
-    root@debian: ~# ./wipedisk.sh
+    ./wipedisk.sh
 
 En général, ça peut prendre du temps. Mais à la fin d'une soirée de film... le
 disque devrait être totalement rempli d'ordures aléatoire.

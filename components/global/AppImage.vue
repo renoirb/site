@@ -69,9 +69,9 @@
          */
         try {
           // WebPack, plz
-          let src = this.src
+          const src = this.src
           if (RE_WEBPACK_ASSETS.test(src)) {
-            src = src.replace(RE_WEBPACK_ASSETS, '')
+            // src = src.replace(RE_WEBPACK_ASSETS, '')
           } else {
             const message = `
               Path "${src}" does not start by "@/assets/images/",
@@ -80,7 +80,8 @@
             `.replace(/[\n\s]/g, '')
             throw new Error(message)
           }
-          const resource: string = await import(`@/assets/images/${src}`)
+          console.log('@/assets/images', src) // eslint-disable-line
+          const resource: string = await import(src)
           return resource
         } catch (error) {
           this.errored = true
@@ -94,7 +95,7 @@
   })
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   .app-image {
     min-height: 100px;
     min-width: 100px;

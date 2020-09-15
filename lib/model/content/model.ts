@@ -10,6 +10,11 @@ export interface INuxtContentResult extends Result {
   date: Date | string
 }
 
+export type INuxtContentIndexResult = Pick<
+  INuxtContentResult,
+  'title' | 'date' | 'slug' | 'locale' | 'path'
+>
+
 export const typeGuardNuxtContentResult = (
   maybe: any,
 ): maybe is INuxtContentResult => {

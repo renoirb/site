@@ -26,9 +26,10 @@
  */
 
 const path = require('path')
-const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
-const selectorParser = require('postcss-selector-parser')
+const typography = require('@tailwindcss/typography')
+// const plugin = require('tailwindcss/plugin')
+// const selectorParser = require('postcss-selector-parser')
 
 module.exports = {
   future: {
@@ -37,7 +38,6 @@ module.exports = {
   },
   theme: {
     extend: {
-      backgroundColor: '#F4F7F3',
       fontFamily: {
         body: ['Roboto', ...defaultTheme.fontFamily.sans],
         mono: ['Roboto Mono', ...defaultTheme.fontFamily.mono],
@@ -122,6 +122,7 @@ module.exports = {
           },
         },
       },
+      /*
       dark: {
         css: {
           color: theme('colors.gray.300'),
@@ -178,8 +179,10 @@ module.exports = {
           },
         },
       },
+      */
     }),
   },
+  /*
   variants: {
     margin: ['responsive', 'last'],
     padding: ['responsive', 'hover'],
@@ -196,7 +199,9 @@ module.exports = {
     borderWidth: ['responsive', 'first', 'last'],
     typography: ['responsive', 'dark'],
   },
+  */
   plugins: [
+    /*
     plugin(function ({ addVariant, prefix, e }) {
       addVariant('dark', ({ modifySelectors, separator }) => {
         modifySelectors(({ selector }) => {
@@ -224,7 +229,8 @@ module.exports = {
         })
       })
     }),
-    require('@tailwindcss/typography'),
+    */
+    typography,
   ],
   purge: {
     mode: 'layers',
@@ -239,7 +245,7 @@ module.exports = {
       'nuxt.config.ts',
     ],
     options: {
-      whitelist: ['light-mode', 'dark-mode', 'taxonomy', 'document'],
+      whitelist: ['light-mode', 'taxonomy', 'document'],
     },
   },
 }

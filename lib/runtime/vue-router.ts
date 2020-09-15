@@ -32,6 +32,14 @@ export interface IRouteCrumb {
 }
 
 /**
+ * Navigation at the top of the site
+ */
+export interface IAppHeaderNavItems {
+  label: string
+  to: string
+}
+
+/**
  * Extract from Vue-Router collection of
  * parts of URL for a bread-crumb.
  *

@@ -25,10 +25,11 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import { INuxtContentIndexResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentResult
+    documents: INuxtContentIndexResult[]
     year: string
+    pageTitle: string
   }
   export interface Methods {}
   export interface Computed {}
@@ -37,14 +38,26 @@
     async asyncData({ $content, params }) {
       const { year } = params
 
-      const documents = (await $content('blog', year, { deep: true })
+      let documents: INuxtContentIndexResult[] = []
+      documents = await $content('blog', year, { deep: true })
         .sortBy('date', 'desc')
-        .fetch()) as INuxtContentResult[]
+        .only(['title', 'date', 'slug', 'locale', 'path'])
+        .fetch()
+
+      const pageTitle = `Published in ${year}`
 
       return {
+        pageTitle,
         documents,
         year,
       }
+    },
+    head() {
+      const title = this.pageTitle
+      const out = {
+        title,
+      }
+      return out
     },
   })
 </script>

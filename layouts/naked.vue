@@ -1,3 +1,5 @@
 <template>
-  <nuxt />
+  <div class="layouts--naked">
+    <nuxt />
+  </div>
 </template>

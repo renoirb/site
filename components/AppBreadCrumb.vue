@@ -21,27 +21,29 @@
     render(h): VNode {
       const items: VNode[] = []
       const crumbs = routeToCrumbs(this.route)
-      items.push(
-        ...crumbs.map((p) => {
-          return h(
-            'li',
-            {
-              class: 'flex items-center',
-            },
-            [
-              h(
-                'nuxt-link',
-                {
-                  props: {
-                    to: { path: p.crumb },
+      if (crumbs.length > 1) {
+        items.push(
+          ...crumbs.map((p) => {
+            return h(
+              'li',
+              {
+                class: 'flex items-center',
+              },
+              [
+                h(
+                  'nuxt-link',
+                  {
+                    props: {
+                      to: { path: p.crumb },
+                    },
                   },
-                },
-                p.param,
-              ),
-            ],
-          )
-        }),
-      )
+                  p.param,
+                ),
+              ],
+            )
+          }),
+        )
+      }
 
       return h(
         'nav',

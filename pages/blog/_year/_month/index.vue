@@ -2,7 +2,7 @@
   <div class="pages__blog__year__month--index">
     <div class="document document--collection">
       <div class="title page-title">
-        <h1>{{ year }}/{{ month }}</h1>
+        <h1>{{ pageTitle }}</h1>
       </div>
       <div class="body">
         <ul>
@@ -23,11 +23,13 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import { Temporal } from 'proposal-temporal'
+  import { INuxtContentIndexResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentResult[]
+    documents: INuxtContentIndexResult[]
     year: string
     month: string
+    pageTitle: string
   }
   export interface Methods {}
   export interface Computed {}
@@ -36,15 +38,39 @@
     async asyncData({ $content, params }) {
       const { year, month } = params
 
-      const documents = (await $content('blog', year, month, { deep: true })
+      let documents: INuxtContentIndexResult[] = []
+      documents = await $content('blog', year, month, { deep: true })
         .sortBy('date', 'desc')
-        .fetch()) as INuxtContentResult[]
+        .only(['title', 'date', 'slug', 'locale', 'path'])
+        .fetch()
+
+      const dateObj = Temporal.Date.from(`${year}-${month}-01`)
+      const locale = 'fr-CA'
+      const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#Syntax
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#Using_options
+      const localeStringOptions = {
+        year: 'numeric',
+        month: 'long',
+        timeZone: 'America/Los_Angeles',
+      }
+      const localeString = dateObj.toLocaleString(locale, localeStringOptions)
+      console.log('dateObj', { dateObj, localeString })
+      const pageTitle = `${publishedIn} ${localeString}`
 
       return {
+        pageTitle,
         documents,
         year,
         month,
       }
+    },
+    head() {
+      const title = this.pageTitle
+      const out = {
+        title,
+      }
+      return out
     },
   })
 </script>

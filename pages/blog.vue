@@ -43,7 +43,7 @@
       q: {
         immediate: true,
         handler() {
-          const q = this.$route.query.q || ''
+          const { q = '' } = this.$route.query
           this.$router
             .replace({ query: q !== '' ? { q } : undefined })
             .catch(() => {})

@@ -9,16 +9,11 @@
   "editor.renderWhitespace": "all",
   "editor.trimAutoWhitespace": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "eslint.enable": true,
   "eslint.packageManager": "yarn",
-  "eslint.provideLintTask": true,
   "eslint.run": "onType",
   "[vue]": {
     "editor.formatOnSave": false
-  },
-  "[scss]": {
-    "editor.formatOnSave": true
   },
   "[css]": {
     "editor.formatOnSave": true
@@ -32,20 +27,6 @@
   "[javascript]": {
     "editor.formatOnSave": true
   },
-  "eslint.validate": [
-    {
-      "language": "vue",
-      "autoFix": true
-    },
-    {
-      "language": "html",
-      "autoFix": true
-    },
-    {
-      "language": "javascript",
-      "autoFix": true
-    }
-  ],
   "files.trimTrailingWhitespace": true,
   "vetur.validation.style": false,
   "vetur.validation.template": true,
