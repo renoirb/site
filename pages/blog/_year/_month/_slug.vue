@@ -6,16 +6,16 @@
       class="my-4"
     />
     <div class="document document--item">
-      <div class="title page-title">
+      <div class="title page-title mb-2">
         <h1>
           {{ document.title }}
         </h1>
       </div>
-      <div class="body">
+      <app-article-tags :document="document" class="mt-0 mb-5" />
+      <div class="body mt-10">
         <nuxt-content :document="document" />
       </div>
     </div>
-    <app-article-tags :document="document" class="my-4" />
   </div>
 </template>
 

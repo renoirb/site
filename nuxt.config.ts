@@ -1,9 +1,10 @@
 /* eslint-disable camelcase */
 
-import { PRODUCTION_BASE_PATH } from './lib/consts'
+import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity } from './lib'
 import tailwindConfig from './tailwind.config'
 
-const { npm_package_author_name = 'Renoir Boulanger' } = process.env
+const appIdentity = fromProcessEnvToAppIdentity(process.env)
+
 const isProduction = process.env.NODE_ENV === 'production'
 const isCi = 'IS_CI' in process.env && typeof process.env.IS_CI === 'string'
 
@@ -23,8 +24,8 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + npm_package_author_name,
-    title: npm_package_author_name || '',
+    titleTemplate: '%s - ' + appIdentity.name,
+    title: appIdentity.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -48,6 +49,9 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+  env: {
+    ...appIdentity,
   },
   /*
    ** Global CSS

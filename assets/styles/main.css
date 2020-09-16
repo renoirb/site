@@ -3,8 +3,11 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --sandwich-color: #000;
-  --bg: #fff;
+  --color-sandwich-bg: #000;
+  --color-sandwich-text: #fff;
+  --color-container: #fff;
+  --color-backdrop: #e5e5e5;
+  --bg: var(--color-backdrop);
   --color: #577f79;
   --color-primary: #214761;
   --color-secondary: #bb3f3f;
@@ -14,8 +17,11 @@
 }
 
 .dark-mode {
-  --sandwich-color: #fff;
-  --bg: #000;
+  --color-sandwich-bg: #000;
+  --color-sandwich-text: #fff;
+  --color-container: #577f79;
+  --color-backdrop: #214761;
+  --bg: var(--color-backdrop);
   --color: #f4f7f3;
   --color-primary: #577f79;
   --color-secondary: #fdf9f3;
@@ -29,15 +35,29 @@ body {
   transition: background-color 0.3s;
 }
 
+.zone__sandwich__top,
+.zone__sandwich__bottom {
+  background-color: var(--color-sandwich-bg);
+  color: var(--color-sandwich-text);
+}
+.zone__sandwich__meat {
+  background-color: var(--color-container);
+}
+
+.document .title,
+.app-side-bar__nav {
+  @apply italic font-serif;
+}
+
 .taxonomy .taxonomy-label {
-  @apply inline font-bold text-base;
+  @apply sr-only;
 }
 .taxonomy .taxonomy-items li {
-  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2;
+  @apply inline-block text-gray-700 bg-gray-200 rounded-full px-3 py-1 mr-2 text-xs;
 }
 
 .document .title {
-  @apply font-bold py-4 font-serif text-xl;
+  @apply text-xl;
 }
 .document .body {
   @apply font-light;
@@ -52,7 +72,7 @@ body {
   list-style-type: disc;
 }
 .document .body ol {
-  list-style-type: decimal-leading-zero;
+  list-style-type: lower-roman;
 }
 .document .body li,
 .document .body blockquote {

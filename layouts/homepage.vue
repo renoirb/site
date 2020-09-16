@@ -1,7 +1,7 @@
 <template>
   <div>
-    <default-header />
-    <main class="container px-2 mx-auto">
+    <app-header />
+    <main class="container mx-auto">
       <div class="grid">
         <div class="mt-5">
           <nuxt />

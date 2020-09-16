@@ -55,7 +55,6 @@
         timeZone: 'America/Los_Angeles',
       }
       const localeString = dateObj.toLocaleString(locale, localeStringOptions)
-      console.log('dateObj', { dateObj, localeString })
       const pageTitle = `${publishedIn} ${localeString}`
 
       return {

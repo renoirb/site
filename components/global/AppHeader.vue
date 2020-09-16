@@ -5,7 +5,7 @@
         v-for="({ label, to }, index) of nav"
         :key="`${label}--${index}`"
         :to="to"
-        class="hover:opacity-100 flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded opacity-75"
+        class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded"
       >
         {{ label }}
       </nuxt-link>
@@ -33,6 +33,7 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
+    name: 'AppHeader' /* app-header */,
     data() {
       return {
         nav,
@@ -40,3 +41,9 @@
     },
   })
 </script>
+
+<style scoped>
+  .nuxt-link-active {
+    @apply underline;
+  }
+</style>

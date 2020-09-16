@@ -32,7 +32,7 @@
     xjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=
   `.replace(/[\n\s]/g, '')
   export default Vue.extend<Data, Methods, Computed, Props>({
-    name: 'AppImage',
+    name: 'AppImage' /* app-image */,
     props: {
       src: {
         type: String,
@@ -80,13 +80,12 @@
             `.replace(/[\n\s]/g, '')
             throw new Error(message)
           }
-          console.log('@/assets/images', src) // eslint-disable-line
+          // console.log('@/assets/images', src) // eslint-disable-line
           const resource: string = await import(src)
           return resource
         } catch (error) {
           this.errored = true
-          // eslint-disable-next-line
-          console.error('app-image error', error)
+          // console.error('app-image error', error) // eslint-disable-line
           this.altAttr = String(error)
           return this.fallbackSrc
         }

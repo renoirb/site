@@ -37,7 +37,7 @@
     document: INuxtContentResult
   }
   export default Vue.extend<Data, Methods, Computed, Props>({
-    name: 'AppArticleTags',
+    name: 'AppArticleTags' /* app-article-tags */,
     props: {
       document: {
         type: Object,

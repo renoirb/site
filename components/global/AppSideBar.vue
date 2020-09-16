@@ -1,26 +1,28 @@
 <template>
-  <nav
-    class="fixed z-10 flex items-center justify-between w-full h-16 px-6 text-gray-700 bg-white border-b border-gray-200"
-  >
-    <div class="flex items-center">
-      <button class="md:hidden mr-2" aria-label="Open Menu" @click="drawer">
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          class="w-8 h-8"
-        >
-          <path d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-      <nuxt-link to="/">{{ appTitle }}</nuxt-link>
-    </div>
-    <div class="flex items-center">
-      <div class="md:flex md:justify-between md:bg-transparent hidden">
-        <slot />
+  <nav class="app-side-bar--component fixed z-10 w-full">
+    <div
+      class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto"
+    >
+      <div class="app-side-bar__identity md:px-5 flex items-center">
+        <button class="md:hidden mr-2" aria-label="Open Menu" @click="drawer">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            class="w-8 h-8"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <nuxt-link to="/" class="identity__text">{{ appTitle }}</nuxt-link>
+      </div>
+      <div class="app-side-bar__nav flex items-center">
+        <div class="md:flex md:justify-between md:bg-transparent hidden">
+          <slot />
+        </div>
       </div>
     </div>
 
@@ -38,33 +40,35 @@
         @keydown.esc="isOpen = false"
       >
         <div
-          class="absolute inset-0 bg-black opacity-50"
+          class="absolute inset-0 bg-black opacity-75"
           tabindex="0"
           @click="isOpen = false"
         ></div>
       </div>
     </transition>
     <aside
-      class="fixed top-0 left-0 z-30 w-64 h-full overflow-auto transition-all duration-300 ease-in-out transform bg-white"
+      class="app-side-bar__aside fixed top-0 left-0 z-30 w-64 h-full overflow-auto transition-all duration-300 ease-in-out transform"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <div
-        class="flex items-center w-full h-16 p-4 border-b"
+        class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b"
         @click="isOpen = false"
       >
-        <nuxt-link to="/">{{ appTitle }}</nuxt-link>
+        <nuxt-link to="/" class="identity__text">{{ appTitle }}</nuxt-link>
       </div>
-      <nuxt-link
-        v-for="({ label, to }, index) of nav"
-        :key="`${label}--${index}`"
-        :to="to"
-        class="hover:bg-teal-500 hover:text-white flex items-center p-4"
-        @click="isOpen = false"
-      >
-        <span class="mr-2">
-          {{ label }}
-        </span>
-      </nuxt-link>
+      <div>
+        <nuxt-link
+          v-for="({ label, to }, index) of nav"
+          :key="`${label}--${index}`"
+          :to="to"
+          class="hover:bg-teal-500 hover:text-white flex items-center p-4"
+          @click="isOpen = false"
+        >
+          <span class="mr-2">
+            {{ label }}
+          </span>
+        </nuxt-link>
+      </div>
     </aside>
   </nav>
 </template>
@@ -92,6 +96,7 @@
    * - https://github.com/fayazara/tailwind-components/blob/6b8bf8f4/components/navbar.vue
    */
   export default Vue.extend<Data, Methods, Computed, Props>({
+    name: 'AppSideBar' /* app-side-bar */,
     props: {
       nav: {
         type: Array,
@@ -158,3 +163,22 @@
     },
   })
 </script>
+
+<style scoped>
+  .app-side-bar__nav,
+  .app-side-bar__identity {
+    color: var(--color-sandwich-text);
+  }
+  .identity__text {
+    @apply text-3xl font-light;
+
+    color: var(--color-sandwich-text);
+  }
+  .app-side-bar__aside {
+    color: var(--color-primary);
+    background-color: var(--color-container);
+  }
+  .app-side-bar__aside .app-side-bar__identity {
+    background-color: var(--color-sandwich-bg);
+  }
+</style>
