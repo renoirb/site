@@ -82,11 +82,12 @@
 
     color: inherit;
   }
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values */
   & ul {
     list-style-type: disc;
   }
   & ol {
-    @apply italic;
+    @apply italic font-serif font-hairline;
 
     list-style-type: lower-roman;
   }

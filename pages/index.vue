@@ -1,11 +1,10 @@
 <template>
   <div class="pages__index--parent">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col w-full mb-20 text-center">
+    <div class="container mx-auto">
+      <div class="flex flex-col w-full text-center">
         <h1 class="mb-1 font-serif text-xl italic">
           Renoir Boulanger’s upcoming site <small>Work in progress</small>
         </h1>
-
         <p class="lg:w-2/3 mx-auto text-base leading-relaxed">
           It’s been more than ten years that I haven't touched my site and I
           want to make-use of my skills working with Vue.js and modern Front End
@@ -13,7 +12,7 @@
         </p>
         <nuxt-link
           to="/blog/2020/09/porting-all-my-content"
-          class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 px-4 py-2 mb-4 font-semibold text-white rounded"
+          class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 px-4 py-2 mx-10 my-4 font-semibold text-white rounded"
         >
           Continue reading...
         </nuxt-link>
@@ -31,6 +30,7 @@
       </li>
       <li><nuxt-link to="/styleguide">styleguide</nuxt-link></li>
     </ul>
+    <nuxt-link class="sr-only" to="/kitchen-sink">Kitchen sink</nuxt-link>
   </div>
 </template>
 

@@ -10,12 +10,13 @@
   export interface Data {}
   export interface Computed {}
   export default defineComponent<Props, Data, Computed>({
-    name: 'AppBreadCrumb',
+    name: 'AppBreadCrumb' /* app-bread-crumb */,
     props: {
       route: {
         type: Object,
         validator: typeGuardIsRoute,
         required: true,
+        default: () => ({}),
       },
     },
     render(h): VNode {

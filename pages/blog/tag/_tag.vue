@@ -9,12 +9,12 @@
       <div class="body">
         <ul>
           <li
-            v-for="document in documents"
-            :key="document.slug"
-            :lang="document.locale ? document.locale : 'en-CA'"
+            v-for="content in contents"
+            :key="content.slug"
+            :lang="content.locale ? content.locale : 'en-CA'"
           >
-            <nuxt-link :to="formatTo(document)">
-              {{ document.title }}
+            <nuxt-link :to="formatTo(content)">
+              {{ content.title }}
             </nuxt-link>
           </li>
         </ul>
@@ -27,11 +27,11 @@
   import Vue from 'vue'
   import { INuxtContentResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentResult
+    contents: INuxtContentResult
     tag: string
   }
   export interface Methods {
-    formatTo(document: INuxtContentResult): string
+    formatTo(content: INuxtContentResult): string
   }
   export interface Computed {}
   export interface Props {}
@@ -39,20 +39,20 @@
     async asyncData({ $content, params }) {
       const { tag } = params
 
-      const documents = (await $content('blog', { deep: true })
+      const contents = (await $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
         .sortBy('date', 'desc')
         .fetch()) as INuxtContentResult[]
 
       return {
-        documents,
+        contents,
         tag,
       }
     },
     methods: {
-      formatTo(document: INuxtContentResult): string {
-        const [year, month] = String(document.date).split('-')
-        const { slug } = document
+      formatTo(content: INuxtContentResult): string {
+        const [year, month] = String(content.date).split('-')
+        const { slug } = content
         return `/blog/${year}/${month}/${slug}`
       },
     },

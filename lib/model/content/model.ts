@@ -1,9 +1,16 @@
 import { Result } from '@nuxt/content'
 
-export interface INuxtContentResult extends Result {
-  title: string
-  slug: string
+export interface IBaseNuxtContentResult extends Result {
+  dir: string
   path: string
+  extension: string
+  slug: string
+  createdAt: string
+  updatedAt: string
+}
+
+export interface INuxtContentResult extends IBaseNuxtContentResult {
+  title: string
   tags: string[]
   categories: string[]
   locale: string

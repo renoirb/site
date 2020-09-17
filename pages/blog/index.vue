@@ -12,12 +12,12 @@
       <div class="body">
         <ul>
           <li
-            v-for="document in documents"
-            :key="document.slug"
-            :lang="document.locale ? document.locale : 'en-CA'"
+            v-for="content in contents"
+            :key="content.slug"
+            :lang="content.locale ? content.locale : 'en-CA'"
           >
-            <nuxt-link :to="document.path">
-              {{ document.title }}
+            <nuxt-link :to="content.path">
+              {{ content.title }}
             </nuxt-link>
           </li>
         </ul>
@@ -30,7 +30,7 @@
   import Vue from 'vue'
   import { INuxtContentResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentResult[]
+    contents: INuxtContentResult[]
   }
   export interface Methods {}
   export interface Computed {}
@@ -47,46 +47,46 @@
     async asyncData({ $content, query }) {
       let { q = '' } = query
       q = typeof q === 'string' ? q : ''
-      let documents: INuxtContentResult[] = []
+      let contents: INuxtContentResult[] = []
       let ds = $content('blog', { deep: true }).sortBy('date', 'desc')
       if (q) {
         ds = ds.search(q)
       }
-      documents = await ds.fetch()
+      contents = await ds.fetch()
       return {
-        documents,
+        contents,
       }
     },
     data() {
       return {
-        documents: [],
+        contents: [],
       }
     },
     watch: {
       async q(q) {
         if (!q) {
-          this.documents = []
+          this.contents = []
           return
         }
-        let documents: INuxtContentResult[] = []
-        documents = await this.$content('blog', { deep: true })
+        let contents: INuxtContentResult[] = []
+        contents = await this.$content('blog', { deep: true })
           .sortBy('date', 'desc')
           .search(q)
           .fetch()
 
-        this.documents = documents
+        this.contents = contents
       },
     },
     async beforeMount() {
       let { q = '' } = this.$route.query
       q = typeof q === 'string' ? q : ''
-      let documents: INuxtContentResult[] = []
+      let contents: INuxtContentResult[] = []
       let ds = this.$content('blog', { deep: true }).sortBy('date', 'desc')
       if (q) {
         ds = ds.search(q)
       }
-      documents = await ds.fetch()
-      this.documents = documents
+      contents = await ds.fetch()
+      this.contents = contents
     },
   })
 </script>

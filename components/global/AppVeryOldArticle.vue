@@ -1,36 +1,22 @@
-<template>
-  <div
-    v-if="isOldEnough === true"
-    :class="styleMap.outer"
-    class="disposition-parent"
-    role="alert"
-  >
-    <header class="disposition-item">{{ title }}</header>
-    <div class="disposition-item">{{ message }}</div>
-    <div v-if="$slots.default" class="addemdum">
-      <slot />
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
   import Vue from 'vue'
+  import AppAlertBox, {
+    Data as IAppAlertBoxData,
+  } from '@/components/global/AppAlertBox.vue'
   import {
     FALLBACK_LANG_CODE,
     FALLBACK_LOCALE,
     FALLBACK_TODAY_DATE,
-    IStyleMapAlert,
-    styleMapAlert,
     YEAR_CONSIDERED_OLD,
+    IAlertType,
   } from '~/lib'
 
-  export interface Data {}
+  export interface Data extends IAppAlertBoxData {
+    alertType: IAlertType
+  }
   export interface Methods {}
   export interface Computed {
-    styleMap: IStyleMapAlert
     langCode: string
-    title: string
-    message: string
     isOldEnough: boolean
     year: number
   }
@@ -64,6 +50,7 @@
 
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'AppVeryOldArticle' /* app-very-old-article */,
+    extends: AppAlertBox,
     props: {
       locale: {
         type: String,
@@ -75,10 +62,6 @@
       },
     },
     computed: {
-      styleMap(): IStyleMapAlert {
-        const map = styleMapAlert('warn')
-        return map
-      },
       year(): number {
         let out: number = new Date().getFullYear()
         if (/\d{0,4}/.test(this.date || '')) {
@@ -95,50 +78,32 @@
         }
         return candidate
       },
-      title(): string {
-        const lc = this.langCode
-        let textContent = ''
-        const maybeTextContent =
-          typeof lc === 'string' && titles.has(lc)
-            ? titles.get(lc)
-            : titles.get(FALLBACK_LANG_CODE)
-        if (typeof maybeTextContent === 'string') {
-          textContent = maybeTextContent
-        }
-        return textContent
-      },
-      message(): string {
-        const lc = this.langCode
-        let textContent = ''
-        const maybeTextContent =
-          typeof lc === 'string' && messages.has(lc)
-            ? messages.get(lc)
-            : messages.get(FALLBACK_LANG_CODE)
-        if (typeof maybeTextContent === 'string') {
-          const yyyy = String(this.year)
-          textContent = maybeTextContent
-          textContent = textContent.replace(/YEAR/, yyyy)
-        }
-        return textContent
-      },
       isOldEnough(): boolean {
         return YEAR_CONSIDERED_OLD > this.year
       },
     },
+    beforeMount() {
+      this.alertType = 'warn'
+      const langCode = this.langCode
+      let textContent = ''
+      const maybeTextContent =
+        typeof langCode === 'string' && messages.has(langCode)
+          ? messages.get(langCode)
+          : messages.get(FALLBACK_LANG_CODE)
+      if (typeof maybeTextContent === 'string') {
+        const yyyy = String(this.year)
+        textContent = maybeTextContent
+        textContent = textContent.replace(/YEAR/, yyyy)
+      }
+      this.messageTextContent = textContent
+
+      const titleTextContentMaybe =
+        typeof langCode === 'string' && titles.has(langCode)
+          ? titles.get(langCode)
+          : titles.get(FALLBACK_LANG_CODE)
+      if (typeof titleTextContentMaybe === 'string') {
+        this.titleTextContent = titleTextContentMaybe
+      }
+    },
   })
 </script>
-
-<style scoped>
-  .disposition-parent {
-    @apply bg-yellow-200 text-yellow-700 px-4 py-3;
-  }
-  .disposition-parent header {
-    @apply font-bold mb-2;
-  }
-  .disposition-item {
-    @apply px-2 py-1;
-  }
-  .addemdum {
-    @apply px-2;
-  }
-</style>

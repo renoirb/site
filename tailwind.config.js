@@ -8,7 +8,7 @@
  * - https://github.com/nuxt/content/blob/83b13f58/docs/nuxt.config.js#L3
  * - https://github.com/nuxt/content/blob/83b13f58/packages/theme-docs/src/index.js
  *
- * TODO:
+ * @TODO
  * - fontFamily: Roboto
  *   variant: light
  *   size:

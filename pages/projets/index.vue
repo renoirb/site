@@ -18,14 +18,14 @@
     </app-very-old-article>
     <h2 class="mb-2 text-xl">Projets</h2>
     <p>Quelques projets personnels que j'ai publié.</p>
-    <div v-for="document in documents" :key="document.slug">
+    <div v-for="content in contents" :key="content.slug">
       <h3 class="mb-2 text-lg">
-        <nuxt-link v-if="document.to" :to="document.to">
-          {{ document.title }}
+        <nuxt-link v-if="content.to" :to="content.to">
+          {{ content.title }}
         </nuxt-link>
-        <span v-else>{{ document.title }}</span>
+        <span v-else>{{ content.title }}</span>
       </h3>
-      <nuxt-content :document="document" />
+      <nuxt-content :document="content" />
       <hr />
     </div>
   </div>
@@ -35,7 +35,7 @@
   import { defineComponent } from '@nuxtjs/composition-api'
   import { INuxtContentResult } from '~/lib'
   export interface Data {
-    document: INuxtContentResult
+    content: INuxtContentResult
   }
   export interface Props {}
   export default defineComponent<Props, Data>({
@@ -43,13 +43,13 @@
       const pageKey = 'page-projets-initiale-pour-faire-une-migration'
       const locale = 'fr-CA'
       const query = $content('projects')
-      const documents = (await query
+      const contents = (await query
         .where({ pageKey: { $contains: pageKey }, locale: { $eq: locale } })
         .sortBy('date', 'desc')
         .fetch()) as INuxtContentResult[]
 
       return {
-        documents,
+        contents,
       }
     },
   })

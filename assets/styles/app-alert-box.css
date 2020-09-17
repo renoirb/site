@@ -1,0 +1,24 @@
+/**
+ * @TODO Fix TailwindCSS’s layer nested syntax?
+ *
+@layer components {
+ */
+.app-alert-box {
+  @apply px-4 py-3 rounded-lg;
+  & a {
+    @apply underline;
+  }
+  & a:hover {
+    @apply text-yellow-900;
+  }
+  & header {
+    @apply font-bold mb-2;
+  }
+  & .disposition-item {
+    @apply py-1;
+  }
+  & .addemdum {
+    @apply py-2;
+  }
+}
+/* } */

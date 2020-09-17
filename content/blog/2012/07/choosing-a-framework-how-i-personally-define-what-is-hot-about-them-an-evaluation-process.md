@@ -211,32 +211,37 @@ organizer of the ConFoo conference.
   http://fabien.potencier.org/article/64/php-is-much-better-than-you-think#comments
 [2]: http://fabien.potencier.org/
 [3]: /blog/tag/geranium
-[4]:
-  http://beta.renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo
+[4]: /blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo
 [5]: http://confoo.ca/en/
 [6]: /blog/tag/devlab
-[7]:
-  https://www.w3schools.com/php/default.asp
-  'Shining example of a proliferation of bad code example, not just for HTML'
-
-choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process#my-favourites-contributors
-[9]: https://en.wikipedia.org/wiki/Single_responsibility_principle [10]:
-https://stackoverflow.com/questions/9467828/which-one-to-go-yii-or-symfony/11621120#answer-11621120
-[11]: http://twig.sensiolabs.org/ [12]:
-https://symfony.com/doc/current/components/dependency_injection/introduction.html
-[13]: http://phemto.sourceforge.net/ [14]:
-https://symfony.com/doc/current/components/class_loader.html [15]:
-https://symfony.com/doc/current/book/translation.html [16]:
-https://github.com/daylerees/laravel-bob [17]: http://cukes.info/ [18]:
-http://rspec.info/ [19]: http://behat.org/ [20]:
-http://www.php.net/manual/en/migration54.changes.php [21]:
-http://www.phptherightway.com/ [22]:
-https://github.com/codeguy/php-the-right-way [23]: http://www.php-fig.org/ [24]:
-https://symfony.com/ [25]:
-http://www.doctrine-project.org/en/latest/tutorials/getting-started.html [26]:
-http://docs.doctrine-project.org/en/latest/reference/inheritance-mapping.html
-[27]: http://schlitt.info/opensource/blog.html [28]:
-http://schlitt.info/opensource/blog/0709_defining_a_framework.html [29]:
-http://www.jwage.com/ [30]: https://thephp.cc/portfolio [31]:
-https://github.com/stof [32]: https://github.com/schmittjoh [33]:
-http://nelm.io/jordi [34]: http://rocketlab.liip.ch/ [35]: http://knplabs.com/
+[7]: https://www.w3schools.com/php/default.asp
+[9]: https://en.wikipedia.org/wiki/Single_responsibility_principle
+[10]:
+  https://stackoverflow.com/questions/9467828/which-one-to-go-yii-or-symfony/11621120#answer-11621120
+[11]: http://twig.sensiolabs.org/
+[12]:
+  https://symfony.com/doc/current/components/dependency_injection/introduction.html
+[13]: http://phemto.sourceforge.net/
+[14]: https://symfony.com/doc/current/components/class_loader.html
+[15]: https://symfony.com/doc/current/book/translation.html
+[16]: https://github.com/daylerees/laravel-bob
+[17]: http://cukes.info/
+[18]: http://rspec.info/
+[19]: http://behat.org/
+[20]: http://www.php.net/manual/en/migration54.changes.php
+[21]: http://www.phptherightway.com/
+[22]: https://github.com/codeguy/php-the-right-way
+[23]: http://www.php-fig.org/
+[24]: https://symfony.com/
+[25]: http://www.doctrine-project.org/en/latest/tutorials/getting-started.html
+[26]:
+  http://docs.doctrine-project.org/en/latest/reference/inheritance-mapping.html
+[27]: http://schlitt.info/opensource/blog.html
+[28]: http://schlitt.info/opensource/blog/0709_defining_a_framework.html
+[29]: http://www.jwage.com/
+[30]: https://thephp.cc/portfolio
+[31]: https://github.com/stof
+[32]: https://github.com/schmittjoh
+[33]: http://nelm.io/jordi
+[34]: http://rocketlab.liip.ch/
+[35]: http://knplabs.com/

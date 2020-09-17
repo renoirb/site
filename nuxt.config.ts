@@ -1,15 +1,10 @@
 import { NuxtConfig } from '@nuxt/types'
-import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity } from './lib'
+import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity, IS_CI } from './lib'
 import tailwindConfig from './tailwind.config'
 
 const appIdentity = fromProcessEnvToAppIdentity(process.env)
 
 const isProduction = process.env.NODE_ENV === 'production'
-const isCi =
-  ('IS_CI' in process.env && typeof process.env.IS_CI === 'string') ||
-  'GITHUB_ACTION' in process.env
-
-// console.log('nuxt.config.js', { isProduction, isCi, PRODUCTION_BASE_PATH }) // eslint-disable-line
 
 const main: NuxtConfig = {
   /*
@@ -65,7 +60,7 @@ const main: NuxtConfig = {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['~/plugins/prism'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -73,7 +68,7 @@ const main: NuxtConfig = {
   components: true,
   router: {
     middleware: ['redirects', 'init'],
-    base: isCi ? PRODUCTION_BASE_PATH : '/',
+    base: IS_CI ? PRODUCTION_BASE_PATH : '/',
   },
   /*
    ** Nuxt.js dev-modules
@@ -131,6 +126,7 @@ const main: NuxtConfig = {
   purgeCSS: {
     mode: 'postcss',
     enabled: isProduction,
+    whitelist: [/token$/],
   },
   /*
    ** Build configuration

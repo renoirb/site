@@ -15,21 +15,7 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { IAppHeaderNavItems } from '~/lib'
-  const nav: IAppHeaderNavItems[] = [
-    {
-      label: 'Blog',
-      to: '/blog',
-    },
-    {
-      label: 'Projects',
-      to: '/projects',
-    },
-    {
-      label: 'About',
-      to: '/hello',
-    },
-  ]
+  import { IAppHeaderNavItems, appHeaderNav } from '~/lib'
   export interface Data {
     nav: IAppHeaderNavItems[]
   }
@@ -40,7 +26,7 @@
     name: 'AppHeader' /* app-header */,
     data() {
       return {
-        nav,
+        nav: appHeaderNav,
       }
     },
   })

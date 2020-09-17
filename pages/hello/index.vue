@@ -8,7 +8,7 @@
     <b class="w-150 float-left my-2 mr-4">
       <img width="150" itemprop="image" src="@/assets/images/avatar.jpg" />
     </b>
-    <nuxt-content :document="document" />
+    <nuxt-content :document="content" />
   </section>
 </template>
 
@@ -16,7 +16,7 @@
   import Vue from 'vue'
   import { INuxtContentResult } from '~/lib'
   export interface Data {
-    document: INuxtContentResult
+    content: INuxtContentResult
   }
   export interface Methods {}
   export interface Computed {}
@@ -24,9 +24,9 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     layout: 'blank',
     async asyncData({ $content }) {
-      const document = await $content('hello').fetch()
+      const content = await $content('hello').fetch()
       return {
-        document,
+        content,
       }
     },
   })

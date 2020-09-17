@@ -27,7 +27,7 @@ const ROUTER_LOCATION_KEYS = new Set([
   'params',
   'append',
   'replace',
-  // TODO, improve this and remove?
+  /** @TODO improve this and remove? */
   '__ob__',
   'false',
 ])

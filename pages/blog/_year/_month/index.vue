@@ -7,12 +7,12 @@
       <div class="body">
         <ul>
           <li
-            v-for="document in documents"
-            :key="document.slug"
-            :lang="document.locale ? document.locale : 'en-CA'"
+            v-for="content in contents"
+            :key="content.slug"
+            :lang="content.locale ? content.locale : 'en-CA'"
           >
-            <nuxt-link :to="document.path">
-              {{ document.title }}
+            <nuxt-link :to="content.path">
+              {{ content.title }}
             </nuxt-link>
           </li>
         </ul>
@@ -26,7 +26,7 @@
   import { Temporal } from 'proposal-temporal'
   import { INuxtContentIndexResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentIndexResult[]
+    contents: INuxtContentIndexResult[]
     year: string
     month: string
     pageTitle: string
@@ -38,8 +38,8 @@
     async asyncData({ $content, params }) {
       const { year, month } = params
 
-      let documents: INuxtContentIndexResult[] = []
-      documents = await $content('blog', year, month, { deep: true })
+      let contents: INuxtContentIndexResult[] = []
+      contents = await $content('blog', year, month, { deep: true })
         .sortBy('date', 'desc')
         .only(['title', 'date', 'slug', 'locale', 'path'])
         .fetch()
@@ -63,7 +63,7 @@
 
       return {
         pageTitle,
-        documents,
+        contents,
         year,
         month,
       }

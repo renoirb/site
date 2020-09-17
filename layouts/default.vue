@@ -3,7 +3,7 @@
     <app-header class="top" />
     <main class="zone__sandwich__meat middle container mx-auto">
       <div class="grid">
-        <div class="mx-5 mt-5">
+        <div class="m-10 mt-5">
           <nuxt />
         </div>
       </div>

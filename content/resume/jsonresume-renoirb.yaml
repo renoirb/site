@@ -5,6 +5,7 @@ meta:
   canonical: http://registry.jsonresume.org/renoirb
   alternate: https//renoirb.com/resume/detailed
   source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
+  _source: https://github.com/renoirb/site/blob/2020/content/resume/jsonresume-renoirb.yaml
 
 basics:
   name: Renoir Boulanger

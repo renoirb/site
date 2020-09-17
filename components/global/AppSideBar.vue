@@ -110,7 +110,7 @@
       },
     },
     data() {
-      // TODO: Make sure we get Nuxt context properly (below instead of ts-ignore--ing)
+      /* @TODO Make sure we get Nuxt context properly (below instead of ts-ignore--ing) */
       // @ts-ignore
       const { context = {} } = this.$root || {}
       let appTitle = ''

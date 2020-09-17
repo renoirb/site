@@ -8,6 +8,7 @@
 @import './vars.css';
 @import './global.css';
 @import './nuxt-content.css';
+@import './app-alert-box.css';
 
 .zone__sandwich {
   & .top {

@@ -9,39 +9,44 @@
     </strong>
     <ul v-if="tags.length > 0" v-bind="labeler.labelee" class="taxonomy-items">
       <li v-for="tag in tags" :key="tag" class="px-2 py-1 mr-2">
-        <nuxt-link :to="`/blog/tag/${tag}`">{{ tag }}</nuxt-link>
+        <!-- eslint-disable vue/no-v-html -->
+        <nuxt-link :to="`/blog/tag/${tag}`" v-html="abbreviatize(tag)" />
       </li>
     </ul>
-    <span v-else class="taxonomy-items">(...)</span>
+    <span v-else class="taxonomy-items text-xs">(...)</span>
   </div>
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
+  import Vue, { PropOptions } from 'vue'
   import {
     INuxtContentResult,
     typeGuardNuxtContentResult,
     Labeler,
     ILabeler,
+    abbreviatize,
+    IAbbreviatize,
   } from '~/lib'
   export interface Data {
     labeler: ILabeler
   }
-  export interface Methods {}
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
   export interface Computed {
     tags: string[]
   }
   export interface Props {
-    document: INuxtContentResult
+    content: INuxtContentResult
   }
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'AppArticleTags' /* app-article-tags */,
     props: {
-      document: {
+      content: {
         type: Object,
         validator: typeGuardNuxtContentResult,
         required: true,
-      },
+      } as PropOptions<INuxtContentResult>,
     },
     data() {
       const label = 'Tags'
@@ -52,7 +57,7 @@
     },
     computed: {
       tags(): string[] {
-        const { tags = [] } = this.document
+        const { tags = [] } = this.content
         const _tags = new Set<string>()
         for (const tag of tags) {
           if (typeof tag === 'string' && tag.replace(/[\s\t/]/g, '') !== '') {
@@ -61,6 +66,9 @@
         }
         return Array.from(_tags)
       },
+    },
+    methods: {
+      abbreviatize,
     },
   })
 </script>

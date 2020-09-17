@@ -16,7 +16,16 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "@nuxt/content", "@nuxt/components"]
+    "types": [
+      "@nuxt/components",
+      "@nuxt/content",
+      "@nuxt/http",
+      "@nuxt/types",
+      "@types/js-yaml",
+      "@types/node",
+      "@types/prismjs",
+      "jsonresume-from-yaml"
+    ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

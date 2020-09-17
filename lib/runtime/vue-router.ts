@@ -39,6 +39,25 @@ export interface IAppHeaderNavItems {
   to: string
 }
 
+export const appHeaderNav: IAppHeaderNavItems[] = [
+  {
+    label: 'Blog',
+    to: '/blog',
+  },
+  {
+    label: 'Projects',
+    to: '/projects',
+  },
+  {
+    label: 'Resume',
+    to: '/resume',
+  },
+  {
+    label: 'About',
+    to: '/hello',
+  },
+]
+
 /**
  * Extract from Vue-Router collection of
  * parts of URL for a bread-crumb.
@@ -69,10 +88,8 @@ export interface IAppHeaderNavItems {
  * - https://stackoverflow.com/a/57689774
  */
 export const routeToCrumbs = (route: Route): IRouteCrumb[] => {
-  const {
-    params = {} as Route['params'],
-    matched = [] as Route['matched'],
-  } = route
+  const { params = {} as Route['params'], matched = [] as Route['matched'] } =
+    route || {}
 
   const mapper = (r: RouteRecord, index: number): IRouteCrumb => {
     const { name, path } = r

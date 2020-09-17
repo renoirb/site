@@ -27,3 +27,7 @@ export const FALLBACK_TODAY_DATE = new Date().toISOString()
 export const YEAR_CONSIDERED_OLD = 2017
 
 export const PRODUCTION_BASE_PATH = '/site'
+
+export const IS_CI =
+  ('IS_CI' in process.env && typeof process.env.IS_CI === 'string') ||
+  'GITHUB_ACTION' in process.env

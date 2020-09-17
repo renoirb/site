@@ -1,9 +1,13 @@
 <template>
   <section class="pages__blog--parent">
     <div
-      class="pages-blog--parent--top justify-items-stretch grid h-20 grid-cols-2 gap-4"
+      class="pages-blog--parent--top justify-items-stretch grid grid-cols-2 gap-4"
     >
-      <app-bread-crumb :route="$route" class="flex" />
+      <app-bread-crumb
+        v-if="!!$route && $route.params && $route.matched"
+        :route="$route"
+        class="flex"
+      />
       <form
         class="justify-self-end flex items-center justify-center"
         @submit.prevent="submit"
@@ -16,7 +20,7 @@
           autocomplete="off"
           name="q"
           placeholder="e.g. linux"
-          class="focus:outline-none focus:shadow-outline px-4 py-2 leading-normal border border-gray-300 rounded"
+          class="focus:font-bold focus:shadow-outline px-4 py-2 leading-normal border border-gray-300 rounded"
         />
       </form>
     </div>
@@ -28,7 +32,6 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import AppBreadCrumb from '@/components/AppBreadCrumb.vue'
   export interface Data {
     q: string
   }
@@ -37,7 +40,7 @@
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
-      'app-bread-crumb': AppBreadCrumb,
+      'app-bread-crumb': () => import('@/components/AppBreadCrumb.vue'),
     },
     data() {
       return {
@@ -48,7 +51,8 @@
       q: {
         immediate: true,
         handler() {
-          const { q = '' } = this.$route.query
+          const { query = {} } = this.$route
+          const { q = '' } = query
           this.$router
             .replace({ query: q !== '' ? { q } : undefined })
             .catch(() => {})
@@ -56,7 +60,8 @@
       },
     },
     beforeMount() {
-      const { q = '' } = this.$route.query
+      const { query = {} } = this.$route
+      const { q = '' } = query
       this.q = typeof q === 'string' ? q : ''
     },
     methods: {

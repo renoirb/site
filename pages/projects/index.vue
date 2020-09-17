@@ -6,8 +6,8 @@
       </div>
       <div class="body">
         <ul>
-          <li v-for="document in documents" :key="document.slug">
-            <nuxt-link :to="document.path">{{ document.title }}</nuxt-link>
+          <li v-for="content in contents" :key="content.slug">
+            <nuxt-link :to="content.path">{{ content.title }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -19,7 +19,7 @@
   import Vue from 'vue'
   import { INuxtContentResult } from '~/lib'
   export interface Data {
-    documents: INuxtContentResult
+    contents: INuxtContentResult
     q: string
   }
   export interface Methods {}
@@ -34,11 +34,11 @@
         query = query.search(q)
         // OR query = query.search('title', q)
       }
-      const documents = await query.where({ index: { $ne: true } }).fetch()
+      const contents = await query.where({ index: { $ne: true } }).fetch()
 
       return {
         q,
-        documents,
+        contents,
       }
     },
     watch: {

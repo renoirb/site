@@ -8,9 +8,11 @@
  */
 declare module '*.vue' {
   import Vue from 'vue'
-  // Place any unimported plugins here
-  // TODO: See why we can't put in tsconfig.js in types
-  // import '@nuxtjs/axios'
+  /**
+   * Place any unimported plugins here
+   * @TODO See why we can't put in tsconfig.js in types
+   */
+  import '@nuxt/types'
   import '@nuxt/components'
   import '@nuxt/content'
   import '@nuxtjs/color-mode'

@@ -29,14 +29,14 @@
   const tags = new Set<string>()
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content }) {
-      const documents = (await $content('blog', { deep: true })
+      const contents = (await $content('blog', { deep: true })
         .sortBy('date', 'desc')
         .fetch()) as INuxtContentResult[]
 
-      for (const document of documents) {
-        if ('tags' in document) {
+      for (const content of contents) {
+        if ('tags' in content) {
           // @ts-ignore
-          tags.add(...(document.tags || []))
+          tags.add(...(content.tags || []))
         }
       }
       for (const [tag] of tags.entries()) {
