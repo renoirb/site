@@ -16,6 +16,12 @@ const main = {
         proseWrap: 'always',
       },
     },
+    {
+      files: ['*.yaml', '*.yml'],
+      options: {
+        proseWrap: 'always',
+      },
+    },
   ],
 }
 

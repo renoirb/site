@@ -44,7 +44,9 @@
         .only(['title', 'date', 'slug', 'locale', 'path'])
         .fetch()
 
-      const dateObj = Temporal.Date.from(`${year}-${month}-01`)
+      let temporalDate: Temporal.Date | null = null
+
+      temporalDate = Temporal.Date.from(`${year}-${month}-01`)
       const locale = 'fr-CA'
       const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#Syntax
@@ -52,9 +54,11 @@
       const localeStringOptions = {
         year: 'numeric',
         month: 'long',
-        timeZone: 'America/Los_Angeles',
       }
-      const localeString = dateObj.toLocaleString(locale, localeStringOptions)
+      const localeString = temporalDate.toLocaleString(
+        locale,
+        localeStringOptions,
+      )
       const pageTitle = `${publishedIn} ${localeString}`
 
       return {

@@ -19,7 +19,7 @@
     baseurl: string
   }
   export default defineComponent<Props>({
-    name: 'GitHubPagesRedirect',
+    name: 'GitHubPagesRedirect' /* git-hub-pages-redirect */,
     head: {},
     props: {
       to: {

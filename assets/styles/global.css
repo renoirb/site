@@ -1,0 +1,5 @@
+body {
+  background-color: var(--bg);
+  color: var(--color-title);
+  transition: background-color 0.3s;
+}

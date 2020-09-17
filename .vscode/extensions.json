@@ -5,13 +5,15 @@
     "dariofuzinato.vue-peek",
     "dbaeumer.vscode-eslint",
     "gamunu.vscode-yarn",
-    "humao.rest-client",
     "jasonnutter.search-node-modules",
     "kisstkondoros.vscode-codemetrics",
     "mrmlnc.vscode-attrs-sorter",
     "octref.vetur",
     "sdras.vue-vscode-snippets",
     "wix.vscode-import-cost",
+    "bradlc.vscode-tailwindcss",
+    "austenc.tailwind-docs",
+    "bourhaouta.tailwindshades",
     "bradlc.vscode-tailwindcss"
   ]
 }

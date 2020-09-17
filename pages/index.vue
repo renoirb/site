@@ -1,7 +1,25 @@
 <template>
   <div class="pages__index--parent">
-    <h1>Renoir Boulanger’s upcoming site <small>Work in progress</small></h1>
-    <ul>
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col w-full mb-20 text-center">
+        <h1 class="mb-1 font-serif text-xl italic">
+          Renoir Boulanger’s upcoming site <small>Work in progress</small>
+        </h1>
+
+        <p class="lg:w-2/3 mx-auto text-base leading-relaxed">
+          It’s been more than ten years that I haven't touched my site and I
+          want to make-use of my skills working with Vue.js and modern Front End
+          of the last years back to my own profit.
+        </p>
+        <nuxt-link
+          to="/blog/2020/09/porting-all-my-content"
+          class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 px-4 py-2 mb-4 font-semibold text-white rounded"
+        >
+          Continue reading...
+        </nuxt-link>
+      </div>
+    </div>
+    <ul class="mt-20">
       <li><nuxt-link to="/blog">Blog</nuxt-link></li>
       <li><nuxt-link to="/hello">Hello</nuxt-link></li>
       <li><nuxt-link to="/ligne-editoriale">Ligne éditoriale</nuxt-link></li>

@@ -1,8 +1,13 @@
 <template>
   <div class="pages-projects--slug">
-    <nuxt-link to="/projects">Projects</nuxt-link>
-    <h2>{{ document.title }}</h2>
-    <nuxt-content :document="document" />
+    <div class="document document--collection">
+      <div class="title page-title">
+        <h1>{{ document.title }}</h1>
+      </div>
+      <div class="body">
+        <nuxt-content :document="document" />
+      </div>
+    </div>
   </div>
 </template>
 

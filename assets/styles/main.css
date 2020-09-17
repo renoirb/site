@@ -2,79 +2,56 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-:root {
-  --color-sandwich-bg: #000;
-  --color-sandwich-text: #fff;
-  --color-container: #fff;
-  --color-backdrop: #e5e5e5;
-  --bg: var(--color-backdrop);
-  --color: #577f79;
-  --color-primary: #214761;
-  --color-secondary: #bb3f3f;
-  --color-tertiary: #cb7723;
-  --bg-secondary: #e5e5e5;
-  --border-color: #aaa;
+/* purgecss start ignore */
+@import 'prism-themes/themes/prism-material-oceanic.css';
+
+@import './vars.css';
+@import './global.css';
+@import './nuxt-content.css';
+
+.zone__sandwich {
+  & .top {
+    @apply h-20;
+  }
+  & .middle {
+    @apply pt-20 pb-10;
+  }
 }
 
-.dark-mode {
-  --color-sandwich-bg: #000;
-  --color-sandwich-text: #fff;
-  --color-container: #577f79;
-  --color-backdrop: #214761;
-  --bg: var(--color-backdrop);
-  --color: #f4f7f3;
-  --color-primary: #577f79;
-  --color-secondary: #fdf9f3;
-  --bg-secondary: #214761;
-  --border-color: #061a17;
+.zone__sandwich__meat {
+  background-color: var(--color-container);
 }
-
-body {
-  background-color: var(--bg);
-  color: var(--color);
-  transition: background-color 0.3s;
+.zone__sandwich__top {
+  background-color: var(--color-sandwich-bg);
+  color: var(--color-sandwich-text);
+  & .app-side-bar__nav {
+    @apply italic font-serif !important;
+  }
 }
-
-.zone__sandwich__top,
 .zone__sandwich__bottom {
   background-color: var(--color-sandwich-bg);
   color: var(--color-sandwich-text);
 }
-.zone__sandwich__meat {
-  background-color: var(--color-container);
+
+.taxonomy {
+  & .taxonomy-label {
+    @apply sr-only;
+  }
+  & .taxonomy-items {
+    & li {
+      @apply inline-block bg-gray-200 rounded-full text-xs;
+    }
+    & li:hover {
+      @apply bg-gray-500;
+    }
+  }
 }
 
-.document .title,
-.app-side-bar__nav {
-  @apply italic font-serif;
+.document {
+  & .title {
+    @apply italic font-serif text-2xl;
+    color: var(--color-title);
+  }
 }
 
-.taxonomy .taxonomy-label {
-  @apply sr-only;
-}
-.taxonomy .taxonomy-items li {
-  @apply inline-block text-gray-700 bg-gray-200 rounded-full px-3 py-1 mr-2 text-xs;
-}
-
-.document .title {
-  @apply text-xl;
-}
-.document .body {
-  @apply font-light;
-}
-
-.document .body li {
-  @apply list-inside;
-
-  color: inherit;
-}
-.document .body ul {
-  list-style-type: disc;
-}
-.document .body ol {
-  list-style-type: lower-roman;
-}
-.document .body li,
-.document .body blockquote {
-  @apply pl-4;
-}
+/* purgecss end ignore */

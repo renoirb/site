@@ -1,0 +1,27 @@
+# https://github.com/pixijs/pixi.js/blob/dev/.github/workflows/nodejs.yml
+# https://github.com/actions/setup-node
+name: Node.js CI
+
+on:
+  push:
+    branches: ['**']
+    tags: ['**']
+  release:
+    types: ['created']
+  pull_request:
+    branches: ['**']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn
+      - run: yarn lint
+      - run: yarn build

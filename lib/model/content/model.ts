@@ -7,7 +7,8 @@ export interface INuxtContentResult extends Result {
   tags: string[]
   categories: string[]
   locale: string
-  date: Date | string
+  oldArticle?: string
+  date: string
 }
 
 export type INuxtContentIndexResult = Pick<

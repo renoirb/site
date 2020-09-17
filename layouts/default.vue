@@ -36,7 +36,7 @@
     head() {
       // https://vue-meta.nuxtjs.org/api/#htmlattrs
       const htmlAttrs = {
-        class: ['layout--default'],
+        class: ['layout--default', 'zone__sandwich'],
       }
 
       const out = {
@@ -46,12 +46,3 @@
     },
   })
 </script>
-
-<style scoped>
-  .top {
-    @apply h-20;
-  }
-  .middle {
-    @apply pt-20 pb-10;
-  }
-</style>

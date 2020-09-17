@@ -1,8 +1,14 @@
 <template>
   <section class="pages__blog--parent">
-    <div class="pages-blog--parent--top">
-      <form @submit.prevent="submit">
-        <label for="search">blog:</label>
+    <div
+      class="pages-blog--parent--top justify-items-stretch grid h-20 grid-cols-2 gap-4"
+    >
+      <app-bread-crumb :route="$route" class="flex" />
+      <form
+        class="justify-self-end flex items-center justify-center"
+        @submit.prevent="submit"
+      >
+        <label for="search" class="sr-only">Search within blog:</label>
         <input
           id="search"
           v-model="q"
@@ -14,7 +20,6 @@
         />
       </form>
     </div>
-    <app-bread-crumb :route="$route" class="my-4" />
     <div class="pages-blog--parent--bottom">
       <nuxt-child :q="q" />
     </div>

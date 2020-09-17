@@ -1,5 +1,5 @@
 module.exports = {
-  '**/*.{js,ts,md,ts,json,vue}': [
+  '**/*.{yml,yaml,js,ts,md,ts,json,vue}': [
     'use-cross-env prettier --ignore-path .prettierignore --ignore-unknown --write',
   ],
   '*.{scss,css,vue}': ['yarn run lint:style'],

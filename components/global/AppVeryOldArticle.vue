@@ -2,16 +2,12 @@
   <div
     v-if="isOldEnough === true"
     :class="styleMap.outer"
-    class="relative border rounded"
+    class="disposition-parent"
     role="alert"
   >
-    <div class="px-2 py-1 font-bold" :class="styleMap.heading">
-      {{ title }}
-    </div>
-    <div class="px-2 py-1">
-      {{ message }}
-    </div>
-    <div v-if="$slots.default" class="addemdum px-2 py-1">
+    <header class="disposition-item">{{ title }}</header>
+    <div class="disposition-item">{{ message }}</div>
+    <div v-if="$slots.default" class="addemdum">
       <slot />
     </div>
   </div>
@@ -67,7 +63,7 @@
   )
 
   export default Vue.extend<Data, Methods, Computed, Props>({
-    name: 'VeryOldArticle',
+    name: 'AppVeryOldArticle' /* app-very-old-article */,
     props: {
       locale: {
         type: String,
@@ -133,8 +129,16 @@
 </script>
 
 <style scoped>
+  .disposition-parent {
+    @apply bg-yellow-200 text-yellow-700 px-4 py-3;
+  }
+  .disposition-parent header {
+    @apply font-bold mb-2;
+  }
+  .disposition-item {
+    @apply px-2 py-1;
+  }
   .addemdum {
-    margin: 5px 0;
-    border-color: 1px solid #555;
+    @apply px-2;
   }
 </style>

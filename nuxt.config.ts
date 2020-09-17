@@ -1,14 +1,17 @@
-/* eslint-disable camelcase */
-
+import { NuxtConfig } from '@nuxt/types'
 import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity } from './lib'
 import tailwindConfig from './tailwind.config'
 
 const appIdentity = fromProcessEnvToAppIdentity(process.env)
 
 const isProduction = process.env.NODE_ENV === 'production'
-const isCi = 'IS_CI' in process.env && typeof process.env.IS_CI === 'string'
+const isCi =
+  ('IS_CI' in process.env && typeof process.env.IS_CI === 'string') ||
+  'GITHUB_ACTION' in process.env
 
-export default {
+// console.log('nuxt.config.js', { isProduction, isCi, PRODUCTION_BASE_PATH }) // eslint-disable-line
+
+const main: NuxtConfig = {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -114,9 +117,15 @@ export default {
     exposeConfig: true,
     config: tailwindConfig,
   },
+  // https://color-mode.nuxtjs.org/
+  colorMode: {
+    preference: 'light',
+    fallback: 'light',
+    classSuffix: '',
+  },
   webfontloader: {
     google: {
-      families: ['Roboto:400,500,700', 'Roboto Mono'],
+      families: ['Roboto:100,400,500,700', 'Roboto Mono'],
     },
   },
   purgeCSS: {
@@ -129,9 +138,23 @@ export default {
    */
   build: {
     extractCSS: true,
+    // No need for different file names,
+    // we are OK with same file names.
+    // No need to cache for eternity, under heavy traffic, it's OK
+    // Same file served from browser cache not too long.
+    filenames: {
+      app: () => '[name].js',
+      chunk: () => '[name].js',
+      css: () => '[name].css',
+      img: () => '[path][name].[ext]',
+      font: () => '[path][name].[ext]',
+      video: () => '[path][name].[ext]',
+    },
   },
   generate: {
     dir: 'dist',
   },
   typescript: {},
 }
+
+export default main

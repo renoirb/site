@@ -11,12 +11,14 @@
         </dd>
         <dd class="font-mono">v{{ version }}</dd>
       </dl>
+      <div class="items-item disposition-item">
+        <app-color-mode />
+      </div>
     </footer>
   </div>
 </template>
 
 <script lang="ts">
-  /* eslint-disable camelcase */
   import Vue from 'vue'
   import { IAppIdentity } from '~/lib'
   export interface Data {}

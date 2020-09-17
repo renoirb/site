@@ -9,10 +9,10 @@
     </header>
     <div class="body">
       <div>
-        <h2>very-old-article</h2>
+        <h2>app-very-old-article</h2>
         <div>
-          <very-old-article locale="en-UK" date="2014-01-01">
-          </very-old-article>
+          <app-very-old-article locale="en-UK" date="2014-01-01">
+          </app-very-old-article>
         </div>
       </div>
       <div>

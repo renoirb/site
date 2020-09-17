@@ -22,6 +22,10 @@
       to: '/blog',
     },
     {
+      label: 'Projects',
+      to: '/projects',
+    },
+    {
       label: 'About',
       to: '/hello',
     },

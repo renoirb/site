@@ -1,0 +1,97 @@
+/**
+ * copy-pasta of good starting point nuxt-content nested HTML
+ * Bookmark:
+ * - https://github.com/nuxt/content/blob/%40nuxt/content-theme-docs%400.6.0/packages/theme-docs/src/assets/css/main.css#L14-L88
+ */
+
+.nuxt-content {
+  @apply break-words font-light;
+
+  & a {
+    @apply underline text-indigo-500;
+  }
+  & a:hover {
+    @apply text-indigo-800;
+  }
+
+  & .nuxt-content-highlight {
+    @apply relative grid;
+
+    /* Style filename span added by @nuxt/content */
+    & > .filename {
+      @apply absolute right-0 top-0 text-gray-100 z-10 font-mono text-sm tracking-tight leading-none mr-4 mt-3;
+    }
+
+    /* Add top padding to code blocks with filename */
+    & > .filename + pre[class*='language-'] {
+      @apply pt-8 bg-gray-800 static;
+    }
+
+    & pre {
+      @apply overflow-scroll break-all;
+    }
+
+    /* Style copy button added in `pages/_.vue` */
+    & > .copy {
+      @apply hidden absolute right-0 bottom-0 leading-none shadow-lg px-2 py-2 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold mr-3 mb-3;
+
+      &:hover {
+        @apply bg-gray-700;
+      }
+
+      &:focus {
+        @apply outline-none bg-gray-600;
+      }
+    }
+    &:hover {
+      & > .copy {
+        @apply block;
+      }
+    }
+  }
+
+  /** ***** **/
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    @apply mt-5 mb-2 italic font-serif;
+
+    color: var(--color-subtitle);
+  }
+  & h2,
+  & h1 {
+    color: var(--color-title);
+  }
+  & h2 {
+    @apply text-2xl;
+  }
+  & h3 {
+    @apply text-xl;
+  }
+  & h4,
+  & h5,
+  & h6 {
+    @apply text-lg;
+  }
+  & li {
+    @apply list-inside;
+
+    color: inherit;
+  }
+  & ul {
+    list-style-type: disc;
+  }
+  & ol {
+    @apply italic;
+
+    list-style-type: lower-roman;
+  }
+  & li,
+  & blockquote {
+    @apply pl-4;
+  }
+}

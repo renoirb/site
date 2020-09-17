@@ -27,15 +27,18 @@
 
 const path = require('path')
 const defaultTheme = require('tailwindcss/defaultTheme')
-const typography = require('@tailwindcss/typography')
-// const plugin = require('tailwindcss/plugin')
-// const selectorParser = require('postcss-selector-parser')
+const plugin = require('tailwindcss/plugin')
+const selectorParser = require('postcss-selector-parser')
 
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
+  experimental: {
+    darkModeVariant: false,
+  },
+  dark: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -46,25 +49,24 @@ module.exports = {
         secondary: '#BB3F3F',
         tertiary: '#CB7723',
         primary: {
-          100: '#DBE5DE',
-          200: '#99B3A7',
-          300: '#577F79' /* color */,
-          400: '#16444B',
-          500: '#0A2A25',
-          600: '#092622',
-          700: '#0A2A25',
-          800: '#081F1C',
-          900: '#214761' /* primary */,
-          910: '#061A17',
+          100: '#E6FAF2',
+          200: '#BFF3E0',
+          300: '#99EBCD',
+          400: '#4DDCA7',
+          500: '#00CD81',
+          600: '#00B974',
+          700: '#007B4D',
+          800: '#005C3A',
+          900: '#003E27',
         },
         backdrop: {
           100: '#F4F7F3',
           200: '#E5E5E5',
         },
       },
-      maxHeight: {
-        '(screen-16)': 'calc(100vh - 4rem)',
-      },
+      // maxHeight: {
+      //   '(screen-16)': 'calc(100vh - 4rem)',
+      // },
       inset: {
         16: '4rem',
       },
@@ -107,6 +109,7 @@ module.exports = {
             borderWidth: 1,
             borderColor: theme('colors.gray.200'),
             borderRadius: theme('borderRadius.default'),
+            wordBreak: 'all',
           },
           'code::before': {
             content: '',
@@ -122,7 +125,6 @@ module.exports = {
           },
         },
       },
-      /*
       dark: {
         css: {
           color: theme('colors.gray.300'),
@@ -179,13 +181,12 @@ module.exports = {
           },
         },
       },
-      */
     }),
   },
-  /*
   variants: {
     margin: ['responsive', 'last'],
     padding: ['responsive', 'hover'],
+    wordBreak: ['responsive', 'hover', 'focus'],
     backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'dark-focus'],
     textColor: [
       'responsive',
@@ -199,9 +200,7 @@ module.exports = {
     borderWidth: ['responsive', 'first', 'last'],
     typography: ['responsive', 'dark'],
   },
-  */
   plugins: [
-    /*
     plugin(function ({ addVariant, prefix, e }) {
       addVariant('dark', ({ modifySelectors, separator }) => {
         modifySelectors(({ selector }) => {
@@ -229,8 +228,7 @@ module.exports = {
         })
       })
     }),
-    */
-    typography,
+    require('@tailwindcss/typography'),
   ],
   purge: {
     mode: 'layers',

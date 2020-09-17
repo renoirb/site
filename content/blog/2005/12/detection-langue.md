@@ -3,6 +3,9 @@ locale: fr-CA
 published: true
 title: Detection de langue
 date: 2005-12-22
+oldArticle:
+  D’autant plus que j’ai écrit ça bien avant de réaliser comment c’est un appel
+  aux erreurs que de tout mettre dans le «global scope»
 categories:
   - Programmation
 tags:

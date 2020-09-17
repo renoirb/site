@@ -12,6 +12,15 @@
   "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.run": "onType",
+  "files.associations": {
+    "*.css": "vue-postcss"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[vue-postcss]": {
+    "breadcrumbs.showVariables": true
+  },
   "[vue]": {
     "editor.formatOnSave": false
   },
@@ -34,8 +43,5 @@
     ".nuxt/**": true,
     "dist/**": true,
     "node_modules": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
   }
 }

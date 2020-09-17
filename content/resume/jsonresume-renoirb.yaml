@@ -192,6 +192,12 @@ work:
     hidden: false
     startDate: '2016-11-07'
     endDate: '2017-05-01'
+    summary:
+      Software development, Simplification of Docker Compose multi-container
+      build to be more automated and reliable build for each service and
+      internal service modules, also worked on deployment scripts leveraging GNU
+      Make, Ansible, and Front-End Development with Vue.js and Yii 3 and Symfony
+      2
 
   - name: &name 6973051 Canada Inc.
     client: &client Colloquial / Betastream

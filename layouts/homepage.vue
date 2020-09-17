@@ -1,23 +1,26 @@
 <template>
-  <div>
-    <app-header />
-    <main class="container mx-auto">
+  <div class="layouts--homepage">
+    <app-header class="top" />
+    <main class="zone__sandwich__meat middle container mx-auto">
       <div class="grid">
-        <div class="mt-5">
+        <div class="p-10 mx-5 mt-5">
           <nuxt />
         </div>
       </div>
     </main>
+    <app-footer v-bind="appIdentity" class="bottom" />
   </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
+  import DefaultLayout from './default.vue'
   export default Vue.extend({
+    extends: DefaultLayout,
     head() {
       // https://vue-meta.nuxtjs.org/api/#htmlattrs
       const htmlAttrs = {
-        class: ['layout--homepage'],
+        class: ['layout--homepage', 'zone__sandwich'],
       }
 
       const out = {

@@ -8,10 +8,8 @@
       {{ labeler.label.textContent }}
     </strong>
     <ul v-if="tags.length > 0" v-bind="labeler.labelee" class="taxonomy-items">
-      <li v-for="tag in tags" :key="tag">
-        <nuxt-link :to="`/blog/tag/${tag}`">
-          {{ tag }}
-        </nuxt-link>
+      <li v-for="tag in tags" :key="tag" class="px-2 py-1 mr-2">
+        <nuxt-link :to="`/blog/tag/${tag}`">{{ tag }}</nuxt-link>
       </li>
     </ul>
     <span v-else class="taxonomy-items">(...)</span>

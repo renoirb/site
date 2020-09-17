@@ -4,7 +4,11 @@
       class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto"
     >
       <div class="app-side-bar__identity md:px-5 flex items-center">
-        <button class="md:hidden mr-2" aria-label="Open Menu" @click="drawer">
+        <button
+          class="md:hidden ml-5 mr-2"
+          aria-label="Open Menu"
+          @click="drawer"
+        >
           <svg
             fill="none"
             stroke="currentColor"
@@ -20,7 +24,9 @@
         <nuxt-link to="/" class="identity__text">{{ appTitle }}</nuxt-link>
       </div>
       <div class="app-side-bar__nav flex items-center">
-        <div class="md:flex md:justify-between md:bg-transparent hidden">
+        <div
+          class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden"
+        >
           <slot />
         </div>
       </div>

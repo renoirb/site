@@ -1,6 +1,6 @@
 <template>
   <div class="pages__projets--index">
-    <very-old-article locale="fr-CA" date="2013-02-21T22:21:10-04:00">
+    <app-very-old-article locale="fr-CA" date="2013-02-21T22:21:10-04:00">
       <p>
         Cette section est gardée telle qu'elle l'était au moment de la
         migration.
@@ -15,7 +15,7 @@
         projets et les organiserai dans la section
         <nuxt-link to="/projects">/projects</nuxt-link>.
       </p>
-    </very-old-article>
+    </app-very-old-article>
     <h2 class="mb-2 text-xl">Projets</h2>
     <p>Quelques projets personnels que j'ai publié.</p>
     <div v-for="document in documents" :key="document.slug">

@@ -44,6 +44,19 @@
         default: '',
       },
     },
+    async asyncData({ $content, query }) {
+      let { q = '' } = query
+      q = typeof q === 'string' ? q : ''
+      let documents: INuxtContentResult[] = []
+      let ds = $content('blog', { deep: true }).sortBy('date', 'desc')
+      if (q) {
+        ds = ds.search(q)
+      }
+      documents = await ds.fetch()
+      return {
+        documents,
+      }
+    },
     data() {
       return {
         documents: [],
@@ -68,11 +81,11 @@
       let { q = '' } = this.$route.query
       q = typeof q === 'string' ? q : ''
       let documents: INuxtContentResult[] = []
-      let query = this.$content('blog', { deep: true }).sortBy('date', 'desc')
+      let ds = this.$content('blog', { deep: true }).sortBy('date', 'desc')
       if (q) {
-        query = query.search(q)
+        ds = ds.search(q)
       }
-      documents = await query.fetch()
+      documents = await ds.fetch()
       this.documents = documents
     },
   })

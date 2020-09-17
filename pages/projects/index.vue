@@ -1,12 +1,17 @@
 <template>
   <div class="pages__blog--index">
-    <nuxt-link to="/">Home</nuxt-link>
-    <input id="search" v-model="q" placeholder="Search..." />
-    <ul>
-      <li v-for="document in documents" :key="document.slug">
-        <nuxt-link :to="document.path">{{ document.title }}</nuxt-link>
-      </li>
-    </ul>
+    <div class="document document--item">
+      <div class="title page-title">
+        <h1>Projects</h1>
+      </div>
+      <div class="body">
+        <ul>
+          <li v-for="document in documents" :key="document.slug">
+            <nuxt-link :to="document.path">{{ document.title }}</nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -65,11 +65,16 @@
 </script>
 
 <style scoped>
+  .breadcrumb {
+    @apply font-serif italic;
+  }
+  .breadcrumb a:hover {
+    @apply underline;
+  }
   .breadcrumb li + li::before {
     display: inline-block;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
     content: '/';
-    @apply text-purple-500;
   }
 </style>

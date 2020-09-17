@@ -39,9 +39,8 @@ Je me suis dit: _faisons-en un script_!
 Nous voulions...
 
 - Faciliter le travail car on savait qu'il faudrait souvent transférer, plus
-  d'une fois, chacune des bases de données;  
-  Car nous devions faire fonctionner le site sur le nouveau serveur _avant_ de
-  transférer les DNS.
+  d'une fois, chacune des bases de données; Car nous devions faire fonctionner
+  le site sur le nouveau serveur _avant_ de transférer les DNS.
 - Entrer une commande _minimale_ et en conserver les configurations;
 - Que le _nouveau_ serveur réalise la tâche a lui-seul, sans prérequis sur le
   serveur distant;
@@ -99,6 +98,8 @@ Nous voulions...
 **Version disponible sous GitHub gist**
 
 J'ai crée une copie dans un [gist github pour partager le script][0].
+
+<code-block label="MigrateMySQL" active>
 
 ```bash
 #!/bin/bash
@@ -360,5 +361,7 @@ case "$1" in
   *)  usage;exit 0;;
 esac
 ```
+
+</code-block>
 
 [0]: https://gist.github.com/renoirb/5770703
