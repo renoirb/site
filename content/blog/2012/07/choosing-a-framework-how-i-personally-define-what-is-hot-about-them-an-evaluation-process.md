@@ -1,5 +1,7 @@
 ---
 locale: en-CA
+cover: ~/assets/content/blog/2012/07/everything-with-php-sauce.png
+coverAlt: Everything goes with PHP Sauce
 keywords:
   - php
   - framework
@@ -36,8 +38,6 @@ This week, I had to bring to a team of people what I consider a good PHP
 framework and why I am sold. I am aware that I may sound blinded with my choice,
 but this post is about explaining my own guidelines about my choice. I work with
 them since many years and that made me try many in the PHP ecosystem.
-
-![Everything goes with PHP Sauce](blog/2012/07/everything-with-php-sauce.png)
 
 Things can get messy with PHP, that's why we have to be very cautious on how we
 structure and consider recommendations from other good programmers.

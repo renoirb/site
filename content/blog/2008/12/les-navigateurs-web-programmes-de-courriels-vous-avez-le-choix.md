@@ -78,7 +78,7 @@ l'interpréteur («ce qui fait fonctionner») JavaScript.
 
 J'ai seulement cette image, et je la trouve drôle:
 
-![HA HA! I'm using «the Internet»](blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg)
+<app-image alt="HA HA! I'm using «the Internet»" src="~/assets/content/blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg"></app-image>
 
 C'est, au final, une question de choix
 

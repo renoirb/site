@@ -2,14 +2,16 @@
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web/'
 title: Une petite lecture sur les attrapes-nigaud sur le web
+cover: ~/assets/content/blog/2009/07/dvd_rewinder.jpg
+coverCaption:
+  Un «re-bobineur» de disques DVD, comme il en existait pour les VHS, même si
+  totalement inutile
 categories:
   - Tranche de vie
 tags:
   - with-images
 date: '2009-07-02T22:17:40-04:00'
 ---
-
-![A DVD Rewinder](blog/2009/07/dvd_rewinder.jpg)
 
 Cette semaine j'ai vu deux annonces de statut dans [Mon profil Facebook][0] qui
 disaient quelque chose de similaire à ...

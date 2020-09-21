@@ -82,8 +82,10 @@
         return YEAR_CONSIDERED_OLD > this.year
       },
     },
+    created() {
+      this.shouldBeVisible = this.isOldEnough
+    },
     beforeMount() {
-      this.alertType = 'warn'
       const langCode = this.langCode
       let textContent = ''
       const maybeTextContent =

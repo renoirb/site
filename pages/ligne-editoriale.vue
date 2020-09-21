@@ -23,7 +23,7 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content, error }) {
       const pageKey = 'editorial-guideline'
-      const locale = 'en-CA'
+      const locale = 'fr-CA'
       const ds = $content('pages')
       const contents = (await ds
         .where({ pageKey: { $contains: pageKey }, locale: { $eq: locale } })

@@ -1,6 +1,8 @@
 ---
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/'
+cover: ~/assets/content/blog/2013/02/renoir-boulanger-prensentant-web-in-2013.jpg
+coverCaption: Durant la présentation donnée au Web-In 2013
 title:
   'Conférence: Comment évaluer le niveau de qualité d’un site web selon les
   techniques d’intégration web d’actualité'
@@ -71,7 +73,7 @@ conférence, c'était une belle surprise.
 
 Mon ami [François Légaré][4] a pris cette photo:
 
-![Il y avait foule lors de ma présentation au Web à Québec](blog/2013/02/presentation-renoir-web-a-quebec-qualite-integration-web.jpg)
+<app-image figcaption="Il y avait foule lors de ma présentation au Web à Québec" src="~/assets/content/blog/2013/02/presentation-renoir-web-a-quebec-qualite-integration-web.jpg"></app-image>
 
 ## Merci à
 
@@ -81,7 +83,7 @@ Mon ami [François Légaré][4] a pris cette photo:
 4. [**@vivrass**: Martin Provencher][8] pour l'inspiration de l'angle technique
    à couvrir.
 
-[0]: http://mtldgtl.com/fr/web-in/
+[0]: https://web.archive.org/web/20121121144432/http://mtldgtl.com/fr/web-in/
 [1]: http://webaquebec.org/
 [2]: https://twitter.com/snookca
 [3]: http://renoirboulanger.com/files/201302-slides.pdf

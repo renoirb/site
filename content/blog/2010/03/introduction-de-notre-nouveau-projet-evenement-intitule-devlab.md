@@ -7,6 +7,8 @@ keywords:
   - evenements
 canonical: 'https://renoirboulanger.com/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab/'
 title: Introduction de notre nouveau projet-événement intitulé DevLab
+cover: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
+coverAlt: devLabMtl.org
 categories:
   - Tranche de vie
 tags:
@@ -15,9 +17,9 @@ tags:
 date: '2010-03-17T11:29:41-04:00'
 ---
 
-![devLabMtl.org](blog/2010/03/devLAB_LogoURL_Coul_small.png) Moi et mes
-partenaires d’affaries des [GeekNights][1] (_Stéphan Champagne_, _Etienne
-Lachance_) planifions un projet qu'on a baptisé <em lang="en">devLab</em>.
+Moi et mes partenaires d’affaires des [GeekNights][1] (_Stéphan Champagne_,
+_Etienne Lachance_) planifions un projet qu'on a baptisé
+<em lang="en">devLab</em>.
 
 Nos [GeekNights][1] étaient bien plaisants a nous trois mais nous voulons
 partager avec d'autres passionnés. C'est l'origine de l'idée du DevLab.
@@ -73,10 +75,11 @@ les alliances pour permettre ce type d'événement d'une façon récurrente.
 
 ### Première sortie publique
 
-![MonDev Open Source Week Montreal](blog/2010/03/mondev_logo.jpg) Nous serons
-présents lors de la première de [MonDev][5] et nous participerons aussi à la
-compétition «[For the Web coding competition][6]» sponsorisé par Microsoft
-Canada. Venez nous voir!
+<app-image figcaption="MonDev Open Source Week Montreal" alt="MonDev: Montreal Developer community" src="~/assets/content/blog/2010/03/mondev_logo.jpg"></app-image>
+
+Nous serons présents lors de la première de ~~MonDev~~ et nous participerons
+aussi à la compétition «[For the Web coding competition][6]» sponsorisé par
+Microsoft Canada. Venez nous voir!
 
 ### Appel a la collaboration
 
@@ -91,6 +94,5 @@ du projet.
 (NDLR: événements récurrents ont cessés vers 2012)
 
 [1]: /blog/tag/geeknight
-[5]: http://mondev.org/
 [6]:
   http://www.webnotwar.ca/ftw/?wt.mc_id=can_partner-ftw-en_blog_community&who=evocatio

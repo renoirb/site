@@ -2,12 +2,16 @@
 keywords: ['web', 'au']
 canonical: 'https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo/'
 title: Lancement de l’annee 2011 pour la conférence ConFoo
-categories: ['Logiciel libre']
-tags: ['cloud-computing', 'php', 'w3qc', 'xml']
+cover: ~/assets/content/blog/2010/09/logo_confoo_150_39.gif
+coverCaption: ConFoo.ca Web Techno Conference
+categories:
+  - Logiciel libre
+tags:
+  - cloud-computing
+  - phpquebec
+  - w3qc
 date: '2010-09-08T01:43:00-04:00'
 ---
-
-![ConFoo.ca Web Techno Conférence](blog/2010/09/logo_confoo_150_39.gif)
 
 Depuis le debut de l'ete je me suis joint à l'organisation de la [conférence
 ConFoo][0] qui couvre les sujets technique comme les langages PHP, .Net, Python

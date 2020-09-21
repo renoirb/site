@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="shouldBeVisible"
     :class="styleMap.outer"
     :data-alert-type="alertType"
     class="disposition-parent app-alert-box"
@@ -38,6 +39,7 @@
   export interface Data {
     messageTextContent: string
     titleTextContent: string
+    shouldBeVisible: boolean
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -75,6 +77,7 @@
       return {
         messageTextContent,
         titleTextContent,
+        shouldBeVisible: true,
       }
     },
     computed: {

@@ -4,6 +4,8 @@ keywords:
   - ignite
   - montral
 canonical: https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal
+cover: ~/assets/content/blog/2010/03/giw_montreal.png
+coverAlt: Ignite Montréal
 title: La première de Ignite Montréal
 categories:
   - Tranche de vie
@@ -12,8 +14,6 @@ tags:
   - with-images
 date: '2010-03-03T08:41:27-04:00'
 ---
-
-![Ignite Montréal](blog/2010/03/giw_montreal.png)
 
 Mardi 2 Mars 2010 avait lieu la première soirée de [Ignite Montréal][0]. Il
 s'agit dune soirée ou les participants ont 5 minutes pour nous parler d'un sujet

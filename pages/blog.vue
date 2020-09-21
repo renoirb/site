@@ -1,7 +1,7 @@
 <template>
   <section class="pages__blog--parent">
     <div
-      class="pages-blog--parent--top justify-items-stretch grid grid-cols-2 gap-4"
+      class="pages-blog--parent--top justify-items-stretch md:grid-cols-2 grid grid-cols-1 gap-4"
     >
       <app-bread-crumb
         v-if="!!$route && $route.params && $route.matched"

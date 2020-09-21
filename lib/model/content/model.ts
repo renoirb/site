@@ -15,6 +15,9 @@ export interface INuxtContentResult extends IBaseNuxtContentResult {
   categories: string[]
   locale: string
   oldArticle?: string
+  cover?: string
+  coverCaption?: string
+  coverAlt?: string
   date: string
 }
 

@@ -3,8 +3,8 @@
     <header class="title page-title">
       <h1>Kitchen Sink</h1>
       <em>
-        Some hard-coded HTML patternsto make sure PostCSS purging doesn’t remove
-        stuff
+        Some hard-coded HTML patterns to make sure PostCSS purging doesn’t
+        remove stuff
       </em>
     </header>
     <div class="body">

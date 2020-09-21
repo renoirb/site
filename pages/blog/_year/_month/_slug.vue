@@ -4,6 +4,7 @@
       :locale="content.locale || 'en-CA'"
       :date="content.date"
       class="my-4"
+      alert-type="warn"
     >
       {{ veryOldContent }}
     </app-very-old-article>
@@ -19,6 +20,13 @@
       </div>
       <app-article-tags :content="content" class="mt-0 mb-5" />
       <div class="body mt-10">
+        <app-image
+          v-if="coverImage !== ''"
+          :src="coverImage"
+          :alt="coverImageAlt"
+          :figcaption="coverImageCaption"
+          class="md:float-right md:ml-5 mb-5"
+        />
         <nuxt-content :document="content" />
       </div>
     </div>
@@ -39,6 +47,8 @@
     year: string
     month: string
     slug: string
+    coverImage: '' | string
+    coverImageCaption: '' | string
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -59,14 +69,23 @@
       let publishedAtString: string | '' = ''
       let temporalDate: Temporal.Date | null = null
       let veryOldContent: string | null = null
+      let coverImage: string | '' = ''
+      let coverImageCaption: string | '' = ''
+      let coverImageAlt: string | '' = ''
 
       try {
         content = await $content('blog', year, month, slug).fetch()
         const {
           date = `${year}-${month}-01`,
           oldArticle = null,
+          cover = '',
+          coverCaption = '',
+          coverAlt = '',
           locale = 'en-CA',
         } = content as INuxtContentResult
+        coverImage = cover
+        coverImageCaption = coverCaption
+        coverImageAlt = coverAlt
         veryOldContent = oldArticle
         temporalDate = Temporal.Date.from(String(date))
         const localeStringOptions = {
@@ -85,13 +104,16 @@
       }
 
       return {
-        publishedAtString,
-        veryOldContent,
-        temporalDate,
-        year,
-        month,
-        slug,
         content,
+        coverImage,
+        coverImageCaption,
+        coverImageAlt,
+        month,
+        publishedAtString,
+        slug,
+        temporalDate,
+        veryOldContent,
+        year,
       }
     },
     methods: {
