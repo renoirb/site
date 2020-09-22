@@ -13,10 +13,8 @@
         <!-- eslint-disable vue/no-v-html -->
         <h1 v-html="abbreviatize(content.title)" />
       </div>
-      <div v-if="temporalDate" class="mt-0 mb-5 font-serif text-sm italic">
-        <time :datetime="temporalDate">
-          {{ publishedAtString }}
-        </time>
+      <div v-if="date.temporalDate" class="mt-0 mb-5 font-serif text-sm italic">
+        <time :datetime="date.temporalDate"> {{ date.formatted }} </time>
       </div>
       <app-article-tags :content="content" class="mt-0 mb-5" />
       <div class="body mt-10">
@@ -34,16 +32,18 @@
 </template>
 
 <script lang="ts">
+  /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
-  import { Temporal } from 'proposal-temporal'
   import {
     abbreviatize,
-    ensureValidCalendar,
     IAbbreviatize,
     INuxtContentResult,
+    getPrettyfiedTemporalDate,
+    IPrettyfiedTemporalDate,
   } from '~/lib'
   export interface Data {
     content: INuxtContentResult
+    date: IPrettyfiedTemporalDate
     year: string
     month: string
     slug: string
@@ -62,56 +62,45 @@
     async asyncData({ $content, params, error }) {
       const { year, month, slug } = params
 
-      // TODO: Make configurable for current user, like dark-mode would, and preferred locale
-      const userPreferedCalendar = ensureValidCalendar('gregory')
-
       let content: INuxtContentResult | void
-      let publishedAtString: string | '' = ''
-      let temporalDate: Temporal.Date | null = null
       let veryOldContent: string | null = null
       let coverImage: string | '' = ''
       let coverImageCaption: string | '' = ''
       let coverImageAlt: string | '' = ''
 
+      let leakOutLocale: string | '' = ''
+
       try {
         content = await $content('blog', year, month, slug).fetch()
         const {
-          date = `${year}-${month}-01`,
           oldArticle = null,
           cover = '',
           coverCaption = '',
           coverAlt = '',
           locale = 'en-CA',
         } = content as INuxtContentResult
+        leakOutLocale = locale
         coverImage = cover
         coverImageCaption = coverCaption
         coverImageAlt = coverAlt
         veryOldContent = oldArticle
-        temporalDate = Temporal.Date.from(String(date))
-        const localeStringOptions = {
-          calendar: userPreferedCalendar,
-          weekday: 'long',
-          day: 'numeric',
-          year: 'numeric',
-          month: 'long',
-        }
-        publishedAtString = temporalDate.toLocaleString(
-          locale,
-          localeStringOptions,
-        )
       } catch (e) {
         error({ message: 'Document not found' })
       }
+
+      const date = getPrettyfiedTemporalDate(
+        content as INuxtContentResult,
+        leakOutLocale,
+      )
 
       return {
         content,
         coverImage,
         coverImageCaption,
         coverImageAlt,
+        date,
         month,
-        publishedAtString,
         slug,
-        temporalDate,
         veryOldContent,
         year,
       }

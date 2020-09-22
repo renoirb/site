@@ -8,10 +8,11 @@
   @apply break-words font-light;
 
   & a {
-    @apply underline text-indigo-500;
+    @apply underline;
+    color: var(--color-subtitle);
   }
   & a:hover {
-    @apply text-indigo-800;
+    color: var(--color-title);
   }
 
   & .nuxt-content-highlight {

@@ -15,14 +15,14 @@
 }
 
 .dark-mode {
-  --color-sandwich-bg: #000;
+  --color-sandwich-bg: #214761;
   --color-sandwich-text: #fff;
-  --color-container: #577f79;
-  --color-backdrop: #214761;
+  --color-container: #5d839d;
+  --color-backdrop: #000;
   --bg: var(--color-backdrop);
   --color: #f4f7f3;
   --color-title: #262626;
-  --color-subtitle: #999;
+  --color-subtitle: #262626;
   --color-primary: #577f79;
   --color-secondary: #fdf9f3;
   --bg-secondary: #214761;

@@ -7,4 +7,5 @@ module.exports = {
     'use-cross-env conventions-use-eslint --fix --ext .ts,.tsx,.js,.vue --ignore-path .gitignore',
   ],
   'package.json': ['yarn run fix:sort-package-json'],
+  '**/*.xml': ['use-cross-env prettier --write'],
 }

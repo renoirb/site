@@ -11,9 +11,18 @@
           <li
             v-for="content in contents"
             :key="content.slug"
-            :lang="content.locale ? content.locale : 'en-CA'"
+            class="mb-1 text-lg"
           >
-            <nuxt-link :to="content.path">
+            <nuxt-link
+              :lang="content.locale ? content.locale : 'en-CA'"
+              :to="{
+                path: content.path,
+                meta: {
+                  locale: content.locale ? content.locale : 'en-CA',
+                  date: content.date,
+                },
+              }"
+            >
               {{ content.title }}
             </nuxt-link>
           </li>
@@ -41,7 +50,7 @@
       let contents: INuxtContentIndexResult[] = []
       contents = await $content('blog', year, { deep: true })
         .sortBy('date', 'desc')
-        .only(['title', 'date', 'slug', 'locale', 'path'])
+        .only(['title', 'date', 'createdAt', 'slug', 'locale', 'path'])
         .fetch()
 
       const pageTitle = `Published in ${year}`

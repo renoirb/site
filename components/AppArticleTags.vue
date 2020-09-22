@@ -8,9 +8,16 @@
       {{ labeler.label.textContent }}
     </strong>
     <ul v-if="tags.length > 0" v-bind="labeler.labelee" class="taxonomy-items">
-      <li v-for="tag in tags" :key="tag" class="px-2 py-1 mr-2">
+      <li
+        v-for="tag in tags"
+        :key="tag"
+        class="px-2 py-1 mr-2"
+        :class="{ hoverized: link }"
+      >
         <!-- eslint-disable vue/no-v-html -->
-        <nuxt-link :to="`/blog/tag/${tag}`" v-html="abbreviatize(tag)" />
+        <span v-if="link === false" v-html="abbreviatize(tag)" />
+        <!-- eslint-disable vue/no-v-html -->
+        <nuxt-link v-else :to="`/blog/tag/${tag}`" v-html="abbreviatize(tag)" />
       </li>
     </ul>
     <span v-else class="taxonomy-items text-xs">(...)</span>
@@ -38,6 +45,7 @@
   }
   export interface Props {
     content: INuxtContentResult
+    link: boolean
   }
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'AppArticleTags' /* app-article-tags */,
@@ -47,6 +55,10 @@
         validator: typeGuardNuxtContentResult,
         required: true,
       } as PropOptions<INuxtContentResult>,
+      link: {
+        type: Boolean,
+        default: true,
+      },
     },
     data() {
       const label = 'Tags'

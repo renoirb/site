@@ -1,5 +1,6 @@
 <template>
   <div class="pages-projects--slug">
+    <app-bread-crumb :route="$route" class="flex" />!
     <div class="document document--collection">
       <div class="title page-title">
         <h1>{{ content.title }}</h1>
@@ -12,6 +13,7 @@
 </template>
 
 <script lang="ts">
+  /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
   import { INuxtContentResult } from '~/lib'
   export interface Data {

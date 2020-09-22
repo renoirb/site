@@ -1,22 +1,36 @@
 <template>
   <div class="pages__index--parent">
     <div class="container mx-auto">
-      <div class="flex flex-col w-full text-center">
-        <h1 class="mb-1 font-serif text-xl italic">
-          Renoir Boulanger’s upcoming site <small>Work in progress</small>
-        </h1>
-        <p class="lg:w-2/3 mx-auto text-base leading-relaxed">
-          It’s been more than ten years that I haven't touched my site and I
-          want to make-use of my skills working with Vue.js and modern Front End
-          of the last years back to my own profit.
-        </p>
-        <nuxt-link
-          to="/blog/2020/09/porting-all-my-content"
-          class="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 px-4 py-2 mx-10 my-4 font-semibold text-white rounded"
+      <ul>
+        <li
+          v-for="content in contents"
+          :key="content.slug"
+          class="mb-8 text-lg"
         >
-          Continue reading...
-        </nuxt-link>
-      </div>
+          <nuxt-link
+            :lang="content.locale ? content.locale : 'en-CA'"
+            :to="{
+              path: content.path,
+              meta: {
+                locale: content.locale ? content.locale : 'en-CA',
+                date: content.date,
+              },
+            }"
+          >
+            {{ content.title }}
+          </nuxt-link>
+          <div v-if="temporalDate" class="mt-0 mb-5 font-serif text-sm italic">
+            <time :datetime="temporalDate">
+              {{ publishedAtString }}
+            </time>
+          </div>
+          <app-article-tags
+            :link="false"
+            :content="content"
+            class="mt-0 mb-4"
+          />
+        </li>
+      </ul>
     </div>
     <ul class="mt-20">
       <li><nuxt-link to="/blog">Blog</nuxt-link></li>
@@ -36,11 +50,26 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  export interface Data {}
+  import { INuxtContentResult } from '~/lib'
+  export interface Data {
+    contents: INuxtContentResult
+  }
   export interface Methods {}
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     layout: 'homepage',
+    async asyncData({ $content }) {
+      const tag = 'Favourites'
+      let contents: INuxtContentResult[] = []
+      contents = await $content('blog', { deep: true })
+        .where({ tags: { $contains: tag } })
+        .sortBy('createdAt', 'desc')
+        .fetch()
+
+      return {
+        contents,
+      }
+    },
   })
 </script>

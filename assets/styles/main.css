@@ -42,8 +42,9 @@
     & li {
       @apply inline-block bg-gray-200 rounded-full text-xs;
     }
-    & li:hover {
+    & li.hoverized:hover {
       @apply bg-gray-500;
+      color: white;
     }
   }
 }
@@ -53,6 +54,10 @@
     @apply italic font-serif text-2xl;
     color: var(--color-title);
   }
+}
+
+kbd {
+  @apply font-mono bg-blue-500 text-white font-bold py-1 px-2 rounded inline-block uppercase;
 }
 
 /* purgecss end ignore */

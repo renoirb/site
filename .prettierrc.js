@@ -22,6 +22,12 @@ const main = {
         proseWrap: 'always',
       },
     },
+    {
+      files: ['*.svg'],
+      options: {
+        proseWrap: 'always',
+      },
+    },
   ],
 }
 

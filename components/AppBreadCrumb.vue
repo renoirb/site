@@ -22,7 +22,7 @@
     render(h): VNode {
       const items: VNode[] = []
       const crumbs = routeToCrumbs(this.route)
-      if (crumbs.length > 1) {
+      if (crumbs.length > 0) {
         items.push(
           ...crumbs.map((p) => {
             return h(

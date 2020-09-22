@@ -11,7 +11,15 @@
             :key="content.slug"
             :lang="content.locale ? content.locale : 'en-CA'"
           >
-            <nuxt-link :to="content.path">
+            <nuxt-link
+              :to="{
+                path: content.path,
+                meta: {
+                  locale: content.locale ? content.locale : 'en-CA',
+                  date: content.date,
+                },
+              }"
+            >
               {{ content.title }}
             </nuxt-link>
           </li>

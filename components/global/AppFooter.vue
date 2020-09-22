@@ -10,9 +10,10 @@
           <a :href="`mailto:${email}`">{{ email }}</a>
         </dd>
         <dd class="font-mono">v{{ version }}</dd>
+        <app-color-mode />
       </dl>
       <div class="items-item disposition-item">
-        <app-color-mode />
+        <nuxt-link to="/ligne-editoriale">Ligne éditoriale</nuxt-link>
       </div>
     </footer>
   </div>
