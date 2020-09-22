@@ -15,7 +15,8 @@ date: &createdAt '2008-04-14T22:48:36-04:00'
 createdAt: *createdAt
 categories:
   - Tranche de vie
-tags: []
+tags:
+  - evenements
 ---
 
 Le groupe Canonical a comme habitude de faire une release de sa distribution

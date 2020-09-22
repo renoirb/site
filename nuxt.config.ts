@@ -126,7 +126,7 @@ const main: NuxtConfig = {
   purgeCSS: {
     mode: 'postcss',
     enabled: isProduction,
-    whitelist: [/token$/],
+    whitelist: [/token$/, /^dark-mode/, /^light-mode/],
   },
   /*
    ** Build configuration

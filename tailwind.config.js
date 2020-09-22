@@ -243,7 +243,7 @@ module.exports = {
       'nuxt.config.ts',
     ],
     options: {
-      whitelist: ['light-mode', 'taxonomy', 'document'],
+      whitelist: ['dark-mode', 'light-mode', 'taxonomy', 'document'],
     },
   },
 }

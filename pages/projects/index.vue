@@ -1,13 +1,24 @@
 <template>
-  <div class="pages__blog--index">
+  <div class="pages__projects--index">
     <div class="document document--item">
       <div class="title page-title">
         <h1>Projects</h1>
       </div>
-      <div class="body">
+      <div class="body mt-8">
         <ul>
-          <li v-for="content in contents" :key="content.slug">
-            <nuxt-link :to="content.path">{{ content.title }}</nuxt-link>
+          <li
+            v-for="content in contents"
+            :key="content.slug"
+            class="mt-0 mb-5 font-serif text-lg italic"
+          >
+            <nuxt-link :to="content.path" class="mb-2">
+              {{ content.title }}
+            </nuxt-link>
+            <app-article-tags
+              :link="false"
+              :content="content"
+              class="mt-2 mb-4"
+            />
           </li>
         </ul>
       </div>

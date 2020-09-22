@@ -11,7 +11,7 @@
         class="clearfix ml-10"
       ></inline-svg>
       <div class="grid">
-        <div class="p-10 mx-5 mt-5">
+        <div class="m-10">
           <nuxt />
         </div>
       </div>

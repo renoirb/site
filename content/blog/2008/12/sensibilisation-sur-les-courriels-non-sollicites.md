@@ -58,7 +58,7 @@ de ma carrière à faire du code pour deux logiciels qui devraient être
 compatibles; le navigateur Internet Explorer, et pour ceux qui utilisent les
 navigateurs répondants aux [standards du web][1].
 
-### Pourquoi j'écris ce courriel?
+### Pourquoi j'écris ~~ce courriel~~ tout ceci?
 
 J'écris tout ceci simplement pour faire un peu de sensibilisation sur le
 courriel non sollicité.

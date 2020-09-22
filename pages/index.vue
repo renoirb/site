@@ -1,14 +1,14 @@
 <template>
   <div class="pages__index--parent">
-    <div class="container mx-auto">
+    <div class="document document--item">
       <ul>
         <li
           v-for="content in contents"
           :key="content.slug"
           class="mb-8 text-lg"
+          :lang="content.locale ? content.locale : 'en-CA'"
         >
           <nuxt-link
-            :lang="content.locale ? content.locale : 'en-CA'"
             :to="{
               path: content.path,
               meta: {
@@ -16,12 +16,16 @@
                 date: content.date,
               },
             }"
+            class="font-serif italic"
           >
             {{ content.title }}
           </nuxt-link>
-          <div v-if="temporalDate" class="mt-0 mb-5 font-serif text-sm italic">
-            <time :datetime="temporalDate">
-              {{ publishedAtString }}
+          <div
+            v-if="content.prettifiedDate.temporalDate"
+            class="mt-0 mb-5 text-xs"
+          >
+            <time :datetime="content.prettifiedDate.temporalDate">
+              {{ content.prettifiedDate.formatted }}
             </time>
           </div>
           <app-article-tags
@@ -32,27 +36,23 @@
         </li>
       </ul>
     </div>
-    <ul class="mt-20">
-      <li><nuxt-link to="/blog">Blog</nuxt-link></li>
-      <li><nuxt-link to="/hello">Hello</nuxt-link></li>
-      <li><nuxt-link to="/ligne-editoriale">Ligne éditoriale</nuxt-link></li>
-      <li><nuxt-link to="/about">About me</nuxt-link></li>
-      <li>
-        <nuxt-link to="/projets">
-          Projets (permalink legacy to migrate from in french)
-        </nuxt-link>
-      </li>
-      <li><nuxt-link to="/styleguide">styleguide</nuxt-link></li>
-    </ul>
     <nuxt-link class="sr-only" to="/kitchen-sink">Kitchen sink</nuxt-link>
+    <nuxt-link class="sr-only" to="/styleguide">styleguide</nuxt-link>
   </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import {
+    INuxtContentResult,
+    getPrettyfiedTemporalDate,
+    IPrettyfiedTemporalDate,
+  } from '~/lib'
+  export interface IDatedNuxtContentResult extends INuxtContentResult {
+    prettifiedDate: IPrettyfiedTemporalDate
+  }
   export interface Data {
-    contents: INuxtContentResult
+    contents: IDatedNuxtContentResult[]
   }
   export interface Methods {}
   export interface Computed {}
@@ -61,11 +61,21 @@
     layout: 'homepage',
     async asyncData({ $content }) {
       const tag = 'Favourites'
-      let contents: INuxtContentResult[] = []
+      let contents: IDatedNuxtContentResult[] = []
       contents = await $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
         .sortBy('createdAt', 'desc')
         .fetch()
+
+      // Yes, mutating here, but at least what's here
+      // isn’t from the outside and this is useful
+      for (const content of contents) {
+        const prettifiedDate = getPrettyfiedTemporalDate(
+          content,
+          content.locale,
+        )
+        content.prettifiedDate = prettifiedDate
+      }
 
       return {
         contents,

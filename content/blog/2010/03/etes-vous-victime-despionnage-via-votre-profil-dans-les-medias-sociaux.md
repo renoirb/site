@@ -84,6 +84,7 @@ Voici quelques unes de mes pistes...
 
 1. **Écrit dans une langue douteuse avec des «m0t5 su bs7iu é5» (mots
    substitués)** Quoi qu'aujourd'hui c'est beaucoup moins fréquent.
+
 2. **Vous correspondez uniquement en français et la communication est clairement
    remplie de fautes ou dans une autre langue.** Celle là elle est facile!
 3. **Un courriel ou une communication qui vous invite a communiquer «plus
@@ -95,12 +96,6 @@ Voici quelques unes de mes pistes...
    utilisez** (Phishing) Il arrive parfois de recevoir des invitations a se
    connecter au compte en banque d'une banque X connue mais que je sais
    pertinemment que je n'ai aucun avoirs.
-
-   ![Dialogue Facebook, Accès au Parametres de confidentialité](blog/2010/03/277c345c4600aa60f996428df1f1a5e115ad6e4a.png)
-
-   Dialogue Facebook, Accès au Parametres de confidentialité
-
-   ![Dialogue Facebook, bouton Amis uniquement](blog/2010/03/7a5256d19243bdfd2afdd77ced006ec88d4e9382.png)
 
 Je crois avoir fait le tour de mes indices.
 

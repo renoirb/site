@@ -1,7 +1,7 @@
 <template>
   <div class="pages-blog--index">
     <div class="document document--item">
-      <div class="title page-title">
+      <div class="title page-title mb-10">
         <h1 v-if="q !== ''">
           Blog, search results for "<tt>{{ q }}</tt
           >"
@@ -9,10 +9,10 @@
         <h1 v-else>Blog</h1>
       </div>
       <div class="body">
+        <!-- div class="h-5 mb-8 -ml-10" style="background-color: var(--bg)" / -->
         <div
           v-for="inThatYear in contents"
           :key="`buckets-year-${inThatYear[0]}`"
-          class="mb-8"
         >
           <nuxt-link
             :to="{
@@ -20,7 +20,7 @@
               query: { q: q ? q : undefined },
             }"
           >
-            <h2 class="font-serif text-xl italic">{{ inThatYear[0] }}</h2>
+            <h2 class="my-4 font-serif text-2xl italic">{{ inThatYear[0] }}</h2>
           </nuxt-link>
           <ul>
             <li
@@ -37,13 +37,14 @@
                     date: content.date,
                   },
                 }"
+                class="font-serif italic"
               >
                 {{ content.title }}
               </nuxt-link>
               <app-article-tags
                 :link="false"
                 :content="content"
-                class="mt-0 mb-4"
+                class="mt-2 mb-4"
               />
             </li>
           </ul>

@@ -65,6 +65,8 @@ de pouvoir en entretenir le code après plusieurs révisions.
 
 ## Les «slides»
 
+<script async class="speakerdeck-embed" data-id="e6b55b505ea10130f6bb22000a952b58" data-ratio="1.77777777777778" src="https://speakerdeck.com/assets/embed.js"></script>
+
 **[Télécharger en format PDF][3]**
 
 ## Réception

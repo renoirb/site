@@ -11,8 +11,9 @@ title:
 date: &createdAt '2008-04-30T21:23:35-04:00'
 createdAt: *createdAt
 categories:
-  - Tranche de vie
-tags: []
+  - Techniques
+tags:
+  - frande
 ---
 
 J'était en train de me promener dans [Facebook][0] ce soir et j'ai cliqué sur
@@ -85,7 +86,7 @@ Donc, j'était sur _facebook_, je voulait aller voir mes messages sur
 [eHarmony][4] puis justement, à gauche il y avait une de ces annonces
 publicitaires qui me dérangent.
 
-![Annonce faussement représentée de eHarmony sur facebook](blog/2008/04/17ba8b12736f11d0a4b9e4995bef7af52c10ccbf.png)
+![Annonce faussement représentée de eHarmony sur facebook](~/assets/content/blog/2008/04/17ba8b12736f11d0a4b9e4995bef7af52c10ccbf.png)
 
 Il était écrit sur l'image clairement «[eHarmony][6]». Je me suis dit, tiens je
 vais aller voir mes messages! Puis je me suis ramassé sur un autre site. Un site

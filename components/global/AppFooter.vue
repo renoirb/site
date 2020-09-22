@@ -13,7 +13,15 @@
         <app-color-mode />
       </dl>
       <div class="items-item disposition-item">
-        <nuxt-link to="/ligne-editoriale">Ligne éditoriale</nuxt-link>
+        <dl lang="fr-CA" class="see-also">
+          <dt>Voir aussi&hellip;</dt>
+          <dd>
+            <nuxt-link to="/ligne-editoriale"> Ligne éditoriale </nuxt-link>
+          </dd>
+          <dd>
+            <nuxt-link to="/projets"> Projets </nuxt-link>
+          </dd>
+        </dl>
       </div>
     </footer>
   </div>
@@ -61,5 +69,8 @@
 <style scoped>
   .contact dd {
     @apply text-sm;
+  }
+  .nuxt-link-active {
+    @apply underline;
   }
 </style>
