@@ -34,8 +34,10 @@
       }
     },
     watch: {
-      activeTabIndex(newValue) {
-        this.switchTab(newValue)
+      activeTabIndex(newValue, oldValue) {
+        if (newValue !== oldValue) {
+          this.switchTab(newValue)
+        }
       },
     },
     mounted() {
@@ -50,15 +52,33 @@
       this.$nextTick(this.updateHighlighteUnderlinePosition)
     },
     methods: {
-      switchTab(i) {
-        this.tabs.map((tab) => {
-          tab.elm.classList.remove('active')
+      async switchTab(i) {
+        let currentActiveTabIndex = 0
+        const childNodes = this.$el.childNodes
+        await this.$nextTick(() => {
+          childNodes.forEach((node, index) => {
+            const { classList } = node
+            if (classList && classList.contains('code-block')) {
+              if (currentActiveTabIndex === i) {
+                childNodes[index].classList.add('active')
+              }
+              ++currentActiveTabIndex
+            }
+          })
         })
-        this.tabs[i].elm.classList.add('active')
       },
-      updateTabs(i) {
+      async updateTabs(i) {
         this.activeTabIndex = i
         this.updateHighlighteUnderlinePosition()
+        const childNodes = this.$el.childNodes
+        await this.$nextTick(() => {
+          childNodes.forEach((item) => {
+            const { classList } = item
+            if (classList && classList.contains('active')) {
+              classList.remove('active')
+            }
+          })
+        })
       },
       updateHighlighteUnderlinePosition() {
         const activeTab = this.$refs.tabs[this.activeTabIndex]

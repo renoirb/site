@@ -31,12 +31,12 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { Temporal } from 'proposal-temporal'
-  import { INuxtContentIndexResult } from '~/lib'
+  import {
+    INuxtContentIndexResult,
+    transformToPrettyfiedTemporalDate,
+  } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
-    year: string
-    month: string
     pageTitle: string
   }
   export interface Methods {}
@@ -44,36 +44,43 @@
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content, params }) {
+      const locale = 'fr-CA'
       const { year, month } = params
 
       let contents: INuxtContentIndexResult[] = []
-      contents = await $content('blog', year, month, { deep: true })
-        .sortBy('date', 'desc')
-        .only(['title', 'date', 'slug', 'locale', 'path'])
-        .fetch()
+      try {
+        contents = await $content('blog', year, month, { deep: true })
+          .sortBy('date', 'desc')
+          .only(['createdAt', 'date', 'locale', 'path', 'slug', 'title'])
+          .fetch()
+      } catch (_) {
+        // ...
+      }
 
-      let temporalDate: Temporal.Date | null = null
-
-      temporalDate = Temporal.Date.from(`${year}-${month}-01`)
-      const locale = 'fr-CA'
-      const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#Syntax
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#Using_options
-      const localeStringOptions = {
+      const dtfo: Intl.DateTimeFormatOptions = {
         year: 'numeric',
         month: 'long',
       }
-      const localeString = temporalDate.toLocaleString(
+      const prettyfiedTemporalDate = transformToPrettyfiedTemporalDate(
+        params,
         locale,
-        localeStringOptions,
+        dtfo,
       )
-      const pageTitle = `${publishedIn} ${localeString}`
+      const { prettified = '...' } = prettyfiedTemporalDate
+
+      const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
+      const pageTitle = `${publishedIn} ${prettified}`
+
+      const length = (contents || []).length
+      // eslint-disable-next-line
+      console.log('pages/blog/_year/_month/index.vue asyncData', {
+        params,
+        length,
+      })
 
       return {
-        pageTitle,
         contents,
-        year,
-        month,
+        pageTitle,
       }
     },
     head() {

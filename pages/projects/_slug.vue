@@ -1,11 +1,11 @@
 <template>
   <div class="pages-projects--slug">
-    <app-bread-crumb :route="$route" class="flex" />!
     <div class="document document--collection">
       <div class="title page-title">
-        <h1>{{ content.title }}</h1>
+        <!-- eslint-disable vue/no-v-html -->
+        <h1 v-html="abbreviatize(content.title)" />
       </div>
-      <div class="body">
+      <div class="body mt-10">
         <nuxt-content :document="content" />
       </div>
     </div>
@@ -15,11 +15,13 @@
 <script lang="ts">
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     content: INuxtContentResult
   }
-  export interface Methods {}
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
@@ -36,6 +38,9 @@
       return {
         content,
       }
+    },
+    methods: {
+      abbreviatize,
     },
   })
 </script>

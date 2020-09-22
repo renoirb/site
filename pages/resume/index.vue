@@ -137,8 +137,8 @@
     computed: {
       noteAboutSource(): string {
         const out = trimText`
-          Note that the YAML version shown here is the parsed version, the
-          original version is leveraging benefits of the YAML.
+          Note that the YAML version shown here is the parsed version (i.e. same as JSON output),
+          the original version linked below shows the raw version.
         `
         return out
       },

@@ -1,15 +1,14 @@
 <template>
   <section class="pages__blog--parent">
     <div
-      class="pages-blog--parent--top justify-items-stretch md:grid-cols-2 grid grid-cols-1 gap-4"
+      class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"
     >
       <app-bread-crumb
         v-if="!!$route && $route.params && $route.matched"
         :route="$route"
-        class="flex"
       />
       <form
-        class="justify-self-end flex items-center justify-center"
+        class="justify-self-end sm:w-full flex items-center justify-center"
         @submit.prevent="submit"
       >
         <label for="search" class="sr-only">Search within blog:</label>
@@ -51,11 +50,13 @@
       q: {
         immediate: true,
         handler() {
-          const { query = {} } = this.$route
-          const { q = '' } = query
-          this.$router
-            .replace({ query: q !== '' ? { q } : undefined })
-            .catch(() => {})
+          if (this.$route && this.$router) {
+            const { query = {} } = this.$route
+            const { q = '' } = query
+            this.$router
+              .replace({ query: q !== '' ? { q } : undefined })
+              .catch(() => {})
+          }
         },
       },
     },

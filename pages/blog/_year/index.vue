@@ -3,7 +3,7 @@
     <div class="document document--collection">
       <div class="title page-title">
         <h1>
-          Published in <em>{{ year }}</em>
+          {{ pageTitle }}
         </h1>
       </div>
       <div class="body">
@@ -13,6 +13,7 @@
             :key="content.slug"
             class="mb-1 text-lg"
           >
+            <!-- eslint-disable vue/no-v-html -->
             <nuxt-link
               :lang="content.locale ? content.locale : 'en-CA'"
               :to="{
@@ -22,9 +23,8 @@
                   date: content.date,
                 },
               }"
-            >
-              {{ content.title }}
-            </nuxt-link>
+              v-html="abbreviatize(content.title)"
+            />
           </li>
         </ul>
       </div>
@@ -34,32 +34,49 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentIndexResult } from '~/lib'
+  import { INuxtContentIndexResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
-    year: string
     pageTitle: string
   }
-  export interface Methods {}
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content, params }) {
+      const locale = 'fr-CA'
       const { year } = params
 
       let contents: INuxtContentIndexResult[] = []
-      contents = await $content('blog', year, { deep: true })
-        .sortBy('date', 'desc')
-        .only(['title', 'date', 'createdAt', 'slug', 'locale', 'path'])
-        .fetch()
+      try {
+        contents = await $content('blog', year, { deep: true })
+          .sortBy('date', 'desc')
+          .only(['createdAt', 'date', 'locale', 'path', 'slug', 'title'])
+          .fetch()
+      } catch (_) {
+        // ..
+      }
 
-      const pageTitle = `Published in ${year}`
+      const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
+      const pageTitle = `${publishedIn} ${year}`
+
+      const length = (contents || []).length
+      // eslint-disable-next-line
+      console.log('pages/blog/_year/index.vue asyncData', {
+        year,
+        params,
+        length,
+      })
 
       return {
         pageTitle,
         contents,
-        year,
       }
+    },
+    methods: {
+      abbreviatize,
     },
     head() {
       const title = this.pageTitle

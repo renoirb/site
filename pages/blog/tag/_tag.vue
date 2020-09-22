@@ -3,7 +3,9 @@
     <div class="document document--collection">
       <div class="title page-title">
         <h1>
-          Under tag <em>{{ tag }}</em>
+          Under tag
+          <!-- eslint-disable vue/no-v-html -->
+          <em v-html="abbreviatize(tag)" />
         </h1>
       </div>
       <div class="body">
@@ -13,9 +15,11 @@
             :key="content.slug"
             :lang="content.locale ? content.locale : 'en-CA'"
           >
-            <nuxt-link :to="formatTo(content)">
-              {{ content.title }}
-            </nuxt-link>
+            <!-- eslint-disable vue/no-v-html -->
+            <nuxt-link
+              :to="formatTo(content)"
+              v-html="abbreviatize(content.title)"
+            />
           </li>
         </ul>
       </div>
@@ -25,13 +29,14 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     contents: INuxtContentResult
     tag: string
   }
   export interface Methods {
     formatTo(content: INuxtContentResult): string
+    abbreviatize: IAbbreviatize
   }
   export interface Computed {}
   export interface Props {}
@@ -50,6 +55,7 @@
       }
     },
     methods: {
+      abbreviatize,
       formatTo(content: INuxtContentResult): string {
         const [year, month] = String(content.date).split('-')
         const { slug } = content

@@ -11,9 +11,12 @@
             :key="content.slug"
             class="mt-0 mb-5 font-serif text-lg italic"
           >
-            <nuxt-link :to="content.path" class="mb-2">
-              {{ content.title }}
-            </nuxt-link>
+            <!-- eslint-disable vue/no-v-html -->
+            <nuxt-link
+              :to="content.path"
+              class="mb-2"
+              v-html="abbreviatize(content.title)"
+            />
             <app-article-tags
               :link="false"
               :content="content"
@@ -28,12 +31,14 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     contents: INuxtContentResult
     q: string
   }
-  export interface Methods {}
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
@@ -58,6 +63,9 @@
           .replace({ query: this.q ? { q: this.q } : undefined })
           .catch(() => {})
       },
+    },
+    methods: {
+      abbreviatize,
     },
   })
 </script>

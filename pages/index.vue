@@ -67,8 +67,6 @@
         .sortBy('createdAt', 'desc')
         .fetch()
 
-      // Yes, mutating here, but at least what's here
-      // isn’t from the outside and this is useful
       for (const content of contents) {
         const prettifiedDate = getPrettyfiedTemporalDate(
           content,

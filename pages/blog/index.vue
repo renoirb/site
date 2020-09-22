@@ -28,6 +28,7 @@
               :key="content.slug"
               class="mb-8 text-lg"
             >
+              <!-- eslint-disable vue/no-v-html -->
               <nuxt-link
                 :lang="content.locale ? content.locale : 'en-CA'"
                 :to="{
@@ -38,9 +39,8 @@
                   },
                 }"
                 class="font-serif italic"
-              >
-                {{ content.title }}
-              </nuxt-link>
+                v-html="abbreviatize(content.title)"
+              />
               <app-article-tags
                 :link="false"
                 :content="content"
@@ -61,12 +61,16 @@
     INuxtContentResult,
     breakIntoYears,
     INuxtContentByYears,
+    abbreviatize,
+    IAbbreviatize,
   } from '~/lib'
   export interface Data {
     contents: INuxtContentByYears
     currentQuery: string
   }
-  export interface Methods {}
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
   export interface Computed {}
   export interface Props {
     q: string
@@ -133,6 +137,9 @@
       contents = await ds.fetch()
       const buckets = breakIntoYears(contents)
       this.contents = buckets
+    },
+    methods: {
+      abbreviatize,
     },
     head() {
       let title = 'Blog'

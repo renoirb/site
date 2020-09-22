@@ -40,3 +40,44 @@ This is just something I've jotted down quickly so that It explains what's this
 for.
 
 Keep in touch!
+
+## Features
+
+### Code blocks
+
+At last, a way to display code that I'm happy with, it'll look like this
+
+<code-group>
+  <code-block label="application/json" active>
+
+```http
+GET /hello
+Accept: application/json
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Fri, 16 Sep 2005 19:22:04 GMT
+Vary: Accept
+
+{
+  "body": "Hello!"
+}
+```
+
+  </code-block>
+  <code-block label="plain/text">
+
+```http
+GET /hello
+Accept: plain/text
+
+HTTP/1.1 200 OK
+Content-Type: plain/text; charset=utf-8
+Date: Fri, 16 Sep 2005 19:22:04 GMT
+Vary: Accept
+
+Hello!
+```
+
+  </code-block>
+</code-group>

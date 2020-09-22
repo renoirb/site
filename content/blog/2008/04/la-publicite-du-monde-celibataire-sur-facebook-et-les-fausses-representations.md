@@ -13,7 +13,7 @@ createdAt: *createdAt
 categories:
   - Techniques
 tags:
-  - frande
+  - fraude
 ---
 
 J'était en train de me promener dans [Facebook][0] ce soir et j'ai cliqué sur

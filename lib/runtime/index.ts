@@ -1,4 +1,3 @@
-export * from './date'
 export * from './nuxt'
 export * from './page-redirect'
 export * from './tailwind'
