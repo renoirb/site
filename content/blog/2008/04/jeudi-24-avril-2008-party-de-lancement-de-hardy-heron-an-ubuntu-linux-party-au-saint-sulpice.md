@@ -11,7 +11,8 @@ canonical: 'https://renoirboulanger.com/blog/2008/04/jeudi-24-avril-2008-party-d
 title:
   Jeudi 24 avril 2008 Party de lancement de Hardy Heron an Ubuntu Linux Party au
   Saint-Sulpice
-date: '2008-04-14T22:48:36-04:00'
+date: &createdAt '2008-04-14T22:48:36-04:00'
+createdAt: *createdAt
 categories:
   - Tranche de vie
 tags: []
@@ -69,11 +70,10 @@ dernière version d'Ubuntu, Hardy Heron. Des T-shirts, autocollants, et CD-ROMs
 d'Ubuntu 8.04 LTS seront disponibles. Quelques employés de Canonical du bureau
 de Montréal ainsi que d'autre bureaux seront de la partie.
 
-Le Bar St-Sulpice est situé au 1680, rue Saint-Denis, Montréal, QC H2X  
-3K6 Téléphone: (514) 844-9458
+Le Bar St-Sulpice est situé au 1680, rue Saint-Denis, Montréal, QC H2X 3K6
+Téléphone: (514) 844-9458
 
-Pour l'équipe d'Ubuntu-QC  
-Fabian Rodriguez
+Pour l'équipe d'Ubuntu-QC Fabian Rodriguez
 
 [0]: https://wiki.ubuntu.com/QuebecTeam/HardyParty/RSVP
 [1]: https://www.facebook.com/event.php?eid=14445811268

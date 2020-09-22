@@ -8,7 +8,8 @@ tags:
   - archived-project
 categories:
   - Project
-date: '2013-01-19T22:21:10-04:00'
+date: &createdAt '2013-01-19T22:21:10-04:00'
+createdAt: *createdAt
 pageKey: page-projets-initiale-pour-faire-une-migration
 to: /blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre/
 ---

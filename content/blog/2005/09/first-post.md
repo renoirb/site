@@ -6,7 +6,8 @@ title: Premier billet
 categories:
   - Tranche de vie
 tags: []
-date: '2005-09-16T20:23:22-04:00'
+date: &createdAt '2005-09-16T20:23:22-04:00'
+createdAt: *createdAt
 ---
 
 Mon premier billet. Je ne sais pas si je réussirai a sortir un contenu qui

@@ -1,16 +1,23 @@
 ---
-keywords: ['web', 'au']
+locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo/'
 title: Lancement de l’annee 2011 pour la conférence ConFoo
 cover: ~/assets/content/blog/2010/09/logo_confoo_150_39.gif
 coverCaption: ConFoo.ca Web Techno Conference
 categories:
   - Logiciel libre
-tags:
-  - cloud-computing
+tags: &tags
+  - conference
+  - montreal
+  - js-montreal
+  - user-group
+  - Montreal.rb
+  - MSDevMtl
   - phpquebec
   - w3qc
-date: '2010-09-08T01:43:00-04:00'
+keywords: *tags
+date: &createdAt '2010-09-08T01:43:00-04:00'
+createdAt: *createdAt
 ---
 
 Depuis le debut de l'ete je me suis joint à l'organisation de la [conférence

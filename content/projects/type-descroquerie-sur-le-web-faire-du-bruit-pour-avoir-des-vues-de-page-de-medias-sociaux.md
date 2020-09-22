@@ -5,6 +5,8 @@ title:
   médias sociaux'
 categories: []
 tags: []
+date: &createdAt '2013-04-19T22:21:10-04:00'
+createdAt: *createdAt
 type: vulgarization
 ---
 

@@ -7,7 +7,8 @@ tags:
   - archived-project
 categories:
   - Project
-date: '2013-02-19T22:21:10-04:00'
+date: &createdAt '2013-02-19T22:21:10-04:00'
+createdAt: *createdAt
 pageKey: page-projets-initiale-pour-faire-une-migration
 ---
 

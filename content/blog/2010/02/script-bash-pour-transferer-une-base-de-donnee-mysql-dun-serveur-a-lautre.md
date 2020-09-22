@@ -14,7 +14,8 @@ categories:
   - Portfolio
 tags:
   - Linux
-date: '2010-02-09T17:39:42-04:00'
+date: &createdAt '2010-02-09T17:39:42-04:00'
+createdAt: *createdAt
 pageKey: page-projets-initiale-pour-faire-une-migration
 ---
 

@@ -6,8 +6,10 @@ tags:
   - vulgarization
 categories:
   - Project
-date: '2013-04-19T22:21:10-04:00'
+date: &createdAt '2013-04-19T22:21:10-04:00'
+createdAt: *createdAt
 pageKey: page-projets-initiale-pour-faire-une-migration
+originalUrl: /projets/les-arnaques-sur-internet
 to: /projects/les-arnaques-sur-internet
 ---
 

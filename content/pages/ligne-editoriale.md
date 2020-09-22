@@ -1,7 +1,8 @@
 ---
 locale: fr-CA
 title: Ligne éditoriale
-date: 2009-09-19 21:15:35.000000000 +00:00
+date: &createdAt 2009-09-19 21:15:35.000000000 +00:00
+createdAt: *createdAt
 pageKey: editorial-guideline
 ---
 

@@ -2,7 +2,8 @@
 locale: fr-CA
 published: true
 title: Detection de langue
-date: 2005-12-22
+date: &createdAt '2005-12-22T20:23:22-04:00'
+createdAt: *createdAt
 oldArticle:
   D’autant plus que j’ai écrit ça bien avant de réaliser comment c’est un appel
   aux erreurs que de tout mettre dans le «global scope»

@@ -12,7 +12,8 @@ categories:
 tags:
   - evenements
   - with-images
-date: '2010-03-03T08:41:27-04:00'
+date: &createdAt '2010-03-03T08:41:27-04:00'
+createdAt: *createdAt
 ---
 
 Mardi 2 Mars 2010 avait lieu la première soirée de [Ignite Montréal][0]. Il

@@ -8,6 +8,9 @@ keywords: &keywords
 canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/'
 tags: *keywords
 type: vulgarization
+date: &createdAt '2013-04-19T22:21:10-04:00'
+createdAt: *createdAt
+pageKey: page-projets-initiale-pour-faire-une-migration
 ---
 
 Beaucoup de gens qui sont "non techniques" sont tentés par des offres qu'ils

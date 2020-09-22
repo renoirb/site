@@ -20,7 +20,8 @@ title:
   evaluation process (part 1)
 categories:
   - Web Integration Review
-date: '2012-07-23'
+date: &createdAt '2012-07-23'
+createdAt: *createdAt
 tags:
   - architecture
   - Favourites

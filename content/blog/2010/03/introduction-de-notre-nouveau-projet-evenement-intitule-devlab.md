@@ -14,7 +14,8 @@ categories:
 tags:
   - geeknight
   - with-images
-date: '2010-03-17T11:29:41-04:00'
+date: &createdAt '2010-03-17T11:29:41-04:00'
+createdAt: *createdAt
 ---
 
 Moi et mes partenaires d’affaires des [GeekNights][1] (_Stéphan Champagne_,

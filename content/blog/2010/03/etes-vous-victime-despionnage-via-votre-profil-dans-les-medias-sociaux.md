@@ -14,7 +14,8 @@ coverAlt:
 cover: ~/assets/content/blog/2010/03/spy_vs_spy.jpg
 categories:
   - Tranche de vie
-date: '2010-03-22T06:11:35-04:00'
+date: &createdAt '2010-03-22T06:11:35-04:00'
+createdAt: *createdAt
 tags:
   - fraude
   - vie-privée

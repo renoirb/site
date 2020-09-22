@@ -10,7 +10,9 @@ categories:
   - Tranche de vie
 tags:
   - with-images
-date: '2009-07-02T22:17:40-04:00'
+  - fraude
+date: &createdAt '2009-07-02T22:17:40-04:00'
+createdAt: *createdAt
 ---
 
 Cette semaine j'ai vu deux annonces de statut dans [Mon profil Facebook][0] qui

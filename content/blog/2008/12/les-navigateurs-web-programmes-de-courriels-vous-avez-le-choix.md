@@ -14,7 +14,8 @@ categories:
 tags:
   - vulgarization
   - with-images
-date: '2008-12-05T12:06:01-04:00'
+date: &createdAt '2008-12-05T12:06:01-04:00'
+createdAt: *createdAt
 ---
 
 En fait, il y en a plus d'un. À mes yeux, n'importe lequel est mieux qu’Internet

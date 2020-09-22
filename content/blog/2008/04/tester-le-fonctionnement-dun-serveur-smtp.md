@@ -6,7 +6,8 @@ keywords:
   - email
 canonical: 'https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/'
 title: Tester le fonctionnement d’un serveur SMTP
-date: '2008-04-19T16:07:45-04:00'
+date: &createdAt '2008-04-19T16:07:45-04:00'
+createdAt: *createdAt
 categories:
   - Tranche de vie
 tags:
@@ -20,8 +21,7 @@ Idéalement il faut faire ces tests d'un autre ordinateur que celui qu'on veut
 vérifier.
 
 Ainsi on voit si les services sont fonctionnels en tant que tel, et si le
-firewall  
-ne les bloquent pas.
+firewall ne les bloquent pas.
 
 Quelques ports à tester, qui donnent une réponse
 
@@ -32,7 +32,7 @@ Quelques ports à tester, qui donnent une réponse
 | SMTP           | 25       |
 | FTP            | 21       |
 
-```terminal
+```bash
 nc web1.renoirboulanger.com
 110 +OK POP3 Welcome to vm-pop3d 1.1.7f-DA-2
 [^c]
@@ -50,9 +50,8 @@ nc web1.renoirboulanger.com 21
 [^c]
 ```
 
-Note: la note \[^c\] implique qu'on peut faire Ctrl+c pour quitter plus
-rapidement  
-de l'attente
+Note: la note \[^c\] implique qu'on peut faire <kbd>Ctrl</kbd> + <kbd>c</kbd>
+pour quitter plus rapidement de l'attente
 
 ## Tester le serveur courriel
 
@@ -60,24 +59,23 @@ de l'attente
 
 Permet d'éviter de remplir le compte courriel d'un client.
 
-- Créer un compte dans [DirectAdmin][0], "[Show all Users][1]", _username_, "  
+- Créer un compte dans [DirectAdmin][0], "[Show all Users][1]", _username_, "
   [E-Mail Accounts][2]"
 
 ### Test envoi local vers virtual_local avec exim
 
-Avant de tester avec une application (remote en shell, ou GMail par exemple)
-On  
+Avant de tester avec une application (remote en shell, ou GMail par exemple) On
 devrait tester en local
 
 Ensuite... via une application locale à Gmail **Cas de nos courriels
-renoirboulanger**,  
-voir "Test envoi local vers une machine remote avec exim" ci-haut.
+renoirboulanger**, voir "Test envoi local vers une machine remote avec exim"
+ci-haut.
 
 Le serveur de mon exemple possède Exim comme serveur de transport de courrier
 (SMTP).
 
-L'avantage d'utiliser `exim -v -odf` c'est qu'on sait en shell le output  
-et on sait les messages directement
+L'avantage d'utiliser `exim -v -odf` c'est qu'on sait en shell le output et on
+sait les messages directement
 
 ```terminal
 exim -v -odf test@renoirboulanger.com         [enter]
@@ -93,10 +91,9 @@ LOG: MAIN
   Completed
 ```
 
-Note: La ligne "**Subject:**" je note généralement un titre explicatif  
-du genre "Test lundi am 5 local a virtuallocal" qui donne une idée de quels
-tests  
-qui passent.
+Note: La ligne "**Subject:**" je note généralement un titre explicatif du genre
+"Test lundi am 5 local a virtuallocal" qui donne une idée de quels tests qui
+passent.
 
 Le output des 7 dernières lignes est une réponse expectée si tout va bien.
 
@@ -105,20 +102,17 @@ Le output des 7 dernières lignes est une réponse expectée si tout va bien.
 - **`exim -v -odf [[email protected]][3]`**
 
 C'est les options qui permettent d'utiliser une instance de Exim pour tester
-(**odf**)  
-puis de permettre la (v)erbosité
+(**odf**) puis de permettre la (v)erbosité
 
 - **`Subject: LE SUJET`**
 
-Il faut entrer `Subject:` Pour annoncer qu'on ajoute au header le sujet,  
-on pourrait meme ajouter un header comme on veut.
+Il faut entrer `Subject:` Pour annoncer qu'on ajoute au header le sujet, on
+pourrait meme ajouter un header comme on veut.
 
 - **Écrire le message**
 
-Le prompt condidere que si on commence pas par une commande qui termine par
-":",  
-est considéré comme du **data** pour le courriel en tant que tel (aka.  
-Le ).
+Le prompt condidere que si on commence pas par une commande qui termine par ":",
+est considéré comme du **data** pour le courriel en tant que tel (aka. Le ).
 
 - Terminer par "."
 - Voilà!
@@ -137,8 +131,8 @@ sudo tail -f /var/log/exim/mainlog
 ### Tester réception IMAP
 
 Généralement dans [https://web1.renoirboulanger.com/webmail/][4] (vérifie le
-processus IMAP)  
-on peut aller accéder au compte créé dans "Créer un compte de test courriel".
+processus IMAP) on peut aller accéder au compte créé dans "Créer un compte de
+test courriel".
 
 ### Vérifier le log impad
 
@@ -149,16 +143,15 @@ sudo tail -f /var/log/maillog
    Feb 25 12:01:14 web1 imapd[19532]: Logout user=test@renoirboulanger.com host=web1 [127.0.0.1]
 ```
 
-Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd),  
-POP (vm-pop3d) et SpamAssasin (spamd)
+Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd), POP
+(vm-pop3d) et SpamAssasin (spamd)
 
 ### Vérifier POP en telnet
 
 On peut lancer le test à partir de n'importe quel type de client telnet.
 
 Pour s'assurer que le mail server répond sur le bon, on peut aussi lancer la
-requete  
-telnet sur le domaine du mail exchange (MX) du client.
+requete telnet sur le domaine du mail exchange (MX) du client.
 
 ```terminal
 telnet mail.renoirboulanger.com 110                 [enter]
@@ -209,13 +202,12 @@ sudo tail -f /var/log/maillog
    Feb 25 12:13:23 web1 vm-pop3d[20764]: Session ended for user: 'test@renoirboulanger.com' from 69.159.235.26, nmsgs=3, ndel=0
 ```
 
-Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd),  
-POP (vm-pop3d) et SpamAssasin (spamd)
+Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd), POP
+(vm-pop3d) et SpamAssasin (spamd)
 
 ### Test envoi remote vers virtual_local avec telnet
 
-Au lieu d'avoir un programme comme mail installé sur une station Linux, on
-peut  
+Au lieu d'avoir un programme comme mail installé sur une station Linux, on peut
 simplement utiliser telnet avec ces commandes
 
 ```terminal
@@ -253,15 +245,14 @@ J'ai mis trois espaces devant la réponse reçue.
 
 220 web1.renoirboulanger.com ESMTP Exim 4.66 Fri, 22 Feb 2008 10:42:44 -0500
 
-Signifie 220 (c'est le code du message) que web1 utilise Exim 4.66.... et
-qu'on  
+Signifie 220 (c'est le code du message) que web1 utilise Exim 4.66.... et qu'on
 est le 22 Feb... C'est ok!
 
 - **`helo domaine.du.helo.renoirboulanger.com`**
 
 Faut entrer "`helo`" puis le domaine de l'envoyant
 
-helo est un standard pour savoir quel est le hostname qui envoit le courriel  
+helo est un standard pour savoir quel est le hostname qui envoit le courriel
 [\#Description de HELO][6]
 
 - **`mail from: [[email protected]][3]`**
@@ -285,12 +276,11 @@ Annonce au MTA (le serveur SMTP) qu'il va envoyer des données textes
 Faut au minimum entrer "`Subject:`" car c'est ce que le serveur attend.
 
 - Écrire le message, tout simplement
-- **Terminer** par un dernier \[procedures:**Enter**\] et  
-  laisser un poin "**.**"
+- **Terminer** par un dernier \[procedures:**Enter**\] et laisser un poin
+  "**.**"
 
-Ensuite, le message SMTP \#`354` annonce que l'on peut écrire notre courriel  
-a volonté... jusqu'a ce qu'on ajoute une ligne vide avec uniquement un "."
-(qui  
+Ensuite, le message SMTP \#`354` annonce que l'on peut écrire notre courriel a
+volonté... jusqu'a ce qu'on ajoute une ligne vide avec uniquement un "." (qui
 annonce la fin du message)
 
 - Voilà!
@@ -336,16 +326,13 @@ Note: C'est quoi EHLO ou HELO? voir "Description du HELO"
 ## Tester mail remote vers mailserver pour voir le bon fonctionnement de SpamAssassin
 
 Le but de ce test est de s'assurer que le service de spam antivirus est lancé,
-il  
-faut s'assurer que le service "SpamAssassin" est activé dans la config du
-client  
-dans le pannel, et qu'on envoie le test en remote.
+il faut s'assurer que le service "SpamAssassin" est activé dans la config du
+client dans le pannel, et qu'on envoie le test en remote.
 
 ### Envoi courriel via une machine remote via mail
 
 Sert a s'assurer que l'envoi d'un courriel remote (application ou en shell)
-fonctionne  
-bien de l'extérieur.
+fonctionne bien de l'extérieur.
 
 ```terminal
 mail test@test.com
@@ -357,8 +344,7 @@ Message body, with random content
 ### Regarder le log spamd
 
 Permet de savoir si le message envoyé dans le test "Envoi courriel via une
-machine remote via mail" à  
-bien passé
+machine remote via mail" à bien passé
 
 ```terminal
 tail -f /var/log/maillog
@@ -375,20 +361,18 @@ tail -f /var/log/maillog
 Voici ce que le spamscanner a fait...
 
 - Ligne 4: Il process le message pour le user
-- Ligne 5: Donne le resultat, (soit **identified spam** ou **clean message**)  
+- Ligne 5: Donne le resultat, (soit **identified spam** ou **clean message**)
   avec la note entre parenthèses (note reçue / note maximale)
 - Ligne 6: Le résultat Y=C'est un spam... N=Le message est propre... puis la
-  valeur  
-  des tests coulés (HTML_MESSAGE,RAZOR2_CF_RANGE_51_100,...)
+  valeur des tests coulés (HTML_MESSAGE,RAZOR2_CF_RANGE_51_100,...)
 
-Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd),  
-POP (vm-pop3d) et SpamAssasin (spamd)
+Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd), POP
+(vm-pop3d) et SpamAssasin (spamd)
 
 ## Tester SpamAssassin
 
 Pour savoir comment SpamAssassin (aka. SA) traite le spam, on peut lancer
-quelques  
-commandes comme celles ci.
+quelques commandes comme celles ci.
 
 #### SA avec tests Razor2 sur un sample spam
 
@@ -456,22 +440,21 @@ This is a multi-part message in MIME format.
 ...Le courriel en tant que tel
 ```
 
-Note: Il existe trois fichiers de tests: `/usr/share/sample-spam.txt` (test  
-email sample spam), `/usr/share/sample-nonspam.txt` (sample email correct),  
-et `/usr/share/sample-virus.txt` (pour voir si l'antivirus est ok)
+Note: Il existe trois fichiers de tests: `/usr/share/sample-spam.txt` (test
+email sample spam), `/usr/share/sample-nonspam.txt` (sample email correct), et
+`/usr/share/sample-virus.txt` (pour voir si l'antivirus est ok)
 
 ## Tester les relais SMTP
 
 Notez que j'ai pas sous la main d'adresse courriel ou serveur connu comme
-spammeur  
-sur notre réseau ce qui est très bien.
+spammeur sur notre réseau ce qui est très bien.
 
 Alors si votre test donne pas un résultat similaire... on a un problème de spam!
 
 #### avec exim -bh
 
-Avec la commande `exim -bh IP-ADDRESS EMAIL-ADDRESS` on peut savoir comment  
-le courriel passe, s'il est accepté.
+Avec la commande `exim -bh IP-ADDRESS EMAIL-ADDRESS` on peut savoir comment le
+courriel passe, s'il est accepté.
 
 ```
 exim -bh 69.159.235.26 renoirb@gmail.com
@@ -497,7 +480,7 @@ exim -bh 69.159.235.26 renoirb@gmail.com
 220 web1.renoirboulanger.com ESMTP Exim 4.66 Thu, 28 Feb 2008 11:02:19 -0500
 ```
 
-Exemple de test fonctionnel (On remarque le message `220 hostname ESMTP...`.  
+Exemple de test fonctionnel (On remarque le message `220 hostname ESMTP...`.
 Faire \[^c\] pour sortir.
 
 #### Avec exim_checkaccess
@@ -511,8 +494,7 @@ Accepted
 
 ## Statistiques
 
-Il existe, a ma mémoire, actuellement, un outil qui permet de savoir
-l'Activité  
+Il existe, a ma mémoire, actuellement, un outil qui permet de savoir l'Activité
 du serveur. Il est dans un crontab. Voici la commande.
 
 ```terminal
@@ -596,36 +578,30 @@ Très utile!
 
 Source: [http://email.about.com/cs/standards/a/smtp.htm][7] (modifié)
 
-Une discussion SMTP commence soit par **EHLO** (ou **HELO**).  
-Qui, en gros, annonce que le serveur de courrier possède quelques features
-améliorés  
-comparé aux premières générations de serveur smtp.
+Une discussion SMTP commence soit par **EHLO** (ou **HELO**). Qui, en gros,
+annonce que le serveur de courrier possède quelques features améliorés comparé
+aux premières générations de serveur smtp.
 
 (...)
 
-...But to use later additions to SMTP that have brought about two flavors of
-the  
+...But to use later additions to SMTP that have brought about two flavors of the
 later HELO command (SMTP command generally consist of four characters).
 
 (...)
 
 EHLO, being the more recent one makes the server advertise all the additional
-features  
-(such as delivery status notification or the ability to transport messages
-that  
-contain other than the safe ASCII characters) it supports.
+features (such as delivery status notification or the ability to transport
+messages that contain other than the safe ASCII characters) it supports.
 
 (...)
 
-Not every server will allow this greeting, but it is required to accept a
-plain  
+Not every server will allow this greeting, but it is required to accept a plain
 HELO which naturally assumes that no additional features are present.
 
 (...)
 
 **Both HELO (et EHLO) commands do require the client to specify its domain**
-after  
-the \*\*LO, however.
+after the \*\*LO, however.
 
 ## Références
 

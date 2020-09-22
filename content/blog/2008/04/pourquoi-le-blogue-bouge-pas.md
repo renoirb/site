@@ -2,7 +2,8 @@
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2008/04/pourquoi-le-blogue-bouge-pas/'
 title: Pourquoi le blogue bouge pas?
-date: '2008-04-11T23:21:47-04:00'
+date: &createdAt '2008-04-11T23:21:47-04:00'
+createdAt: *createdAt
 categories:
   - Tranche de vie
 tags: []

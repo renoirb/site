@@ -4,8 +4,10 @@ canonical: 'https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-cou
 title: Sensibilisation sur les courriels non sollicités
 categories:
   - Techniques
-tags: []
-date: '2008-12-03T00:58:06-04:00'
+tags:
+  - fraude
+date: &createdAt '2008-12-03T00:58:06-04:00'
+createdAt: *createdAt
 ---
 
 J'ai décidé cette nuit d'écrire sur des choses qui me tiennent a coeur.
@@ -29,9 +31,9 @@ marquées en copie conforme avec le message qui suit:
 
 ## Le courriel envoyé
 
-From: (mon-adresse-de-spam)@msn.com (ce n'est pas la vraie)  
-Subject: Sensibilisation sur les courriels non sollicités  
-Date: Wed, 3 Dec 2008 01:58:53 -0500
+From: (mon-adresse-de-spam)@msn.com (ce n'est pas la vraie) Subject:
+Sensibilisation sur les courriels non sollicités Date: Wed, 3 Dec 2008 01:58:53
+-0500
 
 Pour ceux qui me connaissent pas je m'appelle Renoir. J'ai 29 ans.
 Professionnellement je suis webmestre de passion depuis 1999\. J'ai fait

@@ -7,7 +7,8 @@ keywords:
   - script
 canonical: 'https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/'
 title: Effacer complètement un disque dur de façon sécuritaire
-date: '2008-04-16T00:45:08-04:00'
+date: &createdAt '2008-04-16T00:45:08-04:00'
+createdAt: *createdAt
 categories:
   - Techniques
 tags:
