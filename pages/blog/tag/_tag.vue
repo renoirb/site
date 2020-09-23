@@ -9,19 +9,10 @@
         </h1>
       </div>
       <div class="body">
-        <ul>
-          <li
-            v-for="content in contents"
-            :key="content.slug"
-            :lang="content.locale ? content.locale : 'en-CA'"
-          >
-            <!-- eslint-disable vue/no-v-html -->
-            <nuxt-link
-              :to="formatTo(content)"
-              v-html="abbreviatize(content.title)"
-            />
-          </li>
-        </ul>
+        <blog-list-model-by-year
+          :contents="contents"
+          :q="$route && $route.query && $route.query.q"
+        />
       </div>
     </div>
   </div>
@@ -29,25 +20,29 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import BlogListModelByYear from '@/components/blog/BlogListModelByYear.vue'
   import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     contents: INuxtContentResult
     tag: string
   }
   export interface Methods {
-    formatTo(content: INuxtContentResult): string
     abbreviatize: IAbbreviatize
   }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
+    components: {
+      'blog-list-model-by-year': BlogListModelByYear,
+    },
     async asyncData({ $content, params }) {
       const { tag } = params
 
-      const contents = (await $content('blog', { deep: true })
+      let contents: INuxtContentResult[] = []
+      contents = await $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
-        .sortBy('date', 'desc')
-        .fetch()) as INuxtContentResult[]
+        .sortBy('createdAt', 'desc')
+        .fetch()
 
       return {
         contents,
@@ -56,11 +51,6 @@
     },
     methods: {
       abbreviatize,
-      formatTo(content: INuxtContentResult): string {
-        const [year, month] = String(content.date).split('-')
-        const { slug } = content
-        return `/blog/${year}/${month}/${slug}`
-      },
     },
   })
 </script>

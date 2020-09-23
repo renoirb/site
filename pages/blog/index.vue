@@ -39,7 +39,8 @@
       let { q = '' } = query
       q = typeof q === 'string' ? q : ''
 
-      const contents = await queryNuxtContent($content, route)
+      let contents: INuxtContentResult[] = []
+      contents = await queryNuxtContent($content, route)
 
       console.info('pages/blog/index.vue asyncData', { currentQuery: q }) // eslint-disable-line
 

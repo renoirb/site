@@ -9,10 +9,10 @@
 
   & a {
     @apply underline;
-    color: var(--color-subtitle);
+    color: var(--color-container-text-link);
   }
   & a:hover {
-    color: var(--color-title);
+    color: var(--color-container-text-link-hover);
   }
 
   & .nuxt-content-highlight {

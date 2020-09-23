@@ -55,7 +55,6 @@
           console.info('pages/blog.vue watch.q handler', {
             currentQuery: q,
             oldVal,
-            router,
           })
           if (router) {
             router

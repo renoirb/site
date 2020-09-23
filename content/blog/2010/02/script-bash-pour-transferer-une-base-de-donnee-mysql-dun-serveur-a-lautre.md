@@ -14,6 +14,8 @@ categories:
   - Portfolio
 tags:
   - linux
+  - Favourites
+  - bash
 date: &createdAt '2010-02-09T17:39:42-04:00'
 createdAt: *createdAt
 pageKey: page-projets-initiale-pour-faire-une-migration

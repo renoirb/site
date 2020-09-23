@@ -10,11 +10,7 @@
         <h2 class="my-4 font-serif text-2xl italic">{{ inThatYear[0] }}</h2>
       </nuxt-link>
       <ul>
-        <li
-          v-for="content in inThatYear[1]"
-          :key="content.slug"
-          class="mb-8 text-lg"
-        >
+        <li v-for="content in inThatYear[1]" :key="content.slug" class="mb-8">
           <!-- eslint-disable vue/no-v-html -->
           <nuxt-link
             :lang="content.locale ? content.locale : 'en-CA'"
@@ -25,7 +21,7 @@
                 date: content.date,
               },
             }"
-            class="font-serif italic"
+            class="font-serif text-lg italic"
             v-html="abbreviatize(content.title)"
           />
           <div

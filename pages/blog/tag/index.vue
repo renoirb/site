@@ -29,9 +29,10 @@
   const tags = new Set<string>()
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content }) {
-      const contents = (await $content('blog', { deep: true })
-        .sortBy('date', 'desc')
-        .fetch()) as INuxtContentResult[]
+      let contents: INuxtContentResult[] = []
+      contents = await $content('blog', { deep: true })
+        .sortBy('createdAt', 'desc')
+        .fetch()
 
       for (const content of contents) {
         if ('tags' in content) {

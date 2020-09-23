@@ -15,6 +15,7 @@
             <nuxt-link
               :to="content.path"
               class="mb-2"
+              :lang="content.locale ? content.locale : 'en-CA'"
               v-html="abbreviatize(content.title)"
             />
             <app-article-tags

@@ -12,6 +12,8 @@
   --color-tertiary: #cb7723;
   --bg-secondary: #e5e5e5;
   --border-color: #aaa;
+  --color-container-text-link: var(--color-primary);
+  --color-container-text-link-hover: var(--color-secondary);
 }
 
 .dark-mode {
@@ -27,4 +29,6 @@
   --color-secondary: #fdf9f3;
   --bg-secondary: #214761;
   --border-color: #061a17;
+  --color-container-text-link: var(--color-primary);
+  --color-container-text-link-hover: var(--color-secondary);
 }
