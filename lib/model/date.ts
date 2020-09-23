@@ -1,8 +1,7 @@
 import { Temporal } from 'proposal-temporal'
 import {
-  INuxtContentResult,
   INuxtContentIndexResult,
-  INuxtContentByYears,
+  INuxtContentIndexResultByYears,
 } from './content'
 
 export const CALENDAR = [
@@ -50,7 +49,7 @@ const extractYearFromDateString = (dateString: string | ''): number => {
   throw new Error(message)
 }
 
-const getYear = (content: INuxtContentIndexResult): number => {
+const getYear = (content: Record<'date' | 'createdAt', string>): number => {
   let out: '' | number = ''
 
   const { date = '', createdAt = '' } = content
@@ -69,16 +68,21 @@ const getYear = (content: INuxtContentIndexResult): number => {
 }
 
 export const breakIntoYears = (
-  collection: INuxtContentIndexResult[],
-): INuxtContentByYears => {
-  const out: INuxtContentByYears = []
-  for (const content of collection) {
+  contents: INuxtContentIndexResult[],
+): INuxtContentIndexResultByYears => {
+  const out: INuxtContentIndexResultByYears = []
+  for (const content of contents) {
     const year = getYear(content)
     let bucket = out.find(([y]) => y === year)
     if (!bucket) {
       out.push([year, []])
       bucket = out.find(([y]) => y === year)
     }
+    const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
+      content,
+      content.locale,
+    )
+    content.prettyfiedTemporalDate = prettyfiedTemporalDate
     bucket[1].push(content)
   }
 
@@ -94,7 +98,7 @@ export interface IPrettyfiedTemporalDate {
 }
 
 export const getPrettyfiedTemporalDate = (
-  content: INuxtContentResult,
+  content: Record<'date' | 'createdAt', string>,
   locale = 'fr-CA',
   calendar = 'gregory',
 ): IPrettyfiedTemporalDate => {

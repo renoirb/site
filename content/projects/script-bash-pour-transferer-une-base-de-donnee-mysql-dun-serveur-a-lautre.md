@@ -6,6 +6,7 @@ canonical: 'https://renoirboulanger.com/projets'
 tags:
   - bash
   - archived-project
+  - Favourites
 categories:
   - Project
 date: &createdAt '2013-01-19T22:21:10-04:00'

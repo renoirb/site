@@ -13,8 +13,13 @@
         <!-- eslint-disable vue/no-v-html -->
         <h1 v-html="abbreviatize(content.title)" />
       </div>
-      <div v-if="date.temporalDate" class="mt-0 mb-5 font-serif text-sm italic">
-        <time :datetime="date.temporalDate"> {{ date.formatted }} </time>
+      <div
+        v-if="prettyfiedTemporalDate.temporalDate"
+        class="mt-0 mb-5 font-serif text-sm italic"
+      >
+        <time :datetime="prettyfiedTemporalDate.temporalDate">
+          {{ prettyfiedTemporalDate.prettified }}
+        </time>
       </div>
       <app-article-tags :content="content" class="mt-0 mb-5" />
       <div class="body mt-10">
@@ -43,7 +48,7 @@
   } from '~/lib'
   export interface Data {
     content: INuxtContentResult
-    date: IPrettyfiedTemporalDate
+    prettyfiedTemporalDate: IPrettyfiedTemporalDate
     year: string
     month: string
     slug: string
@@ -88,7 +93,7 @@
         error({ message: 'Document not found' })
       }
 
-      const date = getPrettyfiedTemporalDate(
+      const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
         content as INuxtContentResult,
         leakOutLocale,
       )
@@ -98,7 +103,7 @@
         coverImage,
         coverImageCaption,
         coverImageAlt,
-        date,
+        prettyfiedTemporalDate,
         month,
         slug,
         veryOldContent,

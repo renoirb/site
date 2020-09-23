@@ -1,32 +1,11 @@
 <template>
   <div class="pages__blog__year--index">
     <div class="document document--collection">
-      <div class="title page-title">
-        <h1>
-          {{ pageTitle }}
-        </h1>
-      </div>
       <div class="body">
-        <ul>
-          <li
-            v-for="content in contents"
-            :key="content.slug"
-            class="mb-1 text-lg"
-          >
-            <!-- eslint-disable vue/no-v-html -->
-            <nuxt-link
-              :lang="content.locale ? content.locale : 'en-CA'"
-              :to="{
-                path: content.path,
-                meta: {
-                  locale: content.locale ? content.locale : 'en-CA',
-                  date: content.date,
-                },
-              }"
-              v-html="abbreviatize(content.title)"
-            />
-          </li>
-        </ul>
+        <blog-list-model-by-year
+          :contents="contents"
+          :q="$route && $route.query && $route.query.q"
+        />
       </div>
     </div>
   </div>
@@ -34,17 +13,19 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentIndexResult, abbreviatize, IAbbreviatize } from '~/lib'
+  import BlogListModelByYear from '@/components/blog/BlogListModelByYear.vue'
+  import { INuxtContentIndexResult } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
     pageTitle: string
   }
-  export interface Methods {
-    abbreviatize: IAbbreviatize
-  }
+  export interface Methods {}
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
+    components: {
+      'blog-list-model-by-year': BlogListModelByYear,
+    },
     async asyncData({ $content, params }) {
       const locale = 'fr-CA'
       const { year } = params
@@ -53,7 +34,15 @@
       try {
         contents = await $content('blog', year, { deep: true })
           .sortBy('date', 'desc')
-          .only(['createdAt', 'date', 'locale', 'path', 'slug', 'title'])
+          .only([
+            'createdAt',
+            'date',
+            'locale',
+            'tags',
+            'path',
+            'slug',
+            'title',
+          ])
           .fetch()
       } catch (_) {
         // ..
@@ -74,9 +63,6 @@
         pageTitle,
         contents,
       }
-    },
-    methods: {
-      abbreviatize,
     },
     head() {
       const title = this.pageTitle

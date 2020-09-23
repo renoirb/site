@@ -49,11 +49,16 @@
     watch: {
       q: {
         immediate: true,
-        handler() {
-          if (this.$route && this.$router) {
-            const { query = {} } = this.$route
-            const { q = '' } = query
-            this.$router
+        handler(q, oldVal) {
+          const router = this.$router
+          // eslint-disable-next-line
+          console.info('pages/blog.vue watch.q handler', {
+            currentQuery: q,
+            oldVal,
+            router,
+          })
+          if (router) {
+            router
               .replace({ query: q !== '' ? { q } : undefined })
               .catch(() => {})
           }

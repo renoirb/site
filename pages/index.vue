@@ -8,6 +8,7 @@
           class="mb-8 text-lg"
           :lang="content.locale ? content.locale : 'en-CA'"
         >
+          <!-- eslint-disable vue/no-v-html -->
           <nuxt-link
             :to="{
               path: content.path,
@@ -17,15 +18,11 @@
               },
             }"
             class="font-serif italic"
-          >
-            {{ content.title }}
-          </nuxt-link>
-          <div
-            v-if="content.prettifiedDate.temporalDate"
-            class="mt-0 mb-5 text-xs"
-          >
-            <time :datetime="content.prettifiedDate.temporalDate">
-              {{ content.prettifiedDate.formatted }}
+            v-html="abbreviatize(content.title)"
+          />
+          <div v-if="content.prettyfiedTemporalDate" class="mt-0 mb-5 text-xs">
+            <time :datetime="content.prettyfiedTemporalDate.temporalDate">
+              {{ content.prettyfiedTemporalDate.prettified }}
             </time>
           </div>
           <app-article-tags
@@ -47,20 +44,27 @@
     INuxtContentResult,
     getPrettyfiedTemporalDate,
     IPrettyfiedTemporalDate,
+    abbreviatize,
+    IAbbreviatize,
   } from '~/lib'
   export interface IDatedNuxtContentResult extends INuxtContentResult {
-    prettifiedDate: IPrettyfiedTemporalDate
+    prettyfiedTemporalDate: IPrettyfiedTemporalDate
   }
   export interface Data {
     contents: IDatedNuxtContentResult[]
   }
-  export interface Methods {}
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     layout: 'homepage',
     async asyncData({ $content }) {
       const tag = 'Favourites'
+      // eslint-disable-next-line
+      console.info('pages/index.vue asyncData')
+
       let contents: IDatedNuxtContentResult[] = []
       contents = await $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
@@ -68,16 +72,23 @@
         .fetch()
 
       for (const content of contents) {
-        const prettifiedDate = getPrettyfiedTemporalDate(
+        const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
           content,
           content.locale,
         )
-        content.prettifiedDate = prettifiedDate
+        content.prettyfiedTemporalDate = prettyfiedTemporalDate
+        // eslint-disable-next-line
+        console.info(`pages/index.vue asyncData: ${content.slug}`, {
+          prettyfiedTemporalDate,
+        })
       }
 
       return {
         contents,
       }
+    },
+    methods: {
+      abbreviatize,
     },
   })
 </script>

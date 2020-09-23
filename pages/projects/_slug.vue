@@ -42,5 +42,32 @@
     methods: {
       abbreviatize,
     },
+    head() {
+      const {
+        locale = 'en-CA',
+        title,
+        tags = [],
+        categories = [],
+      } = this.content
+
+      const meta = [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: [...categories, ...tags].join(' '),
+        },
+      ]
+
+      const htmlAttrs = {
+        lang: locale,
+      }
+
+      const out = {
+        htmlAttrs,
+        title,
+        meta,
+      }
+      return out
+    },
   })
 </script>

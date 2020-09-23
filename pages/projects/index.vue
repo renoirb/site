@@ -2,7 +2,7 @@
   <div class="pages__projects--index">
     <div class="document document--item">
       <div class="title page-title">
-        <h1>Projects</h1>
+        <h1>{{ pageTitle }}</h1>
       </div>
       <div class="body mt-8">
         <ul>
@@ -34,6 +34,7 @@
   import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     contents: INuxtContentResult
+    pageTitle: string
     q: string
   }
   export interface Methods {
@@ -51,10 +52,12 @@
         // OR query = query.search('title', q)
       }
       const contents = await query.where({ index: { $ne: true } }).fetch()
+      const pageTitle = `Personal projects I’ve worked on`
 
       return {
-        q,
         contents,
+        pageTitle,
+        q,
       }
     },
     watch: {
@@ -66,6 +69,12 @@
     },
     methods: {
       abbreviatize,
+    },
+    head() {
+      const out = {
+        title: this.pageTitle,
+      }
+      return out
     },
   })
 </script>

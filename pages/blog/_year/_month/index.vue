@@ -5,25 +5,10 @@
         <h1>{{ pageTitle }}</h1>
       </div>
       <div class="body">
-        <ul>
-          <li
-            v-for="content in contents"
-            :key="content.slug"
-            :lang="content.locale ? content.locale : 'en-CA'"
-          >
-            <nuxt-link
-              :to="{
-                path: content.path,
-                meta: {
-                  locale: content.locale ? content.locale : 'en-CA',
-                  date: content.date,
-                },
-              }"
-            >
-              {{ content.title }}
-            </nuxt-link>
-          </li>
-        </ul>
+        <blog-list-model-by-year
+          :contents="contents"
+          :q="$route && $route.query && $route.query.q"
+        />
       </div>
     </div>
   </div>
@@ -31,6 +16,7 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import BlogListModelByYear from '@/components/blog/BlogListModelByYear.vue'
   import {
     INuxtContentIndexResult,
     transformToPrettyfiedTemporalDate,
@@ -43,6 +29,9 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
+    components: {
+      'blog-list-model-by-year': BlogListModelByYear,
+    },
     async asyncData({ $content, params }) {
       const locale = 'fr-CA'
       const { year, month } = params
@@ -51,14 +40,22 @@
       try {
         contents = await $content('blog', year, month, { deep: true })
           .sortBy('date', 'desc')
-          .only(['createdAt', 'date', 'locale', 'path', 'slug', 'title'])
+          .only([
+            'createdAt',
+            'date',
+            'locale',
+            'path',
+            'slug',
+            'tags',
+            'title',
+          ])
           .fetch()
       } catch (_) {
         // ...
       }
 
       const dtfo: Intl.DateTimeFormatOptions = {
-        year: 'numeric',
+        year: undefined,
         month: 'long',
       }
       const prettyfiedTemporalDate = transformToPrettyfiedTemporalDate(
@@ -73,7 +70,7 @@
 
       const length = (contents || []).length
       // eslint-disable-next-line
-      console.log('pages/blog/_year/_month/index.vue asyncData', {
+      console.info('pages/blog/_year/_month/index.vue asyncData', {
         params,
         length,
       })
@@ -84,9 +81,8 @@
       }
     },
     head() {
-      const title = this.pageTitle
       const out = {
-        title,
+        title: this.pageTitle,
       }
       return out
     },

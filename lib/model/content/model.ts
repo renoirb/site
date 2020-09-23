@@ -1,4 +1,6 @@
 import { Result } from '@nuxt/content'
+import { Context } from '@nuxt/types'
+import { IPrettyfiedTemporalDate } from '../date'
 
 export interface IBaseNuxtContentResult extends Result {
   dir: string
@@ -21,12 +23,18 @@ export interface INuxtContentResult extends IBaseNuxtContentResult {
   date: string
 }
 
-export type INuxtContentIndexResult = Pick<
-  INuxtContentResult,
-  'title' | 'date' | 'slug' | 'locale' | 'path' | 'createdAt'
->
+export interface INuxtContentIndexResult
+  extends Pick<
+    INuxtContentResult,
+    'title' | 'date' | 'slug' | 'locale' | 'path' | 'createdAt'
+  > {
+  prettyfiedTemporalDate?: IPrettyfiedTemporalDate
+}
 
-export type INuxtContentByYears = [number, INuxtContentIndexResult[]][]
+export type INuxtContentIndexResultByYears = [
+  number,
+  INuxtContentIndexResult[],
+][]
 
 export const typeGuardNuxtContentResult = (
   maybe: any,
@@ -41,4 +49,24 @@ export const typeGuardNuxtContentResult = (
     outcome = true
   }
   return outcome
+}
+
+export const queryNuxtContent = async (
+  $content: Context['$content'],
+  route: Context['route'],
+): Promise<INuxtContentResult[]> => {
+  let contents: INuxtContentResult[] = []
+  const { query = {} as Context['route']['query'] } = route
+  let { q = '' } = query
+  q = typeof q === 'string' ? q : ''
+  let ds = $content('blog', { deep: true })
+    .sortBy('createdAt', 'desc')
+    .only(['createdAt', 'date', 'locale', 'path', 'slug', 'tags', 'title'])
+  if (q) {
+    ds = ds.search(q)
+  }
+
+  contents = await ds.fetch()
+
+  return contents
 }
