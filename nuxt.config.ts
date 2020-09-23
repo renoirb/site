@@ -128,6 +128,9 @@ const main: NuxtConfig = {
     enabled: isProduction,
     whitelist: [/token$/, /^dark-mode/, /^light-mode/],
   },
+  server: {
+    host: '0.0.0.0',
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/

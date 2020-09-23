@@ -11,7 +11,7 @@
       <li
         v-for="tag in tags"
         :key="tag"
-        class="px-2 py-1 mr-2"
+        class="px-2 py-1 mb-3 mr-3"
         :class="{ hoverized: link }"
       >
         <!-- eslint-disable vue/no-v-html -->

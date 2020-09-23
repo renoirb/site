@@ -49,11 +49,13 @@
   export interface Data {
     content: INuxtContentResult
     prettyfiedTemporalDate: IPrettyfiedTemporalDate
+    veryOldContent: string | null
     year: string
     month: string
     slug: string
     coverImage: '' | string
     coverImageCaption: '' | string
+    coverImageAlt: '' | ''
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -67,7 +69,7 @@
     async asyncData({ $content, params, error }) {
       const { year, month, slug } = params
 
-      let content: INuxtContentResult | void
+      let content: INuxtContentResult | null = null
       let veryOldContent: string | null = null
       let coverImage: string | '' = ''
       let coverImageCaption: string | '' = ''
@@ -76,7 +78,8 @@
       let leakOutLocale: string | '' = ''
 
       try {
-        content = await $content('blog', year, month, slug).fetch()
+        const dal = $content('blog', year, month, slug, { text: true })
+        content = await dal.fetch()
         const {
           oldArticle = null,
           cover = '',
@@ -93,6 +96,10 @@
         error({ message: 'Document not found' })
       }
 
+      if (!content) {
+        error({ message: 'Document not found' })
+      }
+
       const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
         content as INuxtContentResult,
         leakOutLocale,
@@ -104,10 +111,7 @@
         coverImageCaption,
         coverImageAlt,
         prettyfiedTemporalDate,
-        month,
-        slug,
         veryOldContent,
-        year,
       }
     },
     methods: {

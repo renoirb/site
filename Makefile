@@ -18,3 +18,11 @@ static/files/resume/jsonresume-renoirb.json: node_modules/jsonresume-from-yaml/b
 
 .PHONY: static/files/resume/Resume-Renoir-Boulanger.doc
 static/files/resume/Resume-Renoir-Boulanger.doc: static/files/resume static/files/resume/jsonresume-renoirb.json
+
+.PHONY: unpatch
+unpatch:
+	cp node_modules/@nuxt/content/lib/database.js.orig node_modules/@nuxt/content/lib/database.js
+.PHONY: patch
+patch:
+	cp node_modules/@nuxt/content/lib/database.js node_modules/@nuxt/content/lib/database.js.orig
+	patch node_modules/@nuxt/content/lib/database.js nuxt-content-database.patch

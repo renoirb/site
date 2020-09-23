@@ -74,10 +74,9 @@
         import('@/components/AppCodeHighlighter.vue'),
     },
     async asyncData({ $content, app }) {
-      const ds: IMingledNuxtContentResultAndResume = await $content(
-        'resume/jsonresume-renoirb',
-        /* nuxt/content yaml parser doesn't have same markdown's { text: true }, */
-      ).fetch()
+      const dal = $content('resume/jsonresume-renoirb', { text: true })
+
+      const ds: IMingledNuxtContentResultAndResume = await dal.fetch()
 
       const {
         meta = {} as IResumeMeta,
@@ -119,7 +118,14 @@
         },
         resume,
       ) as any
-      const rawAsYaml = JsYaml.safeDump(copy)
+      let rawAsYaml: string = ''
+      // @ts-ignore
+      if ('text' in content && typeof content.text === 'string') {
+        // @ts-ignore
+        rawAsYaml = content.text
+      } else {
+        rawAsYaml = JsYaml.safeDump(copy)
+      }
       const asYaml = app.$prism(rawAsYaml, 'yaml')
 
       const rawAsJson = JSON.stringify(copy, null, 2)
@@ -137,8 +143,9 @@
     computed: {
       noteAboutSource(): string {
         const out = trimText`
-          Note that the YAML version shown here is the parsed version (i.e. same as JSON output),
-          the original version linked below shows the raw version.
+          Note that the YAML version shown here may differ from the original,
+          it might be the parsed version (i.e. same as JSON output).
+          You can have a look at the source document in the following link.
         `
         return out
       },

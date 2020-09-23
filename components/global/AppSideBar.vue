@@ -2,6 +2,7 @@
   <nav class="app-side-bar--component fixed z-10 w-full">
     <div
       class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto"
+      style="z-index: 2"
     >
       <div class="app-side-bar__identity md:px-5 flex items-center">
         <button
@@ -76,11 +77,28 @@
         </nuxt-link>
       </div>
     </aside>
+    <div style="position: relative">
+      <inline-svg
+        :src="require('~/assets/images/42357.svg')"
+        width="500"
+        height="500"
+        style="
+          fill: var(--color-sandwich-bg) !important;
+          position: absolute;
+          rotate: -80deg;
+          right: -60px;
+          bottom: -200px;
+          z-index: -1;
+        "
+      ></inline-svg>
+    </div>
   </nav>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
+  // @ts-ignore
+  import InlineSvg from 'vue-inline-svg'
   import { IAppHeaderNavItems } from '~/lib'
   export interface Data {
     appTitle: string
@@ -103,6 +121,9 @@
    */
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'AppSideBar' /* app-side-bar */,
+    components: {
+      InlineSvg,
+    },
     props: {
       nav: {
         type: Array,

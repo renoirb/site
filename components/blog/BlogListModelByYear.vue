@@ -41,6 +41,11 @@
       </ul>
       <div class="h-5 -ml-10" style="background-color: var(--bg)" />
     </div>
+    <div v-if="byYears.length < 1">
+      <p class="py-3 font-serif text-lg italic">
+        Looks like I haven’t written anything
+      </p>
+    </div>
   </div>
 </template>
 

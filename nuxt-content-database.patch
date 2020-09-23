@@ -1,0 +1,4 @@
+186a187,189
+>       if (!Array.isArray(data)) {
+>         Object.assign(data, { text: file })
+>       }
