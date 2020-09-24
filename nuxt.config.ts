@@ -74,6 +74,7 @@ const main: NuxtConfig = {
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    'nuxt-purgecss',
     '@nuxtjs/tailwindcss',
     // Doc: https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
@@ -126,7 +127,7 @@ const main: NuxtConfig = {
   purgeCSS: {
     mode: 'postcss',
     enabled: isProduction,
-    whitelist: [/token$/, /^dark-mode/, /^light-mode/],
+    whitelist: [/^\w+-mode$/, /token$/, 'taxonomy', 'document'],
   },
   server: {
     host: '0.0.0.0',

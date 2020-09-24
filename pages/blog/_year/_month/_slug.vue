@@ -6,7 +6,7 @@
       class="my-4"
       alert-type="warn"
     >
-      {{ veryOldContent }}
+      {{ agedWarning }}
     </app-very-old-article>
     <div class="document document--item">
       <div class="title page-title mb-2">
@@ -49,13 +49,13 @@
   export interface Data {
     content: INuxtContentResult
     prettyfiedTemporalDate: IPrettyfiedTemporalDate
-    veryOldContent: string | null
+    agedWarning: string | null
     year: string
     month: string
     slug: string
     coverImage: '' | string
     coverImageCaption: '' | string
-    coverImageAlt: '' | ''
+    coverImageAlt: '' | string
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -70,7 +70,7 @@
       const { year, month, slug } = params
 
       let content: INuxtContentResult | null = null
-      let veryOldContent: string | null = null
+      let agedWarning: string | null = null
       let coverImage: string | '' = ''
       let coverImageCaption: string | '' = ''
       let coverImageAlt: string | '' = ''
@@ -91,7 +91,7 @@
         coverImage = cover
         coverImageCaption = coverCaption
         coverImageAlt = coverAlt
-        veryOldContent = oldArticle
+        agedWarning = oldArticle
       } catch (e) {
         error({ message: 'Document not found' })
       }
@@ -111,7 +111,7 @@
         coverImageCaption,
         coverImageAlt,
         prettyfiedTemporalDate,
-        veryOldContent,
+        agedWarning,
       }
     },
     methods: {

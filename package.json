@@ -68,6 +68,7 @@
     "@renoirb/conventions-use-eslint": "^1.2.1",
     "@renoirb/conventions-use-typescript-3": "^1.2.1",
     "@renoirb/tools-bundling-helpers": "^1.2.1",
+    "@tailwindcss/custom-forms": "^0.2.1",
     "@tailwindcss/typography": "^0.2.0",
     "@types/jest": "^26.0.0",
     "@types/js-yaml": "^3.12.5",

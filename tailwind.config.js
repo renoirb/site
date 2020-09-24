@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /**
  * TailwindCSS Configuration File
  *
@@ -215,13 +217,11 @@ module.exports = {
           }).processSync(selector)
         })
       })
-
       addVariant('dark-hover', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
           return `.dark-mode .${e(`dark-hover${separator}${className}`)}:hover`
         })
       })
-
       addVariant('dark-focus', ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
           return `.dark-mode .${e(`dark-focus${separator}${className}`)}:focus`
@@ -229,6 +229,7 @@ module.exports = {
       })
     }),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/custom-forms'),
   ],
   purge: {
     mode: 'layers',
@@ -242,8 +243,8 @@ module.exports = {
       path.join(__dirname, 'plugins/**/*.ts'),
       'nuxt.config.ts',
     ],
-    options: {
-      whitelist: ['dark-mode', 'light-mode', 'taxonomy', 'document'],
-    },
+    // options: {
+    //   whitelist: ['dark-mode', 'light-mode', 'taxonomy', 'document'],
+    // },
   },
 }

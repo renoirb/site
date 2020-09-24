@@ -1,8 +1,7 @@
 <template>
-  <nav class="app-side-bar--component fixed z-10 w-full">
+  <nav class="app-side-bar--component fixed w-full">
     <div
-      class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto"
-      style="z-index: 2"
+      class="zone__sandwich__top container z-20 flex items-center justify-between py-4 mx-auto"
     >
       <div class="app-side-bar__identity md:px-5 flex items-center">
         <button
@@ -18,11 +17,18 @@
             stroke-width="2"
             viewBox="0 0 24 24"
             class="w-8 h-8"
+            :class="{ 'is-opened': isOpen }"
           >
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <nuxt-link to="/" class="identity__text">{{ appTitle }}</nuxt-link>
+        <nuxt-link
+          to="/"
+          class="identity__text"
+          :class="{ 'is-opened': isOpen }"
+        >
+          {{ appTitle }}
+        </nuxt-link>
       </div>
       <div class="app-side-bar__nav flex items-center">
         <div
@@ -35,10 +41,10 @@
 
     <transition
       enter-class="opacity-0"
-      enter-active-class="transition-medium ease-out"
+      enter-active-class="transition-medium ease-out-enter-active transition-all duration-500 ease-out"
       enter-to-class="opacity-100"
       leave-class="opacity-100"
-      leave-active-class="transition-medium ease-out"
+      leave-active-class="transition-medium ease-out-leave-active transition-all duration-500 ease-out"
       leave-to-class="opacity-0"
     >
       <div
@@ -54,7 +60,7 @@
       </div>
     </transition>
     <aside
-      class="app-side-bar__aside fixed top-0 left-0 z-30 w-64 h-full overflow-auto transition-all duration-300 ease-in-out transform"
+      class="md:invisible app-side-bar__aside fixed top-0 left-0 z-30 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <div
@@ -69,7 +75,7 @@
           :key="`${label}--${index}`"
           :to="to"
           class="hover:bg-teal-500 hover:text-white flex items-center p-4"
-          @click="isOpen = false"
+          @click.native="isOpen = false"
         >
           <span class="mr-2">
             {{ label }}
@@ -90,6 +96,7 @@
           bottom: -200px;
           z-index: -1;
         "
+        class="lg:visible invisible"
       ></inline-svg>
     </div>
   </nav>
@@ -146,7 +153,12 @@
     watch: {
       isOpen: {
         immediate: true,
-        handler(isOpen) {
+        handler(isOpen, previousValue) {
+          // eslint-disable-next-line
+          console.log('app-side-bar watch.isOpen', {
+            value: isOpen,
+            previousValue,
+          })
           if (process.client) {
             if (this.$el) {
               const body = this.$el.querySelector('body')
@@ -200,12 +212,27 @@
     @apply text-3xl font-light;
 
     color: var(--color-sandwich-text);
+    opacity: 1;
+
+    &.is-opened {
+      opacity: 0.1;
+      transition-duration: 1s;
+      transition-property: opacity;
+    }
   }
   .app-side-bar__aside {
     color: var(--color-primary);
     background-color: var(--color-container);
   }
+  .dark-mode .app-side-bar__aside {
+    color: var(--color-sandwich-text);
+  }
   .app-side-bar__aside .app-side-bar__identity {
     background-color: var(--color-sandwich-bg);
+  }
+  svg.is-opened {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+    transition-delay: 2s;
   }
 </style>

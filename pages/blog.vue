@@ -19,7 +19,7 @@
           autocomplete="off"
           name="q"
           placeholder="e.g. linux"
-          class="focus:font-bold focus:shadow-outline px-4 py-2 leading-normal border border-gray-300 rounded"
+          class="focus:font-bold focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"
         />
       </form>
     </div>

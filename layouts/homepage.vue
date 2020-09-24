@@ -2,14 +2,6 @@
   <div class="layouts--homepage">
     <app-header class="top" />
     <main class="zone__sandwich__meat middle container mx-auto">
-      <inline-svg
-        :src="require('~/assets/images/42357.svg')"
-        width="150"
-        height="150"
-        fill="black"
-        style="margin-top: -120px"
-        class="clearfix ml-10"
-      ></inline-svg>
       <div class="grid">
         <div class="m-10">
           <nuxt />

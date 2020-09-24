@@ -9,7 +9,9 @@ import { Context } from '@nuxt/types'
  *   take it into account, or just fallback to english, and add locale per article
  */
 export default (ctx: Context) => {
-  if (ctx && ctx.app.$colorMode && ctx.app.$colorMode.preference) {
-    ctx.app.$colorMode.preference = 'light'
-  }
+  // eslint-disable-next-line
+  console.log('what-gets-executed-4: middleware/init', ctx)
+  // if (ctx && ctx.app.$colorMode && ctx.app.$colorMode.preference) {
+  //   ctx.app.$colorMode.preference = 'light'
+  // }
 }
