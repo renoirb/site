@@ -1,9 +1,6 @@
 <template>
   <div class="pages-blog--index">
     <div class="document document--item">
-      <div class="title page-title mb-10">
-        <h1>{{ pageTitle }}</h1>
-      </div>
       <div class="body">
         <blog-list-model-by-year :contents="contents" :q="q" />
       </div>
@@ -19,9 +16,7 @@
     contents: INuxtContentResult[]
   }
   export interface Methods {}
-  export interface Computed {
-    pageTitle: string
-  }
+  export interface Computed {}
   export interface Props {
     q: string
   }
@@ -104,13 +99,6 @@
 
       const contents = await queryNuxtContent(this.$content, this.$route)
       this.contents = contents
-    },
-    head() {
-      const title = this.pageTitle
-      const out = {
-        title,
-      }
-      return out
     },
   })
 </script>

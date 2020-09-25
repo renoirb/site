@@ -3,6 +3,7 @@
     <div class="document document--collection">
       <div class="body">
         <blog-list-model-by-year
+          :show-year="false"
           :contents="contents"
           :q="$route && $route.query && $route.query.q"
         />
@@ -17,7 +18,6 @@
   import { INuxtContentIndexResult } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
-    pageTitle: string
   }
   export interface Methods {}
   export interface Computed {}
@@ -27,7 +27,6 @@
       'blog-list-model-by-year': BlogListModelByYear,
     },
     async asyncData({ $content, params }) {
-      const locale = 'fr-CA'
       const { year } = params
 
       let contents: INuxtContentIndexResult[] = []
@@ -48,28 +47,9 @@
         // ..
       }
 
-      const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
-      const pageTitle = `${publishedIn} ${year}`
-
-      const length = (contents || []).length
-      // eslint-disable-next-line
-      console.log('pages/blog/_year/index.vue asyncData', {
-        year,
-        params,
-        length,
-      })
-
       return {
-        pageTitle,
         contents,
       }
-    },
-    head() {
-      const title = this.pageTitle
-      const out = {
-        title,
-      }
-      return out
     },
   })
 </script>

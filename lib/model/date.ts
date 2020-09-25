@@ -172,3 +172,48 @@ export const transformToPrettyfiedTemporalDate = (
     prettified,
   }
 }
+
+export const isValidYear = (year: string): boolean => {
+  let out = false
+  try {
+    const attempt = extractYearFromDateString(`${year}-01-01`)
+    out = typeof attempt === 'number'
+  } catch (e) {
+    // ...
+  }
+  return out
+}
+
+export type IMonthNames = [string, string][]
+
+/**
+ * List month names in current locale or as per DateTimeFormatOptions
+ */
+export type IMonthNamesFn = (
+  locale: string,
+  options?: Intl.DateTimeFormatOptions,
+) => IMonthNames
+
+export const getMonthNames: IMonthNamesFn = (
+  locale = 'en-CA',
+  options?: Intl.DateTimeFormatOptions,
+) => {
+  const out: [string, string][] = []
+  const formatOptions: Intl.DateTimeFormatOptions = {
+    month: 'long',
+    ...(options || {}),
+  }
+
+  const temporalDate = Temporal.now.date()
+  // @ts-ignore — check if this is really there or not
+  const { monthsInYear = 12 } = temporalDate
+  const { year } = temporalDate.getFields()
+
+  for (let month = 1; month <= monthsInYear; month++) {
+    const thisMonth = temporalDate.with({ year, month })
+    const formatted = thisMonth.toLocaleString(locale, formatOptions)
+    out.push([String(month).padStart(2, '0'), formatted])
+  }
+
+  return out
+}

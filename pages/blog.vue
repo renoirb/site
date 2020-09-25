@@ -23,6 +23,9 @@
         />
       </form>
     </div>
+    <div class="title page-title mb-4 font-serif text-2xl italic">
+      <h1>{{ pageTitle }}</h1>
+    </div>
     <div class="pages-blog--parent--bottom">
       <nuxt-child :q="q" />
     </div>
@@ -35,7 +38,9 @@
     q: string
   }
   export interface Methods {}
-  export interface Computed {}
+  export interface Computed {
+    pageTitle: string
+  }
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
@@ -45,6 +50,16 @@
       return {
         q: '',
       }
+    },
+    computed: {
+      pageTitle(): string {
+        let pageTitle = 'Blog'
+        const q = this.q
+        if (q !== '') {
+          pageTitle += `, search results for «${q}»`
+        }
+        return pageTitle
+      },
     },
     watch: {
       q: {
@@ -74,6 +89,13 @@
         // if you want to send any data into server before redirection then you can do it here
         this.$router.push('/blog?q=' + this.q)
       },
+    },
+    head() {
+      const title = this.pageTitle
+      const out = {
+        title,
+      }
+      return out
     },
   })
 </script>

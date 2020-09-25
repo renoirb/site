@@ -1,6 +1,6 @@
 <template>
   <div class="document document--item">
-    <header class="title page-title">
+    <header class="title page-title mb-4 font-serif text-2xl italic">
       <h1>Kitchen Sink</h1>
       <em>
         Some hard-coded HTML patterns to make sure PostCSS purging doesn’t

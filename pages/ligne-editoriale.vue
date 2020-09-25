@@ -1,7 +1,7 @@
 <template>
   <div class="pages__ligne-editoriale--parent">
     <div class="document document--item">
-      <div class="title page-title">
+      <div class="title page-title mb-4 font-serif text-2xl italic">
         <h1>{{ content.title }}</h1>
       </div>
       <div class="body">

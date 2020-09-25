@@ -1,6 +1,6 @@
 <template>
   <div class="document document--item">
-    <header class="title page-title">
+    <header class="title page-title mb-4 font-serif text-2xl italic">
       <h1>Style Guide</h1>
     </header>
     <div class="body">

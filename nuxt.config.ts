@@ -1,3 +1,4 @@
+import path from 'path'
 import { NuxtConfig } from '@nuxt/types'
 import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity, IS_CI } from './lib'
 import tailwindConfig from './tailwind.config'
@@ -67,21 +68,21 @@ const main: NuxtConfig = {
    */
   components: true,
   router: {
-    middleware: ['redirects', 'init'],
+    middleware: ['init', 'redirects'],
     base: IS_CI ? PRODUCTION_BASE_PATH : '/',
   },
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
-    'nuxt-purgecss',
-    '@nuxtjs/tailwindcss',
     // Doc: https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/composition-api',
+    'nuxt-purgecss',
   ],
   /*
    ** Nuxt.js modules
@@ -127,7 +128,7 @@ const main: NuxtConfig = {
   purgeCSS: {
     mode: 'postcss',
     enabled: isProduction,
-    whitelist: [/^\w+-mode$/, /token$/, 'taxonomy', 'document'],
+    whitelist: ['dark-mode', 'light-mode', /token$/, 'taxonomy', 'document'],
   },
   server: {
     host: '0.0.0.0',
@@ -149,6 +150,14 @@ const main: NuxtConfig = {
       img: () => '[path][name].[ext]',
       font: () => '[path][name].[ext]',
       video: () => '[path][name].[ext]',
+    },
+    // @ts-ignore
+    postcss: {
+      plugins: {
+        'postcss-import': {},
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        'postcss-nested': {},
+      },
     },
   },
   generate: {

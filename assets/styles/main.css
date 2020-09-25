@@ -40,20 +40,31 @@
   }
   & .taxonomy-items {
     & li {
-      @apply inline-block bg-gray-200 rounded-full text-xs;
+      @apply inline-block rounded-full text-xs;
+      color: var(--color-taxonomy-text);
+      background-color: var(--color-taxonomy-bg);
     }
-    & li.hoverized:hover {
-      @apply bg-gray-500;
-      color: white;
+    & li.is-hoverizable {
+      &.taxonomy-items-active,
+      &:hover {
+        color: var(--color-taxonomy-text-hover);
+        background-color: var(--color-taxonomy-bg-hover);
+      }
+      &.taxonomy-items-active {
+        @apply underline;
+      }
     }
+  }
+  &.taxonomy-not-hoverizable li {
+    opacity: 0.25;
+  }
+  &.taxonomy-not-hoverizable:hover li {
+    opacity: 1;
   }
 }
 
-.document {
-  & .title {
-    @apply italic font-serif text-2xl;
-    color: var(--color-title);
-  }
+.page-title {
+  color: var(--color-title);
 }
 
 kbd {

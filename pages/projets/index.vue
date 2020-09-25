@@ -22,8 +22,8 @@
       </p>
     </app-very-old-article>
     <div class="document document--item">
-      <div class="title page-title">
-        <h1 class="mb-2 text-2xl">Projets</h1>
+      <div class="title page-title mb-2 font-serif text-2xl italic">
+        <h1>Projets</h1>
       </div>
       <div class="body mt-8">
         <div

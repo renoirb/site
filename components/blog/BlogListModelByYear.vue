@@ -2,6 +2,7 @@
   <div class="blog-list-model-by-year">
     <div v-for="inThatYear in byYears" :key="`buckets-year-${inThatYear[0]}`">
       <nuxt-link
+        v-if="showYear"
         :to="{
           path: `/blog/${inThatYear[0]}`,
           query: { q: q ? q : undefined },
@@ -21,7 +22,7 @@
                 date: content.date,
               },
             }"
-            class="font-serif text-lg italic"
+            class="font-serif text-xl italic"
             v-html="abbreviatize(content.title)"
           />
           <div
@@ -42,7 +43,7 @@
       <div class="h-5 -ml-10" style="background-color: var(--bg)" />
     </div>
     <div v-if="byYears.length < 1">
-      <p class="py-3 font-serif text-lg italic">
+      <p class="font-serif text-lg italic">
         Looks like I haven’t written anything
       </p>
     </div>
@@ -68,6 +69,7 @@
   export interface Props {
     contents: INuxtContentResult[]
     q: string
+    showYear: boolean
   }
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'BlogListModelByYear' /* blog-list-model-by-year */,
@@ -79,6 +81,10 @@
       q: {
         type: String,
         default: '',
+      },
+      showYear: {
+        type: Boolean,
+        default: true,
       },
     },
     computed: {

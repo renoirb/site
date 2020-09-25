@@ -1,7 +1,7 @@
 <template>
   <div class="pages__blog__tag--index">
     <div class="document document--collection">
-      <div class="title page-title">
+      <div class="title page-title font-serif text-2xl italic">
         <h1>All tags</h1>
       </div>
       <div class="body">

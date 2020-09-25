@@ -1,7 +1,7 @@
 <template>
   <div class="pages__blog__tag--item">
     <div class="document document--collection">
-      <div class="title page-title">
+      <div class="title page-title font-serif text-2xl italic">
         <h1>
           Under tag
           <!-- eslint-disable vue/no-v-html -->

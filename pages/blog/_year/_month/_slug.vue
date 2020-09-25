@@ -9,7 +9,7 @@
       {{ agedWarning }}
     </app-very-old-article>
     <div class="document document--item">
-      <div class="title page-title mb-2">
+      <div class="title page-title mb-4 font-serif text-2xl italic">
         <!-- eslint-disable vue/no-v-html -->
         <h1 v-html="abbreviatize(content.title)" />
       </div>

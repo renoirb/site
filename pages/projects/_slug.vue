@@ -1,7 +1,7 @@
 <template>
   <div class="pages-projects--slug">
     <div class="document document--collection">
-      <div class="title page-title">
+      <div class="title page-title font-serif text-2xl italic">
         <!-- eslint-disable vue/no-v-html -->
         <h1 v-html="abbreviatize(content.title)" />
       </div>

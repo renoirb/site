@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 /**
  * TailwindCSS Configuration File
  *
@@ -9,6 +7,9 @@
  * (Temporarily) copy-paste from:
  * - https://github.com/nuxt/content/blob/83b13f58/docs/nuxt.config.js#L3
  * - https://github.com/nuxt/content/blob/83b13f58/packages/theme-docs/src/index.js
+ *
+ * Bookmarks:
+ * - https://regenrek.com/posts/how-to-use-tailwind-css-with-nuxt/
  *
  * @TODO
  * - fontFamily: Roboto
@@ -230,6 +231,7 @@ module.exports = {
     }),
     require('@tailwindcss/typography'),
     require('@tailwindcss/custom-forms'),
+    require('tailwindcss-dark-mode')(),
   ],
   purge: {
     mode: 'layers',
@@ -243,8 +245,8 @@ module.exports = {
       path.join(__dirname, 'plugins/**/*.ts'),
       'nuxt.config.ts',
     ],
-    // options: {
-    //   whitelist: ['dark-mode', 'light-mode', 'taxonomy', 'document'],
-    // },
+    options: {
+      whitelist: ['dark-mode', 'token'],
+    },
   },
 }

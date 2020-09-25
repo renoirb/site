@@ -1,5 +1,8 @@
 <template>
-  <div class="taxonomy">
+  <div
+    class="taxonomy"
+    :class="{ 'taxonomy-not-hoverizable': !link, 'taxonomy-hoverizable': link }"
+  >
     <strong
       v-if="labeler.hasLabel"
       :id="labeler.label.id"
@@ -12,7 +15,7 @@
         v-for="tag in tags"
         :key="tag"
         class="px-2 py-1 mb-3 mr-3"
-        :class="{ hoverized: link }"
+        :class="{ 'is-hoverizable': link }"
       >
         <!-- eslint-disable vue/no-v-html -->
         <span v-if="link === false" v-html="abbreviatize(tag)" />
