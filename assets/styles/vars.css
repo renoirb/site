@@ -1,5 +1,6 @@
 :root {
   --color-sandwich-bg: #000;
+  --color-sandwich-left-splat-bg: #bdbdbd;
   --color-sandwich-text: #fff;
   --color-container: #fff;
   --color-backdrop: #e5e5e5;
@@ -22,6 +23,7 @@
 
 .dark-mode {
   --color-sandwich-bg: #214761;
+  --color-sandwich-left-splat-bg: #0d334d;
   --color-sandwich-text: #fff;
   --color-container: #5d839d;
   --color-backdrop: #000;

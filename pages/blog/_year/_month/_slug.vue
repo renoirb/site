@@ -8,7 +8,7 @@
     >
       {{ agedWarning }}
     </app-very-old-article>
-    <div class="document document--item">
+    <div class="document document--item z-30">
       <div class="title page-title mb-4 font-serif text-2xl italic">
         <!-- eslint-disable vue/no-v-html -->
         <h1 v-html="abbreviatize(content.title)" />
@@ -32,6 +32,7 @@
         />
         <nuxt-content :document="content" />
       </div>
+      <app-prev-next class="my-10" :prev="prev" :next="next" />
     </div>
   </div>
 </template>
@@ -45,8 +46,11 @@
     INuxtContentResult,
     getPrettyfiedTemporalDate,
     IPrettyfiedTemporalDate,
+    INuxtContentPrevNext,
   } from '~/lib'
   export interface Data {
+    prev: INuxtContentPrevNext
+    next: INuxtContentPrevNext
     content: INuxtContentResult
     prettyfiedTemporalDate: IPrettyfiedTemporalDate
     agedWarning: string | null
@@ -105,7 +109,15 @@
         leakOutLocale,
       )
 
+      const [prev, next] = (await $content('blog', { deep: true })
+        .only(['title', 'path', 'locale'])
+        .sortBy('createdAt', 'asc')
+        .surround(slug)
+        .fetch()) as [INuxtContentPrevNext, INuxtContentPrevNext]
+
       return {
+        prev,
+        next,
         content,
         coverImage,
         coverImageCaption,

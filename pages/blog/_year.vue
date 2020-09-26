@@ -6,7 +6,7 @@
       :current-month="$route.params.month"
     />
     <h1
-      :key="pageTitle"
+      v-if="!$route.params.slug"
       class="title page-title mt-4 mb-4 font-serif text-2xl italic"
     >
       {{ pageTitle }}
@@ -19,73 +19,28 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { Route } from 'vue-router'
-
   import AppMonthsInYear from '@/components/AppMonthsInYear.vue'
-  import { transformToPrettyfiedTemporalDate } from '~/lib'
-  export interface Data {}
-  export interface Methods {}
-  export interface Computed {
+  export interface Data {
     pageTitle: string
   }
+  export interface Methods {}
+  export interface Computed {}
   export interface Props {}
-  export const pageTitleFn = (route: Route): string => {
-    const locale = 'en-CA'
-
-    const dtfo: Intl.DateTimeFormatOptions = {
-      month: 'long',
-    }
-    const prettyfiedTemporalDate = transformToPrettyfiedTemporalDate(
-      route.params,
-      locale,
-      dtfo,
-    )
-    const { prettified = '...' } = prettyfiedTemporalDate
-
-    const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
-    const pageTitle = `${publishedIn} ${prettified}`
-
-    return pageTitle
-  }
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
       'app-months-in-year': AppMonthsInYear,
     },
-    asyncData({ route }) {
-      const pageTitle = pageTitleFn(route)
+    asyncData({ app }) {
+      let pageTitle = ''
+      // @ts-ignore
+      if (app && app.head && app.head.title) {
+        // @ts-ignore
+        pageTitle = app.head.title
+      }
+
       return {
         pageTitle,
       }
-    },
-    data() {
-      return {
-        pageTitle: '',
-      }
-    },
-    watch: {
-      $route(to, from) {
-        if (to && to.fullPath && from && from.fullPath) {
-          // eslint-disable-next-line
-          console.warn('pages/blog/_year.vue watch.$route AAA', {
-            'to.fullPath': to.fullPath,
-            'from.fullPath': from.fullPath,
-          })
-          if (to.fullPath !== from.fullPath) {
-            const pageTitle = pageTitleFn(to)
-            this.pageTitle = pageTitle
-          }
-        }
-
-        // eslint-disable-next-line
-        console.warn('pages/blog/_year.vue watch.$route', { to, from })
-      },
-    },
-    head() {
-      const title = this.pageTitle
-      const out = {
-        title,
-      }
-      return out
     },
   })
 </script>

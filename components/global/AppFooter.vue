@@ -1,6 +1,7 @@
 <template>
   <div class="app-footer--component disposition-parent w-full">
     <footer
+      style="position: relative"
       class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto"
     >
       <dl class="contact items-item disposition-item">
@@ -16,10 +17,10 @@
         <dl lang="fr-CA" class="see-also">
           <dt>Voir aussi&hellip;</dt>
           <dd>
-            <nuxt-link to="/ligne-editoriale"> Ligne éditoriale </nuxt-link>
+            <NuxtLink to="/ligne-editoriale"> Ligne éditoriale </NuxtLink>
           </dd>
           <dd>
-            <nuxt-link to="/projets"> Projets </nuxt-link>
+            <NuxtLink to="/projets"> Projets </NuxtLink>
           </dd>
         </dl>
       </div>

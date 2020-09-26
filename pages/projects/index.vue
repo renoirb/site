@@ -1,6 +1,6 @@
 <template>
   <div class="pages__projects--index">
-    <div class="document document--item">
+    <div class="document document--item z-30">
       <div class="title page-title font-serif text-2xl italic">
         <h1>{{ pageTitle }}</h1>
       </div>
@@ -12,7 +12,7 @@
             class="mt-0 mb-5 font-serif text-lg italic"
           >
             <!-- eslint-disable vue/no-v-html -->
-            <nuxt-link
+            <NuxtLink
               :to="content.path"
               class="mb-2"
               :lang="content.locale ? content.locale : 'en-CA'"

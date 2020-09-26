@@ -1,8 +1,23 @@
 <template>
-  <nav class="app-side-bar--component fixed w-full">
+  <nav class="app-side-bar--component fixed z-40 w-full">
     <div
-      class="zone__sandwich__top container z-20 flex items-center justify-between py-4 mx-auto"
+      style="position: relative"
+      class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto"
     >
+      <inline-svg
+        :src="require('~/assets/images/42357.svg')"
+        width="500"
+        height="500"
+        style="
+          fill: var(--color-sandwich-bg) !important;
+          position: absolute;
+          rotate: -80deg;
+          right: -140px;
+          bottom: -210px;
+          z-index: -1;
+        "
+        class="lg:visible invisible"
+      ></inline-svg>
       <div class="app-side-bar__identity md:px-5 flex items-center">
         <button
           class="md:hidden ml-5 mr-2"
@@ -22,13 +37,13 @@
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <nuxt-link
+        <NuxtLink
           to="/"
           class="identity__text"
           :class="{ 'is-opened': isOpen }"
         >
           {{ appTitle }}
-        </nuxt-link>
+        </NuxtLink>
       </div>
       <div class="app-side-bar__nav flex items-center">
         <div
@@ -49,7 +64,7 @@
     >
       <div
         v-show="isOpen"
-        class="fixed inset-0 z-10 transition-opacity"
+        class="fixed inset-0 transition-opacity"
         @keydown.esc="isOpen = false"
       >
         <div
@@ -60,17 +75,17 @@
       </div>
     </transition>
     <aside
-      class="md:invisible app-side-bar__aside fixed top-0 left-0 z-30 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform"
+      class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <div
         class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b"
         @click="isOpen = false"
       >
-        <nuxt-link to="/" class="identity__text">{{ appTitle }}</nuxt-link>
+        <NuxtLink to="/" class="identity__text">{{ appTitle }}</NuxtLink>
       </div>
       <div>
-        <nuxt-link
+        <NuxtLink
           v-for="({ label, to }, index) of nav"
           :key="`${label}--${index}`"
           :to="to"
@@ -80,32 +95,14 @@
           <span class="mr-2">
             {{ label }}
           </span>
-        </nuxt-link>
+        </NuxtLink>
       </div>
     </aside>
-    <div style="position: relative">
-      <inline-svg
-        :src="require('~/assets/images/42357.svg')"
-        width="500"
-        height="500"
-        style="
-          fill: var(--color-sandwich-bg) !important;
-          position: absolute;
-          rotate: -80deg;
-          right: -60px;
-          bottom: -200px;
-          z-index: -1;
-        "
-        class="lg:visible invisible"
-      ></inline-svg>
-    </div>
   </nav>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
-  // @ts-ignore
-  import InlineSvg from 'vue-inline-svg'
   import { IAppHeaderNavItems } from '~/lib'
   export interface Data {
     appTitle: string
@@ -129,7 +126,8 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'AppSideBar' /* app-side-bar */,
     components: {
-      InlineSvg,
+      // @ts-ignore
+      'inline-svg': () => import('vue-inline-svg'),
     },
     props: {
       nav: {
@@ -153,12 +151,7 @@
     watch: {
       isOpen: {
         immediate: true,
-        handler(isOpen, previousValue) {
-          // eslint-disable-next-line
-          console.log('app-side-bar watch.isOpen', {
-            value: isOpen,
-            previousValue,
-          })
+        handler(isOpen) {
           if (process.client) {
             if (this.$el) {
               const body = this.$el.querySelector('body')

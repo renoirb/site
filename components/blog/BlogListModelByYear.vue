@@ -1,7 +1,7 @@
 <template>
   <div class="blog-list-model-by-year">
     <div v-for="inThatYear in byYears" :key="`buckets-year-${inThatYear[0]}`">
-      <nuxt-link
+      <NuxtLink
         v-if="showYear"
         :to="{
           path: `/blog/${inThatYear[0]}`,
@@ -9,11 +9,11 @@
         }"
       >
         <h2 class="my-4 font-serif text-2xl italic">{{ inThatYear[0] }}</h2>
-      </nuxt-link>
+      </NuxtLink>
       <ul>
         <li v-for="content in inThatYear[1]" :key="content.slug" class="mb-8">
           <!-- eslint-disable vue/no-v-html -->
-          <nuxt-link
+          <NuxtLink
             :lang="content.locale ? content.locale : 'en-CA'"
             :to="{
               path: content.path,

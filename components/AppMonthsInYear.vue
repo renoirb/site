@@ -9,7 +9,7 @@
           'taxonomy-items-active': currentMonth && currentMonth === monthNumber,
         }"
       >
-        <nuxt-link
+        <NuxtLink
           :to="{
             path: `/blog/${year}/${monthNumber}`,
           }"
@@ -17,7 +17,7 @@
           <time :datetime="`${year}-${monthNumber}`" :lang="locale">
             {{ monthName }}
           </time>
-        </nuxt-link>
+        </NuxtLink>
       </li>
     </ol>
   </div>

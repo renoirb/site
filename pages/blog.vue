@@ -67,10 +67,13 @@
         handler(q, oldVal) {
           const router = this.$router
           // eslint-disable-next-line
-          console.info('pages/blog.vue watch.q handler', {
-            currentQuery: q,
-            oldVal,
-          })
+          console.debug(
+            'what-gets-executed-5: pages/blog.vue watch.q handler',
+            {
+              currentQuery: q,
+              oldVal,
+            },
+          )
           if (router) {
             router
               .replace({ query: q !== '' ? { q } : undefined })

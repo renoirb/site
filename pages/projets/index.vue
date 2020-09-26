@@ -18,10 +18,10 @@
       <p>
         Une fois ce site complètement migré de WordPress, j'ajouterai plus de
         projets et les organiserai dans la section
-        <nuxt-link to="/projects">/projects</nuxt-link>.
+        <NuxtLink to="/projects">/projects</NuxtLink>.
       </p>
     </app-very-old-article>
-    <div class="document document--item">
+    <div class="document document--item z-30">
       <div class="title page-title mb-2 font-serif text-2xl italic">
         <h1>Projets</h1>
       </div>
@@ -32,9 +32,9 @@
           class="pb-8 mb-8 border-b border-black border-dashed"
         >
           <h3 class="mb-2 font-serif text-lg italic">
-            <nuxt-link v-if="content.to" :to="content.to">
+            <NuxtLink v-if="content.to" :to="content.to">
               {{ content.title }}
-            </nuxt-link>
+            </NuxtLink>
             <span v-else>{{ content.title }}</span>
           </h3>
           <nuxt-content :document="content" />

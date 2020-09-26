@@ -57,8 +57,6 @@ export const highlight: IPrismHighlight = (code, language = 'javascript') => {
 
 const prismNuxtPlugin: Plugin = (_, inject) => {
   Vue.filter('highlight', highlight)
-  // eslint-disable-next-line
-  console.log('what-gets-executed-1: plugins/prism')
   inject('prism', highlight)
 }
 

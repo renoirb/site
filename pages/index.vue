@@ -1,6 +1,6 @@
 <template>
   <div class="pages__index--parent">
-    <div class="document document--item">
+    <div class="document document--item z-30">
       <ul>
         <li
           v-for="content in contents"
@@ -9,7 +9,7 @@
           :lang="content.locale ? content.locale : 'en-CA'"
         >
           <!-- eslint-disable vue/no-v-html -->
-          <nuxt-link
+          <NuxtLink
             :to="{
               path: content.path,
               meta: {
@@ -33,8 +33,8 @@
         </li>
       </ul>
     </div>
-    <nuxt-link class="sr-only" to="/kitchen-sink">Kitchen sink</nuxt-link>
-    <nuxt-link class="sr-only" to="/styleguide">styleguide</nuxt-link>
+    <NuxtLink class="sr-only" to="/kitchen-sink">Kitchen sink</NuxtLink>
+    <NuxtLink class="sr-only" to="/styleguide">styleguide</NuxtLink>
   </div>
 </template>
 
@@ -62,8 +62,6 @@
     layout: 'homepage',
     async asyncData({ $content }) {
       const tag = 'Favourites'
-      // eslint-disable-next-line
-      console.info('pages/index.vue asyncData')
 
       let contents: IDatedNuxtContentResult[] = []
       contents = await $content('blog', { deep: true })
@@ -77,10 +75,6 @@
           content.locale,
         )
         content.prettyfiedTemporalDate = prettyfiedTemporalDate
-        // eslint-disable-next-line
-        console.info(`pages/index.vue asyncData: ${content.slug}`, {
-          prettyfiedTemporalDate,
-        })
       }
 
       return {

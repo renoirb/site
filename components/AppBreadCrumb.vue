@@ -32,7 +32,7 @@
               },
               [
                 h(
-                  'nuxt-link',
+                  'NuxtLink',
                   {
                     props: {
                       to: { path: p.crumb },

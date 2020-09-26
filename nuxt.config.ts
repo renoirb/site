@@ -1,4 +1,3 @@
-import path from 'path'
 import { NuxtConfig } from '@nuxt/types'
 import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity, IS_CI } from './lib'
 import tailwindConfig from './tailwind.config'
@@ -150,14 +149,6 @@ const main: NuxtConfig = {
       img: () => '[path][name].[ext]',
       font: () => '[path][name].[ext]',
       video: () => '[path][name].[ext]',
-    },
-    // @ts-ignore
-    postcss: {
-      plugins: {
-        'postcss-import': {},
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-        'postcss-nested': {},
-      },
     },
   },
   generate: {

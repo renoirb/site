@@ -20,7 +20,7 @@
         <!-- eslint-disable vue/no-v-html -->
         <span v-if="link === false" v-html="abbreviatize(tag)" />
         <!-- eslint-disable vue/no-v-html -->
-        <nuxt-link v-else :to="`/blog/tag/${tag}`" v-html="abbreviatize(tag)" />
+        <NuxtLink v-else :to="`/blog/tag/${tag}`" v-html="abbreviatize(tag)" />
       </li>
     </ul>
     <span v-else class="taxonomy-items text-xs">(...)</span>

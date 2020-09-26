@@ -32,12 +32,19 @@
   })
 </script>
 
-<style scoped>
+<style>
   [itemprop='image'] {
     border-radius: 100%;
     background-clip: padding-box;
-    border-color: #fff;
+    border-color: var(--color-title);
     border-style: solid;
+    border-width: 4px;
     padding: 3px;
+  }
+  .dark-mode [itemprop='image'] {
+    border-color: #fff;
+  }
+  .dark-mode body {
+    color: #fff !important;
   }
 </style>

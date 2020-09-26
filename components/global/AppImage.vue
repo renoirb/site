@@ -108,7 +108,6 @@
         } else {
           this.loaded = true
         }
-        console.warn('app-image onLoad', currentSrc, evt) // eslint-disable-line
       },
     },
   })

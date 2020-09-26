@@ -3,30 +3,35 @@ import { Context } from '@nuxt/types'
 import { IPrettyfiedTemporalDate } from '../date'
 
 export interface IBaseNuxtContentResult extends Result {
-  dir: string
-  path: string
-  extension: string
-  slug: string
   createdAt: string
+  dir: string
+  extension: string
+  path: string
+  slug: string
   updatedAt: string
 }
 
 export interface INuxtContentResult extends IBaseNuxtContentResult {
-  title: string
-  tags: string[]
   categories: string[]
+  cover?: string
+  coverAlt?: string
+  coverCaption?: string
+  date: string
   locale: string
   oldArticle?: string
-  cover?: string
-  coverCaption?: string
-  coverAlt?: string
-  date: string
+  tags: string[]
+  title: string
 }
+
+export type INuxtContentPrevNext = Pick<
+  INuxtContentResult,
+  'locale' | 'path' | 'title'
+>
 
 export interface INuxtContentIndexResult
   extends Pick<
     INuxtContentResult,
-    'title' | 'date' | 'slug' | 'locale' | 'path' | 'createdAt'
+    'createdAt' | 'date' | 'locale' | 'path' | 'slug' | 'title'
   > {
   prettyfiedTemporalDate?: IPrettyfiedTemporalDate
 }

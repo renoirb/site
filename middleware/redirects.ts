@@ -1,4 +1,4 @@
-import { Context } from 'nuxt'
+import { Context } from '@nuxt/types'
 import { createMaybeRedirectTo } from '../lib'
 
 const redirects: [RegExp, string, true?][] = [
@@ -16,9 +16,8 @@ const maybeRedirectTo = createMaybeRedirectTo(redirects)
 
 export default (ctx: Context) => {
   // eslint-disable-next-line
-  console.log('what-gets-executed-3: middleware/redirects')
-  const { route = { path: '' } } = ctx
-  const maybeRedirectPath = maybeRedirectTo(route)
+  console.debug('what-gets-executed-6: middleware/redirects')
+  const maybeRedirectPath = maybeRedirectTo(ctx.route)
   if (maybeRedirectPath) {
     return ctx.redirect(maybeRedirectPath)
   }

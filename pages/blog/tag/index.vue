@@ -7,9 +7,9 @@
       <div class="body">
         <ul>
           <li v-for="tag in tags" :key="tag">
-            <nuxt-link :to="`/blog/tag/${tag}`">
+            <NuxtLink :to="`/blog/tag/${tag}`">
               {{ tag }}
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </div>
