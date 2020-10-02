@@ -1,3 +1,4 @@
+export * from './nuxt-content'
 export * from './nuxt'
 export * from './page-redirect'
 export * from './tailwind'

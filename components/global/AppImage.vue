@@ -1,5 +1,11 @@
 <template>
-  <figure :class="{ 'app-image-error': errored, 'is-loading': !loaded }">
+  <figure
+    :class="{
+      'lost-image': lostImage,
+      'app-image-error': errored,
+      'is-loading': !loaded,
+    }"
+  >
     <img
       v-if="!!imageSource"
       ref="img"
@@ -9,9 +15,9 @@
     />
     <!-- eslint-disable vue/no-v-html -->
     <figcaption
-      v-if="figcaption !== ''"
+      v-if="imageFigcaption !== ''"
       class="text-xs"
-      v-html="abbreviatize(figcaption)"
+      v-html="abbreviatize(imageFigcaption)"
     />
   </figure>
 </template>
@@ -25,6 +31,7 @@
     errored: boolean
     loaded: boolean
     fallbackSrc: string
+    lostImage: boolean
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -32,6 +39,7 @@
   }
   export interface Computed {
     imageSource: any
+    imageFigcaption: string
   }
   export interface Props {
     src: string
@@ -48,7 +56,7 @@
     props: {
       src: {
         type: String,
-        required: true,
+        default: '',
       },
       alt: {
         type: String,
@@ -62,16 +70,28 @@
       },
     },
     data() {
+      const lostImage = this.src === 'lost-image'
       return {
         errored: false,
         loaded: false,
+        lostImage,
         fallbackSrc,
       }
     },
     computed: {
+      imageFigcaption(): string {
+        let figcaption = this.figcaption
+        if (this.lostImage) {
+          figcaption = 'Missing image'
+        }
+        return figcaption
+      },
       imageSource() {
         // @ts-ignore
-        const src = this.src as string
+        let src = this.src as string
+        if (src === 'lost-image') {
+          src = ''
+        }
         /**
          * Using a method because of its asynchronous nature
          * Bookmarks:
@@ -80,7 +100,7 @@
          * - https://github.com/webpack/webpack/issues/4807
          * - https://webpack.js.org/api/module-methods/#magic-comments
          */
-        if (!RE_WEBPACK_ASSETS.test(src)) {
+        if (!RE_WEBPACK_ASSETS.test(src) && src !== '') {
           const message = `
             Path "${src}" does not start by "@/assets/",
             For WebPack/Nuxt/Vue loading purposes,
@@ -112,3 +132,9 @@
     },
   })
 </script>
+
+<style scoped>
+  .lost-image {
+    @apply mx-auto w-1/6 my-5;
+  }
+</style>

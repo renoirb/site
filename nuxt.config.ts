@@ -1,5 +1,10 @@
 import { NuxtConfig } from '@nuxt/types'
-import { PRODUCTION_BASE_PATH, fromProcessEnvToAppIdentity, IS_CI } from './lib'
+import {
+  nuxtContentHooks,
+  PRODUCTION_BASE_PATH,
+  fromProcessEnvToAppIdentity,
+  IS_CI,
+} from './lib'
 import tailwindConfig from './tailwind.config'
 
 const appIdentity = fromProcessEnvToAppIdentity(process.env)
@@ -50,6 +55,9 @@ const main: NuxtConfig = {
   },
   env: {
     ...appIdentity,
+  },
+  hooks: {
+    ...nuxtContentHooks,
   },
   /*
    ** Global CSS

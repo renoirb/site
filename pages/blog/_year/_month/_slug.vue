@@ -6,8 +6,9 @@
       class="my-4"
       alert-type="warn"
     >
-      {{ agedWarning }}
+      <nuxt-content v-if="preamble !== null" :document="preamble" />
     </app-very-old-article>
+
     <div class="document document--item z-30">
       <div class="title page-title mb-4 font-serif text-2xl italic">
         <!-- eslint-disable vue/no-v-html -->
@@ -47,6 +48,8 @@
     getPrettyfiedTemporalDate,
     IPrettyfiedTemporalDate,
     INuxtContentPrevNext,
+    INuxtContentParsedTreeRoot,
+    IDocumentMetaSlot,
   } from '~/lib'
   export interface Data {
     prev: INuxtContentPrevNext
@@ -64,7 +67,9 @@
   export interface Methods {
     abbreviatize: IAbbreviatize
   }
-  export interface Computed {}
+  export interface Computed {
+    preamble: INuxtContentParsedTreeRoot | null
+  }
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
@@ -109,11 +114,15 @@
         leakOutLocale,
       )
 
-      const [prev, next] = (await $content('blog', { deep: true })
+      const dal = $content('blog', { deep: true })
         .only(['title', 'path', 'locale'])
         .sortBy('createdAt', 'asc')
         .surround(slug)
-        .fetch()) as [INuxtContentPrevNext, INuxtContentPrevNext]
+
+      const [prev, next] = (await dal.fetch()) as [
+        INuxtContentPrevNext,
+        INuxtContentPrevNext,
+      ]
 
       return {
         prev,
@@ -125,6 +134,27 @@
         prettyfiedTemporalDate,
         agedWarning,
       }
+    },
+    computed: {
+      preamble(): INuxtContentParsedTreeRoot | null {
+        const slotName: IDocumentMetaSlot = 'app-very-old-article'
+        let out: null | INuxtContentParsedTreeRoot = null
+        try {
+          if (this.content.meta) {
+            const attempt = this.content.meta.filter((m) => m.slot === slotName)
+            if (attempt.length === 1 && attempt[0]) {
+              const item = attempt[0]
+              if (item.body) {
+                out = item.body
+              }
+            }
+          }
+        } catch (e) {
+          // eslint-disable-next-line
+          console.warn('_slug caught error', { error: e })
+        }
+        return out
+      },
     },
     methods: {
       abbreviatize,
