@@ -15,14 +15,19 @@ keywords:
   - server
   - repositoire
   - serveur
-oldArticle:
-  Dans le temps où le «cloud computing» n’était pas très fréquent, ni
-  l’automatisation avec Puppet, SaltStack, Ansible. Aussi, les images qui
-  étaient originalement incluses dans cet article ne sont plus disponibles, ce
-  qui rend cet article peu utilisable. J’ai décidé de conserver quand-même,
-  comme preuve qu’avant d’avoir pris l’habitude de tout automatiser, les
-  procédures avec captures d’écran sont éphémères et perdent tout leur sens sans
-  images.
+preamble:
+  text: |
+    Dans le temps où le «cloud computing» n’était pas très fréquent, ni
+    l’automatisation avec Puppet, SaltStack, Ansible. Aussi, les images qui
+    étaient originalement incluses dans cet article ne sont plus disponibles, ce
+    qui rend cet article peu utilisable. J’ai décidé de conserver quand-même,
+    comme preuve qu’avant d’avoir pris l’habitude de tout automatiser, les
+    procédures avec captures d’écran sont éphémères et perdent tout leur sens sans
+    images.
+    D’ailleurs, pour que les services soient résilients, comme par exemple
+    les relais SMTP ou DNS qui sont faits pour s’entraîder, ces services sont
+    pensés pour être composé de plusieurs «nodes» qui ont la même responsabilité
+    et qu’il est possible de rapidement appliquer la même configuration rapidement.
 ---
 
 L’idée c’est de d’avoir un serveur rack-mount minimal fait pour héberger les VM

@@ -1,6 +1,7 @@
 export type IAbbreviatize = (prose: string) => string
 
 const ABBREVIATION = [
+  '(n.d.l.r.',
   '(i.e.',
   '(e.g.',
   'css',
@@ -50,6 +51,7 @@ export const assertsDefinedAbbreviation = (
  * @TODO A Good place to store authoritative WoRd CasInG should be here.
  */
 const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
+  ['(n.d.l.r.', 'Editor’s note'],
   ['(i.e.', 'In essence'],
   ['(e.g.', 'For example'],
   ['css', 'Cascading Style Sheet'],

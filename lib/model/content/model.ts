@@ -1,6 +1,7 @@
 import { Result } from '@nuxt/content'
-import { Context, NuxtOptions } from '@nuxt/types'
-import { IPrettyfiedTemporalDate } from '../date'
+import { Context } from '@nuxt/types'
+import type { IPrettyfiedTemporalDate } from '../date'
+import type { IFrontMatterInnerDocument } from './front-matter-inner-document'
 
 export interface IBaseNuxtContentResult extends Result {
   createdAt: string
@@ -11,49 +12,8 @@ export interface IBaseNuxtContentResult extends Result {
   updatedAt: string
 }
 
-export interface INuxtContentParsedTreeChild {
-  type: string | 'element'
-  tag: string | 'p' | 'nuxt-link' | 'li'
-  props: Record<string, string>
-}
-export interface INuxtContentParsedTreeTextNode {
-  type: 'text'
-  value: string
-}
-export type INuxtContentParsedTreeChidren = (
-  | INuxtContentParsedTreeTextNode
-  | INuxtContentParsedTreeChidren
-)[]
-
-/**
- * What Nuxt content internally uses when transforming files.
- */
-export interface INuxtContentParsedTreeRoot {
-  type: 'root'
-  children: INuxtContentParsedTreeChidren
-}
-
-/**
- * Where on a page should we insert the following content
- */
-export type IDocumentMetaSlot = 'app-very-old-article'
-
-export interface IDocumentMeta {
-  slot: IDocumentMetaSlot
-  /**
-   * Markdown contents that will be parsed by Nuxt Content
-   * and be used inside the slot contents.
-   */
-  markdown?: string
-  /**
-   * Following Nuxt Content's rendering pattern.
-   * What's in markdown property transformed for rendering.
-   */
-  body?: INuxtContentParsedTreeRoot
-}
-
 export interface INuxtContentResult extends IBaseNuxtContentResult {
-  meta?: IDocumentMeta[]
+  preamble?: IFrontMatterInnerDocument
   categories: string[]
   cover?: string
   coverAlt?: string
@@ -63,34 +23,6 @@ export interface INuxtContentResult extends IBaseNuxtContentResult {
   oldArticle?: string
   tags: string[]
   title: string
-}
-
-type INuxtContentToJsonFn = Record<
-  'toJSON',
-  (raw: string) => IBaseNuxtContentResult
->
-
-/**
- * Bookmarks:
- * - https://github.com/nuxt/content/blob/%40nuxt/content%401.8.0/packages/content/lib/database.js#L22-L25
- */
-export interface NuxtContentDatabase {
-  markdown: INuxtContentToJsonFn
-  yaml: INuxtContentToJsonFn
-  csv: INuxtContentToJsonFn
-}
-
-type INuxtOptionsHooks = NuxtOptions['hooks']
-
-/**
- * Bookmarks:
- * - https://content.nuxtjs.org/advanced/#contentfilebeforeinsert
- */
-export interface NuxtOptionsHooks extends INuxtOptionsHooks {
-  'content:file:beforeInsert': (
-    document: INuxtContentResult,
-    database: NuxtContentDatabase,
-  ) => void
 }
 
 export type INuxtContentPrevNext = Pick<
@@ -106,12 +38,7 @@ export interface INuxtContentIndexResult
   prettyfiedTemporalDate?: IPrettyfiedTemporalDate
 }
 
-export type INuxtContentIndexResultByYears = [
-  number,
-  INuxtContentIndexResult[],
-][]
-
-export const typeGuardNuxtContentResult = (
+export const isNuxtContentResult = (
   maybe: any,
 ): maybe is INuxtContentResult => {
   let outcome = false

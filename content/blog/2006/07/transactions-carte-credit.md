@@ -12,8 +12,8 @@ categories:
   - Tranche de vie
 tags:
   - geranium
-createdAt: *createdAt
 date: &createdAt '2006-07-14T12:25:45-04:00'
+createdAt: *createdAt
 ---
 
 Ajourd'hui je me suis mis a lire sur mes prochaines étapes de développement.

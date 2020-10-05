@@ -31,7 +31,7 @@
   import Vue, { PropOptions } from 'vue'
   import {
     INuxtContentResult,
-    typeGuardNuxtContentResult,
+    isNuxtContentResult,
     Labeler,
     ILabeler,
     abbreviatize,
@@ -55,7 +55,7 @@
     props: {
       content: {
         type: Object,
-        validator: typeGuardNuxtContentResult,
+        validator: isNuxtContentResult,
         required: true,
       } as PropOptions<INuxtContentResult>,
       link: {

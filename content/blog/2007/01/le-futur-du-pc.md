@@ -12,12 +12,11 @@ keywords:
   - futur
 date: &createdAt '2007-01-25T20:05:38-04:00'
 createdAt: *createdAt
-meta:
-  - slot: app-very-old-article
-    markdown: |
-      Maintenant (2020) que nous avons la [Réalité Augumentée][0] qu'est-ce qui nous
-      attend pour l'interface utilisateur sur le poste de travail?
-      [0]: /blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers/
+preamble:
+  text: |
+    Maintenant (n.d.l.r. en *2020*) que nous avons la [Réalité Augumentée][0] qu'est-ce qui nous
+    attend pour l’interface utilisateur sur le poste de travail?
+    [0]: /blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers/
 ---
 
 Je ne sais pas si vous avez déjà imaginé avoir un ordinateur qui a une interface

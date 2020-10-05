@@ -4,15 +4,17 @@ published: true
 title: Detection de langue
 date: &createdAt '2005-12-22T20:23:22-04:00'
 createdAt: *createdAt
-oldArticle:
-  D’autant plus que j’ai écrit ça bien avant de réaliser comment c’est un appel
-  aux erreurs que de tout mettre dans le «global scope»
 categories:
   - Programmation
 tags:
   - i18n
   - l10n
   - php
+preamble:
+  text: |
+    D’autant plus que j’ai écrit ça bien avant de réaliser comment c’est très
+    risqué et contribue aux erreurs en temps d’exécution que de tout placer dans
+    le «global scope».
 ---
 
 Lorsqu’on travaille sur un site qui doit avoir plusieurs langues... il m’arrive

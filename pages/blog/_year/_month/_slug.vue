@@ -6,7 +6,10 @@
       class="my-4"
       alert-type="warn"
     >
-      <nuxt-content v-if="preamble !== null" :document="preamble" />
+      <nuxt-content
+        v-if="preamble && preamble.document !== null"
+        :document="preamble && preamble.document"
+      />
     </app-very-old-article>
 
     <div class="document document--item z-30">
@@ -43,13 +46,13 @@
   import Vue from 'vue'
   import {
     abbreviatize,
-    IAbbreviatize,
-    INuxtContentResult,
     getPrettyfiedTemporalDate,
-    IPrettyfiedTemporalDate,
+    IAbbreviatize,
     INuxtContentPrevNext,
-    INuxtContentParsedTreeRoot,
-    IDocumentMetaSlot,
+    INuxtContentResult,
+    IPrettyfiedTemporalDate,
+    extractFrontMatterInnerDocument,
+    IFrontMatterInnerDocument,
   } from '~/lib'
   export interface Data {
     prev: INuxtContentPrevNext
@@ -63,13 +66,12 @@
     coverImage: '' | string
     coverImageCaption: '' | string
     coverImageAlt: '' | string
+    preamble: IFrontMatterInnerDocument | null
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
   }
-  export interface Computed {
-    preamble: INuxtContentParsedTreeRoot | null
-  }
+  export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
@@ -77,6 +79,7 @@
     },
     async asyncData({ $content, params, error }) {
       const { year, month, slug } = params
+      const fallbackLocale = 'fr-CA'
 
       let content: INuxtContentResult | null = null
       let agedWarning: string | null = null
@@ -85,10 +88,26 @@
       let coverImageAlt: string | '' = ''
 
       let leakOutLocale: string | '' = ''
+      let preamble: IFrontMatterInnerDocument | null = null
 
       try {
         const dal = $content('blog', year, month, slug, { text: true })
         content = await dal.fetch()
+
+        if (content) {
+          try {
+            const maybePreamble = extractFrontMatterInnerDocument(
+              content,
+              'preamble',
+            )
+            if (maybePreamble && preamble === null) {
+              preamble = maybePreamble
+            }
+          } catch (_) {
+            // ....
+          }
+        }
+
         const {
           oldArticle = null,
           cover = '',
@@ -107,6 +126,11 @@
 
       if (!content) {
         error({ message: 'Document not found' })
+      }
+
+      if (leakOutLocale === '') {
+        /** @TODO find out why no errors, yet no locale set */
+        leakOutLocale = fallbackLocale
       }
 
       const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
@@ -133,28 +157,8 @@
         coverImageAlt,
         prettyfiedTemporalDate,
         agedWarning,
+        preamble,
       }
-    },
-    computed: {
-      preamble(): INuxtContentParsedTreeRoot | null {
-        const slotName: IDocumentMetaSlot = 'app-very-old-article'
-        let out: null | INuxtContentParsedTreeRoot = null
-        try {
-          if (this.content.meta) {
-            const attempt = this.content.meta.filter((m) => m.slot === slotName)
-            if (attempt.length === 1 && attempt[0]) {
-              const item = attempt[0]
-              if (item.body) {
-                out = item.body
-              }
-            }
-          }
-        } catch (e) {
-          // eslint-disable-next-line
-          console.warn('_slug caught error', { error: e })
-        }
-        return out
-      },
     },
     methods: {
       abbreviatize,
