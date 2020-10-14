@@ -11,7 +11,6 @@
         style="
           fill: var(--color-sandwich-bg) !important;
           position: absolute;
-          rotate: -80deg;
           right: -140px;
           bottom: -210px;
           z-index: -1;

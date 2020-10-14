@@ -7,8 +7,7 @@
       style="
         fill: var(--color-sandwich-left-splat-bg) !important;
         position: fixed;
-        rotate: -120deg;
-        left: -500px;
+        left: -580px;
         z-index: -2;
         top: 1%;
         margin-top: -300px;
