@@ -110,6 +110,19 @@
         })
         // this.$el.style.transform = 'none'
       }
+      // Remove any iframe[width][height]
+      if (this.$el && this.$el.ownerDocument) {
+        const iframes: HTMLIFrameElement[] = []
+        try {
+          const nodes = this.$el.ownerDocument.querySelectorAll('iframe')
+          iframes.push(...Array.from(nodes))
+        } catch (_) {
+          // ...
+        }
+        iframes.forEach((i) => {
+          i.removeAttribute('width')
+        })
+      }
     },
     head() {
       const colorModeClassName = this.colorModeClassName

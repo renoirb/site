@@ -13,6 +13,7 @@ export interface IBaseNuxtContentResult extends Result {
 }
 
 export interface INuxtContentResult extends IBaseNuxtContentResult {
+  canonical?: string
   preamble?: IFrontMatterInnerDocument
   categories: string[]
   cover?: string

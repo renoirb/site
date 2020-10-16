@@ -8,7 +8,7 @@
         :route="$route"
       />
       <form
-        class="justify-self-end sm:w-full flex items-center justify-center"
+        class="justify-self-end sm:w-full position-relative flex items-center justify-center"
         @submit.prevent="submit"
       >
         <label for="search" class="sr-only">Search within blog:</label>
@@ -19,7 +19,7 @@
           autocomplete="off"
           name="q"
           placeholder="e.g. linux"
-          class="focus:font-bold focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"
+          class="focus:z-50 focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"
         />
       </form>
     </div>

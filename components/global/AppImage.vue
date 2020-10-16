@@ -1,9 +1,11 @@
 <template>
   <figure
     :class="{
+      'app-image': true,
       'lost-image': lostImage,
       'app-image-error': errored,
       'is-loading': !loaded,
+      'has-image': !lostImage && !errored,
     }"
   >
     <img
@@ -16,9 +18,14 @@
     <!-- eslint-disable vue/no-v-html -->
     <figcaption
       v-if="imageFigcaption !== ''"
-      class="text-xs"
-      v-html="abbreviatize(imageFigcaption)"
-    />
+      class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md"
+    >
+      <span
+        class="figcaption-contents"
+        v-html="abbreviatize(imageFigcaption)"
+      />
+      <slot></slot>
+    </figcaption>
   </figure>
 </template>
 
@@ -136,5 +143,22 @@
 <style scoped>
   .lost-image {
     @apply mx-auto w-1/6 my-5;
+  }
+  figcaption {
+    /* the speech bubble */
+    position: relative;
+    background: var(--color-container);
+  }
+  figcaption::after {
+    /* the speech bubble arrow */
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    /* drawing of the speech bubble arrow */
+    border: 20px solid transparent;
+    border-bottom-color: var(--color-container);
+    border-top: 0;
   }
 </style>

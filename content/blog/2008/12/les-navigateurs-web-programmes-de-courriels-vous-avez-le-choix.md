@@ -79,7 +79,7 @@ l'interpréteur («ce qui fait fonctionner») JavaScript.
 
 J'ai seulement cette image, et je la trouve drôle:
 
-<app-image alt="HA HA! I'm using «the Internet»" src="~/assets/content/blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg"></app-image>
+<app-image alt="HA HA! I'm using «the Internet»" figcaption="Si l’on compare le engins de rendu HTML modernes à des véhicules. Les navigateurs faits par la compétition de Microsoft Internet Explorer seraient des autos. Les engins de rendus qui seraient des autos pour WebKit (Chromium, Safari) et Presto (Opera). Tandis qu’Internet Explorer (Trident) serait une pauvre calèche." src="~/assets/content/blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg"></app-image>
 
 C'est, au final, une question de choix
 

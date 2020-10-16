@@ -24,6 +24,16 @@
         <time :datetime="prettyfiedTemporalDate.temporalDate">
           {{ prettyfiedTemporalDate.prettified }}
         </time>
+        <a
+          v-if="canonical"
+          :href="canonical"
+          class="canonical-link"
+          lang="en"
+          target="_blank"
+          title="Canonical link, the URL it is meant to replace"
+        >
+          Canonical
+        </a>
       </div>
       <app-article-tags :content="content" class="mt-0 mb-5" />
       <div class="body mt-10">
@@ -32,9 +42,10 @@
           :src="coverImage"
           :alt="coverImageAlt"
           :figcaption="coverImageCaption"
-          class="md:float-right md:ml-5 mb-5"
+          class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 z-30 float-none pb-5 pl-0 mx-auto mt-1"
         />
         <nuxt-content :document="content" />
+        <div class="clearfix" />
       </div>
       <app-prev-next class="my-10" :prev="prev" :next="next" />
     </div>
@@ -55,6 +66,7 @@
     IFrontMatterInnerDocument,
   } from '~/lib'
   export interface Data {
+    canonical: null | string
     prev: INuxtContentPrevNext
     next: INuxtContentPrevNext
     content: INuxtContentResult
@@ -87,6 +99,7 @@
       let coverImageCaption: string | '' = ''
       let coverImageAlt: string | '' = ''
 
+      let leakOutCanonical: string | null = null
       let leakOutLocale: string | '' = ''
       let preamble: IFrontMatterInnerDocument | null = null
 
@@ -114,12 +127,14 @@
           coverCaption = '',
           coverAlt = '',
           locale = 'en-CA',
+          canonical = null,
         } = content as INuxtContentResult
         leakOutLocale = locale
         coverImage = cover
         coverImageCaption = coverCaption
         coverImageAlt = coverAlt
         agedWarning = oldArticle
+        leakOutCanonical = canonical
       } catch (e) {
         error({ message: 'Document not found' })
       }
@@ -149,15 +164,16 @@
       ]
 
       return {
-        prev,
-        next,
+        agedWarning,
+        canonical: leakOutCanonical,
         content,
         coverImage,
-        coverImageCaption,
         coverImageAlt,
-        prettyfiedTemporalDate,
-        agedWarning,
+        coverImageCaption,
         preamble,
+        prettyfiedTemporalDate,
+        prev,
+        next,
       }
     },
     methods: {
@@ -192,3 +208,16 @@
     },
   })
 </script>
+
+<style scoped>
+  .canonical-link {
+    @apply text-sm underline ml-5;
+    color: var(--color-container-text-link);
+  }
+  .canonical-link::before {
+    content: '(';
+  }
+  .canonical-link::after {
+    content: ')';
+  }
+</style>

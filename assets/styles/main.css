@@ -63,10 +63,6 @@
   }
 }
 
-.page-title {
-  color: var(--color-title);
-}
-
 kbd {
   @apply font-mono bg-blue-500 text-white font-bold py-1 px-2 rounded inline-block uppercase;
 }

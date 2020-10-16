@@ -1,23 +1,27 @@
 <template>
-  <div class="grid grid-cols-2">
-    <NuxtLink
-      v-if="prev"
-      :lang="prev.locale ? prev.locale : 'en-CA'"
-      :to="{ path: prev.path }"
-      class="text-primary hover:underline item-prev text-left"
-    >
-      {{ prev.title }}
-    </NuxtLink>
-    <span v-else>&nbsp;</span>
-    <NuxtLink
-      v-if="next"
-      :lang="next.locale ? next.locale : 'en-CA'"
-      :to="{ path: next.path }"
-      class="hover:underline item-next text-right"
-    >
-      {{ next.title }}
-    </NuxtLink>
-    <span v-else>&nbsp;</span>
+  <div class="text-md grid grid-cols-2">
+    <div class="text-left">
+      <NuxtLink
+        v-if="prev"
+        :lang="prev.locale ? prev.locale : 'en-CA'"
+        :to="{ path: prev.path }"
+        class="hover:underline item-prev"
+      >
+        {{ prev.title }}
+      </NuxtLink>
+      <span v-else>&nbsp;</span>
+    </div>
+    <div class="text-right">
+      <NuxtLink
+        v-if="next"
+        :lang="next.locale ? next.locale : 'en-CA'"
+        :to="{ path: next.path }"
+        class="hover:underline item-next"
+      >
+        {{ next.title }}
+      </NuxtLink>
+      <span v-else>&nbsp;</span>
+    </div>
   </div>
 </template>
 
@@ -51,6 +55,13 @@
 </script>
 
 <style scoped>
+  a {
+    @apply underline;
+    color: var(--color-container-text-link);
+  }
+  a:hover {
+    color: var(--color-container-text-link-hover);
+  }
   .item-prev:before {
     content: '< ';
   }

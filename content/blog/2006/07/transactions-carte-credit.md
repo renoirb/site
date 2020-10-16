@@ -6,8 +6,17 @@ keywords:
 canonical: 'https://renoirboulanger.com/blog/2006/07/transactions-carte-credit/'
 title: Transactions carte credit
 cover: ~/assets/content/blog/2006/07/geranium-business-card-back.png
-coverAlt:
-  Le logo de Geranium, le logiciel de gestion d’entreprise et de contenu web
+coverAlt: |
+  Géranium 2.0, outil de gestion d’entreprise modulaire. Des solutions de gestion web intégrées.
+coverCaption: |
+  Géranium, le logiciel de gestion d’entreprise et de contenu web
+preamble:
+  text: |
+    Géranium était (2003..2008) une Application Web pour aider les entreprises à faire le
+    virage numérique.
+    Il était possible de gérer son propre site web, et avoir son propre «rolodex» de contacts
+    sur le web, tel un «CRM».
+    Le produit était en code source fermé et son dévelopement à cessé en 2008.
 categories:
   - Tranche de vie
 tags:

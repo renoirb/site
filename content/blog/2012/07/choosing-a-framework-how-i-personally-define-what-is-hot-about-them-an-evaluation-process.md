@@ -16,8 +16,8 @@ keywords:
   - quality
 canonical: 'https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process/'
 title:
-  Choosing a framework, how I personally define what is “hot” about them, an
-  evaluation process (part 1)
+  Choosing a framework, how I personally check as “hot” characteristics, my
+  evaluation process
 categories:
   - Web Integration Review
 date: &createdAt '2012-07-23'

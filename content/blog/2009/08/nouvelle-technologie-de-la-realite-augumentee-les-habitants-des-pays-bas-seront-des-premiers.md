@@ -2,7 +2,6 @@
 locale: fr-CA
 date: &createdAt '2009-08-26T17:00:21-04:00'
 createdAt: *createdAt
-published: true
 title:
   Nouvelle technologie de la Réalité Augumentée, Les habitants des Pays Bas
   seront des premiers
@@ -15,14 +14,24 @@ keywords:
   - technologie
   - services-publics
   - réalité augumentée
-cover: ~/assets/content/blog/2009/08/BTTFII_DocBrown_car.jpg
+cover: ~/assets/content/blog/2009/08/BTTFII_DocBrown_car.JPG
 coverCaption:
-  Doc Brown (Christopher Lloyd) dans la DeLorean,  Retour vers le Futur 2
+  Les lunettes mattes de Doc Brown (Christopher Lloyd) dans sa DeLorean dans
+  "Retour Vers le Futur 2". Bien que le film n’a pas élaboré sur ce que
+  <em>Doc</em> pouvait voir, il était implicite que le porteur peux y voir des
+  couches supplémentaires d'informations. Durant le film, on le voit même
+  conduire en utilisant ses lunettes.
 preamble:
   text: |
-    Cet article était écrit après [un statut Twitter de ReadWriteWeb][twitter-rww]
-    (lien vers le status datant de 2009), et un sondage qui a n'est plus retrouvable.
-    Il est possible que le résultat du sondage [a été utilisé pour cet article][11].
+    Cet article était écrit pour faire suite à [un statut Twitter de ReadWriteWeb][twitter-rww], publié en Août 2009. (lien vers le statut n'était pas inclus dans cet article).
+
+    Le statut était:
+
+    «<blockquote lang="en">Is Augmented Reality Garbage of Golden?</blockquote>»
+
+    Il invitait à réponre à un sondage à propos de la réalité augumentée, si c'est une mode passagère («<span lang="en">Garbage</span>») ou s'il y a un potentiel («<span lang="en">Golden</span>»).
+    Malheureusement, le lien de l'article et du sondage n’est plus retrouvable.
+    Mais il est possible que le résultat du sondage [a été utilisé pour cet article][11].
     [twitter-rww]: https://twitter.com/RWW 'ReadWriteWeb Twitter account'
     [11]: https://readwrite.com/2009/06/25/augmented_reality_heres_our_wishlist_of_apps_whats/ 'Augmented Reality: Here’s Our Wishlist of Apps, What’s On Yours?'
 ---
@@ -34,8 +43,7 @@ restaurant du coin, les informations sur le vendeur d'une maison... les détails
 d'un produit et l'accès aux critiques, etc.
 
 ... D'où l'appellation de «[Réalité Augumentée][1]» (AR). Le buzz existe depuis
-quelques années et on a vu plusieurs prototypes. √Ä la fin de cet article vous
-pourrez le voir en action
+quelques années et on a vu plusieurs prototypes.
 
 La mention «On est plus si loin des fantaisies des auteurs de Science-Fiction»
 devient de plus en plus réalité! On a déjà le communicator, la
@@ -84,15 +92,32 @@ Ce prototype démontre qu'il est possible a partir d'indices imprimés qu'on peu
 disposer d'éléments 3D sur un ecran et par dessus l'objet réel.
 
 <app-alert-box alert-type="warn" title="Lien perdu">
-Le lien vers ce vidéo sur Vimeo est brisé et perdu. Originalement, nous pouvions y voir un objet en 3D qui était interprété par la caméra du téléphone.
+
+Le lien vers ce vidéo sur Vimeo est brisé et perdu. Originalement, nous pouvions
+y voir un objet en 3D qui était interprété par la caméra du téléphone.
+Alternativement, [ce vidéo publié quelques mois plus tard][xc863i] illustre bien
+le travail de recherche qui avait été fait entre 2009 et 2010.
+
 </app-alert-box>
+
+<app-image src="~/assets/content/blog/2009/08/dailymotion-xc863i.png" figcaption="Une nouvelle expérience 3D de réalité augmentée conçue et réalisée par Dassault Systèmes. Transformez votre paquet de Chocapic ou de Nesquik en jeu vidéo 3D. [Pour jouer] branchez votre webcam. Disponible partout en France début Novembre 2009.">
+
+[Lien vers le vidéo][xc863i]
+
+</app-image>
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xc863i" width="100%" height="100%" allowfullscreen > </iframe> </div>
+
+[xc863i]:
+  https://www.dailymotion.com/video/xc863i
+  'Expérience de Réalité augmentée par Dassault Systèmes'
 
 ### nVidia et son prototype de Jeu de shooting de zombies
 
 L'idée a avancée depuis le temps et nVidia a fait son prototype avec un jeu au
 thème de la chasse au zoombie.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cNu4CluFOcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe height="315" src="https://www.youtube.com/embed/cNu4CluFOcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Sur le marché: _Layar_ le premier apareil de _Réalité Augumentée_
 

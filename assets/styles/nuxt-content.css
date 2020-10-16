@@ -4,8 +4,17 @@
  * - https://github.com/nuxt/content/blob/%40nuxt/content-theme-docs%400.6.0/packages/theme-docs/src/assets/css/main.css#L14-L88
  */
 
+.document {
+  /* contains .nuxt-content, but is a parent up */
+  & .app-image.document-cover.has-image img {
+    /* The document image does not look the same as inside the .nuxt-content */
+    @apply border rounded-lg shadow-md;
+    border-color: var(--color-container);
+  }
+}
+
 .nuxt-content {
-  @apply break-words font-light;
+  @apply break-words font-light; /* cannot put overflow-hidden */
 
   & a {
     @apply underline;
@@ -13,6 +22,27 @@
   }
   & a:hover {
     color: var(--color-container-text-link-hover);
+  }
+
+  /* Horizontal margin before and after alert-box and/or code block */
+  & .app-alert-box,
+  & .nuxt-content-highlight {
+    @apply my-5;
+  }
+
+  & .app-image.has-image {
+    @apply float-right w-1/3 pl-5 mx-auto;
+    /* position is always relative to where it is so we can z-index it */
+    position: relative;
+  }
+
+  & iframe {
+    @apply w-full !important;
+  }
+
+  & .page-title {
+    @apply text-xl;
+    color: var(--color-title);
   }
 
   & .nuxt-content-highlight {
@@ -65,10 +95,8 @@
   }
   & h2,
   & h1 {
-    color: var(--color-title);
-  }
-  & h2 {
     @apply text-2xl;
+    color: var(--color-title);
   }
   & h3 {
     @apply text-xl;
@@ -95,5 +123,16 @@
   & li,
   & blockquote {
     @apply pl-4;
+  }
+  & ol > li {
+    @apply my-5;
+  }
+}
+
+/* when smaller than md */
+@media (max-width: 640px) {
+  .nuxt-content .app-image.has-image,
+  .document-cover.app-image.has-image {
+    @apply float-none w-full pl-0;
   }
 }
