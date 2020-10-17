@@ -3,6 +3,7 @@
     <div v-for="inThatYear in byYears" :key="`buckets-year-${inThatYear[0]}`">
       <NuxtLink
         v-if="showYear"
+        class="no-underline"
         :to="{
           path: `/blog/${inThatYear[0]}`,
           query: { q: q ? q : undefined },
@@ -10,7 +11,7 @@
       >
         <h2 class="my-4 font-serif text-2xl italic">{{ inThatYear[0] }}</h2>
       </NuxtLink>
-      <ul>
+      <ul v-if="Array.isArray(inThatYear)">
         <li v-for="content in inThatYear[1]" :key="content.slug" class="mb-8">
           <!-- eslint-disable vue/no-v-html -->
           <NuxtLink
@@ -22,7 +23,7 @@
                 date: content.date,
               },
             }"
-            class="font-serif text-xl italic"
+            class="font-serif text-xl italic no-underline"
             v-html="abbreviatize(content.title)"
           />
           <div

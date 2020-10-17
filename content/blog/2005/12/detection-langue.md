@@ -18,8 +18,9 @@ preamble:
 ---
 
 Lorsqu’on travaille sur un site qui doit avoir plusieurs langues... il m’arrive
-souvent de devoir détecter la langue du visiteur. Ce bout de code permet de
-détecter la langue selon les données fournies dans
+souvent de devoir détecter la langue du visiteur.
+
+Ce bout de code permet de détecter la langue selon les données fournies dans
 <strong>HTTP_ACCEPT_LANGUAGE</strong> <em>et</em>
 <strong>HTTP_USER_AGENT</strong>. Il faut comprendre que ce n’est pas une
 solution absolue, mais un bout de code qui peut s'avérer utile!

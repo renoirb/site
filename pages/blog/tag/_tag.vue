@@ -38,12 +38,24 @@
     async asyncData({ $content, params }) {
       const { tag } = params
 
+      /**
+       * Figuring out how to list when has tag string
+       * with same text content, case-insensITiVe.
+       *
+       * Bookmarks:
+       * - https://github.com/nuxt/content/issues/577#
+       * - https://github.com/techfort/LokiJS/wiki/Query-Examples#find-queries
+       */
+      const predicate = {
+        tags: { $contains: tag /* Figure out how to be case-insensitive */ },
+      } as any
       let contents: INuxtContentResult[] = []
-      contents = await $content('blog', { deep: true })
-        .where({ tags: { $contains: tag } })
+      const maybe: INuxtContentResult[] = await $content('blog', { deep: true })
+        .where(predicate)
         .sortBy('createdAt', 'desc')
         .fetch()
 
+      contents = Array.isArray(maybe) ? maybe : ([] as INuxtContentResult[])
       return {
         contents,
         tag,

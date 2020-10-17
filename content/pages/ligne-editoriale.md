@@ -70,3 +70,9 @@ sujets. Voici quelques lignes directrices que je me suis donné:
 - [Kim Vallée on the web: Every Blog Should have a Bible](http://ontheweb.kimvallee.com/2009/05/every-blogger-needs-a-blog-bible/)
 - [Copyblogger: Zen and The art of Remarkable Blogging](http://www.copyblogger.com/zen-and-the-art-of-remarkable-blogging/)
 - [Ready2Spark: getting noticed by the right people](http://www.ready2spark.com/2009/08/breaking-blogging-rules-seo.html)
+- [Writing technical articles: Defining your ideal
+  reader][rachelandrew--writing-technical-articles]
+
+[rachelandrew--writing-technical-articles]:
+  https://www.rachelandrew.co.uk/archives/2020/05/14/writing-technical-articles-defining-your-ideal-reader/
+  'Writing Technical Articles, define your Ideal Reader'

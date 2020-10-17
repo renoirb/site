@@ -5,6 +5,7 @@
       class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto"
     >
       <inline-svg
+        v-if="isDecorationVisible"
         :src="require('~/assets/images/42357.svg')"
         width="500"
         height="500"
@@ -106,6 +107,7 @@
   export interface Data {
     appTitle: string
     isOpen: boolean
+    isDecorationVisible: boolean
   }
   export interface Methods {
     onKeyDown(evt: HTMLBodyElementEventMap['keydown']): void
@@ -145,6 +147,7 @@
       return {
         appTitle,
         isOpen: false,
+        isDecorationVisible: true,
       }
     },
     watch: {

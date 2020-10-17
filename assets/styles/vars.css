@@ -29,8 +29,8 @@
   --color-backdrop: #000;
   --bg: var(--color-backdrop);
   --color: #f4f7f3;
-  --color-title: #262626;
-  --color-subtitle: #262626;
+  --color-title: var(--color-sandwich-text);
+  --color-subtitle: var(--color-sandwich-text);
   --color-primary: #577f79;
   --color-secondary: #fdf9f3;
   --bg-secondary: #214761;
@@ -39,6 +39,6 @@
   --color-taxonomy-bg-hover: #959595;
   --color-taxonomy-text-hover: #fff;
   --color-taxonomy-text: #313131;
-  --color-container-text-link: var(--bg-secondary);
-  --color-container-text-link-hover: var(--color-secondary);
+  --color-container-text-link: var(--color-sandwich-text);
+  --color-container-text-link-hover: var(--color-sandwich-text);
 }

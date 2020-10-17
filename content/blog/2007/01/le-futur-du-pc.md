@@ -63,8 +63,8 @@ pour déplacer, de conserver la «pression» en déplaceant le «curseur».
 
 </app-image>
 
-Ma surprise a été lorsque j'ai entendu parler d'un nouveau type de moniteur
-touch-screen évolué qui a la possibilité de considérer plus qu'un seul pointeur.
+Ma surprise a été lorsque j’ai entendu parler d’un nouveau type de moniteur
+touch-screen évolué qui a la possibilité de considérer plus qu’un seul pointeur.
 Imaginez les possibilités!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M0ODskdEPnQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

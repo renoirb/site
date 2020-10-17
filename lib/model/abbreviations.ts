@@ -1,20 +1,21 @@
 export type IAbbreviatize = (prose: string) => string
 
 const ABBREVIATION = [
-  'GNOME',
-  '(n.d.l.r.',
-  '(i.e.',
   '(e.g.',
+  '(i.e.',
+  '(n.d.l.r.',
+  'ar',
   'css',
   'dns',
+  'gnome',
   'html',
   'http',
   'i18n',
   'js',
   'json',
   'json5',
-  'mysql',
   'l10n',
+  'mysql',
   'php',
   'sass',
   'smtp',
@@ -52,15 +53,16 @@ export const assertsDefinedAbbreviation = (
  * @TODO A Good place to store authoritative WoRd CasInG should be here.
  */
 const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
-  [
-    'GNOME',
-    'GNU/Linux XOrg Desktop environment, initially an accronym for GNU Network Object Model Environment.',
-  ],
-  ['(n.d.l.r.', 'Editor’s note'],
-  ['(i.e.', 'In essence'],
   ['(e.g.', 'For example'],
+  ['(i.e.', 'In essence'],
+  ['(n.d.l.r.', 'Editor’s note'],
+  ['ar', 'Augumented Reality'],
   ['css', 'Cascading Style Sheet'],
   ['dns', 'Domain Name Service (network Name resolution)'],
+  [
+    'gnome',
+    'GNU/Linux XOrg Desktop environment, initially an accronym for GNU Network Object Model Environment.',
+  ],
   ['html', 'Hyper Text Markup Language'],
   ['http', 'Hyper Text Transfer Protocol'],
   ['i18n', 'Internationalization'],

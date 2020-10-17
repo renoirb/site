@@ -10,21 +10,23 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
-    "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@types/jsonresume-from-yaml": ["./node_modules/jsonresume-from-yaml"]
     },
     "types": [
       "@nuxt/components",
       "@nuxt/content",
       "@nuxt/http",
       "@nuxt/types",
-      "@types/js-yaml",
-      "@types/node",
-      "@types/prismjs",
-      "jsonresume-from-yaml"
+      "jsonresume-from-yaml",
+      "js-yaml",
+      "node",
+      "prismjs",
+      "lodash",
+      "jest"
     ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

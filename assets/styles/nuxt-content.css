@@ -11,18 +11,18 @@
     @apply border rounded-lg shadow-md;
     border-color: var(--color-container);
   }
-}
-
-.nuxt-content {
-  @apply break-words font-light; /* cannot put overflow-hidden */
-
-  & a {
+  & a:not(.no-underline) {
     @apply underline;
     color: var(--color-container-text-link);
   }
   & a:hover {
+    @apply no-underline;
     color: var(--color-container-text-link-hover);
   }
+}
+
+.nuxt-content {
+  @apply break-words font-light; /* cannot put overflow-hidden */
 
   /* Horizontal margin before and after alert-box and/or code block */
   & .app-alert-box,
@@ -38,6 +38,16 @@
 
   & iframe {
     @apply w-full !important;
+  }
+
+  & table {
+    @apply table-auto;
+    & tbody td {
+      @apply border;
+    }
+    & thead th {
+      @apply px-4 py-2;
+    }
   }
 
   & .page-title {
@@ -83,13 +93,21 @@
 
   /** ***** **/
 
+  & table,
+  & p,
+  & iframe,
+  & ul,
+  & ol {
+    @apply mb-5;
+  }
+
   & h1,
   & h2,
   & h3,
   & h4,
   & h5,
   & h6 {
-    @apply mt-5 mb-2 italic font-serif;
+    @apply my-5 italic font-serif;
 
     color: var(--color-subtitle);
   }

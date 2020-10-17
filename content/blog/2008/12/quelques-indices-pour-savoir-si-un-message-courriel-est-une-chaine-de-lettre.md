@@ -47,6 +47,8 @@ Remarquez que j'ai [même utilisé la fonte 'Comic Sans'][1], qui est souvent
 utilisée dans ce type de message. Un vrai professionnel du web ou de la
 communication n'utiliserait pas cette police de caractères.
 
+<blockquote>
+
 Subject: ENVOIE LE À TOUS TES CONTACTS!!!!
 
 Date: Wed, 26 Nov 2008 09:37:13 -0500
@@ -82,6 +84,8 @@ et nos emails, sauf si nous envoyons ce message à au moins 18 de nos contacts.
 Ce n'est pas une blague! D'ailleurs si vous n'y croyez pas [allez sur ce
 site][2]
 
+</blockquote>
+
 ### Notes
 
 C'est une chaîne de lettre... le but c'est qu'elle circule. Elle ne sert a rien
@@ -91,6 +95,8 @@ lorsque tu te connectes.
 La mention disant qu'_il ne reste que 578 noms_ est n'importe quoi. C'est même
 un signe évidemment que la personne qui a créé cette chaîne ne connaît pas ce
 dont elle parle.
+
+![Capture d’écran][3]
 
 Ensuite, la nouvelle donne un lien vers un site. La BBC, mais si vous regardez
 la date de parution de la nouvelle ([capture d'écran][3]), elle date du
@@ -112,7 +118,7 @@ courantes et réelles.
 **Des indices pour savoir si c'est une fraude, contrefaçon, attrape-nigaud,
 chaîne de lettre**
 
-A partir du moment qu'on vous demande:
+A partir du moment qu’on vous demande:
 
 - d'envoyer à tous vos contacts
 - de faire suivre
@@ -122,7 +128,7 @@ A partir du moment qu'on vous demande:
 Que le fait de faire suivre ton message à vos contacts puisse faire des choses
 comme:
 
-- Empêcher de fermer le site _X_
+- Empêcher de fermer le site `X`
 - Avoir de la chance en amour/sexe/argent
 
 Encore plus spécialement :
@@ -140,8 +146,6 @@ sujet des attrapes sur le web.
 
 Vous pouvez voir tous les articles dans la section [Projets][4], dans la section
 spécifique aux [**arnaques sur internet**][5].
-
-Ce billet a été révisé le 6 juin 2013\.
 
 [0]: /blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/
 [1]: http://comicsanscriminal.com/

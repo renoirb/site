@@ -82,8 +82,8 @@ nano -w /etc/conf.d/keymaps
 ```
 
 Changer la variable `KEYMAP="us"` pour `KEYMAP="cf"` "`cf`" est le clavier
-_Canadien Français_ avec le SHIFT+3 pour "`/`" et dièse "`#`" a coté du chiffre
-"1" au clavier. Mon keymap favori quoi!
+_Canadien Français_ avec le <kbd>SHIFT</kbd>+<kbd>3</kbd> pour "`/`" et dièse
+"`#`" a coté du chiffre "`1`" au clavier. Mon keymap favori quoi!
 
 ```ini{}[/etc/conf.d/keymaps]
 KEYMAP="cf"
@@ -124,7 +124,7 @@ routes_eth0=( "default gw 192.168.1.1" )
 
 ## Démarer le réseau par défaut
 
-Cette commande ajuste la configuration interne pour s'assurer que l'interface
+Cette commande ajuste la configuration interne pour s’assurer que l’interface
 réseau `eth0` est active durant le processus de démarrage.
 
 ```bash
@@ -141,8 +141,7 @@ nano -w /etc/hosts
 192.168.1.83 gentoo-vm
 ```
 
-Ce peut être une bonne idée d'utiliser le fichier \> renoir-hosts.txt selon
-l'adressage IP du bureau
+Ce peut être une bonne idée d’utiliser le fichier selon l’adressage IP du bureau
 
 ## Installer VIM, mon éditeur favori
 

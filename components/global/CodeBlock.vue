@@ -26,6 +26,9 @@
 </script>
 
 <style scoped>
+  .code-block .nuxt-content-highlight {
+    margin-top: 0 !important;
+  }
   .code-block {
     display: none;
   }

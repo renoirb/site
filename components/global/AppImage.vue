@@ -12,8 +12,9 @@
       v-if="!!imageSource"
       ref="img"
       :src="imageSource"
-      class="object-cover w-full"
-      @load="onLoad"
+      class="object-cover w-full rounded"
+      :data-remote="imageSiteDistSrc"
+      @load.once="onLoad"
     />
     <!-- eslint-disable vue/no-v-html -->
     <figcaption
@@ -31,14 +32,26 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { abbreviatize, IAbbreviatize, trimText } from '~/lib'
+  import {
+    abbreviatize,
+    FALLBACK_BLANK_IMAGE,
+    IAbbreviatize,
+    PUBLIC_SITE_ASSETS_ORIGIN,
+  } from '~/lib'
   // const images = require.context('~assets/', false, /\.(?:png|jpg|svg|gif)$/i)
   const RE_WEBPACK_ASSETS = /^[@~]\/assets\//
+  const PUBLIC_SITE_ASSETS_ORIGIN_ASSETS =
+    PUBLIC_SITE_ASSETS_ORIGIN + '/assets/'
   export interface Data {
     errored: boolean
     loaded: boolean
     fallbackSrc: string
     lostImage: boolean
+    /**
+     * Flip this to true if we replaced local images
+     * to use GitHub renoirb/site-assets asset URL.
+     */
+    hasSrcBeenRewritten: boolean
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -47,17 +60,13 @@
   export interface Computed {
     imageSource: any
     imageFigcaption: string
+    imageSiteDistSrc: string
   }
   export interface Props {
     src: string
     alt: string | ''
     figcaption: string | ''
   }
-  const fallbackSrc = trimText`
-    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMA
-    AAAl21bKAAAAA1BMVEUhR2EbeJkBAAAAAXRSTlPM0jRW/QAAAApJREFUeJ
-    xjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=
-  `
   export default Vue.extend<Data, Methods, Computed, Props>({
     name: 'AppImage' /* app-image */,
     props: {
@@ -82,10 +91,17 @@
         errored: false,
         loaded: false,
         lostImage,
-        fallbackSrc,
+        hasSrcBeenRewritten: false,
+        fallbackSrc: FALLBACK_BLANK_IMAGE,
       }
     },
     computed: {
+      imageSiteDistSrc(): string {
+        const src = String(this.src)
+        let out = src.replace(RE_WEBPACK_ASSETS, '') as string
+        out = PUBLIC_SITE_ASSETS_ORIGIN_ASSETS + out
+        return out
+      },
       imageFigcaption(): string {
         let figcaption = this.figcaption
         if (this.lostImage) {
@@ -120,13 +136,14 @@
         try {
           return require(`@/assets/${rewrittenSrc}`)
         } catch (err) {
-          return fallbackSrc
+          return this.fallbackSrc
         }
       },
     },
     methods: {
       abbreviatize,
       onLoad(evt: HTMLElementEventMap['load']): void {
+        let currentTarget: HTMLImageElement
         // @ts-ignore
         const { currentSrc = '' } = evt.srcElement
         if (currentSrc.startsWith('data')) {
@@ -134,6 +151,22 @@
           this.loaded = true
         } else {
           this.loaded = true
+        }
+        /**
+         * Load from remote fallback.
+         *
+         * Bookmarks:
+         * - https://github.com/PivaleCo/nuxt-image-loader-module/blob/master/src/plugin.template.js
+         * - https://github.com/vuejs/vue-cli/issues/2099
+         */
+        if (evt.currentTarget) {
+          currentTarget = evt.currentTarget as HTMLImageElement
+          if (this.errored && currentTarget) {
+            currentTarget.setAttribute('data-remote-replaced-src', this.src)
+            currentTarget.setAttribute('src', this.imageSiteDistSrc)
+            currentTarget.classList.add('is-data-remote-replaced')
+            this.hasSrcBeenRewritten = true
+          }
         }
       },
     },

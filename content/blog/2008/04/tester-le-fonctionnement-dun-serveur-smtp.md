@@ -77,7 +77,7 @@ Le serveur de mon exemple possède Exim comme serveur de transport de courrier
 L'avantage d'utiliser `exim -v -odf` c'est qu'on sait en shell le output et on
 sait les messages directement
 
-```terminal
+```bash
 exim -v -odf test@renoirboulanger.com         [enter]
 Subject: Test lundi am 5 local a virtuallocal [enter]
 Message body                                  [enter]
@@ -99,7 +99,7 @@ Le output des 7 dernières lignes est une réponse expectée si tout va bien.
 
 #### Les commandes via exim
 
-- **`exim -v -odf [[email protected]][3]`**
+- **`exim -v -odf john.doe@example.org`**
 
 C'est les options qui permettent d'utiliser une instance de Exim pour tester
 (**odf**) puis de permettre la (v)erbosité
@@ -121,7 +121,7 @@ est considéré comme du **data** pour le courriel en tant que tel (aka. Le ).
 
 Utile pour chaque tentative... voir où le message và!
 
-```terminal
+```bash
 sudo tail -f /var/log/exim/mainlog
  2008-02-25 12:02:16 1JSZkp-0001JH-8H <= renoirb@web1.renoirboulanger.com U=renoirb P=local S=356 T="Test lundi am 5 local a virtuallocal" from <renoirb@web1.renoirboulanger.com> for test@renoirboulanger.com
  2008-02-25 12:02:16 1JSZkp-0001JH-8H => test <test@renoirboulanger.com> F=<renoirb@web1.renoirboulanger.com> R=virtual_user T=virtual_localdelivery S=390
@@ -136,7 +136,7 @@ test courriel".
 
 ### Vérifier le log impad
 
-```terminal
+```bash
 sudo tail -f /var/log/maillog
    Feb 25 12:01:14 web1 imapd[19532]: imap service init from 127.0.0.1
    Feb 25 12:01:14 web1 imapd[19532]: Login user=test@renoirboulanger.com host=web1 [127.0.0.1]
@@ -153,7 +153,7 @@ On peut lancer le test à partir de n'importe quel type de client telnet.
 Pour s'assurer que le mail server répond sur le bon, on peut aussi lancer la
 requete telnet sur le domaine du mail exchange (MX) du client.
 
-```terminal
+```bash
 telnet mail.renoirboulanger.com 110                 [enter]
 Trying 66.46.177.182...
 Connected to mail.renoirboulanger.com (66.46.177.182).
@@ -195,7 +195,7 @@ Connection closed by foreign host.
 
 Si tout va bien en telnet, pourquoi ne pas tester pour être sûr!?
 
-```terminal
+```bash
 sudo tail -f /var/log/maillog
    Feb 25 12:13:18 web1 vm-pop3d[20764]: User 'test@renoirboulanger.com' logged in from 69.159.235.26, nmsgs=3
    Feb 25 12:13:22 web1 vm-pop3d[20764]: bytes: domain renoirboulanger.com 491 bytes
@@ -210,7 +210,7 @@ Note: Rappel le `/var/log/maillog` donne le output des login IMAP(imapd), POP
 Au lieu d'avoir un programme comme mail installé sur une station Linux, on peut
 simplement utiliser telnet avec ces commandes
 
-```terminal
+```bash
 telnet web1.renoirboulanger.com 25
    Trying 66.46.177.182...
    Connected to web1.renoirboulanger.com.
@@ -240,10 +240,12 @@ J'ai mis trois espaces devant la réponse reçue.
 
 #### Les commandes telnet envoi smtp
 
-- **telnet `ADRESSE.MAILSERVER.COM`**
+- **telnet `web1.renoirboulanger.com`**
 - ... Trying et connected signifient qu'il a essayé et réussi
 
+```
 220 web1.renoirboulanger.com ESMTP Exim 4.66 Fri, 22 Feb 2008 10:42:44 -0500
+```
 
 Signifie 220 (c'est le code du message) que web1 utilise Exim 4.66.... et qu'on
 est le 22 Feb... C'est ok!
@@ -255,13 +257,13 @@ Faut entrer "`helo`" puis le domaine de l'envoyant
 helo est un standard pour savoir quel est le hostname qui envoit le courriel
 [\#Description de HELO][6]
 
-- **`mail from: [[email protected]][3]`**
+- **`mail from: john.doe@example.org`**
 
 Faut entrer "`mail from:`" puis l'adresse de l'envoyant
 
 Ce qui permet de dire le From: field
 
-- **`rcpt to: [[email protected]][3]`**
+- **`rcpt to: john.doe@example.org`**
 
 Faut entrer "`rcpt to:`" puis l'adresse du recipient
 
@@ -291,7 +293,7 @@ Permet de savoir si l'envoi local vers un remote fonctionne bien
 
 Il s'agit de l'exemple typique d'un email local envoyé vers Gmail par exemple.
 
-```terminal
+```bash
 exim -v -odf sysadmin@renoirboulanger.com
 Subject: Test lundi am 4 local to remote
 Message correct pour voir de l'usager joe sur web1 vers sysadmin hsu at renoirboulanger
@@ -334,7 +336,7 @@ client dans le pannel, et qu'on envoie le test en remote.
 Sert a s'assurer que l'envoi d'un courriel remote (application ou en shell)
 fonctionne bien de l'extérieur.
 
-```terminal
+```bash
 mail test@test.com
 Subject: Test lundi am 6 remote to virtuallocal
 Message body, with random content
@@ -346,7 +348,7 @@ Message body, with random content
 Permet de savoir si le message envoyé dans le test "Envoi courriel via une
 machine remote via mail" à bien passé
 
-```terminal
+```bash
 tail -f /var/log/maillog
 ...
 1.   Feb 26 11:31:54 web1 spamd[3160]: prefork: child states: II
@@ -487,7 +489,7 @@ Faire \[^c\] pour sortir.
 
 Une autre version existe qui sort moins de output
 
-```terminal
+```bash
 exim_checkaccess 69.159.235.26 contribs@renoirboulanger.com
 Accepted
 ```
@@ -497,7 +499,7 @@ Accepted
 Il existe, a ma mémoire, actuellement, un outil qui permet de savoir l'Activité
 du serveur. Il est dans un crontab. Voici la commande.
 
-```terminal
+```bash
 eximstats /var/log/exim/mainlog
 
 Exim statistics from 2008-02-24 04:02:35 to 2008-02-28 11:11:24
@@ -605,17 +607,11 @@ after the \*\*LO, however.
 
 ## Références
 
-- Tester avec telnet
+- [Tester avec telnet][8]
 
-[http://www.netadmintools.com/part276.html][8]
+- [Réferences du protocole SMTP][7]
 
-- Réferences du protocole SMTP
-
-[http://email.about.com/cs/standards/a/smtp.htm][7]
-
-- Definition messages d'erreur SMTP
-
-[http://email.about.com/cs/standards/a/smtp_error_code.htm][9]
+- [Definition messages d'erreur SMTP][9]
 
 [0]: https://web1.renoirboulanger.com:2222/
 [1]: https://web1.renoirboulanger.com:2222/CMD_ALL_USER_SHOW
