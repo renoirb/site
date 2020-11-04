@@ -32,6 +32,7 @@
     fromProcessEnvToAppIdentity,
     IAppIdentity,
     pageTitleForBlogIndex,
+    getColorModeClassName,
   } from '~/lib'
   export interface Data {
     appIdentity: IAppIdentity
@@ -48,29 +49,20 @@
     },
     data() {
       const appIdentityFallback = fromProcessEnvToAppIdentity({} as any)
-      const { context = {} } = this.$root as any
+      const colorModeClassName = getColorModeClassName(this.$nuxt.context)
       const appIdentity = {
         ...appIdentityFallback,
-        ...(context.env || {}),
+        ...(this.$nuxt.context || {}),
       }
       return {
         appIdentity,
-        colorModeClassName: 'light-mode',
+        colorModeClassName,
         pageTitle: '',
       }
     },
     watch: {
       $route(to, from) {
         if (to && to.fullPath && from && from.fullPath) {
-          // eslint-disable-next-line
-          console.debug(
-            'what-gets-executed-8: layouts/default.vue watch.$route AAA',
-            {
-              'to.fullPath': to.fullPath,
-              'from.fullPath': from.fullPath,
-              '$colorMode.value': this.$colorMode.value,
-            },
-          )
           const pageTitle = pageTitleForBlogIndex(to)
           if (to.fullPath !== from.fullPath && pageTitle) {
             this.pageTitle = pageTitle
@@ -79,36 +71,16 @@
       },
     },
     mounted() {
-      const { $colorMode = {} } = this.app || {}
-      this.colorModeClassName = `${
-        $colorMode.value ? $colorMode.value : 'light'
-      }-mode`
-      // eslint-disable-next-line
-      console.debug('what-gets-executed-8: 0 layouts/default mounted', {
-        colorModeClassName: this.colorModeClassName,
-      })
+      const colorModeClassName = getColorModeClassName(this.$nuxt.context)
+      this.colorModeClassName = colorModeClassName
       if (this.$el && this.$el.ownerDocument) {
         const probe = this.$el.ownerDocument as HTMLDocument
         try {
           probe.body.classList.add('before')
           probe.body.style.transform = 'none'
-          // eslint-disable-next-line
-          console.debug(
-            'what-gets-executed-8: 1 layouts/default mounted try',
-            probe.body.style.transform,
-          )
         } catch (e) {
-          // eslint-disable-next-line
-          console.debug(
-            'what-gets-executed-8: 2 layouts/default mounted catch',
-            e,
-          )
+          // NoOp
         }
-        // eslint-disable-next-line
-        console.debug('what-gets-executed-8: 3 layouts/default mounted', {
-          probe,
-        })
-        // this.$el.style.transform = 'none'
       }
       // Remove any iframe[width][height]
       if (this.$el && this.$el.ownerDocument) {

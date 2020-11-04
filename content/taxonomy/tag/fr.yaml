@@ -1,0 +1,100 @@
+human:
+  - key: ar
+    text: Réalité Augmentée
+    description: |
+      Essais écrits sur mes observations de projets/produits
+      qui prennent avantage du mélange numérique et visuel
+
+  - key: architecture
+    text: Architecture
+    description: |
+      Architecture logicielle, HTML/CSS, FrontEnd, BackEnd, Infrastructure.
+
+  - key: best-practices
+    text: Bonne pratiques
+    description: |
+      Observations sur les bonne pratiques
+
+  - key: conference
+    text: Conférences
+    description: |
+      Rapport de conférence, ou présentation donnée lors d’une conférence
+
+  - key: cloud-computing
+    text: infonuagique
+    description: |
+      Essais écrits sur mes observations de projets/produits
+      qui prennent avantage de la virtualisation et de l’infrastructure
+      et/ou l’InfoNuagique
+
+  - key: evenements
+    text: événements
+    description: |
+      Événements que j’ai assisté ou contribué
+
+  - key: favourites
+    text: Favoris
+    description: Articles préférés
+
+  - key: fraud
+    text: Fraude
+    description: |
+      Un de mes sujets préférés, des articles écrits pour tenter d’expliquer les stratégies
+
+  - key: geeknight
+    text: GeekNight
+    description: |
+      Projets que je faits les soirs comme loisir
+
+  - key: geranium
+    text: Géranium
+    description: |
+      Un outil de gestion Web que j’ai écrit entre 2002..2007
+      durant les années d’opérations de INEXIS Solution Web Inc.
+
+  - key: i18n
+    text: Internationalisation
+    description: |
+      Essais écrits pour décrire mes expérimentations faites en relation
+      avec faire des Applications Web multilingue.
+
+  - key: js-montreal
+    text: JS Montréal
+    description: |
+      Le groupe d’utilisateurs de JavaScript de Montréal
+
+  - key: linux
+    text: GNU/Linux
+    description: |
+      Essais écrits pour m’aider à mieux comprendre ou partager mon expérience avec
+
+  - key: procedure
+    text: Procédure
+    description: |
+      Essais écrits pour expliquer étape par étape comment mettre
+      quelque chose en place
+
+  - key: talk
+    text: Présentation
+    description: |
+      Présentation que j’ai donnée
+
+  - key: tools
+    text: Outils
+    description: |
+      Tools I’ve experimented and reviewed
+
+  - key: tutorials
+    text: Tutoriels
+    description: |
+      Essais écrits pour guider comment mettre quelque chose en place
+
+  - key: vuejs
+    text: Vue.js
+    description:
+      Vue.js, le «framework» évolutif pour construire des interfaces utilisateur
+
+  - key: vulgarization
+    text: Vulgarisation
+    description: |
+      Essais écrits pour tenter d’expliquer

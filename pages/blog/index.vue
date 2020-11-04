@@ -14,6 +14,7 @@
   import { INuxtContentResult, queryNuxtContent } from '~/lib'
   export interface Data {
     contents: INuxtContentResult[]
+    pageTitle: string
   }
   export interface Methods {}
   export interface Computed {}
@@ -41,58 +42,28 @@
     data() {
       return {
         contents: [] as INuxtContentResult[],
+        pageTitle: 'Blog',
       }
-    },
-    computed: {
-      pageTitle(): string {
-        let pageTitle = 'Blog'
-        const q = this.q
-        if (q !== '') {
-          pageTitle += `, search results for «${q}»`
-        }
-        return pageTitle
-      },
     },
     watch: {
       q: {
         immediate: true,
         async handler(val, oldVal) {
+          let pageTitle = 'Blog'
           if (!val) {
             this.contents = [] as INuxtContentResult[]
-            // eslint-disable-next-line
-            console.debug(
-              'what-gets-executed-2: pages/blog/index.vue watch.q 1',
-              {
-                currentQuery: val,
-                oldVal,
-              },
-            )
             return
           }
           if (val === oldVal) {
             // No change, nothing to do
-            // eslint-disable-next-line
-            console.debug(
-              'what-gets-executed-2: pages/blog/index.vue watch.q 2',
-              {
-                currentQuery: val,
-                oldVal,
-              },
-            )
             return
           }
-          const q = this.q
-          // eslint-disable-next-line
-          console.debug(
-            'what-gets-executed-2: pages/blog/index.vue watch.q 3',
-            {
-              currentQuery: q,
-              oldVal,
-            },
-          )
-
+          if (val !== '') {
+            pageTitle += `, search results for «${val}»`
+          }
           const contents = await queryNuxtContent(this.$content, this.$route)
           this.contents = contents
+          this.pageTitle = pageTitle
         },
       },
     },

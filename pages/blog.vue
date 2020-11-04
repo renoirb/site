@@ -23,7 +23,12 @@
         />
       </form>
     </div>
-    <div class="title page-title mb-4 font-serif text-2xl italic">
+    <div
+      v-if="
+        !($route && $route.params && ($route.params.slug || $route.params.tag))
+      "
+      class="title page-title mb-4 font-serif text-2xl italic"
+    >
       <h1>{{ pageTitle }}</h1>
     </div>
     <div class="pages-blog--parent--bottom">
@@ -64,18 +69,9 @@
     watch: {
       q: {
         immediate: true,
-        handler(q, oldVal) {
-          const router = this.$router
-          // eslint-disable-next-line
-          console.debug(
-            'what-gets-executed-5: pages/blog.vue watch.q handler',
-            {
-              currentQuery: q,
-              oldVal,
-            },
-          )
-          if (router) {
-            router
+        handler(q) {
+          if (this.$router) {
+            this.$router
               .replace({ query: q !== '' ? { q } : undefined })
               .catch(() => {})
           }

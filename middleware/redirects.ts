@@ -15,8 +15,6 @@ const redirects: [RegExp, string, true?][] = [
 const maybeRedirectTo = createMaybeRedirectTo(redirects)
 
 export default (ctx: Context) => {
-  // eslint-disable-next-line
-  console.debug('what-gets-executed-6: middleware/redirects')
   const maybeRedirectPath = maybeRedirectTo(ctx.route)
   if (maybeRedirectPath) {
     return ctx.redirect(maybeRedirectPath)

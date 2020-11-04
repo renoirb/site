@@ -12,7 +12,7 @@ date: &createdAt '2013-02-21T22:21:10-04:00'
 createdAt: *createdAt
 tags:
   - Favourites
-  - good-practices
+  - best-practices
   - Integration
   - Slides
   - Talk

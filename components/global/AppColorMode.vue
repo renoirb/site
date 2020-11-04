@@ -9,18 +9,16 @@
           : ($colorMode.preference = 'dark')
       "
     >
-      <client-only>
-        <inline-svg
-          v-if="$colorMode.value === 'light'"
-          :src="require('~/assets/images/icon-sun.svg')"
-          class="w-6 h-6"
-        />
-        <inline-svg
-          v-else
-          :src="require('~/assets/images/icon-moon.svg')"
-          class="w-6 h-6"
-        />
-      </client-only>
+      <inline-svg
+        v-if="$colorMode.value === 'light'"
+        :src="require('~/assets/images/icon-sun.svg')"
+        class="w-6 h-6"
+      />
+      <inline-svg
+        v-else
+        :src="require('~/assets/images/icon-moon.svg')"
+        class="w-6 h-6"
+      />
     </button>
   </span>
 </template>

@@ -1,9 +1,18 @@
-import { Result } from '@nuxt/content'
 import { Context } from '@nuxt/types'
+import type {
+  Result as IResult,
+  NuxtContentInstance as INuxtContentInstance,
+} from '@nuxt/content'
 import type { IPrettyfiedTemporalDate } from '../date'
+import type { ITaxonomyHuman } from '../taxonomy'
+import { extractTaxonomyHuman } from '../tag'
 import type { IFrontMatterInnerDocument } from './front-matter-inner-document'
 
-export interface IBaseNuxtContentResult extends Result {
+export type INuxtContentResolver = (
+  $content: INuxtContentInstance,
+) => Promise<IBaseNuxtContentResult[]>
+
+export interface IBaseNuxtContentResult extends IResult {
   createdAt: string
   dir: string
   extension: string
@@ -72,4 +81,17 @@ export const queryNuxtContent = async (
   contents = await ds.fetch()
 
   return contents
+}
+
+export const queryNuxtContentForTags = async (
+  $content: Context['$content'],
+  locale: string,
+): Promise<ITaxonomyHuman[]> => {
+  const out: ITaxonomyHuman[] = []
+  const langCode = locale.split('-')[0]
+  const ds = $content(`taxonomy/tag/${langCode}`)
+  const contents: IResult = await ds.fetch()
+  const human = extractTaxonomyHuman(contents)
+  out.push(...human)
+  return out
 }

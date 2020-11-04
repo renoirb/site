@@ -5,12 +5,6 @@
       :year="$route.params.year"
       :current-month="$route.params.month"
     />
-    <h1
-      v-if="!$route.params.slug"
-      class="title page-title mt-4 mb-4 font-serif text-2xl italic"
-    >
-      {{ pageTitle }}
-    </h1>
     <div>
       <nuxt-child />
     </div>
@@ -29,18 +23,6 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
       'app-months-in-year': AppMonthsInYear,
-    },
-    asyncData({ app }) {
-      let pageTitle = ''
-      // @ts-ignore
-      if (app && app.head && app.head.title) {
-        // @ts-ignore
-        pageTitle = app.head.title
-      }
-
-      return {
-        pageTitle,
-      }
     },
   })
 </script>

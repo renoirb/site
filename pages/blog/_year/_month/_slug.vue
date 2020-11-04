@@ -119,22 +119,32 @@
           } catch (_) {
             // ....
           }
+          leakOutLocale =
+            'locale' in content && typeof content.locale === 'string'
+              ? content.locale
+              : 'fr-CA'
+          coverImage =
+            'cover' in content && typeof content.cover === 'string'
+              ? content.cover
+              : ''
+          coverImageCaption =
+            'coverCaption' in content &&
+            typeof content.coverCaption === 'string'
+              ? content.coverCaption
+              : ''
+          coverImageAlt =
+            'coverAlt' in content && typeof content.coverAlt === 'string'
+              ? content.coverAlt
+              : ''
+          agedWarning =
+            'oldArticle' in content && typeof content.oldArticle === 'string'
+              ? content.oldArticle
+              : null
+          leakOutCanonical =
+            'canonical' in content && typeof content.canonical === 'string'
+              ? content.canonical
+              : null
         }
-
-        const {
-          oldArticle = null,
-          cover = '',
-          coverCaption = '',
-          coverAlt = '',
-          locale = 'en-CA',
-          canonical = null,
-        } = content as INuxtContentResult
-        leakOutLocale = locale
-        coverImage = cover
-        coverImageCaption = coverCaption
-        coverImageAlt = coverAlt
-        agedWarning = oldArticle
-        leakOutCanonical = canonical
       } catch (e) {
         error({ message: 'Document not found' })
       }

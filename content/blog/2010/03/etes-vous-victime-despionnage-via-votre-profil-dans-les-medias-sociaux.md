@@ -17,7 +17,7 @@ categories:
 date: &createdAt '2010-03-22T06:11:35-04:00'
 createdAt: *createdAt
 tags:
-  - fraude
+  - Fraude
   - vie-privée
 ---
 

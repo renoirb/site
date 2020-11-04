@@ -1,10 +1,6 @@
 import { isObject } from '../../runtime'
 import { abbreviatize } from '../abbreviations'
-import type {
-  INuxtContentParsedDocument,
-  INuxtContentDatabase,
-  INuxtOptionsHooks,
-} from './parser'
+import type { INuxtContentParsedDocument, INuxtContentDatabase } from './parser'
 import type { INuxtContentResult } from './model'
 
 export interface IFrontMatterInnerDocument {
@@ -83,18 +79,4 @@ export const extractFrontMatterInnerDocument = (
     }
   }
   return out
-}
-
-export const nuxtContentHooks: INuxtOptionsHooks = {
-  'content:file:beforeInsert': async (document, database) => {
-    const preamble = extractFrontMatterInnerDocument(document, 'preamble')
-    if (preamble) {
-      try {
-        const parsedDocument = await parseMarkdownText(database, preamble)
-        Object.assign(document.preamble, { document: parsedDocument })
-      } catch (_) {
-        // Nothing to do
-      }
-    }
-  },
 }

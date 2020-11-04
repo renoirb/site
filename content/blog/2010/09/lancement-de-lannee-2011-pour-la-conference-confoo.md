@@ -16,6 +16,7 @@ tags: &tags
   - phpquebec
   - w3qc
   - evenements
+  - cloud-computing
 keywords: *tags
 date: &createdAt '2010-09-08T01:43:00-04:00'
 createdAt: *createdAt

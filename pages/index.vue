@@ -17,7 +17,7 @@
                 date: content.date,
               },
             }"
-            class="font-serif italic"
+            class="font-serif italic no-underline"
             v-html="abbreviatize(content.title)"
           />
           <div v-if="content.prettyfiedTemporalDate" class="mt-0 mb-5 text-xs">
@@ -61,7 +61,7 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     layout: 'homepage',
     async asyncData({ $content }) {
-      const tag = 'Favourites'
+      const tag = 'favourites'
 
       let contents: IDatedNuxtContentResult[] = []
       contents = await $content('blog', { deep: true })
