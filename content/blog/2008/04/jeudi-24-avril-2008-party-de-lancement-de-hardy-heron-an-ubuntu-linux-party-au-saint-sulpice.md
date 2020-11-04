@@ -28,9 +28,9 @@ Canonical du bureau de Montréal... de remplir le Saint-Sulpice de tout amateur
 d'Ubuntu Linux.
 
 Je serai présent moi même avec quelques amis [au party][0]. Si vous voulez
-venir, [répondez ici][1].
+venir, ~~répondez ici~~.
 
-[S'ajouter aux invités sur Facebook][1].
+~~S’ajouter aux invités sur Facebook~~.
 
 Voici l'invitation officielle:
 
@@ -77,5 +77,4 @@ Téléphone: (514) 844-9458
 Pour l'équipe d'Ubuntu-QC Fabian Rodriguez
 
 [0]: https://wiki.ubuntu.com/QuebecTeam/HardyParty/RSVP
-[1]: https://www.facebook.com/event.php?eid=14445811268
 [2]: https://wiki.ubuntu.com/HardyReleaseParties#CanadaDisc

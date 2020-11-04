@@ -455,7 +455,7 @@ work:
 
   - name: &name Evocatio Solutions technologiques Inc.
     company: *name
-    position: Web Developer, Co-Founder
+    position: Senior Web Developer, Co-Founder
     location: Montréal, QC, Canada
     remote: false
     contract: false
@@ -535,7 +535,11 @@ work:
     summary:
       My role was to maintain the company corporate image on the web, maintain
       their Web site, and participate in projects run internally as a Web
-      developer.
+      developer. Projects I’ve been involved in were written in Java, included a
+      proprietary CI server Web Application for IBM WebSphere that was intended
+      to be competitor to Jenkins and CruiseControl of the time, I’ve
+      contributed to Inventory management application (Namminik) and a few other
+      internal R&D experiments.
     highlights:
       - Contributed to many projects as Front-End Developer
       - Participated in maintaining company internal network, testing DataPower

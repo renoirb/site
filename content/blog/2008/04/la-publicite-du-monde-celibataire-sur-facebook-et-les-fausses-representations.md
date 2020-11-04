@@ -16,9 +16,9 @@ tags:
   - fraude
 ---
 
-J'était en train de me promener dans [Facebook][0] ce soir et j'ai cliqué sur
-une annonce pensant qu'elle me dirigerait sur un site, et le lien m'a redirigé
-sur un tout autre site.
+J'était en train de me promener dans ~~Facebook~~ ce soir et j'ai cliqué sur une
+annonce pensant qu'elle me dirigerait sur un site, et le lien m'a redirigé sur
+un tout autre site.
 
 Ça a piqué ma curiosité.
 
@@ -115,7 +115,6 @@ spécifique aux [**arnaques sur internet**][8].
 
 Ce billet a été révisé le 6 juin 2013\.
 
-[0]: https://www.facebook.com/profile.php?id=722511300
 [1]: /projets/les-arnaques-sur-internet/
 [2]: http://www.eharmony.com/singles/servlet/about/matching
 [3]: http://www.eharmony.com/singles/servlet/about/dimensions/

@@ -31,7 +31,7 @@ devoirs car la site avait fourni la liste des participants.
 J'ai été très agreablement surpris et intéresse par la multitude de sujets.
 
 En fait je ne l'ai pas réalisé avant mon entrée dans la salle de _Sala Rossa_
-j'ai vu sur scène [Annie Dussault ][1] qui parlait de comment faire un
+j'ai vu sur scène [Annie Dussault][1] qui parlait de comment faire un
 _[Quin-zhee][2]_ (un abri fait en neige). Elle venait tout juste de commencer
 sur scène. J'ai été frappé dès lors que ce soir on ne parlerait pas que du
 web(!!).
@@ -78,7 +78,7 @@ nous comptons assister aux prochaines.
 - [Liste Twitter des speakers][9]
 
 [0]: http://www.ignitemontreal.com/
-[1]: https://www.facebook.com/profile.php?id=5156506753
+[1]: https://twitter.com/cuttedfinger 'Annie Dussault'
 [2]: https://en.wikipedia.org/wiki/Quinzhee
 [3]: http://www.scoutsmm.qc.ca
 [4]: https://twitter.com/junkbop

@@ -15,8 +15,8 @@ date: &createdAt '2009-07-02T22:17:40-04:00'
 createdAt: *createdAt
 ---
 
-Cette semaine j'ai vu deux annonces de statut dans [Mon profil Facebook][0] qui
-disaient quelque chose de similaire à ...
+Cette semaine j'ai vu deux annonces de statut _Facebook_ qui disaient quelque
+chose de similaire à ...
 
 > TRES URGENT : VOUS N'ACCEPTEZ PAS LA DEMANDE D'AMITIÉ D'UNE CERTAINE (bla bla
 > bla) ET (bla bla bla) C'EST DES _HACKERS_. DITES LE À TOUS SUR VOTRE MUR, SI
@@ -110,7 +110,6 @@ spécifique aux [**arnaques sur internet**][6].
 
 Ce billet a été révisé le 6 juin 2013\.
 
-[0]: https://www.facebook.com/renoirb?ref=nf
 [1]: https://fr.wikipedia.org/wiki/Hacker
 [2]: http://romy.tetue.net/a-mort-internet-explorer-6
 [3]: https://fr.wikipedia.org/wiki/Pourriel
