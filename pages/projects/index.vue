@@ -19,6 +19,7 @@
               v-html="abbreviatize(content.title)"
             />
             <app-article-tags
+              v-if="Array.isArray(content.tags) && content.tags.length > 0"
               :link="false"
               :content="content"
               class="mt-2 mb-4"

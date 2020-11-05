@@ -1,5 +1,5 @@
 <template>
-  <div class="layouts--default">
+  <div :class="{ 'layouts--default': true, 'is-side-bar-open': isOpen }">
     <inline-svg
       :src="require('~/assets/images/2235845.svg')"
       width="1200"
@@ -14,7 +14,10 @@
       "
       class="lg:visible z-10 invisible"
     ></inline-svg>
-    <app-header class="top" />
+    <app-header class="top z-50" @side-bar-open="onOpen($event)" />
+    <div v-show="isOpen" class="fixed inset-0 z-40 transition-opacity">
+      <div class="absolute inset-0 bg-black opacity-75"></div>
+    </div>
     <main class="zone__sandwich__meat middle container z-40 mx-auto">
       <div class="grid">
         <div class="m-10 mt-5">
@@ -38,6 +41,7 @@
     appIdentity: IAppIdentity
     colorModeClassName: string
     pageTitle: string
+    isOpen: boolean
   }
   export interface Methods {}
   export interface Computed {}
@@ -57,6 +61,7 @@
       return {
         appIdentity,
         colorModeClassName,
+        isOpen: false,
         pageTitle: '',
       }
     },
@@ -95,6 +100,11 @@
           i.removeAttribute('width')
         })
       }
+    },
+    methods: {
+      onOpen(onOpen: boolean) {
+        this.isOpen = onOpen
+      },
     },
     head() {
       const colorModeClassName = this.colorModeClassName

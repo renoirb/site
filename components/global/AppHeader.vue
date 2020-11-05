@@ -1,5 +1,5 @@
 <template>
-  <app-side-bar :nav="nav">
+  <app-side-bar :nav="nav" @side-bar-open="onOpen($event)">
     <template #default>
       <NuxtLink
         v-for="({ label, to }, index) of nav"
@@ -28,6 +28,11 @@
       return {
         nav: appHeaderNav,
       }
+    },
+    methods: {
+      onOpen(isOpen: boolean) {
+        this.$emit('side-bar-open', isOpen)
+      },
     },
   })
 </script>

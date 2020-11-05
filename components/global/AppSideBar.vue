@@ -54,26 +54,6 @@
       </div>
     </div>
 
-    <transition
-      enter-class="opacity-0"
-      enter-active-class="transition-medium ease-out-enter-active transition-all duration-500 ease-out"
-      enter-to-class="opacity-100"
-      leave-class="opacity-100"
-      leave-active-class="transition-medium ease-out-leave-active transition-all duration-500 ease-out"
-      leave-to-class="opacity-0"
-    >
-      <div
-        v-show="isOpen"
-        class="fixed inset-0 transition-opacity"
-        @keydown.esc="isOpen = false"
-      >
-        <div
-          class="absolute inset-0 bg-black opacity-75"
-          tabindex="0"
-          @click="isOpen = false"
-        ></div>
-      </div>
-    </transition>
     <aside
       class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
@@ -166,6 +146,7 @@
               }
             }
           }
+          this.$emit('side-bar-open', isOpen)
         },
       },
     },

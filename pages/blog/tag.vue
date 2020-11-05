@@ -1,3 +1,6 @@
 <template>
-  <nuxt-child class="pages__blog__tag--parent" />
+  <nuxt-child
+    :key="$route.params.tag + '--parent'"
+    class="pages__blog__tag--parent"
+  />
 </template>

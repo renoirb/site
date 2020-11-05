@@ -10,14 +10,24 @@
       "
     >
       <inline-svg
-        v-if="$colorMode.value === 'light'"
+        :hidden="$colorMode.value === 'light'"
+        title="Set to Light mode"
+        lang="en"
+        :class="{
+          'h-6': true,
+          'w-6': true,
+        }"
         :src="require('~/assets/images/icon-sun.svg')"
-        class="w-6 h-6"
       />
       <inline-svg
-        v-else
+        :hidden="$colorMode.value === 'dark'"
+        title="Set to Dark mode"
+        lang="en"
+        :class="{
+          'h-6': true,
+          'w-6': true,
+        }"
         :src="require('~/assets/images/icon-moon.svg')"
-        class="w-6 h-6"
       />
     </button>
   </span>
@@ -25,15 +35,14 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  // @ts-ignore
-  import InlineSvg from 'vue-inline-svg'
   export interface Data {}
   export interface Methods {}
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
-      InlineSvg,
+      // @ts-ignore
+      'inline-svg': () => import('vue-inline-svg'),
     },
   })
 </script>
