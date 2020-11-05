@@ -145,6 +145,14 @@
                 }
               }
             }
+            if (isOpen && this.$el) {
+              const ownerDocument = this.$el.ownerDocument
+              if (ownerDocument) {
+                ownerDocument.body.addEventListener('keydown', this.onKeyDown, {
+                  once: true,
+                })
+              }
+            }
           }
           this.$emit('side-bar-open', isOpen)
         },

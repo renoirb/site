@@ -5,8 +5,7 @@ title: Sensibilisation sur les courriels non sollicités
 categories:
   - Techniques
 tags:
-  - Fraude
-  - --------Tester si ça  peux prendre ceci itou-----
+  - fraude
 date: &createdAt '2008-12-03T00:58:06-04:00'
 createdAt: *createdAt
 ---

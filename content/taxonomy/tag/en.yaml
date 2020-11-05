@@ -28,6 +28,17 @@ human:
       techniques and relevant technologies related to virtualization and
       infrastructure as code
 
+  - key: data-persistence
+    text: data persistence
+    description: |
+      Articles written to share my research and or expriments around managing data
+      in the context of a distributed Web Application and to ensure service resiliency
+
+  - key: development
+    text: Development
+    description: |
+      Software development related
+
   - key: evenements
     text: événements
     description: |
@@ -73,11 +84,28 @@ human:
       Articles written to help myself better unerstand GNU/Linux and other
       Open-Source and/or distributed Web technology stack.
 
+  - key: nuxt
+    text: Nuxt.js
+    description: |
+      Nuxt.js, the Intuitive Vue Framework that allows writing server-side rendered
+      web pages written in JavaScript.
+
   - key: procedure
     text: Procedure
     description: |
       Articles written to explain step-by-step how to
       set something in place
+
+  - key: salt-stack
+    text: Salt Stack
+    description: |
+      Articles written while making experiments with my favourite infrastructure as code
+      configuration management tool SaltStack, now owned by VMWare
+
+  - key: security
+    text: Security
+    description: |
+      Articles written about research related to computer and Identity protection and security
 
   - key: talk
     text: Talk
@@ -99,7 +127,24 @@ human:
     description: |
       Vue.js, the progressive framework for building user interfaces
 
+  - key: vuetify
+    text: Vuetify.js
+    description: |
+      Vuetify is a Vue UI Library with beautifully handcrafted Components using the Material Design specification.
+
   - key: vulgarization
     text: Vulgarisation
     description: |
       Articles written to attempt at simplifying
+
+  - key: wish-list
+    text: Wish List
+    description: |
+      Things I’ve been craving for or about personal introspection and/or
+      professional progress
+
+  - key: operations
+    text: Operations
+    description: |
+      Articles written about the craft of managing scalable, predictable and reliable distributed
+      computing infrastructure for the Web.

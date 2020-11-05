@@ -9,12 +9,14 @@
     }"
   >
     <img
-      v-if="!!imageSource"
       ref="img"
+      anonymous
+      loading="lazy"
       :src="imageSource"
       class="object-cover w-full rounded"
       :data-remote="imageSiteDistSrc"
-      @load.once="onLoad"
+      @load="onLoad($event)"
+      @click="imageSiteDistPoke($event)"
     />
     <!-- eslint-disable vue/no-v-html -->
     <figcaption
@@ -52,10 +54,14 @@
      * to use GitHub renoirb/site-assets asset URL.
      */
     hasSrcBeenRewritten: boolean
+    timeout: NodeJS.Timeout | null
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
     onLoad(evt: HTMLElementEventMap['load']): void
+    imageSiteDistPoke(
+      evt?: HTMLElementEventMap['load'] | HTMLElementEventMap['click'],
+    ): void
   }
   export interface Computed {
     imageSource: any
@@ -93,6 +99,7 @@
         lostImage,
         hasSrcBeenRewritten: false,
         fallbackSrc: FALLBACK_BLANK_IMAGE,
+        timeout: null,
       }
     },
     computed: {
@@ -140,18 +147,48 @@
         }
       },
     },
+    mounted() {
+      this.timeout = setTimeout(() => {
+        this.imageSiteDistPoke()
+      }, 2000)
+    },
     methods: {
       abbreviatize,
-      onLoad(evt: HTMLElementEventMap['load']): void {
-        let currentTarget: HTMLImageElement
-        // @ts-ignore
-        const { currentSrc = '' } = evt.srcElement
-        if (currentSrc.startsWith('data')) {
-          this.errored = true
-          this.loaded = true
-        } else {
-          this.loaded = true
+      imageSiteDistPoke(
+        evt?: HTMLElementEventMap['load'] | HTMLElementEventMap['click'],
+      ): void {
+        if (this.hasSrcBeenRewritten) {
+          return
         }
+
+        const imgElement =
+          this.$refs && 'img' in this.$refs
+            ? (this.$refs.img as HTMLImageElement)
+            : null
+
+        const imageSource = this.imageSource
+        const imageSiteDistSrc = this.imageSiteDistSrc
+        const src = this.src
+        const errored = this.errored
+        const loaded = this.loaded
+        const hasSrcBeenRewritten = this.hasSrcBeenRewritten
+
+        // eslint-disable-next-line
+        console.log('AppImage.imageSiteDistPoke', {
+          evt,
+          src,
+          imageSource,
+          imageSiteDistSrc,
+          loaded,
+          errored,
+          imgElement,
+          hasSrcBeenRewritten,
+        })
+
+        if (this.src.startsWith('data')) {
+          this.errored = true
+        }
+
         /**
          * Load from remote fallback.
          *
@@ -159,15 +196,48 @@
          * - https://github.com/PivaleCo/nuxt-image-loader-module/blob/master/src/plugin.template.js
          * - https://github.com/vuejs/vue-cli/issues/2099
          */
-        if (evt.currentTarget) {
-          currentTarget = evt.currentTarget as HTMLImageElement
-          if (this.errored && currentTarget) {
-            currentTarget.setAttribute('data-remote-replaced-src', this.src)
-            currentTarget.setAttribute('src', this.imageSiteDistSrc)
-            currentTarget.classList.add('is-data-remote-replaced')
+        try {
+          if (
+            (this.src.startsWith('data') || this.src.startsWith('~')) &&
+            imgElement &&
+            !this.hasSrcBeenRewritten
+          ) {
+            imgElement.setAttribute('data-remote-replaced-src', this.src)
+            imgElement.setAttribute('src', this.imageSiteDistSrc)
+            imgElement.classList.add('is-data-remote-replaced')
             this.hasSrcBeenRewritten = true
+            this.loaded = true
           }
+        } catch (e) {
+          // Fail safely
         }
+      },
+      onLoad(evt: HTMLElementEventMap['load']): void {
+        const imgElement =
+          this.$refs && 'img' in this.$refs
+            ? (this.$refs.img as HTMLImageElement)
+            : null
+
+        const imageSource = this.imageSource
+        const imageSiteDistSrc = this.imageSiteDistSrc
+        const src = this.src
+        const errored = this.errored
+        const loaded = this.loaded
+        const hasSrcBeenRewritten = this.hasSrcBeenRewritten
+
+        // eslint-disable-next-line
+        console.log('AppImage.onLoad', {
+          evt,
+          src,
+          imageSource,
+          imageSiteDistSrc,
+          loaded,
+          errored,
+          imgElement,
+          hasSrcBeenRewritten,
+        })
+
+        this.imageSiteDistPoke(evt)
       },
     },
   })

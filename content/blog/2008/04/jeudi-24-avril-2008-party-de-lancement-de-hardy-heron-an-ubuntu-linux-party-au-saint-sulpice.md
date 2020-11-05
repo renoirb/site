@@ -65,7 +65,7 @@ pour ajouter la votre voyez:
 
 [https://wiki.ubuntu.com/HardyReleaseParties\#CanadaDisc][2]
 
-Le Bar St-Sulpice offre, grâce à √éle sans fil, l'accès gratuit à Internet.
+Le Bar St-Sulpice offre, grâce à Île sans fil, l'accès gratuit à Internet.
 Apportez donc vos portables. Vous en profiterez pour y installer la toute
 dernière version d'Ubuntu, Hardy Heron. Des T-shirts, autocollants, et CD-ROMs
 d'Ubuntu 8.04 LTS seront disponibles. Quelques employés de Canonical du bureau

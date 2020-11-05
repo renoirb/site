@@ -18,6 +18,7 @@ const ABBREVIATION = [
   'mysql',
   'php',
   'sass',
+  'ssl',
   'smtp',
   'sql',
   'vim',
@@ -73,6 +74,10 @@ const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
   ['mysql', 'MySQL a Structured Query Language product now owned by Oracle'],
   ['php', 'Hypertext Pre Pprocessor'],
   ['sass', 'Syntactically Awesome Stylesheets'],
+  [
+    'ssl',
+    'SSL as Secure Sockets Layer, which is the colloquial term used to refer to what is now called Transport Layer Security (TLS)',
+  ],
   ['smtp', 'E-Mail relay transport protocol; Simple Mail Transfer Protocol'],
   ['sql', 'Structured Query Language'],
   ['vim', 'Vi IMproved'],

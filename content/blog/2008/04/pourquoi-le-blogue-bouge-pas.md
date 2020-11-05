@@ -43,8 +43,8 @@ Aussi...
 Toutes les techniques que je conçoit je les archiverai dans cette section. Je
 prévoit aussi, justement, faire un catalogue avec mes ressources d'inspiration.
 
-J'anime chez les Louveteaux à l'√éle des Soeurs depuis l'automne. Avec mes
-envies d'écriture, question d'améliorer mon talent de rédacteur, justement, je
-ferai profiter la blogosphère de mon expérience d'animateur.
+J'anime chez les Louveteaux à l'Île des Soeurs depuis l'automne. Avec mes envies
+d'écriture, question d'améliorer mon talent de rédacteur, justement, je ferai
+profiter la blogosphère de mon expérience d'animateur.
 
 A plus!
