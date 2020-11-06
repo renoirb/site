@@ -3,3 +3,8 @@ human:
     text: Projects
     description: |
       Projects I’ve worked on
+
+  - key: tranche-de-vie
+    text: Sharing about my life
+    description: |
+      Essays written giving updates about my professional life or events I wrote about

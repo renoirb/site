@@ -86,11 +86,22 @@ human:
       Nuxt.js, le cadrigiciel Vue intuitif qui permet d’écrire des applications Web
       qui prennent avantage du navigateur web et ajuste l’état dynamiquement.
 
+  - key: operations
+    text: Opérations
+    description: |
+      Essais écrits en relation au métier de gérer une infrastructure informatique ou infonuagique
+      et comment entretenir des systèmes pour des Applications Web résilientes et stables.
+
   - key: procedure
     text: Procédure
     description: |
       Essais écrits pour expliquer étape par étape comment mettre
       quelque chose en place
+
+  - key: php
+    text: PHP
+    description: |
+      Essais écrits lors de mes expérimentations et projets faits avec PHP
 
   - key: salt-stack
     text: Salt Stack
@@ -139,9 +150,3 @@ human:
     description: |
       Choses que j’aimerai avoir ou obtenir, soit sur le niveau progression professionelle
       ou personnelle, ou un sujet que j’aimerai maîtriser ou mieux comprendre.
-
-  - key: operations
-    text: Opérations
-    description: |
-      Essais écrits en relation au métier de gérer une infrastructure informatique ou infonuagique
-      et comment entretenir des systèmes pour des Applications Web résilientes et stables.

@@ -90,11 +90,22 @@ human:
       Nuxt.js, the Intuitive Vue Framework that allows writing server-side rendered
       web pages written in JavaScript.
 
+  - key: operations
+    text: Operations
+    description: |
+      Articles written about the craft of managing scalable, predictable and reliable distributed
+      computing infrastructure for the Web.
+
   - key: procedure
     text: Procedure
     description: |
       Articles written to explain step-by-step how to
       set something in place
+
+  - key: php
+    text: PHP
+    description: |
+      Articles written while working with the PHP programming language
 
   - key: salt-stack
     text: Salt Stack
@@ -142,9 +153,3 @@ human:
     description: |
       Things I’ve been craving for or about personal introspection and/or
       professional progress
-
-  - key: operations
-    text: Operations
-    description: |
-      Articles written about the craft of managing scalable, predictable and reliable distributed
-      computing infrastructure for the Web.

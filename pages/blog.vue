@@ -25,7 +25,11 @@
     </div>
     <div
       v-if="
-        !($route && $route.params && ($route.params.slug || $route.params.tag))
+        !(
+          $route &&
+          $route.params &&
+          ($route.params.slug || $route.params.tag || $route.params.category)
+        )
       "
       class="title page-title mb-4 font-serif text-2xl italic"
     >

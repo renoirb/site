@@ -4,8 +4,12 @@ import type {
   NuxtContentInstance as INuxtContentInstance,
 } from '@nuxt/content'
 import type { IPrettyfiedTemporalDate } from '../date'
-import type { ITaxonomyHuman } from '../taxonomy'
-import { extractTaxonomyHuman } from '../tag'
+import {
+  ITaxonomyHuman,
+  ITaxonomyItem,
+  toTaxonomyItemCollection,
+} from '../taxonomy'
+import { extractTaxonomyHuman, hydrateTaxonomyCollection } from '../tag'
 import type { IFrontMatterInnerDocument } from './front-matter-inner-document'
 
 export type INuxtContentResolver = (
@@ -84,14 +88,110 @@ export const queryNuxtContent = async (
 }
 
 export const queryNuxtContentForTags = async (
-  $content: Context['$content'],
+  urlParam: string,
   locale: string,
+  $content: Context['$content'],
 ): Promise<ITaxonomyHuman[]> => {
   const out: ITaxonomyHuman[] = []
+  if (!locale.includes('-')) {
+    const message = `Invalid 2nd argument ${locale}, it must be a locale, with a dash`
+    throw new Error(message)
+  }
   const langCode = locale.split('-')[0]
-  const ds = $content(`taxonomy/tag/${langCode}`)
+  const ds = $content(`taxonomy/${urlParam}/${langCode}`)
   const contents: IResult = await ds.fetch()
   const human = extractTaxonomyHuman(contents)
   out.push(...human)
   return out
+}
+
+export const nuxtPageAsyncDataForTaxonomyIndex = async (
+  taxonomyPredicateKey: string = 'tags',
+  urlParam: string = 'tag',
+  ctx: Context,
+) => {
+  const itemsSet = new Set<string>()
+  const locale = 'fr-CA'
+  const human: ITaxonomyHuman[] = []
+  const humanData = await queryNuxtContentForTags(
+    urlParam,
+    locale,
+    ctx.$content,
+  )
+  if (humanData) {
+    human.push(...humanData)
+  }
+
+  let contents: INuxtContentResult[] = []
+  contents = await ctx
+    .$content('blog', { deep: true })
+    .sortBy('createdAt', 'desc')
+    .only(taxonomyPredicateKey)
+    .fetch()
+
+  for (const content of contents) {
+    if (
+      taxonomyPredicateKey in content &&
+      Array.isArray(content[taxonomyPredicateKey])
+    ) {
+      for (const item of content[taxonomyPredicateKey]) {
+        itemsSet.add(item)
+      }
+    }
+  }
+  const collection = toTaxonomyItemCollection(itemsSet)
+  const items: ITaxonomyItem[] = hydrateTaxonomyCollection(collection, human)
+  return {
+    items,
+  }
+}
+
+export const nuxtPageAsyncDataForTaxonomyList = async (
+  taxonomyPredicateKey: string = 'tags',
+  urlParam: string = 'tag',
+  ctx: Context,
+) => {
+  const taxonomyKey = ctx.params[urlParam]
+  const itemsSet = new Set<string>([taxonomyKey])
+  const locale = 'fr-CA'
+  const human: ITaxonomyHuman[] = []
+  const humanData = await queryNuxtContentForTags(
+    urlParam,
+    locale,
+    ctx.$content,
+  )
+  if (humanData) {
+    human.push(...humanData)
+  }
+  const collection = toTaxonomyItemCollection(itemsSet)
+  const items: ITaxonomyItem[] = hydrateTaxonomyCollection(collection, human)
+  const taxonomy = items[0]
+  // We are certain that the taxonomy.key is normalized, we should do the same from
+  // when taking the source front matter tags, normalize them the same way as we do here
+  const $contains = taxonomy.key
+  /**
+   * Figuring out how to list when has tag string
+   * with same text content, case-insensITiVe.
+   *
+   * Bookmarks:
+   * - https://github.com/nuxt/content/issues/577#
+   * - https://github.com/techfort/LokiJS/wiki/Query-Examples#find-queries
+   */
+  const predicate = {
+    [taxonomyPredicateKey]: { $contains },
+  } as any
+  let contents: INuxtContentResult[] = []
+  const maybe: INuxtContentResult[] = await ctx
+    .$content('blog', {
+      deep: true,
+    })
+    .where(predicate)
+    .sortBy('createdAt', 'desc')
+    .fetch()
+  contents = Array.isArray(maybe) ? maybe : ([] as INuxtContentResult[])
+  return {
+    contents,
+    taxonomyKey,
+    taxonomy,
+  }
 }

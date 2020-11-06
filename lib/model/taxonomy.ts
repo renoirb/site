@@ -53,6 +53,10 @@ export interface ITaxonomyAggregate {
   items: ITaxonomyItem[]
 }
 
+export interface ITaxonomyHumanLink extends Partial<ITaxonomyHuman> {
+  text: string
+}
+
 /**
  * Normalize and ascii(ze) a string of text.
  *
@@ -69,10 +73,10 @@ export const toTaxonomyKey = (
   let internal = String(input).toLocaleLowerCase(locale)
   // Remove accents
   internal = internal.normalize('NFD').replace(/[\u0300-\u036F]/g, '')
-  // Replace spaces into --
-  internal = internal.replace(/\s+/g, '--')
-  // When more than 3 "-", into --
-  internal = internal.replace(/-{3,}/g, '--')
+  // Replace spaces into -
+  internal = internal.replace(/\s+/g, '-')
+  // When more than 3 "-", into -
+  internal = internal.replace(/-{3,}/g, '-')
   // Remove trailing dashes
   internal = internal.replace(/-+$/g, '')
   // Remove dashes at begining
@@ -92,6 +96,24 @@ export const toTaxonomyItemCollection = (
       key,
     }
     out.push(item)
+  }
+  return out
+}
+
+export const toTaxonomyHumanLink = (
+  taxonomy: ITaxonomyItem,
+): ITaxonomyHumanLink => {
+  const out: ITaxonomyHumanLink = {
+    key: taxonomy.key,
+    text: taxonomy.key,
+  }
+  if (taxonomy.human) {
+    if (taxonomy.human.text) {
+      out.text = taxonomy.human.text
+    }
+    if (taxonomy.human.description) {
+      out.description = taxonomy.human.description
+    }
   }
   return out
 }

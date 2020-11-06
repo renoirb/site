@@ -9,8 +9,13 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
   'content:file:beforeInsert': async (document, database) => {
     // Normalize tags from the source so we can have articles
     // with same word, different CaSiNg (e.g. Foo and foo) as the same
-    const after = extractFrontMatterTagsAndNormalize(document)
-    Object.assign(document, { tags: after })
+    const tags = extractFrontMatterTagsAndNormalize('tags', document)
+    Object.assign(document, { tags })
+    const categories = extractFrontMatterTagsAndNormalize(
+      'categories',
+      document,
+    )
+    Object.assign(document, { categories })
     const preamble = extractFrontMatterInnerDocument(document, 'preamble')
     if (preamble) {
       try {

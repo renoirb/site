@@ -14,7 +14,7 @@
             <!-- eslint-disable vue/no-v-html -->
             <NuxtLink
               :to="content.path"
-              class="mb-2"
+              class="mb-2 no-underline"
               :lang="content.locale ? content.locale : 'en-CA'"
               v-html="abbreviatize(content.title)"
             />
