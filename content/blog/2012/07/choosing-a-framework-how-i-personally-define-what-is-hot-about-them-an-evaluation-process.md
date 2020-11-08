@@ -1,7 +1,15 @@
 ---
 locale: en-CA
-cover: ~/assets/content/blog/2012/07/everything-with-php-sauce.png
-coverAlt: Everything goes with PHP Sauce
+title:
+  Choosing a framework, how I personally check as “hot” characteristics, my
+  evaluation process
+canonical: 'https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process/'
+date: &createdAt '2012-07-23'
+createdAt: *createdAt
+coverImage:
+  src: ~/assets/content/blog/2012/07/everything-with-php-sauce.png
+  alt: Everything goes with PHP Sauce
+  text: Everything goes with PHP Sauce
 keywords:
   - php
   - framework
@@ -14,14 +22,8 @@ keywords:
   - community
   - code
   - quality
-canonical: 'https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process/'
-title:
-  Choosing a framework, how I personally check as “hot” characteristics, my
-  evaluation process
 categories:
   - Web Integration Review
-date: &createdAt '2012-07-23'
-createdAt: *createdAt
 tags:
   - architecture
   - Favourites

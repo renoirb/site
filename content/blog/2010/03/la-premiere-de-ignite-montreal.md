@@ -1,17 +1,19 @@
 ---
 locale: fr-CA
-keywords:
-  - ignite
-  - montral
-canonical: https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal
-cover: ~/assets/content/blog/2010/03/giw_montreal.png
-coverAlt: Ignite Montréal
 title: La première de Ignite Montréal
+canonical: https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal
+coverImage:
+  src: ~/assets/content/blog/2010/03/giw_montreal.png
+  alt: &coverImageAlt Ignite Montréal
+  text: *coverImageAlt
 categories:
   - Tranche de vie
 tags:
   - evenements
   - with-images
+keywords:
+  - ignite
+  - montral
 date: &createdAt '2010-03-03T08:41:27-04:00'
 createdAt: *createdAt
 ---

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Vue from 'vue'
+  import Vue, { PropOptions } from 'vue'
   import AppAlertBox, {
     Data as IAppAlertBoxData,
   } from '@/components/global/AppAlertBox.vue'
@@ -9,6 +9,7 @@
     FALLBACK_TODAY_DATE,
     YEAR_CONSIDERED_OLD,
     IAlertType,
+    IFrontMatterPreambleInnerDocument,
   } from '~/lib'
 
   export interface Data extends IAppAlertBoxData {
@@ -23,6 +24,7 @@
   export interface Props {
     locale: string
     date: string
+    preamble?: IFrontMatterPreambleInnerDocument
   }
 
   const titles = new Map<string, string>()
@@ -60,6 +62,11 @@
         type: String,
         default: FALLBACK_TODAY_DATE,
       },
+      preamble: {
+        type: Object,
+        required: false,
+        default: () => ({} as IFrontMatterPreambleInnerDocument),
+      } as PropOptions<IFrontMatterPreambleInnerDocument>,
     },
     computed: {
       year(): number {
@@ -86,6 +93,9 @@
       this.shouldBeVisible = this.isOldEnough
     },
     beforeMount() {
+      if (this.preamble && this.preamble.disable === true) {
+        this.shouldBeVisible = false
+      }
       const langCode = this.langCode
       let textContent = ''
       const maybeTextContent =

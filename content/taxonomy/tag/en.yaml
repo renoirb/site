@@ -39,8 +39,8 @@ human:
     description: |
       Software development related
 
-  - key: evenements
-    text: événements
+  - key: events
+    text: Events
     description: |
       Events in which I’ve attended, or contributed to
 
@@ -117,6 +117,11 @@ human:
     text: Security
     description: |
       Articles written about research related to computer and Identity protection and security
+
+  - key: standardization
+    text: standardization
+    description: |
+      Related to software architecture and standardizations work
 
   - key: talk
     text: Talk

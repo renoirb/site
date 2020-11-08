@@ -8,17 +8,19 @@ keywords:
   - publicité ciblée
 canonical: 'https://renoirboulanger.comblog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux/'
 title: Êtes-vous victime d’espionnage via votre profil dans les médias sociaux
-coverCaption: 'Crédit: Spy Vs. Spy (c) Antonio Prohías'
-coverAlt:
-  'Illustration d’une affiche d’un jeu vidéo illustrant deux espions en duel'
-cover: ~/assets/content/blog/2010/03/spy_vs_spy.jpg
+coverImage:
+  src: ~/assets/content/blog/2010/03/spy_vs_spy.jpg
+  alt: |
+    Illustration d’une affiche d’un jeu vidéo illustrant deux espions en duel
+  text: |
+    Crédit: [Spy Vs. Spy][spy-vs-spy-wikipedia] (c) Antonio Prohías
+    [spy-vs-spy-wikipedia]: https://en.wikipedia.org/wiki/Spy_vs._Spy
 categories:
   - Tranche de vie
 date: &createdAt '2010-03-22T06:11:35-04:00'
 createdAt: *createdAt
 tags:
-  - fraude
-  - vie-privée
+  - fraud
 ---
 
 J'ai reçu hier une invitation d'amitié sur Facebook. Un prénom féminin que je ne

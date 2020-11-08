@@ -1,17 +1,17 @@
 <template>
   <div class="pages__blog__year__month__slug--item">
     <app-very-old-article
+      :preamble="content.preamble"
       :locale="content.locale || 'en-CA'"
       :date="content.date"
       class="my-4"
       alert-type="warn"
     >
       <nuxt-content
-        v-if="preamble && preamble.document !== null"
-        :document="preamble && preamble.document"
+        v-if="content.preamble && content.preamble.document !== null"
+        :document="content.preamble && content.preamble.document"
       />
     </app-very-old-article>
-
     <div class="document document--item z-30">
       <div class="title page-title mb-4 font-serif text-2xl italic">
         <!-- eslint-disable vue/no-v-html -->
@@ -38,12 +38,25 @@
       <app-article-tags :content="content" class="mt-0 mb-5" />
       <div class="body mt-10">
         <app-image
-          v-if="coverImage !== ''"
-          :src="coverImage"
-          :alt="coverImageAlt"
-          :figcaption="coverImageCaption"
+          v-if="content.coverImage && content.coverImage.src"
+          :src="content.coverImage.src"
+          :alt="content.coverImage.alt ? content.coverImage.alt : undefined"
+          :figcaption="
+            abbreviatize(
+              content.coverImage.figcaption
+                ? content.coverImage.figcaption
+                : content.coverImage.document !== null
+                ? ' '
+                : undefined,
+            )
+          "
           class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 z-30 float-none pb-5 pl-0 mx-auto mt-1"
-        />
+        >
+          <nuxt-content
+            v-if="content.coverImage && content.coverImage.document !== null"
+            :document="content.coverImage.document"
+          />
+        </app-image>
         <nuxt-content :document="content" />
         <div class="clearfix" />
       </div>
@@ -62,8 +75,6 @@
     INuxtContentPrevNext,
     INuxtContentResult,
     IPrettyfiedTemporalDate,
-    extractFrontMatterInnerDocument,
-    IFrontMatterInnerDocument,
   } from '~/lib'
   export interface Data {
     canonical: null | string
@@ -71,14 +82,9 @@
     next: INuxtContentPrevNext
     content: INuxtContentResult
     prettyfiedTemporalDate: IPrettyfiedTemporalDate
-    agedWarning: string | null
     year: string
     month: string
     slug: string
-    coverImage: '' | string
-    coverImageCaption: '' | string
-    coverImageAlt: '' | string
-    preamble: IFrontMatterInnerDocument | null
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -94,52 +100,19 @@
       const fallbackLocale = 'fr-CA'
 
       let content: INuxtContentResult | null = null
-      let agedWarning: string | null = null
-      let coverImage: string | '' = ''
-      let coverImageCaption: string | '' = ''
-      let coverImageAlt: string | '' = ''
 
       let leakOutCanonical: string | null = null
       let leakOutLocale: string | '' = ''
-      let preamble: IFrontMatterInnerDocument | null = null
 
       try {
         const dal = $content('blog', year, month, slug, { text: true })
         content = await dal.fetch()
 
         if (content) {
-          try {
-            const maybePreamble = extractFrontMatterInnerDocument(
-              content,
-              'preamble',
-            )
-            if (maybePreamble && preamble === null) {
-              preamble = maybePreamble
-            }
-          } catch (_) {
-            // ....
-          }
           leakOutLocale =
             'locale' in content && typeof content.locale === 'string'
               ? content.locale
               : 'fr-CA'
-          coverImage =
-            'cover' in content && typeof content.cover === 'string'
-              ? content.cover
-              : ''
-          coverImageCaption =
-            'coverCaption' in content &&
-            typeof content.coverCaption === 'string'
-              ? content.coverCaption
-              : ''
-          coverImageAlt =
-            'coverAlt' in content && typeof content.coverAlt === 'string'
-              ? content.coverAlt
-              : ''
-          agedWarning =
-            'oldArticle' in content && typeof content.oldArticle === 'string'
-              ? content.oldArticle
-              : null
           leakOutCanonical =
             'canonical' in content && typeof content.canonical === 'string'
               ? content.canonical
@@ -174,13 +147,8 @@
       ]
 
       return {
-        agedWarning,
         canonical: leakOutCanonical,
         content,
-        coverImage,
-        coverImageAlt,
-        coverImageCaption,
-        preamble,
         prettyfiedTemporalDate,
         prev,
         next,

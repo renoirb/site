@@ -7,8 +7,13 @@ keywords:
   - evenements
 canonical: 'https://renoirboulanger.com/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab/'
 title: Introduction de notre nouveau projet-événement intitulé DevLab
-cover: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
-coverAlt: devLabMtl.org
+coverImage:
+  src: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
+  alt: devLabMtl.org
+  text: |
+    Dev Lab Montréal, un «Lab» d’expérimentation pour partager et
+    augmenter ses aptitudes en programmation Web
+    via des rencontres hebdomadaires en soirée.
 categories:
   - Tranche de vie
 tags:

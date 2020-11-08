@@ -2,8 +2,10 @@
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo/'
 title: Lancement de l’annee 2011 pour la conférence ConFoo
-cover: ~/assets/content/blog/2010/09/logo_confoo_150_39.gif
-coverCaption: ConFoo.ca Web Techno Conference
+coverImage:
+  src: ~/assets/content/blog/2010/09/logo_confoo_150_39.gif
+  alt: ConFoo.ca Web Tehno Conference Logo
+  text: ConFoo.ca Web Tehno Conference
 categories:
   - Logiciel libre
 tags: &tags

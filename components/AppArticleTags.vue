@@ -27,8 +27,18 @@
           v-html="abbreviatize(tag)"
         />
       </li>
+      <li
+        v-if="category"
+        class="category px-2 py-1 mb-3 mr-3"
+        :class="{ 'is-hoverizable': link }"
+      >
+        <NuxtLink
+          :to="`/blog/category/${String(category).toLocaleLowerCase()}`"
+          class="no-underline"
+          v-html="abbreviatize('📁 ' + category)"
+        />
+      </li>
     </ul>
-    <span v-else class="taxonomy-items text-xs">(...)</span>
   </div>
 </template>
 
@@ -50,6 +60,7 @@
   }
   export interface Computed {
     tags: string[]
+    category: null | string
   }
   export interface Props {
     content: INuxtContentResult
@@ -77,14 +88,28 @@
     },
     computed: {
       tags(): string[] {
-        const { tags = [] } = this.content
         const _tags = new Set<string>()
-        for (const tag of tags) {
-          if (typeof tag === 'string' && tag.replace(/[\s\t/]/g, '') !== '') {
-            _tags.add(tag)
+        if ('tags' in this.content && this.content.tags) {
+          for (const tag of this.content.tags) {
+            if (typeof tag === 'string' && tag.replace(/[\s\t/]/g, '') !== '') {
+              _tags.add(tag)
+            }
           }
         }
-        return Array.from(_tags)
+        const out = Array.from(_tags)
+        return out
+      },
+      category(): null | string {
+        let out: null | string = null
+        if ('categories' in this.content && this.content.categories) {
+          if (
+            Array.isArray(this.content.categories) &&
+            this.content.categories[0]
+          ) {
+            out = this.content.categories[0]
+          }
+        }
+        return out
       },
     },
     methods: {

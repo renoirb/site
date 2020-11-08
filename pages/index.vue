@@ -66,6 +66,7 @@
       let contents: IDatedNuxtContentResult[] = []
       contents = await $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
+        .limit(4)
         .sortBy('createdAt', 'desc')
         .fetch()
 

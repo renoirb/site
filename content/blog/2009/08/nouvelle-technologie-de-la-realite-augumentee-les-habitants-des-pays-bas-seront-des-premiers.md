@@ -14,13 +14,16 @@ keywords:
   - technologie
   - services-publics
   - réalité augumentée
-cover: ~/assets/content/blog/2009/08/BTTFII_DocBrown_car.JPG
-coverCaption:
-  Les lunettes mattes de Doc Brown (Christopher Lloyd) dans sa DeLorean dans
-  "Retour Vers le Futur 2". Bien que le film n’a pas élaboré sur ce que
-  <em>Doc</em> pouvait voir, il était implicite que le porteur peux y voir des
-  couches supplémentaires d'informations. Durant le film, on le voit même
-  conduire en utilisant ses lunettes.
+coverImage:
+  src: ~/assets/content/blog/2009/08/BTTFII_DocBrown_car.JPG
+  text: |
+    Les lunettes mattes de [Doc Brown][doc-wikipedia] (Christopher Lloyd)
+    dans sa DeLorean dans "Retour Vers le Futur 2".
+    Bien que le film n’a pas élaboré sur ce que *Doc* pouvait voir,
+    il était implicite que le porteur peux y voir des
+    couches supplémentaires d'informations.
+    Durant le film, on le voit même conduire en utilisant ses lunettes.
+    [doc-wikipedia]: https://en.wikipedia.org/wiki/Emmett_Brown
 preamble:
   text: |
     Cet article était écrit pour faire suite à [un statut Twitter de ReadWriteWeb][twitter-rww], publié en Août 2009. (lien vers le statut n'était pas inclus dans cet article).

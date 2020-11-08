@@ -13,6 +13,7 @@
       anonymous
       loading="lazy"
       :src="imageSource"
+      :alt="typeof alt === 'string' ? alt : ''"
       class="object-cover w-full rounded"
       :data-remote="imageSiteDistSrc"
       @load="onLoad($event)"
@@ -161,55 +162,37 @@
           return
         }
 
-        const imgElement =
-          this.$refs && 'img' in this.$refs
-            ? (this.$refs.img as HTMLImageElement)
-            : null
-
-        const imageSource = this.imageSource
-        const imageSiteDistSrc = this.imageSiteDistSrc
-        const src = this.src
-        const errored = this.errored
-        const loaded = this.loaded
-        const hasSrcBeenRewritten = this.hasSrcBeenRewritten
-
-        // eslint-disable-next-line
-        console.log('AppImage.imageSiteDistPoke', {
-          evt,
-          src,
-          imageSource,
-          imageSiteDistSrc,
-          loaded,
-          errored,
-          imgElement,
-          hasSrcBeenRewritten,
-        })
-
         if (this.src.startsWith('data')) {
           this.errored = true
         }
 
-        /**
-         * Load from remote fallback.
-         *
-         * Bookmarks:
-         * - https://github.com/PivaleCo/nuxt-image-loader-module/blob/master/src/plugin.template.js
-         * - https://github.com/vuejs/vue-cli/issues/2099
-         */
-        try {
-          if (
-            (this.src.startsWith('data') || this.src.startsWith('~')) &&
-            imgElement &&
-            !this.hasSrcBeenRewritten
-          ) {
-            imgElement.setAttribute('data-remote-replaced-src', this.src)
-            imgElement.setAttribute('src', this.imageSiteDistSrc)
-            imgElement.classList.add('is-data-remote-replaced')
-            this.hasSrcBeenRewritten = true
-            this.loaded = true
+        // eslint-disable-next-line
+        console.log('AppImage.imageSiteDistPoke(evt)', {
+          evt,
+        })
+
+        if (this.$refs && this.$refs.img && 'setAttribute' in this.$refs.img) {
+          /**
+           * Load from remote fallback.
+           *
+           * Bookmarks:
+           * - https://github.com/PivaleCo/nuxt-image-loader-module/blob/master/src/plugin.template.js
+           * - https://github.com/vuejs/vue-cli/issues/2099
+           */
+          try {
+            if (
+              (this.src.startsWith('data') || this.src.startsWith('~')) &&
+              !this.hasSrcBeenRewritten
+            ) {
+              this.$refs.img.setAttribute('data-remote-replaced-src', this.src)
+              this.$refs.img.setAttribute('src', this.imageSiteDistSrc)
+              this.$refs.img.classList.add('is-data-remote-replaced')
+              this.hasSrcBeenRewritten = true
+              this.loaded = true
+            }
+          } catch (e) {
+            // Fail safely
           }
-        } catch (e) {
-          // Fail safely
         }
       },
       onLoad(evt: HTMLElementEventMap['load']): void {

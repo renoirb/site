@@ -8,9 +8,13 @@ import {
   ITaxonomyHuman,
   ITaxonomyItem,
   toTaxonomyItemCollection,
+  extractTaxonomyHuman,
+  hydrateTaxonomyCollection,
 } from '../taxonomy'
-import { extractTaxonomyHuman, hydrateTaxonomyCollection } from '../tag'
-import type { IFrontMatterInnerDocument } from './front-matter-inner-document'
+import type {
+  IFrontMatterPreambleInnerDocument,
+  IFrontMatterCoverImageInnerDocument,
+} from './front-matter-inner-document'
 
 export type INuxtContentResolver = (
   $content: INuxtContentInstance,
@@ -27,7 +31,8 @@ export interface IBaseNuxtContentResult extends IResult {
 
 export interface INuxtContentResult extends IBaseNuxtContentResult {
   canonical?: string
-  preamble?: IFrontMatterInnerDocument
+  preamble?: IFrontMatterPreambleInnerDocument
+  coverImage?: IFrontMatterCoverImageInnerDocument
   categories: string[]
   cover?: string
   coverAlt?: string

@@ -1,0 +1,5 @@
+aliases:
+  - key: portfolio
+    to: projects
+  - key: logiciel-libre
+    to: open-source

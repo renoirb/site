@@ -1,8 +1,11 @@
 ---
 locale: fr-CA
 canonical: 'https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/'
-cover: ~/assets/content/blog/2013/02/renoir-boulanger-prensentant-web-in-2013.jpg
-coverCaption: Durant la présentation donnée au Web-In 2013
+coverImage:
+  src: ~/assets/content/blog/2013/02/renoir-boulanger-prensentant-web-in-2013.jpg
+  alt: Renoir devant une salle pleine durant une conférence
+  text: |
+    Durant la présentation donnée au Web-In 2013
 title:
   'Conférence: Comment évaluer le niveau de qualité d’un site web selon les
   techniques d’intégration web d’actualité'

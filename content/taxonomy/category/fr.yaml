@@ -1,4 +1,20 @@
 human:
+  - key: experiments
+    text: Expérimentations
+    description: |
+      Quelques expérimentations ou procédures
+
+  - key: open-source
+    text: Logiciels libre
+    description: |
+      Articles écrits à propos de logiciels libre que j’ai contribué ou participé
+      ou utilisé.
+
+  - key: organization
+    text: Organisation
+    description: |
+      Articles écrits lorsque je tente d’éclairer ma propre compréhension
+
   - key: projects
     text: Projets
     description: |
@@ -8,3 +24,9 @@ human:
     text: Tranche de vie
     description: |
       Articles écrits au sujet de ma carrière ou événements du moment
+
+  - key: web-integration-review
+    text: Revue de code d’Intégration web
+    description: |
+      Articles écrits pour partager commentaires sur la structure du HTML et du CSS de sites.
+      Les sites mentionnées ne sont pas nécessairement des sites sur lesquels j’ai travaillé.

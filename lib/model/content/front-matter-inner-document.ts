@@ -1,3 +1,4 @@
+import { strict as assert } from 'assert'
 import { isObject } from '../../runtime'
 import { abbreviatize } from '../abbreviations'
 import type { INuxtContentParsedDocument, INuxtContentDatabase } from './parser'
@@ -9,6 +10,22 @@ export interface IFrontMatterInnerDocument {
    * and be used inside the slot contents.
    */
   text: string
+}
+
+export interface IFrontMatterPreambleInnerDocument {
+  /**
+   * This article should age well enough so that
+   * we do not need to add an "aged article" preamble
+   * when the article is more than 5 years from the day
+   * the static site has been generated.
+   */
+  disable?: true
+}
+
+export interface IFrontMatterCoverImageInnerDocument
+  extends IFrontMatterInnerDocument {
+  src: string
+  alt?: string
 }
 
 export interface IFrontMatterInnerDocumentParsed
@@ -58,10 +75,38 @@ export const isFrontMatterInnerDocument = (
   input: any,
 ): input is IFrontMatterInnerDocument => {
   let out: boolean = false
-  if ('text' in input) {
+  if (input && 'text' in input) {
     out = true
   }
   return out
+}
+
+export const assertsFrontMatterInnerDocument = (
+  input: any,
+): asserts input is IFrontMatterInnerDocument => {
+  const expectedMessage = `We expected to receive an IFrontMatterInnerDocument`
+  assert.equal(isFrontMatterInnerDocument(input), true, expectedMessage)
+}
+
+export const isFrontMatterCoverImageInnerDocument = (
+  input: any,
+): input is IFrontMatterCoverImageInnerDocument => {
+  let out: boolean = false
+  if (input && 'text' in input && 'src' in input) {
+    out = true
+  }
+  return out
+}
+
+export const assertsFrontMatterCoverImageInnerDocument = (
+  input: any,
+): asserts input is IFrontMatterCoverImageInnerDocument => {
+  const expectedMessage = `We expected to receive an IFrontMatterCoverImageInnerDocument`
+  assert.equal(
+    isFrontMatterCoverImageInnerDocument(input),
+    true,
+    expectedMessage,
+  )
 }
 
 export const extractFrontMatterInnerDocument = (
