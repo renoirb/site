@@ -9,6 +9,9 @@ coverImage:
 title:
   'Conférence: Comment évaluer le niveau de qualité d’un site web selon les
   techniques d’intégration web d’actualité'
+preamble:
+  disable: true
+  text: ' '
 categories:
   - Portfolio
 date: &createdAt '2013-02-21T22:21:10-04:00'

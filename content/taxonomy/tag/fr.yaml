@@ -145,6 +145,12 @@ human:
     description: |
       Essais écrits pour tenter d’expliquer
 
+  - key: webplatform
+    text: WebPlatform
+    description: |
+      Work done as a full time W3C employee and other related work as volunteer
+      contributor helping on documenting the Open Web Platform.
+
   - key: wish-list
     text: Dans mes rêves
     description: |
