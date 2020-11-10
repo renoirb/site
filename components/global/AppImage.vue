@@ -123,6 +123,9 @@
         if (src === 'lost-image') {
           src = ''
         }
+        if (this.$isServer) {
+          return this.imageSiteDistSrc
+        }
         /**
          * Using a method because of its asynchronous nature
          * Bookmarks:
@@ -156,6 +159,8 @@
     methods: {
       abbreviatize,
       imageSiteDistPoke(
+        // @ts-ignore
+        // eslint-disable-next-line
         evt?: HTMLElementEventMap['load'] | HTMLElementEventMap['click'],
       ): void {
         if (this.hasSrcBeenRewritten) {
@@ -165,11 +170,6 @@
         if (this.src.startsWith('data')) {
           this.errored = true
         }
-
-        // eslint-disable-next-line
-        console.log('AppImage.imageSiteDistPoke(evt)', {
-          evt,
-        })
 
         if (this.$refs && this.$refs.img && 'setAttribute' in this.$refs.img) {
           /**
@@ -196,30 +196,6 @@
         }
       },
       onLoad(evt: HTMLElementEventMap['load']): void {
-        const imgElement =
-          this.$refs && 'img' in this.$refs
-            ? (this.$refs.img as HTMLImageElement)
-            : null
-
-        const imageSource = this.imageSource
-        const imageSiteDistSrc = this.imageSiteDistSrc
-        const src = this.src
-        const errored = this.errored
-        const loaded = this.loaded
-        const hasSrcBeenRewritten = this.hasSrcBeenRewritten
-
-        // eslint-disable-next-line
-        console.log('AppImage.onLoad', {
-          evt,
-          src,
-          imageSource,
-          imageSiteDistSrc,
-          loaded,
-          errored,
-          imgElement,
-          hasSrcBeenRewritten,
-        })
-
         this.imageSiteDistPoke(evt)
       },
     },
