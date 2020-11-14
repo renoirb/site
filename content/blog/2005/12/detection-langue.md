@@ -66,3 +66,7 @@ de la langue actuelle... on pourrait le faire ainsi:
 ```php
  return "<img src=\"/path/to/image/?={$langue}/design_slice_12.jpg\" alt=\"Welcome\" border=\"0\" />";
 ```
+
+[wphttpsupportedlanguagechooser]:
+  https://gist.github.com/renoirb/88a6065f7dffeea77333
+  'Détection de langue en utilisant les entêtes HTTP Accept-Language'

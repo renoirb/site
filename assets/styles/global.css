@@ -3,3 +3,20 @@ body {
   color: var(--color-title);
   transition: background-color 0.3s;
 }
+
+a[href^="https://github.com/"]:after,
+a[href^="https://web.archive.org/"]:after
+{
+  font-size: smaller;
+  color: var(--color-secondary);
+}
+
+a[href^="https://github.com/"]:after
+{
+  content: ' (GitHub)';
+}
+
+a[href^="https://web.archive.org/"]:after
+{
+  content: ' (Web.Archive.org)';
+}

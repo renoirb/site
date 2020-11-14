@@ -402,3 +402,6 @@ later for more!
 [11]: https://registry.hub.docker.com/u/webspecs/publican/
 [13]: https://github.com/foreverjs/forever
 [wpd]: /blog/tag/webplatform
+[gist-run-publican-salt-basesystem-docker]:
+  https://gist.github.com/renoirb/4e52d93949cf2d049556
+  'Run publican inside renoirb/salt-basesystem, inside a Docker container!'

@@ -60,21 +60,23 @@ work:
     remote: true
     contract: false
     startDate: '2020-03-01'
+    endDate: '2020-12-18'
     url: &url https://www.rbcroyalbank.com
     website: *url
     description:
       Royal Bank of Canada is Canada’s largest bank, and one of the largest
       banks in the world, based on market capitalization. We have over 80,000
-      full- and part-time employees who serve more than 16 million personal,
+      full and part-time employees who serve more than 16 million personal,
       business, public sector and institutional clients through offices in
       Canada, the U.S. and 37 other countries.
     summary:
-      I am a Senior Full-Stack Front-End developer to the RBC Omni (Online
-      Business Banking). My daily tasks are about reviewing my colleague’s code,
-      make technical recommendations, and contribute to building scalable and
+      I was a Senior Full-Stack Front-End developer to the RBC Omni platform
+      (Online Business Banking). My daily tasks were about making implementation
+      proposals driven by the requirements and agenda set by product owners and
+      business analysists. My focus was mostly about building scalable and
       re-usable modules by collaborating with other production teams, including
-      the design system/platform team. The code I write is targetted to run with
-      Angular 8 in TypeScript 3.4.
+      the design system/platform team. The code I wrote waas targetted for
+      Angular 8 with TypeScript 3.4.
     highlights:
       - Re-Implement and improve link manager to legacy application system. So
         that the HTML templates contains a "link id", and how it dynamically
@@ -113,7 +115,7 @@ work:
     contract: false
     hidden: false
     startDate: '2017-05-01'
-    endDate: '2020-02-29'
+    endDate: '2020-02-28'
     url: &url https://www.cgi.com/en
     website: *url
     description:
