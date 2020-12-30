@@ -155,12 +155,8 @@
         next,
       }
     },
-    async beforeMount() {
-      const d =
-        this.$el && this.$el.ownerDocument ? this.$el.ownerDocument : false
-      if (d) {
-        await this.$nextTick(() => webplatformMediawikiConversionLinks(d))
-      }
+    async created() {
+      await webplatformMediawikiConversionLinks(this)
     },
     methods: {
       abbreviatize,
