@@ -46,7 +46,7 @@
       @apply border;
     }
     & thead th {
-      @apply px-4 py-2;
+      @apply px-2 py-2;
     }
   }
 
@@ -125,7 +125,7 @@
     @apply text-lg;
   }
   & li {
-    @apply list-inside;
+    @apply list-outside;
 
     color: inherit;
   }

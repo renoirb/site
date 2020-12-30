@@ -75,6 +75,7 @@
     INuxtContentPrevNext,
     INuxtContentResult,
     IPrettyfiedTemporalDate,
+    webplatformMediawikiConversionLinks,
   } from '~/lib'
   export interface Data {
     canonical: null | string
@@ -152,6 +153,13 @@
         prettyfiedTemporalDate,
         prev,
         next,
+      }
+    },
+    async beforeMount() {
+      const d =
+        this.$el && this.$el.ownerDocument ? this.$el.ownerDocument : false
+      if (d) {
+        await this.$nextTick(() => webplatformMediawikiConversionLinks(d))
       }
     },
     methods: {
