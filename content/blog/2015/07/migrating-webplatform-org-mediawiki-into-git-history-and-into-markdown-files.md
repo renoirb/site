@@ -304,6 +304,32 @@ we wanted also to ensure we properly support the following.
 
 1. Keep code examples in Markdown so we can colourize them
 
+1. Golden standard pages should look the same
+
+   The "Golden Standard" pages were ones we were regularly referring to see how
+   they would look and see if things are broken.
+
+   Also, since we were removing infrastructure, we should see features that were
+   enabled at the time of _Web.Archive.org_ snapshot, but would be omitted in
+   the _Static version_ (i.e. `webplatform.github.io`)
+
+   - _Compatibility data_ was removed
+   - _Contents_ on the right should be removed
+   - _Overview table_ should look different
+   - On _static version_ code blocks should be more colorized differently (it's
+     using a different process)
+
+   Examples:
+
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/css/properties/border-radius"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/css/properties/display"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/javascript/functions"  web-archive-date="20140626071828"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/javascript/Array/filter"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/javascript/Date"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/Beginners/html"  web-archive-date="20150513130014"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/tutorials/canvas_notearsgame"  web-archive-date="20150513130014"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/tutorials/svg_clipping_and_masking"  web-archive-date="20150905205843"></app-link-compare-item>
+
 1. Support MediaWiki special URL patterns
 
    MediaWiki is pretty relax about what it allows in its URLs.
@@ -327,21 +353,21 @@ we wanted also to ensure we properly support the following.
 1. _Support MediaWiki special URL patterns_: A page in another language should
    be migrated
 
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/Main_Page/ja</span>
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/Main_Page/ko</span>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/Main_Page/ja" web-archive-date="20160613060459"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/Main_Page/ko"></app-link-compare-item>
 
 1. _Support MediaWiki special URL patterns_: A Page with `()` in URL should be
    normalized
 
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/css/functions/translate()</span>
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/svg/properties/animVal\_(SVGAnimatedPreserveAspectRatio)</span>
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/svg/properties/cx\_(SVGRadialGradientElement)</span>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/css/functions/translate()"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/svg/properties/animVal_(SVGAnimatedPreserveAspectRatio)"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/svg/properties/cx_(SVGRadialGradientElement)"></app-link-compare-item>
 
 1. _Support MediaWiki special URL patterns_: Pages within WPD namespace should
    be migrated
 
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/WPD:Infrastructure/Monitoring/Monit</span>
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/WPD:Infrastructure/analysis/2013-Migrating_to_a_new_cloud_provider</span>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/WPD:Infrastructure/Monitoring/Monit"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/WPD:Infrastructure/analysis/2013-Migrating_to_a_new_cloud_provider"></app-link-compare-item>
 
    The image comes from `/WPD/assets/` which means the image is hosted in the
    [webplatform/docs-wpd][converted-docs-wpd] in the assets/ folder.
@@ -349,9 +375,9 @@ we wanted also to ensure we properly support the following.
 1. _Support MediaWiki special URL patterns_: Pages in Meta namespace should be
    migrated
 
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/Meta:HTML/Elements/style</span>
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/Meta:web_platform_wednesday</span>
-   - <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/Meta:Editors_Guide</span>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/Meta:HTML/Elements/style"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/Meta:web_platform_wednesday"></app-link-compare-item>
+   - <app-link-compare-item slug="docs.webplatform.org/wiki/Meta:Editors_Guide"></app-link-compare-item>
 
 ### Requirements we couldn’t meet
 
@@ -396,13 +422,14 @@ SNIPPET: Ensure ALL assets uploads are displayed properly
 
 1. Make sure page links _with different casing_ are redirected properly
 
-   For example the page for "`The_History_of_the_Web`" is sometimes linked with
-   different casing "`internet_and_web`", it is migrated once;
-   <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/concepts/Internet_and_Web/The_History_of_the_Web</span>
+   For example the page for "`Internet_and_Web`" is sometimes linked with
+   different casing, e.g. at "`Internet_and_Web/The_History_of_the_Web`" or
+   "`internet_and_web/The_History_of_the_Web`", it is migrated once;
+   <app-link-compare-item slug="docs.webplatform.org/wiki/concepts/Internet_and_Web/The_History_of_the_Web"></app-link-compare-item>
 
    Some page has links to with different casing "`internet_and_web`", we can see
    from
-   <span data-webplatform-mediawiki-conversion-links>docs.webplatform.org/wiki/concepts</span>
+   <app-link-compare-item slug="docs.webplatform.org/wiki/concepts"></app-link-compare-item>
 
    MediaWiki would redirect, but on GitHub pages, nothing has been put in place
    for those. If we wanted to support, we could have used the same entries used

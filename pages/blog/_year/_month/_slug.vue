@@ -75,7 +75,6 @@
     INuxtContentPrevNext,
     INuxtContentResult,
     IPrettyfiedTemporalDate,
-    webplatformMediawikiConversionLinks,
   } from '~/lib'
   export interface Data {
     canonical: null | string
@@ -154,9 +153,6 @@
         prev,
         next,
       }
-    },
-    async created() {
-      await webplatformMediawikiConversionLinks(this)
     },
     methods: {
       abbreviatize,
