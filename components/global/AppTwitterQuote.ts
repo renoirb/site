@@ -48,7 +48,7 @@ const addTwitterDependency = (evt: HTMLElementEventMap['mouseenter']) => {
  * ```
  */
 const AppTwitterQuote: FunctionalComponentOptions<Props> = {
-  name: 'AppTwitterQuote' /* app-quoting-twitter */,
+  name: 'AppTwitterQuote' /* app-twitter-quote */,
   functional: true,
   props: {
     tweet: {
