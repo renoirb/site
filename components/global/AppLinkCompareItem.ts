@@ -10,7 +10,8 @@ export interface Props {
   webArchiveDate?: string
 }
 
-const SUPPORTED_PREFIX = 'docs.webplatform.org/wiki'
+const SUPPORTED_PREFIX /*       */ = 'docs.webplatform.org/wiki'
+const SUPPORTED_PREFIX_DEST /*  */ = 'webplatform.github.io/docs'
 
 /**
  * Compare Between Before and After the same Link against web.archive.org.
@@ -79,8 +80,7 @@ const AppLinkCompareItem: FunctionalComponentOptions<Props> = {
 
     out.push(h('span', { class: ['item'] }, [' to ']))
 
-    const TEXT_CONTENT_SUFFIX = 'webplatform.github.io/docs'
-    let toTextContent = slug.replace(SUPPORTED_PREFIX, TEXT_CONTENT_SUFFIX)
+    let toTextContent = slug.replace(SUPPORTED_PREFIX, SUPPORTED_PREFIX_DEST)
     toTextContent = toTextContent.replace(':', '/')
     toTextContent = toTextContent.replace(/[()]/g, '')
     out.push(createAnchor(`https://${toTextContent}`, toTextContent))

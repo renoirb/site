@@ -55,12 +55,6 @@
       }
     }
   }
-  &.taxonomy-not-hoverizable li {
-    opacity: 0.25;
-  }
-  &.taxonomy-not-hoverizable:hover li {
-    opacity: 1;
-  }
 }
 
 kbd {

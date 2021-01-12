@@ -57,8 +57,7 @@
       'blog-list-model-by-year': BlogListModelByYear,
     },
     async asyncData(ctx) {
-      const data = await nuxtPageAsyncDataForTaxonomyList('tags', 'tag', ctx)
-      return data
+      return await nuxtPageAsyncDataForTaxonomyList('tags', 'tag', ctx)
     },
     data() {
       return {
