@@ -25,10 +25,17 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    async asyncData({ $content }) {
+    async asyncData({ $content, route, error }) {
+      const { name } = route
+      if (typeof name !== 'string') {
+        return error({ statusCode: 404, message: `Not Found` })
+      }
+      const dataModelName = name.replace('-slug', '')
+      const title =
+        dataModelName.charAt(0).toUpperCase() + dataModelName.slice(1)
       let contents: INuxtContentIndexResult[] = []
       try {
-        contents = await $content('glossary')
+        contents = await $content(dataModelName)
           .sortBy('title', 'desc')
           .only(['locale', 'path', 'slug', 'title'])
           .fetch()
@@ -38,8 +45,8 @@
 
       return {
         contents,
-        title: 'Glossary',
-        urlParam: 'glossary',
+        title,
+        urlParam: dataModelName,
       }
     },
   })

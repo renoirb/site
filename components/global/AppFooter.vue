@@ -22,6 +22,12 @@
           <dd>
             <NuxtLink to="/projets"> Projets </NuxtLink>
           </dd>
+          <dd>
+            <NuxtLink to="/glossary"> Glossary </NuxtLink>
+          </dd>
+          <dd>
+            <NuxtLink to="/code-review"> Code-Review notes </NuxtLink>
+          </dd>
         </dl>
       </div>
     </footer>

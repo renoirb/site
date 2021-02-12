@@ -46,12 +46,17 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    async asyncData({ $content, params, error }) {
+    async asyncData({ $content, params, error, route }) {
       const { slug } = params
+      const { name } = route
+      if (typeof name !== 'string') {
+        return error({ statusCode: 404, message: `Not Found` })
+      }
+      const dataModelName = name.replace('-slug', '')
       let content
 
       try {
-        content = await $content('glossary', slug).fetch()
+        content = await $content(dataModelName, slug).fetch()
       } catch (e) {
         error({ message: 'Term not found' })
       }

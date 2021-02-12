@@ -30,26 +30,33 @@
   import Vue from 'vue'
   export interface Data {
     q: string
-  }
-  export interface Methods {}
-  export interface Computed {
     pageTitle: string
   }
+  export interface Methods {}
+  export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
       'app-bread-crumb': () => import('@/components/AppBreadCrumb.vue'),
     },
+    asyncData({ error, route }) {
+      const { name } = route
+      if (typeof name !== 'string') {
+        return error({ statusCode: 404, message: `Not Found` })
+      }
+      const dataModelName = name.replace('-slug', '')
+      const pageTitle =
+        dataModelName.charAt(0).toUpperCase() + dataModelName.slice(1)
+
+      return {
+        pageTitle,
+      }
+    },
     data() {
       return {
         q: '',
+        pageTitle: '',
       }
-    },
-    computed: {
-      pageTitle(): string {
-        const pageTitle = 'Glossary'
-        return pageTitle
-      },
     },
     head() {
       const title = this.pageTitle
