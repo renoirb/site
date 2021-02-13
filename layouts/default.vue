@@ -32,6 +32,7 @@
 <script lang="ts">
   import Vue from 'vue'
   import {
+    fromNuxtContextToAppIdentity,
     fromProcessEnvToAppIdentity,
     IAppIdentity,
     pageTitleForBlogIndex,
@@ -53,10 +54,11 @@
     },
     data() {
       const appIdentityFallback = fromProcessEnvToAppIdentity({} as any)
+      const appIdentityPicks = fromNuxtContextToAppIdentity(this.$nuxt.context)
       const colorModeClassName = getColorModeClassName(this.$nuxt.context)
-      const appIdentity = {
+      const appIdentity: IAppIdentity = {
         ...appIdentityFallback,
-        ...(this.$nuxt.context || {}),
+        ...appIdentityPicks,
       }
       return {
         appIdentity,

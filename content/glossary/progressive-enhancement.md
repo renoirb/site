@@ -1,7 +1,7 @@
 ---
 title: Progressive Enhancement and/or Graceful Degradation
 coverImage:
-  src: ~/assets/content/assets/content/glossary/progressve-enhancement.webp
+  src: ~/assets/content/glossary/progressve-enhancement.webp
   text: |
     *The Chocolatey Layers of Progressive Enhancement*
     Start with your content peanut, marked up in rich, semantic (X)HTML.
@@ -39,6 +39,50 @@ we would tell at least an error message if a required dependency is missing.
 ---
 
 ## Related videos
+
+[is-progressive-enhancement-dead-yet]:
+  https://briefs.video/videos/is-progressive-enhancement-dead-yet/
+  'Is Progressive Enhancement Dead Yet?'
+
+### [Is Progressive Enhancement Dead Yet?][is-progressive-enhancement-dead-yet]
+
+<a style="clear:both;overflow:hidden;display:block;" href="https://briefs.video/videos/is-progressive-enhancement-dead-yet/">
+
+<app-image figcaption="The Basic Layout ... Is NOT a BROKEN Layout" style="width:100%" src="~/assets/content/glossary/briefs-dot-video-slash-videos-slash-is-progressive-enhancement-dead-yet--loop.apng">
+
+This is the main point of _Progressive Enhancement_, is to organize web site and
+application code to add enhancements.
+
+The main point is to support what's native to browsers, let CSS do what it's
+good at, and let JavaScript do things it's good at.
+
+</app-image>
+
+</a>
+
+_Heydon_ (the author of that video) makes good points about how, in 2020, we
+should re-think how we build web applications. How we can now detect and load
+code paths only when applicable.
+
+Since I'm publishing this file in the desire to have a long-term storage of my
+ideas, I will maybe find a way to quote and attribute properly here.
+
+If it's many years past _2020_ (crazy year that was!), if you saw a funny video
+that mentioned [Tony Hawk](https://en.wikipedia.org/wiki/Tony_Hawk) and a _shark
+with a fez_ talking about **Progressive Enghancement**, that's the video I
+wanted you to see!
+
+You can see more _very insightful_ videos from The videos are hosted on vimeo,
+but published from [https://briefs.video/](https://briefs.video/videos/) and I
+can't unfortunately do anything more than link to [his video talk "_Is
+Progressive Enhancement Dead Yet?_"][is-progressive-enhancement-dead-yet]
+
+<app-twitter-quote tweet="1346167334919155713">
+The new 📼 Webbed Briefs 📼 video is now ready for your “““enjoyment”””!
+</app-twitter-quote>
+
+The author is [**Heydon Pickering**](https://heydonworks.com/) (Yes, to see his
+site, you’ll ave to turn off JavaScript — what a cool idea!).
 
 ### [Progressive Enhancement 2.0][yt-nczonline-progressive-enhancement]
 
