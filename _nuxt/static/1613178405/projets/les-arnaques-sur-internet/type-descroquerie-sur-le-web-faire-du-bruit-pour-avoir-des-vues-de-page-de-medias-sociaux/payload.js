@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projets/les-arnaques-sur-internet/type-descroquerie-sur-le-web-faire-du-bruit-pour-avoir-des-vues-de-page-de-medias-sociaux", {data:[],fetch:[],mutations:void 0});

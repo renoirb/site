@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1613178405",layout:"default",error:null,serverRendered:a,routePath:"\u002Fprojects\u002Fscript-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre",config:{content:{dbHash:"af44dea5"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projets/les-arnaques-sur-internet", {data:[],fetch:[],mutations:void 0});

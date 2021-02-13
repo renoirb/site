@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/styleguide", (function(a){return {data:[{styleMap:{outer:["bg-red-200","text-red-800","border-red-400","bg-blue-200","text-blue-800","border-blue-400","bg-yellow-200","text-yellow-800","border-yellow-400"],heading:["bg-red-400",a,"bg-blue-400",a,"bg-yellow-400","text-black"]}}],fetch:[],mutations:void 0}}("text-white")));

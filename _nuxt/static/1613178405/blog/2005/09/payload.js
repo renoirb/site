@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/2005/09", {data:[{},{},{},{contents:[{locale:"fr-CA",title:"Premier billet",tags:[],date:"2005-09-16T20:23:22-04:00",createdAt:"2005-09-17T00:23:22.000Z",path:"\u002Fblog\u002F2005\u002F09\u002Ffirst-post",slug:"first-post",prettyfiedTemporalDate:{prettified:"vendredi 16 septembre 2005",temporalDate:"2005-09-16"}}]}],fetch:[],mutations:void 0});

@@ -1,0 +1,456 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>Why shouldn't we use $backendLanguageName to manage a Web Application UI state - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional"><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords" name="keywords" content="research-summary front-end architecture favourites"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/site/_nuxt/runtime.js" as="script"><link rel="preload" href="/site/_nuxt/commons/app.js" as="script"><link rel="preload" href="/site/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/site/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/site/_nuxt/app.css" as="style"><link rel="preload" href="/site/_nuxt/app.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/site/_nuxt/vendors/app.css"><link rel="stylesheet" href="/site/_nuxt/app.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1613178405/blog/2019/11/why-should-we-not-use-a-backend-stack-to-maintain-web-application-ui-state/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1613178405/blog/2019/11/why-should-we-not-use-a-backend-stack-to-maintain-web-application-ui-state/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-01b3ccea data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-01b3ccea><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-01b3ccea><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-01b3ccea><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-01b3ccea><path d="M4 6h16M4 12h16M4 18h16" data-v-01b3ccea></path></svg></button> <a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-01b3ccea><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-01b3ccea><a href="/site/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/site/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/site/resume" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/site/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-01b3ccea><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-01b3ccea><a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>Renoir Boulanger</a></div> <div data-v-01b3ccea><a href="/site/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Blog
+        </span></a><a href="/site/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Projects
+        </span></a><a href="/site/resume" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Resume
+        </span></a><a href="/site/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div class="grid"><div class="m-10 mt-5"><section class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/site/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2019" class="nuxt-link-active" data-v-ede238bc>2019</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2019/11" class="nuxt-link-active" data-v-ede238bc>11</a></li></ol></nav> <form class="justify-self-end sm:w-full position-relative flex items-center justify-center"><label for="search" class="sr-only">Search within blog:</label> <input id="search" type="search" autocomplete="off" name="q" placeholder="e.g. linux" class="focus:z-50 focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"></form></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-7dd28e96><!----> <div class="document document--item z-30" data-v-7dd28e96><div class="title page-title mb-4 font-serif text-2xl italic" data-v-7dd28e96><h1 data-v-7dd28e96>Why shouldn't we use $backendLanguageName to manage a Web Application UI state</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-7dd28e96><time datetime="2019-11-04" data-v-7dd28e96>
+        Monday, November 4, 2019
+      </time> <!----></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-7dd28e96><strong id="tags__175" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__175" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/front-end" class="no-underline">front-end</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/architecture" class="no-underline">architecture</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/favourites" class="no-underline">favourites</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/site/blog/category/research-summary" class="no-underline">📁 research-summary</a></li></ul></div> <div class="body mt-10" data-v-7dd28e96><!----> <div class="nuxt-content" data-v-7dd28e96 data-v-7dd28e96><p data-v-7dd28e96 data-v-7dd28e96>While exchanging with other programmers from all horizons I often had backend
+developers eventually wanting to make things better by (taking back) controlling
+all aspects on the server side and leave the FrontEnd developers to "make it
+prettier".</p>
+<p data-v-7dd28e96 data-v-7dd28e96>It happened a few times already, sometimes at a conference, other times at a new
+company I’ve just joined. This conversation happened often enough that I had
+been collecting an argumentary in my personal wiki about it.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>The rationale to have a solid foundation in programming and serious tooling for
+all possible business cases an application would have to handle <em data-v-7dd28e96 data-v-7dd28e96>is a reasonable
+assumption</em>. Since the backend team will have to support the features, why not
+try finding a way to only let FrontEnd developers "make things prettier".</p>
+<p data-v-7dd28e96 data-v-7dd28e96>But making a business decision <em data-v-7dd28e96 data-v-7dd28e96>only</em> with that as a reason, <em data-v-7dd28e96 data-v-7dd28e96>hire extensively</em>
+and "<em data-v-7dd28e96 data-v-7dd28e96>bet</em>" only on that strategy might be costly.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Because this —returning HTML over HTTP— <em data-v-7dd28e96 data-v-7dd28e96>isn’t the first time</em> that question
+happened. (If you want one more proof,
+<a href="https://developer.mozilla.org/en-US/docs/Archive/Web/Server-Side_JavaScript/Walkthrough" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>have a look at this page on MDN</a>)</p>
+<h2 id="context" data-v-7dd28e96 data-v-7dd28e96><a href="#context" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Context</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Ideally, a web application should be loading fast, respond quickly to
+interactions, and display things consistently. This definition should fit any
+well-behaving and consistent UI.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Consistency is key, when we're on an building's elevator, when we push a floor
+number, we expect to have the number light up. It's a behavior we’re used to.
+The feedback is immediate, and is consistent.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>In a Web Browser, an equivalent feedback would be done by adding a styling class
+name.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>We would either change URL in the address bar, and have the button be aligned at
+the same place and look different.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Before we had modern FrontEnd technologies, clicking a link would involve
+"navigating" to another address, throwing everything that was already loaded,
+and have a server completely regenerate HTML.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Back around 2004 with Google Maps, Google shown that it was possible to use the
+web browser without that flow. The idea of changing things without reloading was
+colloquiallly referred to as <code data-v-7dd28e96 data-v-7dd28e96>AJAX</code> (Asynchronous JavaScript And XML). Nowadays
+we have actual asycnronous code and coroutines, but the <em data-v-7dd28e96 data-v-7dd28e96>Asynchronous</em> was
+referring to the fact that the page was loaded, and we want to load more data
+without throwing everything.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Making web applications is a craft that many others extensively documented. If
+you look at other successful web application maintainers and what they've
+documented in the last decades, you’ll also see that they did also use a
+server-side programming language to regenerate HTML.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>You’ll also see attempts to make an hybrid of the two. Server-Side, then
+JavaScript sugar.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>And because we want to make things efficient, and have a manageable code base
+surface to maintain, eventually some thought: how about writing JavaScript, and
+use the same code client and server-side.</p>
+<h2 id="learn-from-experience-of-others" data-v-7dd28e96 data-v-7dd28e96><a href="#learn-from-experience-of-others" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Learn from experience of others</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>In order to make an informed choice, I wanted to take a few well made web
+applications and see what they’ve learned. There’s many articles and talks about
+that subject.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>I’ve limited to companies who has a good reputation for their well-made web
+applications.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Google</strong></li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Facebook</strong></li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Netflix</strong></li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Mozilla</strong></li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Yahoo!</strong> (from back in 2005)</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Yahoo!</em> from back in 2005 was among the most visible (from my own
+recollection).</p>
+<p data-v-7dd28e96 data-v-7dd28e96>What do they have in common is that they all heavily relied on a backend stack
+such as Ruby on Rails, Java or PHP.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>JavaScript always had been the way of updating elements in the web browser, they
+were all making the backend language to conditionally return JavaScript based on
+backend logic.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Sometimes the logic was written at least twice. One in the server-side stack,
+and partially validated in JavaScript.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>And they’re relying more and more on letting the UI interactions to be client
+side.</p>
+<h3 id="quality" data-v-7dd28e96 data-v-7dd28e96><a href="#quality" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Quality</h3>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Error messages are meaningful, in your preferred language</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Labels, content, calendar and numeric notation are all in your preferred
+language</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Everything is aligned and consistent</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Validation rules are enforced consistently from both client and backend</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Have their UI in many human languages (or "locale", e.g. Canadian French),
+measuring system, Date formats, Number formats, etc.</p>
+</li>
+</ul>
+<h3 id="sharing-their-experience" data-v-7dd28e96 data-v-7dd28e96><a href="#sharing-their-experience" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Sharing their experience</h3>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>2009</strong>
+<a href="http://code.flickr.net/2009/12/02/flipping-out/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>How Flickr did "feature flag" for Web Application</a>
+(Blog post, by <em data-v-7dd28e96 data-v-7dd28e96>Flickr</em>, before it got purchased by Yahoo!, was regularly seen
+as a very well made Web Application. Also, the founder of Flickr is now
+co-founder of <em data-v-7dd28e96 data-v-7dd28e96>Slack</em>)</li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>2010</strong>
+<a href="https://vimeo.com/15772341" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Use Ruby On Rails to write maintainable UI</a>
+(Talk, by <em data-v-7dd28e96 data-v-7dd28e96>37 Signals</em>, Basecamp)</li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>2011</strong>
+<a href="https://zachholman.com/talk/how-github-uses-github-to-build-github/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>How GitHub uses GitHub to build software</a>
+(Talk slides)</li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>2014</strong>
+<a href="https://www.youtube.com/watch?v=nYkdrAPrdcw" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Hacker Way: Rethinking Web App Development at Facebook</a>
+(Talk, by <em data-v-7dd28e96 data-v-7dd28e96>Facebook</em>)</li>
+</ul>
+
+<h2 id="maintainability" data-v-7dd28e96 data-v-7dd28e96><a href="#maintainability" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Maintainability</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>To make things maintainable, we might want to be able to see the same vocabulary
+between the layers of the stack.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Before, writing JavaScript involved writing logic mingled with different ways to
+either detect a feature or in a syntax that was supported. The code we were
+writing was closely tied to the platform it would run on, and we would have to
+manually detect if a feature was available or not.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>When we were doing, we would also need to copy paste logic around in different
+module loader systems so we could re-use between <em data-v-7dd28e96 data-v-7dd28e96>Node.js</em> server-side, and
+<em data-v-7dd28e96 data-v-7dd28e96>Microsoft Internet Explorer</em>, and <em data-v-7dd28e96 data-v-7dd28e96>Google Chrome</em>.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>It was tedious, and confusing.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Over the years, the language evolved at a more regular pace (Thanks ECMA TC-39),
+and more and more tooling has been published so we have more than a set of
+compromises
+<a href="https://www.oreilly.com/library/view/javascript-the-good/9780596517748/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>The Good Parts</a></p>
+<p data-v-7dd28e96 data-v-7dd28e96>Since 2015, ECMA released <strong data-v-7dd28e96 data-v-7dd28e96>ES6</strong> (a.k.a. <strong data-v-7dd28e96 data-v-7dd28e96>ECMASCript 2015</strong>), and in 2020
+<a href="https://nodejs.medium.com/announcing-core-node-js-support-for-ecmascript-modules-c5d6dc29b663" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Node.js 14 shipped with native ESM modules support</a>
+so we can write and load our code exactly the same way on both <em data-v-7dd28e96 data-v-7dd28e96>modern web
+browsers</em> and <em data-v-7dd28e96 data-v-7dd28e96>Node.js</em>.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Most of the progress made towards achieving maintainability are possible because
+of tools like <a href="https://jestjs.io/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Jest</a>, <a href="avajs.dev" data-v-7dd28e96 data-v-7dd28e96>AVA</a>, builders like
+<a href="https://github.com/evanw/esbuild" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>esbuild</a>, <a href="https://rollupjs.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Rollup</a> and
+<a href="https://babeljs.io/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Babel</a>, and <a href="https://webpack.js.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>WebPack</a> to allow us
+to split code for different runtime targets (e.g. Client-Side, Server-Side, for
+a specific browser, etc.)</p>
+<p data-v-7dd28e96 data-v-7dd28e96>With all this progress on the platform side, we have all the prerequisite to
+make building a business application maintainable by:</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Maintaining the least amount of code (i.e. most of the code is our app
+business logic, and less boilerplate)</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Avoiding to having to write same logic more than once between stacks</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Avoiding to having to looping and stitching long strings of hopefully valid
+HTML, with many switch-case or if conditional blocks</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Systematically load code when needed, instead of everything at first load</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Allowing to use the same business logic, on tablet, phones, desktop app
+(Electron).</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Maintaining less markup and styling and truly achieve <em data-v-7dd28e96 data-v-7dd28e96>Responsive</em> AND
+<em data-v-7dd28e96 data-v-7dd28e96>Adaptative UI</em></p>
+</li>
+</ul>
+<h2 id="can-it-ever-be-a-good-idea" data-v-7dd28e96 data-v-7dd28e96><a href="#can-it-ever-be-a-good-idea" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Can it ever be a good idea?</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Writing Server-Side ONLY code (i.e. Java/PHP/Erlang/Scala/Python/Go/Rust/Ruby)
+to manage HTML UI is not a bad idea in itself.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>If you can have a service over HTTP that returns self-contained HTML markup,
+that can be made compatible to be loaded onto a host page with conventions for
+CSS and JavaScript.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Injecting such partial could then take the style of the host page, and respond
+to events as soon as it’s injected.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>The idea isn’t new, it's been done many times.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Before we wouldn’t deal with JavaScript, only HTML patterns where the classNames
+and other HTML attributes would be as expected by the host JavaScript code.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>A modern twist is called Micro-Frontends that pushed the boundary further.</p>
+<h3 id="open-source-ui-specialized-projects" data-v-7dd28e96 data-v-7dd28e96><a href="#open-source-ui-specialized-projects" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Open-Source UI specialized projects</h3>
+<h4 id="unrelated-to-javascript" data-v-7dd28e96 data-v-7dd28e96><a href="#unrelated-to-javascript" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Unrelated to JavaScript</h4>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>HHVM</strong> (<em data-v-7dd28e96 data-v-7dd28e96>Facebook</em>, back around 2011) Rewrite of PHP, called Hip-Hop VM</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://www.facebook.com/notes/facebook-engineering/the-hiphop-virtual-machine/10150415177928920/Hack" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Hack</strong></a>:
+Extended PHP Language for Strict typing as part of HHVM parsing engine</li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>XHP</strong>: Extended PHP Language for supporting XML notation within language
+(i.e. NOT as strings) for data model validation, and reduce cross-site
+attack vectors (better input filtering, harder to pass JavaScript code
+through unintended places)</li>
+</ul>
+</li>
+</ul>
+<h4 id="another-syntax-into-javascript" data-v-7dd28e96 data-v-7dd28e96><a href="#another-syntax-into-javascript" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Another syntax, into JavaScript</h4>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>CoffeeScript</strong></p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>ReasonML</strong></p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://clojure.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Clojure</strong></a> LISP syntax, running inside a Java VM,
+receive server-rendered HTML</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Elixir</strong></p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Flow</strong> (<em data-v-7dd28e96 data-v-7dd28e96>Facbook</em>) where we add comments in JavaScript files, and declare
+typings, and provides tooling to validate code based on hints. We have to
+adjust the parser to make <code data-v-7dd28e96 data-v-7dd28e96>*.js</code> files to support otherwise syntax.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>React is written using <em data-v-7dd28e96 data-v-7dd28e96>Flow</em>, so was Vue.js v2 before its v3 rewrite in
+<em data-v-7dd28e96 data-v-7dd28e96>TypeScript</em></li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>TypeScript</strong> (<em data-v-7dd28e96 data-v-7dd28e96>Microsoft</em>) A Superset of ECMAScript. Write code in <code data-v-7dd28e96 data-v-7dd28e96>*.ts</code>
+files, modern ECMAScript plus notations for typings. The typings notations are
+similar to Flow’s, but at least they’re in files with their own extension.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://github.com/vuejs/vue-next" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Vue.js v3 is completely rewritten</a> in
+TypeScript</li>
+</ul>
+</li>
+</ul>
+<h4 id="another-language-manage-server-side-and-javascript-client-side" data-v-7dd28e96 data-v-7dd28e96><a href="#another-language-manage-server-side-and-javascript-client-side" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Another language, manage server-side and JavaScript client-side</h4>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://dart.dev/web" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Dart</strong></a> (<em data-v-7dd28e96 data-v-7dd28e96>Google</em>) and
+<a href="https://api.flutter.dev/index.html" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Flutter</a> Write strictly typed code,
+compiles to JavaScript</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://en.wikipedia.org/wiki/Google_Web_Toolkit" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>GWT</strong></a> (<em data-v-7dd28e96 data-v-7dd28e96>Google</em>, circa
+2002, when they created GMail) Write Java compatible code, return consistent
+HTML</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>See
+<a href="http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwDatePicker" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>an example of a Date Picker</a></li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://vaadin.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Vaadin</strong></a></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>See
+<a href="https://vaadin.com/components/vaadin-date-picker/java-examples" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>an example of a Date Picker</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="javascript" data-v-7dd28e96 data-v-7dd28e96><a href="#javascript" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>JavaScript</h4>
+<p data-v-7dd28e96 data-v-7dd28e96>Generating UI in JavaScript only had been done in the past too</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://yui.github.io/yui2/docs/yui_2.9.0_full/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>YUI</strong></a> (Yahoo!, 2005).
+This one was among the first JavaScript heavy UI libraries that managed
+completely HTML and state.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>See an
+<a href="https://yui.github.io/yui2/docs/yui_2.9.0_full/calendar/index.html" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>example of a Date Picker</a></li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://docs.sencha.com/extjs/4.0.0/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Ext.js</strong></a></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>See an
+<a href="https://docs.sencha.com/extjs/4.0.0/#!/api/Ext.form.field.Date" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>example of a Date Picker</a></li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://backbonejs.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Backbone.js</strong></a>, with or without
+<a href="https://marionettejs.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Marionette.js</a></p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://emberjs.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Ember.js</strong></a> which brought on a cool innovation of <a href="https://jsonapi.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>a
+fully speced navigatable data API with <code data-v-7dd28e96 data-v-7dd28e96>{JSON:API}</code></a> with
+<a href="https://api.emberjs.com/ember-data/release/classes/JSONAPISerializer" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>ember-data <em data-v-7dd28e96 data-v-7dd28e96>JSONAPISerializer</em></a></p>
+</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>While looking those projects, and others you might find on the web, you will
+notice is that most of those projects are less and less popular, and the
+companies sponsoring them now would talk about frameworks such as Vue.js,
+Svelte, React with their new <a href="https://github.com/acdlite/react-fiber-architecture" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Fiber</em></a> internals, or Angular with
+<a href="https://blog.angular.io/a-plan-for-version-8-0-and-ivy-b3318dfc19f7" rel="nofollow noopener noreferrer" target="_blank" title="A plan for version 8.0 and Ivy" data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Ivy</em></a>.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>As it’s been observed in 2019 after a few years into the evolution of React,
+Angular.js being deprecated by Angular to full usage of TypeScript, RxJS, NgRX,
+etc. we see less and less non ECMAScript/JavaScript frameworks.</p>
+<h2 id="nowadays" data-v-7dd28e96 data-v-7dd28e96><a href="#nowadays" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Nowadays</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Nowdays, with the craze of 'micro-services', most companies typically consumes
+their APIs in some format and handles their UI in JavaScript</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Google</strong></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://angularjs.org/" rel="nofollow noopener noreferrer" target="_blank" title="Angular.js, the initial implementation of Angular" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Angular.js</strong></a>, since 2012, and is also getting phased out for
+<a href="https://angular.io/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Angular</em></a></li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://angular.io/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Angular</strong></a> a rewrite in TypeScript with heavy use of RxJS, NgRX
+and other leveraging other utilities such as <a href="https://github.com/angular/angular/tree/master/packages/zone.js" rel="nofollow noopener noreferrer" target="_blank" title="Implements Zones for JavaScript, inspired by Dart." data-v-7dd28e96 data-v-7dd28e96>Zone.js</a>.
+Which is a port from Dart for handling updating parts of the UI.</li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://www.polymer-project.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Polymer</strong></a> to maintain HTML CustomElements (a.k.a. <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Web
+Component</em></a>), they're using it internally namely for
+Google Chrome UI</li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Mozilla</strong></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://github.com/mozbrick/brick" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Brick</strong></a> (archived since 2014) "(...)
+a collection of UI components designed for the easy and quick building of
+web application UIs. Brick components are built using the <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Web Components
+standard</a> to allow developers to describe the UI of
+their app using the HTML syntax they already know."</li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Facebook</strong></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>React.js</strong></li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>React's JSX</strong> syntax is heavily inspired by their previous HHVM/XHP work</li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://www.facebook.com/notes/facebook-engineering/xhp-a-new-way-to-write-php/294003943919/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>https://www.facebook.com/notes/facebook-engineering/xhp-a-new-way-to-write-php/294003943919/</a></li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://reactjs.org/docs/introducing-jsx.html" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>https://reactjs.org/docs/introducing-jsx.html</a></li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://graphql.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>GraphQL</strong></a>, a <a href="http://spec.graphql.org/" rel="nofollow noopener noreferrer" target="_blank" title="GraphQL Specicification" data-v-7dd28e96 data-v-7dd28e96>fully specified</a> syntax for
+describing how to request and retrieve from an HTTP API</li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://opensource.facebook.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>More open source projects by <em data-v-7dd28e96 data-v-7dd28e96>Facebook</em></a></li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>LinkedIn</strong> (Microsoft)</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Contributors to Ember.js</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Probably among the contributors to <a href="https://jsonapi.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>{JSON:API}</code></a></li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://engineering.linkedin.com/blog/topic/open-source" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>More open source projects by <em data-v-7dd28e96 data-v-7dd28e96>LinkedIn</em></a></li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Netflix</strong></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Contributors to Ember.js</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Probably among the contributors to <a href="https://jsonapi.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>{JSON:API}</code></a></li>
+<li data-v-7dd28e96 data-v-7dd28e96>Created <a href="https://netflix.github.io/falcor/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Falcor</strong></a> and seem to have
+switched to <a href="https://graphql.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>GraphQL</a> too
+(<a href="https://netflixtechblog.com/our-learnings-from-adopting-graphql-f099de39ae5f" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Our learnings from adopting GraphQL</a>)
+"(...) <em data-v-7dd28e96 data-v-7dd28e96>We also considered Falcor as a possible solution since it has
+delivered great results at Netflix in many core use cases and has a ton of
+usage, but a robust GraphQL ecosystem and powerful third party tooling made
+GraphQL the better option for our use case</em>"</li>
+<li data-v-7dd28e96 data-v-7dd28e96>See also
+<a href="https://blog.apollographql.com/graphql-vs-falcor-4f1e9cbf7504" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>GraphQL vs. Falcor</em></a></li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://netflix.github.io/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>More open source projects by <em data-v-7dd28e96 data-v-7dd28e96>Netflix</em></a></li>
+</ul>
+</li>
+</ul>
+<h2 id="requirements" data-v-7dd28e96 data-v-7dd28e96><a href="#requirements" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Requirements</h2>
+<h3 id="technical-requirements" data-v-7dd28e96 data-v-7dd28e96><a href="#technical-requirements" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Technical requirements</h3>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Describe UI components (a list of inputs, with how to validate, and what data
+to use)</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Describe what View to show for a given UI (User-Agent) Router</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Describe how to get data and how to walk through it to get a result</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Ability progressively roll-out code feature based on what's configured for a
+given deployment (or client), and what's currently available</li>
+</ul>
+<h3 id="quality-indicators" data-v-7dd28e96 data-v-7dd28e96><a href="#quality-indicators" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Quality indicators</h3>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Has unit-tests and a community for all layers: UI Components, Data Abstraction
+Layer, Data Access Layer, etc.</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Is actively maintained</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Has documentation and tutorials available that covers our usage-scenarios</li>
+<li data-v-7dd28e96 data-v-7dd28e96>We can write isomorphic code (i.e. write code once, and can be run with same
+result from both Client and Server-Side)</li>
+<li data-v-7dd28e96 data-v-7dd28e96>We can toggle off expensive parts of application and the UI follows</li>
+</ul>
+<h3 id="objectives" data-v-7dd28e96 data-v-7dd28e96><a href="#objectives" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Objectives</h3>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Maintaining a Web Application with Domain Specific data, we're not an Open
+Source project maintenance team (i.e. use what's there, not write our own.)</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Write a piece of logic once, favorize code re-use</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Write piece of code with testing in isolation easily accessible beside the
+code</li>
+<li data-v-7dd28e96 data-v-7dd28e96>We can consistently render UI, without too much boilerplate code and LEAST
+possible vectors where to do the same thing differently</li>
+</ul>
+<h2 id="isomorphism" data-v-7dd28e96 data-v-7dd28e96><a href="#isomorphism" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Isomorphism?</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>How do you tell if what's picked actually <em data-v-7dd28e96 data-v-7dd28e96>is</em> "isomorphic".</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Nuxt.js</em> (and React’s <em data-v-7dd28e96 data-v-7dd28e96>Next.js</em>) allows telling in an accessible way what UI
+to show for an URL, and that if we do a "full page reload", the HTML sent to
+the Web Browser is fully rendered, yet if we change page, only what's changed
+gets updated</li>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Axios</em> (or another HTTP Client) allows us to tell <code data-v-7dd28e96 data-v-7dd28e96>GET /foo/bar</code> and
+regardless of where the code is run (Client or Server-Side), configuration
+variations will already be taken into account</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Koa supports modern JavaScript as run time (including asynchronous code), its
+newer code-base simplify importing our "modern code" -- less boilerplate and
+tweaks and will look the same as how we'll use in Nuxt/Vue code</li>
+</ul>
+<h2 id="but-why-cant-we-use-a-backend-to-generate-ui" data-v-7dd28e96 data-v-7dd28e96><a href="#but-why-cant-we-use-a-backend-to-generate-ui" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>But Why can't we use a Backend to Generate UI?</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Because, in the end, once we’ve received the initial HTML payload, any actions
+will be needed to be made visible in the UI.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Those changes to be visible will inevitably be written using JavaScript.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Solving the problem of affecting UI in a Web Browser is still a very active
+subject, and there are many ideologies.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>A trend seem to be clear, having a backend language write HTML strings and
+whisfully stick jQuery scripts together is no longer viable.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>It is now frowned upon, because it makes it hard to maintain.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>If you re-consider, modern JavaScript with React,Vue.js,Angular,Svelte is an
+iteration after what’s been known as (in no particular order):</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="/site/glossary/progressive-enhancement" data-v-7dd28e96><em data-v-7dd28e96>Progressive Enhancement</em></a> and/or
+<em data-v-7dd28e96 data-v-7dd28e96>Graceful Degradation</em></li>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Object-Oriented CSS</em></li>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Mobile Design</em></li>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Responsive Design</em></li>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Reactive Programming</em></li>
+<li data-v-7dd28e96 data-v-7dd28e96><em data-v-7dd28e96 data-v-7dd28e96>Progressive Web Applications</em></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Continuing on what's been elaborated earlier in this document;</p>
+<p data-v-7dd28e96 data-v-7dd28e96>We can.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>After-all, an HTML form, when we click "submit" button, WILL ALWAYS work.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Showing images, link, and so on are natively supported since the beginning of
+the Web.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>There is a thing we call
+<a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>"JavaScript fatigue"</a>
+(<a href="https://dev.to/winduptoy/a-javascript-free-frontend-2d3e%5D" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>[2]</a>)</p>
+<p data-v-7dd28e96 data-v-7dd28e96>But nowadays, the argumentary is typically about how it becomes quickly
+cluttered.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Which is very different than back in 2015 (before ECMAScript 5), when JavaScript
+ecosystem was too brittle.</p></div> <div class="clearfix" data-v-7dd28e96></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-4d2003f9 data-v-7dd28e96><div class="text-left" data-v-4d2003f9><a href="/site/blog/2015/11/recover-discourse-backup-change-domain-name" lang="en-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Recover Discourse from a backup, adjust domain name
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/site/blog/2020/02/harmonizing-how-to-bundle-and-package-features" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Harmonizing how to bundle and package JavaScript/ECMAScript features
+    </a></div></div></div></div></div></div></div></div></section></div></div></main> <div class="app-footer--component disposition-parent w-full bottom" data-v-705c3a15><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-705c3a15><dl class="contact items-item disposition-item" data-v-705c3a15><dt class="mb-4 font-serif text-2xl" data-v-705c3a15>Contact</dt> <dd data-v-705c3a15>Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional</dd> <dd class="underline" data-v-705c3a15><a href="mailto:contribs@renoirboulanger.com" data-v-705c3a15>contribs@renoirboulanger.com</a></dd> <dd class="font-mono" data-v-705c3a15>v1.0.0</dd> <span class="inline-flex" data-v-705c3a15><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-705c3a15><dl lang="fr-CA" class="see-also" data-v-705c3a15><dt data-v-705c3a15>Voir aussi…</dt> <dd data-v-705c3a15><a href="/site/ligne-editoriale" data-v-705c3a15> Ligne éditoriale </a></dd> <dd data-v-705c3a15><a href="/site/projets" data-v-705c3a15> Projets </a></dd> <dd data-v-705c3a15><a href="/site/glossary" data-v-705c3a15> Glossary </a></dd> <dd data-v-705c3a15><a href="/site/code-review" data-v-705c3a15> Code-Review notes </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1613178405/blog/2019/11/why-should-we-not-use-a-backend-stack-to-maintain-web-application-ui-state/state.js"></script><script src="/site/_nuxt/runtime.js" defer></script><script src="/site/_nuxt/pages/blog.js" defer></script><script src="/site/_nuxt/pages/blog/_year.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/site/_nuxt/commons/app.js" defer></script><script src="/site/_nuxt/vendors/app.js" defer></script><script src="/site/_nuxt/app.js" defer></script>
+  </body>
+</html>
