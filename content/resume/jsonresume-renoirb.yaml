@@ -53,6 +53,40 @@ basics:
       deployment systems
 
 work:
+  - name: &name LogMeIn Inc.
+    company: *name
+    position: Staff Software Developer
+    location: Montréal, QC, Canada
+    remote: true
+    contract: false
+    startDate: '2021-01-11'
+    url: &url https://www.logmein.com/
+    website: *url
+    description:
+      Powered by category-defining products like GoTo, LastPass, Rescue, Central
+      and more, LogMeIn has become one of the world’s largest SaaS companies
+      with tens of millions of active users, more than 3,500 global employees,
+      over $1.3 billion in annual revenue and approximately 2 million customers
+      in over 190 countries. Today, LogMeIn is the trusted partner for companies
+      of all sizes to connect, collaborate, secure their workforces, and support
+      employees and customers.
+    summary:
+      My position is as "*Staff Software Developer*" where I help other software
+      developers with my experience with Web Standards, Accessibility and how to
+      maintain and bundle FrontEnd code to optimize re-usability and
+      reliability. I am contributing to the architecture of GoTo next generation
+      micro-frontend "Application Shell" from which other experiences (e.g.
+      meeting scheduling) runs in. The code I work with is with microsoft/fast,
+      lit-html, React and TypeScript.
+    technologies:
+      - Node.js
+      - TypeScript
+      - JavaScript
+      - HTML/CSS
+      - Jest
+      - lit-html
+      - microsoft/fast
+
   - name: &name RBC Royal Bank of Canada Inc.
     company: *name
     position: Senior Full Stack Developer
