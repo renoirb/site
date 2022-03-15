@@ -1,9 +1,9 @@
 ---
 meta:
   theme: elegant
-  lastModified: 2020-09-02T17:39:60
+  lastModified: 2022-03-14T21:39:60
   canonical: http://registry.jsonresume.org/renoirb
-  alternate: https//renoirb.com/resume/detailed
+  alternate: https//renoirb.github.io/site/resume
   source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
   _source: https://github.com/renoirb/site/blob/2020/content/resume/jsonresume-renoirb.yaml
 
@@ -37,9 +37,6 @@ basics:
     - network: GitLab
       username: renoirb
       url: https://gitlab.com/renoirb
-    - network: Sourcerer
-      username: renoirb
-      url: https://sourcerer.io/renoirb
   highlights:
     - Polyglot programmer; JavaScript, PHP, TypeScript, Salt Stack, GNU Make,
       Python, Go, Ruby, Vagrant, Puppet
@@ -53,22 +50,22 @@ basics:
       deployment systems
 
 work:
-  - name: &name LogMeIn Inc.
+  - name: &name GoTo Inc.
     company: *name
     position: Staff Software Developer
     location: Montréal, QC, Canada
     remote: true
     contract: false
     startDate: '2021-01-11'
-    url: &url https://www.logmein.com/
+    url: &url https://www.GoTo.com/
     website: *url
     description:
-      Powered by category-defining products like GoTo, LastPass, Rescue, Central
-      and more, LogMeIn has become one of the world’s largest SaaS companies
-      with tens of millions of active users, more than 3,500 global employees,
-      over $1.3 billion in annual revenue and approximately 2 million customers
-      in over 190 countries. Today, LogMeIn is the trusted partner for companies
-      of all sizes to connect, collaborate, secure their workforces, and support
+      Powered by category-defining products like GoTo Connect, GoTo Connect,
+      GoTo Meeting, GoTo Webinar, GoTo Resolve, LastPass, Rescue, and more. With
+      tens of millions of active users, more than 3,500 global employees, over
+      $1.3 billion in annual revenue and approximately 2 million customers in
+      over 190 countries. Today, GoTo is the trusted partner for companies of
+      all sizes to connect, collaborate, secure their workforces, and support
       employees and customers.
     summary:
       My position is as "*Staff Software Developer*" where I help other software
@@ -76,16 +73,29 @@ work:
       maintain and bundle FrontEnd code to optimize re-usability and
       reliability. I am contributing to the architecture of GoTo next generation
       micro-frontend "Application Shell" from which other experiences (e.g.
-      meeting scheduling) runs in. The code I work with is with microsoft/fast,
-      lit-html, React and TypeScript.
+      meeting, contacts management, etc) runs in. The code I work with is with
+      microsoft/fast, lit-html, React and TypeScript.
+    highlights:
+      - Screen reader now reads the application interface using the proper
+        language
+      - Given training to leverage CustomEvents and leverage them as a way of
+        communicating application state changes and allow us to decouple from
+        rest of application
+      - Experimentation with more recent lit-html versions leveraging
+        WebComponents Community Group "Context API" to allow decoupling UI
+        changes from the web framework
+    contributions:
+      - name: lit-labs/context Web Components "Context API" Protocol
+        url: https://github.com/lit/lit/pull/2012
     technologies:
       - Node.js
       - TypeScript
       - JavaScript
       - HTML/CSS
+      - Accessibility
       - Jest
       - lit-html
-      - microsoft/fast
+      - CodeceptJS
 
   - name: &name RBC Royal Bank of Canada Inc.
     company: *name
@@ -239,7 +249,7 @@ work:
   - name: &name 6973051 Canada Inc.
     client: &client Colloquial / Betastream
     company: *client
-    position: Delivery Engineering Architect (remote)
+    position: Systems Delivery Blueprinting Specialist (remote)
     remote: true
     contract: true
     url: &url http://colloquial.com/
@@ -299,7 +309,7 @@ work:
   - name: &name 6973051 Canada Inc.
     client: &client CAE
     company: *client
-    position: Delivery Engineering Architect
+    position: Systems Delivery Blueprinting Specialist
     location: Montréal, QC, Canada
     remote: false
     contract: true
