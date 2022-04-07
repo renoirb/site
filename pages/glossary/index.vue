@@ -5,6 +5,7 @@
         <ul>
           <li v-for="item in contents" :key="item.slug">
             <NuxtLink :to="`/${urlParam}/${item.slug}`">
+              <AppContentDate :content="item" />
               {{ item.title }}
             </NuxtLink>
           </li>
@@ -16,7 +17,7 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentIndexResult } from '~/lib'
+  import type { INuxtContentIndexResult } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
     title: string
@@ -37,7 +38,7 @@
       try {
         contents = await $content(dataModelName)
           .sortBy('title', 'desc')
-          .only(['locale', 'path', 'slug', 'title'])
+          .only(['createdAt', 'date', 'locale', 'path', 'slug', 'title'])
           .fetch()
       } catch (_) {
         // ..

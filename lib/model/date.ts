@@ -1,13 +1,11 @@
 import { Temporal } from '@js-temporal/polyfill'
+import { FALLBACK_LOCALE, FALLBACK_CALENDAR_NAME } from '../consts'
 import { extractYearFromDateString } from './content'
-
-export const FALLBACK_CALENDAR_NAME = 'gregory' as const
-export const FALLBACK_TIME_ZONE_NAME = 'America/New_York' as const
 
 const CALENDAR = [
   'buddhist',
   'chinese',
-  FALLBACK_CALENDAR_NAME,
+  'gregory' /* FALLBACK_CALENDAR_NAME */,
   'hebrew',
   'indian',
   'islamic',
@@ -47,10 +45,35 @@ export const ensureValidCalendar = (calendarName: string): ICalendarName => {
   return isValid ? calendarName : FALLBACK_CALENDAR_NAME
 }
 
+export interface ITemporalFormat {
+  locale?: string
+  tz?: string
+  format: Intl.DateTimeFormatOptions
+}
+
+export const formatTemporal = (
+  temporal: Temporal.PlainDate,
+  options: ITemporalFormat,
+): string => {
+  let out = ''
+  const { format, locale = FALLBACK_LOCALE } = options
+  const localeStringOptions: Intl.DateTimeFormatOptions = {
+    calendar: FALLBACK_CALENDAR_NAME,
+    ...(format ?? {}),
+  }
+  try {
+    const formatted = temporal.toLocaleString(locale, localeStringOptions)
+    out = formatted
+  } catch {
+    // Nothing to do
+  }
+  return out
+}
+
 export const getPrettyfiedTemporalDate = (
   content: Record<'date' | 'createdAt' | 'updatedAt', string>,
   locale = 'fr-CA',
-  calendar = 'gregory',
+  format?: Intl.DateTimeFormatOptions,
 ): IPrettyfiedTemporalDate => {
   /**
    * Field is a date string.
@@ -65,13 +88,14 @@ export const getPrettyfiedTemporalDate = (
   if (field !== 0) {
     const temporalDate: Temporal.PlainDate = Temporal.PlainDate.from(field)
 
-    const userPreferedCalendar = ensureValidCalendar(calendar)
+    const userPreferedCalendar = ensureValidCalendar(FALLBACK_CALENDAR_NAME)
     const localeStringOptions: Intl.DateTimeFormatOptions = {
       calendar: userPreferedCalendar,
       weekday: 'long',
       day: 'numeric',
       year: 'numeric',
       month: 'long',
+      ...(format ?? {}),
       // numberingSystem: 'latn' /* default */,
       // timeZone: FALLBACK_TIME_ZONE_NAME,
     }

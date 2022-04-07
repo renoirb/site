@@ -1,5 +1,7 @@
 ---
 title: HTTP Caching basics
+date: &createdAt '2022-04-06T20:55:06-04:00'
+createdAt: *createdAt
 tags:
   - ECMAScript
   - JavaScript

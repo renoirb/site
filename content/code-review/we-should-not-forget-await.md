@@ -1,5 +1,7 @@
 ---
 title: We should not forget await
+date: &createdAt '2021-01-27T20:15:04-04:00'
+createdAt: *createdAt
 tags:
   - ECMAScript
   - JavaScript

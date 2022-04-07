@@ -63,10 +63,11 @@ export const isNuxtContentResult = (
   let outcome = false
   const hasTitle =
     Reflect.has(maybe, 'title') && typeof maybe.title === 'string'
-  const hasLocale =
-    Reflect.has(maybe, 'locale') && typeof maybe.locale === 'string'
-  const hasTags = Reflect.has(maybe, 'tags') && Array.isArray(maybe.tags)
-  if (maybe && hasTitle && hasLocale && hasTags) {
+  const hasSlug = Reflect.has(maybe, 'slug') && typeof maybe.slug === 'string'
+  /**
+   * @TODO This should be checking more accurately
+   */
+  if (maybe && hasTitle && hasSlug) {
     outcome = true
   }
   return outcome

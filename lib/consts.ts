@@ -35,17 +35,21 @@ xjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=
  */
 export const PUBLIC_BASE_URL = 'https://renoirb.com'
 
-export const FALLBACK_LOCALE = 'en-CA'
+export const FALLBACK_LOCALE = 'en-CA' as const
 
 export const FALLBACK_LANG_CODE = FALLBACK_LOCALE.split('-')[0]
 
 export const FALLBACK_TODAY_DATE = new Date().toISOString()
 
+export const FALLBACK_CALENDAR_NAME = 'gregory' as const
+
+export const FALLBACK_TIME_ZONE_NAME = 'America/New_York' as const
+
 /**
  * When is something published before might be considered
  * out of date?
  */
-export const YEAR_CONSIDERED_OLD = 2017
+export const YEAR_CONSIDERED_OLD = 2017 as const
 
 export const PRODUCTION_BASE_PATH = '/site'
 

@@ -1,5 +1,7 @@
 ---
 title: Using read-only array of strings as source for type
+date: &createdAt '2021-01-27T20:15:04-04:00'
+createdAt: *createdAt
 tags:
   - ECMAScript
   - JavaScript
