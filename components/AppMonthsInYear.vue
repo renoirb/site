@@ -24,34 +24,35 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, ref } from '@nuxtjs/composition-api'
+  import Vue, { PropOptions } from 'vue'
   import { getMonthNames, IMonthNames, isValidYear } from '~/lib'
   export interface Props {
     year: string
     currentMonth: string
   }
+  export interface Methods {}
+  export interface Computed {}
   export interface Data {
     months: IMonthNames
   }
-  export interface Computed {}
-  export default defineComponent<Props, Data, Computed>({
+  export default Vue.extend<Data, Methods, Computed, Props>({
     props: {
       year: {
         type: String,
         default: () => String(new Date().getFullYear()),
-        validate: isValidYear,
-      },
+        validate: (year: string): boolean => isValidYear(year),
+      } as PropOptions<string>,
       currentMonth: {
         type: String,
         default: '01',
       },
     },
-    setup() {
-      const locale = ref('fr-CA')
-      const months = getMonthNames(locale.value)
+    data() {
+      const locale = 'fr-CA'
+      const months = getMonthNames(locale)
       return {
-        months,
         locale,
+        months: [...months],
       }
     },
   })

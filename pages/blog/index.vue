@@ -34,14 +34,8 @@
     async asyncData({ $content, route }) {
       let contents: INuxtContentResult[] = []
       contents = await queryNuxtContent($content, route)
-
       return {
         contents,
-      }
-    },
-    data() {
-      return {
-        contents: [] as INuxtContentResult[],
         pageTitle: 'Blog',
       }
     },
@@ -69,7 +63,8 @@
     },
     async beforeMount() {
       const contents = await queryNuxtContent(this.$content, this.$route)
-      this.contents = contents
+      // This is wrong. Improve. Plz
+      this.contents = [...contents]
     },
   })
 </script>

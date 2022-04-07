@@ -1,22 +1,32 @@
-import { Temporal } from 'proposal-temporal'
+import { Temporal } from '@js-temporal/polyfill'
 import { extractYearFromDateString } from './content'
 
-export const CALENDAR = [
+export const FALLBACK_CALENDAR_NAME = 'gregory' as const
+export const FALLBACK_TIME_ZONE_NAME = 'America/New_York' as const
+
+const CALENDAR = [
   'buddhist',
   'chinese',
-  'gregory',
+  FALLBACK_CALENDAR_NAME,
   'hebrew',
   'indian',
   'islamic',
   'iso8601',
   'japanese',
-]
+] as const
 
 export type ICalendarName = typeof CALENDAR[number]
 
-export const CALENDAR_NAMES = new Set(CALENDAR)
+export interface IPrettyfiedTemporalDate {
+  prettified?: string
+  temporalDate: Temporal.PlainDate | ''
+}
 
-export const CALENDAR_NAME_FALLBACK = 'gregory'
+export type ITransformTemporalDate = Partial<
+  Record<'year' | 'month' | 'day', string | number>
+>
+
+export const CALENDAR_NAMES: ReadonlySet<ICalendarName> = new Set([...CALENDAR])
 
 export const isValidCalendar = (input: string): input is ICalendarName => {
   return CALENDAR_NAMES.has(input as any)
@@ -34,58 +44,51 @@ export const assertsValidCalendar = (
 
 export const ensureValidCalendar = (calendarName: string): ICalendarName => {
   const isValid = isValidCalendar(calendarName)
-  return isValid ? calendarName : CALENDAR_NAME_FALLBACK
-}
-
-export interface IPrettyfiedTemporalDate {
-  prettified?: string
-  temporalDate: Temporal.Date | null
+  return isValid ? calendarName : FALLBACK_CALENDAR_NAME
 }
 
 export const getPrettyfiedTemporalDate = (
-  content: Record<'date' | 'createdAt', string>,
+  content: Record<'date' | 'createdAt' | 'updatedAt', string>,
   locale = 'fr-CA',
   calendar = 'gregory',
 ): IPrettyfiedTemporalDate => {
-  const userPreferedCalendar = ensureValidCalendar(calendar)
+  /**
+   * Field is a date string.
+   *
+   * For now, just make sure contents is in the same format '2008-04-19T16:07:45-04:00'
+   * and never in '2008-04-19T16:07:45.847Z'
+   *
+   * @TODO #23 It MUST be a string that has no Z in its notation.
+   */
+  const field = content?.date ?? content?.createdAt ?? content?.updatedAt ?? 0
 
-  let temporalDate: Temporal.Date | '' = ''
-  let prettified: string | '' = ''
+  if (field !== 0) {
+    const temporalDate: Temporal.PlainDate = Temporal.PlainDate.from(field)
 
-  const { date = '', createdAt = '' } = content
+    const userPreferedCalendar = ensureValidCalendar(calendar)
+    const localeStringOptions: Intl.DateTimeFormatOptions = {
+      calendar: userPreferedCalendar,
+      weekday: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      month: 'long',
+      // numberingSystem: 'latn' /* default */,
+      // timeZone: FALLBACK_TIME_ZONE_NAME,
+    }
 
-  if (temporalDate !== '') {
-    temporalDate = Temporal.Date.from(date)
-  }
-  if (temporalDate === '' && createdAt !== '') {
-    temporalDate = Temporal.Date.from(date)
-  }
-  if (temporalDate === '') {
-    const message = `Something went wrong`
-    throw new Error(message)
-  }
+    const prettified: IPrettyfiedTemporalDate['prettified'] = temporalDate.toLocaleString(
+      locale,
+      localeStringOptions,
+    )
 
-  const localeStringOptions: Intl.ResolvedDateTimeFormatOptions = {
-    calendar: userPreferedCalendar,
-    weekday: 'long',
-    day: 'numeric',
-    year: 'numeric',
-    month: 'long',
-    locale,
-    numberingSystem: 'latn' /* default */,
-    timeZone: 'America/New_York' /* default */,
+    return {
+      prettified,
+      temporalDate,
+    }
   }
-  prettified = temporalDate.toLocaleString(locale, localeStringOptions)
-
-  return {
-    prettified,
-    temporalDate,
-  }
+  const message = `Something went wrong`
+  throw new Error(message)
 }
-
-export type ITransformTemporalDate = Partial<
-  Record<'year' | 'month' | 'day', string | number>
->
 
 export const transformToPrettyfiedTemporalDate = (
   input: ITransformTemporalDate = {} as ITransformTemporalDate,
@@ -94,11 +97,11 @@ export const transformToPrettyfiedTemporalDate = (
 ): IPrettyfiedTemporalDate => {
   const { year, month = '01', day = '01' } = input
 
-  let temporalDate: Temporal.Date | null = null
-  let prettified: string | undefined
+  let temporalDate: Temporal.PlainDate | '' = ''
+  let prettified: string = ''
   try {
-    const attempt = Temporal.Date.from(`${year}-${month}-${day}`)
-    temporalDate = attempt as Temporal.Date
+    const attempt = Temporal.PlainDate.from(`${year}-${month}-${day}`)
+    temporalDate = attempt.toPlainDateTime().toPlainDate()
     if (locale && dtfo) {
       const formatOptions: Intl.DateTimeFormatOptions = {
         year: 'numeric',
@@ -123,8 +126,8 @@ export const isValidYear = (year: string): boolean => {
   try {
     const attempt = extractYearFromDateString(`${year}-01-01`)
     out = typeof attempt === 'number'
-  } catch (e) {
-    // ...
+  } catch {
+    out = false
   }
   return out
 }
@@ -144,18 +147,20 @@ export const getMonthNames: IMonthNamesFn = (
   options?: Intl.DateTimeFormatOptions,
 ) => {
   const out: [string, string][] = []
+
+  const cal = Temporal.Calendar.from(FALLBACK_CALENDAR_NAME)
+  const plainDate = Temporal.Now.plainDate(cal)
+  const temporalDate = cal.dateFromFields({
+    year: plainDate.year,
+    month: plainDate.month,
+    day: plainDate.day,
+  })
   const formatOptions: Intl.DateTimeFormatOptions = {
     month: 'long',
     ...(options || {}),
   }
-
-  const temporalDate = Temporal.now.date()
-  // @ts-ignore — check if this is really there or not
-  const { monthsInYear = 12 } = temporalDate
-  const { year } = temporalDate.getFields()
-
-  for (let month = 1; month <= monthsInYear; month++) {
-    const thisMonth = temporalDate.with({ year, month })
+  for (let month = 1; month <= temporalDate.monthsInYear ?? 12; month++) {
+    const thisMonth = temporalDate.with({ year: temporalDate.year, month })
     const formatted = thisMonth.toLocaleString(locale, formatOptions)
     out.push([String(month).padStart(2, '0'), formatted])
   }

@@ -2,7 +2,7 @@
 locale: fr-CA
 published: true
 title: Installer VMWare sur Ubuntu server avec le repositoire de Canonical 2/5
-date: &createdAt 2006-12-22 18:11:03.000000000 +00:00
+date: &createdAt '2006-12-25T15:05:23-04:00'
 createdAt: *createdAt
 ---
 

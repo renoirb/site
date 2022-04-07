@@ -1,7 +1,7 @@
 ---
 locale: en-CA
 title: Porting all my content into a static-site
-date: &createdAt 2020-09-10
+date: &createdAt '2020-09-10T18:31:31-04:00'
 createdAt: *createdAt
 tags:
   - vuejs
