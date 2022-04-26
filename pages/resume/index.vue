@@ -9,6 +9,26 @@
           <a :href="source"> Document source </a>
         </app-alert-box>
         <div class="nuxt-content">
+          <h2>Other versions</h2>
+          <ul class="list-none list-inside">
+            <li>
+              <a
+                href="https://renoirb.com/files/Resume-Renoir-Boulanger-20200830.pdf"
+                title="Renoir Boulanger Resume in Adobe Acrobat Format"
+              >
+                PDF
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://renoirb.com/files/Resume-Renoir-Boulanger-20200830.doc"
+                title="Renoir Boulanger Resume in Microsoft Word Format"
+              >
+                Word
+              </a>
+            </li>
+          </ul>
+          <h2>As code</h2>
           <code-group>
             <code-block label="YAML" active>
               <app-code-highlighter language="yaml" :code="asYaml" />

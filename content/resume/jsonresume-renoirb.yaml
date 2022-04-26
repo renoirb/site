@@ -17,13 +17,12 @@ basics:
   website: *url
   summary:
     Experienced full-stack developer, I have a broad and deep understanding of
-    the Open Web stack, Front-end and Server Techniques to build, deploy and
+    the Open Web stack, Frontend and Server Techniques to build, deploy and
     maintain Web sites that scale.
   location:
     city: Montréal
     region: Quebec
     countryCode: CA
-    postalCode: H4P 2G9
   profiles:
     - network: LinkedIn
       username: renoirb
@@ -38,8 +37,10 @@ basics:
       username: renoirb
       url: https://gitlab.com/renoirb
   highlights:
-    - Polyglot programmer; JavaScript, PHP, TypeScript, Salt Stack, GNU Make,
-      Python, Go, Ruby, Vagrant, Puppet
+    - Polyglot programmer; TypeScript, ECMAScript, JavaScript, PHP, C#, GNU
+      Make, Python
+    - Experience in Infrastructure As Code with Salt Stack, Vagrant, Ansible,
+      Puppet, Bash
     - Contributor to open-source projects such as Nuxt.js, Alpine Linux,
       MediaWiki (i.e. Wikipedia.com) and Mozilla Firefox Accounts (i.e.
       Firefox’s profile sign-in system)
@@ -70,14 +71,18 @@ work:
     summary:
       My position is as "*Staff Software Developer*" where I help other software
       developers with my experience with Web Standards, Accessibility and how to
-      maintain and bundle FrontEnd code to optimize re-usability and
+      maintain and bundle Frontend code to optimize re-usability and
       reliability. I am contributing to the architecture of GoTo next generation
       micro-frontend "Application Shell" from which other experiences (e.g.
       meeting, contacts management, etc) runs in. The code I work with is with
       microsoft/fast, lit-html, React and TypeScript.
     highlights:
-      - Screen reader now reads the application interface using the proper
-        language
+      - Help other software developers with my experience with Web Standards,
+        Accessibility and how to maintain and bundle Frontend code to optimize
+        re-usability and reliability
+      - Contribute to the architecture of GoTo next generation micro-frontend
+        "Application Shell" from which other experiences (e.g. meeting, contacts
+        management, etc) runs in.
       - Given training to leverage CustomEvents and leverage them as a way of
         communicating application state changes and allow us to decouple from
         rest of application
@@ -90,11 +95,12 @@ work:
     technologies:
       - Node.js
       - TypeScript
-      - JavaScript
+      - ECMAScript
       - HTML/CSS
       - Accessibility
       - Jest
       - lit-html
+      - microsoft/fast
       - CodeceptJS
 
   - name: &name RBC Royal Bank of Canada Inc.
@@ -114,7 +120,7 @@ work:
       business, public sector and institutional clients through offices in
       Canada, the U.S. and 37 other countries.
     summary:
-      I was a Senior Full-Stack Front-End developer to the RBC Omni platform
+      I was a Senior Full-Stack Frontend developer to the RBC Omni platform
       (Online Business Banking). My daily tasks were about making implementation
       proposals driven by the requirements and agenda set by product owners and
       business analysists. My focus was mostly about building scalable and
@@ -122,11 +128,13 @@ work:
       the design system/platform team. The code I wrote waas targetted for
       Angular 8 with TypeScript 3.4.
     highlights:
+      - Make implementation proposals driven by the requirements and agenda set
+        by product owners and business analysists.
+      - Build scalable and re-usable modules by collaborating with other
+        production teams, including the design system/platform team.
       - Re-Implement and improve link manager to legacy application system. So
         that the HTML templates contains a "link id", and how it dynamically
         creates an hidden form and properly redirects to legacy HTML views.
-        Allowing to slim down many views that would also need hidden form that
-        were re-implemented numerous times.
       - Revise and make migration strategies for my Squad’s Angular monorepo to
         use Jest and ESLint 7 along with Prettier with automated LintStaged
         commit hooks.
@@ -136,8 +144,6 @@ work:
         template
       - Make module stubs for the Backend chapter to write Express.js middleware
         in isolation instead of from a monolith
-      - Teach how to write and publish small packages and how to publish on
-        Nexus
       - Written extensive onboarding documentation taking into account how to
         properly and automatically adjust developer tools at every password
         change. Avoiding popular "ignore this error" and rather use corporate
@@ -153,7 +159,7 @@ work:
 
   - name: &name CGI Inc.
     company: *name
-    position: Senior Technical Consultant (Lead Front-End)
+    position: Senior Technical Consultant (Lead Frontend)
     location: Montréal, QC, Canada
     remote: false
     contract: false
@@ -173,7 +179,7 @@ work:
       Operations - Software Development Team. My role is to analyze and
       contribute to the development of a Cloud Management Platform named
       Unify360 at the User Interface level (e.g. Web, Email, Dashboard…),
-      focussing on the aspects related to UI such as Internationalization (e.g.
+      focusing on the aspects related to UI such as Internationalization (e.g.
       translation), Localization (e.g. Date, Number formatting) from how to read
       data from services, to assembling view patterns. Unify360 is composed by
       many “micro-services” where each component has a specific tasks. For
@@ -182,7 +188,7 @@ work:
     highlights:
       - Lead the team that work and coach for writing code with tests, making
         self-contained and re-usable packages
-      - Implement prototype for a modern Unify360 Front-End using Vue.js,
+      - Implement prototype for a modern Unify360 Frontend using Vue.js,
         Nuxt.js, TypeScript, GraphQL, Koa.js and planned how to migrate all
         views into new platform effectively replacing code written in Perl and
         PHP 5.3, and also replacing HTML partial Microservice;
@@ -243,7 +249,7 @@ work:
       Software development, Simplification of Docker Compose multi-container
       build to be more automated and reliable build for each service and
       internal service modules, also worked on deployment scripts leveraging GNU
-      Make, Ansible, and Front-End Development with Vue.js and Yii 3 and Symfony
+      Make, Ansible, and Frontend Development with Vue.js and Yii 3 and Symfony
       2
 
   - name: &name 6973051 Canada Inc.
@@ -518,7 +524,7 @@ work:
       and Rogers Media.
     summary:
       As a Web Developer and Co-Founder, my role was to lead and architect all
-      Web Development work related to the FrontEnd stack. I would be in touch
+      Web Development work related to the Frontend stack. I would be in touch
       with Graphic Designers and Project Managers to create Valid HTML/CSS
       markup that reflects the designs, and to work on all Web Browsers of the
       moment. My work would take Adobe Photoshop and PDFs document and create
@@ -587,12 +593,12 @@ work:
       contributed to Inventory management application (Namminik) and a few other
       internal R&D experiments.
     highlights:
-      - Contributed to many projects as Front-End Developer
+      - Contributed to many projects as Frontend Developer
       - Participated in maintaining company internal network, testing DataPower
         blade, Virtualized servers on bare metal, and web hosting infrastructure
       - Built a monitoring service using the SNMP protocol, centralized syslog
         server, and configured a Nagios monitoring service (2009)
-      - Participated in making many Web applications as a Front-End developer
+      - Participated in making many Web applications as a Frontend developer
         including an inventory Web Application and a Continuous Delivery system
     technologies:
       - jQuery
@@ -656,9 +662,9 @@ work:
     summary:
       INEXIS Solution web Inc., was a one-man web development service provider
       firm I founded to serve graphic design agencies in the region of the
-      Eastern Townships. Services typically included creating HTML/CSS based on
-      Mock-ups made using Adobe Photoshop/Illustrator by graphic designers were
-      making, creating e-mail templates, and managing hosting services.
+      Eastern Townships. Services included managing own private Web hosting
+      infrastructure and building HTML/CSS pages based on PDF files provided by
+      graphic designers, creating e-mail templates.
     highlights: []
     technologies:
       - PHP
@@ -670,6 +676,15 @@ work:
       - Subversion
 
 education:
+  - institution: Université de Sherbrooke, CeFTI
+    area: Software Engineering
+    studyType: 2nd Cycle Program Diploma
+    startDate: '2021-01-01'
+    endDate: '2024-06-24'
+    courses:
+      - INF731 - Object-Oriented Programming in C#
+      - INF743 - Software Architecture
+      - INF747 - Designing and managing Enterprise Information Systems
   - institution: Udemy
     area: Web Development
     studyType: Online Training
@@ -817,23 +832,13 @@ publications:
       Presented at two conferences; «Montreal WebIn», and «Web à Québec» (WAQ)
 
 skills:
-  - name: Frameworks
+  - name: Programming
     keywords:
-      - Nuxt.js
-      - Vue.js
-      - Jest
-      - Element UI
-      - Rush.js
-      - Koa.js
-      - AVA
-      - Backbone.js
-      - Marionette.js
-      - Symfony
-      - Mocha
-      - Jasmine
-      - Babel
-      - Rollup
-      - Angular
+      - PHP
+      - C#
+      - VCL
+      - Bash
+      - Python
   - name: Web Development Languages
     level: Master
     keywords:
@@ -841,12 +846,34 @@ skills:
       - JavaScript
       - ECMAScript
       - HTML/CSS
-      - PHP
-  - name: Programming
+  - name: PHP Frameworks
     keywords:
-      - VCL
-      - Bash
-      - Python
+      - Symfony
+      - Slim
+      - Composer/Packagist
+  - name: Frontend Frameworks
+    keywords:
+      - Nuxt.js
+      - Vue.js
+      - Koa.js
+      - Element UI
+      - Backbone.js
+      - Marionette.js
+      - Angular
+  - name: Web Development Libraries
+    level: Master
+    keywords:
+      - Rollup
+      - Bili
+      - Rush.js
+  - name: Frontend Testing Frameworks
+    keywords:
+      - Jest
+      - CodeceptJS
+      - Playwright
+      - AVA
+      - Mocha
+      - Jasmine
   - name: Web Platform
     level: Master
     keywords:
@@ -864,7 +891,7 @@ skills:
       - Configuration Management
       - Service Monitoring
       - Self-Healing event handlers
-      - SaltStack
+      - Salt Stack
       - Node.js
       - ElasticSearch
       - Prometheus
@@ -895,4 +922,3 @@ interests:
     keywords:
       - StarTrek
       - Doctor Who
-      - Paralel Universes
