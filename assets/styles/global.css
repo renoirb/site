@@ -20,3 +20,8 @@ a[href^="https://web.archive.org/"]:after
 {
   content: ' (Web.Archive.org)';
 }
+
+a:not([href^="https://renoirb.github.io/"])[target="_blank"]:after
+{
+  content: ' ⧉';
+}

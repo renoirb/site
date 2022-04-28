@@ -13,7 +13,7 @@
           <ul class="list-none list-inside">
             <li>
               <a
-                href="https://renoirb.com/files/Resume-Renoir-Boulanger-20200830.pdf"
+                href="https://renoirb.github.io/site/files/resume/Resume-Renoir-Boulanger.pdf"
                 title="Renoir Boulanger Resume in Adobe Acrobat Format"
               >
                 PDF
@@ -21,10 +21,19 @@
             </li>
             <li>
               <a
-                href="https://renoirb.com/files/Resume-Renoir-Boulanger-20200830.doc"
+                href="https://renoirb.github.io/site/files/resume/Resume-Renoir-Boulanger.doc"
                 title="Renoir Boulanger Resume in Microsoft Word Format"
               >
                 Word
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://registry.jsonresume.org/renoirb"
+                title="Renoir Boulanger Resume in HTML"
+                target="_blank"
+              >
+                HTML hosted on JSONResume public registry
               </a>
             </li>
           </ul>
