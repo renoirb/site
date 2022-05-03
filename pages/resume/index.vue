@@ -6,7 +6,7 @@
       </div>
       <div class="body">
         <app-alert-box :message="noteAboutSource" class="my-5">
-          <a :href="source"> Document source </a>
+          <a :href="source" target="_blank">Document source</a>
         </app-alert-box>
         <div class="nuxt-content">
           <h2>Other versions</h2>
