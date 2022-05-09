@@ -69,39 +69,42 @@ work:
       all sizes to connect, collaborate, secure their workforces, and support
       employees and customers.
     summary:
-      My position is as "*Staff Software Developer*" where I help other software
-      developers with my experience with Web Standards, Accessibility and how to
-      maintain and bundle Frontend code to optimize re-usability and
-      reliability. I am contributing to the architecture of GoTo next generation
-      micro-frontend "Application Shell" from which other experiences (e.g.
-      meeting, contacts management, etc) runs in. The code I work with is with
-      microsoft/fast, lit-html, React and TypeScript.
+      As a “Staff Software Developer”, my role was to share contribute to my
+      team and share what I’ve learned along the way. The Frontend team is
+      following principles referred to as “Micro Frontends” where each team is
+      independent in building their application vertical. For example, one team
+      would be responsible maintaining an Address book application. In a “Micro
+      Frontend,” we can have each team implement the business logic of their
+      vertical, and rely on what will assemble their part with shared systems.
+      The Shared system is what we call an “Application Shell,” in which we
+      expose utilities to make API calls with the current session. The Shell is
+      also responsible for loading parts of each “micro frontend” vertical based
+      on events and routes. I was part of the team responsible for maintaining
+      the Shell.
     highlights:
       - Help other software developers with my experience with Web Standards,
         Accessibility and how to maintain and bundle Frontend code to optimize
-        re-usability and reliability
+        re-usability and reliability.
       - Contribute to the architecture of GoTo next generation micro-frontend
         "Application Shell" from which other experiences (e.g. meeting, contacts
         management, etc) runs in.
-      - Given training to leverage CustomEvents and leverage them as a way of
-        communicating application state changes and allow us to decouple from
-        rest of application
-      - Experimentation with more recent lit-html versions leveraging
-        WebComponents Community Group "Context API" to allow decoupling UI
-        changes from the web framework
+      - Built and demonstrated how to organize packages in smaller units
+        maintained with their own test suites for usage between different
+        applications
     contributions:
       - name: lit-labs/context Web Components "Context API" Protocol
         url: https://github.com/lit/lit/pull/2012
     technologies:
-      - Node.js
-      - TypeScript
+      - Accessibility
+      - CodeceptJS
       - ECMAScript
       - HTML/CSS
-      - Accessibility
       - Jest
       - lit-html
       - microsoft/fast
-      - CodeceptJS
+      - Node.js
+      - Playwright
+      - TypeScript
 
   - name: &name RBC Royal Bank of Canada Inc.
     company: *name
@@ -120,18 +123,18 @@ work:
       business, public sector and institutional clients through offices in
       Canada, the U.S. and 37 other countries.
     summary:
-      I was a Senior Full-Stack Frontend developer to the RBC Omni platform
-      (Online Business Banking). My daily tasks were about making implementation
-      proposals driven by the requirements and agenda set by product owners and
-      business analysists. My focus was mostly about building scalable and
-      re-usable modules by collaborating with other production teams, including
-      the design system/platform team. The code I wrote waas targetted for
-      Angular 8 with TypeScript 3.4.
+      Senior Full-Stack Front-End developer to the RBC Omni platform (Online
+      Business Banking).
     highlights:
       - Make implementation proposals driven by the requirements and agenda set
-        by product owners and business analysists.
-      - Build scalable and re-usable modules by collaborating with other
+        by product owners and business analysts.
+      - Build scalable and reusable modules by collaborating with other
         production teams, including the design system/platform team.
+      - Rewritten new developer onboarding documentation and completely
+        automated how to properly setup the current password to be used properly
+        through Git and other scripting, including the Bank´s authoritative
+        self-signed certificate that would cause many headaches.
+    highlights.more:
       - Re-Implement and improve link manager to legacy application system. So
         that the HTML templates contains a "link id", and how it dynamically
         creates an hidden form and properly redirects to legacy HTML views.
@@ -149,13 +152,13 @@ work:
         change. Avoiding popular "ignore this error" and rather use corporate
         signed TLS certificate right
     technologies:
-      - Node.js
-      - TypeScript
       - Angular
-      - NX
-      - JavaScript
       - HTML/CSS
+      - JavaScript
       - Jest
+      - Node.js
+      - NX
+      - TypeScript
 
   - name: &name CGI Inc.
     company: *name
@@ -175,19 +178,25 @@ work:
       outsourcing, systems integration and consulting, and software solutions
       selling activities.
     summary:
-      At CGI, I worked as a Technical Lead as part of the Global Technology
-      Operations - Software Development Team. My role is to analyze and
-      contribute to the development of a Cloud Management Platform named
-      Unify360 at the User Interface level (e.g. Web, Email, Dashboard…),
-      focusing on the aspects related to UI such as Internationalization (e.g.
-      translation), Localization (e.g. Date, Number formatting) from how to read
-      data from services, to assembling view patterns. Unify360 is composed by
-      many “micro-services” where each component has a specific tasks. For
-      example; Authentication, Session validation, Forms, Rendering Views, etc.
-      Services can be written in Perl, PHP, .Net Core, ASP.Net/IIS, or Go.
+      Worked as a Technical Lead as part of the Global Technology Operations’
+      own product for Multi-Cloud Management Platform called “Unify360”. The
+      application is composed by many “micro-services” where each component has
+      a specific task. For example; Authentication, Session validation, Forms,
+      Rendering Views, etc. I was responsible and designed ways to describe
+      views as data, and systems to navigate data-heavy “micro-services” and
+      normalize so that everything comes back together. I leveraged principles
+      of “Micro Frontends” and “Atomic Design” and implemented a “Design System”
+      and the application’s specific to build visualization and of complex data
+      and reports. The application was deployed in the USA, Europe and Canada,
+      the Frontend were capable of properly displaying numbers and dates in all
+      calendars, Time-Zones, and number systems, and was in more than 10
+      languages.
     highlights:
+      - Experiment and document Frontend software development platform
+        technological choices
       - Lead the team that work and coach for writing code with tests, making
         self-contained and re-usable packages
+    highlights.more:
       - Implement prototype for a modern Unify360 Frontend using Vue.js,
         Nuxt.js, TypeScript, GraphQL, Koa.js and planned how to migrate all
         views into new platform effectively replacing code written in Perl and
@@ -198,27 +207,25 @@ work:
       - Design and implement an HTML partial Microservice with PHP 7.2, Slim
         framework, Mustache PECL extension for a new section of Unify360 portal;
     technologies:
-      - Node.js
-      - Library transpilation and bundling Babel/Rollup
-      - TypeScript
-      - Nuxt.js
-      - Vue.js
-      - Vagrant
-      - Koa.js
-      - JavaScript
-      - HTML/CSS
-      - Sonatype Nexus
-      - Mono repositories
-      - GitLab
       - Alpine Linux
-      - PHP 7.2
-      - Slim Framework
-      - GraphQL
       - AVA
-      - Jest
+      - Docker
       - Docker Swarm
-      - Go
+      - GitLab
+      - HTML/CSS
+      - JavaScript
+      - Jest
+      - Koa.js
+      - Node.js
+      - Nuxt.js
       - Perl
+      - PHP 7.2
+      - RushJS
+      - Slim Framework
+      - Sonatype Nexus
+      - TypeScript
+      - Vagrant
+      - Vue.js
     contributions:
       - name: egoist/bili
         url: https://github.com/egoist/bili/commits/master?author=renoirb
@@ -248,9 +255,17 @@ work:
     summary:
       Software development, Simplification of Docker Compose multi-container
       build to be more automated and reliable build for each service and
-      internal service modules, also worked on deployment scripts leveraging GNU
-      Make, Ansible, and Frontend Development with Vue.js and Yii 3 and Symfony
-      2
+      internal services.
+    highlights:
+      - Overhaul of the Software development team’s workspace setup, which
+        allowed anyone to have exactly the same setup by invoking a few simple
+        commands. A fresh computer would be ready after 1h instead of taking
+        multiple days and asking around to other colleagues.
+    technologies:
+      - GNU Make
+      - Ansible
+      - Docker Compose
+      - Docker
 
   - name: &name 6973051 Canada Inc.
     client: &client Colloquial / Betastream
@@ -270,13 +285,16 @@ work:
       to be the “the intersection of advertising, publishing and public
       relations, with storytelling and creativity at its core.”
     summary:
-      At Colloquial, my role was to introduce and coach the team Continuous
-      Delivery and Code release, and deployment system. I was part of a
-      geographically distributed Web Development and IT team ("Betastream")
-      working on projects for Colloquial and other partner projects. My
-      responsibilities were to review, plan, and build a next-generation
-      infrastructure and deployment system for the project production pipeline.
+      My role was to introduce and coach the team Continuous Delivery and Code
+      release, and deployment system. I was part of a geographically distributed
+      Web Development and IT team (“Betastream”) working on projects for
+      Colloquial and other partner projects.
     highlights:
+      - Introduce and coach the team Continuous Delivery and Code release, and
+        deployment system.
+      - Plan, Review, and Build a next-generation infrastructure and deployment
+        system for the project production pipeline.
+    highlights.more:
       - Released a Cloud Orchestration solution using Salt Stack, running on
         Amazon AWS, Google Cloud Platform and Microsoft Azure, where we can
         manage automatically Web Applications, deployment levels, build steps
@@ -297,20 +315,20 @@ work:
         Vagrant workspace network (e.g. one Web Server VM, one Database server,
         one Varnish VM) to allow working on Varnish VCL caching scripts.
     technologies:
-      - SaltStack
-      - Vagrant
-      - GCP
-      - Azure
       - AWS
-      - EC2
-      - RDS
+      - Azure
       - CloudFlare
-      - Monit
+      - EC2
+      - GCP
       - Jenkins
+      - Monit
       - Python
-      - WordPress
-      - Varnish
+      - RDS
+      - SaltStack
       - SysDig
+      - Vagrant
+      - Varnish
+      - WordPress
 
   - name: &name 6973051 Canada Inc.
     client: &client CAE
@@ -331,38 +349,43 @@ work:
       with our innovative virtual-to-live training solutions to make flying
       safer.
     summary:
-      At CAE, my role was to introduce and coach the team Continuous Delivery
-      and Code release, and deployment system. I was working on-site as a
-      part-time contract and been asked to analyze and document for recommending
-      an Open-Source real-time monitoring solution. During that period, I
-      compared Prometheus, Heka, Ganglia, Grafana, ElasticSearch Kibana, and
-      other TimeSeries aggregation and visualization systems. The ideal system
-      had to take into account the air-tight networking policies which included
-      corporate TLS certificate, and deployment targets would often be
-      inaccessible to the Internet.
+      My role was to introduce and coach the team Continuous Delivery and Code
+      release, and deployment system. It was a part-time, on site contract to to
+      analyze, compare and document recommendations for an Open-Source real-time
+      monitoring solution.
     highlights:
+      - Introduce and coach the team Continuous Delivery and Code release, and
+        deployment system. Including techniques for preparing “playbooks”
+        packages for deployment within the airtight (securized) private network.
+      - Compared Prometheus, Heka, Ganglia, Grafana, Kibana, and other
+        TimeSeries aggregation and visualization systems. The ideal system had
+        to take into account the airtight networking policies which included
+        corporate TLS certificate, and deployment targets would often be
+        inaccessible to the Internet.
+    highlights.more:
       - Introduced a method to maintain network of Virtual Machines with
         HashiCorp Vagrant leveraging VirtualBox private networking
       - Created a "poor man" configuration management using Bash 4 as a way to
         avoid using text files.
     technologies:
-      - Monit
-      - Vagrant
-      - Prometheus
-      - Ganglia
-      - LibreSSL
-      - ElasticSearch Kibana
       - Beats
-      - LogStash
-      - Python
+      - ElasticSearch Kibana
+      - Ganglia
       - Grafana
-      - Mozilla Heka
+      - Heka
       - InfluxDB Telegraf
+      - LibreSSL
+      - LogStash
+      - Monit
+      - Mozilla Heka
+      - Prometheus
+      - Bash
+      - Vagrant
 
   - name: &name 6973051 Canada Inc.
     client: &client Mozilla
     company: *client
-    position: Subject Matter Expert Compatibility Data Project (remote)
+    position: Subject Matter Expert Compatibility Data Project
     remote: true
     contract: true
     url: &url https://developer.mozilla.org
@@ -378,14 +401,15 @@ work:
       Mozilla Firefox, and to innovate for the benefit of the individual and the
       betterment of the Web.
     summary:
-      At Mozilla, my role was to provide an oversight of the development and
-      participate in software architecture discussions as a subject matter
-      expert on the Mozilla Developer Network Compatibility Data project. The
-      Compatibility Data are what feeds developer.mozilla.org documentation
-      pages telling developers if the feature is supported in a given Web
-      Browser. My involvement was around communicating with various stakeholders
-      about the requirements and features for the system.
+      My role was to provide an oversight of the development and participate in
+      software architecture discussions as a subject matter expert on the
+      Mozilla Developer Network Compatibility Data project. The Compatibility
+      Data are what feeds developer.mozilla.org documentation pages telling
+      developers if the feature is supported in a given Web Browser.
     highlights:
+      - Communicate with various stakeholders about the requirements and
+        features for the system.
+    highlights.more:
       - Created a client-side DataTable rendering system with Vanilla JavaScript
       - Prototyped a file-based Compatibility data storage
 
@@ -407,20 +431,22 @@ work:
       and CEO Jeffrey Jaffe, W3C’s mission is to lead the Web to its full
       potential.
     summary:
-      At W3C, my role was to maintain stability, improve features, strengthen
-      the infrastructure of the site, and act as a technical liaison with
+      My role was to maintain stability, improve features, strengthen the
+      infrastructure of the web site, and act as a technical liaison with
       Open-source communities. The WebPlatform Docs project was meant to become
       an independent Web Developer documentation site maintained by an
       international community of contributors, sponsored by Adobe, Apple,
       DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and
       Opera.
     highlights:
-      - Converted content and history from MediaWiki into Static site generators
-        and Git (2015)
+      - Convert and preserve many hundred thousand edits, and keep trace of the
+        content edition contributors and date of the change from MediaWiki into
+        Static site generators and Git (2015)
       - Improved Infrastructure deployment code so that any service could be
         rebuilt systematically (2015)
-      - Implemented a self-healing monitoring (2015)
       - Designed and Implemented Single Sign-On solution using OAuth2 (2014)
+    highlights.more:
+      - Implemented a self-healing monitoring (2015)
       - Designed and built a Web Browser feature compatibility table system for
         documentation pages (2014)
       - Migrated the infrastructure to different providers along with
@@ -441,33 +467,33 @@ work:
       - name: webplatform.github.io/docs/WPD/Projects/CompaTables
         url: https://webplatform.github.io/docs/WPD/Projects/CompaTables/
     technologies:
-      - Salt Stack
-      - PHP
-      - JavaScript
-      - HTML/CSS
-      - Node.js
+      - Backbone.js
+      - Bower
+      - Discourse
+      - DNS Bind
       - Docker
-      - Vagrant
-      - Python
-      - Redis
       - ElasticSearch
-      - OpenStack Nova, Cinder, Horizon, Swift
-      - Memcached
+      - Express.js
       - Fastly
       - Gerrit
-      - Monit
-      - Backbone.js
-      - Express.js
-      - NGINX
-      - MySQL
-      - DNS Bind
-      - MediaWiki
-      - WordPress
-      - Hypothes.is
-      - Discourse
-      - SASS
-      - Bower
       - Gulp
+      - HTML/CSS
+      - Hypothes.is
+      - JavaScript
+      - MediaWiki
+      - Memcached
+      - Monit
+      - MySQL
+      - NGINX
+      - Node.js
+      - OpenStack Nova, Cinder, Horizon, Swift
+      - PHP
+      - Python
+      - Redis
+      - Salt Stack
+      - SASS
+      - Vagrant
+      - WordPress
 
   - name: &name 6973051 Canada Inc.
     client: &client Ericsson
@@ -481,29 +507,30 @@ work:
     hidden: false
     startDate: '2012-02-01'
     endDate: '2013-06-01'
-    #description: ~
+    description: ''
     summary:
-      The goal of the project at Ericsson was to create a server on demand
-      provision portal managing cloud computing clusters hosted in data centers
-      geographically dispersed. My role was to architect, build and lead a
-      Web-based virtualization provisioning portal. A key feature I worked on
-      was to allow users to initiate VMs from any data centers, on any cloud
-      provider platforms.
-    highlights: []
+      Create a server on demand provision portal managing cloud computing
+      clusters hosted in data centers geographically dispersed. A key feature
+      worked on was to allow users to initiate Virtual Machines from any data
+      centres (Italy, Sweden, Canada), on any maintained cloud provider
+      platforms (VMWare, Open-Stack).
+    highlights:
+      - Architect, build and lead a Web-based “Virtualization provisioning”
+        portal.
     technologies:
-      - Vagrant
-      - Symfony2
-      - PHP
-      - Puppet
-      - JavaScript
-      - VMWare ESXi
+      - Git
       - HTML/CSS
+      - JavaScript
+      - jQuery
+      - LESSCSS
       - MySQL
       - OpenStack Grizzly
-      - Git
+      - PHP
+      - Puppet
+      - Symfony 2
       - Twitter Bootstrap
-      - LESSCSS
-      - jQuery
+      - Vagrant
+      - VMWare ESXi
 
   - name: &name Evocatio Solutions technologiques Inc.
     company: *name
@@ -524,15 +551,17 @@ work:
       and Rogers Media.
     summary:
       As a Web Developer and Co-Founder, my role was to lead and architect all
-      Web Development work related to the Frontend stack. I would be in touch
-      with Graphic Designers and Project Managers to create Valid HTML/CSS
-      markup that reflects the designs, and to work on all Web Browsers of the
-      moment. My work would take Adobe Photoshop and PDFs document and create
-      HTML/CSS Static style guides (minimal JavaScript, no backend) to create
-      CSS pattern libraries. As a Co-Founder, I had the authority to validate
-      and review code quality when using HTML/CSS patterns generated by the Web
-      Back-end Stack (Symfony 1, Symfony 2, Zend Framework, ASP.NET).
+      Web Development work related to the Frontend stack.
     highlights:
+      - Lead and architect all Web Development work related to the FrontEnd
+        layer of the stack.
+      - In touch with Graphic Designers and Project Managers to create valid
+        HTML/CSS markup that reflects the designs, and to work on all Web
+        Browsers of the moment.
+      - Take Adobe Photoshop and PDFs document and create HTML/CSS Static style
+        guides (minimal JavaScript, no back-end) to create CSS pattern
+        libraries.
+    highlights.more:
       - Participated in a major Web site rewrite for UDA.ca from .NET into PHP
         with Symfony1.x, responsible of two search-engine modules and HTML/CSS
         patterns libraries (2010-2012)
@@ -543,29 +572,30 @@ work:
         application that had been deployed in many cities around the globe
         (2010-2012)
     technologies:
-      - Vagrant
-      - Symfony2
-      - symfony1.x
-      - PHP
-      - WordPress
-      - Tiki Wiki CMS/Groupware
-      - MySQL
-      - HTML/CSS
-      - VMWare ESXi
-      - Subversion
-      - Git
-      - Twitter Bootstrap
       - Apache Solr
-      - Node.js
-      - LESSCSS
-      - SASS
-      - Compass
-      - Yeoman
       - Bower
-      - Grunt
+      - Compass
       - EJS
-      - jQuery
+      - Git
+      - Grunt
+      - HTML/CSS
       - JavaScript
+      - jQuery
+      - LESSCSS
+      - MySQL
+      - Node.js
+      - PHP
+      - SASS
+      - Subversion
+      - Subversion
+      - symfony 1.x
+      - Symfony 2
+      - Tiki Wiki CMS/Groupware
+      - Twitter Bootstrap
+      - Vagrant
+      - VMWare ESXi
+      - WordPress
+      - Yeoman
 
   - name: &name Groupe Informatique TechSolCom Inc.
     company: *name
@@ -593,32 +623,41 @@ work:
       contributed to Inventory management application (Namminik) and a few other
       internal R&D experiments.
     highlights:
-      - Contributed to many projects as Frontend Developer
+      - Maintain the company corporate image on the web, maintain their Web
+        site, and participate in projects run internally as a Web developer on
+        R&D projects.
       - Participated in maintaining company internal network, testing DataPower
-        blade, Virtualized servers on bare metal, and web hosting infrastructure
+        blade, Virtualized servers on bare metal, and web hosting
+        infrastructure.
+      - Participated in building a proprietary CI server Web Application
+        (“Beebox”) for IBM WebSphere that was intended to be a competitor to
+        Jenkins and Cruise Control of the time. (2007-2009)
+      - Contributed to Inventory management application (“Namminik”) as an
+        internal R&D experiments to make a Web Application also have its native
+        iOS client. (2009)
+    highlights.more:
+      - Contributed to many projects as Frontend Developer
       - Built a monitoring service using the SNMP protocol, centralized syslog
         server, and configured a Nagios monitoring service (2009)
-      - Participated in making many Web applications as a Frontend developer
-        including an inventory Web Application and a Continuous Delivery system
     technologies:
-      - jQuery
-      - HTML/CSS
-      - WCAG
-      - JavaScript
-      - Subversion
-      - CVS
-      - IBM WebSphere DataPower
       - Ant
       - Apache Tomcat
       - Bind
-      - SNMP
-      - Maven2
-      - Nagios
-      - XML/XSL/XSLT
-      - MooTools
-      - YUI 2
+      - CVS
       - Debian GNU/Linux
+      - HTML/CSS
+      - IBM WebSphere DataPower
+      - JavaScript
+      - jQuery
+      - Maven2
+      - MooTools
+      - Nagios
       - RedHat Enterprise Linux
+      - SNMP
+      - Subversion
+      - WCAG
+      - XML/XSL/XSLT
+      - YUI 2
 
   - name: &name Câble Axion Digitel
     company: *name
