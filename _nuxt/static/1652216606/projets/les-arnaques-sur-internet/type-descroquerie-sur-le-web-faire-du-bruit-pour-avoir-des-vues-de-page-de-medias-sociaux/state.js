@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1652216606",layout:"default",error:null,serverRendered:false,routePath:"\u002Fprojets\u002Fles-arnaques-sur-internet\u002Ftype-descroquerie-sur-le-web-faire-du-bruit-pour-avoir-des-vues-de-page-de-medias-sociaux",config:{content:{dbHash:"abad4a9d"}},ssrRefs:{}};

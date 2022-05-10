@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1652216606",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2015\u002F05\u002Fadd-openstack-instance-meta-data-info-salt-grains",config:{content:{dbHash:"abad4a9d"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

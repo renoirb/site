@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/cv", (function(a){a.path="\u002Fresume";return {data:[{isStaticBuildRuntime:true,shouldRedirect:false,shouldRedirectTo:a,to:a,baseUrl:"https:\u002F\u002Frenoirb.com"}],fetch:[],mutations:void 0}}({})));

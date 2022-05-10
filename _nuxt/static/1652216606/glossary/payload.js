@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/glossary", (function(a){return {data:[{pageTitle:a},{contents:[{title:"Progressive Enhancement and\u002For Graceful Degradation",path:"\u002Fglossary\u002Fprogressive-enhancement",slug:"progressive-enhancement",createdAt:"2022-05-10T21:00:27.001Z"}],title:a,urlParam:"glossary"}],fetch:[],mutations:void 0}}("Glossary")));

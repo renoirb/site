@@ -1,0 +1,557 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Tester le fonctionnement d’un serveur SMTP - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional"><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords" name="keywords" content="tranche-de-vie linux procedure"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/site/_nuxt/runtime.js" as="script"><link rel="preload" href="/site/_nuxt/commons/app.js" as="script"><link rel="preload" href="/site/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/site/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/site/_nuxt/app.css" as="style"><link rel="preload" href="/site/_nuxt/app.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/site/_nuxt/vendors/app.css"><link rel="stylesheet" href="/site/_nuxt/app.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1652216606/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1652216606/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-01b3ccea data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-01b3ccea><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-01b3ccea><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-01b3ccea><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-01b3ccea><path d="M4 6h16M4 12h16M4 18h16" data-v-01b3ccea></path></svg></button> <a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-01b3ccea><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-01b3ccea><a href="/site/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/site/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/site/resume" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/site/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-01b3ccea><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-01b3ccea><a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>Renoir Boulanger</a></div> <div data-v-01b3ccea><a href="/site/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Blog
+        </span></a><a href="/site/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Projects
+        </span></a><a href="/site/resume" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Resume
+        </span></a><a href="/site/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div class="grid"><div class="m-10 mt-5"><section class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/site/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2008" class="nuxt-link-active" data-v-ede238bc>2008</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2008/04" class="nuxt-link-active" data-v-ede238bc>04</a></li></ol></nav> <form class="justify-self-end sm:w-full position-relative flex items-center justify-center"><label for="search" class="sr-only">Search within blog:</label> <input id="search" type="search" autocomplete="off" name="q" placeholder="e.g. linux" class="focus:z-50 focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"></form></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-7dd28e96><div data-alert-type="warn" role="alert" class="disposition-parent app-alert-box my-4 bg-yellow-200 text-yellow-800 border-yellow-400" data-v-7dd28e96><!----> <!----> </div> <div class="document document--item z-30" data-v-7dd28e96><div class="title page-title mb-4 font-serif text-2xl italic" data-v-7dd28e96><h1 data-v-7dd28e96>Tester le fonctionnement d’un serveur <abbr lang="en" title="E-Mail relay transport protocol; Simple Mail Transfer Protocol">SMTP</abbr></h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-7dd28e96><time datetime="2008-04-19" data-v-7dd28e96>
+        Saturday, April 19, 2008
+      </time> <a href="https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link" data-v-7dd28e96>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-7dd28e96><strong id="tags__239" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__239" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/procedure" class="no-underline">procedure</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/site/blog/category/tranche-de-vie" class="no-underline">📁 tranche-de-vie</a></li></ul></div> <div class="body mt-10" data-v-7dd28e96><!----> <div class="nuxt-content" data-v-7dd28e96 data-v-7dd28e96><h3 id="vérifier-si-le-firewall-bloque-certains-services" data-v-7dd28e96 data-v-7dd28e96><a href="#v%C3%A9rifier-si-le-firewall-bloque-certains-services" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Vérifier si le Firewall bloque certains services</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Idéalement il faut faire ces tests d'un autre ordinateur que celui qu'on veut
+vérifier.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Ainsi on voit si les services sont fonctionnels en tant que tel, et si le
+firewall ne les bloquent pas.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Quelques ports à tester, qui donnent une réponse</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table data-v-7dd28e96 data-v-7dd28e96><thead data-v-7dd28e96 data-v-7dd28e96><tr data-v-7dd28e96 data-v-7dd28e96><th data-v-7dd28e96 data-v-7dd28e96>Nom du service</th><th data-v-7dd28e96 data-v-7dd28e96>Port TCP</th></tr></thead><tbody data-v-7dd28e96 data-v-7dd28e96><tr data-v-7dd28e96 data-v-7dd28e96><td data-v-7dd28e96 data-v-7dd28e96>POP</td><td data-v-7dd28e96 data-v-7dd28e96>101</td></tr><tr data-v-7dd28e96 data-v-7dd28e96><td data-v-7dd28e96 data-v-7dd28e96>IMAP</td><td data-v-7dd28e96 data-v-7dd28e96>143</td></tr><tr data-v-7dd28e96 data-v-7dd28e96><td data-v-7dd28e96 data-v-7dd28e96>SMTP</td><td data-v-7dd28e96 data-v-7dd28e96>25</td></tr><tr data-v-7dd28e96 data-v-7dd28e96><td data-v-7dd28e96 data-v-7dd28e96>FTP</td><td data-v-7dd28e96 data-v-7dd28e96>21</td></tr></tbody></table>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>nc</span> web1.renoirboulanger.com
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>110</span> +OK POP3 Welcome to vm-pop3d <span class="token number" data-v-7dd28e96 data-v-7dd28e96>1.1</span>.7f-DA-2
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>^c<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>nc</span> web1.renoirboulanger.com <span class="token number" data-v-7dd28e96 data-v-7dd28e96>143</span>
+* OK <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>CAPABILITY IMAP4REV1 LITERAL+ SASL-IR LOGIN-REFERRALS <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>AUTH</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>LOGIN<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+web1.renoirboulanger.com IMAP4rev1 <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2004.357</span> at Tue, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:08:17 -0500 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span>EST<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span>
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>^c<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>nc</span> web1.renoirboulanger.com <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>220</span> web1.renoirboulanger.com ESMTP Exim <span class="token number" data-v-7dd28e96 data-v-7dd28e96>4.66</span> Tue, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:11:10 -0500
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>^c<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>nc</span> web1.renoirboulanger.com <span class="token number" data-v-7dd28e96 data-v-7dd28e96>21</span>
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>220</span> ProFTPD <span class="token number" data-v-7dd28e96 data-v-7dd28e96>1.3</span>.1rc2 Server ready.
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>^c<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: la note [^c] implique qu'on peut faire <kbd data-v-7dd28e96 data-v-7dd28e96>Ctrl</kbd> + <kbd data-v-7dd28e96 data-v-7dd28e96>c</kbd>
+pour quitter plus rapidement de l'attente</p>
+<h2 id="tester-le-serveur-courriel" data-v-7dd28e96 data-v-7dd28e96><a href="#tester-le-serveur-courriel" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Tester le serveur courriel</h2>
+<h3 id="créer-un-compte-de-test" data-v-7dd28e96 data-v-7dd28e96><a href="#cr%C3%A9er-un-compte-de-test" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Créer un compte de test</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Permet d'éviter de remplir le compte courriel d'un client.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Créer un compte dans <a href="https://web1.renoirboulanger.com:2222/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>DirectAdmin</a>, "<a href="https://web1.renoirboulanger.com:2222/CMD_ALL_USER_SHOW" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Show all Users</a>", <em data-v-7dd28e96 data-v-7dd28e96>username</em>, "
+<a href="https://web1.renoirboulanger.com:2222/CMD_EMAIL_POP" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>E-Mail Accounts</a>"</li>
+</ul>
+<h3 id="test-envoi-local-vers-virtual_local-avec-exim" data-v-7dd28e96 data-v-7dd28e96><a href="#test-envoi-local-vers-virtual_local-avec-exim" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Test envoi local vers virtual_local avec exim</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Avant de tester avec une application (remote en shell, ou GMail par exemple) On
+devrait tester en local</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Ensuite... via une application locale à Gmail <strong data-v-7dd28e96 data-v-7dd28e96>Cas de nos courriels
+renoirboulanger</strong>, voir "Test envoi local vers une machine remote avec exim"
+ci-haut.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Le serveur de mon exemple possède Exim comme serveur de transport de courrier
+(SMTP).</p>
+<p data-v-7dd28e96 data-v-7dd28e96>L'avantage d'utiliser <code data-v-7dd28e96 data-v-7dd28e96>exim -v -odf</code> c'est qu'on sait en shell le output et on
+sait les messages directement</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>exim -v -odf test@renoirboulanger.com         <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+Subject: Test lundi am <span class="token number" data-v-7dd28e96 data-v-7dd28e96>5</span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>local</span> a virtuallocal <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+Message body                                  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>                                             <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+LOG: MAIN
+  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span> renoirb@web1.renoirboulanger.com <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>U</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>renoirb <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>P</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>local <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>S</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>390</span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>T</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>"Test lundi am 5 local a virtuallocal"</span>
+delivering 1JSZkp-0001JH-8H
+LOG: MAIN
+  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> support <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>support@renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>F</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>renoirb@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>R</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>virtual_user <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>T</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>virtual_localdelivery <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>S</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>571</span>
+LOG: MAIN
+  Completed
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: La ligne "<strong data-v-7dd28e96 data-v-7dd28e96>Subject:</strong>" je note généralement un titre explicatif du genre
+"Test lundi am 5 local a virtuallocal" qui donne une idée de quels tests qui
+passent.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Le output des 7 dernières lignes est une réponse expectée si tout va bien.</p>
+<h4 id="les-commandes-via-exim" data-v-7dd28e96 data-v-7dd28e96><a href="#les-commandes-via-exim" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Les commandes via exim</h4>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>exim -v -odf john.doe@example.org</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>C'est les options qui permettent d'utiliser une instance de Exim pour tester
+(<strong data-v-7dd28e96 data-v-7dd28e96>odf</strong>) puis de permettre la (v)erbosité</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>Subject: LE SUJET</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Il faut entrer <code data-v-7dd28e96 data-v-7dd28e96>Subject:</code> Pour annoncer qu'on ajoute au header le sujet, on
+pourrait meme ajouter un header comme on veut.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Écrire le message</strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Le prompt condidere que si on commence pas par une commande qui termine par ":",
+est considéré comme du <strong data-v-7dd28e96 data-v-7dd28e96>data</strong> pour le courriel en tant que tel (aka. Le ).</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Terminer par "."</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Voilà!</li>
+</ul>
+<h3 id="vérifier-le-log-denvoi-smtp" data-v-7dd28e96 data-v-7dd28e96><a href="#v%C3%A9rifier-le-log-denvoi-smtp" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Vérifier le log d'envoi SMTP</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Utile pour chaque tentative... voir où le message và!</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>sudo</span> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>tail</span> -f /var/log/exim/mainlog
+ <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span>-02-25 <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:02:16 1JSZkp-0001JH-8H <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span> renoirb@web1.renoirboulanger.com <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>U</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>renoirb <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>P</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>local <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>S</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>356</span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>T</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>"Test lundi am 5 local a virtuallocal"</span> from <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>renoirb@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>for</span> test@renoirboulanger.com
+ <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span>-02-25 <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:02:16 1JSZkp-0001JH-8H <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>test</span> <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>test@renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>F</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>renoirb@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>R</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>virtual_user <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>T</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>virtual_localdelivery <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>S</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>390</span>
+ <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span>-02-25 <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:02:16 1JSZkp-0001JH-8H Completed
+</code></pre></div>
+<h3 id="tester-réception-imap" data-v-7dd28e96 data-v-7dd28e96><a href="#tester-r%C3%A9ception-imap" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Tester réception IMAP</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Généralement dans <a href="https://web1.renoirboulanger.com/webmail/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>https://web1.renoirboulanger.com/webmail/</a> (vérifie le
+processus IMAP) on peut aller accéder au compte créé dans "Créer un compte de
+test courriel".</p>
+<h3 id="vérifier-le-log-impad" data-v-7dd28e96 data-v-7dd28e96><a href="#v%C3%A9rifier-le-log-impad" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Vérifier le log impad</h3>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>sudo</span> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>tail</span> -f /var/log/maillog
+   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:01:14 web1 imapd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>19532</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: imap <span class="token function" data-v-7dd28e96 data-v-7dd28e96>service</span> init from <span class="token number" data-v-7dd28e96 data-v-7dd28e96>127.0</span>.0.1
+   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:01:14 web1 imapd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>19532</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: Login <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>user</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>test@renoirboulanger.com <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>host</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>web1 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>127.0</span>.0.1<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:01:14 web1 imapd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>19532</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: Logout <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>user</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>test@renoirboulanger.com <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>host</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>web1 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>127.0</span>.0.1<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: Rappel le <code data-v-7dd28e96 data-v-7dd28e96>/var/log/maillog</code> donne le output des login IMAP(imapd), POP
+(vm-pop3d) et SpamAssasin (spamd)</p>
+<h3 id="vérifier-pop-en-telnet" data-v-7dd28e96 data-v-7dd28e96><a href="#v%C3%A9rifier-pop-en-telnet" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Vérifier POP en telnet</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>On peut lancer le test à partir de n'importe quel type de client telnet.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Pour s'assurer que le mail server répond sur le bon, on peut aussi lancer la
+requete telnet sur le domaine du mail exchange (MX) du client.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>telnet mail.renoirboulanger.com <span class="token number" data-v-7dd28e96 data-v-7dd28e96>110</span>                 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+Trying <span class="token number" data-v-7dd28e96 data-v-7dd28e96>66.46</span>.177.182<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+Connected to mail.renoirboulanger.com <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>66.46</span>.177.182<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span>.
+Escape character is <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'^]'</span><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
++OK POP3 Welcome to vm-pop3d <span class="token number" data-v-7dd28e96 data-v-7dd28e96>1.1</span>.7f-DA-2
+user test@renoirboulanger.com                         <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>Entrer <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"user (username)"</span>, enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
++OK
+pass GMkRZaKQ                                         <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>Entrer <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"pass (mot de passe)"</span>, enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
++OK opened mailbox <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>for</span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>test</span>
+list                                                  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>Pour lister les messages <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"list"</span>, enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
++OK
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>1</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>780</span>
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>2</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>488</span>
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>3</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>494</span>
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
+retr <span class="token number" data-v-7dd28e96 data-v-7dd28e96>3</span>                                                <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>Pour obtenir un message, <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"retr (numero du message)"</span>, enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
++OK <span class="token number" data-v-7dd28e96 data-v-7dd28e96>494</span> octets
+Return-path: <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>renoirb@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>
+Envelope-to: test@renoirboulanger.com
+Delivery-date: Mon, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:02:16 -0500
+Received: from renoirb by web1.renoirboulanger.com with <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>local</span> <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span>Exim <span class="token number" data-v-7dd28e96 data-v-7dd28e96>4.66</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span>
+        <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span>envelope-from <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>renoirb@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span>
+        <span class="token function" data-v-7dd28e96 data-v-7dd28e96>id</span> 1JTgiM-00057L-SW
+        <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>for</span> test@renoirboulanger.com<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span> Mon, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:02:16 -0500
+Subject: Test lundi am <span class="token number" data-v-7dd28e96 data-v-7dd28e96>5</span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>local</span> a virtuallocal
+Message-Id: <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>1JSZkp-0001JH-8H@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>
+From: renoirb@web1.renoirboulanger.com
+Date: Mon, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:02:16 -0500
+
+Message body
+
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
+quit                                                  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span>Finalement, <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"quit"</span>, enter<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
++OK
+Connection closed by foreign host.
+</code></pre></div>
+<h3 id="vérifier-le-log-pop3d" data-v-7dd28e96 data-v-7dd28e96><a href="#v%C3%A9rifier-le-log-pop3d" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Vérifier le log pop3d</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Si tout va bien en telnet, pourquoi ne pas tester pour être sûr!?</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>sudo</span> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>tail</span> -f /var/log/maillog
+   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:13:18 web1 vm-pop3d<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>20764</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: User <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'test@renoirboulanger.com'</span> logged <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>in</span> from <span class="token number" data-v-7dd28e96 data-v-7dd28e96>69.159</span>.235.26, <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>nmsgs</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>3</span>
+   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:13:22 web1 vm-pop3d<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>20764</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: bytes: domain renoirboulanger.com <span class="token number" data-v-7dd28e96 data-v-7dd28e96>491</span> bytes
+   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>12</span>:13:23 web1 vm-pop3d<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>20764</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: Session ended <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>for</span> user: <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'test@renoirboulanger.com'</span> from <span class="token number" data-v-7dd28e96 data-v-7dd28e96>69.159</span>.235.26, <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>nmsgs</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>3</span>, <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>ndel</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>0</span>
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: Rappel le <code data-v-7dd28e96 data-v-7dd28e96>/var/log/maillog</code> donne le output des login IMAP(imapd), POP
+(vm-pop3d) et SpamAssasin (spamd)</p>
+<h3 id="test-envoi-remote-vers-virtual_local-avec-telnet" data-v-7dd28e96 data-v-7dd28e96><a href="#test-envoi-remote-vers-virtual_local-avec-telnet" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Test envoi remote vers virtual_local avec telnet</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Au lieu d'avoir un programme comme mail installé sur une station Linux, on peut
+simplement utiliser telnet avec ces commandes</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>telnet web1.renoirboulanger.com <span class="token number" data-v-7dd28e96 data-v-7dd28e96>25</span>
+   Trying <span class="token number" data-v-7dd28e96 data-v-7dd28e96>66.46</span>.177.182<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+   Connected to web1.renoirboulanger.com.
+   Escape character is <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'^]'</span><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>220</span> web1.renoirboulanger.com ESMTP Exim <span class="token number" data-v-7dd28e96 data-v-7dd28e96>4.66</span> Fri, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>22</span> Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>10</span>:42:44 -0500
+helo renoirboulanger.com
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> web1.renoirboulanger.com Hello mtrlpq02-1168108314.sdsl.bell.ca <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>69.159</span>.235.26<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+mail from: lunique@renoirboulanger.com
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> OK
+rcpt to: renoir.boulanger@renoirboulanger.com
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> Accepted
+   data
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>354</span> Enter message, ending with <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"."</span> on a line by itself
+Subject: Test courriel <span class="token number" data-v-7dd28e96 data-v-7dd28e96>7</span>
+Via tsc-webmestre-dev dans le bureau de renoirboulanger vers web1 qui va rediriger à gmail directement<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>!</span>
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> OK <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>id</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>1JSa3U-0003TM-Tv
+quit
+   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>221</span> web1.renoirboulanger.com closing connection
+   Connection closed by foreign host.
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: les codes 250, 354, 220 sont des numeros de messages voir:
+<a href="http://email.about.com/cs/standards/a/smtp_error_code_2.htm" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>http://email.about.com/cs/standards/a/smtp_error_code_2.htm</a></p>
+<p data-v-7dd28e96 data-v-7dd28e96>J'ai mis trois espaces devant la réponse reçue.</p>
+<h4 id="les-commandes-telnet-envoi-smtp" data-v-7dd28e96 data-v-7dd28e96><a href="#les-commandes-telnet-envoi-smtp" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Les commandes telnet envoi smtp</h4>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>telnet <code data-v-7dd28e96 data-v-7dd28e96>web1.renoirboulanger.com</code></strong></li>
+<li data-v-7dd28e96 data-v-7dd28e96>... Trying et connected signifient qu'il a essayé et réussi</li>
+</ul>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>220 web1.renoirboulanger.com ESMTP Exim 4.66 Fri, 22 Feb 2008 10:42:44 -0500
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Signifie 220 (c'est le code du message) que web1 utilise Exim 4.66.... et qu'on
+est le 22 Feb... C'est ok!</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>helo domaine.du.helo.renoirboulanger.com</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Faut entrer "<code data-v-7dd28e96 data-v-7dd28e96>helo</code>" puis le domaine de l'envoyant</p>
+<p data-v-7dd28e96 data-v-7dd28e96>helo est un standard pour savoir quel est le hostname qui envoit le courriel
+<a href="#Testerlebonfonctionnementduserveurdecourriel-DescriptiondeHELO" data-v-7dd28e96 data-v-7dd28e96>#Description de HELO</a></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>mail from: john.doe@example.org</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Faut entrer "<code data-v-7dd28e96 data-v-7dd28e96>mail from:</code>" puis l'adresse de l'envoyant</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Ce qui permet de dire le From: field</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>rcpt to: john.doe@example.org</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Faut entrer "<code data-v-7dd28e96 data-v-7dd28e96>rcpt to:</code>" puis l'adresse du recipient</p>
+<p data-v-7dd28e96 data-v-7dd28e96>C'est le recipient.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>data</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Annonce au MTA (le serveur SMTP) qu'il va envoyer des données textes</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>Subject: LE SUJET</code></strong></li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Faut au minimum entrer "<code data-v-7dd28e96 data-v-7dd28e96>Subject:</code>" car c'est ce que le serveur attend.</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Écrire le message, tout simplement</li>
+<li data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Terminer</strong> par un dernier [procedures:<strong data-v-7dd28e96 data-v-7dd28e96>Enter</strong>] et laisser un poin
+"<strong data-v-7dd28e96 data-v-7dd28e96>.</strong>"</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Ensuite, le message SMTP #<code data-v-7dd28e96 data-v-7dd28e96>354</code> annonce que l'on peut écrire notre courriel a
+volonté... jusqu'a ce qu'on ajoute une ligne vide avec uniquement un "." (qui
+annonce la fin du message)</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Voilà!</li>
+</ul>
+<h3 id="test-envoi-local-vers-une-machine-remote-avec-exim" data-v-7dd28e96 data-v-7dd28e96><a href="#test-envoi-local-vers-une-machine-remote-avec-exim" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Test envoi local vers une machine remote avec exim</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Permet de savoir si l'envoi local vers un remote fonctionne bien</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Il s'agit de l'exemple typique d'un email local envoyé vers Gmail par exemple.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>exim -v -odf sysadmin@renoirboulanger.com
+Subject: Test lundi am <span class="token number" data-v-7dd28e96 data-v-7dd28e96>4</span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>local</span> to remote
+Message correct pour voir de l'usager joe sur web1 vers sysadmin hsu at renoirboulanger
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
+LOG: MAIN
+  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span> joe@web1.renoirboulanger.com <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>U</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>joe <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>P</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>local <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>S</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>437</span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>T</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>"Test lundi am 4 local to remote"</span>
+delivering 1JSZmM-0001LR-S8
+Connecting to ASPMX.L.GOOGLE.COM <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>72.14</span>.205.27<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>:25 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>. connected
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;&lt;</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>220</span> mx.google.com ESMTP z21si1091485qbc.21
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>>></span> EHLO web1.renoirboulanger.com
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;&lt;</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span>-mx.google.com at your service, <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>66.46</span>.177.182<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>
+         <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span>-SIZE <span class="token number" data-v-7dd28e96 data-v-7dd28e96>28311552</span>
+         <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span>-8BITMIME
+         <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> ENHANCEDSTATUSCODES
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>>></span> MAIL FROM:<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>joe@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>SIZE</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>1470</span>
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;&lt;</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2.1</span>.0 OK
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>>></span> RCPT TO:<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>a@test.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;&lt;</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2.1</span>.5 OK
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>>></span> DATA
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;&lt;</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>354</span> Go ahead
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>>></span> writing message and terminating <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"."</span>
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;&lt;</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>250</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2.0</span>.0 OK <span class="token number" data-v-7dd28e96 data-v-7dd28e96>1203693994</span> z21si1091485qbc.21
+  SMTP<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>>></span> QUIT
+LOG: MAIN
+  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> sysadmin@renoirboulanger.com <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>F</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>joe@web1.renoirboulanger.com<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>R</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>lookuphost <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>T</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>remote_smtp <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>S</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>450</span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>H</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>ASPMX.L.GOOGLE.COM <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>72.14</span>.205.27<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>C</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>"250 2.0.0 OK 1203693994 z21si1091485qbc.21"</span>
+LOG: MAIN
+  Completed
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: C'est quoi EHLO ou HELO? voir "Description du HELO"</p>
+<h2 id="tester-mail-remote-vers-mailserver-pour-voir-le-bon-fonctionnement-de-spamassassin" data-v-7dd28e96 data-v-7dd28e96><a href="#tester-mail-remote-vers-mailserver-pour-voir-le-bon-fonctionnement-de-spamassassin" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Tester mail remote vers mailserver pour voir le bon fonctionnement de SpamAssassin</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Le but de ce test est de s'assurer que le service de spam antivirus est lancé,
+il faut s'assurer que le service "SpamAssassin" est activé dans la config du
+client dans le pannel, et qu'on envoie le test en remote.</p>
+<h3 id="envoi-courriel-via-une-machine-remote-via-mail" data-v-7dd28e96 data-v-7dd28e96><a href="#envoi-courriel-via-une-machine-remote-via-mail" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Envoi courriel via une machine remote via mail</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Sert a s'assurer que l'envoi d'un courriel remote (application ou en shell)
+fonctionne bien de l'extérieur.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>mail test@test.com
+Subject: Test lundi am <span class="token number" data-v-7dd28e96 data-v-7dd28e96>6</span> remote to virtuallocal
+Message body, with random content
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>.</span>
+</code></pre></div>
+<h3 id="regarder-le-log-spamd" data-v-7dd28e96 data-v-7dd28e96><a href="#regarder-le-log-spamd" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Regarder le log spamd</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Permet de savoir si le message envoyé dans le test "Envoi courriel via une
+machine remote via mail" à bien passé</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>tail</span> -f /var/log/maillog
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>1</span>.   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:31:54 web1 spamd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>3160</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: prefork: child states: II
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>2</span>.   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:32:15 web1 spamd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>817</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: spamd: connection from web1 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>127.0</span>.0.1<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span> at port <span class="token number" data-v-7dd28e96 data-v-7dd28e96>56256</span>
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>3</span>.   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:32:15 web1 spamd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>817</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: spamd: setuid to renoirb succeeded
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>4</span>.   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:32:15 web1 spamd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>817</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: spamd: processing message <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>000801c87894<span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$66546900</span><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$c07bcf52</span>@adminhotel<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>for</span> renoirb:501
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>5</span>.   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:32:19 web1 spamd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>817</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: spamd: identified spam <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>7.0</span>/5.0<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span> <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>for</span> renoirb:501 <span class="token keyword" data-v-7dd28e96 data-v-7dd28e96>in</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>4.1</span> seconds, <span class="token number" data-v-7dd28e96 data-v-7dd28e96>1602</span> bytes.
+<span class="token number" data-v-7dd28e96 data-v-7dd28e96>6</span>.   Feb <span class="token number" data-v-7dd28e96 data-v-7dd28e96>26</span> <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:32:19 web1 spamd<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>817</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>: spamd: result: Y <span class="token number" data-v-7dd28e96 data-v-7dd28e96>6</span> - HTML_MESSAGE,RAZOR2_CF_RANGE_51_100,RAZOR2_CF_RANGE_E4_51_100,RAZOR2_CF_RANGE_E8_51_100,RAZOR2_CHECK,RDNS_NONE,URIBL_JP_SURBL <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>scantime</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>4.1</span>,size<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>1602</span>,user<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>renoirb,uid<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>501</span>,required_score<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>5.0</span>,rhost<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>web1,raddr<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>127.0</span>.0.1,rport<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>56256</span>,mid<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>&lt;</span>000801c87894<span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$66546900</span><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$c07bcf52</span>@adminhotel<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>,autolearn<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span>no
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Voici ce que le spamscanner a fait...</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Ligne 4: Il process le message pour le user</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Ligne 5: Donne le resultat, (soit <strong data-v-7dd28e96 data-v-7dd28e96>identified spam</strong> ou <strong data-v-7dd28e96 data-v-7dd28e96>clean message</strong>)
+avec la note entre parenthèses (note reçue / note maximale)</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Ligne 6: Le résultat Y=C'est un spam... N=Le message est propre... puis la
+valeur des tests coulés (HTML_MESSAGE,RAZOR2_CF_RANGE_51_100,...)</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: Rappel le <code data-v-7dd28e96 data-v-7dd28e96>/var/log/maillog</code> donne le output des login IMAP(imapd), POP
+(vm-pop3d) et SpamAssasin (spamd)</p>
+<h2 id="tester-spamassassin" data-v-7dd28e96 data-v-7dd28e96><a href="#tester-spamassassin" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Tester SpamAssassin</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Pour savoir comment SpamAssassin (aka. SA) traite le spam, on peut lancer
+quelques commandes comme celles ci.</p>
+<h4 id="sa-avec-tests-razor2-sur-un-sample-spam" data-v-7dd28e96 data-v-7dd28e96><a href="#sa-avec-tests-razor2-sur-un-sample-spam" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>SA avec tests Razor2 sur un sample spam</h4>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>spamassassin -t -D razor2 &lt; /usr/share/sample-nonspam.txt
+
+... plusieurs lignes ...
+
+[19464] dbg: razor2: razor2 is available, version 2.82
+ Razor-Log: read_file: 16 items read from /etc/mail/spamassassin/.razor/razor-agent.conf
+ Razor-Log: Found razorhome: /etc/mail/spamassassin/.razor
+Feb 28 10:48:38.385733 check[19464]: [ 2] [bootup] Logging initiated LogDebugLevel=9 to stdout
+Feb 28 10:48:38.386209 check[19464]: [ 5] computed razorhome=/etc/mail/spamassassin/.razor, conf=/etc/mail/spamassassin/.razor/razor-agent.conf, ident=/etc/mail/spamassassin/.razor/identity-ruKDx1iKgh
+Feb 28 10:48:38.386500 check[19464]: [ 8] Client supported_engines: 4 8
+Feb 28 10:48:38.386960 check[19464]: [ 8]  prep_mail done: mail 1 headers=293, mime0=616
+Feb 28 10:48:38.387312 check[19464]: [ 5] read_file: 1 items read from /etc/mail/spamassassin/.razor/servers.discovery.lst
+
+... inclusions des config modulaires ...
+
+Feb 28 10:48:38.405171 check[19464]: [ 5] read_file: 23 items read from /etc/mail/spamassassin/.razor/server.joy.cloudmark.com.conf
+Feb 28 10:48:38.405460 check[19464]: [ 5] 162877 seconds before closest server discovery
+Feb 28 10:48:38.405729 check[19464]: [ 6] c301.cloudmark.com is a Catalogue Server srl 5382; computed min_cf=21, Server se: 3BC8
+Feb 28 10:48:38.405995 check[19464]: [ 8] Computed supported_engines: 4 8
+Feb 28 10:48:38.406217 check[19464]: [ 8] Using next closest server c301.cloudmark.com:2703, cached info srl 5382
+Feb 28 10:48:38.406432 check[19464]: [ 8] mail 1 has no subject
+Feb 28 10:48:38.406840 check[19464]: [ 6] preproc: mail 1.0 went from 616 bytes to 503
+Feb 28 10:48:38.407064 check[19464]: [ 6] computing sigs for mail 1.0, len 503
+Feb 28 10:48:38.408529 check[19464]: [ 6] Engine (8) didn't produce a signature for mail 1.0
+Feb 28 10:48:38.408827 check[19464]: [ 6] skipping whitelist file (empty?): /etc/mail/spamassassin/.razor/razor-whitelist
+Feb 28 10:48:38.409055 check[19464]: [ 5] Connecting to c301.cloudmark.com ...
+Feb 28 10:48:38.440917 check[19464]: [ 8] Connection established
+Feb 28 10:48:38.441071 check[19464]: [ 4] c301.cloudmark.com >> 36 server greeting: sn=C&srl=5403&a=1&a=cg&ep4=7542-10
+Feb 28 10:48:38.441476 check[19464]: [ 4] c301.cloudmark.com &lt;&lt; 25
+Feb 28 10:48:38.441548 check[19464]: [ 6] cn=razor-agents&cv=2.82
+Feb 28 10:48:38.441813 check[19464]: [ 4] c301.cloudmark.com &lt;&lt; 14
+Feb 28 10:48:38.441873 check[19464]: [ 6] a=g&pm=state
+Feb 28 10:48:38.463790 check[19464]: [ 4] c301.cloudmark.com >> 264
+Feb 28 10:48:38.463875 check[19464]: [ 6] response to sent.2
+...
+[19464] dbg: razor2: part=0 engine=4 contested=0 confidence=100
+[19464] dbg: razor2: results: spam? 1
+[19464] dbg: razor2: results: engine 8, highest cf score: 0
+[19464] dbg: razor2: results: engine 4, highest cf score: 100
+[19464] info: rules: meta test HS_PHARMA_1 has dependency 'HS_SUBJ_ONLINE_PHARMACEUTICAL' with a zero score
+Received: from localhost by web1.renoirboulanger.com
+        with SpamAssassin (version 3.2.0);
+        Thu, 28 Feb 2008 10:48:41 -0500
+From: Sender &lt;sender@example.net>
+To: Recipient &lt;recipient@example.net>
+Subject: *****SPAM***** Test spam mail (GTUBE)
+Date: Wed, 23 Jul 2003 23:30:00 +0200
+Message-Id: &lt;GTUBE1.1010101@example.net>
+X-Spam-Flag: YES
+X-Spam-Checker-Version: SpamAssassin 3.2.0 (2007-05-01) on web1.renoirboulanger.com
+X-Spam-Level: **************************************************
+X-Spam-Status: Yes, score=1002.6 required=5.0 tests=AWL,GTUBE,NO_RECEIVED,
+        NO_RELAYS,RAZOR2_CF_RANGE_51_100,RAZOR2_CF_RANGE_E4_51_100,RAZOR2_CHECK
+        autolearn=no version=3.2.0
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----------=_47C6D7D9.CD6EF8C3"
+
+This is a multi-part message in MIME format.
+
+------------=_47C6D7D9.CD6EF8C3
+...Le courriel en tant que tel
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Note: Il existe trois fichiers de tests: <code data-v-7dd28e96 data-v-7dd28e96>/usr/share/sample-spam.txt</code> (test
+email sample spam), <code data-v-7dd28e96 data-v-7dd28e96>/usr/share/sample-nonspam.txt</code> (sample email correct), et
+<code data-v-7dd28e96 data-v-7dd28e96>/usr/share/sample-virus.txt</code> (pour voir si l'antivirus est ok)</p>
+<h2 id="tester-les-relais-smtp" data-v-7dd28e96 data-v-7dd28e96><a href="#tester-les-relais-smtp" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Tester les relais SMTP</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Notez que j'ai pas sous la main d'adresse courriel ou serveur connu comme
+spammeur sur notre réseau ce qui est très bien.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Alors si votre test donne pas un résultat similaire... on a un problème de spam!</p>
+<h4 id="avec-exim--bh" data-v-7dd28e96 data-v-7dd28e96><a href="#avec-exim--bh" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>avec exim -bh</h4>
+<p data-v-7dd28e96 data-v-7dd28e96>Avec la commande <code data-v-7dd28e96 data-v-7dd28e96>exim -bh IP-ADDRESS EMAIL-ADDRESS</code> on peut savoir comment le
+courriel passe, s'il est accepté.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>exim -bh 69.159.235.26 renoirb@gmail.com
+
+**** SMTP testing session as if from host 69.159.235.26
+**** but without any ident (RFC 1413) callback.
+**** This is not for real!
+
+>>> host in hosts_connection_nolog? no (option unset)
+>>> host in host_lookup? yes (matched "*")
+>>> looking up host name for 69.159.235.26
+>>> IP address lookup yielded mtrlpq02-1168108314.sdsl.bell.ca
+>>> gethostbyname looked up these IP addresses:
+>>>   name=mtrlpq02-1168108314.sdsl.bell.ca address=69.159.235.26
+>>> checking addresses for mtrlpq02-1168108314.sdsl.bell.ca
+>>>   69.159.235.26 OK
+>>> host in host_reject_connection? no (option unset)
+>>> host in sender_unqualified_hosts? no (option unset)
+>>> host in recipient_unqualified_hosts? no (option unset)
+>>> host in helo_verify_hosts? no (option unset)
+>>> host in helo_try_verify_hosts? no (option unset)
+>>> host in helo_accept_junk_hosts? no (option unset)
+220 web1.renoirboulanger.com ESMTP Exim 4.66 Thu, 28 Feb 2008 11:02:19 -0500
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Exemple de test fonctionnel (On remarque le message <code data-v-7dd28e96 data-v-7dd28e96>220 hostname ESMTP...</code>.
+Faire [^c] pour sortir.</p>
+<h4 id="avec-exim_checkaccess" data-v-7dd28e96 data-v-7dd28e96><a href="#avec-exim_checkaccess" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Avec exim_checkaccess</h4>
+<p data-v-7dd28e96 data-v-7dd28e96>Une autre version existe qui sort moins de output</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>exim_checkaccess <span class="token number" data-v-7dd28e96 data-v-7dd28e96>69.159</span>.235.26 contribs@renoirboulanger.com
+Accepted
+</code></pre></div>
+<h2 id="statistiques" data-v-7dd28e96 data-v-7dd28e96><a href="#statistiques" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Statistiques</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Il existe, a ma mémoire, actuellement, un outil qui permet de savoir l'Activité
+du serveur. Il est dans un crontab. Voici la commande.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>eximstats /var/log/exim/mainlog
+
+Exim statistics from <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span>-02-24 04:02:35 to <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2008</span>-02-28 <span class="token number" data-v-7dd28e96 data-v-7dd28e96>11</span>:11:24
+
+Grand total summary
+-------------------
+                                                                  At least one address
+  TOTAL               Volume   Messages Addresses     Hosts      Delayed       Failed
+  Received             100MB       <span class="token number" data-v-7dd28e96 data-v-7dd28e96>6049</span>                <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2029</span>       <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2</span>  <span class="token number" data-v-7dd28e96 data-v-7dd28e96>0.0</span>%     <span class="token number" data-v-7dd28e96 data-v-7dd28e96>37</span>  <span class="token number" data-v-7dd28e96 data-v-7dd28e96>0.6</span>%
+  Delivered            101MB       <span class="token number" data-v-7dd28e96 data-v-7dd28e96>6174</span>      <span class="token number" data-v-7dd28e96 data-v-7dd28e96>6336</span>        <span class="token number" data-v-7dd28e96 data-v-7dd28e96>17</span>
+  Rejects                         <span class="token number" data-v-7dd28e96 data-v-7dd28e96>45232</span>               <span class="token number" data-v-7dd28e96 data-v-7dd28e96>21772</span>
+
+Deliveries by transport
+-----------------------
+                      Volume    Messages
+  :blackhole:           12MB        <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2232</span>
+  address_file         660KB          <span class="token number" data-v-7dd28e96 data-v-7dd28e96>64</span>
+  remote_smtp          600KB          <span class="token number" data-v-7dd28e96 data-v-7dd28e96>89</span>
+  spamcheck             46MB        <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2966</span>
+  virtual_localdelivery    42MB         <span class="token number" data-v-7dd28e96 data-v-7dd28e96>823</span>
+
+Messages received per hour <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span>each dot is <span class="token number" data-v-7dd28e96 data-v-7dd28e96>7</span> messages<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span>
+---------------------------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>. un tableau par points <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span>.<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span> qui donne une idée de grandeur de la quantité de courriel <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Time spent on the queue: all messages
+-------------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Time spent on the queue: messages with at least one remote delivery
+-------------------------------------------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Relayed messages
+----------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Top <span class="token number" data-v-7dd28e96 data-v-7dd28e96>50</span> mail rejection reasons by message count
+----------------------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Top <span class="token number" data-v-7dd28e96 data-v-7dd28e96>50</span> sending hosts by message count
+-------------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Top <span class="token number" data-v-7dd28e96 data-v-7dd28e96>50</span> sending hosts by volume
+------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Top <span class="token number" data-v-7dd28e96 data-v-7dd28e96>50</span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>local</span> senders by message count
+-------------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Top <span class="token number" data-v-7dd28e96 data-v-7dd28e96>50</span> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>local</span> senders by volume
+------------------------------
+
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+Top <span class="token number" data-v-7dd28e96 data-v-7dd28e96>50</span> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>host</span> destinations by message count
+-----------------------------------------
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Très utile!</p>
+<h2 id="vulgarisation" data-v-7dd28e96 data-v-7dd28e96><a href="#vulgarisation" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Vulgarisation</h2>
+<h3 id="description-du-helo" data-v-7dd28e96 data-v-7dd28e96><a href="#description-du-helo" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Description du HELO</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Source: <a href="http://email.about.com/cs/standards/a/smtp.htm" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>http://email.about.com/cs/standards/a/smtp.htm</a> (modifié)</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Une discussion SMTP commence soit par <strong data-v-7dd28e96 data-v-7dd28e96>EHLO</strong> (ou <strong data-v-7dd28e96 data-v-7dd28e96>HELO</strong>). Qui, en gros,
+annonce que le serveur de courrier possède quelques features améliorés comparé
+aux premières générations de serveur smtp.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>(...)</p>
+<p data-v-7dd28e96 data-v-7dd28e96>...But to use later additions to SMTP that have brought about two flavors of the
+later HELO command (SMTP command generally consist of four characters).</p>
+<p data-v-7dd28e96 data-v-7dd28e96>(...)</p>
+<p data-v-7dd28e96 data-v-7dd28e96>EHLO, being the more recent one makes the server advertise all the additional
+features (such as delivery status notification or the ability to transport
+messages that contain other than the safe ASCII characters) it supports.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>(...)</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Not every server will allow this greeting, but it is required to accept a plain
+HELO which naturally assumes that no additional features are present.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>(...)</p>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Both HELO (et EHLO) commands do require the client to specify its domain</strong>
+after the **LO, however.</p>
+<h2 id="références" data-v-7dd28e96 data-v-7dd28e96><a href="#r%C3%A9f%C3%A9rences" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Références</h2>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="http://www.netadmintools.com/part276.html" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Tester avec telnet</a></p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="http://email.about.com/cs/standards/a/smtp.htm" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Réferences du protocole SMTP</a></p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="http://email.about.com/cs/standards/a/smtp_error_code.htm" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Definition messages d'erreur SMTP</a></p>
+</li>
+</ul></div> <div class="clearfix" data-v-7dd28e96></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-4d2003f9 data-v-7dd28e96><div class="text-left" data-v-4d2003f9><a href="/site/blog/2008/04/effacer-un-disque-dur" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Effacer complètement un disque dur de façon sécuritaire
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/site/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      La publicite du monde celibataire sur Facebook et les fausses representations
+    </a></div></div></div></div></div></div></div></div></section></div></div></main> <div class="app-footer--component disposition-parent w-full bottom" data-v-705c3a15><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-705c3a15><dl class="contact items-item disposition-item" data-v-705c3a15><dt class="mb-4 font-serif text-2xl" data-v-705c3a15>Contact</dt> <dd data-v-705c3a15>Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional</dd> <dd class="underline" data-v-705c3a15><a href="mailto:contribs@renoirboulanger.com" data-v-705c3a15>contribs@renoirboulanger.com</a></dd> <dd class="font-mono" data-v-705c3a15>v1.0.0</dd> <span class="inline-flex" data-v-705c3a15><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-705c3a15><dl lang="fr-CA" class="see-also" data-v-705c3a15><dt data-v-705c3a15>Voir aussi…</dt> <dd data-v-705c3a15><a href="/site/ligne-editoriale" data-v-705c3a15> Ligne éditoriale </a></dd> <dd data-v-705c3a15><a href="/site/projets" data-v-705c3a15> Projets </a></dd> <dd data-v-705c3a15><a href="/site/glossary" data-v-705c3a15> Glossary </a></dd> <dd data-v-705c3a15><a href="/site/code-review" data-v-705c3a15> Code-Review notes </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1652216606/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/state.js"></script><script src="/site/_nuxt/runtime.js" defer></script><script src="/site/_nuxt/pages/blog.js" defer></script><script src="/site/_nuxt/pages/blog/_year.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/site/_nuxt/commons/app.js" defer></script><script src="/site/_nuxt/vendors/app.js" defer></script><script src="/site/_nuxt/app.js" defer></script>
+  </body>
+</html>

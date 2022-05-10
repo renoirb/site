@@ -1,0 +1,511 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>Create a MariaDB cluster with replication over SSL with Salt Stack - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional"><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords" name="keywords" content="organization linux salt-stack cloud-computing"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/site/_nuxt/runtime.js" as="script"><link rel="preload" href="/site/_nuxt/commons/app.js" as="script"><link rel="preload" href="/site/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/site/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/site/_nuxt/app.css" as="style"><link rel="preload" href="/site/_nuxt/app.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/site/_nuxt/vendors/app.css"><link rel="stylesheet" href="/site/_nuxt/app.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1652216606/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1652216606/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-01b3ccea data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-01b3ccea><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-01b3ccea><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-01b3ccea><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-01b3ccea><path d="M4 6h16M4 12h16M4 18h16" data-v-01b3ccea></path></svg></button> <a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-01b3ccea><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-01b3ccea><a href="/site/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/site/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/site/resume" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/site/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-01b3ccea><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-01b3ccea><a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>Renoir Boulanger</a></div> <div data-v-01b3ccea><a href="/site/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Blog
+        </span></a><a href="/site/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Projects
+        </span></a><a href="/site/resume" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Resume
+        </span></a><a href="/site/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div class="grid"><div class="m-10 mt-5"><section class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/site/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2015" class="nuxt-link-active" data-v-ede238bc>2015</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2015/01" class="nuxt-link-active" data-v-ede238bc>01</a></li></ol></nav> <form class="justify-self-end sm:w-full position-relative flex items-center justify-center"><label for="search" class="sr-only">Search within blog:</label> <input id="search" type="search" autocomplete="off" name="q" placeholder="e.g. linux" class="focus:z-50 focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"></form></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-7dd28e96><div data-alert-type="warn" role="alert" class="disposition-parent app-alert-box my-4 bg-yellow-200 text-yellow-800 border-yellow-400" data-v-7dd28e96><!----> <!----> <div class="nuxt-content" data-v-7dd28e96><p data-v-7dd28e96>The following might still work if all software versions are still available in the exact versions ranges they were when initially published.
+Part of this article was written while maintaining WebPlatform’s Infrastructure maintenance. Mostly <a href="https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Replacing_a_VM/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96>in <em data-v-7dd28e96>WPD/Infrastructure/procedures/</em> <strong data-v-7dd28e96>Replacing a VM</strong></a>, and <a href="https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Managing_MySQL_replication/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96><em data-v-7dd28e96>WPD/Infrastructure/procedures/</em> <strong data-v-7dd28e96>Managing  MariaDB replication</strong></a></p></div></div> <div class="document document--item z-30" data-v-7dd28e96><div class="title page-title mb-4 font-serif text-2xl italic" data-v-7dd28e96><h1 data-v-7dd28e96>Create a MariaDB cluster with replication over <abbr lang="en" title="SSL as Secure Sockets Layer, which is the colloquial term used to refer to what is now called Transport Layer Security (TLS)">SSL</abbr> with Salt Stack</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-7dd28e96><time datetime="2015-01-28" data-v-7dd28e96>
+        Wednesday, January 28, 2015
+      </time> <a href="https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link" data-v-7dd28e96>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-7dd28e96><strong id="tags__216" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__216" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/salt-stack" class="no-underline">salt-stack</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/cloud-computing" class="no-underline">cloud-computing</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/site/blog/category/organization" class="no-underline">📁 organization</a></li></ul></div> <div class="body mt-10" data-v-7dd28e96><!----> <div class="nuxt-content" data-v-7dd28e96 data-v-7dd28e96><p data-v-7dd28e96 data-v-7dd28e96>While reworking WebPlatform infrastructure I had to rebuild a new database
+cluster.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>The objective of the cluster is to have more than one database server so that
+our web applications can make reads on any node in the cluster.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>While the system has replication, and I can send reads on any nodes on the
+cluster. There is a flaw in it too, any nodes can <em data-v-7dd28e96 data-v-7dd28e96>also</em> make writes; nothing is
+blocking it.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>My plan is to change this so that it would be OK to send writes to anybody in
+the cluster. There is now something called "Galera" that would allow me that.
+But that's outside of the scope of this article.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>In the current configuration, I'm purposefully not fixing it because my
+configuration management makes sure only the current master. So in this setup, I
+decided that the VM that gets writes has a specific mention of "masterdb" in the
+hostname.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>That way, its easy to see and it gives me the ability to change master at
+anytime if an emergency requires me to.</p>
+<h2 id="changing-mariadb-replication-master" data-v-7dd28e96 data-v-7dd28e96><a href="#changing-mariadb-replication-master" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Changing MariaDB replication master</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>Changing master could be done in the following order:</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Lock writes on masterdb databases</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Wait replication to catch up</li>
+<li data-v-7dd28e96 data-v-7dd28e96>On secondary database servers; remove replication configuration</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Tell all web apps to use new database master</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Remove database lock</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Setup new replication configuration to use new master</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>Thanks to the fact that I manage <strong data-v-7dd28e96 data-v-7dd28e96>everything</strong> through configruation management
+--including the web app configuration files-- its only a matter of applying the
+states everywhere in the cluster. That makes it fairly easy to do such an heavy
+move, even under stress.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>This post will be updated once I have completed the multi writes setup.</p>
+<h2 id="procedure" data-v-7dd28e96 data-v-7dd28e96><a href="#procedure" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Procedure</h2>
+<h3 id="assumptions" data-v-7dd28e96 data-v-7dd28e96><a href="#assumptions" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Assumptions</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>The rest of this article will assume the following:</p>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>You are running VMs on OpenStack, and do have credentials to make API calls
+to it</li>
+<li data-v-7dd28e96 data-v-7dd28e96>You have a Salt master already running</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Your salt master has at least <code data-v-7dd28e96 data-v-7dd28e96>python-novaclient</code> (<code data-v-7dd28e96 data-v-7dd28e96>nova</code> commands) available
+on it</li>
+<li data-v-7dd28e96 data-v-7dd28e96>You have your Open Stack credentials already loaded in your salt master's
+<code data-v-7dd28e96 data-v-7dd28e96>/etc/profile.d/</code> so you can use <code data-v-7dd28e96 data-v-7dd28e96>nova</code> directly</li>
+</ol>
+<h3 id="from-the-salt-master-initiate-a-few-vms-to-use-for-your-database-cluster" data-v-7dd28e96 data-v-7dd28e96><a href="#from-the-salt-master-initiate-a-few-vms-to-use-for-your-database-cluster" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>From the salt-master, initiate a few VMs to use for your database cluster</h3>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Before booting, ensure you have the following details in your OpenStack
+cluster and salt master;</li>
+</ol>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>You have a SSH key in your OpenStack cluster. Mine is called
+"renoirb-production" and my salt master user has the private key preinstalled</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>You have a <code data-v-7dd28e96 data-v-7dd28e96>userdata.txt</code> file that has settings that points to your salt
+master</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>cat</span> /srv/opsconfigs/userdata.txt
+</code></pre></div>
+<div data-alert-type="info" role="alert" class="disposition-parent app-alert-box bg-blue-200 text-blue-800 border-blue-400" data-v-7dd28e96><header class="disposition-item">While migrating this article...</header> <!----> 
+<p data-v-7dd28e96>I've noticed that this <code data-v-7dd28e96>userdata.txt</code> file I've initially written for this
+article has then been part of <a href="https://github.com/webplatform/ops/blob/f6e0390a/salt-master" rel="nofollow noopener noreferrer" target="_blank" title="salt-master/* on GitHub.com/webplatform/ops as of 2015-06-08" data-v-7dd28e96>WebPlatform’s "ops" repository</a>
+from which I was (2015) using to work locally. In this repo, there was the
+<a href="https://github.com/webplatform/ops/blob/f6e0390a/salt-master/salt-userdata.yml" rel="nofollow noopener noreferrer" target="_blank" title="salt-master/salt-userdata.yml on GitHub.com/webplatform/ops as of 2015-06-08" data-v-7dd28e96><code data-v-7dd28e96>salt-master/salt-userdata.yml</code></a>.</p>
+</div>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-yaml" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token comment" data-v-7dd28e96 data-v-7dd28e96>#cloud-config</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>manage_etc_hosts</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token boolean important" data-v-7dd28e96 data-v-7dd28e96>false</span> <span class="token comment" data-v-7dd28e96 data-v-7dd28e96># Has to be set to false for everybody. Otherwise we need a DNS</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>manage-resolv-conf</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token boolean important" data-v-7dd28e96 data-v-7dd28e96>false</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>locale</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> en_US.UTF<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>8</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>timezone</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> America/New_York
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>package_upgrade</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token boolean important" data-v-7dd28e96 data-v-7dd28e96>true</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>package_update</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token boolean important" data-v-7dd28e96 data-v-7dd28e96>true</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>package_reboot_if_required</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token boolean important" data-v-7dd28e96 data-v-7dd28e96>true</span>
+
+<span class="token comment" data-v-7dd28e96 data-v-7dd28e96>#</span>
+<span class="token comment" data-v-7dd28e96 data-v-7dd28e96># This is run at EVERY boot, good to ensure things are at the right place</span>
+<span class="token comment" data-v-7dd28e96 data-v-7dd28e96># IMPORTANT, make sure that `10.10.10.22` is a valid local DNS server.</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>bootcmd</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> grep <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>q <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>e 'nameserver' /etc/resolvconf/resolv.conf.d/head <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>|</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>|</span> printf
+    "nameserver 10.10.10.22\n" <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>></span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>></span> /etc/resolvconf/resolv.conf.d/head
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> grep <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>q <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>e 'wpdn' /etc/resolvconf/resolv.conf.d/base <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>|</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>|</span> printf "search
+    production.wpdn\ndomain production.wpdn\nnameserver 8.8.8.8" <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>></span>
+    /etc/resolvconf/resolv.conf.d/base
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> grep <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>q <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>e 'wpdn' /etc/resolv.conf <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>|</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>|</span> resolvconf <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>u
+
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>runcmd</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> sed <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>i "s/127.0.0.1 localhost/127.0.1.1 $(hostname).production.wpdn
+    $(hostname)\n127.0.0.1 localhost/" /etc/hosts
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> apt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>get install software<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>properties<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>common python<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>software<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>properties
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> add<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>apt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>repository <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>y ppa<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>saltstack/salt
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> apt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>get update
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> apt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>get <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>y upgrade
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> apt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>get <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>y autoremove
+
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>packages</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> salt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>minion
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> salt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>common
+<span class="token comment" data-v-7dd28e96 data-v-7dd28e96># vim: et ts=2 sw=2 ft=yaml syntax=yaml</span>
+</code></pre></div>
+</li>
+</ul>
+<ol start="2" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Create two <code data-v-7dd28e96 data-v-7dd28e96>db</code>-type VMs</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>nova boot <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+     --image Ubuntu-14.04-Trusty <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+     --user-data /srv/opsconfigs/userdata.txt <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+     --key_name renoirb-production <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+     --flavor lightspeed <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+     --security-groups default <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+     db1-masterdb
+
+ nova boot <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+      --image Ubuntu-14.04-Trusty <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+      --user-data /srv/opsconfigs/userdata.txt <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+      --key_name renoirb-production <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+      --flavor supersonic <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+      --security-groups default <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+      db2
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Accept them to the salt</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt-key -y -a db1-masterdb
+salt-key -y -a db2
+</code></pre></div>
+</li>
+</ol>
+<p data-v-7dd28e96 data-v-7dd28e96>As an aside. Imagine you want to run dependencies automatically once a VM is
+part of your salt-master. For example, adding its private IP address in a local
+<em data-v-7dd28e96 data-v-7dd28e96>Redis</em> or <em data-v-7dd28e96 data-v-7dd28e96>Etcd</em> live configuration object. One could create a <a href="https://docs.saltstack.com/en/latest/topics/reactor/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Salt
+"<em data-v-7dd28e96 data-v-7dd28e96>Reactor</em>"</a> and make <a href="https://gist.github.com/WebPlatformDocs/563cb12326b92b22a452" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>sure the data is refreshed. This gist is a good
+starting point</a> 4. Wait the VM build to finish and get their private IP
+addresses</p>
+<ol start="4" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Wait the VM build to finish and get their private IP addresses</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>nova list <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>grep</span> db
+
+  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>. <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> db1-masterdb <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> ACTIVE  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> Running     <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> private-network<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>10.10</span>.10.73 <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span>
+  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>. <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> db2          <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> ACTIVE  <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> Running     <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span> private-network<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token number" data-v-7dd28e96 data-v-7dd28e96>10.10</span>.10.74 <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>|</span>
+</code></pre></div>
+<figure class="app-image is-loading has-image" style="float:unset" data-v-7533d412 data-v-7dd28e96><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/webplatform-openstack-cluster-2014-10-06.png" alt="OpenStack nova command" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/webplatform-openstack-cluster-2014-10-06.png" class="object-cover w-full rounded" data-v-7533d412> <!----></figure>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Add them to the pillars. Note that the part of the name "masterdb" is what
+Salt states uses to know which one will get the writes to. Note that in the
+end, the web apps configs will use the private IP address. Its quicker to
+generate pages if the backend doesn't need to make name resolution each time
+it makes database queries. This is why we have to reflect the pillars. Ensure
+the following structure exists in the file.</p>
+<div data-alert-type="info" role="alert" class="disposition-parent app-alert-box bg-blue-200 text-blue-800 border-blue-400" data-v-7dd28e96><header class="disposition-item">While migrating this article...</header> <!----> 
+<p data-v-7dd28e96>The following file is now <strong data-v-7dd28e96>GitHub.com/WebPlatform/salt-pillar</strong> project,
+<a href="https://github.com/webplatform/salt-pillar/tree/3d718578/infra" rel="nofollow noopener noreferrer" target="_blank" title="infra/* on GitHub.com/webplatform/salt-pillar as of 2015-06-08" data-v-7dd28e96>and looked like this</a></p>
+</div>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-yaml" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token comment" data-v-7dd28e96 data-v-7dd28e96># Edit /srv/pillar/infra/init.sls at the following blocks</span>
+<span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>infra</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+  <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>hosts_entries</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+    <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>masterdb</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> 10.10.10.73
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Refer to the right IP address in the configuration file with a similar salt
+<code data-v-7dd28e96 data-v-7dd28e96>pillar.get</code> reference (<a href="https://github.com/webplatform/salt-states/blob/20150608/code/files/blog/local.php.jinja" rel="nofollow noopener noreferrer" target="_blank" title="code/files/blog/local.php.jinja on GitHub.com/webplatform/salt-states as of 2015-06-08" data-v-7dd28e96 data-v-7dd28e96>config template</a>, <a href="https://github.com/webplatform/salt-states/blob/20150608/code/blog.sls#L48-L55" rel="nofollow noopener noreferrer" target="_blank" title="code/blog.sls on GitHub.com/webplatform/salt-states as of 2015-06-08" data-v-7dd28e96 data-v-7dd28e96>state to write
+config template to filesystem</a>).</p>
+</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-yaml" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>/srv/webplatform/blog/wp-config.php</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+  <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>file.managed</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+    <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>source</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> salt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>//code/files/blog/wp<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>config.php.jinja
+    <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>template</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> jinja
+    <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>user</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> www<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>data
+    <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>group</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> www<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>data
+    <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>context</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+        <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>db_creds</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span> salt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>'pillar.get'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>('accounts<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>wiki<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>db') <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span>
+        <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>masterdb_ip</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span> salt<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>[</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>'pillar.get'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>]</span>('infra<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>hosts_entries<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>masterdb') <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span>
+    <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>require</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+      <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> <span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>cmd</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span> rsync<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span>blog
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>... and the <code data-v-7dd28e96 data-v-7dd28e96>wp-config.php.jinja</code></p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-php" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token php language-php" data-v-7dd28e96 data-v-7dd28e96><span class="token delimiter important" data-v-7dd28e96 data-v-7dd28e96>&lt;?php</span>
+<span class="token shell-comment comment" data-v-7dd28e96 data-v-7dd28e96>## Managed by Salt Stack, please DO NOT TOUCH, or ALL CHANGES WILL be LOST!</span>
+<span class="token shell-comment comment" data-v-7dd28e96 data-v-7dd28e96>## source {{ source }}</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>define</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token single-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>'DB_CHARSET'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>  <span class="token double-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>"utf8"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>define</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token single-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>'DB_COLLATE'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>  <span class="token double-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>""</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>define</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token single-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>'DB_HOST'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>     <span class="token double-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>"{{ masterdb_ip|default('127.0.0.1')    }}"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>define</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token single-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>'DB_NAME'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>     <span class="token double-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>"{{ db_creds.database|default('wpblog') }}"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>define</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token single-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>'DB_USER'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>     <span class="token double-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>"{{ db_creds.username|default('root')   }}"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>define</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>(</span><span class="token single-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>'DB_PASSWORD'</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span> <span class="token double-quoted-string string" data-v-7dd28e96 data-v-7dd28e96>"{{ db_creds.password|default('')       }}"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>)</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>;</span>
+</span></code></pre></div>
+<ol start="7" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Refresh the pillars, rebuild the salt master <code data-v-7dd28e96 data-v-7dd28e96>state.highstate</code>, and test it
+out.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt-call saltutil.sync_all
+salt salt state.highstate
+
+salt-call pillar.get infra:hosts_entries:masterdb
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> local:
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>   <span class="token number" data-v-7dd28e96 data-v-7dd28e96>10.10</span>.10.73
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Make sure the VMs has the same version of salt as you do</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> salt-call test.version
+ <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> local:
+ <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2014.7</span>.0
+
+ salt db<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>* test.version
+ <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> db2:
+ <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2014.7</span>.0
+ <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> db1-masterdb:
+ <span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     <span class="token number" data-v-7dd28e96 data-v-7dd28e96>2014.7</span>.0
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Kick the VMs installation</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt db<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>* state.highstate
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Highstate takes a while to run, but once you are done, you should be able to
+work with them with the remaining of this tutorial</p>
+</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt -G <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'roles:db'</span> mysql.version
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> db2:
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     <span class="token number" data-v-7dd28e96 data-v-7dd28e96>10.1</span>.2-MariaDB-1~trusty-wsrep-log
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> db1-masterdb:
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     <span class="token number" data-v-7dd28e96 data-v-7dd28e96>10.1</span>.2-MariaDB-1~trusty-wsrep-log
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Each db-type VM MySQL/MariaDB/Percona server will have a <em data-v-7dd28e96 data-v-7dd28e96>different</em> database
+maintenance users defined in <code data-v-7dd28e96 data-v-7dd28e96>/etc/mysql/debian.cnf</code>.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Make sure you don't overwrite them unless you import everything all at once,
+including the users and their grants. 11. Check that each db VMs has their SSL
+certificate generated by Salt</p>
+<ol start="11" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Check that each db VMs has their SSL certificate generated by Salt</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt -G <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'roles:db'</span> cmd.run <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'ls /etc/mysql | grep pem'</span>
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> db2:
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     ca-cert.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     ca-key.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     client-cert.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     client-key.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     client-req.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     server-cert.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     server-key.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     server-req.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span> db1-masterdb:
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     ca-cert.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     ca-key.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     client-cert.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     client-key.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     client-req.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     server-cert.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     server-key.pem
+<span class="token operator" data-v-7dd28e96 data-v-7dd28e96>></span>     server-req.pem
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Each file is a certificate so they can use to make replication through SSL.</p>
+<h3 id="now-on-each-database-server" data-v-7dd28e96 data-v-7dd28e96><a href="#now-on-each-database-server" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Now on each database server;</h3>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Connect to both db nodes using the salt as a Jump Host</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>ssh</span> masterdb.production.wpdn
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>ssh</span> db2.production.wpdn
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Get to the MySQL/MariaDB/Percona prompt on each VMs.</p>
+</li>
+</ol>
+<p data-v-7dd28e96 data-v-7dd28e96>If you are used with terminal screens that allows to keep sessions running even
+if you get disconnected, that would be ideal. We never know if the connection
+hangs.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>On WebPlatform system we do have <code data-v-7dd28e96 data-v-7dd28e96>screen</code> but <code data-v-7dd28e96 data-v-7dd28e96>tmux</code> can do too.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>mysql
+</code></pre></div>
+<ol start="3" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Check if SSL is enabled on both MySQL/MariaDB/Percona servers</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>> MariaDB [(none)]> SHOW VARIABLES like '%ssl%';
+> +---------------+----------------------------+
+> | Variable_name | Value                      |
+> +---------------+----------------------------+
+> | have_openssl  | YES                        |
+> | have_ssl      | YES                        |
+> | ssl_ca        | /etc/mysql/ca-cert.pem     |
+> | ssl_capath    |                            |
+> | ssl_cert      | /etc/mysql/server-cert.pem |
+> | ssl_cipher    | DHE-RSA-AES256-SHA         |
+> | ssl_crl       |                            |
+> | ssl_crlpath   |                            |
+> | ssl_key       | /etc/mysql/server-key.pem  |
+> +---------------+----------------------------+
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Generate SSL certificates for MySQL/MariaDB/Percona server, see <a href="https://gist.github.com/WebPlatformDocs/dee3c76a88b3c44da564" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>this
+gist</a> on how to do it.</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Places to double check; To see which config keys sets what's shown in the
+previous screen, take a look in the VMs <code data-v-7dd28e96 data-v-7dd28e96>/etc/mysql/conf.d/</code> folders with
+similar entries.</p>
+</li>
+</ol>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>bind-address</code> is what allows us to communicate between servers, before MySQL
+5.5 we had <code data-v-7dd28e96 data-v-7dd28e96>skip-networking</code> but now only a <code data-v-7dd28e96 data-v-7dd28e96>bind-address</code> is sufficient. Make
+sure that your security groups allows only local network connections though.</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>server_id</code> MUST be with a different number for each nodes. Make sure no
+server has the same number.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-ini" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token selector" data-v-7dd28e96 data-v-7dd28e96>[mysqld]</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>bind-address</span> <span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span> 0.0.0.0</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>log-basename</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>mariadbrepl</span>
+log-bin
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>binlog-format</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>row</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>server_id</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>1</span>
+ssl
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>ssl-cipher</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>DHE-RSA-AES256-SHA</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>ssl-ca</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>/etc/mysql/ca-cert.pem</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>ssl-cert</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>/etc/mysql/server-cert.pem</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>ssl-key</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>/etc/mysql/server-key.pem</span>
+<span class="token selector" data-v-7dd28e96 data-v-7dd28e96>[client]</span>
+ssl
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>ssl-cert</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>/etc/mysql/client-cert.pem</span>
+<span class="token constant" data-v-7dd28e96 data-v-7dd28e96>ssl-key</span><span class="token attr-value" data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>=</span>/etc/mysql/client-key.pem</span>
+</code></pre></div>
+</li>
+</ul>
+<ol start="6" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>From the database master</strong> (a.k.a "masterdb"), Get the replication log
+position; We'll need the <code data-v-7dd28e96 data-v-7dd28e96>File</code> and <code data-v-7dd28e96 data-v-7dd28e96>Position</code> values to setup the
+replication node.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>MariaDB [(none)]> show master status;
+> +------------------------+----------+--------------+------------------+
+> | File                   | Position | Binlog_Do_DB | Binlog_Ignore_DB |
+> +------------------------+----------+--------------+------------------+
+> | mariadbrepl-bin.000002 |      644 |              |                  |
+> +------------------------+----------+--------------+------------------+
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Configure the <code data-v-7dd28e96 data-v-7dd28e96>masterdb</code> to accept replication users. <strong data-v-7dd28e96 data-v-7dd28e96>From the salt
+master</strong></p>
+</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt -G <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'roles:masterdb'</span> mysql.user_create replication_user <span class="token string" data-v-7dd28e96 data-v-7dd28e96>'%'</span> foobarbaz
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>NOTE: My salt states script creates a grain in <code data-v-7dd28e96 data-v-7dd28e96>/etc/salt/grains</code> with the
+following data;</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-yaml" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token key atrule" data-v-7dd28e96 data-v-7dd28e96>roles</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>:</span>
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>-</span> masterdb
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Alternatively, you could call the VM <code data-v-7dd28e96 data-v-7dd28e96>db1-masterdb</code>, use a <a href="https://gist.github.com/renoirb/b2e0222ad52e5d453298" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>small python script
+that'll parse the information for you and make it a <strong data-v-7dd28e96 data-v-7dd28e96>grain</strong>
+automatically</a>. 8. <strong data-v-7dd28e96 data-v-7dd28e96>Back to the masterdb VM</strong>, check if the user exists,
+ensure SSL is required</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>MariaDB [(none)]> show grants for 'replication_user';
+> +---------------------------------------------------------------------------------------+
+> | Grants for replication_user@%                                                         |
+> +---------------------------------------------------------------------------------------+
+> | GRANT REPLICATION SLAVE ON *.* TO 'replication_user'@'%' IDENTIFIED BY PASSWORD '...' |
+> +---------------------------------------------------------------------------------------+
+
+MariaDB [(none)]> GRANT REPLICATION SLAVE ON *.* TO 'replication_user'@'%.local.wpdn' REQUIRE SSL;
+MariaDB [(none)]> GRANT USAGE ON *.* TO 'replication_user'@'%' REQUIRE SSL;
+
+MariaDB [(none)]> SELECT User,Host,Repl_slave_priv,Repl_client_priv,ssl_type,ssl_cipher from mysql.user where User = 'replication_user';
+> +------------------+--------------+-----------------+------------------+----------+
+> | User             | Host         | Repl_slave_priv | Repl_client_priv | ssl_type |
+> +------------------+--------------+-----------------+------------------+----------+
+> | replication_user | %.local.wpdn | Y               | N                | ANY      |
+> +------------------+--------------+-----------------+------------------+----------+
+</code></pre></div>
+<ol start="9" data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>On the secondary db VM, in mysql prompt, setup the initial <code data-v-7dd28e96 data-v-7dd28e96>CHANGE MASTER</code>
+statement;</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>CHANGE MASTER TO
+  MASTER_HOST='masterdb.local.wpdn',
+  MASTER_USER='replication_user',
+  MASTER_PASSWORD='foobarbaz',
+  MASTER_PORT=3306,
+  MASTER_LOG_FILE='mariadbrepl-bin.000002',
+  MASTER_LOG_POS=644,
+  MASTER_CONNECT_RETRY=10,
+  MASTER_SSL=1,
+  MASTER_SSL_CA='/etc/mysql/ca-cert.pem',
+  MASTER_SSL_CERT='/etc/mysql/client-cert.pem',
+  MASTER_SSL_KEY='/etc/mysql/client-key.pem';
+</code></pre></div>
+</li>
+</ol>
+<h3 id="checking-if-it-worked" data-v-7dd28e96 data-v-7dd28e96><a href="#checking-if-it-worked" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Checking if it worked</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>From one of the secondary servers, look for success indicators:</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>Seconds_Behind_Master</code> says <strong data-v-7dd28e96 data-v-7dd28e96>0</strong>,</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>Slave_IO_State</code> says <strong data-v-7dd28e96 data-v-7dd28e96>Waiting for master to send event</strong></p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>MariaDB [wpstats]> show slave status\G
+*************************** 1. row ***************************
+               Slave_IO_State: Waiting for master to send event
+                  Master_Host: masterdb.local.wpdn
+                  Master_User: replication_user
+                  Master_Port: 3306
+                Connect_Retry: 10
+              Master_Log_File: mariadbrepl-bin.000066
+          Read_Master_Log_Pos: 19382112
+               Relay_Log_File: mariadbrepl-relay-bin.000203
+                Relay_Log_Pos: 19382405
+        Relay_Master_Log_File: mariadbrepl-bin.000066
+             Slave_IO_Running: Yes
+            Slave_SQL_Running: Yes
+              Replicate_Do_DB:
+          Replicate_Ignore_DB:
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table:
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 19382112
+              Relay_Log_Space: 19382757
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: Yes
+           Master_SSL_CA_File: /etc/mysql/ca-cert.pem
+           Master_SSL_CA_Path:
+              Master_SSL_Cert: /etc/mysql/client-cert.pem
+            Master_SSL_Cipher:
+               Master_SSL_Key: /etc/mysql/client-key.pem
+        Seconds_Behind_Master: 0
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error:
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 1
+               Master_SSL_Crl: /etc/mysql/ca-cert.pem
+           Master_SSL_Crlpath:
+                   Using_Gtid: No
+                  Gtid_IO_Pos:
+      Replicate_Do_Domain_Ids:
+  Replicate_Ignore_Domain_Ids:
+1 row in set (0.00 sec)
+</code></pre></div>
+</li>
+</ul>
+<h3 id="managing-users" data-v-7dd28e96 data-v-7dd28e96><a href="#managing-users" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Managing users</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>In the end, since replication is active, you can add users to your system and
+all nodes will get the privileges.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>The way I work is that I can use Salt stack states to add privileges in my
+states (more details soon) or I can use a few salt commands from my salt master
+and send them to the database <code data-v-7dd28e96 data-v-7dd28e96>masterdb</code> VM.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>salt -G 'roles:masterdb' mysql.db_create 'accounts_oauth' 'utf8' 'utf8_general_ci'
+salt -G 'roles:masterdb' mysql.user_create 'accounts' '%' 'barfoo'
+salt -G 'roles:masterdb' mysql.grant_add 'ALL PRIVILEGES' 'accounts_oauth.*' 'accounts' ‘%’
+</code></pre></div>
+<h3 id="references" data-v-7dd28e96 data-v-7dd28e96><a href="#references" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>References</h3>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="http://dev.mysql.com/doc/refman/5.7/en/replication-solutions-ssl.html" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>http://dev.mysql.com/doc/refman/5.7/en/replication-solutions-ssl.html</a></li>
+<li data-v-7dd28e96 data-v-7dd28e96><a href="https://mariadb.com/kb/en/mariadb/documentation/managing-mariadb/replication/standard-replication/setting-up-replication/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>https://mariadb.com/kb/en/mariadb/documentation/managing-mariadb/replication/standard-replication/setting-up-replication/</a></li>
+</ul></div> <div class="clearfix" data-v-7dd28e96></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-4d2003f9 data-v-7dd28e96><div class="text-left" data-v-4d2003f9><a href="/site/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Quelques bouts de code pour automatiser le déploiement
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/site/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Install PHP5 Memcached PECL extension and have it support igbinary
+    </a></div></div></div></div></div></div></div></div></section></div></div></main> <div class="app-footer--component disposition-parent w-full bottom" data-v-705c3a15><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-705c3a15><dl class="contact items-item disposition-item" data-v-705c3a15><dt class="mb-4 font-serif text-2xl" data-v-705c3a15>Contact</dt> <dd data-v-705c3a15>Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional</dd> <dd class="underline" data-v-705c3a15><a href="mailto:contribs@renoirboulanger.com" data-v-705c3a15>contribs@renoirboulanger.com</a></dd> <dd class="font-mono" data-v-705c3a15>v1.0.0</dd> <span class="inline-flex" data-v-705c3a15><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-705c3a15><dl lang="fr-CA" class="see-also" data-v-705c3a15><dt data-v-705c3a15>Voir aussi…</dt> <dd data-v-705c3a15><a href="/site/ligne-editoriale" data-v-705c3a15> Ligne éditoriale </a></dd> <dd data-v-705c3a15><a href="/site/projets" data-v-705c3a15> Projets </a></dd> <dd data-v-705c3a15><a href="/site/glossary" data-v-705c3a15> Glossary </a></dd> <dd data-v-705c3a15><a href="/site/code-review" data-v-705c3a15> Code-Review notes </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1652216606/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/state.js"></script><script src="/site/_nuxt/runtime.js" defer></script><script src="/site/_nuxt/pages/blog.js" defer></script><script src="/site/_nuxt/pages/blog/_year.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/site/_nuxt/commons/app.js" defer></script><script src="/site/_nuxt/vendors/app.js" defer></script><script src="/site/_nuxt/app.js" defer></script>
+  </body>
+</html>

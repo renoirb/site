@@ -1,0 +1,376 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>Run a NodeJS process through forever from within a Docker container - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional"><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords" name="keywords" content="projects open-source operations procedure webplatform"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" href="/site/_nuxt/runtime.js" as="script"><link rel="preload" href="/site/_nuxt/commons/app.js" as="script"><link rel="preload" href="/site/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/site/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/site/_nuxt/app.css" as="style"><link rel="preload" href="/site/_nuxt/app.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/site/_nuxt/vendors/app.css"><link rel="stylesheet" href="/site/_nuxt/app.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1652216606/blog/2015/05/run-nodejs-process-forever-within-docker-container/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1652216606/blog/2015/05/run-nodejs-process-forever-within-docker-container/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-01b3ccea data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-01b3ccea><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-01b3ccea><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-01b3ccea><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-01b3ccea><path d="M4 6h16M4 12h16M4 18h16" data-v-01b3ccea></path></svg></button> <a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-01b3ccea><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-01b3ccea><a href="/site/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/site/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/site/resume" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/site/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-01b3ccea><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-01b3ccea><a href="/site/" class="identity__text nuxt-link-active" data-v-01b3ccea>Renoir Boulanger</a></div> <div data-v-01b3ccea><a href="/site/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Blog
+        </span></a><a href="/site/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Projects
+        </span></a><a href="/site/resume" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          Resume
+        </span></a><a href="/site/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-01b3ccea><span class="mr-2" data-v-01b3ccea>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div class="grid"><div class="m-10 mt-5"><section class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/site/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2015" class="nuxt-link-active" data-v-ede238bc>2015</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2015/05" class="nuxt-link-active" data-v-ede238bc>05</a></li></ol></nav> <form class="justify-self-end sm:w-full position-relative flex items-center justify-center"><label for="search" class="sr-only">Search within blog:</label> <input id="search" type="search" autocomplete="off" name="q" placeholder="e.g. linux" class="focus:z-50 focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"></form></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-7dd28e96><div data-alert-type="warn" role="alert" class="disposition-parent app-alert-box my-4 bg-yellow-200 text-yellow-800 border-yellow-400" data-v-7dd28e96><!----> <!----> <div class="nuxt-content" data-v-7dd28e96></div></div> <div class="document document--item z-30" data-v-7dd28e96><div class="title page-title mb-4 font-serif text-2xl italic" data-v-7dd28e96><h1 data-v-7dd28e96>Run a NodeJS process through forever from within a Docker container</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-7dd28e96><time datetime="2015-05-12" data-v-7dd28e96>
+        Tuesday, May 12, 2015
+      </time> <a href="https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link" data-v-7dd28e96>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-7dd28e96><strong id="tags__196" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__196" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/open-source" class="no-underline">open-source</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/operations" class="no-underline">operations</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/procedure" class="no-underline">procedure</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/webplatform" class="no-underline">webplatform</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/site/blog/category/projects" class="no-underline">📁 projects</a></li></ul></div> <div class="body mt-10" data-v-7dd28e96><figure class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 z-30 float-none pb-5 pl-0 mx-auto mt-1 app-image is-loading has-image" data-v-7533d412 data-v-7dd28e96><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-spec-rangefinder.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-spec-rangefinder.png" class="object-cover w-full rounded" data-v-7533d412> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-7533d412><span class="figcaption-contents" data-v-7533d412> </span> <div class="nuxt-content" data-v-7533d412 data-v-7dd28e96><p data-v-7533d412 data-v-7dd28e96>Specification Document for RangeFinder API</p></div></figcaption></figure> <div class="nuxt-content" data-v-7dd28e96 data-v-7dd28e96><p data-v-7dd28e96 data-v-7dd28e96>One of the components that I worked on <a href="/site/blog/tag/webplatform" data-v-7dd28e96>during my time on the WebPlatform
+project</a>, <a href="https://github.com/webspecs/publican" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Publican</a>, that I had to manage has many moving parts. The
+end product of that component is basically static HTML documents that ends up on
+<a href="https://specs.webplatform.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>specs.webplatform.org</a>.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Since we need to have many packages installed in very specific version, and
+automating the installation wouldn't bring any more benefit than being
+self-contained, I thought it would be best to go through the steps of converting
+it into a Docker container.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>The following is a procedure I wrote to teach <a href="https://www.w3.org/People/#rberjon" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>my colleague</a>, <a href="http://berjon.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Robin
+Berjon</a>, how to run his system called <a href="https://github.com/webspecs/publican" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Publican</a> from within a Docker
+container. Publican is basically a GitHub hook listener that generates specs
+written to be parsed by <a href="https://github.com/w3c/respec" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>ReSpec</a> or <a href="https://github.com/tabatkins/bikeshed" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Bikeshed</a></p>
+<h2 id="run-publican-inside-docker" data-v-7dd28e96 data-v-7dd28e96><a href="#run-publican-inside-docker" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Run <em data-v-7dd28e96 data-v-7dd28e96>publican</em> inside Docker</h2>
+<p data-v-7dd28e96 data-v-7dd28e96>What this'll do is basically build a VM that'll run a Docker container. The
+container will write in files outside of it.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>You'll quickly notice that the paths will look the same, its confusing, sorry
+about that. Fortunately for us, the paths in the procedure are the ones that
+will be mounted through Docker Volume (the <code data-v-7dd28e96 data-v-7dd28e96>-v</code> option when you call <code data-v-7dd28e96 data-v-7dd28e96>docker</code>)
+and will, in the end, be the same files.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Once you have a Docker container running on a VM, it'll replicate how a
+production VM will run the tasks. Since we know where the container will write
+files, we'll have our frontend servers to forward requests to publican, and
+serve files it generated.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Doing all this removes the need to do any rsync. NGINX within the VM that'll run
+Docker will take care of serving static files, and frontend server will expose
+it to the public.</p>
+<h3 id="steps" data-v-7dd28e96 data-v-7dd28e96><a href="#steps" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Steps</h3>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Have <a href="https://www.vagrantup.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Vagrant</a> and <a href="https://www.virtualbox.org/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>VirtualBox</a> installed</li>
+<li data-v-7dd28e96 data-v-7dd28e96>Follow what's in <a href="https://github.com/renoirb/salt-basesystem" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>renoirb/salt-basesystem README.md</a></li>
+</ol>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Make sure you follow <a href="https://github.com/renoirb/salt-basesystem#vagrant-sandbox-utilities" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Vagrant Sandbox utilities</a> part</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> vagrant <span class="token function" data-v-7dd28e96 data-v-7dd28e96>ssh</span>
+ <span class="token function" data-v-7dd28e96 data-v-7dd28e96>sudo</span> salt-call state.highstate
+ <span class="token function" data-v-7dd28e96 data-v-7dd28e96>sudo</span> salt-call state.sls vagrantsandbox.docker
+ <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>exit</span>
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Reboot the VM by doing <code data-v-7dd28e96 data-v-7dd28e96>vagrant reload</code></p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> vagrant reload
+</code></pre></div>
+</li>
+</ul>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>No need</strong> to follow what's in <a href="https://github.com/webplatform/publican/blob/task-based-docker/DOCKER.md" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>webplatform/publican DOCKER.md file</a>.
+Those are notes to show how to build a container. For this time, we'll <a href="https://registry.hub.docker.com/u/webspecs/publican/" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>use a
+container I already built and pushed on <strong data-v-7dd28e96 data-v-7dd28e96>Docker hub</strong></a>!</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Setup what's required to run the container</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> vagrant <span class="token function" data-v-7dd28e96 data-v-7dd28e96>ssh</span>
+</code></pre></div>
+</li>
+</ol>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Prepare the folders;</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>sudo</span> -s
+ <span class="token function" data-v-7dd28e96 data-v-7dd28e96>su</span> webapps
+ <span class="token function" data-v-7dd28e96 data-v-7dd28e96>id</span>
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>You should see</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> uid=990(webapps) gid=990(webapps) groups=990(webapps),33(www-data),998(docker)
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Prepare the folders</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>cd</span> /srv/webapps <span class="token function" data-v-7dd28e96 data-v-7dd28e96>mkdir</span> publican/data <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>cd</span> publican
+</code></pre></div>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>If all went well so far; you should be able to do <code data-v-7dd28e96 data-v-7dd28e96>docker ps</code> as the
+<code data-v-7dd28e96 data-v-7dd28e96>webapps</code> user. Otherwise reboot and/or run <code data-v-7dd28e96 data-v-7dd28e96>salt-call</code> with both
+<code data-v-7dd28e96 data-v-7dd28e96>state.highstate</code> <code data-v-7dd28e96 data-v-7dd28e96>state.sls vagrantsandbox.docker</code> states. There should be
+nothing left to do.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>docker <span class="token function" data-v-7dd28e96 data-v-7dd28e96>ps</span>
+
+CONTAINER ID IMAGE COMMAND CREATED
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>..</span>.
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Pull the publican Docker image I built (it'll take about 10 minutes)</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> docker pull webspecs/publican:wip
+</code></pre></div>
+</li>
+</ul>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>Copy the other files in this Gist in your local coputer where you cloned the
+<strong data-v-7dd28e96 data-v-7dd28e96>salt-basesystem</strong> repository. From that folder you can move them inside the
+Vagrant VM where you need.</li>
+</ol>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Copy publican config</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> <span class="token function" data-v-7dd28e96 data-v-7dd28e96>cp</span> /vagrant/config.json data/
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><del data-v-7dd28e96 data-v-7dd28e96>Download Bikeshed stuff that i didn't figure out yet what's important to
+keep, extract it in <code data-v-7dd28e96 data-v-7dd28e96>/srv/webapps/publican/spec-data/</code></del>.</p>
+ <div data-alert-type="info" role="alert" class="disposition-parent app-alert-box bg-blue-200 text-blue-800 border-blue-400" data-v-7dd28e96><header class="disposition-item">Archive mentioned no longer exists</header> <!----> 
+ The archive used in the initial procedure no longer exists, it was a series of W3C specification Git repository working copies that Publican was expecting.
+ </div>
+ <figure class="app-image is-loading has-image" data-v-7533d412 data-v-7dd28e96><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-preview.png" alt="A W3C Specification preview where we can see on the left the specification, and on the right the source highlighting changes in the source" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-preview.png" class="object-cover w-full rounded" data-v-7533d412> <!----></figure>
+ <figure class="app-image is-loading has-image" data-v-7533d412 data-v-7dd28e96><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" class="object-cover w-full rounded" data-v-7533d412> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-7533d412><span class="figcaption-contents" data-v-7533d412>Annotated screenshot, when changing a file a hook is called and regenerates the specification</span> 
+</figcaption></figure>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>You can open up another terminal session and connect to the Vagrant VM
+<code data-v-7dd28e96 data-v-7dd28e96>vagrant ssh</code> (e.g. if you don't use <code data-v-7dd28e96 data-v-7dd28e96>tmux</code> or <code data-v-7dd28e96 data-v-7dd28e96>screen</code>)</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>mkdir</span> -p spec-data/readonly/
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>mkdir</span> -p data/<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span>gits,logs,publish,queue,temp<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span>
+</code></pre></div>
+</li>
+</ul>
+<ol data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Run the container</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>docker run -it --rm -v <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"<span class="token variable" data-v-7dd28e96 data-v-7dd28e96><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$(</span><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>pwd</span><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>)</span></span>/data"</span>:/srv/webapps/publican/data <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+       -v <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"<span class="token variable" data-v-7dd28e96 data-v-7dd28e96><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$(</span><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>pwd</span><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>)</span></span>/spec-data"</span>:/opt/bikeshed/bikeshed/spec-data <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+       -p <span class="token number" data-v-7dd28e96 data-v-7dd28e96>7002</span>:7002 webspecs/publican:wip
+</code></pre></div>
+</li>
+</ol>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>If you see the following, you're in the Docker container!!</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>webapps@2f33f5c6e183:~$
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Initiate the empty shell we just created (it'll create stuff in the <code data-v-7dd28e96 data-v-7dd28e96>data/</code>
+folder <em data-v-7dd28e96 data-v-7dd28e96>outside</em> of the container)</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>publican.js init
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>It should look like this
+</p><figure class="app-image is-loading has-image" data-v-7533d412 data-v-7dd28e96><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-init.png" alt="A terminal window with a few commands and a build process status and green lines, no errors" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-init.png" class="object-cover w-full rounded" data-v-7533d412> <!----></figure><p></p>
+</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96><img alt="publican-init" src="/wp-content/uploads/6ec2800223d2c41499e9f30744d397293fd9cca0.png" data-v-7dd28e96 data-v-7dd28e96></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Once done, exit the container. Notice that by doing this, you lose the state
+of the VM and anything that has been written in the container. But, since we
+use volumes (notice the <code data-v-7dd28e96 data-v-7dd28e96>-v /host/path:/container/path</code>), we actually wrote
+<em data-v-7dd28e96 data-v-7dd28e96>outside</em> of the container.</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>We can <strong data-v-7dd28e96 data-v-7dd28e96>exit the container</strong></p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96> <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>exit</span>
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>At this stage, we had publican and bikeshed to generate files (we may call
+this a "cache warmup" of softs). Now, let's prepare the Vagrant VM to serve
+the static content. Notice that the next commands are there only for the
+purpose of a local workspace, in production this step will also be managed
+automatically.</p>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Let's get back as the <strong data-v-7dd28e96 data-v-7dd28e96>root</strong> user, and create a quick web server;</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>exit</span>
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>apt-get</span> -yqq <span class="token function" data-v-7dd28e96 data-v-7dd28e96>install</span>
+nginx <span class="token function" data-v-7dd28e96 data-v-7dd28e96>mv</span> /vagrant/default.conf /etc/nginx/sites-available/default
+<span class="token function" data-v-7dd28e96 data-v-7dd28e96>service</span> restart nginx
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Let's return back to <strong data-v-7dd28e96 data-v-7dd28e96>as the webapps user and launch the runner</strong></p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>su</span> webapps <span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>cd</span> /srv/webapps/publican/
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96><strong data-v-7dd28e96 data-v-7dd28e96>Launch the container</strong>; this will also be managed automatically in
+production.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>docker run -it --rm -v <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"<span class="token variable" data-v-7dd28e96 data-v-7dd28e96><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$(</span><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>pwd</span><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>)</span></span>/data"</span>:/srv/webapps/publican/data <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+           -v <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"<span class="token variable" data-v-7dd28e96 data-v-7dd28e96><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$(</span><span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>pwd</span><span class="token variable" data-v-7dd28e96 data-v-7dd28e96>)</span></span>/spec-data"</span>:/opt/bikeshed/bikeshed/spec-data <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+           -p <span class="token number" data-v-7dd28e96 data-v-7dd28e96>7002</span>:7002 webspecs/publican:wip
+</code></pre></div>
+</li>
+</ul>
+<p data-v-7dd28e96 data-v-7dd28e96>It should look like this
+</p><figure class="app-image is-loading has-image" data-v-7533d412 data-v-7dd28e96><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-run-hook.png" alt="A terminal window with a build process status and green lines, no errors" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/05/publican-run-hook.png" class="object-cover w-full rounded" data-v-7533d412> <!----></figure><p></p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>get your Vagrant VM IP address</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token function" data-v-7dd28e96 data-v-7dd28e96>ifconfig</span>
+</code></pre></div>
+</li>
+<li data-v-7dd28e96 data-v-7dd28e96>
+<p data-v-7dd28e96 data-v-7dd28e96>Should start by <code data-v-7dd28e96 data-v-7dd28e96>172...</code> or <code data-v-7dd28e96 data-v-7dd28e96>192...</code>; visit a browser to that address</p>
+</li>
+</ul>
+<h3 id="gists" data-v-7dd28e96 data-v-7dd28e96><a href="#gists" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Gists</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>Here are the files mentioned in this post</p>
+<h4 id="configjson" data-v-7dd28e96 data-v-7dd28e96><a href="#configjson" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>config.json</h4>
+<p data-v-7dd28e96 data-v-7dd28e96><a href="https://github.com/webspecs/publican" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Publican</a> expects this file as <code data-v-7dd28e96 data-v-7dd28e96>data/config.json</code>.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-json" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"bikeshed"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"/opt/bikeshed/bikeshed.py"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"rsyncPath"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"/srv/webapps/publican/"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"python"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"python2"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"logFile"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"logs/all.log"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"email"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>{</span>
+    <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"to"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"jdoe@example.org"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+    <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"from"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"jdoe@example.org"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+    <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"host"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"localhost"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+    <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"level"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"error"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+    <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"handleExceptions"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token boolean" data-v-7dd28e96 data-v-7dd28e96>true</span>
+  <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"purgeAllURL"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"https://api.fastly.com/service/fooo/purge_all"</span><span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>,</span>
+  <span class="token property" data-v-7dd28e96 data-v-7dd28e96>"purgeAllKey"</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>:</span> <span class="token string" data-v-7dd28e96 data-v-7dd28e96>"baar"</span>
+<span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>}</span>
+</code></pre></div>
+<h4 id="defaultconf" data-v-7dd28e96 data-v-7dd28e96><a href="#defaultconf" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>default.conf</h4>
+<p data-v-7dd28e96 data-v-7dd28e96>A minimal NGINX web server digging for static content that Publican generates.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96># file: /etc/nginx/sites-enabled/default
+server {
+  listen 80 default_server;
+  root /srv/webapps/publican/data/publish;
+  index index.html index.htm;
+  server_name localhost;
+  location / { try_files $uri $uri/ =404; }
+}
+</code></pre></div>
+<h5 id="dockerfile" data-v-7dd28e96 data-v-7dd28e96><a href="#dockerfile" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Dockerfile</h5>
+<p data-v-7dd28e96 data-v-7dd28e96>Here is the project's Dockerfile I created. I think it should be smaller, but
+Publican works with the following script.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Each step in a Dockerfile creates a "commit", make sure you have as few of them
+as possible, and also make sure that you clean after yourself. Remember that a
+Docker container is re-deployable and smallest the size of the container, the
+better!</p>
+<p data-v-7dd28e96 data-v-7dd28e96>Notice a few details;</p>
+<ul data-v-7dd28e96 data-v-7dd28e96>
+<li data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>ENV DEBIAN_FRONTEND=noninteractive</code> helps with dialogs</li>
+<li data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>USER webapps</code> tells "where" the rest of the script will make commands as a
+different user than root. Make sure what's required by root to be done before!</li>
+<li data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>COPY ...</code> this is basically how you import content inside the container (i.e.
+make the container heavier)</li>
+</ul>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-text" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>#
+# Publican Docker runner
+#
+# See also:
+#   * https://github.com/nodesource/docker-node/blob/master/ubuntu/trusty/node/0.10.36/Dockerfile
+
+FROM nodesource/trusty:0.10.36
+
+MAINTAINER Renoir Boulanger &lt;renoir@w3.org>
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Dependencies: Bikeshed, PhantomJS, Bikshed’s lxml
+RUN apt-get update && apt-get -y upgrade && \
+    apt-get install -yqq git python2.7 python-dev python-pip libxslt1-dev libxml2-dev zlib1g-dev && \
+    apt-get install -yqq libfontconfig1 libfreetype6 curl && \
+    apt-get autoremove -yqq --purge && \
+    pip install --upgrade lxml
+
+# Copy everything we have locally into the container
+# REMINDER: Make sure you run `make clone-bikeshed`, we prefer to keep a copy locally outside
+# of the data volume. Otherwise it would make problems saying that bikeshed clone is not in the
+# same filesystem.
+COPY . /srv/webapps/publican/
+
+# Make sure we have a "non root" user and
+# delete any local workbench data/ directory
+RUN /usr/sbin/groupadd --system --gid 990 webapps && \
+    /usr/sbin/useradd --system --gid 990 --uid 990 -G sudo --home-dir /srv/webapps --shell /bin/bash webapps && \
+    sed -i '/^%sudo/d' /etc/sudoers && \
+    echo '%sudo ALL=NOPASSWD: ALL' >> /etc/sudoers && \
+    mv /srv/webapps/publican/bikeshed /opt && \
+    rm -rf data && \
+    mkdir -p data/temp && \
+    rm -rf Dockerfile Makefile .git .gitignore DOCKER.md && \
+    chown -R webapps:webapps /srv/webapps/publican && \
+    chown -R webapps:webapps /opt/bikeshed
+
+# Switch from root to webapps system user
+# It **HAS to be** the SAME uid/gid as the owner on the host from which we’ll use as volume
+USER webapps
+
+# Where the session will start from
+WORKDIR /srv/webapps/publican
+
+# Environment variables
+ENV PATH /srv/webapps/publican/node_modules/.bin:/srv/webapps/publican/bin:/srv/webapps/publican/.local/bin:$PATH
+ENV HOME /srv/webapps/publican
+ENV TMPDIR /srv/webapps/publican/data/temp
+ENV NODE_ENV production
+ENV GIT_DISCOVERY_ACROSS_FILESYSTEM true
+
+# Run what `make deps` would do
+RUN pip install --upgrade --user --editable /opt/bikeshed && \
+    mkdir -p node_modules && npm install
+
+# Declare which port we expect to expose
+EXPOSE 7002
+
+# Allow cli entry for debug, but make sure docker-compose.yml uses "command: bin/run.sh"
+ENTRYPOINT ["/bin/bash"]
+
+# Note leftover: Ideally, it should exclusively run
+#ENTRYPOINT ["/bin/bash", "/srv/webapps/publican/bin/run.sh"]
+
+# Note leftover: What it ends up doing
+#CMD ["node_modules/forever/bin/forever", "--fifo", "logs", "0"]
+</code></pre></div>
+<h4 id="forever-start-script" data-v-7dd28e96 data-v-7dd28e96><a href="#forever-start-script" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>Forever start script</h4>
+<p data-v-7dd28e96 data-v-7dd28e96>If you notice in the Docker run command, I call a file <code data-v-7dd28e96 data-v-7dd28e96>bin/run.sh</code>, here it is.</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96>docker run -it <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+       --rm <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+       -p <span class="token number" data-v-7dd28e96 data-v-7dd28e96>7002</span>:7002 <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+       webspecs/publican:latest <span class="token punctuation" data-v-7dd28e96 data-v-7dd28e96>\</span>
+       bin/run.sh
+</code></pre></div>
+<p data-v-7dd28e96 data-v-7dd28e96>Publican runs its process using <a href="https://github.com/foreverjs/forever" rel="nofollow noopener noreferrer" target="_blank" data-v-7dd28e96 data-v-7dd28e96>Forever</a>. The objective of forever is to
+keep a process to run at all times.</p>
+<p data-v-7dd28e96 data-v-7dd28e96>While this isn't ideal for NodeJS services, in the present use-case of a Docker
+container who has the only purpose to run a process; Forever apt for the job!</p>
+<div class="nuxt-content-highlight" data-v-7dd28e96 data-v-7dd28e96><pre class="line-numbers language-bash" data-v-7dd28e96 data-v-7dd28e96><code data-v-7dd28e96 data-v-7dd28e96><span class="token shebang important" data-v-7dd28e96 data-v-7dd28e96>#!/bin/bash</span>
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>export</span> <span class="token assign-left variable" data-v-7dd28e96 data-v-7dd28e96>RUNDIR</span><span class="token operator" data-v-7dd28e96 data-v-7dd28e96>=</span><span class="token string" data-v-7dd28e96 data-v-7dd28e96>"/srv/webapps/publican"</span>
+<span class="token builtin class-name" data-v-7dd28e96 data-v-7dd28e96>cd</span> <span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$RUNDIR</span>
+node_modules/forever/bin/forever start <span class="token variable" data-v-7dd28e96 data-v-7dd28e96>$RUNDIR</span>/bin/server.js
+node_modules/forever/bin/forever --fifo logs <span class="token number" data-v-7dd28e96 data-v-7dd28e96>0</span>
+</code></pre></div>
+<h3 id="more-to-come" data-v-7dd28e96 data-v-7dd28e96><a href="#more-to-come" aria-hidden="true" tabindex="-1" data-v-7dd28e96 data-v-7dd28e96><span class="icon icon-link" data-v-7dd28e96 data-v-7dd28e96></span></a>More to come</h3>
+<p data-v-7dd28e96 data-v-7dd28e96>I have more notes to put up, but not enough time to give more context. Come back
+later for more!</p></div> <div class="clearfix" data-v-7dd28e96></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-4d2003f9 data-v-7dd28e96><div class="text-left" data-v-4d2003f9><a href="/site/blog/2015/05/make-discourse-long-polling-work-behind-fastly" lang="en-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Make Discourse “long polling” work behind Fastly or Varnish
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/site/blog/2015/05/converting-dynamic-site-static-copy" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Converting a dynamic site into static HTML documents
+    </a></div></div></div></div></div></div></div></div></section></div></div></main> <div class="app-footer--component disposition-parent w-full bottom" data-v-705c3a15><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-705c3a15><dl class="contact items-item disposition-item" data-v-705c3a15><dt class="mb-4 font-serif text-2xl" data-v-705c3a15>Contact</dt> <dd data-v-705c3a15>Renoir Boulanger ✪ Full-Stack Developer & Web Hosting systems reliability professional</dd> <dd class="underline" data-v-705c3a15><a href="mailto:contribs@renoirboulanger.com" data-v-705c3a15>contribs@renoirboulanger.com</a></dd> <dd class="font-mono" data-v-705c3a15>v1.0.0</dd> <span class="inline-flex" data-v-705c3a15><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-705c3a15><dl lang="fr-CA" class="see-also" data-v-705c3a15><dt data-v-705c3a15>Voir aussi…</dt> <dd data-v-705c3a15><a href="/site/ligne-editoriale" data-v-705c3a15> Ligne éditoriale </a></dd> <dd data-v-705c3a15><a href="/site/projets" data-v-705c3a15> Projets </a></dd> <dd data-v-705c3a15><a href="/site/glossary" data-v-705c3a15> Glossary </a></dd> <dd data-v-705c3a15><a href="/site/code-review" data-v-705c3a15> Code-Review notes </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1652216606/blog/2015/05/run-nodejs-process-forever-within-docker-container/state.js"></script><script src="/site/_nuxt/runtime.js" defer></script><script src="/site/_nuxt/pages/blog.js" defer></script><script src="/site/_nuxt/pages/blog/_year.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/site/_nuxt/commons/app.js" defer></script><script src="/site/_nuxt/vendors/app.js" defer></script><script src="/site/_nuxt/app.js" defer></script>
+  </body>
+</html>
