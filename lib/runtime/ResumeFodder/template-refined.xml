@@ -5,6 +5,8 @@
 		http://www.officeopenxml.com/WPhyperlink.php
 		http://www.officeopenxml.com/WPdocument.php
 		https://c-rex.net/projects/samples/ooxml/e1/Part1/OOXML_P1_Fundamentals_Relationships_topic_ID0EZPBG.html
+		https://resumefodder.com/docs/jsonresume.html
+		https://gitlab.com/steve-perkins/ResumeFodder/-/blob/master/command/command.go#L123-159
 	-->
 	<w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
 	<w:fonts>
@@ -833,6 +835,18 @@
 				<w:lang w:val="EN-US" w:fareast="EN-US" w:bidi="AR-SA"/>
 			</w:rPr>
 		</w:style>
+    <w:style
+			w:type="character"
+			w:styleId="SubtleEmphasis"
+		>
+			<w:name w:val="Subtle Emphasis" />
+			<w:rsid w:val="00A010B5" />
+			<w:rPr>
+				<w:i />
+				<w:i-cs />
+				<w:color w:val="404040" />
+			</w:rPr>
+		</w:style>
 		<w:style w:type="paragraph" w:styleId="Heading1">
 			<w:name w:val="heading 1"/>
 			<wx:uiName wx:val="Heading 1"/>
@@ -1150,11 +1164,16 @@
 							</w:r>
 							<w:proofErr w:type="spellEnd"/>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t> – </w:t>
+								<w:rPr data-changed="20220510">
+									<w:sz w:val="19" />
+									<w:sz-cs w:val="19" />
+								</w:rPr>
+								<w:t> — </w:t>
 							</w:r>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:rPr>
-									<w:i/>
+								<w:rPr data-changed="20220510">
+									<w:rStyle w:val="SubtleEmphasis" />
+									<w:i />
 								</w:rPr>
 								<w:t>{{ html .Position }}</w:t>
 							</w:r>
@@ -1167,7 +1186,11 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto"/>
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>{{ html .StartDate | MMMMYYYY }} - {{ if .EndDate }}{{ html .EndDate | MMMMYYYY }}{{ else }}Present{{ end }}</w:t>
+								<w:rPr data-changed="20220510">
+									<w:sz w:val="20" />
+									<w:sz-cs w:val="20" />
+								</w:rPr>
+								<w:t>{{ html .StartDate | MMMMYYYY }} - {{ if .EndDate }}{{ html .EndDate | MMMMYYYY }}{{ else }}Present{{ end }}</w:t>
 							</w:r>
 						</w:p>
 						{{ end }}
@@ -1203,6 +1226,17 @@
 							</w:r>
 						</w:p>
 						{{ end }}
+						<w:p data-changed="20220510">
+							<w:r>
+								<w:rPr>
+									<w:b w:val="off" />
+									<w:b-cs />
+									<w:sz w:val="15" />
+									<w:sz-cs w:val="18" />
+								</w:rPr>
+								<w:t> </w:t>
+							</w:r>
+						</w:p>
 						<!--<w:p wsp:rsidR="004612B3" wsp:rsidRPr="00826FD0" wsp:rsidRDefault="004612B3" wsp:rsidP="00826FD0">-->
 							<!--<w:pPr>-->
 								<!--<w:keepLines/>-->

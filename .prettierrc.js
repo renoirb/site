@@ -28,6 +28,15 @@ const main = {
         proseWrap: 'always',
       },
     },
+    {
+      // https://github.com/prettier/plugin-xml
+      files: ['*.xml', '*.doc'],
+      options: {
+        bracketSameLine: false,
+        singleAttributePerLine: true,
+        useTabs: true,
+      },
+    },
   ],
 }
 

@@ -1,7 +1,7 @@
 ---
 meta:
   theme: elegant
-  lastModified: 2022-05-04T21:39:60
+  lastModified: 2022-05-10T21:39:60
   canonical: http://registry.jsonresume.org/renoirb
   alternate: https//renoirb.github.io/site/resume
   source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
@@ -86,13 +86,13 @@ work:
         Accessibility and how to maintain and bundle Frontend code to optimize
         re-usability and reliability.
       - Contribute to the architecture of GoTo next generation micro-frontend
-        "Application Shell" from which other experiences (e.g. meeting, contacts
+        “Application Shell” from which other experiences (e.g. meeting, contacts
         management, etc) runs in.
       - Built and demonstrated how to organize packages in smaller units
         maintained with their own test suites for usage between different
         applications
     contributions:
-      - name: lit-labs/context Web Components "Context API" Protocol
+      - name: lit-labs/context Web Components “Context API” Protocol
         url: https://github.com/lit/lit/pull/2012
     technologies:
       - Accessibility
@@ -105,6 +105,7 @@ work:
       - Node.js
       - Playwright
       - TypeScript
+      - WCAG
 
   - name: &name RBC Royal Bank of Canada Inc.
     company: *name
@@ -136,7 +137,7 @@ work:
         self-signed certificate that would cause many headaches.
     highlights.more:
       - Re-Implement and improve link manager to legacy application system. So
-        that the HTML templates contains a "link id", and how it dynamically
+        that the HTML templates contains a “Link Id”, and how it dynamically
         creates an hidden form and properly redirects to legacy HTML views.
       - Revise and make migration strategies for my Squad’s Angular monorepo to
         use Jest and ESLint 7 along with Prettier with automated LintStaged
@@ -149,7 +150,7 @@ work:
         in isolation instead of from a monolith
       - Written extensive onboarding documentation taking into account how to
         properly and automatically adjust developer tools at every password
-        change. Avoiding popular "ignore this error" and rather use corporate
+        change. Avoiding popular “Ignore this error” and rather use corporate
         signed TLS certificate right
     technologies:
       - Angular
@@ -157,8 +158,8 @@ work:
       - JavaScript
       - Jest
       - Node.js
-      - NX
       - TypeScript
+      - WCAG
 
   - name: &name CGI Inc.
     company: *name
@@ -267,7 +268,7 @@ work:
       - Docker Compose
       - Docker
 
-  - name: &name 6973051 Canada Inc.
+  - name: Colloquial/Betastream via 6973051 Canada Inc. (remote)
     client: &client Colloquial / Betastream
     company: *client
     position: Systems Delivery Blueprinting Specialist (remote)
@@ -309,7 +310,7 @@ work:
         successful, create a Zip archive. By merging on master on Bitbucket
         would generate an archive, and the continuous-delivery system make all
         web server nodes to download the archive, extract its contents in a
-        folder. Deploying a release would be changing the "live" symbolic to the
+        folder. Deploying a release would be changing the “live” symbolic to the
         newly extracted package;
       - Introduced advanced Varnish caching with Fastly. Created HashiCorp
         Vagrant workspace network (e.g. one Web Server VM, one Database server,
@@ -330,7 +331,7 @@ work:
       - Varnish
       - WordPress
 
-  - name: &name 6973051 Canada Inc.
+  - name: CAE via 6973051 Canada Inc.
     client: &client CAE
     company: *client
     position: Systems Delivery Blueprinting Specialist
@@ -365,8 +366,8 @@ work:
     highlights.more:
       - Introduced a method to maintain network of Virtual Machines with
         HashiCorp Vagrant leveraging VirtualBox private networking
-      - Created a "poor man" configuration management using Bash 4 as a way to
-        avoid using text files.
+      - Proposed a configuration management using Bash 4 so that current system
+        administrators could use a language they already know.
     technologies:
       - Beats
       - ElasticSearch Kibana
@@ -382,7 +383,7 @@ work:
       - Bash
       - Vagrant
 
-  - name: &name 6973051 Canada Inc.
+  - name: Mozilla via 6973051 Canada Inc. (remote)
     client: &client Mozilla
     company: *client
     position: Subject Matter Expert Compatibility Data Project
@@ -413,10 +414,10 @@ work:
       - Created a client-side DataTable rendering system with Vanilla JavaScript
       - Prototyped a file-based Compatibility data storage
 
-  - name: &name 6973051 Canada Inc.
+  - name: W3C/MIT via 6973051 Canada Inc. (remote)
     client: &client W3C/MIT
     company: *client
-    position: Developer Operations Engineer (i.e. "DevOps")
+    position: “Developer Operations Engineer” (i.e. “DevOps”)
     remote: true
     contract: true
     url: &url https://www.w3.org/People/Alumni#Boulanger
@@ -495,7 +496,7 @@ work:
       - Vagrant
       - WordPress
 
-  - name: &name 6973051 Canada Inc.
+  - name: Ericsson via 6973051 Canada Inc.
     client: &client Ericsson
     company: *client
     position: Web Developer
@@ -697,7 +698,7 @@ work:
     hidden: true
     startDate: '2002-02-01'
     endDate: '2006-11-01'
-    #description:
+    description: ''
     summary:
       INEXIS Solution web Inc., was a one-man web development service provider
       firm I founded to serve graphic design agencies in the region of the
@@ -809,36 +810,16 @@ awards:
 
 publications:
   - name:
-      « Techniques pour déployer WordPress de façon consistante et les rendre
-      résilients »
-    publisher: WordCamp Montréal 2016
-    locale: fr-CA
-    type: Talk
-    releaseDate: '2016-07-01'
-    url: http://renoirb.com/talks/2016-Techniques-pour-deployer-WordPress-de-facon-consistante-et-le-rendre-resilient/
-    website: http://renoirb.com/talks/2016-Techniques-pour-deployer-WordPress-de-facon-consistante-et-le-rendre-resilient/
-    video: https://wordpress.tv/2016/12/09/renoir-boulanger-techniques-pour-deployer-wordpress-de-facon-consistante-et-les-rendre-resilients/
-    summary: Talk given at WordCamp Montréal 2016
-
-  - name: “Packaging for easier redeployment”
-    publisher: DevOps Montréal
-    locale: en-CA
-    type: Talk
-    releaseDate: '2015-10-01'
-    url: http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/
-    website: http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/
-    summary: Presented at two events, DevOps Montréal, PHP Québec.
-
-  - name:
       Santachè, A. “Mobile development using web technologies focusing on games”
     publisher: ACM
     locale: en-CA
     type: Paper
     releaseDate: '2013-11-01'
-    url: https://doi.org/10.1145/2526188.2528541
-    website: https://doi.org/10.1145/2526188.2528541
+    url: &url https://doi.org/10.1145/2526188.2528541
+    website: *url
     isbn: '978-1-4503-2559-2'
     authors:
+      - Santachè, A.
       - Boulanger, R.
       - Viana, G.
       - Panaggio, R.
@@ -853,22 +834,43 @@ publications:
     locale: en-CA
     type: Book Review
     releaseDate: '2013-10-01'
-    url: https://www.packtpub.com/big-data-and-business-intelligence/apache-solr-php-integration
-    website: https://www.packtpub.com/big-data-and-business-intelligence/apache-solr-php-integration
+    url: &url https://www.packtpub.com/product/apache-solr-php-integration/9781782164920
+    website: *url
     isbn: '9781782164920'
     summary: Book review
 
   - name:
-      « Comment évaluer le niveau de qualité d’un site web selon les techniques
-      d’intégration web d’actualité. »
+      « Techniques pour déployer WordPress de façon consistante et les rendre
+      résilients »
+    publisher: WordCamp Montréal 2016
+    locale: fr-CA
+    type: Talk
+    releaseDate: '2016-07-01'
+    url: &url http://renoirb.com/talks/2016-Techniques-pour-deployer-WordPress-de-facon-consistante-et-le-rendre-resilient/
+    website: *url
+    video: https://wordpress.tv/2016/12/09/renoir-boulanger-techniques-pour-deployer-wordpress-de-facon-consistante-et-les-rendre-resilients/
+    summary: Talk given at WordCamp Montréal 2016
+
+  - name: “Packaging for easier redeployment”
+    publisher: DevOps Montréal
+    locale: en-CA
+    type: Talk
+    releaseDate: '2015-10-01'
+    url: &url http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/
+    website: *url
+    summary: Presented at two events, DevOps Montréal, PHP Québec.
+
+  - name:
+      « Comment évaluer le niveau de qualité d’un site web selon les techniques
+      d’intégration web d’actualité. »
     publisher: Web à Québec 2013
     locale: fr-CA
     type: Talk
     releaseDate: '2013-10-01'
-    url: http://2013.webaquebec.org/#/horaire/vendredi/evaluer-la-qualite-dun-site-selon-les-techniques-dintegration-64.html
-    website: http://2013.webaquebec.org/#/horaire/vendredi/evaluer-la-qualite-dun-site-selon-les-techniques-dintegration-64.html
+    url: &url http://2013.webaquebec.org/#/horaire/vendredi/evaluer-la-qualite-dun-site-selon-les-techniques-dintegration-64.html
+    website: *url
     summary: |
-      Presented at two conferences; «Montreal WebIn», and «Web à Québec» (WAQ)
+      Presented at two conferences; « Montreal WebIn », and « Web à Québec » (WAQ)
 
 skills:
   - name: Programming
@@ -916,28 +918,29 @@ skills:
   - name: Web Platform
     level: Master
     keywords:
-      - HTML/CSS Architecture
-      - Bundling
-      - Transpilation
-      - Deployment
-      - Promises
-      - Polyfills
+      - Accessibility
       - Adaptative
+      - Bundling
+      - Deployment
+      - HTML/CSS Architecture
+      - Polyfills
+      - Promises
       - Responsive
+      - Transpilation
   - name: Web Operations
     level: Master
     keywords:
       - Configuration Management
-      - Service Monitoring
-      - Self-Healing event handlers
-      - Salt Stack
-      - Node.js
-      - ElasticSearch
-      - Prometheus
-      - Redis
-      - Varnish
       - Docker Swarm
       - Dockerflow
+      - ElasticSearch
+      - Node.js
+      - Prometheus
+      - Redis
+      - Salt Stack
+      - Self-Healing event handlers
+      - Service Monitoring
+      - Varnish
 
 languages:
   - language: Français
