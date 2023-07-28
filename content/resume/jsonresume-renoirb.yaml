@@ -1,7 +1,7 @@
 ---
 meta:
   theme: elegant
-  lastModified: 2022-05-10T21:39:60
+  lastModified: 2024-02-20T23:39:60
   canonical: http://registry.jsonresume.org/renoirb
   alternate: https//renoirb.github.io/site/resume
   source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
@@ -9,16 +9,19 @@ meta:
 
 basics:
   name: Renoir Boulanger
-  label: Full-Stack Developer & Senior Web Development Professional
+  label: Expert in Front-End Ops, UI Libraries who cares about Accessibility
   image: &image 'https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?size=420'
   picture: *image
   email: hello@renoirboulanger.com
   url: &url https://renoirb.com
   website: *url
   summary:
-    Experienced full-stack developer, I have a broad and deep understanding of
-    the Open Web stack, Frontend and Server Techniques to build, deploy and
-    maintain Web sites that scale.
+    Experienced full-stack developer dedicated to creating web solutions that
+    excel in Accessibility, Performance, and Code Quality. Strong emphasis on
+    continuous testing, test-driven development (TDD), and managing packages to
+    maintain code integrity. A polyglot programmer contributing to open-source
+    projects. Maintained hosting architecture for high-visibility sites.
+    Proficient in Cloud IaaS, Containers, and continuous deployment systems.
   location:
     city: Montréal
     region: Quebec
@@ -27,9 +30,9 @@ basics:
     - network: LinkedIn
       username: renoirb
       url: https://linkedin.com/in/renoirb
-    - network: Twitter
+    - network: X-Formerly-Twitter
       username: renoirb
-      url: https://twitter.com/renoirb
+      url: https://x.com/renoirb
     - network: GitHub
       username: renoirb
       url: https://github.com/renoirb
@@ -37,20 +40,50 @@ basics:
       username: renoirb
       url: https://gitlab.com/renoirb
   highlights:
-    - Polyglot programmer; TypeScript, ECMAScript, JavaScript, PHP, C#, GNU
-      Make, Python
+    - Polyglot programmer; TypeScript, ECMAScript, JavaScript, PHP, GNU Make, Ruby, C#,
+      Vagrant, Ruby
     - Experience in Infrastructure As Code with Salt Stack, Vagrant, Ansible,
       Puppet, Bash
     - Contributor to open-source projects such as Nuxt.js, Alpine Linux,
-      MediaWiki (i.e. Wikipedia.com) and Mozilla Firefox Accounts (i.e.
-      Firefox’s profile sign-in system)
+      MediaWiki (i.e. Wikipedia.com) and Mozilla Firefox Accounts
     - Maintained Web Hosting architecture for high-visibility sites, including
-      W3C’s WebPlatform.org https://webplatform.github.io, and the World Wide
-      Web’s 25th anniversary Site https://www.w3.org/webat25/
+      W3C’s WebPlatform project https://webplatform.github.io, and the World
+      Wide Web’s 25th anniversary https://www.w3.org/webat25/ Site
     - Experience with Cloud IaaS, Containers, and maintenance of continuous
       deployment systems
 
 work:
+  - name: &name Full-time parenting
+    company: *name
+    position: Father
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    startDate: '2022-06-01'
+    endDate: null
+    url: &url ''
+    website: *url
+    summary: Full-time caregiver for children.
+
+  - name: &name Self-Employed
+    company: *name
+    position: Maintainer/Owner
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    startDate: '2025-09-01'
+    endDate: null
+    url: &url 'https://renoirb.com'
+    website: *url
+    summary:
+      Plan to build and publish open-source UI library packages, including
+      specialized components like calendar and complex date pickers and other
+      common patterns, leveraging automation and design system principles for
+      enhanced accessibility, performance, and code quality. Additionally,
+      intend to contribute to existing UI Libraries in React, Vue, and Angular
+      by implementing new modules while ensuring full compatibility with each
+      platform.
+
   - name: &name GoTo Inc.
     company: *name
     position: Staff Software Developer
@@ -58,6 +91,7 @@ work:
     remote: true
     contract: false
     startDate: '2021-01-11'
+    endDate: '2022-05-01'
     url: &url https://www.GoTo.com/
     website: *url
     description:
@@ -69,18 +103,13 @@ work:
       all sizes to connect, collaborate, secure their workforces, and support
       employees and customers.
     summary:
-      As a “Staff Software Developer”, my role was to share contribute to my
-      team and share what I’ve learned along the way. The Frontend team is
-      following principles referred to as “Micro Frontends” where each team is
-      independent in building their application vertical. For example, one team
-      would be responsible maintaining an Address book application. In a “Micro
-      Frontend,” we can have each team implement the business logic of their
-      vertical, and rely on what will assemble their part with shared systems.
-      The Shared system is what we call an “Application Shell,” in which we
-      expose utilities to make API calls with the current session. The Shell is
-      also responsible for loading parts of each “micro frontend” vertical based
-      on events and routes. I was part of the team responsible for maintaining
-      the Shell.
+      As a Staff Software Developer at GoTo Inc., I played a pivotal role in
+      driving the adoption of micro frontend architecture within the Frontend
+      team. I spearheaded the development of the Application Shell, a critical
+      component enabling seamless integration of microservices. My contributions
+      also included mentoring colleagues on best practices in Web Standards and
+      Accessibility, ensuring the delivery of high-quality, reusable frontend
+      code.
     highlights:
       - Help other software developers with my experience with Web Standards,
         Accessibility and how to maintain and bundle Frontend code to optimize
@@ -124,8 +153,12 @@ work:
       business, public sector and institutional clients through offices in
       Canada, the U.S. and 37 other countries.
     summary:
-      Senior Full-Stack Front-End developer to the RBC Omni platform (Online
-      Business Banking).
+      At RBC, I served as a Senior Full-Stack Developer, leading the
+      implementation of scalable modules for the RBC Omni platform (Online
+      Business Banking). I collaborated closely with cross-functional teams to
+      deliver solutions aligned with business objectives. Noteworthy
+      achievements include streamlining developer onboarding processes and
+      enhancing legacy systems for improved performance and reliability.
     highlights:
       - Make implementation proposals driven by the requirements and agenda set
         by product owners and business analysts.
@@ -179,19 +212,12 @@ work:
       outsourcing, systems integration and consulting, and software solutions
       selling activities.
     summary:
-      Worked as a Technical Lead as part of the Global Technology Operations’
-      own product for Multi-Cloud Management Platform called “Unify360”. The
-      application is composed by many “micro-services” where each component has
-      a specific task. For example; Authentication, Session validation, Forms,
-      Rendering Views, etc. I was responsible and designed ways to describe
-      views as data, and systems to navigate data-heavy “micro-services” and
-      normalize so that everything comes back together. I leveraged principles
-      of “Micro Frontends” and “Atomic Design” and implemented a “Design System”
-      and the application’s specific to build visualization and of complex data
-      and reports. The application was deployed in the USA, Europe and Canada,
-      the Frontend were capable of properly displaying numbers and dates in all
-      calendars, Time-Zones, and number systems, and was in more than 10
-      languages.
+      As a Senior Technical Consultant, I led the development of Unify360, a
+      Multi-Cloud Management Platform. Leveraging microservices architecture and
+      atomic design principles, I orchestrated the design and implementation of
+      a robust frontend solution deployed across multiple regions. My role
+      involved extensive experimentation with modern technologies and mentoring
+      team members to foster a culture of innovation.
     highlights:
       - Experiment and document Frontend software development platform
         technological choices
@@ -254,9 +280,12 @@ work:
     startDate: '2016-11-07'
     endDate: '2017-05-01'
     summary:
-      Software development, Simplification of Docker Compose multi-container
-      build to be more automated and reliable build for each service and
-      internal services.
+      During my tenure at AlayaCare, I focused on optimizing Docker Compose
+      builds and enhancing team productivity through streamlined workspace
+      setups. I led initiatives to automate development environment
+      configurations, reducing setup time from days to hours. My efforts
+      significantly improved collaboration and efficiency across the software
+      development team.
     highlights:
       - Overhaul of the Software development team’s workspace setup, which
         allowed anyone to have exactly the same setup by invoking a few simple
@@ -286,10 +315,12 @@ work:
       to be the “the intersection of advertising, publishing and public
       relations, with storytelling and creativity at its core.”
     summary:
-      My role was to introduce and coach the team Continuous Delivery and Code
-      release, and deployment system. I was part of a geographically distributed
-      Web Development and IT team (“Betastream”) working on projects for
-      Colloquial and other partner projects.
+      As a Systems Delivery Blueprinting Specialist, I played a pivotal role in
+      driving continuous delivery and deployment initiatives for
+      Colloquial/Betastream projects. I designed and implemented robust cloud
+      orchestration solutions, automating deployment processes across multiple
+      cloud platforms. My contributions streamlined development workflows and
+      enhanced project scalability and reliability.
     highlights:
       - Introduce and coach the team Continuous Delivery and Code release, and
         deployment system.
@@ -350,10 +381,12 @@ work:
       with our innovative virtual-to-live training solutions to make flying
       safer.
     summary:
-      My role was to introduce and coach the team Continuous Delivery and Code
-      release, and deployment system. It was a part-time, on site contract to to
-      analyze, compare and document recommendations for an Open-Source real-time
-      monitoring solution.
+      At CAE, I provided expert guidance on continuous delivery and code release
+      strategies, contributing to the evaluation and implementation of real-time
+      monitoring solutions. I collaborated with cross-functional teams to assess
+      and recommend open-source tools, ensuring compliance with stringent
+      security requirements. My initiatives facilitated seamless deployment and
+      monitoring of critical systems.
     highlights:
       - Introduce and coach the team Continuous Delivery and Code release, and
         deployment system. Including techniques for preparing “playbooks”
@@ -402,11 +435,12 @@ work:
       Mozilla Firefox, and to innovate for the benefit of the individual and the
       betterment of the Web.
     summary:
-      My role was to provide an oversight of the development and participate in
-      software architecture discussions as a subject matter expert on the
-      Mozilla Developer Network Compatibility Data project. The Compatibility
-      Data are what feeds developer.mozilla.org documentation pages telling
-      developers if the feature is supported in a given Web Browser.
+      As a Subject Matter Expert on the Compatibility Data Project at Mozilla, I
+      spearheaded software architecture discussions and collaborated with
+      stakeholders to define project requirements. My contributions included
+      developing innovative solutions for data visualization and storage,
+      enabling developers to access accurate compatibility information across
+      various web browsers.
     highlights:
       - Communicate with various stakeholders about the requirements and
         features for the system.
@@ -420,7 +454,7 @@ work:
     position: “Developer Operations Engineer” (i.e. “DevOps”)
     remote: true
     contract: true
-    url: &url https://www.w3.org/People/Alumni#Boulanger
+    url: &url https://www.w3.org/staff/alumni/#renoir-boulanger
     website: *url
     hidden: false
     startDate: '2013-08-01'
@@ -432,13 +466,12 @@ work:
       and CEO Jeffrey Jaffe, W3C’s mission is to lead the Web to its full
       potential.
     summary:
-      My role was to maintain stability, improve features, strengthen the
-      infrastructure of the web site, and act as a technical liaison with
-      Open-source communities. The WebPlatform Docs project was meant to become
-      an independent Web Developer documentation site maintained by an
-      international community of contributors, sponsored by Adobe, Apple,
-      DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and
-      Opera.
+      At W3C/MIT, I played a key role in maintaining and enhancing the
+      WebPlatform Docs project, overseeing infrastructure stability and feature
+      development. I implemented robust monitoring solutions and streamlined
+      deployment processes, ensuring optimal performance and reliability. My
+      efforts contributed to the project's success in becoming a premier
+      resource for web developers worldwide.
     highlights:
       - Convert and preserve many hundred thousand edits, and keep trace of the
         content edition contributors and date of the change from MediaWiki into
@@ -510,11 +543,11 @@ work:
     endDate: '2013-06-01'
     description: ''
     summary:
-      Create a server on demand provision portal managing cloud computing
-      clusters hosted in data centers geographically dispersed. A key feature
-      worked on was to allow users to initiate Virtual Machines from any data
-      centres (Italy, Sweden, Canada), on any maintained cloud provider
-      platforms (VMWare, Open-Stack).
+      As a Web Developer at Ericsson, I led the development of a web-based
+      virtualization provisioning portal, enabling users to initiate virtual
+      machines across geographically dispersed data centers. My role involved
+      architecting and implementing innovative solutions using cutting-edge
+      technologies, driving improvements in scalability and performance.
     highlights:
       - Architect, build and lead a Web-based “Virtualization provisioning”
         portal.
@@ -551,8 +584,12 @@ work:
       Media, Equisoft, Quebec’s professional farmers’ union (UPA), Rolls-Royce
       and Rogers Media.
     summary:
-      As a Web Developer and Co-Founder, my role was to lead and architect all
-      Web Development work related to the Frontend stack.
+      As Senior Web Developer and Co-Founder of Evocatio Solutions, I led web
+      development projects for prestigious clients, including UDA and Astral
+      Media. My responsibilities encompassed architecting frontend solutions,
+      collaborating with graphic designers, and optimizing web applications for
+      performance and usability. Notable achievements include spearheading major
+      website rewrites and implementing advanced e-mail delivery systems.
     highlights:
       - Lead and architect all Web Development work related to the FrontEnd
         layer of the stack.
@@ -588,7 +625,6 @@ work:
       - PHP
       - SASS
       - Subversion
-      - Subversion
       - symfony 1.x
       - Symfony 2
       - Tiki Wiki CMS/Groupware
@@ -616,13 +652,12 @@ work:
       across all of its locations and generates 62.21 million in sales (USD).
       There are 6 companies in the R3D Conseil Inc corporate family.
     summary:
-      My role was to maintain the company corporate image on the web, maintain
-      their Web site, and participate in projects run internally as a Web
-      developer. Projects I’ve been involved in were written in Java, included a
-      proprietary CI server Web Application for IBM WebSphere that was intended
-      to be competitor to Jenkins and CruiseControl of the time, I’ve
-      contributed to Inventory management application (Namminik) and a few other
-      internal R&D experiments.
+      During my tenure at Groupe Informatique TechSolCom Inc., I played a
+      pivotal role in maintaining the company's web presence and contributing to
+      internal R&D projects. I led the front-end development aspect of a proprietary CI server
+      web application and participated in building inventory management systems.
+      My contributions enhanced operational efficiency and scalability across
+      various projects.
     highlights:
       - Maintain the company corporate image on the web, maintain their Web
         site, and participate in projects run internally as a Web developer on
@@ -960,7 +995,3 @@ interests:
       - Distributed computing
       - Load-Balancing
       - Fault tolerance
-  - name: Sci-Fi
-    keywords:
-      - StarTrek
-      - Doctor Who

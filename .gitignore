@@ -1,5 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 
+## Static server for local development
+serve.py
+
 ### binaries
 /ResumeFodder
 

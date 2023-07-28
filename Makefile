@@ -12,6 +12,7 @@ static/files/resume/Resume-Renoir-Boulanger.doc: static/files/resume static/file
 	-./ResumeFodder export static/files/resume/jsonresume-renoirb.json static/files/resume/Resume-Renoir-Boulanger.doc lib/runtime/ResumeFodder/template-refined.xml
 	-node_modules/.bin/prettier -w --config .prettierrc.js --parser xml static/files/resume/Resume-Renoir-Boulanger.doc
 
+# yq -p yaml -o json content/resume/jsonresume-renoirb.yaml
 .PHONY: static/files/resume/jsonresume-renoirb.json
 static/files/resume/jsonresume-renoirb.json: node_modules/jsonresume-from-yaml/bin/jsonify
 	-node_modules/.bin/prettier -w --config .prettierrc.js --prose-wrap always content/resume/jsonresume-renoirb.yaml
