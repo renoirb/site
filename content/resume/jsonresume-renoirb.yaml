@@ -30,7 +30,7 @@ basics:
     - network: LinkedIn
       username: renoirb
       url: https://linkedin.com/in/renoirb
-    - network: X-Formerly-Twitter
+    - network: Twitter
       username: renoirb
       url: https://x.com/renoirb
     - network: GitHub
@@ -60,7 +60,6 @@ work:
     remote: false
     contract: false
     startDate: '2022-06-01'
-    endDate: null
     url: &url ''
     website: *url
     summary: Full-time caregiver for children.
@@ -72,7 +71,6 @@ work:
     remote: false
     contract: false
     startDate: '2025-09-01'
-    endDate: null
     url: &url 'https://renoirb.com'
     website: *url
     summary:
@@ -103,13 +101,9 @@ work:
       all sizes to connect, collaborate, secure their workforces, and support
       employees and customers.
     summary:
-      As a Staff Software Developer at GoTo Inc., I played a pivotal role in
-      driving the adoption of micro frontend architecture within the Frontend
-      team. I spearheaded the development of the Application Shell, a critical
-      component enabling seamless integration of microservices. My contributions
-      also included mentoring colleagues on best practices in Web Standards and
-      Accessibility, ensuring the delivery of high-quality, reusable frontend
-      code.
+      As a Staff Software Developer at GoTo Inc., I contributed to mentoring
+      colleagues on best practices in Web Standards and Accessibility,
+      ensuring the delivery of high-quality, reusable frontend code.
     highlights:
       - Help other software developers with my experience with Web Standards,
         Accessibility and how to maintain and bundle Frontend code to optimize
