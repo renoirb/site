@@ -1,5 +1,17 @@
 ---
+title: Les navigateurs web, programmes de courriels, vous avez le choix!
 locale: fr-CA
+created: '2008-12-05'
+updated: '2013-06-07'
+canonical: >-
+  https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix/
+status: publish
+revising: true
+categories:
+  - Tranche de vie
+tags:
+  - vulgarization
+  - with-images
 keywords:
   - navigateur web
   - Google Chrome
@@ -7,15 +19,11 @@ keywords:
   - Critique
   - Mozilla Firefox
   - Mozilla Thunderbird
-canonical: 'https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix/'
-title: Les navigateurs web, programmes de courriels, vous avez le choix!!
-categories:
-  - Tranche de vie
-tags:
-  - vulgarization
-  - with-images
-date: &createdAt '2008-12-05T12:06:01-04:00'
-createdAt: *createdAt
+excerpt: >-
+  Un bon navigateur? Plusieurs gens pensent que l'«Internet» est l'icône 'e' en
+  bleu. Cet article a été originalement été écrit pour répondre a un ami qui
+  m'envoyait des chaînes de lettres. J'ai séparé en plusieurs billets, celui-ci
+  traite des outils du web tels qu'ils étaient en 2008.
 ---
 
 En fait, il y en a plus d'un. À mes yeux, n'importe lequel est mieux qu’Internet

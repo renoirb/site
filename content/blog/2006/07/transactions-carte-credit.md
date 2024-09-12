@@ -1,12 +1,19 @@
 ---
+title: Transactions carte credit
 locale: fr-CA
+created: '2006-07-14'
+updated: '2009-08-14'
+canonical: https://renoirboulanger.com/blog/2006/07/transactions-carte-credit/
+status: publish
+revising: true
+categories:
+  - Tranche de vie
+tags:
+  - geranium
 keywords:
   - carte crédit
   - transactions bancaires
-canonical: 'https://renoirboulanger.com/blog/2006/07/transactions-carte-credit/'
-title: Transactions carte credit
-date: &createdAt '2006-07-14T12:25:45-04:00'
-createdAt: *createdAt
+excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2006/07/geranium-business-card-back.png
   alt: |
@@ -20,10 +27,6 @@ preamble:
     Il était possible de gérer son propre site web, et avoir son propre «rolodex» de contacts
     sur le web, tel un «CRM».
     Le produit était en code source fermé et son dévelopement à cessé en 2008.
-categories:
-  - Tranche de vie
-tags:
-  - geranium
 ---
 
 Ajourd’hui je me suis mis a lire sur mes prochaines étapes de développement.

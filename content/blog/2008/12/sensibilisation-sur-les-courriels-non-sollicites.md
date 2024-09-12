@@ -1,13 +1,20 @@
 ---
-locale: fr-CA
-canonical: 'https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/'
 title: Sensibilisation sur les courriels non sollicités
+locale: fr-CA
+created: '2008-12-03'
+updated: '2013-06-07'
+canonical: >-
+  https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/
+status: publish
+revising: true
 categories:
   - Techniques
 tags:
   - fraude
-date: &createdAt '2008-12-03T00:58:06-04:00'
-createdAt: *createdAt
+excerpt: >-
+  J'ai décidé de briser le silence sur le sujet des chaînes de lettres et
+  tentatives d'hammeconage sur le web lorsque j'ai reçu pour la ennième fois un
+  message qui annonçait qu'Hotmail deviendrait payant.
 ---
 
 J'ai décidé cette nuit d'écrire sur des choses qui me tiennent a coeur.
@@ -36,7 +43,7 @@ Sensibilisation sur les courriels non sollicités Date: Wed, 3 Dec 2008 01:58:53
 -0500
 
 Pour ceux qui me connaissent pas je m'appelle Renoir. J'ai 29 ans.
-Professionnellement je suis webmestre de passion depuis 1999\. J'ai fait
+Professionnellement je suis webmestre de passion depuis 1999. J'ai fait
 au-dessus de 150 sites web dans ma carrière et je travaille pour une (entreprise
 que je ne nommerai pas) qui est un bureau de consultation qui offre une suite de
 services informatiques relié au web.
@@ -47,7 +54,7 @@ Avant de parler, laissez-moi me présenter.
 
 Dans mon travail, j'ai eu beaucoup d'expérience avec les ordinateurs et je peut
 compléter mon profil en disant que je n'utilise plus de programme faits par
-Microsoft depuis 2003\.
+Microsoft depuis 2003.
 
 J'utilise dans ma vie de tous les jours un Mac et des machines en [Ubuntu
 Linux][0].
@@ -114,9 +121,9 @@ vérifier si l'adresse est valide. Il faut TOUJOURS vous assurer que vous êtes
 bien sur le site original.
 
 **Exemple** d'une **fraude** potentielle:
-http://www.cibc.**a.com**/olbtxn/authentication/PreSignOn.cibc?locale=en\_CA,
+http://www.cibc.**a.com**/olbtxn/authentication/PreSignOn.cibc?locale=en_CA,
 alors qu'une **adresse valide**:
-https://www.cibconline.**cibc.com**/olbtxn/authentication/PreSignOn.cibc?locale=en\_CA
+https://www.cibconline.**cibc.com**/olbtxn/authentication/PreSignOn.cibc?locale=en_CA
 
 Remarquez le **...cibc.a.com...** Tout ce qui a tout juste avant le .com ou
 .net, .org, .edu, .ca, .gc.ça.... est le TOP NIVEAU sur internet. Donc dans mon
@@ -150,7 +157,7 @@ sujet des attrapes sur le web.
 Vous pouvez voir tous les articles dans la section [Projets][3], dans la section
 spécifique aux [**arnaques sur internet**][4].
 
-Ce billet a été révisé le 6 juin 2013\.
+Ce billet a été révisé le 6 juin 2013.
 
 [0]:
   /blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/

@@ -1,7 +1,11 @@
 ---
-locale: fr-CA
 title: Le futur du PC
+locale: fr-CA
+created: '2007-01-25'
+updated: '2009-08-27'
 canonical: https://renoirboulanger.com/blog/2007/01/le-futur-du-pc/
+status: publish
+revising: true
 categories:
   - Actualites
 tags:
@@ -10,8 +14,7 @@ tags:
 keywords:
   - bureau
   - futur
-date: &createdAt '2007-01-25T20:05:38-04:00'
-createdAt: *createdAt
+excerpt: ''
 preamble:
   text: |
     Maintenant (n.d.l.r. en *2020*) que nous avons la [Réalité Augumentée][0] qu'est-ce qui nous

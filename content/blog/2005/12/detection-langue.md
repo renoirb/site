@@ -1,15 +1,18 @@
 ---
-locale: fr-CA
-published: true
 title: Detection de langue
-date: &createdAt '2005-12-22T20:23:22-04:00'
-createdAt: *createdAt
+locale: fr-CA
+created: 2005-12-22
+updated: 2024-08-08
+canonical: https://renoirboulanger.com/blog/2005/12/detection-langue/
+status: published
+revising: false
 categories:
   - Programmation
 tags:
   - i18n
   - l10n
   - php
+excerpt: ''
 preamble:
   text: |
     D’autant plus que j’ai écrit ça bien avant de réaliser comment c’est très
@@ -66,6 +69,11 @@ de la langue actuelle... on pourrait le faire ainsi:
 ```php
  return "<img src=\"/path/to/image/?={$langue}/design_slice_12.jpg\" alt=\"Welcome\" border=\"0\" />";
 ```
+
+
+Voici [une version mise a jour en 2015][wphttpsupportedlanguagechooser]
+<script src="https://gist.github.com/renoirb/88a6065f7dffeea77333.js"></script>
+
 
 [wphttpsupportedlanguagechooser]:
   https://gist.github.com/renoirb/88a6065f7dffeea77333

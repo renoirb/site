@@ -1,9 +1,11 @@
 ---
-locale: fr-CA
-date: &createdAt '2007-02-10T15:12:01-04:00'
-createdAt: *createdAt
 title: Une machine virtuelle Gentoo
-canonical: 'https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo/'
+locale: fr-CA
+created: '2007-02-10'
+updated: '2013-03-27'
+canonical: https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo/
+status: publish
+revising: true
 categories:
   - Logiciel-Libre
 tags:
@@ -219,10 +221,10 @@ local_enable=YES
 
 ## Ressources
 
-- http://www.vmwhere.net/ Un blog sur le sujet des VM \* http://gentoovm.com/
+- http://www.vmwhere.net/ Un blog sur le sujet des VM http://gentoovm.com/
   Qui offre un bon howto et une image bare-bone de Gentoo en VM
 - http://www.gentoo.org/doc/en/handbook/ LE Handbook pour Gentoo linux
-- http://gentoo-wiki.com/HOWTO\_Subversion\#Installation Notes sur
+- http://gentoo-wiki.com/HOWTO_Subversion/#Installation Notes sur
   l'installation de SVN
-- http://gentoo-wiki.com/HOWTO\_Apache2\_with\_subversion\_SVN\_and\_DAV Howto
+- http://gentoo-wiki.com/HOWTO_Apache2_with_subversion_SVN_and_DAV Howto
   pour DAV et svn... (le sharing à -la-samba)

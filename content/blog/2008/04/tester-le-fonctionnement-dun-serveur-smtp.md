@@ -1,18 +1,21 @@
 ---
+title: Tester le fonctionnement d'un serveur SMTP
 locale: fr-CA
-keywords:
-  - smtp
-  - exim
-  - email
-canonical: 'https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/'
-title: Tester le fonctionnement d’un serveur SMTP
-date: &createdAt '2008-04-19T16:07:45-04:00'
-createdAt: *createdAt
+created: '2008-04-19'
+updated: '2014-02-19'
+canonical: >-
+  https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/
+status: publish
+revising: true
 categories:
   - Tranche de vie
 tags:
   - linux
   - procedure
+excerpt: >-
+  Étant donné que tout est très intrinsèque sur un serveur, il est important de
+  vérifier quelques informations vitales au serveur, voici quelques unes des
+  infos.
 ---
 
 ### Vérifier si le Firewall bloque certains services

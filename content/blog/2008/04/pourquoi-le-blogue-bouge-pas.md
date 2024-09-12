@@ -1,12 +1,16 @@
 ---
-locale: fr-CA
-canonical: 'https://renoirboulanger.com/blog/2008/04/pourquoi-le-blogue-bouge-pas/'
 title: Pourquoi le blogue bouge pas?
-date: &createdAt '2008-04-11T23:21:47-04:00'
-createdAt: *createdAt
+locale: fr-CA
+created: '2008-04-11'
+updated: '2013-03-27'
+canonical: https://renoirboulanger.com/blog/2008/04/pourquoi-le-blogue-bouge-pas/
+status: publish
+revising: true
+tags: []
 categories:
   - Tranche de vie
-tags: []
+keywords: []
+excerpt: ''
 ---
 
 Bonjour groupe!
@@ -24,7 +28,7 @@ moement donné.
 
 Pour mon site, ce qui est à venir sera:
 
-**Un portfolio sécurisé en ligne¬† **
+**Un portfolio en ligne**
 
 Simplement des screenshot et détails sur chaque projet web/graphique que j'ai
 travaillé. Il y en a beaucoup a compter... et le plus long: classer les vieux

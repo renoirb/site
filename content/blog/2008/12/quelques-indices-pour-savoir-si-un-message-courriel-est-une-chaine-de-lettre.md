@@ -1,14 +1,22 @@
 ---
+title: Quelques indices pour savoir si un message courriel est une chaîne de lettre
 locale: fr-CA
-canonical: 'https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/'
-title:
-  Quelques indices pour savoir si un message courriel est une chaîne de lettre
+created: '2008-12-04'
+updated: '2013-06-07'
+canonical: >-
+  https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/
+status: publish
+revising: true
 categories:
   - Tranche de vie
 tags:
   - fraude
-date: &createdAt '2008-12-04T00:03:34-04:00'
-createdAt: *createdAt
+excerpt: >-
+  Les chaînes de lettres sont l'une des façons de gaspiller du temps les plus
+  populaires. Les raisons pour y participer peuvent passer par le désir d'un
+  meilleur destin, une superstition, ou encore même avertir d'un danger. Mais
+  souvent, leur seul objectif est de se faire propager pour gonfler l'égo de
+  celui qui l'a lancée
 ---
 
 Voici quelques indices qui peuvent vous aider pour reconnaître une chaîne de
@@ -47,44 +55,24 @@ Remarquez que j'ai [même utilisé la fonte 'Comic Sans'][1], qui est souvent
 utilisée dans ce type de message. Un vrai professionnel du web ou de la
 communication n'utiliserait pas cette police de caractères.
 
-<blockquote>
 
-Subject: ENVOIE LE À TOUS TES CONTACTS!!!!
+<figure>
+<figcaption style="font-family: Comic Sans MS;">
+<p>Subject: ENVOIE LE À TOUS TES CONTACTS!!!!</p>
+<p>Date: Wed, 26 Nov 2008 09:37:13 -0500</p>
+<p>MESSAGE D'ALERTE FINALE DU WEBMASTER DE MSN!</p>
+<p>PENDANT 3 MOIS, NOUS AVONS ENVOYES DES MESSAGES QUI DISENT QUE SI VOUS N'ENVOYEZ PAS LES MESSAGES DITS ALORS VOUS PERDREZ MSN HOTMAIL!!</p>
+<p>CELA ETAIT REELLEMENT VRAI, NOUS RECOMMENCONS UNE DERNIERE FOIS SI VOUS N'ENVOYEZ PAS CECI A PLUS DE 15 CONTACTS ALORS VOTRE ADRESSE DE MESSAGERIE DE MSN HOTMAIL SERA CLOTUREE.</p>
+<p>Voici un message tres important; ce N EST PAS DU TOUT un blague. Non mais vraiment pas. Lisez:</p>
+<p>Ok, moi j'y croyais pas mais si vous allez sur le site en-bas, vous verrez que c'est vraiment vrai! Ils l'ont meme dit a BBC news!!!</p>
+<p>---FORWARDED MESSAGE---</p>
+<p>Bonjour,</p>
+<p>Nous sommes Andy et John, les directeurs de MSN. Nous sommes désolés de cette interruption mais MSN doit fermer. Parce que de beaucoup gens sans considération prennent tous les noms destinés aux adresses, en créant plusieurs comptes différents pour une seule et même personne : il ne nous reste plus que 578 noms !</p>
+<p>A partir du 1er novembre, nous aurons à payer l‘utilisation de nos comptes MSN et nos emails, sauf si nous envoyons ce message à au moins 18 de nos contacts. </p>
+<p>Ce n‘est pas une blague! D‘ailleurs si vous n‘y croyez pas <a href="http://news.bbc.co.uk/1/hi/business/1189119.stm">allez sur ce site</a></p>
+</figcaption>
+</figure>
 
-Date: Wed, 26 Nov 2008 09:37:13 -0500
-
-MESSAGE D'ALERTE FINALE DU WEBMASTER DE MSN!
-
-PENDANT 3 MOIS, NOUS AVONS ENVOYES DES MESSAGES QUI DISENT QUE SI VOUS N'ENVOYEZ
-PAS LES MESSAGES DITS ALORS VOUS PERDREZ MSN HOTMAIL!!
-
-CELA ETAIT REELLEMENT VRAI, NOUS RECOMMENCONS UNE DERNIERE FOIS SI VOUS
-N'ENVOYEZ PAS CECI A PLUS DE 15 CONTACTS ALORS VOTRE ADRESSE DE MESSAGERIE DE
-MSN HOTMAIL SERA CLOTUREE.
-
-Voici un message tres important; ce N EST PAS DU TOUT un blague. Non mais
-vraiment pas. Lisez:
-
-Ok, moi j'y croyais pas mais si vous allez sur le site en-bas, vous verrez que
-c'est vraiment vrai! Ils l'ont meme dit a BBC news!!!
-
----FORWARDED MESSAGE---
-
-Bonjour,
-
-Nous sommes Andy et John, les directeurs de MSN. Nous sommes désolés de cette
-interruption mais MSN doit fermer. Parce que de beaucoup gens sans considération
-prennent tous les noms destinés aux adresses, en créant plusieurs comptes
-différents pour une seule et même personne : il ne nous reste plus que 578 noms
-!
-
-A partir du 1er novembre, nous aurons à payer l'utilisation de nos comptes MSN
-et nos emails, sauf si nous envoyons ce message à au moins 18 de nos contacts.
-
-Ce n'est pas une blague! D'ailleurs si vous n'y croyez pas [allez sur ce
-site][2]
-
-</blockquote>
 
 ### Notes
 

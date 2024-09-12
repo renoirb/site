@@ -1,18 +1,22 @@
 ---
+title: Effacer complètement un disque dur de façon sécuritaire
 locale: fr-CA
+created: '2008-04-16'
+updated: '2013-03-27'
+canonical: https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/
+status: publish
+revising: true
+tags:
+  - techniques
+  - tutoriels
+categories:
+  - Techniques
 keywords:
   - disque dur
   - disques
   - linux
   - script
-canonical: 'https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/'
-title: Effacer complètement un disque dur de façon sécuritaire
-date: &createdAt '2008-04-16T00:45:08-04:00'
-createdAt: *createdAt
-categories:
-  - Techniques
-tags:
-  - tutoriels
+excerpt: ''
 ---
 
 Lorsqu'on se préocupe de ses informations personnelles et qu'on veut se
