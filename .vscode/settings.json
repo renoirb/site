@@ -16,7 +16,7 @@
     "*.css": "vue-postcss"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "[vue-postcss]": {
     "breadcrumbs.showVariables": true

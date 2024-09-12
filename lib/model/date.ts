@@ -71,7 +71,7 @@ export const formatTemporal = (
 }
 
 export const getPrettyfiedTemporalDate = (
-  content: Record<'date' | 'createdAt' | 'updatedAt', string>,
+  content: Record<'created' | 'updated', string>,
   locale = 'fr-CA',
   format?: Intl.DateTimeFormatOptions,
 ): IPrettyfiedTemporalDate => {
@@ -83,7 +83,13 @@ export const getPrettyfiedTemporalDate = (
    *
    * @TODO #23 It MUST be a string that has no Z in its notation.
    */
-  const field = content?.date ?? content?.createdAt ?? content?.updatedAt ?? 0
+  let field = content?.date ?? content?.created ?? content?.updated ?? 0
+
+  if (/\d\d\d\d-\d\d-\d\dT/.test(field)) {
+    field = field.split('T')[0]
+  } else if (/\d\d\d\d-\d\d-\d\d\s/.test(field)) {
+    field = field.split(' ')[0]
+  }
 
   if (field !== 0) {
     const temporalDate: Temporal.PlainDate = Temporal.PlainDate.from(field)
@@ -110,8 +116,9 @@ export const getPrettyfiedTemporalDate = (
       temporalDate,
     }
   }
-  const message = `Something went wrong`
-  throw new Error(message)
+  return {
+    temporalDate: '',
+  }
 }
 
 export const transformToPrettyfiedTemporalDate = (
@@ -183,7 +190,7 @@ export const getMonthNames: IMonthNamesFn = (
     month: 'long',
     ...(options || {}),
   }
-  for (let month = 1; month <= temporalDate.monthsInYear ?? 12; month++) {
+  for (let month = 1; month <= (temporalDate?.monthsInYear ?? 12); month++) {
     const thisMonth = temporalDate.with({ year: temporalDate.year, month })
     const formatted = thisMonth.toLocaleString(locale, formatOptions)
     out.push([String(month).padStart(2, '0'), formatted])

@@ -37,6 +37,7 @@ node_modules/
 
 # Optional npm cache directory
 .npm
+@eaDir
 
 # Optional eslint cache
 .eslintcache

@@ -52,7 +52,7 @@ export type INuxtContentPrevNext = Pick<
 export interface INuxtContentIndexResult
   extends Pick<
     INuxtContentResult,
-    'createdAt' | 'date' | 'locale' | 'path' | 'slug' | 'title'
+    'created' | 'updated' | 'locale' | 'path' | 'slug' | 'title'
   > {
   prettyfiedTemporalDate?: IPrettyfiedTemporalDate
 }
@@ -82,8 +82,8 @@ export const queryNuxtContent = async (
   let { q = '' } = query
   q = typeof q === 'string' ? q : ''
   let ds = $content('blog', { deep: true })
-    .sortBy('createdAt', 'desc')
-    .only(['createdAt', 'date', 'locale', 'path', 'slug', 'tags', 'title'])
+    .sortBy('created', 'desc')
+    .only(['created', 'updated', 'locale', 'path', 'slug', 'tags', 'title'])
   if (q) {
     ds = ds.search(q)
   }

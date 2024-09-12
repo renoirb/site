@@ -58,7 +58,7 @@
       const query = $content('projects')
       const contents = (await query
         .where({ pageKey: { $contains: pageKey }, locale: { $eq: locale } })
-        .sortBy('date', 'desc')
+        .sortBy('created', 'desc')
         .fetch()) as INuxtContentResult[]
 
       return {

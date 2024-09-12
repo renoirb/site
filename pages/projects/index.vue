@@ -48,7 +48,7 @@
     watchQuery: true,
     async asyncData({ $content, route }) {
       const q = route.query.q
-      let query = $content('projects', { deep: true }).sortBy('date', 'desc')
+      let query = $content('projects', { deep: true }).sortBy('created', 'desc')
       if (q) {
         query = query.search(q)
         // OR query = query.search('title', q)

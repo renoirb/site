@@ -32,10 +32,10 @@
       let contents: INuxtContentIndexResult[] = []
       try {
         contents = await $content('blog', year, month, { deep: true })
-          .sortBy('createdAt', 'desc')
+          .sortBy('created', 'desc')
           .only([
-            'createdAt',
-            'date',
+            'created',
+            'updated',
             'locale',
             'path',
             'slug',

@@ -138,7 +138,7 @@
 
       const dal = $content('blog', { deep: true })
         .only(['title', 'path', 'locale'])
-        .sortBy('createdAt', 'asc')
+        .sortBy('created', 'asc')
         .surround(slug)
 
       const [prev, next] = (await dal.fetch()) as [

@@ -16,22 +16,19 @@ export const extractYearFromDateString = (dateString: string | ''): number => {
 }
 
 export const extractYearFromRecord = (
-  content: Record<'date' | 'createdAt', string>,
+  content: Record<'created' | 'updated', string>,
 ): number => {
-  let out: '' | number = ''
+  let out: number = 0
 
-  const { date = '', createdAt = '' } = content
+  const { created = '', updated } = content
 
-  if (date !== '') {
-    out = extractYearFromDateString(date)
+  if (created !== '') {
+    out = extractYearFromDateString(created)
   }
-  if (out === '' && createdAt !== '') {
-    out = extractYearFromDateString(date)
+  if (out === 0 && updated) {
+    out = extractYearFromDateString(updated)
   }
-  if (typeof out !== 'number') {
-    const message = `Could not extract year`
-    throw new Error(message)
-  }
+
   return out
 }
 
@@ -41,7 +38,7 @@ export const breakIntoYears = (
   const out: INuxtContentIndexResultByYears = []
   for (const content of contents) {
     const year = extractYearFromRecord(content)
-    let bucket = out.find(([y]) => y === year)
+    let bucket = out.find(([y]) => y === year && year !== 0)
     if (!bucket) {
       out.push([year, []])
       bucket = out.find(([y]) => y === year)

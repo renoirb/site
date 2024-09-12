@@ -38,7 +38,7 @@
       try {
         contents = await $content(dataModelName)
           .sortBy('title', 'desc')
-          .only(['createdAt', 'date', 'locale', 'path', 'slug', 'title'])
+          .only(['created', 'updated', 'locale', 'path', 'slug', 'title'])
           .fetch()
       } catch (_) {
         // ..

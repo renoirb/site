@@ -41,7 +41,7 @@
           />
         </li>
       </ul>
-      <div class="h-5 -ml-10" style="background-color: var(--bg)" />
+      <div class="h-5 -ml-10">&nbsp;</div>
     </div>
     <div v-if="byYears.length < 1">
       <p class="font-serif text-lg italic">

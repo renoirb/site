@@ -67,7 +67,7 @@
       contents = await $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
         .limit(4)
-        .sortBy('createdAt', 'desc')
+        .sortBy('created', 'desc')
         .fetch()
 
       for (const content of contents) {
