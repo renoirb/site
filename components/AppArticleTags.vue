@@ -90,10 +90,12 @@
       tags(): string[] {
         const _tags = new Set<string>()
         if ('tags' in this.content && this.content.tags) {
-          for (const tag of this.content.tags) {
-            if (typeof tag === 'string' && tag.replace(/[\s\t/]/g, '') !== '') {
-              _tags.add(tag)
-            }
+          const tags: string[] = (this.content.tags ?? [])
+            .map((t) => typeof t === 'string' && t.replace(/[\s\t/]/g, ''))
+            .filter((t) => t !== '')
+            .filter((t) => t !== 'on-front-page')
+          for (const tag of tags) {
+            _tags.add(tag)
           }
         }
         const out = Array.from(_tags)

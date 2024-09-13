@@ -21,12 +21,30 @@ export type INuxtContentResolver = (
 ) => Promise<IBaseNuxtContentResult[]>
 
 export interface IBaseNuxtContentResult extends IResult {
+  /**
+   * Nuxt internal file creation date
+   *
+   * #ToLearn: Figure Out Unsure if it's filesystem
+   */
   createdAt: string
+  /**
+   * Nuxt internal file updated date
+   *
+   * #ToLearn: Figure Out Unsure if it's filesystem
+   */
+  updatedAt: string
+  /**
+   * Hard-coded, per file, desired publication date.
+   */
+  created: string
+  /**
+   * Hard-coded, per file, desired last updated date.
+   */
+  updated: string
   dir: string
   extension: string
   path: string
   slug: string
-  updatedAt: string
 }
 
 export interface INuxtContentResult extends IBaseNuxtContentResult {

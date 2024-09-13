@@ -61,7 +61,7 @@
   export default Vue.extend<Data, Methods, Computed, Props>({
     layout: 'homepage',
     async asyncData({ $content }) {
-      const tag = 'favourites'
+      const tag = 'on-front-page'
 
       let contents: IDatedNuxtContentResult[] = []
       contents = await $content('blog', { deep: true })
