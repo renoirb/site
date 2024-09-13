@@ -13,12 +13,12 @@ tags:
   - open-source
   - procedure
 keywords:
-  - vmware
-  - ubuntu
-  - server
-  - repositoire
-  - serveur
+  - VMWare Server
+  - Ubuntu 7.04
+  - Fiesty Fawn
+  - Canonical Repository
 excerpt: ''
+description: Procedure pour installer Ubuntu 7.04 Fiesty Fawn pour faire rouler VMWare Server
 preamble:
   text: |
     Dans le temps où le «cloud computing» n’était pas très fréquent, ni
@@ -108,7 +108,7 @@ l'installation.
 Utiliser `sudo su --` (ou "`sudo -s`") pour s'élever au commandes d'un shell
 root.
 
-```terminal
+```bash
 sudo -s
 vi /etc/apt/sources.list
 ```
@@ -126,7 +126,7 @@ deb http://archive.canonical.com/ubuntu feisty/commercial main
 Ensuite un update et un upgrade s'impose... question de garder à jour le
 serveur.
 
-```terminal
+```bash
 apt-get update
 apt-get upgrade
 ```
@@ -135,7 +135,7 @@ apt-get upgrade
 
 Puis, installer les kernel-modules
 
-```terminal
+```bash
 apt-get install vmware-server vmware-tools-kernel-modules
 ```
 
@@ -150,7 +150,7 @@ vmware-server à partir d'une autre machine sur notre LAN.
 <!-- #XXX notice-box-element -->
 <app-alert-box alert-type="error" title="Note lors de la migration 2020-09-26" message="Après re-lecture (et 14 ans plus tard) je réalise les risques que j’aurai pu causer sur mon propre serveur. Ne suivez pas aveuglément ce type de conseil! Assurez-vous de seulement installer des binaires de sources que vous faites confiance, comme celles provenant du vendeur. Pas d’un blogue au hasard! A moins que vous puissiez lire le code, et compiler vous-même."></app-alert-box>
 
-```terminal
+```bash
 cd /lib/security
 wget www.matthewbrowne.com/blog/wp-content/uploads/pam_unix_vm.so
 ```
@@ -170,7 +170,7 @@ Alors j'ai suivi, récrit le fichier comme suit
 
 Ensuite on redémarre la machine
 
-```terminal
+```bash
 init 6
 ```
 

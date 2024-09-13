@@ -10,7 +10,7 @@ categories:
   - projects
 tags:
   - standardization
-  - Salt Stack
+  - salt-stack
   - procedure
 keywords:
   - docker

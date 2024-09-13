@@ -11,7 +11,7 @@ categories:
 tags:
   - operations
   - linux
-  - Salt Stack
+  - salt-stack
   - cloud-computing
 keywords:
   - GNU

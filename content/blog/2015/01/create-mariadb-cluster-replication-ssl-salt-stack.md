@@ -15,7 +15,7 @@ tags:
   - cloud-computing
 keywords:
   - replication
-  - database server
+  - database-server
   - cluster
   - configuration
   - mysql

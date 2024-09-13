@@ -10,7 +10,7 @@ categories:
   - techniques
 tags:
   - linux
-  - Salt Stack
+  - salt-stack
   - cloud-computing
   - procedures
 keywords:

@@ -11,7 +11,7 @@ categories:
 tags:
   - linux
   - operations
-  - Salt Stack
+  - salt-stack
   - cloud-computing
 keywords:
   - Ansible

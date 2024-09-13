@@ -12,9 +12,9 @@ categories:
   - web-integration-review
 tags:
   - best-practices
+  - conference
   - slides
   - talk
-  - with-images
 excerpt: >-
   La façon de concevoir des sites Web a beaucoup évolué au cours des deux
   dernières années. Concevez-vous encore vos sites comme en 2009? Trouvez-vous

@@ -11,13 +11,10 @@ revising: true
 categories:
   - web-integration-review
 tags:
-  - on-front-page
   - architecture
-  - Frameworks
-  - PHP
+  - frameworks
+  - php
   - symfony2
-  - with-images
-  - vulgarization
 keywords:
   - PHP
   - Framework

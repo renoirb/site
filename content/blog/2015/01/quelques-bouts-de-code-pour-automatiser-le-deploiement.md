@@ -5,12 +5,12 @@ created: 2015-01-28
 updated: 2015-02-17
 canonical: https://renoirboulanger.com/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement
 categories:
-  - Automation
+  - projects
 tags:
-  - Cloud-Computing
-  - Development
-  - Operations
-  - Salt stack
+  - cloud-computing
+  - development
+  - operations
+  - salt-stack
 preamble:
   disable: true
   text: ' '

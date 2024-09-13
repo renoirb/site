@@ -10,7 +10,6 @@ categories:
   - tranche-de-vie
 tags:
   - geeknight
-  - with-images
 keywords:
   - devlab
   - montreal

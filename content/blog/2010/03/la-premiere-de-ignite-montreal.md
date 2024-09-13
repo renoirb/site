@@ -10,7 +10,6 @@ categories:
   - tranche-de-vie
 tags:
   - evenements
-  - with-images
 keywords:
   - ignite
   - montreal

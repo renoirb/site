@@ -8,7 +8,7 @@ canonical: >-
 status: publish
 revising: false
 categories:
-  - Projects
+  - projects
 tags:
   - linux
   - docker

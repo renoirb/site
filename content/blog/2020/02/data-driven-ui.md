@@ -117,7 +117,7 @@ A _DisplayUnit_ can be seen as a descriptor to tell properties we want and how
 to organize the data, and with which we can pass into a "_DataViewParent_".
 
 <code-group title="DisplayUnit">
-<code-block label="As words" active>
+  <code-block label="As words" active>
 
 ```markdown
 - The first column to use the each rows’s "`task_description`" property as
@@ -129,8 +129,8 @@ to organize the data, and with which we can pass into a "_DataViewParent_".
   locale and time zone
 ```
 
-</code-block>
-<code-block label="As Data">
+  </code-block>
+  <code-block label="As Data">
 
 ```yaml
 headings:
@@ -161,14 +161,14 @@ headings:
         value: CreatedAt
 ```
 
-</code-block>
+  </code-block>
 </code-group>
 
 With the description of the view, we can then pass some context and data and get
 a listing view.
 
 <code-group title="Context data">
-<code-block label="The Data" active>
+  <code-block label="The Data" active>
 
 ```yaml
 rows:
@@ -185,8 +185,8 @@ rows:
     status: 1
 ```
 
-</code-block>
-<code-block label="The current user’s state">
+  </code-block>
+  <code-block label="The current user’s state">
 
 ```yaml
 session:
@@ -194,8 +194,8 @@ session:
   timeZone: America/Montreal
 ```
 
-</code-block>
-<code-block label="Applicable i18n translation">
+  </code-block>
+  <code-block label="Applicable i18n translation">
 
 ```yaml
 i18n:
@@ -209,7 +209,7 @@ i18n:
         createdAt: Creation Date
 ```
 
-</code-block>
+  </code-block>
 </code-group>
 
 ### DataViewParent
