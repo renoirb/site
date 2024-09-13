@@ -1,9 +1,21 @@
 ---
-locale: en-CA
 title: How to run your own OAuth Identity provider service
+locale: en-CA
+created: 2015-04-13
+updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/run-oauth-identity-provider-service/
-date: &createdAt '2015-04-13T12:13:25-04:00'
-createdAt: *createdAt
+status: publish
+revising: true
+categories:
+  - experiments
+tags:
+  - webplatform
+  - security
+keywords:
+  - IdP
+  - OAuth
+  - Authorization
+  - TLS
 coverImage:
   src: ~/assets/content/blog/2015/03/Oauth_logo.png
   text: |
@@ -15,16 +27,10 @@ preamble:
     All infrastructure related to WebPlatform Docs is shut down since 2016.
     Mentions about SSO and OAuth is still (2020) accessible from the archived [`webplatform.github.io/docs/WPD/Projects/SSO` wiki pages][wpd-projects-sso].
     [wpd-projects-sso]: https://webplatform.github.io/docs/WPD/Projects/SSO/
-categories:
-  - Organization
-tags:
-  - webplatform
-  - Favourites
-keywords:
-  - IdP
-  - OAuth
-  - Authorization
-  - TLS
+excerpt: >-
+  Tutorials and explanation on how to be your own OAuth Identity Provider are
+  very scarce and I’ve come to achieve this, this is an attempt to outline the
+  basics.
 ---
 
 Generally, we connect our application against a provider so it can share details
@@ -110,6 +116,12 @@ If the relying party doesn't have a user, it'll create one.
 
 Each relying party is responsible to sync its local user and session state based
 on what the accounts service gives.
+
+## Seeing in action
+
+Here is a recording I made showing how it looked like;
+
+<iframe width="560" height="560" src="https://www.youtube.com/embed/KKeh9C4SMnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [wpd-sso-yt]: https://youtu.be/KKeh9C4SMnw
 [wpd-projects-sso]: https://webplatform.github.io/docs/WPD/Projects/SSO/

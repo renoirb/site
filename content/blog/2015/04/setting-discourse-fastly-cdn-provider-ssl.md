@@ -1,9 +1,27 @@
 ---
-locale: en-CA
 title: Setting up Discourse with Fastly as a CDN provider and TLS
+locale: en-CA
+created: 2015-04-29
+updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl/
-date: &createdAt '2015-04-29T17:18:05-04:00'
-createdAt: *createdAt
+status: publish
+revising: true
+categories:
+  - projects
+tags:
+  - operations
+  - cloud-computing
+  - webplatform
+  - Linux
+  - caching
+  - varnish
+keywords:
+  - Discourse
+  - Docker
+  - Fastly
+  - TLS
+  - NGINX
+  - Varnish
 preamble:
   text: |
     It is possible the code shown here no longer works.
@@ -13,19 +31,9 @@ coverImage:
   text: |
     Side by side comparison while working on migrating Discourse
     with WICG
-categories:
-  - Projects
-tags:
-  - operations
-  - Cloud Computing
-  - webplatform
-keywords:
-  - Discourse
-  - Docker
-  - Fastly
-  - TLS
-  - NGINX
-  - Varnish
+excerpt: >-
+  Here’s how I setup a Discourse web application so that I can scale it by
+  adding more Docker instances while keeping a low number of exposed web servers
 ---
 
 The following is a copy of what I published in a question on
@@ -73,7 +81,7 @@ Here are the differences;
 1. Setup your domain name with the CNAME Fastly will provide you ([you will have
    to contact them for your account though][2]), ours is like that ;
 
-   ```
+   ```dns-zone-file
    discuss.webplatform.org. IN CNAME webplatform.map.fastly.net.
    ```
 
@@ -110,7 +118,7 @@ rewritten using this template.
   Refer to [this post about _Make Discourse "long polling" work behind
   Fastly_][3] to understand its purpose
 
-```
+```nginx
 upstream upstream_discourse {
 {%- for b in upstreams %}
     server    {{ b }}:{{ upstream_port }};

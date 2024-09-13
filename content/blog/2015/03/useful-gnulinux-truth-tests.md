@@ -1,18 +1,24 @@
 ---
-locale: en-CA
-canonical: 'https://renoirboulanger.com/blog/2015/03/useful-gnulinux-truth-tests/'
 title: A few useful GNU/Linux truth tests while creating salt states
-date: &createdAt '2015-03-10T19:38:22-04:00'
-createdAt: *createdAt
+locale: en-CA
+created: '2015-03-10'
+updated: '2023-02-18'
+canonical: 'https://renoirboulanger.com/blog/2015/03/useful-gnulinux-truth-tests/'
+status: publish
+revising: true
 categories:
-  - Organization
+  - techniques
 tags:
-  - Linux
+  - linux
   - Salt Stack
-  - Cloud Computing
+  - cloud-computing
+  - procedures
 keywords:
   - GNU
   - usermod
+excerpt: >-
+  A common task while writing server configuration management manifests is to
+  make sure that some enforcements are run in specific situations.
 ---
 
 Nothing amazing here, just that in some situations I want to run commands in

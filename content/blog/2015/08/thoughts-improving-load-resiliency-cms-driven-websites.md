@@ -1,11 +1,14 @@
 ---
-locale: en-CA
 title: Thoughts about improving load resiliency for CMS driven Websites
-canonical: https://renoirboulanger.com/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites/
-date: &createdAt '2015-08-12T20:55:06-04:00'
-createdAt: *createdAt
+locale: en-CA
+created: 2015-08-12
+updated: 2023-02-18
+canonical: >-
+  https://renoirboulanger.com/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites/
+status: publish
+revising: false
 categories:
-  - Web Integration Review
+  - web-integration-review
 tags:
   - vulgarization
   - development
@@ -31,6 +34,9 @@ preamble:
     based on my [own research about **Compatibility Tables** for **WebPlatform Docs**][wpd-compatables].
     [wpd-compatables]: https://webplatform.github.io/docs/WPD/Projects/CompaTables/ "WebPlatform browser compatibility support table"
     [link-scale-mdn]: https://groups.google.com/d/msg/mozilla.dev.mdn/4_bFfpyvYMk/8c6S6cblZ4kJ "RE: Proposal to help scale MDN"
+excerpt: >-
+  How about we re-imagine how to serve content from a CMS and leverage HTTP
+  caching? How could it be done?
 ---
 
 The following is an article I wrote based on a [note I sent to the Mozilla

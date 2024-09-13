@@ -1,11 +1,20 @@
 ---
-locale: en-CA
 title: Migrating WebPlatform.org MediaWiki into Git as Markdown files
+locale: en-CA
+created: 2015-07-30
+updated: 2020-11-18
+status: publish
+revising: true
+categories:
+  - projects
+tags:
+  - archiving
+  - open-source
+  - operations
+  - webplatform
 description:
   How to take a full MediaWiki content and edit history into a Git repository
   keeping the history and author attributions into Markdown
-date: '2015-07-30T22:39:34-04:00'
-createdAt: '2020-11-18T18:31:31-04:00'
 coverImage:
   src: ~/assets/content/blog/2015/07/monit_dashboard_201502_status.png
   text: |
@@ -15,14 +24,8 @@ coverImage:
 preamble:
   disable: true
   text: ' '
-categories:
-  - Projects
-tags:
-  - open-source
-  - operations
-  - procedure
-  - webplatform
 ---
+<!-- #TODO Review how to manage images and breaking points under other modes -->
 
 [wpd-stewards]:
   https://web.archive.org/web/20160303233844/http://www.webplatform.org/stewards/
@@ -46,6 +49,7 @@ On July 1st 2015, _The WebPlatform project_ has been discontinued, by having
 I was hired by the W3C solely to maintain the WebPlatform project. Without
 funding, and no budget at W3C/MIT to transfer me, my contract was going to end.
 
+<!-- #XXX from app-alert-box to notice-box-element -->
 <app-alert-box style="display:flex">
 👀 This was written in December 2020 and taken from notes I’ve been sharing around via email.
 </app-alert-box>

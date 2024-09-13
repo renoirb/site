@@ -1,19 +1,22 @@
 ---
 locale: en-CA
 title: Harmonizing how to bundle and package JavaScript/ECMAScript features
+created: 2020-02-04
+updated: 2020-02-04
+status: publish
+revising: false
+categories:
+  - experiments
+tags:
+  - front-end
+  - packaging
+  - architecture
 description:
   Research summary on experiments made in 2018 and 2019 about related to
   ECMASCript/JavaScript packaging, publishing and bundling
-date: &createdAt '2020-02-04T20:55:06-04:00'
-createdAt: *createdAt
 preamble:
   disable: true
   text: ' '
-categories:
-  - Research Summary
-tags:
-  - front-end
-  - architecture
 ---
 
 Part of my time has been spent on finding a flexible way to organize code and
@@ -163,6 +166,7 @@ inlining][core-js-src-iterator-inlined] automatically from [publicly maintained
 list of "polyfills" (see `core-js` source)][core-js-src-iterator]. All of which
 is possible because [one of the build target _is specifically targetted for
 Internet Explorer_][for-of-example-package-json]
+
 
 ```bash
 use-cross-env BROWSERSLIST='ie 6-9' \

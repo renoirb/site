@@ -1,20 +1,26 @@
 ---
-locale: en-CA
 title:
   Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS, and make your own .deb package
   for deployment
+locale: en-CA
+created: 2015-04-05
+updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package/
-date: &createdAt '2015-04-05T15:42:38-04:00'
-createdAt: *createdAt
+status: publish
+revising: true
 categories:
-  - Organization
+  - projects
 tags:
   - webplatform
+  - procedure
   - operations
   - best-practices
 keywords:
   - Python
   - ubuntu
+excerpt: >-
+  Need to run your web app with Python 2.7.9, but server environment uses Ubuntu
+  14.04 LTS? Don’t replace Python, leverage VirtualEnv instead!
 ---
 
 I had this post hanging in my drafts on how I attempted to install a valid
@@ -56,7 +62,41 @@ LTS**, if you aren't using the same distribution, you might get a different
 list.
 
 ```bash
-apt-get install -y gcc-multilib g++-multilib libffi-dev libffi6 libffi6-dbg python-crypto python-mox3 python-pil python-ply libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libgdbm-dev dpkg-dev quilt autotools-dev libreadline-dev libtinfo-dev libncursesw5-dev tk-dev blt-dev libssl-dev zlib1g-dev libbz2-dev libexpat1-dev libbluetooth-dev libsqlite3-dev libgpm2 mime-support netbase net-tools bzip2
+apt-get install -y \
+        autotools-dev \
+        blt-dev \
+        bzip2 \
+        dpkg-dev \
+        g++-multilib \
+        gcc-multilib \
+        libbluetooth-dev \
+        libbluetooth-dev \
+        libbz2-dev \
+        libbz2-dev \
+        libexpat1-dev \
+        libexpat1-dev \
+        libffi-dev \
+        libffi6 \
+        libffi6-dbg \
+        libgdbm-dev \
+        libgpm2 \
+        libncursesw5-dev \
+        libreadline-dev \
+        libsqlite3-dev \
+        libssl-dev \
+        libssl-dev \
+        libtinfo-dev \
+        mime-support \
+        net-tools \
+        netbase \
+        python-crypto \
+        python-mox3 \
+        python-pil \
+        python-ply \
+        quilt \
+        tk-dev \
+        zlib1g-dev \
+        zlib1g-dev
 ```
 
 2. Get Python sources and compile
@@ -81,7 +121,11 @@ Python 2.7.9
 4. Then prepare package through FPM
 
 ```bash
-apt-get install -y ruby-dev gcc gem install fpm ...
+apt-get install -y \
+        ruby-dev \
+        gcc
+
+gem install fpm
 ```
 
 Its basically about creating a .deb based on your new runtime setup. You can do

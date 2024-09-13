@@ -1,28 +1,30 @@
 ---
+title:
+  'Conférence: Comment évaluer le niveau de qualité d’un site web selon les
+  techniques d’intégration web d’actualité'
 locale: fr-CA
+created: 2013-02-21
+updated: 2023-11-16
 canonical: 'https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/'
+status: publish
+revising: true
+categories:
+  - web-integration-review
+tags:
+  - best-practices
+  - slides
+  - talk
+  - with-images
+excerpt: >-
+  La façon de concevoir des sites Web a beaucoup évolué au cours des deux
+  dernières années. Concevez-vous encore vos sites comme en 2009? Trouvez-vous
+  vos sites lents? Êtes-vous web-responsable? Comment pouvez-vous être certain
+  que votre pigiste, employé ou fournisseur fait un travail de qualité?
 coverImage:
   src: ~/assets/content/blog/2013/02/renoir-boulanger-prensentant-web-in-2013.jpg
   alt: Renoir devant une salle pleine durant une conférence
   text: |
     Durant la présentation donnée au Web-In 2013
-title:
-  'Conférence: Comment évaluer le niveau de qualité d’un site web selon les
-  techniques d’intégration web d’actualité'
-preamble:
-  disable: true
-  text: ' '
-categories:
-  - Portfolio
-date: &createdAt '2013-02-21T22:21:10-04:00'
-createdAt: *createdAt
-tags:
-  - Favourites
-  - best-practices
-  - Integration
-  - Slides
-  - Talk
-  - with-images
 ---
 
 Cette semaine, je fait une conférence pour la deuxième fois de ma présentation

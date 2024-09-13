@@ -1,12 +1,16 @@
 ---
-locale: en-CA
 title: Porting all my content into a static-site
-date: &createdAt '2020-09-10T18:31:31-04:00'
-createdAt: *createdAt
+locale: en-CA
+created: 2020-09-10
+updated: 2020-09-10
+status: publish
+revising: false
+categories:
+  - projects
 tags:
   - vuejs
   - nuxt
-  - Favourites
+  - on-front-page
 ---
 
 [monorepo-related-alpha]:

@@ -1,16 +1,16 @@
 ---
 title: Le futur du PC
 locale: fr-CA
-created: '2007-01-25'
-updated: '2009-08-27'
+created: 2007-01-25
+updated: 2009-08-27
 canonical: https://renoirboulanger.com/blog/2007/01/le-futur-du-pc/
 status: publish
 revising: true
 categories:
-  - Actualites
+  - actualites
 tags:
-  - AR
-  - Linux
+  - ar
+  - linux
 keywords:
   - bureau
   - futur
@@ -49,6 +49,7 @@ traditionnel et l'informatique.
 Imaginez pouvoir classer les choses sur le «bureau» comme sur un «bureau
 physique».
 
+<!-- #XXX notice-box-element -->
 <app-alert-box title="Note laissée lors de révision faite en Août 2009">
 
 Sur le marché (en 2009), l’écran ne peux détecter qu’un seul point de pression à

@@ -21,7 +21,7 @@ human:
       Rapport de conférence, ou présentation donnée lors d’une conférence
 
   - key: cloud-computing
-    text: infonuagique
+    text: Info Nuagique
     description: |
       Essais écrits sur mes observations de projets/produits
       qui prennent avantage de la virtualisation et de l’infrastructure
@@ -39,8 +39,13 @@ human:
     description: |
       Relié au dévelopment et/ou la programmation web
 
+  - key: docker
+    text: Docker
+    description: |
+      Faisant usage de Docker
+
   - key: evenements
-    text: événements
+    text: Événements
     description: |
       Événements que j’ai assisté ou contribué
 

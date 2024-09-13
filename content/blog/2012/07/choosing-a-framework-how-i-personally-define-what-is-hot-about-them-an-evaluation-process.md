@@ -1,36 +1,51 @@
 ---
-locale: en-CA
 title:
   Choosing a framework, how I personally check as “hot” characteristics, my
   evaluation process
+locale: en-CA
+created: 2012-07-23
+updated: 2013-03-29
 canonical: 'https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process/'
-date: &createdAt '2012-07-23'
-createdAt: *createdAt
+status: publish
+revising: true
+categories:
+  - web-integration-review
+tags:
+  - on-front-page
+  - architecture
+  - Frameworks
+  - PHP
+  - symfony2
+  - with-images
+  - vulgarization
+keywords:
+  - PHP
+  - Framework
+  - web
+  - process
+  - people
+  - community
+  - code
+  - quality
 coverImage:
   src: ~/assets/content/blog/2012/07/everything-with-php-sauce.png
   alt: Everything goes with PHP Sauce
   text: Everything goes with PHP Sauce
-keywords:
-  - php
-  - framework
-  - good
-  - post
-  - web
-  - process
-  - people
-  - important
-  - community
-  - code
-  - quality
-categories:
-  - Web Integration Review
-tags:
-  - architecture
-  - Favourites
-  - frameworks
-  - php
-  - symfony2
-  - with-images
+excerpt: >-
+  I do not want to say that I am an expert in programming languages, nor a PHP
+  guru. But with my experience in web development and discussions with other
+  community leaders from the Java, Ruby, Python, Javascript communities and with
+  my own working in team, I learned stuff and here's some of what I consider
+  "hot", in the PHP world, ~~right now~~ <ins>in 2012</ins>.
+preamble:
+  date: 2024-09-12
+  text: |
+    I’m surprised to say, but this text aged well. I’m essentially saying that we need tooling to help separate concerns. What happens server-side versus client-side is wildly different.
+    This was written at the time way before full JavaScript frameworks such as Vue.js Angular, or React.
+    Before React JSX HTML tags, Facebook included this way of handling content update with XML tags
+    natively in PHP, called [XHP](https://hacklang.org/#:~:text=XHP%20provides,appropriate%20way) as part of their own superset of PHP called "[Hack](https://hacklang.org/)", which was in part of their complete rewrite of PHP in what was called "Hip Hop VM" ([HHVM](https://hhvm.com/)).
+    Also, during that epoch, Fabien Potencier had a few releases of Symfony framework
+    via Sensio Labs, the company he founded.
 ---
 
 This post is all about what **I** think should be used to define quality in your
@@ -42,7 +57,7 @@ framework and why I am sold. I am aware that I may sound blinded with my choice,
 but this post is about explaining my own guidelines about my choice. I work with
 them since many years and that made me try many in the PHP ecosystem.
 
-Things can get messy with PHP, that's why we have to be very cautious on how we
+Things can get messy with PHP, that’s why we have to be very cautious on how we
 structure and consider recommendations from other good programmers.
 
 Since we know that PHP can be a "sauce where everything goes". Structure is
@@ -71,7 +86,7 @@ _everything_ I try to do my work.
 
 ### My own experience
 
-Value of one's word starts with the credentials. So, here's a little bit about
+Value of one’s word starts with the credentials. So, here’s a little bit about
 my own personnal experience.
 
 Between 2002-2005 I created my own CMS and CRM that I was calling [Geranium][3].
@@ -94,7 +109,7 @@ But, in my past I worked and had many discussions in either while I was
 [organizer][4] at [ConFoo][5], and community events I was hosting [during
 devLABs][6] and other kind of events) in clean code architecture and principles.
 
-[PHP has a lot of bad code and tutorials][7] (W3Schools is one of them that pops
+[PHP has a lot of bad code and tutorials][7] (W3School’s is one of them that pops
 right in my mind). If you follow these, please stop right now!
 
 But nowadays, there is good quality tools and efforts to enforce. And, quite
@@ -163,28 +178,28 @@ Make sure what you use has, a way to:
 - abstract database calls without hardcoding database vendor specific
   (Doctrine2, Propel)
 - Unit testing structure, usage and conventions (PHP Unit, Behat, Mink)
-- Database code doesn't use "`mysql`" and istead uses `mysqli`
+- Database code doesn’t use "`mysql`" and istead uses `mysqli`
 - Code generation mechanisms (also known as "Scaffolding"), see: [Bob][16], and
   the ones built in Doctrine2 and Symfony2
-- Code generation based on functionnal requirement description, see [(Ruby's)
-  Cucumber][17]/[RSpec][18], in PHP it's called [Behat][19]
-- Database object class is as most possible vanilla (doesn't extend ORM's)
+- Code generation based on functionnal requirement description, see [(Ruby’s)
+  Cucumber][17]/[RSpec][18], in PHP it’s called [Behat][19]
+- Database object class is as most possible vanilla (doesn’t extend ORM’s)
 
 And all of that distinct functionality packages that you can mix and match
 aligned with what is not to be deprecated and the [latest php features][20]
 
-### That's all for now
+### That’s all for now
 
 I could go on and on with a list. Stay tuned for my next post about my analysis
 on what I think great about those next generation PHP framework and tools. And
-most importantly, **WHAT** make's them attention worthy.
+most importantly, **WHAT** make’s them attention worthy.
 
 ### Reference
 
 #### Some good guidelines
 
 - [PHP The Right Way][21] ([contribute with a pull request here][22])
-- [PHP Framework Interop Group][23]'s PSR recommendation reference
+- [PHP Framework Interop Group][23]’s PSR recommendation reference
 
 #### My favorites contributors
 
@@ -195,7 +210,7 @@ As it happens, I had the chance to meet them during my two last years as
 organizer of the ConFoo conference.
 
 - [Fabien Potencier][2], [Symfony framework][24] creator, and SensioLabs founder
-- Doctrine2's cookbook on [CodeFirst approach][25], [Object entity mapping and
+- Doctrine2’s cookbook on [CodeFirst approach][25], [Object entity mapping and
   inheritance (aka. Inheritance mapping), and the others.][26]
 - [Tobias Schlitt][27]. Be sure to read [his definition of a framework][28] it
   is quite exhaustive.

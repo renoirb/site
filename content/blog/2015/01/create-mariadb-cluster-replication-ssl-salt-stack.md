@@ -1,21 +1,18 @@
 ---
-locale: en-CA
-canonical: 'https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/'
 title: Create a MariaDB cluster with replication over SSL with Salt Stack
-date: &createdAt '2015-01-28T14:24:45-04:00'
-createdAt: *createdAt
-preamble:
-  text: |
-    The following might still work if all software versions are still available in the exact versions ranges they were when initially published.
-    Part of this article was written while maintaining WebPlatform’s Infrastructure maintenance. Mostly [in *WPD/Infrastructure/procedures/* **Replacing a VM**][wpd-infra-replacing-vm], and [*WPD/Infrastructure/procedures/* **Managing  MariaDB replication**][wpd-infra-managing-mysql-replication]
-    [wpd-infra-replacing-vm]: https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Replacing_a_VM/
-    [wpd-infra-managing-mysql-replication]: https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Managing_MySQL_replication/
+locale: en-CA
+created: 2015-01-28
+updated: 2015-02-03
+canonical: 'https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/'
+status: publish
+revising: true
 categories:
-  - Organization
+  - projects
 tags:
-  - Linux
+  - linux
+  - techniques
   - Salt Stack
-  - Cloud Computing
+  - cloud-computing
 keywords:
   - replication
   - database server
@@ -23,7 +20,16 @@ keywords:
   - configuration
   - mysql
   - MariaDB
+excerpt: >-
+  Some notes on how I created our updated MariaDB database cluster with
+  replication.
+preamble:
+  text: |
+    The following might still work if all software versions are still available in the exact versions ranges they were when initially published.
+    Part of this article was written while maintaining WebPlatform’s Infrastructure maintenance. Mostly [in *WPD/Infrastructure/procedures/* **Replacing a VM**](https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Replacing_a_VM/), and [*WPD/Infrastructure/procedures/* **Managing  MariaDB replication**](https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Managing_MySQL_replication/)
 ---
+
+<!-- #XXX from app-alert-box to notice-box-element -->
 
 While reworking WebPlatform infrastructure I had to rebuild a new database
 cluster.

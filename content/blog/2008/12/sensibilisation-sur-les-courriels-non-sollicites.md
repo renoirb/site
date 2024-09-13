@@ -1,20 +1,28 @@
 ---
 title: Sensibilisation sur les courriels non sollicités
 locale: fr-CA
-created: '2008-12-03'
-updated: '2013-06-07'
+created: 2008-12-03
+updated: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/
 status: publish
 revising: true
 categories:
-  - Techniques
+  - actualites
 tags:
   - fraude
+  - vulgarization
+preamble:
+  date: 2024-09-12
+  text: |
+    Ce courriel était écrit dans un temps où les médias sociaux n’étaient pas
+    aussi populaires qu’après 2019. Les tantes, oncles, cousins, qui n’étaient pas
+    aussi connectés a l’Internet aimaient partager des choses
+    de nature comédiques ("memes") et se les échangeaient par courriel.
 excerpt: >-
-  J'ai décidé de briser le silence sur le sujet des chaînes de lettres et
-  tentatives d'hammeconage sur le web lorsque j'ai reçu pour la ennième fois un
-  message qui annonçait qu'Hotmail deviendrait payant.
+  Voici ce que j'ai écrit a des amis de famille qui partageaient avec moi
+  des découvertes et « aubaines » via courriel. Je partage quelques observations et
+  cautionne sur les risques pour leur vie privée.
 ---
 
 J'ai décidé cette nuit d'écrire sur des choses qui me tiennent a coeur.

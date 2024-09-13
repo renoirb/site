@@ -1,16 +1,17 @@
 ---
 title: Quelques indices pour savoir si un message courriel est une chaîne de lettre
 locale: fr-CA
-created: '2008-12-04'
-updated: '2013-06-07'
+created: 2008-12-04
+updated: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/
 status: publish
 revising: true
 categories:
-  - Tranche de vie
+  - actualites
 tags:
   - fraude
+  - vulgarization
 excerpt: >-
   Les chaînes de lettres sont l'une des façons de gaspiller du temps les plus
   populaires. Les raisons pour y participer peuvent passer par le désir d'un

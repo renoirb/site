@@ -1,21 +1,24 @@
 ---
 title: Tester le fonctionnement d'un serveur SMTP
 locale: fr-CA
-created: '2008-04-19'
-updated: '2014-02-19'
+created: 2008-04-19
+updated: 2014-02-19
 canonical: >-
   https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/
 status: publish
 revising: true
 categories:
-  - Tranche de vie
+  - projects
 tags:
   - linux
   - procedure
+  - operations
+  - techniques
+  - tutoriels
+
 excerpt: >-
-  Étant donné que tout est très intrinsèque sur un serveur, il est important de
-  vérifier quelques informations vitales au serveur, voici quelques unes des
-  infos.
+  Envoyer et recevoir des courriels implique une combinaison de systèmes qui interagissent d'une façon assez complexe et un problème de réception ou de classement peut être causé par plusieurs raisons.
+  Étant donné que tout est très intrinsèque sur un serveur, voici une procédure pour s'assurer que tout est en ordre.
 ---
 
 ### Vérifier si le Firewall bloque certains services

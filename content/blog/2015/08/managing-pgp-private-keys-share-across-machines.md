@@ -1,15 +1,16 @@
 ---
-locale: en-CA
 title: Managing my PGP/OpenPGP keys and share across many machines
-canonical: https://renoirboulanger.com/blog/2015/08/managing-pgp-private-keys-share-across-machines/
-date: &createdAt '2015-08-06T13:44:11-04:00'
-createdAt: *createdAt
-preamble:
-  disable: true
-  text: ' '
+locale: en-CA
+created: 2015-08-06
+updated: 2023-02-18
+canonical: >-
+  https://renoirboulanger.com/blog/2015/08/managing-pgp-private-keys-share-across-machines/
+status: publish
+revising: false
 categories:
-  - Organization
+  - procedures
 tags:
+  - linux
   - vulgarization
   - operations
   - security
@@ -18,6 +19,12 @@ keywords:
   - PGP
   - subkey
   - OpenPGP
+excerpt: >-
+  A solution to the idea of sharing PGP private keys without risking to lose
+  everything if one of the machines you shared it had been accessed.
+preamble:
+  disable: true
+  text: ' '
 ---
 
 With [my previous position just finished][0], I'm cleaning up my credential data

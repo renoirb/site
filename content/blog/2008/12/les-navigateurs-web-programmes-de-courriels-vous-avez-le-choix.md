@@ -1,14 +1,14 @@
 ---
 title: Les navigateurs web, programmes de courriels, vous avez le choix!
 locale: fr-CA
-created: '2008-12-05'
-updated: '2013-06-07'
+created: 2008-12-05
+updated: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix/
 status: publish
 revising: true
 categories:
-  - Tranche de vie
+  - actualites
 tags:
   - vulgarization
   - with-images
@@ -19,6 +19,10 @@ keywords:
   - Critique
   - Mozilla Firefox
   - Mozilla Thunderbird
+preamble:
+  date: 2024-09-12
+  text: |
+    Ceci avait été écrit dans le temps ou la grande majorité des gens n’avaient qu'un ordinateur personel à la maison, et il s’agissait rarement d’un produit de Apple. Une époque où Microsoft profitait de son monopole car il fournissait son fournisseur pré-installé par défaut sur chaque ordinateur avec l'étiquette "Internet". Les gens allaient donc *sur l’Internet*.
 excerpt: >-
   Un bon navigateur? Plusieurs gens pensent que l'«Internet» est l'icône 'e' en
   bleu. Cet article a été originalement été écrit pour répondre a un ami qui

@@ -1,19 +1,14 @@
 ---
-locale: fr-CA
 title: Générateur de séquence
-canonical: 'https://renoirboulanger.com/projets'
-tags:
-  - javascript
-  - archived-project
-categories:
-  - Project
-date: &createdAt '2013-02-19T22:21:10-04:00'
-createdAt: *createdAt
+locale: fr-CA
+created: 2013-02-19
+updated: 2013-02-19
+status: publish
+revising: true
 pageKey: page-projets-initiale-pour-faire-une-migration
 ---
 
-<em lang="en">Sequence generator Javascript</em>, contribution au projet
-<em lang="en">RoughDraft.js</em>
+**<em lang="en">Sequence generator Javascript</em>, contribution au projet <em lang="en">RoughDraft.js</em>.**
 
 Un outil de génération de noms de classes CSS servant a préparer maquettes
 statiques.
@@ -24,7 +19,7 @@ seront ajustés via CSS plus tard. La maquette demeure donc simple sans contenu
 servent a faire ajouter dynamiquement les boucles de répétitions, textes, et
 photos.
 
-Ma contribution:
+**Ma contribution:**
 
 - Génère des noms de classes CSS dans un ordre prévisible
 - Utilise un nom comme indice pour démarrer la séquence (e.g. `alfa`) puis

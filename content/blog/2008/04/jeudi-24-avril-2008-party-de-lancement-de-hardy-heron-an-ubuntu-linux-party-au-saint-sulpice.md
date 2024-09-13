@@ -3,14 +3,14 @@ title: >-
   Jeudi 24 avril 2008 Party de lancement de Hardy Heron an Ubuntu Linux Party au
   Saint-Sulpice
 locale: fr-CA
-created: '2008-04-14'
-updated: '2013-03-27'
+created: 2008-04-14
+updated: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice/
 status: publish
 revising: true
 categories:
-  - Tranche de vie
+  - tranche-de-vie
 tags:
   - evenements
 keywords:
@@ -20,6 +20,9 @@ keywords:
   - hardy heron
   - montral
   - event
+preamble:
+  disable: true
+  text: ' '
 ---
 
 Le groupe Canonical a comme habitude de faire une release de sa distribution

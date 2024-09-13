@@ -1,9 +1,15 @@
 ---
-locale: en-CA
 title: Leaving W3C
-canonical: 'https://renoirboulanger.com/blog/2015/07/leaving-w3c/'
-date: &createdAt '2015-07-30T22:39:34-04:00'
-createdAt: *createdAt
+locale: en-CA
+created: 2015-07-30
+updated: 2023-02-18
+canonical: https://renoirboulanger.com/blog/2015/07/leaving-w3c/
+status: publish
+revising: false
+categories:
+  - tranche-de-vie
+tags:
+  - career
 coverImage:
   src: ~/assets/content/blog/2015/07/20150727-Gift-W3C.jpg
   alt: Renoir’s picture
@@ -17,10 +23,6 @@ coverImage:
 preamble:
   disable: true
   text: ' '
-categories:
-  - Tranche de vie
-tags:
-  - standardization
 ---
 
 Two years ago I announced [I was joining W3C][0] as a full-time staff to [work

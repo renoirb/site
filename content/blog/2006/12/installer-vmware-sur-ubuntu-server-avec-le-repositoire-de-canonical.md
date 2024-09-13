@@ -7,9 +7,11 @@ canonical: 'https://renoirboulanger.com/blog/2006/12/installer-vmware-sur-ubuntu
 status: publish
 revising: false
 categories:
-  - Procedures
+  - experiments
 tags:
-  - Linux
+  - linux
+  - open-source
+  - procedure
 keywords:
   - vmware
   - ubuntu
@@ -145,6 +147,7 @@ site [http://www.vmware.com][21], obligatoire.
 La console VMWare Vù qu'on a pas de XWindows pour gérer, on utilise une console
 vmware-server à partir d'une autre machine sur notre LAN.
 
+<!-- #XXX notice-box-element -->
 <app-alert-box alert-type="error" title="Note lors de la migration 2020-09-26" message="Après re-lecture (et 14 ans plus tard) je réalise les risques que j’aurai pu causer sur mon propre serveur. Ne suivez pas aveuglément ce type de conseil! Assurez-vous de seulement installer des binaires de sources que vous faites confiance, comme celles provenant du vendeur. Pas d’un blogue au hasard! A moins que vous puissiez lire le code, et compiler vous-même."></app-alert-box>
 
 ```terminal

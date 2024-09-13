@@ -1,13 +1,17 @@
 ---
-canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/type-descroquerie-sur-le-web-faire-du-bruit-pour-avoir-des-vues-de-page-de-medias-sociaux/'
 title:
   'Type d’escroquerie sur le web: Faire du bruit pour avoir des vues de page de
   médias sociaux'
-categories: []
-tags: []
-date: &createdAt '2013-04-19T22:21:10-04:00'
-createdAt: *createdAt
-type: vulgarization
+locale: fr-CA
+created: 2013-06-06
+updated: 2013-06-06
+canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/type-descroquerie-sur-le-web-faire-du-bruit-pour-avoir-des-vues-de-page-de-medias-sociaux/'
+status: publish
+revising: true
+categories:
+  - vulgarization
+tags:
+  - fraud
 ---
 
 Ce type d'attrape est indirect. Il ne demande pas d'argent directement aux gens,

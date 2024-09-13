@@ -1,18 +1,19 @@
 ---
-locale: en-CA
 title: Data Driven UI
-description: Research summary on experiments made in 2018 and 2019
-date: &createdAt '2020-02-04T20:55:06-04:00'
-createdAt: *createdAt
-preamble:
-  disable: true
-  text: ' '
+locale: en-CA
+created: 2020-02-04
+updated: 2020-02-04
+status: publish
+revising: false
 categories:
-  - Research Summary
+  - experiments
 tags:
   - front-end
   - architecture
-  - favourites
+description: Research summary on experiments made in 2018 and 2019
+preamble:
+  disable: true
+  text: ' '
 ---
 
 [react-as-ui-runtime]:

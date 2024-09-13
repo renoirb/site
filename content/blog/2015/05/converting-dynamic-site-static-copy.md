@@ -1,12 +1,22 @@
 ---
-locale: en-CA
 title: Converting a dynamic site into static HTML documents
+locale: en-CA
+created: 2015-05-20
+updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/05/converting-dynamic-site-static-copy/
-date: &createdAt '2015-05-20T13:44:11-04:00'
-createdAt: *createdAt
-preamble:
-  disable: true
-  text: ' '
+status: publish
+revising: false
+categories:
+  - projects
+tags:
+  - archiving
+  - procedure
+  - webplatform
+keywords:
+  - curl
+  - wget
+  - static site
+  - convert from cms
 coverImage:
   src: ~/assets/content/blog/2015/05/webat25-org-screen-capture.png
   alt: Web 25th anniversary web site screenshot
@@ -14,19 +24,13 @@ coverImage:
     In March 2014, the W3C and the Web Foundation celebrated the World Wide Web 24th anniversary.
     As a W3C Team Member, I was asked to help the systems team and host the event’s web site.
     After the event, I was asked to make the web site to become static HTML documents so the systems team wouldn’t have to maintain the CMS it was using.
-categories:
-  - Projects
-tags:
-  - Linux
-  - operations
-  - procedure
-  - favourites
-  - webplatform
-keywords:
-  - curl
-  - wget
-  - static site
-  - convert from cms
+excerpt: >-
+  The following are the commands I ran on the last successful attempt to
+  replicate the site I was working on. If you want to make a static version of
+  your site, you might find those helpful.
+preamble:
+  disable: true
+  text: ' '
 ---
 
 Its been two times now that I've been asked to make a website that was running
@@ -78,7 +82,7 @@ npm install underscore-cli cat site.har | underscore select '.entries .request
 - Remove duplicate lines, in vim you can do `:sort u`
 - Save this file as `list.txt` for the next step.
 
-## 2\. Let's scrape it all
+## 2\. Let's scrape everything
 
 We'll do two scrapes. First one is to get all assets it can get, then we'll go
 again with different options.

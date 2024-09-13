@@ -1,17 +1,18 @@
 ---
 title: Une petite lecture sur les attrapes-nigaud sur le web
 locale: fr-CA
-created: '2009-07-02'
-updated: '2013-06-07'
+created: 2009-07-02
+updated: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web/
 status: publish
 revising: true
 categories:
-  - Tranche de vie
+  - tranche-de-vie
 tags:
-  - with-images
   - fraude
+  - with-images
+  - vulgarization
 excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2009/07/dvd_rewinder.jpg

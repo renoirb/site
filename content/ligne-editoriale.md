@@ -1,9 +1,12 @@
 ---
-locale: fr-CA
 title: Ligne éditoriale
-date: &createdAt 2009-09-19 21:15:35.000000000 +00:00
-createdAt: *createdAt
-pageKey: editorial-guideline
+locale: fr-CA
+canonical: https://renoirboulanger.com/ligne-editoriale/
+created: 2009-09-19
+updated: 2013-03-30
+status: publish
+revising: true
+pageKey: page-editorial-guideline
 ---
 
 ### Pourquoi

@@ -1,13 +1,12 @@
 ---
-locale: en-CA
 title: Recover Discourse from a backup, adjust domain name
-canonical: https://renoirboulanger.com/blog/2015/11/recover-discourse-backup-change-domain-name/
-date: &createdAt '2015-11-20T20:55:06-04:00'
-createdAt: *createdAt
-keywords:
-  - Discourse
-  - DNS
-  - migration
+locale: en-CA
+created: 2015-11-20
+updated: 2023-02-18
+canonical: >-
+  https://renoirboulanger.com/blog/2015/11/recover-discourse-backup-change-domain-name/
+status: publish
+revising: false
 categories:
   - experiments
 tags:
@@ -15,6 +14,10 @@ tags:
   - operations
   - docker
   - webplatform
+keywords:
+  - Discourse
+  - DNS
+  - migration
 coverImage:
   src: ~/assets/content/blog/2015/11/discourse_migration_list_gravatar_images.png
   alt:
@@ -28,6 +31,9 @@ preamble:
     [leaving-w3c]: /blog/2015/07/leaving-w3c/ "Leaving W3C"
     [wicg]: https://discourse.wicg.io/
     [wicg-article]: https://www.w3.org/blog/2015/07/wicg/
+excerpt: >-
+  Here is some preliminary notes on how one can restore a Discourse instance and
+  change the domain name.
 ---
 
 Roughly based on [Move your Discourse instance to a different server][0] post.

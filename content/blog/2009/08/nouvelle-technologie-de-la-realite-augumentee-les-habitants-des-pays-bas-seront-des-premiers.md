@@ -1,15 +1,18 @@
 ---
-locale: fr-CA
-date: &createdAt '2009-08-26T17:00:21-04:00'
-createdAt: *createdAt
 title:
   Nouvelle technologie de la Réalité Augumentée, Les habitants des Pays Bas
   seront des premiers
+locale: fr-CA
+created: 2009-08-26
+updated: 2009-08-26
 canonical: 'https://renoirboulanger.com/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers/'
+status: publish
+revising: true
 categories:
-  - Actualites
+  - actualites
 tags:
-  - AR
+  - ar
+  - vulgarization
 keywords:
   - technologie
   - services-publics
@@ -18,7 +21,7 @@ coverImage:
   src: ~/assets/content/blog/2009/08/BTTFII_DocBrown_car.JPG
   text: |
     Les lunettes mattes de [Doc Brown][doc-wikipedia] (Christopher Lloyd)
-    dans sa DeLorean dans "Retour Vers le Futur 2".
+    dans sa DeLorean dans «Retour Vers le Futur 2».
     Bien que le film n’a pas élaboré sur ce que *Doc* pouvait voir,
     il était implicite que le porteur peux y voir des
     couches supplémentaires d'informations.
@@ -38,6 +41,7 @@ preamble:
     [twitter-rww]: https://twitter.com/RWW 'ReadWriteWeb Twitter account'
     [11]: https://readwrite.com/2009/06/25/augmented_reality_heres_our_wishlist_of_apps_whats/ 'Augmented Reality: Here’s Our Wishlist of Apps, What’s On Yours?'
 ---
+<!-- #XXX from app-alert-box to notice-box-element -->
 
 La technologie est spéculée depuis quelques années déjà. Le concept est simple:
 Lorsqu'on «filme» une scène on peut voir ce que l'objectif capte. Imaginez

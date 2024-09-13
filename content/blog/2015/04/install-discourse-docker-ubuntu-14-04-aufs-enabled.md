@@ -1,20 +1,26 @@
 ---
-locale: en-CA
 title: Install Discourse and Docker on Ubuntu 14.04 with aufs enabled
+locale: en-CA
+created: 2015-04-02
+updated: 2023-02-18
 canonical: 'https://renoirboulanger.com/blog/2015/04/install-discourse-docker-ubuntu-14-04-aufs-enabled/'
-date: &createdAt '2015-04-02T15:05:23-04:00'
-createdAt: *createdAt
+status: publish
+revising: true
 categories:
-  - Techniques
+  - projects
 tags:
   - standardization
   - Salt Stack
+  - procedure
 keywords:
   - docker
   - discourse
   - aufs
   - ubuntu
   - makefile
+excerpt: >-
+  I needed to install a set of VMs to run apps within Docker containers. In the
+  case of Discourse, docker requires you to use aufs instead of devicemapper.
 ---
 
 While working to run [Discourse][0] on [Docker][1] I was getting numerous errors

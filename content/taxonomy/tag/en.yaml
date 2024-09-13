@@ -39,6 +39,11 @@ human:
     description: |
       Software development related
 
+  - key: docker
+    text: Docker
+    description: |
+      Docker and container
+
   - key: events
     text: Events
     description: |

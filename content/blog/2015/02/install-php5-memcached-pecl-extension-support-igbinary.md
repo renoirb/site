@@ -1,21 +1,17 @@
 ---
-locale: en-CA
-canonical: 'https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/'
 title: Install PHP5 Memcached PECL extension and have it support igbinary
-date: &createdAt '2015-02-18T20:46:45-04:00'
-createdAt: *createdAt
-coverImage:
-  src: ~/assets/images/logos/php-igbinary.png
-  text: |
-    > [Igbinary][igbinary-github] is a drop in replacement for the standard *PHP serializer*.
-    > Instead of the time and space consuming textual representation used by PHP’s serialize, *igbinary* stores PHP data structures in a compact binary form.
-    [igbinary-github]: https://github.com/igbinary/igbinary
+locale: en-CA
+created: 2015-02-18
+updated: 2023-02-18
+canonical: 'https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/'
+status: publish
+revising: false
 categories:
-  - Organization
+  - projects
 tags:
-  - Linux
-  - Salt Stack
-  - Cloud Computing
+  - linux
+  - cloud-computing
+  - procedure
 keywords:
   - Memcached
   - PECL
@@ -23,18 +19,21 @@ keywords:
   - dpkg
   - PHP5
   - php-fpm
+coverImage:
+  src: ~/assets/images/logos/php-igbinary.png
+  text: |
+    [Igbinary][igbinary-github] is a drop in replacement for the standard *PHP serializer*.
+    Instead of the time and space consuming textual representation used by PHP’s serialize, *igbinary* stores PHP data structures in a compact binary form.
+    [igbinary-github]: https://github.com/igbinary/igbinary
+excerpt: >-
+  Main part of my job is to make sure that its easy to reinstall a VM. Sometimes
+  you need to build a package from source. How do you distribute it? Here’s one
+  way
 ---
 
 I was trying to figure out why my PHP setup would never have both `igbinary` to
 be used to serialize sessions in Memcached using current Memcached PECL
 extension.
-
-<app-image style="float:unset;" src="~/assets/content/blog/2015/02/sessions_memcached_before2.png" alt="OpenStack Cloud-Init dialog">
-Session handlers shows memcached
-</app-image>
-<app-image style="float:unset;" src="~/assets/content/blog/2015/02/sessions_memcached_before.png" alt="OpenStack Cloud-Init dialog">
-*igbinary* support no?
-</app-image>
 
 After some research I found a procedure in an answer on StackOverflow.
 
@@ -57,21 +56,28 @@ _NOTE_ The following was run on an Ubuntu 14.04 VM with [@rynop's procedure][1].
 1. Setting the machine up to make a package.
 
 ```bash
-
+mkdir /tmp/php5-memcached
+cd /tmp/php5-memcached
+apt-get install -y php5-dev pkg-config php-pear
 ```
 
-2. Follow steps from the procedure. Those were taken from the _[Original
-   procedure][1]_, just before issuing `./configure`.
+2. Follow steps from the procedure. Those were taken from the _[Original procedure][1]_, just before issuing `./configure`.
 
 ```bash
-
+pecl_memcached_ver="2.2.0"
+pecl download memcached-${pecl_memcached_ver}
+tar xzvf memcached-${pecl_memcached_ver}.tgz
+cd memcached-${pecl_memcached_ver}/
+phpize
 ```
 
 3. I realized that under Ubuntu 14.04 we also needed to _disable Memcached SASL_
    so I had to do it differently
 
 ```bash
-./configure --enable-memcached-igbinary --disable-memcached-sasl
+./configure \
+    --enable-memcached-igbinary \
+    --disable-memcached-sasl
 ```
 
 ## Make a .deb package
@@ -133,7 +139,11 @@ anyway.
 
 ```bash
 dpkg -i /srv/webplatform/apt/php5-memcached_2.2.0-wpd_amd64.deb
+```
 
+The output ...
+
+```
   (Reading database ... 118781 files and directories currently installed.)
   Preparing to unpack .../php5-memcached_2.2.0-wpd_amd64.deb ...
   Unpacking php5-memcached (2.2.0-wpd) over (2.1.0-6build1) ...
@@ -168,6 +178,25 @@ a `Package.gz` that you rsync around, there are other procedures available
 online.
 
 Done!
+
+## Screenshots
+
+<div style="overflow:hidden;clear:both">
+
+<app-image src="~/assets/content/blog/2015/02/sessions_memcached_before2.png" alt="OpenStack Cloud-Init dialog">
+
+Session handlers shows memcached
+
+</app-image>
+
+<app-image src="~/assets/content/blog/2015/02/sessions_memcached_before.png" alt="OpenStack Cloud-Init dialog">
+
+*igbinary* support no?
+
+</app-image>
+
+</div>
+
 
 [0]: https://github.com/jordansissel/fpm
 [1]:

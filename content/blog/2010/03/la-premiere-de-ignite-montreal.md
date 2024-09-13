@@ -1,45 +1,47 @@
 ---
-locale: fr-CA
 title: La première de Ignite Montréal
+locale: fr-CA
+created: 2010-03-03
+updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal
-coverImage:
-  src: ~/assets/content/blog/2010/03/giw_montreal.png
-  alt: &coverImageAlt Ignite Montréal
-  text: *coverImageAlt
+status: publish
+revising: false
 categories:
-  - Tranche de vie
+  - tranche-de-vie
 tags:
   - evenements
   - with-images
 keywords:
   - ignite
-  - montral
-date: &createdAt '2010-03-03T08:41:27-04:00'
-createdAt: *createdAt
+  - montreal
+coverImage:
+  src: ~/assets/content/blog/2010/03/giw_montreal.png
+  alt: 'Logo'
+  text: Ignite Montréal
 ---
 
 Mardi 2 Mars 2010 avait lieu la première soirée de [Ignite Montréal][0]. Il
-s'agit dune soirée ou les participants ont 5 minutes pour nous parler d'un sujet
+s’agit dune soirée ou les participants ont 5 minutes pour nous parler d’un sujet
 avec comme seul appui un micro et des diapositives avec 15 secondes par diapo.
-L'événement de Montreal est lune parmi plusieurs organises dans le monde par
-O'Reily Radar lors de la semaine \#giw "Global Ignite Week".
+L’événement de Montreal est lune parmi plusieurs organises dans le monde par
+O’Reily Radar lors de la semaine \#giw "Global Ignite Week".
 
 Le défi de traduit ainsi: "Éclaire nous, mais fait ça vite"
 
-A la première vue je m'attendais a _un autre événement_ de blogeurs et
-d'entendre parler que de web2.0 et médias sociaux: Je n'avai pas fait mes
+A la première vue je m’attendais a _un autre événement_ de blogeurs et
+d’entendre parler que de web2.0 et médias sociaux: Je n’avai pas fait mes
 devoirs car la site avait fourni la liste des participants.
 
-J'ai été très agreablement surpris et intéresse par la multitude de sujets.
+J’ai été très agreablement surpris et intéresse par la multitude de sujets.
 
-En fait je ne l'ai pas réalisé avant mon entrée dans la salle de _Sala Rossa_
-j'ai vu sur scène [Annie Dussault][1] qui parlait de comment faire un
+En fait je ne l’ai pas réalisé avant mon entrée dans la salle de _Sala Rossa_
+j’ai vu sur scène [Annie Dussault][1] qui parlait de comment faire un
 _[Quin-zhee][2]_ (un abri fait en neige). Elle venait tout juste de commencer
-sur scène. J'ai été frappé dès lors que ce soir on ne parlerait pas que du
+sur scène. J’ai été frappé dès lors que ce soir on ne parlerait pas que du
 web(!!).
 
-J'était surpris de voir Annie sur scène car je l'ai déjà rencontré dans un tout
-autre contexte. C'était une formation _\[Scoute\]_ au [District du Montréal
+J’était surpris de voir *Annie* sur scène car je l’ai déjà rencontré dans un tout
+autre contexte. C’était une formation _\[Scoute\]_ au [District du Montréal
 Métropolitain][3].
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7fzt7JSc4aM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -54,7 +56,7 @@ the only intuitive user-interface_».
 > The Nipple is the only intuitive user-interface --- [Jonathan Karpfen][4]
 
 [Max Finder][5] qui expliquait comment a son avis le modèle des université est
-pas si merveilleux que ça et ce qu'il y a appris.
+pas si merveilleux que ça et ce qu’il y a appris.
 
 Il y en a eu [plusieurs autres][6] qui étaient tous très intéressants dans leur
 sujets.
@@ -67,10 +69,10 @@ expliqué comment se débrouiller dans la rue pour y survivre.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H5TaqO-n0lQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Ignite, c'est quoi?
+### Ignite, c’est quoi?
 
-Ce fut une soirée mémorable et une belle découverte. L'événement _Ignite
-Montréal_ fait partie d'un événement global qui se déroule sur les six
+Ce fut une soirée mémorable et une belle découverte. L’événement _Ignite
+Montréal_ fait partie d’un événement global qui se déroule sur les six
 continents dans 65 villes du monde. Nous avons passé une très bonne soirée et
 nous comptons assister aux prochaines.
 

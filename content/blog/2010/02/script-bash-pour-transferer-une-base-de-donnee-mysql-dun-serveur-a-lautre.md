@@ -1,34 +1,28 @@
 ---
-locale: fr-CA
-keywords:
-  - serveur
-  - transfrer
-  - script
-  - sql
-  - Logiciel libre
-  - bash
-canonical: 'https://renoirboulanger.com/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre/'
 title:
   Script bash pour transférer une base de donnée MySQL d’un serveur à l’autre
+locale: fr-CA
+date: 2010-02-09
+updated: 2013-06-12
+canonical: 'https://renoirboulanger.com/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre/'
 categories:
-  - Portfolio
+  - projects
 tags:
   - linux
   - bash
-date: &createdAt '2010-02-09T17:39:42-04:00'
-createdAt: *createdAt
-pageKey: page-projets-initiale-pour-faire-une-migration
+  - script
+  - sql
 ---
 
-Il m'est arrivé récemment de devoir transférer plusieurs dizaines de sites web
-d'un serveur à l'autre manuellement.
+Il m’est arrivé récemment de devoir transférer plusieurs dizaines de sites web
+d’un serveur à l’autre manuellement.
 
-Dans ce billet j'expliquerai le processus que j'ai utilisé pour en finir par
+Dans ce billet j’expliquerai le processus que j’ai utilisé pour en finir par
 produire un script bash qui pourrait vous être utile.
 
 ### à propos du projet
 
-Considérant que certains sites avaient plus d'une base de données il était hors
+Considérant que certains sites avaient plus d’une base de données il était hors
 de question de faire a bras les lignes _mysqldump_, _ssh_ (en fait le transfert
 se fait en compressant le fichier et le copiant via une redirection gzip avec
 cat), _mysql_ pour, en ordre, dumper la base de données, la transférer, et la
@@ -40,15 +34,15 @@ Je me suis dit: _faisons-en un script_!
 
 Nous voulions...
 
-- Faciliter le travail car on savait qu'il faudrait souvent transférer, plus
-  d'une fois, chacune des bases de données; Car nous devions faire fonctionner
+- Faciliter le travail car on savait qu’il faudrait souvent transférer, plus
+  d’une fois, chacune des bases de données; Car nous devions faire fonctionner
   le site sur le nouveau serveur _avant_ de transférer les DNS.
 - Entrer une commande _minimale_ et en conserver les configurations;
 - Que le _nouveau_ serveur réalise la tâche a lui-seul, sans prérequis sur le
   serveur distant;
 - Utiliser les commandes minimales et pouvoir réutiliser le scripts dans ma
   propre librairie de script bash;
-- Éviter de répéter, parceque c'est «_con_» ;)
+- Éviter de répéter, parceque c’est «_con_» ;)
 
 ### Ce que le script fait
 
@@ -71,28 +65,28 @@ Nous voulions...
 1. Lire le fichier de configuration _migratemysql.conf_ dans le dossier actuel
 2. Véfirier si le `.sql.gz` existe...
 3. oui: le décompresser
-4. si le `.sql` existe déjà, écrire par dessus? (**attente d'une réponse a
-   l'usager**)
+4. si le `.sql` existe déjà, écrire par dessus? (**attente d’une réponse a
+   l’usager**)
 5. oui: réécrire, continuer...
-6. non: arrêter l'exécution
+6. non: arrêter l’exécution
 7. non: continuer
 8. Véfifier si le `.sql` existe...
 9. oui: continuer
-10. non: cesser l'exécution
+10. non: cesser l’exécution
 11. Se connecter au serveur précisé, si erreur... DIE!
 12. Véfifier si la base de donnée existe
 13. oui...
 14. _Retenir_ de ne pas _effacer_ le compte de base de donnée (PRIVILEGES)
     (variable "`OVERRIDEUSERCREATION`")
-15. Effacer pour ré-insérer? (**attente d'une réponse a l'usager**)
-16. Créer les commandes `DROP` manipulé via l'option "`ALT_PURGE`"
+15. Effacer pour ré-insérer? (**attente d’une réponse a l’usager**)
+16. Créer les commandes `DROP` manipulé via l’option "`ALT_PURGE`"
 17. oui: générer le script, puis _continuer_
 18. non: _continuer_ (utile si le fichier SQL a les commandes de `DROP`
 19. non: _continuer_...
-20. Vérifier si l'option "`OVERRIDEUSERCREATION`" existe, ne pas faire) Créer
+20. Vérifier si l’option "`OVERRIDEUSERCREATION`" existe, ne pas faire) Créer
     les PRIVILEGES spécifique pour la table a créer
 21. Exécuter le `.sql`
-22. Afficher a l'écran un morceau de code PHP pour le fichier de configuration
+22. Afficher a l’écran un morceau de code PHP pour le fichier de configuration
     sous le format spécifique à WordPress
 
 ### Le script

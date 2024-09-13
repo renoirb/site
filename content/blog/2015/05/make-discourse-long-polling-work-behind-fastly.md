@@ -1,31 +1,39 @@
 ---
-locale: en-CA
 title: Make Discourse “long polling” work behind Fastly or Varnish
-canonical: https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/
-date: &createdAt '2015-05-03T16:20:30-04:00'
-createdAt: *createdAt
-preamble:
-  text: |
-    It is possible the code shown here no longer works.
-    Maybe the code shown here uses parts of Discourse that no longer exists.
-coverImage:
-  src: ~/assets/content/blog/2015/11/discourse_migration_list_gravatar_images.png
-  text: |
-    Side by side comparison while working on migrating Discourse
-    with WICG
+locale: en-CA
+created: 2015-05-03
+updated: 2023-02-18
+canonical: >-
+  https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/
+status: publish
+revising: false
 categories:
-  - Projects
+  - projects
 tags:
-  - Linux
+  - linux
   - operations
   - webplatform
-  - Cloud Computing
+  - cloud-computing
 keywords:
   - Discourse
   - Docker
   - Fastly
   - Long Polling behind Varnish
   - Varnish
+excerpt: >-
+  In the Discourse forums, if you’ve seen something saying that you have to
+  provide a different origin to make long polling work, maybe you didn’t
+  understand what you have to do. Here are the details of why and how to do it
+  correctly.
+coverImage:
+  src: ~/assets/content/blog/2015/11/discourse_migration_list_gravatar_images.png
+  text: |
+    Side by side comparison while working on migrating Discourse
+    with WICG
+preamble:
+  text: |
+    It is possible the code shown here no longer works.
+    Maybe the code shown here uses parts of Discourse that no longer exists.
 ---
 
 While working on deploying Discourse, [I've came across a statement that took
@@ -113,7 +121,7 @@ In the end we need three things:
 
 The zone file would look like this;
 
-```
+```dns-zone-file
 # The public facing URL
 discourse.example.org.  IN CNAME global.prod.fastly.net.
 
@@ -134,7 +142,7 @@ single point of failure.
 Then, we can go in Discourse admin zone and adjust the "long polling base url"
 to our other domain name.
 
-```
+```nginx
 # /etc/nginx/sites-enabled/10-discourse
 # Let’s redirect to SSL, in case somebody tries to access the direct IP with
 # host header.

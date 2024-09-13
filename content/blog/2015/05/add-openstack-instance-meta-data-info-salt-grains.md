@@ -1,9 +1,21 @@
 ---
-locale: en-CA
 title: Add OpenStack instance meta-data info in your salt grains
+locale: en-CA
+created: 2015-05-22
+updated: 2023-11-17
 canonical: https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/
-date: &createdAt '2015-05-22T13:44:11-04:00'
-createdAt: *createdAt
+status: publish
+revising: false
+categories:
+  - experiments
+tags:
+  - linux
+  - operations
+  - Salt Stack
+  - cloud-computing
+keywords:
+  - Ansible
+  - Infrastructure as Code
 preamble:
   text: |
     It is possible the code shown here no longer works.
@@ -16,16 +28,9 @@ coverImage:
     Open Stack NOVA client is leveraging an internal HTTP API to display data we can
     consume from the CLI.
     The present article shows how to add data from OpenStack into Salt Stack.
-categories:
-  - Organization
-tags:
-  - Linux
-  - operations
-  - Salt Stack
-  - Cloud Computing
-keywords:
-  - Ansible
-  - Infrastructure as Code
+excerpt: >-
+  Ever wanted to target salt states based on data only the underlying OpenStack
+  cluster knows. Here’s how I did it.
 ---
 
 During a work session on my salt-states for WebPlatform.org I wanted to shape be
@@ -47,6 +52,8 @@ original script came from [saltstack/salt-contrib][0] and the original file was
 The [original script][1] wasn't getting any data in the cluster. Most likely due
 to API changes and that EC2 API exposes dynamic meta-data that the
 DreamCompute/OpenStack cluster don't.
+
+<!-- #XXX from app-alert-box to notice-box-element -->
 
 <app-alert-box title="Script source">
 
@@ -70,7 +77,9 @@ Locally
 
 ```bash
 salt-call grains.get dreamcompute:uuid
+```
 
+```yaml
 local:
     10a4f390-7c55-4dd3-0000-a00000000000
 ```
@@ -79,7 +88,9 @@ Or for another machine
 
 ```bash
 salt app1 grains.get dreamcompute:uuid
+```
 
+```yaml
 app1:
     510f5f24-217b-4fd2-0000-f00000000000
 ```
@@ -88,7 +99,9 @@ What size did we create a particular VM?
 
 ```bash
 salt app1 grains.get dreamcompute:instance_type
+```
 
+```yaml
 app1:
     lightspeed
 ```
@@ -182,7 +195,7 @@ salt.novalocal
 To know what the script calls, [you can add a line at `_call_aws(url)`
 method][dreamcompute-grain-webplatform-commit], like so
 
-```patch
+```diff
 diff --git a/_grains/dreamcompute.py b/_grains/dreamcompute.py
 index 682235d..c3af659 100644
 --- a/_grains/dreamcompute.py
@@ -201,7 +214,7 @@ tell you which endpoints it queried.
 
 In my case they were:
 
-```
+```shellsession
 [INFO    ] API call to /openstack/2012-08-10/meta_data.json
 [INFO    ] API call to /latest/meta-data/
 [INFO    ] API call to /latest/meta-data/block-device-mapping/

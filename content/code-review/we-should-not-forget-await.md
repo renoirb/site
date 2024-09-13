@@ -1,7 +1,10 @@
 ---
 title: We should not forget await
-date: &createdAt '2021-01-27T20:15:04-04:00'
-createdAt: *createdAt
+locale: en-CA
+created: 2021-01-27
+updated: 2021-01-27
+status: publish
+revising: false
 tags:
   - ECMAScript
   - JavaScript

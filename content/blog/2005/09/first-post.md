@@ -1,13 +1,13 @@
 ---
 title: Premier billet
 locale: fr-CA
-created: '2005-09-16'
-updated: '2017-11-10'
+created: 2005-09-16
+updated: 2017-11-10
 canonical: 'https://renoirboulanger.com/blog/2005/09/first-post/'
 status: publish
 revising: true
 categories:
-  - Tranche de vie
+  - tranche-de-vie
 tags: []
 excerpt: ''
 ---

@@ -1,23 +1,34 @@
 ---
-locale: en-CA
 title: Run a NodeJS process through forever from within a Docker container
-canonical: https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/
-date: &createdAt '2015-05-12T13:44:11-04:00'
-createdAt: *createdAt
-preamble:
-  disable: true
-  text: ' '
-coverImage:
-  src: ~/assets/content/blog/2015/05/publican-spec-rangefinder.png
-  text: Specification Document for RangeFinder API
+locale: en-CA
+created: 2015-05-12
+updated: 2023-02-18
+canonical: >-
+  https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/
+status: publish
+revising: false
 categories:
   - Projects
 tags:
+  - linux
+  - docker
   - open-source
   - operations
   - procedure
   - webplatform
+coverImage:
+  src: ~/assets/content/blog/2015/05/publican-spec-rangefinder.png
+  text: Specification Document for RangeFinder API
+excerpt: >-
+  I’ve recently been through the steps to make a NodeJS web app to run from
+  inside a Docker container. The objective of this project was to simplify the
+  deployment of a web app that had many moving parts by making it a
+  re-deployable service that is self-contained.
+preamble:
+  disable: true
+  text: ' '
 ---
+<!-- #XXX from app-alert-box to notice-box-element -->
 
 One of the components that I worked on [during my time on the WebPlatform
 project][wpd], [Publican][0], that I had to manage has many moving parts. The
@@ -258,7 +269,7 @@ Here are the files mentioned in this post
 
 A minimal NGINX web server digging for static content that Publican generates.
 
-```
+```nginx
 # file: /etc/nginx/sites-enabled/default
 server {
   listen 80 default_server;
@@ -287,7 +298,7 @@ Notice a few details;
 - `COPY ...` this is basically how you import content inside the container (i.e.
   make the container heavier)
 
-```
+```dockerfile
 #
 # Publican Docker runner
 #

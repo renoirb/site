@@ -4,13 +4,12 @@ locale: fr-CA
 created: 2005-12-22
 updated: 2024-08-08
 canonical: https://renoirboulanger.com/blog/2005/12/detection-langue/
-status: published
+status: publish
 revising: false
 categories:
-  - Programmation
+  - techniques
 tags:
   - i18n
-  - l10n
   - php
 excerpt: ''
 preamble:
