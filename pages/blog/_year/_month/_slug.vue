@@ -140,6 +140,9 @@
       )
 
       const dal = $content('blog', { deep: true })
+        .where((a: INuxtContentResult) => {
+          return !Reflect.has(a, 'redirect')
+        })
         .only(['title', 'path', 'locale'])
         .sortBy('created', 'asc')
         .surround(slug)
@@ -151,10 +154,13 @@
 
       return {
         canonical: leakOutCanonical,
-        content,
-        prettyfiedTemporalDate,
         prev,
         next,
+        content,
+        prettyfiedTemporalDate,
+        year,
+        month,
+        slug,
       }
     },
     methods: {
@@ -162,19 +168,41 @@
     },
     head() {
       const {
+        description = '',
+        keywords = [],
         locale = 'en-CA',
+        redirect = '',
         title,
-        tags = [],
-        categories = [],
       } = this.content
 
-      const meta = [
-        {
+      const meta: Record<string, string>[] = []
+
+      if (keywords.length > 0) {
+        meta.push({
           hid: 'keywords',
           name: 'keywords',
-          content: [...categories, ...tags].join(' '),
-        },
-      ]
+          content: [...new Set([...keywords])].join(', '),
+        })
+      }
+
+      if (description !== '') {
+        meta.push({
+          hid: 'description',
+          name: 'description',
+          content: description,
+        })
+      }
+
+      if (redirect !== '') {
+        // <meta http-equiv="refresh" content="0; url=http://example.com/" />
+        meta.push({
+          hid: 'refresh',
+          // @ts-ignore
+          'http-equiv': 'refresh',
+          content: `5; url=/blog/${this.year}/${this.month}/${redirect}`,
+          //       ^^^ Redirect quietely to different page.
+        })
+      }
 
       const htmlAttrs = {
         lang: locale,

@@ -35,7 +35,7 @@
             </time>
           </div>
           <app-article-tags
-            :link="false"
+            :link="true"
             :content="content"
             class="mt-2 mb-4"
           />

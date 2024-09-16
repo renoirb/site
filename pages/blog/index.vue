@@ -64,7 +64,7 @@
     async beforeMount() {
       const contents = await queryNuxtContent(this.$content, this.$route)
       // This is wrong. Improve. Plz
-      this.contents = [...contents]
+      this.contents = contents
     },
   })
 </script>

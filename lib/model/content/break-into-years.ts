@@ -38,9 +38,11 @@ export const breakIntoYears = (
   const out: INuxtContentIndexResultByYears = []
   for (const content of contents) {
     const year = extractYearFromRecord(content)
-    let bucket = out.find(([y]) => y === year && year !== 0)
+    let bucket = out.find(([y]) => y === year)
     if (!bucket) {
       out.push([year, []])
+      // Something fishy here, unfinished stuff I haven’t touched in 4 years.
+      // That'll probably be done differently.
       bucket = out.find(([y]) => y === year)
     }
     const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
@@ -48,11 +50,12 @@ export const breakIntoYears = (
       content.locale,
     )
     content.prettyfiedTemporalDate = prettyfiedTemporalDate
-    bucket[1].push(content)
+    // Mutating bucket after the fact. Something’s unfinished here, and I forgot what.
+    bucket?.[1].push(content)
   }
 
   // Make sure it's sorted by year, chronologically
-  out.sort((a, b) => b[0] - a[0])
-
-  return out
+  return out.filter(([y]) => y !== 0).sort((a, b) => b[0] - a[0])
+  //                         ^^^^^^^
+  //                         | We set all with no created date into a bucket aside and don't display them.
 }

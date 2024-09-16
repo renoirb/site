@@ -99,6 +99,17 @@ export const queryNuxtContent = async (
   const { query = {} as Context['route']['query'] } = route
   let { q = '' } = query
   q = typeof q === 'string' ? q : ''
+  /**
+   * Bookmarks:
+   * - https://github.com/techfort/LokiJS/wiki/Query-Examples#find-queries
+   * - https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/fetching.md
+   * - https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/advanced.md
+   *
+   * See also content API:
+   * - http://localhost:3000/_content?deep=true
+   * - http://localhost:3000/_content/blog?deep=true
+   * - http://localhost:3000/_content/blog?deep=true&created_defined=asdf
+   */
   let ds = $content('blog', { deep: true })
     .sortBy('created', 'desc')
     .only(['created', 'updated', 'locale', 'path', 'slug', 'tags', 'title'])
