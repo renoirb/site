@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset=utf-8 />
+    <title>Curriculum vitæ (detailed) ✪  Renoir Boulanger</title>
+    <meta property="og:image" content="http://renoirb.com/assets/avatars/201507.jpg" />
+    <!-- link rel=stylesheet href="../assets/main.css" /-->
+    <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
+    <script type='text/javascript' src="../assets/bliss.min.js"></script>
+    <style>
+
+      /* Far reaching ones */
+      body { line-height: 30px; font-size: 16px; }
+      li { line-height: 30px; }
+      .table li { line-height: 20px; }
+
+
+      /* Too much padding for the resume version of the main layout */
+      .resume .zone .zone-top { padding: 20px; }
+
+
+      /* Hopefully I won't get more spam than I already get */
+      [foudelapouitte]:after {
+        unicode-bidi:bidi-override;
+        direction: rtl;
+      }
+
+
+      /* Definition list, they all get no padding or margin adjustment. */
+      dt,
+      dd {
+        line-height: 24px;
+      }
+      dd + dt { margin-top: 16px; }
+      dd { margin-left: 0; }
+      /* /Definition list, they all get no padding... */
+
+
+      /* Page top warning */
+      .warn {
+        padding:10px;
+        background:#333;
+        color:#FFF;
+        font-size:0.9em;
+        content: "";
+        line-height:18px;
+      }
+      /* /Page top warning */
+
+
+      /* summary arrow replacement */
+      .details details summary::-webkit-details-marker {
+        /* Hide summary arrow at beginning.
+           Non blink/webkit browsers will have two arrows. */
+          display:none;
+      }
+      .details details summary:after {
+        content: "\25BA"; /* ► */
+        display: block;
+      }
+      .details details[open] summary:after { content: "\25BC"; /* ▼ */ }
+      .details details[open] summary { margin-left: -30px; }
+      .details details[open] { margin-left: 30px; }
+      .details details summary { cursor: zoom-in; }
+      .details details[open] { cursor: zoom-out; }
+      /* /summary arrow replacement */
+
+
+      /* Float dl on the right */
+      #summary dl,
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl {
+        float: right;
+        width: 45%;
+        margin: 0 0 20px 20px;
+        border-left: 1px dashed #ddd;
+        padding: 0 20px;
+      }
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl  {
+        margin-top: -36px; /* Which is line-height of h1,h2,h3 */
+        padding-top: 0;
+      }
+      .detailed #work-experience details,
+      .detailed #selected-project details {
+        clear:none;
+      }
+      #work-experience section,
+      #selected-projects section {
+        overflow: hidden;
+      }
+      #work-experience section + section,
+      #selected-projects section + section {
+        border-top: 1px dashed #ddd;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+      /* /Float dl on the right */
+
+      /* On non detailed resume, compact things up */
+      .not-detailed section:not(#summary) dl { margin-top: -10px; }
+      .not-detailed section:not(#summary) dt:first-child { display:none; }
+      .not-detailed section:not(#summary) dt { float:left; padding-right: 10px; }
+      .not-detailed section:not(#summary) dt:after { content: ":   "; }
+      .not-detailed section:not(#summary) dd + dt { margin-top: 0 !important; }
+
+      /* On non detailed resume, remove line separator between sections */
+      .not-detailed #work-experience section + section,
+      .not-detailed #selected-projects section + section {
+        border-top: none !important;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      /* On non detailed resume, let's put experience in two columns */
+      .not-detailed #work-experience, .not-detailed #technologies { clear: both; }
+      .not-detailed #work-experience section {
+        float: left;
+        width: 50%;
+      }
+      .not-detailed #work-experience section:nth-child(2n+0) {
+        clear: left;
+      }
+
+      /* Adjust past-employers SVG logos to harmonize them visually */
+      #past-employers img {
+        max-height: 80px;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        opacity: 0.7;
+      }
+      #past-employers a:hover img {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+        opacity: 1;
+      }
+      #past-employers img[alt="Mozilla"] { max-height:57px; }
+      #past-employers img[alt="W3C"] { max-height:57px; }
+      #past-employers a:hover { background: none; }
+      #past-employers a + a {
+        margin-left: 4%;
+      }
+      #past-employers p {
+        text-align: center;
+      }
+      /* /Adjust past-employers SVG logos */
+
+      .label {
+        border-radius: 5px;
+      }
+
+
+      @media print {
+        @page {
+          margin: 1.1cm;
+        }
+
+        /* Hide some links location in print media */
+        a[href*="renoirboulanger"]:after,
+        a[href^="tel"]:after,
+        a[href^="/"]:after,
+        a[href^="#"]:after,
+        .no-print ,
+        .details .detailed summary:before {
+          display:none;
+        }
+
+        .details .detailed details:not([open]) summary:after {
+          content: "\25B7   (More details available online, you can expand this section if you load my resume in your Web browser)";
+          font-size: 0.8em;
+        }
+      }
+    </style>
+  </head>
+  <body class="page resume">
+    <header>
+        <div class="zone">
+            <div class="zone-tools container">
+                <div class="row">&nbsp;
+                    <!--nav class="span12">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="http://feeds.feedburner.com/RenoirBoulanger"><i class="icon-rss"></i> RSS</a></li>
+                            <li class="tooltipify" title="Me rejoindre"><a href="/fr/me-joindre"><i class="icon-envelope"></i> Me joindre</a></li>
+                        </ul>
+                    </nav-->
+                </div>
+            </div>
+        </div>
+        <div class="zone">
+            <div class="zone-top container">
+                <div class="row">
+                    <div class="span4">
+                        <h1>
+                            <a href="https://renoirboulanger.com/">Renoir Boulanger</a>
+                        </h1>
+                    </div>
+                    <div class="span8 behavior-fade">
+                      <!-- Same margin and line-height as title, it's fine to tagsoup here I say. -->
+                      <p class="pull-right" style="font-size: 1.5em; font-weight: 100; margin: 10px 0px;">FULL-STACK-DEVELOPER &amp; DEVOPS ENGINEER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main" role="main" class="zone">
+      <div class="zone-content container">
+        <div class="wrap container" role="document">
+          <div class="content row">
+            <div class="main span12" role="main">
+              <div class=boxes>
+                <section id="summary">
+<dl>
+<dt><span id="availability">Availability</span></dt>
+<dd><em>Not available</em> for new opportunities at the moment
+</dd>
+<dt>Preferred contact method</dt>
+<dd>Write me <em foudelapouitte title="Please type this manually"></em>
+</dd>
+<dt>Elsewhere</dt>
+<dd><a href="https://github.com/renoirb?tab=repositories" title="My code on GitHub"><i class="icon-github"></i> GitHub</a>
+</dd>
+<dd><a href="https://linkedin.com/in/renoirb" title="My LinkedIn profile"><i class="icon-linkedin"></i> LinkedIn</a>
+</dd>
+<dd><a href="https://gerrit.wikimedia.org/r/#/q/owner:%22Renoirb+%253Crenoir%2540w3.org%253E%22,n,z"><i class="icon-book"></i> Wikimedia Foundation</a>
+</dd>
+<dt>Languages</dt>
+<dd><em>Français</em> <span lang="fr">langue maternelle</span>
+</dd>
+<dd><em>English</em>  fluent
+</dd>
+<dt>Logistics</dt>
+<dd><em>Canadian</em> citizen
+</dd>
+<dd>Living in <em>Montréal, Québec, Canada</em>
+</dd>
+<dt>See also</dt>
+<dd><strong><a href="/resume/">Simplified</a></strong> version of this resume
+</dd>
+</dl>
+<p>Experienced full-stack developer looking for a position on a conscientious collaborative team. I have a broad and deep understanding of the Open Web stack and font-end and server techniques to build, deploy, and maintain Web sites that scale. I work effectively remotely or on-site.</p>
+<h2>Highlights</h2>
+<ul>
+<li>Created and maintained <strong>architecture for high-performance sites</strong>, including  <a href="http://www.webplatform.org/">WebPlatform.org</a>, and the <a href="http://www.webat25.org">World Wide Web’s 25th anniversary</a> site</li>
+<li>Built more than <strong>150 websites</strong> between 2002 and 2009</li>
+<li>GNU/Linux user <strong>since 1998</strong></li>
+<li>Contributor to open-source projects such as <strong>MediaWiki</strong> and <strong>Mozilla Firefox Accounts</strong></li>
+<li>Experience with Cloud, <strong>IaaS</strong>, <strong>Containers</strong> and maintenance of <strong>continuous deployment</strong> systems</li>
+</ul>
+<h2>Certifications</h2>
+<ul>
+<li><strong>2013</strong>    <em>Zend Certified Engineer PHP 5.3</em> <small>(Vue, <a href="https://www.zend.com/en/yellow-pages/ZEND011184">certificate</a>)</small></li>
+<li><strong>2012</strong>    <em>Written English in Communication Contexts</em> <small>(McGill University)</small></li>
+<li><strong>2008</strong>    <em>Web Accessibility</em> (WCAG 1) at the <em>Nazareth &amp; Louis Braille</em> institute <small>(University of Montréal)</small></li>
+<li><strong>2007</strong>    IBM <em>WebSphere DataPower</em> SOA Appliance <small>(IBM)</small></li>
+</ul>
+<h2>Publications and Contributions</h2>
+<ul>
+<li><strong>2016</strong>    <strong>Talk</strong> <a href="https://renoirb.com/talks/2016-Techniques-pour-deployer-WordPress-de-facon-consistante-et-le-rendre-resilient/">Techniques pour déployer WordPress de façon consistante</a></li>
+<li><strong>2016</strong>    <strong>Talk</strong> <a href="https://renoirb.com/talks/2016-Delivery-engineering-and-workspace-conventions/">Delivery Engineering and a Workspace convention proposal</a>, presented to contract work clients to better understand what “Dev Ops” is about and a place to start from</li>
+<li><strong>2015</strong>    <strong>Talk</strong> <a href="https://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/">Packaging for easier redeployment</a> (2015), presented at <em>DevOps Montréal</em> and <em>PHP Québec</em> meetups</li>
+<li><strong>2015</strong>    <strong>Adacemic</strong> published to the <strong><a href="http://www.acm.org/">ACM library</a></strong> with <em>André Santanchè</em> paper titled &quot;<a href="http://dl.acm.org/citation.cfm?doid=2526188.2528541&amp;preflayout=flat">Mobile development using web technologies focusing on games</a>&quot;, in chapters &quot;Markup architecture&quot;, &quot;Events&quot;, and “Web Storage”</li>
+<li><strong>2013</strong>    <strong>Book Review</strong> <a href="https://www.packtpub.com/books/content/apache-solr-php-integration">Apache Solr PHP Integration</a> by <em>Pakt publishing</em></li>
+<li><strong>2013</strong>    <strong>Talk</strong> <a href="https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite">Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité</a>, presented at Montreal <em>WebIn</em>, and at <em>Web à Québec</em> (WAQ)</li>
+</ul>
+<p>See more talks in <a href="/talks/">renoirb.com/talks</a></p>
+<h2>Past employers</h2>
+<section id="past-employers">
+<p><a href="#mozilla-2015"><img src="../../assets/logos/mozilla.svg" alt="Mozilla"></a><a href="#w3c-2013"><img src="../../assets/logos/w3c.svg" alt="W3C"></a><a href="#ericsson-2012"><img src="../../assets/logos/ericsson.svg" alt="Ericsson"></a></p>
+</section>
+<hr>
+<!-- end of #summary --></section><section id="work-experience">
+<h2>Work experience</h2>
+<section>
+<h3>Delivery Engineering Architect</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://colloquial.com/">Colloquial</a>/<a href="http://colloquial.com/">Betastream</a>
+</dd>
+<dt>Duration</dt>
+<dd>Jan 2016 – current
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd><em>Remote work</em>, Montreal, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">SaltStack</span> <span class="label label-info">Apache httpd</span> <span class="label label-info">Bash</span> <span class="label label-info">Fish shell</span> <span class="label label-info">Vagrant</span> <span class="label label-info">VirtualBox</span> <span class="label label-info">Docker</span> <span class="label label-info">OpenSSL</span> <span class="label label-info">EC2</span> <span class="label label-info">RDS</span> <span class="label label-info">Varnish</span> <span class="label label-info">VCL</span> <span class="label label-info">Fastly</span> <span class="label label-info">CloudFlare</span> <span class="label label-info">WordPress</span> <span class="label label-info">PHP</span> <span class="label label-info">ElasticSearch</span> <span class="label label-info">LogStash</span> <span class="label label-info">Python</span> <span class="label label-info">Prometheus</span> <span class="label label-info">Monit</span> <span class="label label-info">Memcached</span> <span class="label label-info">Node.js</span> <span class="label label-info">Chef</span> <span class="label label-info">OpsWorks</span> <span class="label label-info">Go</span>
+</dd>
+</dl>
+<p><details><summary>As part of a geographically distributed Web Development and IT team for a New York based Agency. My role was to review, plan, and build a next-generation infrastructure and deployment system for the project production pipeline.</summary></p>
+<p>During the last 5 months, I released a cloud orchestration solution using SaltStack, running on Amazon AWS, Google Cloud Platform, and Microsoft Azure and where we can manage automatically Web Applications, deployment levels, build steps, and dependencies consistently.</p>
+<p>Besides the orchestration system, my main tasks revolved around, coaching, participating to recovery efforts during outages and document recommendations for the operations team.</details></p>
+</section><section>
+<h3>Delivery Engineering Architect</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.cae.com/">CAE</a>
+</dd>
+<dt>Duration</dt>
+<dd>Mar 2016 – Jun 2016
+</dd>
+<dt>Type</dt>
+<dd>Part-time contract
+</dd>
+<dt>Location</dt>
+<dd><em>On site</em>, Montreal, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Prometheus</span> <span class="label label-info">Heka</span> <span class="label label-info">Ganglia</span> <span class="label label-info">Monit</span> <span class="label label-info">Bash</span> <span class="label label-info">Cygwin</span> <span class="label label-info">VirtualBox</span> <span class="label label-info">Vagrant</span> <span class="label label-info">Chef</span> <span class="label label-info">OpenSSL</span> <span class="label label-info">VMWare ESXi</span> <span class="label label-info">VMWare vCloud Director</span>
+</dd>
+</dl>
+<p><details><summary>Short term and part-time consulting contract to propose Open-Source infrastructure monitoring solutions. My role was to coach System Administrators on how to leverage Delivery Engineering techniques.</summary></p>
+<p>The project was to make a monitoring system prototype that could be installed only via scripts and should work within the company’s network security constraints.</p>
+<p>The deliverable became a simple set of Bash scripts and a Vagrant sandbox where we can describe a cluster of machines and develop configuration scripts.</details></p>
+</section><section id="mozilla-2015">
+<h3>Product-Owner</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.mozilla.org/">Mozilla Corporation</a>
+</dd>
+<dt>Duration</dt>
+<dd>Sept 2015 – Feb 2016 (6 months)
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd><em>Remote work</em>, Montreal, Quebec
+</dd>
+</dl>
+<p><details><summary>The <a href="http://browsercompat.herokuapp.com/">Web Browser compatibility data project</a> “BrowserCompat” is a Python based Web application specifically designed to store and serve Web Browser feature support information. Its objective is to improve accuracy and maintenance of browser feature support information data for Web developer documentation sites.</p>
+<p>My role was to provide oversight of the development, report on the status, make sure correct people are involved in decision-making, act as subject matter expert, and participate in software architecture discussions.</summary></p>
+<h4>Responsibilities</h4>
+<ul>
+<li>Drive the overall project forward, serving as key stakeholder/subject matter expert, and make key decisions on all aspects</li>
+<li>Oversee and report status on all deliverables</li>
+<li>Help identify where decisions and resources are needed to launch and report to the business and engineering manager</li>
+<li>Organize and chair meetings with stakeholders, developers, etc.<br>
+</details></li>
+</ul>
+</section><section id="w3c-2013">
+<h3>Developer Operations Engineer <small>(i.e. DevOps)</small></h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.w3.org/">W3C/MIT</a>
+</dd>
+<dt>Duration</dt>
+<dd>Aug 2013 – Aug 2015 (2 years)
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd><em>Remote work</em>, Montreal, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Apache 2.4</span> <span class="label label-info">Backbone.js</span> <span class="label label-info">gDNSd</span> <span class="label label-info">Bower</span> <span class="label label-info">Browserify/Rollup.js</span> <span class="label label-info">Cinder</span> <span class="label label-info">Compass</span> <span class="label label-info">Discourse</span> <span class="label label-info">DocPad</span> <span class="label label-info">Docker</span> <span class="label label-info">Docker Machine</span> <span class="label label-info">ElasticSearch</span> <span class="label label-info">Express.js</span> <span class="label label-info">Fastly (VCL)</span> <span class="label label-info">Gerrit</span> <span class="label label-info">Grunt/Gulp</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">Horizon</span> <span class="label label-info">HTTP/2</span> <span class="label label-info">Hypothes.is</span> <span class="label label-info">JavaScript</span> <span class="label label-info">MediaWiki</span> <span class="label label-info">Memcached</span> <span class="label label-info">Metalsmith</span> <span class="label label-info">Monit</span> <span class="label label-info">MySQL/MariaDB</span> <span class="label label-info">NGINX</span> <span class="label label-info">Node.js</span> <span class="label label-info">Nova</span> <span class="label label-info">PHP</span> <span class="label label-info">Python</span> <span class="label label-info">Redis</span> <span class="label label-info">SASS</span> <span class="label label-info">SaltStack</span> <span class="label label-info">Swift</span> <span class="label label-info">TwemProxy</span> <span class="label label-info">Vagrant</span> <span class="label label-info">WordPress</span> <span class="label label-info">jordansissel/fpm</span> <span class="label label-info">Git</span>
+</dd>
+</dl>
+<p><details open><summary>The W3C typically works around specifications with its members. The <a href="http://www.webplatform.org">WebPlatform Docs project</a> was meant to become an independent Web Developer documentation site maintained by an International community of contributors. Sponsors were: Adobe, Apple, DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia, and Opera.</p>
+<p>My role was to maintain stability, improve features, strengthen the infrastructure of the site, and act as a technical liaison with Open-source communities.</summary></p>
+<h4>Achievements</h4>
+<ul>
+<li><p><strong>Convert content and history of MediaWiki into Static site-generator and Git</strong> (2015)</p>
+<p>In order to preserve the contributions made by the community and allow the site to run only from static HTML files, I had to find a way to simplify server setup. To achieve this, I created a conversion system with which I could convert each wiki page into a text file,  preserve history for each save into a <em>git commit</em>.</p>
+<p>I could successfully rebuild WebPlatform Docs pages, content and history from MediaWiki that was using more than 25 <abbr title="Virtual Machines">VMs</abbr> into one Web server that serves simple static HTML files. Without losing the ability for the community to continue contributing to the documentation.</p>
+<p><em>See the code</em>, refer to <a href="#content-converter">Selected projects</a> section below.</p></li>
+<li><p><strong>Infrastructure deployment code</strong> (2015)</p>
+<p>The site relied on a number of Open-Source projects, written in different languages (PHP, Python, etc.) and managed by their own communities. Each component had a set of adjustments to maintain the &quot;look and feel&quot;. Each Web application and configuration management scripts wasn’t originally made to support multiple deployment (e.g. staging, local), but only the live site.</p>
+<p>I successfully reworked the whole configuration management system such that we could clone each Web application code, apply their respective customization and configurations systematically. So we could rebuild the whole system from scratch, from any domain name, at any time.</p>
+<p><em>See the code</em>, refer to <a href="#webplatform-ops">Selected projects</a> section below.</p></li>
+<li><p><strong>Self-healing monitoring</strong> (2015)</p>
+<p>WebPlatform Docs server infrastructure had <em>no monitoring</em>, only a server health dashboard (<em>Ganglia</em>). I therefore set deployment code configuring <em>Monit</em> automatically for each service and VMs to ensure they remain up, and restart faulty services if they stopped running.</p></li>
+<li><p><strong>Implement Single Sign-On using OAuth2</strong> (2014)</p>
+<p>The site was using multiple web applications such as WordPress, The BugGenie, MediaWiki, Discourse, and many others. Each section of the site would require to create an account manually. The objective was to set in place a system that takes care of storing <em>user profile data</em> and their <em>session state</em> using Mozilla Firefox Accounts.</p>
+<p><em>See the code</em>, refer to <a href="#webplatform-sso">Selected projects</a> section below.</p></li>
+<li><p><strong>Web Browser feature compatibility tables</strong> (2014)</p>
+<p>Participate in making a web crawler to <em>get a local copy</em> of compatibility data stored within <a href="http://developer.mozilla.org/">Mozilla’s MDN</a> content pages and clean it up to generate new compatibility tables within WebPlatform Docs. The project included a generated HTML cache system to prevent heavy server use caused by the feature.<br>
+</details></p></li>
+</ul>
+</section><section id="ericsson-2012">
+<h3>Software Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.ericsson.com/">Ericsson</a>
+</dd>
+<dt>Duration</dt>
+<dd>Feb 2012 – Jun 2013 (1 year 4 months)
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd>Montreal, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Doctrine2</span> <span class="label label-info">Git</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">JMS Serializer</span> <span class="label label-info">JavaScript</span> <span class="label label-info">LESSCSS</span> <span class="label label-info">MySQL</span> <span class="label label-info">OpenStack Grizzly</span> <span class="label label-info">PHP</span> <span class="label label-info">Puppet</span> <span class="label label-info">Symfony2</span> <span class="label label-info">Twitter Bootstrap</span> <span class="label label-info">VMWare ESXi/vCloud Director</span> <span class="label label-info">Vagrant</span> <span class="label label-info">jQuery</span>
+</dd>
+</dl>
+<p><details><summary>The project goal was to create a server on-demand provisioning portal managing cloud computing cluster hosted in data centers geographically dispersed.</p>
+<p>My role was to Architect, build and lead a Web-based virtualization self-service portal. A key feature I worked on was to allow users to initiate VMs from any data centers, on any cloud provider platforms (e.g. VMWare, OpenStack).</summary></p>
+<p>When I joined the project, it was roughly a handful of PHP files and I created a complete solution. After Ericsson wide launch, other members joined.</p>
+<h4>Responsibilities</h4>
+<ul>
+<li>Analyzed; Interface, functional decomposition, non-functional requirements</li>
+<li>Designed and implemented an abstraction layer to support different vendor APIs</li>
+<li>Coached Ericsson employees about the Open Web Platform and Web development methodologies<br>
+</details></li>
+</ul>
+</section><section>
+<h3>Web Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><em>Evocatio Solutions technologiques Inc.</em>
+</dd>
+<dt>Duration</dt>
+<dd>Jan 2010 – Feb 2012 (2 years 2 months)
+</dd>
+<dt>Type</dt>
+<dd>Co-Founder
+</dd>
+<dt>Location</dt>
+<dd>Montreal, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Apache Solr</span> <span class="label label-info">Bower</span> <span class="label label-info">Compass</span> <span class="label label-info">EJS</span> <span class="label label-info">Git</span> <span class="label label-info">Grunt</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">JavaScript</span> <span class="label label-info">LESSCSS</span> <span class="label label-info">MySQL</span> <span class="label label-info">Node.js</span> <span class="label label-info">PHP</span> <span class="label label-info">SASS</span> <span class="label label-info">Subversion</span> <span class="label label-info">Symfony2</span> <span class="label label-info">Tiki Wiki CMS/Groupware</span> <span class="label label-info">Twitter Bootstrap</span> <span class="label label-info">VMWare ESXi</span> <span class="label label-info">Vagrant</span> <span class="label label-info">WordPress</span> <span class="label label-info">Yeoman</span> <span class="label label-info">jQuery</span> <span class="label label-info">symfony1.x</span>
+</dd>
+</dl>
+<p><details><summary>Co-founded <em>Evocatio Technological Solutions Inc.</em> with two old friends. Our partnership lasted 2 years and at the peak we had 10 employees on our payroll, some of our work won prizes in local industry competitions and other projects got deployed in cities around the globe.</p>
+<p>The company worked on projects namely for: Canadian Museum of History, UDA (French-Canadian Artist Union), Astral Media, Equisoft, UPA (Quebec Province professional farmers’ union), Rolls-Royce and Rogers Media. </summary></p>
+<h4>Responsibilities</h4>
+<ul>
+<li>Coach graphic designers about making websites with the Open Web Platform</li>
+<li>Participate in software requirements, R&amp;D documentation, and project bids</li>
+</ul>
+<h4>Achievements</h4>
+<ul>
+<li>Participated in a major Web site rewrite for <a href="http://uniondesartistes.com/">UDA.ca</a> from .NET into PHP with Symfony 1.x</li>
+<li>Created meaningful relationships that led to important contracts</li>
+<li>Created complex e-mail delivery systems to handle bounces at the server level and participated in the creation of a Web-based frontend</li>
+</ul>
+<h4>Projects</h4>
+<ul>
+<li><p><strong>Mailing list manager</strong> <small>(2012)</small></p>
+<p>Participated in the development of an e-mail notification system using <em>symfony 1.2</em>. The web application allowed our clients to write communication e-mails using a library of HTML e-mail templates that they could reuse.</p></li>
+<li><p><strong>UDA Web site</strong> <small>(2009-2012)</small></p>
+<ul>
+<li>Search-engine feature of the member artist database search engine («<span lang="fr">Le Bottin des artistes</span>»), allowing to find on various criteria: hair color, played music instruments, professional qualifications, etc.</li>
+<li>Document search-engine feature which had to support multiple file formats and Web documents</li>
+<li>An artist manager can create an artist selection portfolio to share with other producers</li>
+<li>An artist can control what information can be visible publicly</li>
+</ul>
+<p>The version I worked on isn’t online anymore, but you <a href="https://www.flickr.com/photos/inexisdotnet/6911441858/">can still see a few screenshots here (16 images)</a></p></li>
+<li><p><strong>Gift exchange interactive game</strong> <small>(2010-2011)</small></p>
+<p>Evocatio’s main business partner, <span lang="fr">RED l’Agence</span>, wanted to make an interactive Christmas Holiday wish card with their clients and partners. The game had been run two consecutive years and received prizes of recognition from the local marketing agency community («<span lang="fr">Grenier aux nouvelles</span>»).</p>
+<ul>
+<li><p><em>2010</em>: 40 different gifts, 40 participants</p>
+<p>Each participant could pick somebody else’s gift, with a limit of 9 picks. At a given time, participants learn which gift they were assigned. Whether or not they picked it. See this <a href="https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence-le-%C2%ABclub-echangiste%C2%BB-2009/">article on my blog showcasing the 2010 variant</a> (in French)</p></li>
+<li><p><em>2011</em>: «<em><span lang="fr">Échange pas très équitable</span></em>» (An unfair gift exchange).</p>
+<p>One iPad, the desired prize, is hidden in a christmas sock (e.g. blue with white dots), the user gets a hint after each attempt. Each participat had a limit of 9 attempts. The game won the &quot;<em><span lang="fr">Grenier d’Or</span></em>&quot; competition in the Interactive games category.</p></li>
+</ul></li>
+<li><p><strong>An “Offline-First” news reader in HTML5 for iPad</strong> <small>(2010)</small></p>
+<p>Objective was to allow site visitors to read articles offline from the iPad during transit periods. Project stated that it only had to support <em>Apple iPad</em>. The source site was running WordPress and therefore already had an <abbr title="Really Simple Syndication">RSS</abbr> feed. The site had been built using JavaScript templating library of the time and was assuming the Web browser supported HTML5’s <tt>localStorage</tt> such that upon loading the page, articles were kept locally and displayed. The project was a success, even though AppCache implementation in Safari at that time wasn’t complete.</p>
+<p><a href="http://dundee.advisor.ca/">See it in action</a> (<em>still online, but unmaintained</em>)<br>
+</details></p></li>
+</ul>
+</section><section>
+<h3>Web Integrator &amp;<br/> Linux System Administrator</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.techsolcom.ca/">Groupe Informatique TechSolCom</a>
+</dd>
+<dt>Duration</dt>
+<dd>Oct 2006 – Aug 2009 (2 years 10 months)
+</dd>
+<dt>Location</dt>
+<dd>Montreal, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Ant</span> <span class="label label-info">Apache 2.x</span> <span class="label label-info">Apache Tomcat</span> <span class="label label-info">Bind</span> <span class="label label-info">CentOS GNU/Linux</span> <span class="label label-info">CVS</span> <span class="label label-info">Debian GNU/Linux</span> <span class="label label-info">Exim</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">IBM WebSphere DataPower</span> <span class="label label-info">JavaScript</span> <span class="label label-info">Jaws</span> <span class="label label-info">Maven2</span> <span class="label label-info">Mootools</span> <span class="label label-info">Nagios/Centreon</span> <span class="label label-info">RHEL GNU/Linux</span> <span class="label label-info">PHP</span> <span class="label label-info">jQuery</span> <span class="label label-info">SNMP</span> <span class="label label-info">Subversion</span> <span class="label label-info">SpamAssassin</span> <span class="label label-info">Struts/JSF</span> <span class="label label-info">SUN Glassfish</span> <span class="label label-info">Syslog</span> <span class="label label-info">Ubuntu GNU/Linux</span> <span class="label label-info">VMWare Server</span> <span class="label label-info">WCAG</span> <span class="label label-info">XML/XSL/XSLT</span> <span class="label label-info">YUI2</span>
+</dd>
+</dl>
+<p><details><summary>My role was to maintain the company corporate image on the Web, maintain their Web site, participate in projects run internally as a Web developer and contribute to the maintenance of the company network infrastructure.</summary></p>
+<h4>Responsibilities</h4>
+<ul>
+<li>Participate as frontend developer to assigned projects</li>
+<li>Create frontend pattern libraries (what we called “Web Integration” then) for assigned projects</li>
+<li>Maintain corporate image on the web for the company and products</li>
+<li>Maintain company internal network and web hosting infrastructure</li>
+</ul>
+<h4>Projects</h4>
+<ul>
+<li><p><strong>TechSolCom web site</strong></p>
+<ul>
+<li><p>2009 site version rebuilt with good care of the <a href="http://www.w3.org/WAI/intro/wcag" title="Web Content Accessibility Guidelines">WCAG</a> recommendations <br/> <a href="https://www.flickr.com/photos/inexisdotnet/4093703003/in/album-72157629405397114/">Screenshots</a> (4 images)</p></li>
+<li><p>2007 site version was running with <em lang="fr">Géranium CMS</em> <br/> <a href="https://www.flickr.com/photos/inexisdotnet/4096173192/in/album-72157629405397114/">Screenshots</a> (5 images)</p></li>
+</ul></li>
+<li><p><strong>Namminik</strong>, an home-inventory Web application <small>(2008)</small></p>
+<p><a href="http://namminik.com/">Namminik</a> can be used to keep a record of your belongings for your insurance. The initial version had both a website and an Apple iPhone iOS application (2008). As of 2012, the Web application had been deprecated and only the <a href="https://play.google.com/store/apps/details?id=com.namminik">Android</a> and <a href="https://itunes.apple.com/au/app/namminik/id314220843?mt=8">iOS</a> applications are still maintained (2016).</p>
+<p><em>Namminik</em> was my first “Agile” project in my career, we were a team of 4, two programmers, a SCRUM Master, and myself as Product/UX Designer and Frontend developer.</p>
+<p><a href="https://www.flickr.com/photos/inexisdotnet/4094892298/in/album-72157654212253690/">Screenshots</a> (5 images)</p></li>
+<li><p><strong>Beebox/TSCM</strong>, a Continuous Integration Web application for <em>IBM WebSphere</em>, <em>Apache Glassfish</em> J2EE runtime engines  <small>(2007-2009)</small></p>
+<p><em>Beebox</em> was a Continuous Integration system written in Java deployed at the National Bank of Canada, <span lang="fr">Téléfilm Canada</span> and other clients. In 2008, Beebox became freely to download, but unfortunately didn’t get attraction from the public and we can’t find anything online about that product.</p>
+<ul>
+<li>Web integration using <em>IBM Rational application</em> development environment and <em>IBM WebSphere</em> portal</li>
+<li>Participated in the creation of a <em>Struts</em> tag library</li>
+<li>Participated in the user documentation</li>
+</ul>
+<p><a href="https://www.flickr.com/photos/inexisdotnet/4094892662/in/album-72157654212253690/">Screenshots</a> (4 images)</p></li>
+<li><p><strong>Site Finder</strong>, a White-Label branch locator iOS application <small>(2009-2011)</small></p>
+<p>Participated in the Web-based back-office portal providing data to an outlet geo-location tool for iOS, the project was later was adapted for Desjardins as the “Localisateur Desjardins” (2009-2011).</p></li>
+<li><p><strong>Jacob.ca</strong>, a temporary on-site contract <small>(2009)</small></p>
+<ul>
+<li>Built a JavaScript AJAX Outlet locator, reading data from XML files</li>
+<li>Built XML schema and XSL stylesheets</li>
+<li>Contact us form, using cross-origin frame communication</li>
+</ul></li>
+<li><p><strong>Téléfilm Canada</strong>, a temporary on-site contract <small>(2008)</small></p>
+<p>Create an HTML/CSS markup library based on Adobe Photoshop files. At the time, there were very few UI frontend frameworks, I used the most robust of the time, Yahoo!’s YUI2 and adapted the framework’s base CSS to match the mockups.</p>
+<p><a href="https://www.flickr.com/photos/inexisdotnet/4095241313/in/album-72157654212253690/">Screenshots</a> (3 images).</p></li>
+<li><p><strong>System administration</strong></p>
+<ul>
+<li>Managed multiple VMWare ESX and VMware Server servers, and virtual machine instances</li>
+<li>Built a monitoring service using the SNMP protocol, centralized syslog server, and configured a Nagios monitoring service</li>
+<li>Managed and tested <strong>SOA integration</strong> patterns with the company’s <strong>IBM WebSphere DataPower</strong> development blade</li>
+<li>Built an SMTP e-mail relay server, using SpamAssassin, and other filtering technologies<br>
+</details></li>
+</ul></li>
+</ul>
+</section><section>
+<h3>Web Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.axion.ca/">Câble Axion Digitel</a>
+</dd>
+<dt>Duration</dt>
+<dd>Oct 2005 – Nov 2006 (1 year 1 month)
+</dd>
+<dt>Location</dt>
+<dd>Magog, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">CentOS GNU/Linux</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">Microsoft Access</span> <span class="label label-info">MySQL</span> <span class="label label-info">PHP</span> <span class="label label-info">Qmail</span> <span class="label label-info">SpamAssassin</span> <span class="label label-info">Subversion</span> <span class="label label-info">Sun OS (Solaris)</span>
+</dd>
+</dl>
+<p><details><summary>Câble Axion is a cable service provider. Their network coverage goes from Montreal South Shore, follows the US borders, and go up until the Beauce area in the province of Quebec.</p>
+<p>My role was to rewrite the corporate website, maintain internal applications and do level-2 support calls from subscribers. </summary></p>
+<h4>Achievements</h4>
+<ul>
+<li>Maintained the company website</li>
+<li>Maintained of the internal <em>Microsoft Access</em> support dashboard software<br>
+</details></li>
+</ul>
+</section><section>
+<h3>Web Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><em>Inexis solution web Inc.</em>
+</dd>
+<dt>Duration</dt>
+<dd>Feb 2002 – Nov 2006 (4 years 9 months)
+</dd>
+<dt>Type</dt>
+<dd>Self-employed
+</dd>
+<dt>Location</dt>
+<dd>Sherbrooke, Quebec
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">CentOS GNU/Linux</span> <span class="label label-info">HTML/CSS</span> <span class="label label-info">MySQL</span> <span class="label label-info">PHP</span> <span class="label label-info">Qmail</span> <span class="label label-info">RedHat GNU/Linux</span> <span class="label label-info">Subversion</span>
+</dd>
+</dl>
+<p><details><summary><em>INEXIS solution web Inc.</em>, was a one-man web development service provider form I founded to serve graphic design agencies in the region of the Eastern Townships. Services typically included creating HTML/CSS based on Adobe Photoshop/Illustrator mockup designers were making, creating e-mail templates, and managing hosting services.</summary></p>
+<h4>Achievements</h4>
+<ul>
+<li><strong>Managed sites for well-known local organizations</strong>
+<ul>
+<li><em>City of Sherbrooke</em>, «<em lang="fr">Sherbrooke, Ville étudiante</em>» (A city project to invite students to study in Sherbrooke),</li>
+<li>the regional county municipality of the <em lang="fr">Val Saint-François</em>,</li>
+<li><em lang="fr">Mont Bellevue</em> (a ski resort), and</li>
+<li><em lang="fr">Hydro-Sherbrooke</em> (local electricity provider)</li>
+</ul></li>
+</ul>
+<h4>Projects</h4>
+<ul>
+<li><p><strong lang="fr">Géranium</strong> <small>(2002-2008)</small></p>
+<p>Inexis was publisher of its own proprietary <em>Client Relationship Management Solution</em> (CRM) and <em>Content Management System</em> (CMS) called <em lang="fr">Géranium</em>.</p>
+<p>The <em>CRM</em> distribution was used internally so that I could manage sales and work with 4 partners in the same time. At its peak, the company served more than 60 Web sites with all related services.</p>
+<p>The <em>CMS</em> distribution had been deployed until 2008. It started as a full featured CMS, and became a static site generator in 2006.</p></li>
+<li><p><strong>Adapt a Web application to have better printed reports</strong>, temporary on-site contract <small>(2004)</small></p>
+<p>I have been hired to participate in a project Web application written in <em>ColdFusion</em> that had to support printing their reports from a Web browser. At the time, it had to work reasonably well with Microsoft Internet Explorer 5 on PC.<br>
+</details></p></li>
+</ul>
+</section>
+<hr>
+<!-- end of #work-experience --></section><section id="selected-projects">
+<h2>Selected projects</h2>
+<section id="content-converter">
+<h3>Convert content and history of MediaWiki<br/> into Static site-generator and Git</h3>
+<dl>
+<dt>Project</dt>
+<dd>WebPlatform Docs
+</dd>
+<dt>Sponsor</dt>
+<dd>W3C/MIT, Volunteer
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">MediaWiki</span> <span class="label label-info">Pandoc</span> <span class="label label-info">PHP 5.3</span>
+</dd>
+<dt>See the code</dt>
+<dd><a href="https://github.com/webplatform/docs"><em>New</em> WebPlatform Docs content repository</a>
+</dd>
+<dd><a href="https://github.com/webplatform/content-converter">Abstract library “content converter”</a>
+</dd>
+<dd><a href="https://github.com/webplatform/mediawiki-conversion">MediaWiki converter</a>
+</dd>
+</dl>
+<p><details><summary>I wrote an <em>abstract library “content converter”</em> and a <em>MediaWiki converter</em>  system with which I could convert each wiki page and write contents into a text file. I preserved history for each edit using Git. The conversion takes into account every special URL MediaWiki allowed (i.e. non ASCII fragments) and generates a rewrite map for NGINX. Last conversion step was to convert last version of each page into Markdown.</summary></p>
+<h4>Requirements</h4>
+<ul>
+<li>Make each page into a valid ASCII URL fragment</li>
+<li>Keep any URLs that had invalid URL fragments by keeping 30x redirects</li>
+<li>Preserve edit date, author and content for each pages</li>
+<li>Keep history and possible redirects of deleted pages</li>
+<li>Support edition using GitHub or a local text-editor, in Markdown</li>
+<li>Support compilation into static HTML<br>
+</details></li>
+</ul>
+</section><section id="webplatform-ops">
+<h3>Infrastructure deployment code<br/> with Salt Stack</h3>
+<dl>
+<dt>Project</dt>
+<dd>WebPlatform Docs
+</dd>
+<dt>Sponsor</dt>
+<dd>W3C/MIT
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Python</span> <span class="label label-info">SaltStack</span>
+</dd>
+<dt>See the code</dt>
+<dd><a href="https://github.com/webplatform/salt-states/">Configuration scripts</a>
+</dd>
+<dd><a href="https://github.com/webplatform/ops/">Workspace</a>
+</dd>
+</dl>
+<p><details><summary><a href="https://www.webplatform.org/">WebPlatform.org</a> relied on a number of Open-Source projects, written in different languages. Each component had a set of adjustments to maintain the site image.</p>
+<p>The objective of this project was to improve the deployment system in order to work with the same code <em>locally</em> or <em>in the cloud</em> so that I could work on configuration locally and test them in staging prior to deploy changes in production.</summary></p>
+<h4>Requirements</h4>
+<ul>
+<li>Possibility to run on any Open-Stack cluster and/or Vagrant VMs</li>
+<li>Possibility to change passwords and secrets, apply changes on servers and client configuration files</li>
+<li>Possibility to deploy different stacks; Docker containers, PHP, NGINX, Apache, Node.js, Python, etc.<br>
+</details></li>
+</ul>
+</section>
+<section id="webplatform-sso">
+<h3>Implement Single Sign-On using OAuth2</h3>
+<dl>
+<dt>Project</dt>
+<dd>WebPlatform Docs
+</dd>
+<dt>Sponsor</dt>
+<dd>W3C/MIT
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">Mozilla Firefox Accounts</span> <span class="label label-info">Express.js</span> <span class="label label-info">Backbone.js</span> <span class="label label-info">OAuth2</span> <span class="label label-info">JavaScript</span>
+</dd>
+<dt>See the code</dt>
+<dd><a href="https://github.com/mozilla/fxa-content-server/pull/2637">GitHub Pull request</a>
+</dd>
+<dt>See in action</dt>
+<dd><a href="https://www.youtube.com/watch?v=rutwd1Z_1TE">YouTube screenast</a>
+</dd>
+</dl>
+<p><details><summary>As previously said, <em>WebPlatform.org</em> relied on a number of Open-Source projects, written in different languages. We wanted to simplify authentication, and had to create a way to share session state between different stacks.</p>
+<p>In order to allow users to use <em>one set of credentials</em> on separate web applications, <a href="https://docs.webplatform.org/wiki/WPD:Projects/SSO/How_we_implemented_it">I developed a mechanism to implement a Single Sign On</a> using <a href="https://docs.webplatform.org/wiki/WPD:Projects/SSO/Adapt_Firefox_Accounts_for_WebPlatform">Mozilla Firefox Accounts</a>. My work <a href="https://mozillians.org/en-US/u/renoirb/" title="Link to my Mozillan profile">caught attention of the Accounts team at Mozilla</a>, but <a href="https://github.com/mozilla/fxa-content-server/pull/2637">hasn’t been merged yet</a>.</summary></p>
+<p>The objective has been achieved, but isn’t in use because we migrated WebPlatform <a href="#content-converter">into a static site-generator driven</a> publishing and no longer support any backends.</p>
+<h4>Requirements</h4>
+<ul>
+<li>Possibility for a configured web application to get user session and data associated to a shared token from an authoritative server</li>
+<li>Possibility for a configured web application to either use or create a user locally and start a session</li>
+<li>Possibility for a configured web application to drop a local session if authoritative source doesn’t find a valid session</li>
+<li>Implement HTTP calls from relier backend to initiate roundtrip check to authoritative server</li>
+<li>Implement HTTP response from relier backend to confirm status of check<br>
+</details></li>
+</ul>
+</section>
+<section id="roughdraft">
+<h3>Improve offline use <br/>on a prototyping tool</h3>
+<dl>
+<dt>Project</dt>
+<dd><a href="https://github.com/renoirb/roughdraft.js">RoughDraft.js</a>
+</dd>
+<dt>Sponsor</dt>
+<dd>Volunteer
+</dd>
+<dt>Technologies</dt>
+<dd><span class="label label-info">JavaScript</span>
+</dd>
+<dt>See in action</dt>
+<dd><a href="https://sweetieandsweetie.com/styleguide/">Mockup of my wedding RSVP Web site</a>
+</dd>
+<dd><a href="https://renoirboulanger.com/styleguide/">Mockup of my Web site</a>
+</dd>
+</dl>
+<p><details><summary>RoughDraft allows to create HTML documents without any backend — All in the browser!. It makes it possible to create  simple static HTML files with loops, &quot;<em>Lorem Ipsum</em>&quot; and placeholder images without having to copy paste boilerplate code.</summary></p>
+<h4>Contributions</h4>
+<ul>
+<li><p><strong>Class name sequence generator</strong> (<a href="https://github.com/ndreckshage/roughdraft.js/pull/9" title="Pull Request">PR #9</a>)</p>
+<p>When creating loops in a case where the pattern has to have predetermined class names. For example, <code>&lt;ul&gt;&lt;li class=&quot;foo-alfa&quot; data-draft-repeat=&quot;3&quot; data-draft-text=&quot;1/w&quot;&gt;&lt;/li&gt;&lt;/ul&gt;</code> would generate a list with three <em>Lorem Ipsum</em> words, each list item would be named <code>foo-alfa</code>, <code>foo-bravo</code>, <code>foo-charlie</code></p></li>
+<li><p><strong>Improve offline use support</strong> (<a href="https://github.com/ndreckshage/roughdraft.js/pull/14" title="Pull Request">PR #14</a>)</p>
+<p>Few additions to speed up load time. Ability to use inline SVG images and instead of using external placeholder image providers.<br>
+</details></p></li>
+</ul>
+</section>
+<hr>
+<!-- end of #selected-projects --></section>
+
+              </div><!-- /.boxes -->
+            </div><!-- /.main -->
+          </div><!-- /.content -->
+        </div><!-- /.wrap -->
+      </div><!-- end of .zone-content.container -->
+    </div><!-- end of #main.zone -->
+    <footer id="content-info" role="contentinfo">
+        <div class="zone">
+            <div class="zone-bottom container">
+                <div class="zone-bottom-padding">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <style>[foudelapouitte]:after {content:"moc.regnaluobrioner\0040olleh";}</style>
+    <script>
+        function querySelectorApply(selectorString, closure) {
+          Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
+        }
+        function openAllDetailsElements() {
+          querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
+            HTMLDetailsElement.setAttribute('open','');
+          });
+        }
+        /**
+         * Make label looking tags and
+         * append as child to a QuerySelector friendly location
+         * in the DOM
+         */
+        function addLabelTo(text_or_array, qs, tag) {
+          var tagType = tag||'span',
+              tagElement = document.createElement(tagType),
+              whereSelector = document.querySelector(qs||'body'),
+              tagsTexts = [],
+              loopCounter = -1;
+          tagElement.setAttribute('class', 'label label-success');
+          if (!!text_or_array &&  text_or_array.constructor == String) {
+            tagsTexts = [text_or_array];
+          }
+          if (!!text_or_array && text_or_array.constructor == Array) {
+            tagsTexts = text_or_array;
+          }
+
+          while (++loopCounter < tagsTexts.length){
+            var newTag = tagElement.cloneNode(false);
+            newTag.textContent = String(tagsTexts[loopCounter]);
+            whereSelector.appendChild(newTag);
+          }
+        }
+        window.onload = function resumeOnloadHandler() {
+          var documentClassNames = document.getElementsByTagName('html')[0].getAttribute('class'),
+              bodyClassesNames = document.body.getAttribute('class');
+
+          /**
+           * Test if we’re reading the detailed resume or not. Add different className on body
+           **/
+          if (/detailed(\/|\.html)$/.test(window.location.pathname)) {
+            bodyClassesNames += ' detailed';
+            addLabelTo('Detailed resume', '.zone-top h1:first-child', 'sup');
+          } else {
+            bodyClassesNames += ' not-detailed';
+          }
+
+          /**
+           * Very minimal feature detect for details HTML5 tag
+           *
+           * Test for existence of details element
+           *     !!window.HTMLDetailsElement
+           * or like this
+           *     !!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement
+           */
+           if (!!window.HTMLDetailsElement === true) {
+             documentClassNames += ' details';
+           } else {
+             documentClassNames += ' no-details';
+           }
+           document.body.setAttribute('class', bodyClassesNames);
+           document.getElementsByTagName('html')[0].setAttribute('class', documentClassNames);
+        };
+    </script>
+  </body>
+</html>
