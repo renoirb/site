@@ -8,6 +8,10 @@
 <title>Redirecting to https://example.com/</title>
 <meta http-equiv="refresh" content="0; URL=https://example.com/">
 <link rel="canonical" href="https://example.com/">
+
+#TODO-Meta-Equiv-Redirect
+
+This doesn't work, see also ../../pages/blog/_year/_month/_slug.vue
 -->
 
 <script lang="ts">

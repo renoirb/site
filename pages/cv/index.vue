@@ -8,6 +8,9 @@
     [/^\/cv\/detailed$/i, '/resume/detailed'],
   ]
 
+  /**
+   * #TODO-Borken-page: This page doesn't work
+   */
   const asyncData = createPageRedirectAsyncData(redirects)
 
   export default defineComponent({

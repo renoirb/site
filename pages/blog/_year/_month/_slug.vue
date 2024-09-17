@@ -142,6 +142,21 @@
       const dal = $content('blog', { deep: true })
         .where((a: INuxtContentResult) => {
           return !Reflect.has(a, 'redirect')
+          /**
+           * #TODO: Figure out how to avoid [1] to link to [2] that's a stub to redirect to [3].
+           *
+           * Also that figuring out why it apears at the wrong date as if [2] was an article published
+           * before or after an article from 2015 when there's a few that are in between.
+           *
+           * Ideally, should:
+           * - Be `status: publish`
+           * - Not have a `redirect: #####`
+           * - At the neighbooring published date
+           *
+           * [1]: ~/blog/2015/11/recover-discourse-backup-change-domain-name
+           * [2]: ~/blog/2024/03/managing-email-aliases-with-protonmail-and-simplelogin-to-sort-automatically-into-inbox-folders-based-local-part
+           * [3]: ~/blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting
+           */
         })
         .only(['title', 'path', 'locale'])
         .sortBy('created', 'asc')
@@ -195,6 +210,8 @@
 
       if (redirect !== '') {
         // <meta http-equiv="refresh" content="0; url=http://example.com/" />
+        // #TODO-Meta-Equiv-Redirect: Move this logic so that we can re-use elsewhere.
+        // See related ../../../../components/global/GitHubPagesRedirect.vue
         meta.push({
           hid: 'refresh',
           // @ts-ignore

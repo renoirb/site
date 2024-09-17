@@ -6,6 +6,17 @@ Rewriting [renoirb/site][github-renoirb-site]
 
 ## Bookmarks
 
+### Docs useful during maintenance
+
+- [Prism supported languages](https://prismjs.com/#supported-languages)
+- **Nuxt** docs for this present version (2024: it's 4 years old now!) (nuxt-content 1.8.1, nuxt 2.14)
+  - [**Nuxt v2 Docs**](https://v2.nuxt.com/docs/)
+  - [**Nuxt**: fetch](https://github.com/nuxt/docs/blob/master/en/api/pages-fetch.md)
+  - [**Nuxt/content** Querying](https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/fetching.md#wherequery)
+  - [**Nuxt/content dependency Loki** Querying](https://github.com/techfort/LokiJS/wiki/Query-Examples)
+- **Vue** v2:
+  - https://v2.vuejs.org/v2/api/#ignoredElements
+
 ### Official docs
 
 - Nuxt.js
@@ -17,6 +28,7 @@ Rewriting [renoirb/site][github-renoirb-site]
   - [Nuxt.js _PWA_][nuxtjs-pwa]
   - [nuxt-community/composition-api][nuxt-community-composition-api]
 - [Vue composition-api][vue-next-composition-api]
+- [Tailwind CSS v1.x](https://v1.tailwindcss.com/docs/)
 
 ### Useful _TypeScript_ + _Nuxt.js_ community curated examples
 

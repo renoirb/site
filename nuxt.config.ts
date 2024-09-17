@@ -11,6 +11,10 @@ const appIdentity = fromProcessEnvToAppIdentity(process.env)
 
 const isProduction = process.env.NODE_ENV === 'production'
 
+// #TODO
+// - site-map.xml
+// - list of all URLs to articles markdown files published with title, created, locale
+
 const main: NuxtConfig = {
   /*
    ** Nuxt rendering mode
