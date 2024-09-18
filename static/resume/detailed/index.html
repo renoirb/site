@@ -6,8 +6,17 @@
     <title>Curriculum vitæ (detailed) ✪  Renoir Boulanger</title>
     <meta property="og:image" content="http://renoirb.com/assets/avatars/201507.jpg" />
     <!-- link rel=stylesheet href="../assets/main.css" /-->
-    <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
-    <script type='text/javascript' src="../assets/bliss.min.js"></script>
+    <link rel=stylesheet href="../../legacy-stuff/pre-2020-renoirboulanger-com.min.css" />
+
+    <script type="module">
+      /**
+       * Added on 2024-09-18 during migration.
+       */
+      import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+      import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+      registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+    </script>
+
     <style>
 
       /* Far reaching ones */
@@ -211,6 +220,19 @@
     </header>
     <div id="main" role="main" class="zone">
       <div class="zone-content container">
+
+        <rb-notice-box
+          variant="warn"
+          style="margin-bottom:2em;"
+        >
+          <div slot="header">
+            <strong>
+              Currently outdated
+            </strong>
+          </div>
+          <p>This version is currently outdated, refer to the <a href="../as-code">/resume/as-code</a> version of my resume.</p>
+        </rb-notice-box>
+
         <div class="wrap container" role="document">
           <div class="content row">
             <div class="main span12" role="main">
@@ -272,7 +294,7 @@
 <p>See more talks in <a href="/talks/">renoirb.com/talks</a></p>
 <h2>Past employers</h2>
 <section id="past-employers">
-<p><a href="#mozilla-2015"><img src="../../assets/logos/mozilla.svg" alt="Mozilla"></a><a href="#w3c-2013"><img src="../../assets/logos/w3c.svg" alt="W3C"></a><a href="#ericsson-2012"><img src="../../assets/logos/ericsson.svg" alt="Ericsson"></a></p>
+<p><a href="#mozilla-2015"><img src="../../legacy-stuff/resume/mozilla.svg" alt="Mozilla"></a><a href="#w3c-2013"><img src="../../legacy-stuff/resume/w3c.svg" alt="W3C"></a><a href="#ericsson-2012"><img src="../../legacy-stuff/resume/ericsson.svg" alt="Ericsson"></a></p>
 </section>
 <hr>
 <!-- end of #summary --></section><section id="work-experience">
@@ -739,7 +761,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../../legacy-stuff/renoirb-js-main.js"></script>
     <style>[foudelapouitte]:after {content:"moc.regnaluobrioner\0040olleh";}</style>
     <script>
         function querySelectorApply(selectorString, closure) {

@@ -1,13 +1,22 @@
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en-CA">
   <head>
     <meta charset=utf-8 />
     <title>Curriculum vitæ (simple) ✪  Renoir Boulanger</title>
     <meta property="og:image" content="http://renoirb.com/assets/avatars/201507.jpg" />
     <!-- link rel=stylesheet href="../assets/main.css" /-->
-    <link rel=stylesheet href="https://renoirboulanger.com/wp-content/themes/renoirb/assets/css/main.min.css" />
-    <script type='text/javascript' src="../assets/bliss.min.js"></script>
+    <link rel=stylesheet href="../legacy-stuff/pre-2020-renoirboulanger-com.min.css" />
+
+    <script type="module">
+      /**
+       * Added on 2024-09-18 during migration.
+       */
+      import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+      import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+      registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+    </script>
+
     <style>
 
       /* Far reaching ones */
@@ -210,8 +219,22 @@
         </div>
     </header>
     <div id="main" role="main" class="zone">
+
       <div class="zone-content container">
         <div class="wrap container" role="document">
+
+          <rb-notice-box
+            variant="warn"
+            style="margin-bottom:2em;"
+          >
+            <div slot="header">
+              <strong>
+                Currently outdated
+              </strong>
+            </div>
+            <p>This version is currently outdated, refer to the <a href="as-code">/resume/as-code</a> version of my resume.</p>
+          </rb-notice-box>
+
           <div class="content row">
             <div class="main span12" role="main">
               <div class=boxes>
@@ -436,7 +459,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../legacy-stuff/renoirb-js-main.js"></script>
     <style>[foudelapouitte]:after {content:"moc.regnaluobrioner\0040olleh";}</style>
     <script>
         function querySelectorApply(selectorString, closure) {

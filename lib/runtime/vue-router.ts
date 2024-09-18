@@ -50,7 +50,7 @@ export const appHeaderNav: IAppHeaderNavItems[] = [
   },
   {
     label: 'Resume',
-    to: '/resume',
+    to: '/resume/as-code',
   },
   {
     label: 'About',
