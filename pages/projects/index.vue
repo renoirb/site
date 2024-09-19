@@ -1,29 +1,35 @@
 <template>
   <div class="pages__projects--index">
     <div class="document document--item z-30">
-      <div class="title page-title font-serif text-2xl italic">
-        <h1>{{ pageTitle }}</h1>
+      <div class="title page-title font-serif italic" :lang="pageLocale">
+        <h1 class="text-2xl">{{ pageTitle }}</h1>
+        {{ pageBlurb }}
       </div>
       <div class="body mt-8">
         <ul>
           <li
             v-for="content in contents"
             :key="content.slug"
-            class="mt-0 mb-5 font-serif text-lg italic"
+            :lang="content.locale"
+            class="mt-0 mb-5"
           >
             <!-- eslint-disable vue/no-v-html -->
-            <NuxtLink
-              :to="content.path"
-              class="mb-2 no-underline"
-              :lang="content.locale ? content.locale : 'en-CA'"
-              v-html="abbreviatize(content.title)"
-            />
+            <h2 class="mb-2 font-serif text-xl italic">
+              <nuxt-link
+                class="no-underline"
+                :to="content.path"
+                :lang="content.locale ? content.locale : 'en-CA'"
+                v-html="abbreviatize(content.title)"
+              />
+            </h2>
             <app-article-tags
               v-if="Array.isArray(content.tags) && content.tags.length > 0"
               :link="false"
               :content="content"
               class="mt-2 mb-4"
-            />
+            ></app-article-tags>
+            <p class="text-sm"><nuxt-content :document="content" /></p>
+            <hr />
           </li>
         </ul>
       </div>
@@ -36,6 +42,8 @@
   import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
     contents: INuxtContentResult
+    pageBlurb: string
+    pageLocale: string
     pageTitle: string
     q: string
   }
@@ -53,11 +61,15 @@
         query = query.search(q)
         // OR query = query.search('title', q)
       }
-      const contents = await query.where({ index: { $ne: true } }).fetch()
-      const pageTitle = `Personal projects I’ve worked on`
-
+      // const contents = await query.where({ index: { $ne: true } }).fetch()
+      const contents = await query.fetch()
+      const pageLocale = 'fr-CA'
+      const pageTitle = `Projets`
+      const pageBlurb = `Quelques projets personnels que je publie, classé par catégories.`
       return {
         contents,
+        pageBlurb,
+        pageLocale,
         pageTitle,
         q,
       }

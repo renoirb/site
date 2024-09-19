@@ -22,7 +22,7 @@
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content, error }) {
-      const pageKey = 'editorial-guideline'
+      const pageKey = 'page-editorial-guideline'
       const locale = 'fr-CA'
       const ds = $content('pages')
       const contents = (await ds

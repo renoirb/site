@@ -6,6 +6,7 @@ updated: 2023-02-22
 canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/'
 status: publish
 revising: true
+pageKey: les-arnaques-sur-internet-index
 categories:
   - vulgarization
 tags:

@@ -1,7 +1,6 @@
 <template>
-  <div class="pages__projets--index" lang="fr-CA">
+  <div class="pages__projets--index" :lang="pageLocale">
     <app-very-old-article
-      locale="fr-CA"
       date="2013-02-21T22:21:10-04:00"
       class="mb-8"
       alert-type="warn"
@@ -18,7 +17,7 @@
       <p>
         Une fois ce site complètement migré de WordPress, j'ajouterai plus de
         projets et les organiserai dans la section
-        <NuxtLink to="/projects">/projects</NuxtLink>.
+        <nuxt-link to="/projects">/projects</nuxt-link>.
       </p>
     </app-very-old-article>
     <div class="document document--item z-30">
@@ -32,9 +31,9 @@
           class="pb-8 mb-8 border-b border-black border-dashed"
         >
           <h3 class="mb-2 font-serif text-lg italic">
-            <NuxtLink v-if="content.to" :to="content.to">
+            <nuxt-link v-if="content.to" :to="content.to">
               {{ content.title }}
-            </NuxtLink>
+            </nuxt-link>
             <span v-else>{{ content.title }}</span>
           </h3>
           <nuxt-content :document="content" />
@@ -49,19 +48,21 @@
   import { INuxtContentResult } from '~/lib'
   export interface Data {
     content: INuxtContentResult
+    pageLocale: string
   }
   export interface Props {}
   export default defineComponent<Props, Data>({
     async asyncData({ $content }) {
       const pageKey = 'page-projets-initiale-pour-faire-une-migration'
-      const locale = 'fr-CA'
-      const query = $content('projects')
-      const contents = (await query
-        .where({ pageKey: { $contains: pageKey }, locale: { $eq: locale } })
+      const pageLocale = 'fr-CA'
+
+      const query = $content('projects', { deep: true })
+        .where({ pageKey: { $contains: pageKey }, locale: { $eq: pageLocale } })
         .sortBy('created', 'desc')
-        .fetch()) as INuxtContentResult[]
+      const contents = (await query.fetch()) as INuxtContentResult[]
 
       return {
+        pageLocale,
         contents,
       }
     },
