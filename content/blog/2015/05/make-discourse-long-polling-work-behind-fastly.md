@@ -6,7 +6,7 @@ updated: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/
 status: publish
-revising: false
+revising: true
 categories:
   - projects
 tags:

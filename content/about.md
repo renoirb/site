@@ -1,11 +1,11 @@
 ---
-locale: fr-CA
 title: À propos
+locale: fr-CA
+created: 2009-07-09
+updated: 2023-02-18
 canonical: https://renoirboulanger.com/about/
 status: publish
 revising: true
-created: '2009-07-09'
-updated: '2023-02-18'
 tags: []
 categories: []
 excerpt: ''

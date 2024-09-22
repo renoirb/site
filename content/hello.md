@@ -1,5 +1,8 @@
 ---
 title: Hello, my name is Renoir Boulanger!
+locale: en-CA
+created: 2020-09-16
+updated: 2024-09-16
 ---
 
 Hello!

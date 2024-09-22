@@ -7,6 +7,9 @@ updated: 2010-02-19
 status: publish
 revising: true
 pageKey: page-projets-initiale-pour-faire-une-migration
+callToAction:
+  type: blog-post
+  href: /blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre
 preamble:
   date: 2024-09-16
   text: |
@@ -18,5 +21,3 @@ preamble:
 Un script servant a transférer de façon automatique une série de bases de
 données pour plusieurs sites. Étant donné que nous avions a faire plusieurs
 manipulations a répétition, comme il en va de ma nature; j’en ai fait un script.
-
-Voir <nuxt-link to="/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre">l’article de blogue</nuxt-link> qui donne tous les détails.

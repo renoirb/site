@@ -6,6 +6,9 @@ updated: 2013-02-19
 status: publish
 revising: true
 pageKey: page-projets-initiale-pour-faire-une-migration
+callToAction:
+  type: public-pull-request
+  href: https://github.com/ndreckshage/roughdraft.js/pull/9
 ---
 
 **<em lang="en">Sequence generator Javascript</em>, contribution au projet <em lang="en">RoughDraft.js</em>.**

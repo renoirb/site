@@ -51,10 +51,10 @@ encore beaucoup, il y a beaucoup de "poissons".
 
 Parmi les types que je vais couvrir, je vais parler de:
 
+- **[Faire du bruit pour avoir des vues de page de médias sociaux][3]**
 - [Sensibilisation sur les courriels non sollicités][0]
 - [Quelques indices pour savoir si il s'agit d'une chaîne de lettres][1]
 - [Êtes-vous victime d'espionnage via votre profil dans les médias sociaux][2]
-- **[Faire du bruit pour avoir des vues de page de médias sociaux][3]**
 - [Les navigateurs web, vous avez le choix!][4]
 - [Une petite lecture au sujet des attrapes sur le web][5]
 - [Les publicités ciblés aux célibataires sur facebook, et les fausses

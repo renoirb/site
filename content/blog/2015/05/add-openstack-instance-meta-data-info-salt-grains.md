@@ -5,7 +5,7 @@ created: 2015-05-22
 updated: 2023-11-17
 canonical: https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/
 status: publish
-revising: false
+revising: true
 categories:
   - experiments
 tags:
@@ -193,7 +193,7 @@ salt.novalocal
 ```
 
 To know what the script calls, [you can add a line at `_call_aws(url)`
-method][dreamcompute-grain-webplatform-commit], like so
+method][dreamcompute-grain-webplatform-commit] ([lines 32-34](https://github.com/webplatform/salt-states/commit/821ca803#diff-6eea2056af3e939361a559b84665c1d97fc9e062f7b7f79910567fc688881056R32-R34)), like so;
 
 ```diff
 diff --git a/_grains/dreamcompute.py b/_grains/dreamcompute.py
