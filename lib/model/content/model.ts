@@ -47,6 +47,20 @@ export interface IBaseNuxtContentResult extends IResult {
   slug: string
 }
 
+const FRONT_MATTER_CALL_TO_ACTION_TYPE = [
+  'blog-post',
+  'page',
+  'public-pull-request',
+] as const
+
+export type IFrontMatterCallToActionType =
+  typeof FRONT_MATTER_CALL_TO_ACTION_TYPE[number]
+
+export interface IFrontMatterCallToAction {
+  href: string
+  type: IFrontMatterCallToActionType
+}
+
 export interface INuxtContentResult extends IBaseNuxtContentResult {
   canonical?: string
   preamble?: IFrontMatterPreambleInnerDocument
@@ -60,6 +74,7 @@ export interface INuxtContentResult extends IBaseNuxtContentResult {
   oldArticle?: string
   tags: string[]
   title: string
+  callToAction?: IFrontMatterCallToAction
 }
 
 export type INuxtContentPrevNext = Pick<
@@ -73,6 +88,18 @@ export interface INuxtContentIndexResult
     'created' | 'updated' | 'locale' | 'path' | 'slug' | 'title'
   > {
   prettyfiedTemporalDate?: IPrettyfiedTemporalDate
+}
+
+export const isFrontMatterCallToActionType = (
+  maybe: unknown,
+): maybe is IFrontMatterCallToActionType => {
+  let outcome = false
+  if (typeof maybe === 'string') {
+    outcome = FRONT_MATTER_CALL_TO_ACTION_TYPE.includes(
+      maybe as IFrontMatterCallToActionType,
+    )
+  }
+  return outcome
 }
 
 export const isNuxtContentResult = (

@@ -7,10 +7,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-  import { defineComponent } from '@nuxtjs/composition-api'
-  export interface Data {}
-  export interface Props {}
-  export default defineComponent<Props, Data>({})
-</script>

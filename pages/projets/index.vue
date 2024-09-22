@@ -21,8 +21,9 @@
       </p>
     </app-very-old-article>
     <div class="document document--item z-30">
-      <div class="title page-title mb-2 font-serif text-2xl italic">
-        <h1>Projets</h1>
+      <div class="title page-title font-serif italic">
+        <h1 class="text-2xl">{{ pageTitle }}</h1>
+        <p>{{ pageBlurb }}</p>
       </div>
       <div class="body mt-8">
         <div
@@ -30,12 +31,20 @@
           :key="content.slug"
           class="pb-8 mb-8 border-b border-black border-dashed"
         >
-          <h3 class="mb-2 font-serif text-lg italic">
-            <nuxt-link v-if="content.to" :to="content.to">
-              {{ content.title }}
-            </nuxt-link>
-            <span v-else>{{ content.title }}</span>
-          </h3>
+          <h2 class="mb-2 font-serif text-lg italic">
+            <nuxt-link
+              v-if="content.callToAction.href"
+              :to="content.callToAction.href"
+              :lang="content.locale ? content.locale : 'en-CA'"
+              class="no-underline"
+              v-html="abbreviatize(content.title)"
+            />
+            <span
+              v-else
+              :lang="content.locale ? content.locale : 'en-CA'"
+              v-html="abbreviatize(content.title)"
+            ></span>
+          </h2>
           <nuxt-content :document="content" />
         </div>
       </div>
@@ -44,17 +53,25 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from '@nuxtjs/composition-api'
-  import { INuxtContentResult } from '~/lib'
+  import Vue from 'vue'
+  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
   export interface Data {
-    content: INuxtContentResult
+    contents: INuxtContentResult
+    pageBlurb: string
     pageLocale: string
+    pageTitle: string
   }
+  export interface Methods {
+    abbreviatize: IAbbreviatize
+  }
+  export interface Computed {}
   export interface Props {}
-  export default defineComponent<Props, Data>({
+  export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content }) {
       const pageKey = 'page-projets-initiale-pour-faire-une-migration'
       const pageLocale = 'fr-CA'
+      const pageTitle = `Projets`
+      const pageBlurb = `Quelques projets personnels que je publie, classé par catégorie.`
 
       const query = $content('projects', { deep: true })
         .where({ pageKey: { $contains: pageKey }, locale: { $eq: pageLocale } })
@@ -62,9 +79,14 @@
       const contents = (await query.fetch()) as INuxtContentResult[]
 
       return {
-        pageLocale,
         contents,
+        pageBlurb,
+        pageLocale,
+        pageTitle,
       }
+    },
+    methods: {
+      abbreviatize,
     },
   })
 </script>

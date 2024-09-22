@@ -1,37 +1,35 @@
 <template>
-  <div class="pages__projects--index">
+  <div class="pages__projects--index" :lang="pageLocale">
     <div class="document document--item z-30">
-      <div class="title page-title font-serif italic" :lang="pageLocale">
+      <div class="title page-title font-serif italic">
         <h1 class="text-2xl">{{ pageTitle }}</h1>
-        {{ pageBlurb }}
+        <p>{{ pageBlurb }}</p>
       </div>
       <div class="body mt-8">
-        <ul>
-          <li
-            v-for="content in contents"
-            :key="content.slug"
-            :lang="content.locale"
-            class="mt-0 mb-5"
-          >
-            <!-- eslint-disable vue/no-v-html -->
-            <h2 class="mb-2 font-serif text-xl italic">
-              <nuxt-link
-                class="no-underline"
-                :to="content.path"
-                :lang="content.locale ? content.locale : 'en-CA'"
-                v-html="abbreviatize(content.title)"
-              />
-            </h2>
-            <app-article-tags
-              v-if="Array.isArray(content.tags) && content.tags.length > 0"
-              :link="false"
-              :content="content"
-              class="mt-2 mb-4"
-            ></app-article-tags>
-            <p class="text-sm"><nuxt-content :document="content" /></p>
-            <hr />
-          </li>
-        </ul>
+        <div
+          v-for="content in contents"
+          :key="content.slug"
+          :lang="content.locale"
+          class="pb-8 mb-8 border-b border-black border-dashed"
+        >
+          <!-- eslint-disable vue/no-v-html -->
+          <h2 class="mb-2 font-serif text-xl italic">
+            <nuxt-link
+              v-if="content.callToAction.href"
+              :to="content.callToAction.href"
+              :lang="content.locale ? content.locale : 'en-CA'"
+              class="no-underline"
+              v-html="abbreviatize(content.title)"
+            />
+            <span
+              v-else
+              :lang="content.locale ? content.locale : 'en-CA'"
+              v-html="abbreviatize(content.title)"
+            ></span>
+          </h2>
+          <p class="text-sm"><nuxt-content :document="content" /></p>
+          <hr />
+        </div>
       </div>
     </div>
   </div>
@@ -65,7 +63,8 @@
       const contents = await query.fetch()
       const pageLocale = 'fr-CA'
       const pageTitle = `Projets`
-      const pageBlurb = `Quelques projets personnels que je publie, classé par catégories.`
+      const pageBlurb = `Quelques projets personnels que je publie, classé par catégorie.`
+
       return {
         contents,
         pageBlurb,

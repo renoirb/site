@@ -10,6 +10,10 @@ export interface IFrontMatterInnerDocument {
    * and be used inside the slot contents.
    */
   text: string
+  /**
+   * Display a date for the note
+   */
+  date?: string
 }
 
 export interface IFrontMatterPreambleInnerDocument {
