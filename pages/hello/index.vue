@@ -22,7 +22,7 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    layout: 'blank',
+    layout: 'nothing-around-stuff-in-middle',
     async asyncData({ $content }) {
       const content = await $content('hello').fetch()
       return {

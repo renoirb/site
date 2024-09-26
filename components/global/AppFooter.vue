@@ -30,13 +30,15 @@
             <NuxtLink to="/ligne-editoriale"> Ligne éditoriale </NuxtLink>
           </dd>
           <dd>
-            <NuxtLink to="/projets"> Projets </NuxtLink>
+            <NuxtLink to="/projects"> Projets </NuxtLink>
           </dd>
           <dd>
-            <NuxtLink to="/glossary"> Glossary </NuxtLink>
+            <NuxtLink to="/glossary" lang="en"> Glossary </NuxtLink>
           </dd>
           <dd>
-            <NuxtLink to="/code-review"> Code-Review notes </NuxtLink>
+            <NuxtLink to="/code-review" lang="en">
+              Code-Review&nbsp;notes
+            </NuxtLink>
           </dd>
         </dl>
       </div>

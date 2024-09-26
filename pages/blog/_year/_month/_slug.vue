@@ -1,5 +1,5 @@
 <template>
-  <div class="pages__blog__year__month__slug--item">
+  <div :key="content.slug" class="pages__blog__year__month__slug--item">
     <app-very-old-article
       :preamble="content.preamble"
       :locale="content.locale || 'en-CA'"
@@ -78,6 +78,7 @@
     INuxtContentPrevNext,
     INuxtContentResult,
     IPrettyfiedTemporalDate,
+    createVueMetaInfo,
   } from '~/lib'
   export interface Data {
     canonical: null | string
@@ -182,54 +183,13 @@
       abbreviatize,
     },
     head() {
-      const {
-        description = '',
-        keywords = [],
-        locale = 'en-CA',
-        redirect = '',
-        title,
-      } = this.content
-
-      const meta: Record<string, string>[] = []
-
-      if (keywords.length > 0) {
-        meta.push({
-          hid: 'keywords',
-          name: 'keywords',
-          content: [...new Set([...keywords])].join(', '),
-        })
-      }
-
-      if (description !== '') {
-        meta.push({
-          hid: 'description',
-          name: 'description',
-          content: description,
-        })
-      }
-
+      let redirect = this.content?.redirect ?? ''
       if (redirect !== '') {
-        // <meta http-equiv="refresh" content="0; url=http://example.com/" />
-        // #TODO-Meta-Equiv-Redirect: Move this logic so that we can re-use elsewhere.
+        // #TODO-Meta-Equiv-Redirect
         // See related ../../../../components/global/GitHubPagesRedirect.vue
-        meta.push({
-          hid: 'refresh',
-          // @ts-ignore
-          'http-equiv': 'refresh',
-          content: `5; url=/blog/${this.year}/${this.month}/${redirect}`,
-          //       ^^^ Redirect quietely to different page.
-        })
+        redirect = `/blog/${this.year}/${this.month}/${redirect}`
       }
-
-      const htmlAttrs = {
-        lang: locale,
-      }
-
-      const out = {
-        htmlAttrs,
-        title,
-        meta,
-      }
+      const out = createVueMetaInfo({ ...this.content, redirect })
       return out
     },
   })
@@ -237,7 +197,7 @@
 
 <style scoped>
   .canonical-link {
-    @apply text-sm underline ml-5;
+    @apply ml-5 text-sm underline;
     color: var(--color-container-text-link);
   }
   .canonical-link::before {

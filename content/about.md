@@ -9,13 +9,27 @@ revising: true
 tags: []
 categories: []
 excerpt: ''
+coverImage:
+  src: ~/assets/content/blog/2013/02/renoir-boulanger-prensentant-web-in-2013-150x150.jpg
+  text: Sur scène durant ma présentation donnée au Web-In 2013 quelques mois avant le WAQ
 ---
 
-<h2>This is my about page</h2>
 
-<p><img class="pull-right alignnone size-medium wp-image-4933" alt="Sur scène durant ma présentation donnée au Web-In 2013 quelques mois avant le WAQ" src="/wp-content/uploads/2013/02/renoir-boulanger-prensentant-web-in-2013-e1364610846261-239x300.jpg" width="239" height="300" />  I had here old stuff, it's removed. I'll have to write something else.</p>
+<app-image figcaption=" " src="~/assets/content/blog/2013/02/renoir-boulanger-prensentant-web-in-2013-150x150.jpg">
 
-<p>Here is a photo of me while I was presenting at a conference.</p>
+Allo?
+
+</app-image>
+
+<rb-notice-box variant="warn" class="my-5">
+  <strong slot="header">J’ai tout enlevé pour le moment</strong>
+
+J’avais quelque chose ici, que j’avais écris depuis longtemps —plus de 15 ans.
+Je reviendrai modifier ceci une fois que j’aurai terminé de migrer ce site et mon CV.
+
+</rb-notice-box>
+
+
 
 <!--
 ## VERSION COURTE

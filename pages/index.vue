@@ -34,7 +34,7 @@
       </ul>
     </div>
     <NuxtLink class="sr-only" to="/kitchen-sink">Kitchen sink</NuxtLink>
-    <NuxtLink class="sr-only" to="/styleguide">styleguide</NuxtLink>
+    <!-- a class="sr-only" href="/styleguide">styleguide</a -->
   </div>
 </template>
 

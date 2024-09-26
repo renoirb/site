@@ -13,7 +13,8 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import type { INuxtContentResult } from '~/lib'
+  import { createVueMetaInfo } from '~/lib'
   export interface Data {
     content: INuxtContentResult
   }
@@ -24,7 +25,7 @@
     async asyncData({ $content, error }) {
       const pageKey = 'page-editorial-guideline'
       const locale = 'fr-CA'
-      const ds = $content('pages')
+      const ds = $content('')
       const contents = (await ds
         .where({ pageKey: { $contains: pageKey }, locale: { $eq: locale } })
         .fetch()) as INuxtContentResult[]
@@ -36,6 +37,10 @@
       return {
         content,
       }
+    },
+    head() {
+      const out = createVueMetaInfo(this.content)
+      return out
     },
   })
 </script>

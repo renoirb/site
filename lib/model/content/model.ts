@@ -62,19 +62,22 @@ export interface IFrontMatterCallToAction {
 }
 
 export interface INuxtContentResult extends IBaseNuxtContentResult {
+  callToAction?: IFrontMatterCallToAction
   canonical?: string
-  preamble?: IFrontMatterPreambleInnerDocument
-  coverImage?: IFrontMatterCoverImageInnerDocument
   categories: string[]
   cover?: string
   coverAlt?: string
   coverCaption?: string
+  coverImage?: IFrontMatterCoverImageInnerDocument
   date: string
+  description?: string
+  keywords?: string[]
   locale: string
   oldArticle?: string
+  preamble?: IFrontMatterPreambleInnerDocument
+  redirect?: string
   tags: string[]
   title: string
-  callToAction?: IFrontMatterCallToAction
 }
 
 export type INuxtContentPrevNext = Pick<

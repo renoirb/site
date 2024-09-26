@@ -1,10 +1,12 @@
 <template>
   <div class="pages__projects--index" :lang="pageLocale">
     <div class="document document--item z-30">
+      <!--
       <div class="title page-title font-serif italic">
         <h1 class="text-2xl">{{ pageTitle }}</h1>
         <p>{{ pageBlurb }}</p>
       </div>
+      -->
       <div class="body mt-8">
         <div
           v-for="content in contents"
@@ -14,9 +16,19 @@
         >
           <!-- eslint-disable vue/no-v-html -->
           <h2 class="mb-2 font-serif text-xl italic">
-            <nuxt-link
-              v-if="content.callToAction.href"
+            <NuxtLink
+              v-if="
+                content.callToAction.href &&
+                /^http/.test(content.callToAction.href) === false
+              "
               :to="content.callToAction.href"
+              :lang="content.locale ? content.locale : 'en-CA'"
+              class="no-underline"
+              v-html="abbreviatize(content.title)"
+            />
+            <a
+              v-else-if="/^http/.test(content.callToAction.href)"
+              :href="content.callToAction.href"
               :lang="content.locale ? content.locale : 'en-CA'"
               class="no-underline"
               v-html="abbreviatize(content.title)"

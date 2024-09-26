@@ -14,7 +14,6 @@
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
-    layout: 'blank',
     async asyncData({ $content }) {
       const content = await $content('about').fetch()
       return {

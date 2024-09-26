@@ -26,6 +26,11 @@ const main: NuxtConfig = {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'static',
+  vue: {
+    config: {
+      ignoredElements: [/^rb-/],
+    },
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -56,6 +61,27 @@ const main: NuxtConfig = {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      // <script src="https://myawesome-lib.js"></script>
+      // { src: 'https://awesome-lib.js' },
+      {
+        type: 'module',
+        vmid: 'load-esm-modules-separately-please',
+        body: true,
+        defer: true,
+        innerHTML: `
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+        `,
+      },
+    ],
+    __dangerouslyDisableSanitizers: [
+      /* YOLO. Plus, I don’t want WebPack to inline and mangle what’s here. */ 'script',
+    ],
   },
   env: {
     ...appIdentity,

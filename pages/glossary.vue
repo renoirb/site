@@ -1,7 +1,7 @@
 <template>
-  <section class="pages__glossary--parent">
+  <section>
     <div
-      class="pages-glossary--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"
+      class="justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"
     >
       <app-bread-crumb
         v-if="!!$route && $route.params && $route.matched"
@@ -18,19 +18,20 @@
       "
       class="title page-title mb-4 font-serif text-2xl italic"
     >
-      <h1>{{ pageTitle }}</h1>
+      <h1>{{ title }}</h1>
     </div>
-    <div class="pages-glossary--parent--bottom">
-      <nuxt-child :q="q" />
+    <div>
+      <nuxt-child />
     </div>
   </section>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
+  import { createVueMetaInfo } from '~/lib'
   export interface Data {
-    q: string
-    pageTitle: string
+    title: string
+    contentFirstDirName: string
   }
   export interface Methods {}
   export interface Computed {}
@@ -44,25 +45,20 @@
       if (typeof name !== 'string') {
         return error({ statusCode: 404, message: `Not Found` })
       }
-      const dataModelName = name.replace('-slug', '')
-      const pageTitle =
-        dataModelName.charAt(0).toUpperCase() + dataModelName.slice(1)
+      const contentFirstDirName = name.replace('-slug', '')
+      const title =
+        contentFirstDirName.charAt(0).toUpperCase() +
+        contentFirstDirName.slice(1)
 
-      return {
-        pageTitle,
-      }
-    },
-    data() {
-      return {
-        q: '',
-        pageTitle: '',
-      }
-    },
-    head() {
-      const title = this.pageTitle
       const out = {
         title,
+        contentFirstDirName,
       }
+      return out
+    },
+    head() {
+      const title = this.title
+      const out = createVueMetaInfo({ title })
       return out
     },
   })

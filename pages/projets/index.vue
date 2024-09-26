@@ -17,7 +17,7 @@
       <p>
         Une fois ce site complètement migré de WordPress, j'ajouterai plus de
         projets et les organiserai dans la section
-        <nuxt-link to="/projects">/projects</nuxt-link>.
+        <NuxtLink to="/projects">/projects</NuxtLink>.
       </p>
     </app-very-old-article>
     <div class="document document--item z-30">
@@ -32,7 +32,7 @@
           class="pb-8 mb-8 border-b border-black border-dashed"
         >
           <h2 class="mb-2 font-serif text-lg italic">
-            <nuxt-link
+            <NuxtLink
               v-if="content.callToAction.href"
               :to="content.callToAction.href"
               :lang="content.locale ? content.locale : 'en-CA'"

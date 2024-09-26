@@ -5,9 +5,10 @@
         <h1>{{ pageTitle }}</h1>
       </div>
       <div class="body">
-        <app-alert-box :message="noteAboutSource" class="my-5">
+        <rb-notice-box variant="info" class="my-5">
+          {{ noteAboutSource }}
           <a :href="source" target="_blank">Document source</a>
-        </app-alert-box>
+        </rb-notice-box>
         <div class="nuxt-content">
           <h2>Other versions</h2>
           <ul class="list-none list-inside">

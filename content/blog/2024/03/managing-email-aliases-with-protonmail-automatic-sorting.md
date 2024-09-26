@@ -13,6 +13,12 @@ categories:
 tags:
   - on-front-page
   - archiving
+keywords:
+  - ProtonPass
+  - SimpleLogin
+  - inbox
+  - Sieve mail filtering language rule
+description: Protect inbox against spam and phishing and sort automatically
 preamble:
   disable: true
   text:
@@ -53,8 +59,7 @@ of these aliases, I've developed a Sieve script that automatically sorts
 incoming emails into appropriate folders.
 
 
-<code-group>
-  <code-block label="Sieve" active>
+<code-block label="Sieve">
 
 ```sieve
 require ["include", "environment", "variables", "relational", "comparator-i;ascii-numeric", "spamtest"];
@@ -88,8 +93,7 @@ if address :matches :domain ["to", "cc", "bcc"] "alias.example.org" {
 }
 ```
 
-  </code-block>
-</code-group>
+</code-block>
 
 This Sieve script effectively sorts incoming emails based on their alias
 pattern. Emails with aliases like `amazon.aws111@alias.example.org` or

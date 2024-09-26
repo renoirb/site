@@ -4,7 +4,7 @@
       <div class="body">
         <ul>
           <li v-for="item in contents" :key="item.slug">
-            <NuxtLink :to="`/${urlParam}/${item.slug}`">
+            <NuxtLink :to="`/${contentFirstDirName}/${item.slug}`">
               <AppContentDate :content="item" />
               {{ item.title }}
             </NuxtLink>
@@ -21,6 +21,7 @@
   export interface Data {
     contents: INuxtContentIndexResult[]
     title: string
+    contentFirstDirName: string
   }
   export interface Methods {}
   export interface Computed {}
@@ -31,12 +32,14 @@
       if (typeof name !== 'string') {
         return error({ statusCode: 404, message: `Not Found` })
       }
-      const dataModelName = name.replace('-slug', '')
+
+      const contentFirstDirName = name.replace('-slug', '')
       const title =
-        dataModelName.charAt(0).toUpperCase() + dataModelName.slice(1)
+        contentFirstDirName.charAt(0).toUpperCase() +
+        contentFirstDirName.slice(1)
       let contents: INuxtContentIndexResult[] = []
       try {
-        contents = await $content(dataModelName)
+        contents = await $content(contentFirstDirName)
           .sortBy('title', 'desc')
           .only(['created', 'updated', 'locale', 'path', 'slug', 'title'])
           .fetch()
@@ -47,7 +50,7 @@
       return {
         contents,
         title,
-        urlParam: dataModelName,
+        contentFirstDirName,
       }
     },
   })
