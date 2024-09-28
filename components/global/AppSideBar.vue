@@ -39,7 +39,8 @@
         </button>
         <NuxtLink
           to="/"
-          class="identity__text"
+          class="identity__text font-semibold"
+          data-wip="components/global/AppSideBar.vue"
           :class="{ 'is-opened': isOpen }"
         >
           {{ appTitle }}
@@ -193,7 +194,7 @@
     color: var(--color-sandwich-text);
   }
   .identity__text {
-    @apply text-3xl font-light;
+    @apply text-2xl font-semibold;
 
     color: var(--color-sandwich-text);
     opacity: 1;

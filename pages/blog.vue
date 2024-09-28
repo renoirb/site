@@ -1,5 +1,5 @@
 <template>
-  <section class="pages__blog--parent">
+  <section class="pages__blog--parent" data-wip="pages/blog.vue">
     <div
       class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"
     >
@@ -7,7 +7,7 @@
         v-if="!!$route && $route.params && $route.matched"
         :route="$route"
       />
-      <form
+      <!-- form
         class="justify-self-end sm:w-full position-relative flex items-center justify-center"
         @submit.prevent="submit"
       >
@@ -21,7 +21,7 @@
           placeholder="e.g. linux"
           class="focus:z-50 focus:shadow-outline w-full px-4 py-2 leading-normal border border-gray-300 rounded"
         />
-      </form>
+      </form -->
     </div>
     <div
       v-if="

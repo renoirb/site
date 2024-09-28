@@ -13,7 +13,10 @@
       />
     </app-very-old-article>
     <div class="document document--item z-30">
-      <div class="title page-title mb-4 font-serif text-2xl italic">
+      <div
+        class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic"
+        data-wip="pages/blog/_year/_month/_slug.vue"
+      >
         <!-- eslint-disable vue/no-v-html -->
         <h1 v-html="abbreviatize(content.title)" />
       </div>

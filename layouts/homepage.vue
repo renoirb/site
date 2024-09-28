@@ -16,10 +16,8 @@
     ></inline-svg>
     <app-header class="top" />
     <main class="zone__sandwich__meat middle container mx-auto">
-      <div class="grid">
-        <div class="m-10">
-          <nuxt />
-        </div>
+      <div class="grid grid-cols-1 m-10" data-wip="layouts/homepage.vue">
+        <nuxt />
       </div>
     </main>
     <app-footer v-bind="appIdentity" class="bottom" />

@@ -19,10 +19,8 @@
       <div class="absolute inset-0 bg-black opacity-75"></div>
     </div>
     <main class="zone__sandwich__meat middle container z-40 mx-auto">
-      <div class="grid">
-        <div class="m-10 mt-5">
-          <nuxt />
-        </div>
+      <div class="md:m-10 grid grid-cols-1 m-5" data-wip="layout/default.vue">
+        <nuxt />
       </div>
     </main>
     <app-footer v-bind="appIdentity" class="bottom" />
