@@ -10,6 +10,16 @@
         <dd class="underline">
           <a :href="`mailto:${email}`">{{ email }}</a>
         </dd>
+        <dd class="underline">
+          <a rel="me" href="https://mastodon.social/@renoirb">
+            renoirb@mastodon.social
+          </a>
+        </dd>
+        <dd class="underline">
+          <a rel="me" href="https://w3c.social/@renoirb">
+            renoirb@w3c.social
+          </a>
+        </dd>
         <dd class="font-mono">v{{ version }}</dd>
         <app-color-mode />
       </dl>
