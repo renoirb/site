@@ -13,8 +13,8 @@
   --color-tertiary: #cb7723;
   --bg-secondary: #e5e5e5;
   --border-color: #aaa;
-  --color-taxonomy-bg: #bdbdbd;
-  --color-taxonomy-bg-hover: #959595;
+  --color-taxonomy-bg: hsl(250 8% 27.1%);
+  --color-taxonomy-bg-hover: var(--color-secondary);
   --color-taxonomy-text-hover: #fff;
   --color-taxonomy-text: #fff;
   --color-container-text-link: var(--color-primary);
@@ -35,8 +35,8 @@
   --color-secondary: #fdf9f3;
   --bg-secondary: #214761;
   --border-color: #061a17;
-  --color-taxonomy-bg: #bdbdbd;
-  --color-taxonomy-bg-hover: #959595;
+  --color-taxonomy-bg: hsl(250 8% 27.1%);
+  --color-taxonomy-bg-hover: var(--color-secondary);
   --color-taxonomy-text-hover: #fff;
   --color-taxonomy-text: #fff;
   --color-container-text-link: var(--color-sandwich-text);

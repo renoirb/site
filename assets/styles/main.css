@@ -50,6 +50,9 @@
         color: var(--color-taxonomy-text-hover);
         background-color: var(--color-taxonomy-bg-hover);
       }
+      & a:hover {
+        color: var(--color-taxonomy-text-hover);
+      }
       &.taxonomy-items-active {
         @apply underline;
       }
