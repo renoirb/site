@@ -204,7 +204,7 @@
 
 <style scoped>
   .lost-image {
-    @apply mx-auto w-1/6 my-5;
+    @apply w-1/6 mx-auto my-5;
   }
   figcaption {
     /* the speech bubble */

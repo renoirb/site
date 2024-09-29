@@ -51,6 +51,7 @@ export const breakIntoYears = (
     )
     content.prettyfiedTemporalDate = prettyfiedTemporalDate
     // Mutating bucket after the fact. Something’s unfinished here, and I forgot what.
+    // eslint-disable-next-line
     bucket?.[1].push(content)
   }
 

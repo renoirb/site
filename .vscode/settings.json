@@ -25,7 +25,7 @@
     "editor.formatOnSave": false
   },
   "[css]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[markdown]": {
     "editor.formatOnSave": true
@@ -43,6 +43,6 @@
     ".nuxt/**": true,
     "dist/**": true,
     "node_modules": true,
-    "static/legacy-stuff/**": true,
+    "static/legacy-stuff/**": true
   }
 }

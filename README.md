@@ -9,7 +9,8 @@ Rewriting [renoirb/site][github-renoirb-site]
 ### Docs useful during maintenance
 
 - [Prism supported languages](https://prismjs.com/#supported-languages)
-- **Nuxt** docs for this present version (2024: it's 4 years old now!) (nuxt-content 1.8.1, nuxt 2.14)
+- **Nuxt** docs for this present version (2024: it's 4 years old now!)
+  (nuxt-content 1.8.1, nuxt 2.14)
   - [**Nuxt v2 Docs**](https://v2.nuxt.com/docs/)
   - [**Nuxt**: fetch](https://github.com/nuxt/docs/blob/master/en/api/pages-fetch.md)
   - [**Nuxt/content** Querying](https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/fetching.md#wherequery)

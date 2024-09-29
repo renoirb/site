@@ -8,12 +8,13 @@ const main = {
       options: {
         parser: 'vue',
         vueIndentScriptAndStyle: true,
+        trailingComma: 'all',
       },
     },
     {
       files: '*.md',
       options: {
-        proseWrap: 'always',
+        proseWrap: 'preserve',
       },
     },
     {
