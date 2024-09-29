@@ -26,13 +26,18 @@
               class="no-underline"
               v-html="abbreviatize(content.title)"
             />
-            <a
+            <span
               v-else-if="/^http/.test(content.callToAction.href)"
-              :href="content.callToAction.href"
               :lang="content.locale ? content.locale : 'en-CA'"
-              class="no-underline"
-              v-html="abbreviatize(content.title)"
-            />
+            >
+              {{ abbreviatize(content.title) }}
+              (&nbsp;<a
+                :href="content.callToAction.href"
+                class="no-underline"
+                target="_blank"
+                v-html="'🔗'"
+              />&nbsp;)
+            </span>
             <span
               v-else
               :lang="content.locale ? content.locale : 'en-CA'"
