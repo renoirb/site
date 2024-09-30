@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "use-cross-env use-run-all clean build:*",
-    "build:generate": "nuxt-ts generate",
+    "build:generate": "IS_CI=aye nuxt-ts generate",
     "clean": "use-cross-env use-rimraf .nuxt dist",
     "commit": "git-cz",
     "deploy": "use-cross-env IS_CI=aye use-run-all clean build:* deploy:push",

@@ -29,6 +29,7 @@ patch:
 
 .PHONY: deploy
 deploy:
-	yarn build
+	yarn clean
+	node_modules/.bin/nuxt-ts generate
 	cp static/resume/index.html dist/resume/
 	node_modules/.bin/push-dir --dir=dist --branch=cf-pages --local-branch-name=2020 --cleanup
