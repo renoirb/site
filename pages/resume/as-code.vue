@@ -137,8 +137,7 @@
         source = 'https://github.com/renoirb/site/blob/2020/content/resume/jsonresume-renoirb.yaml',
       } = meta
 
-      const { name = 'John Doe' } = basics as ResumeInterface['basics']
-      const pageTitle = `Curriculum vitæ of ${name}`
+      const pageTitle = `My curriculum vitæ`
 
       const copy = Object.assign(
         {},
