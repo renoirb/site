@@ -18,6 +18,7 @@
           <h2 class="mb-2 font-serif text-xl italic">
             <NuxtLink
               v-if="
+                content.callToAction &&
                 content.callToAction.href &&
                 /^http/.test(content.callToAction.href) === false
               "
@@ -27,7 +28,9 @@
               v-html="abbreviatize(content.title)"
             />
             <span
-              v-else-if="/^http/.test(content.callToAction.href)"
+              v-else-if="
+                content.callToAction && /^http/.test(content.callToAction.href)
+              "
               :lang="content.locale ? content.locale : 'en-CA'"
             >
               {{ abbreviatize(content.title) }}

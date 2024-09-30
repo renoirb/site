@@ -26,3 +26,9 @@ unpatch:
 patch:
 	cp node_modules/@nuxt/content/lib/database.js node_modules/@nuxt/content/lib/database.js.orig
 	patch node_modules/@nuxt/content/lib/database.js nuxt-content-database.patch
+
+.PHONY: deploy
+deploy:
+	yarn build
+	cp static/resume/index.html dist/resume/
+	node_modules/.bin/push-dir --dir=dist --branch=cf-pages --local-branch-name=2020 --cleanup

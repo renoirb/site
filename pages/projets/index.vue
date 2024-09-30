@@ -34,7 +34,7 @@
           <h2 class="mb-2 font-serif text-lg italic">
             <!-- eslint-disable vue/no-v-html -->
             <NuxtLink
-              v-if="content.callToAction.href"
+              v-if="content.callToAction && content.callToAction.href"
               :to="content.callToAction.href"
               :lang="content.locale ? content.locale : 'en-CA'"
               class="no-underline"
