@@ -4,6 +4,6 @@ node_modules
 dist
 dist/_nuxt
 static/files/resume/jsonresume-renoirb.json
-static/legacy-stuff
+static/assets
 static
 content
