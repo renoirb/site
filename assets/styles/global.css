@@ -26,3 +26,9 @@ a:not([href^="https://renoirboulanger.com/"])[target="_blank"]:after
 {
   content: ' ⧉';
 }
+
+[data-fou-de-la-pouitte]:after {
+  content:"moc.regnaluobrioner\0040olleh";
+  unicode-bidi:bidi-override;
+  direction: rtl;
+}

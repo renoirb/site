@@ -9,8 +9,18 @@
           <NuxtLink to="/contact" class="underline">Contact</NuxtLink>
         </dt>
         <dd>{{ description }}</dd>
-        <dd class="underline">
-          <a :href="`mailto:${email}`">{{ email }}</a>
+        <dd aria-errormessage="why-fou-de-la-pouitte">
+          Send your remarks using
+          <em
+            data-fou-de-la-pouitte
+            title="Please type this manually"
+            class="underline"
+          >
+            <span id="why-fou-de-la-pouitte" class="sr-only">
+              An email address written using CSS, apologies for obfuscating
+              this.
+            </span>
+          </em>
         </dd>
         <dd class="underline sr-only">
           <a rel="me" href="https://mastodon.social/@renoirb">
