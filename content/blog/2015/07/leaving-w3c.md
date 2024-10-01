@@ -10,6 +10,7 @@ categories:
   - tranche-de-vie
 tags:
   - career
+  - webplatform docs
 coverImage:
   src: ~/assets/content/blog/2015/07/20150727-Gift-W3C.jpg
   alt: Renoir’s picture
@@ -18,7 +19,7 @@ coverImage:
     was an autographied book signed by [Sir Tim Berners-Lee][whois-timbl]
     and a small trophy. Today (2020), my name appears in
     [the W3C Team Alumni][w3t-alumni]
-    [w3t-alumni]: https://www.w3.org/People/Alumni#Boulanger
+    [w3t-alumni]: https://www.w3.org/People/Alumni#renoir-boulanger
     [whois-timbl]: https://www.w3.org/People/Berners-Lee/FAQ.html
 preamble:
   disable: true
@@ -56,8 +57,17 @@ I hope our paths will cross again.
 
 </app-image>
 
-[0]:
-  https://renoirboulanger.com/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project/
+---
+
+## In retrospective
+
+**Note**: This was written on 2024-09-30
+
+After the project stopped receiving funding in 2015, I voluntarily sustained (2015-2017) the infrastructure until the W3C Systems Team took over to permanently archive the site’s contents on W3C’s infrastructure. Fortunately for me the server infrastructure was "*self-healing*", each service would regularly check if its service was OK and knew how to start it back again, so it was pretty hands-off.
+
+The last billed hours I made for the project was to host a static HTML version [by having converted every pages, commits, deletes of every pages from MediaWiki into files as if they were commited into GitHub](/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files/) ([GitHub *webplatform/docs* repository](https://github.com/webplatform/docs))
+
+[0]: /blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project
 [1]:
   https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
 [2]: https://www.w3.org/People/
@@ -66,4 +76,4 @@ I hope our paths will cross again.
   'Facts about the W3C and its Organizational structure'
 [4]: https://www.webplatform.org/
 [5]: http://schepers.cc/
-[6]: https://www.w3.org/People/gallery/
+[6]: https://www.w3.org/People/gallery/#year2013
