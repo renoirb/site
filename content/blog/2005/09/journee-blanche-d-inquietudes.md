@@ -18,9 +18,7 @@ excerpt: >-
 
 <p>Chaque métier a ses propres inconvénients. J'adore le mien, mais lorsque je dois passer la nuit et perdre une journée entière a chercher UN SEUL bug... c’est enrageant!</p>
 
-<!--more-->
-
-<p><strong>Mon serveur web</strong></p>
+## Mon serveur web
 
 <p>Vous ne savez pas mais l'entreprise que je possède (<a href="https://web.archive.org/web/20050210131137/http://inexis.net/">INEXIS Solution Web Inc</a>) a son propre serveur web. Voici ses spécifités! :</p>
 

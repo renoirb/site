@@ -10,6 +10,7 @@ categories:
   - tranche-de-vie
 tags:
   - geranium
+  - entrepreneurial-life
 keywords:
   - carte crédit
   - transactions bancaires

@@ -1,19 +1,24 @@
 ---
-locale: fr-CA
 title: Redondance
+locale: fr-CA
+created: 2005-09-21
+updated: 2023-11-15
 canonical: https://renoirboulanger.com/blog/2005/09/redondance/
 status: publish
 revising: true
-created: '2005-09-21'
-updated: '2023-11-15'
 categories:
-  - programmation
+  - tranche-de-vie
 tags:
-  - techniques
+  - entrepreneurial-life
 excerpt: ''
 ---
 
-<p>Travailler avec DNS Bind8 n'est pas toujours évident pour les novices. — Renoir de 2023 qui écrit; je dois dire qu’a l'époque ce n'était pas évident car il n’y avait pas autant de documentation et tutoriels. Mais aussi, pour être honnête en 2005 j’étais très débutant!</p>
+<p>Travailler avec DNS Bind8 n'est pas toujours évident pour les novices.
+
+<rb-notice-box variant="info" class="my-5">
+<strong slot="header">Renoir de 2023:</strong>
+Je dois dire qu’a l'époque ce n'était pas évident car il n’y avait pas autant de documentation et tutoriels. Mais aussi, pour être honnête en 2005 j’étais très débutant!
+</rb-notice-box>
 
 <!--more-->
 

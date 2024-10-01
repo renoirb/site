@@ -12,12 +12,12 @@ categories: []
 excerpt: ''
 ---
 
-<div style="background:#ececec;margin:5px 0px;padding:18px 8px 8px 50px;border:1px solid #333">
-<h3 style="color:#777;margin-bottom:10px;">USAGE DE CE BILLET</h3>
+<rb-notice-box variant="info" class="my-5">
+<strong slot="header">USAGE DE CE BILLET</strong>
 J'ai décidé d'utiliser ce billet comme étant un sommaire de mes expériences professionnelles pour aider les recruteurs a cerner mes champs d'expertises.
+Ce n'est évidemment pas mon «Curriculum» (a proprement dit) mais il donne une bonne idée.
+</rb-notice-box>
 
-Ce n'est évidemment pas mon «Curriculum» (a proprement dit) mais il donne une bonne idée.</div>
-<h3>LE BILLET...</h3>
 J'en suis rendu là. Mais qu'est-ce que je veut bien faire comme travail, vers où aller.
 
 Dans les dernières années j'ai fait comme le dit mon résumé plus d'une branche de métier comme le [Développement PHP](/blog/category/programmation/) et l'administration de services réseau avec [Linux](/blog/tag/linux/).
@@ -30,8 +30,9 @@ La section [à propos](/about/) de mon site en parle un peu de ce que j'ai fait 
 
 Étant donné que je me suis fait proposer par un recruteur d'écrire la somme de mes forces et de mes objectifs professionnels j'ai pensé les partager ici.
 
-<!--more-->
-<h3>RÉSUMÉ DE MON EXPÉRIENCE</h3>
+
+## Résumé de mon expérience
+
 Quelques faits saillants qui se retrouvent dans mon curriculum
 <ul>
 	<li>Environ <strong>150 sites web</strong> produits entre 2002-2008;</li>
@@ -40,7 +41,10 @@ Quelques faits saillants qui se retrouvent dans mon curriculum
 	<li>Instauré et <strong>entretenu</strong> un réseau de<strong> trente machines</strong> <strong>Linux</strong> (machines physiques et virtuelles confondues) pour une Entreprise privée entre 2006-2008;</li>
    <li>Je géré plusieurs Infrastructure d'hébergement web Public depuis 2003. J'en ai même une petite Infra personnelle.</li>
 </ul>
-<h3>MES FORCES</h3>
+
+
+## Mes forces
+
 Ce qui me caractérise et qui sont mes <em>zones de confort</em>.
 <ul>
 	<li>Ressource d'information pour ce qui concerne la mise en place de standards de développement et instauration d'outils pour l'aide au développement;</li>
@@ -55,7 +59,10 @@ Ce qui me caractérise et qui sont mes <em>zones de confort</em>.
 	<li>Capacité de coder du HTML/CSS valide, «à bras», sans consulter le manuel;</li>
 	<li>Capacité de coder du Javascript «à bras» et avec des frameworks (<strong>jQuery</strong>, <strong>MooTools</strong>);</li>
 </ul>
-<h3>MON EXPÉRIENCE</h3>
+
+
+## Mon expérience
+
 <ul>
 	<li>Connaissance et implémentation d'outils d'<strong>Intégration Continue</strong> (automatisation déploiement du code (Ant, <a href="http://www.beebox.ca/">Beebox</a>))</li>
 	<li>Connaissance des concepts des Patrons de conception (<strong>Design Patterns</strong>) (débutant);</li>
@@ -77,7 +84,10 @@ Ce qui me caractérise et qui sont mes <em>zones de confort</em>.
 	<li>Capacité de monter des processus d'automatisation du cycle de développement PHP (Ant, Bash scripts);Talent naturel pour apporter suggestions sur Interface utilisateur (bases en Utilisabilité Logicielle);</li>
 	<li>Talent naturel en Design graphique (base);</li>
 </ul>
-<h3>MES OBJECTIFS</h3>
+
+
+## Mes objectifs
+
 <ul>
 	<li><strong>Développer des applications </strong><strong>Web </strong>avec couche de<strong> redondance</strong> et <strong>tolérance </strong>aux<strong> fautes logicielles</strong>/matérielles;</li>
 	<li>Intégrer une équipe pour apporter mes compétences (Front-end, Linux) et apprendre de mes paires pour m'en aller vers le développement d'applications;</li>
