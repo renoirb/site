@@ -27,8 +27,15 @@ patch:
 	cp node_modules/@nuxt/content/lib/database.js node_modules/@nuxt/content/lib/database.js.orig
 	patch node_modules/@nuxt/content/lib/database.js nuxt-content-database.patch
 
-.PHONY: deploy
-deploy:
+.PHONY: deploy-gh
+deploy-gh: patch
+	yarn clean
+	IS_CI=aye node_modules/.bin/nuxt-ts generate
+	cp static/resume/index.html dist/resume/
+	node_modules/.bin/push-dir --dir=dist --branch=gh-pages --local-branch-name=2020 --cleanup
+
+.PHONY: deploy-prod
+deploy-prod: patch
 	yarn clean
 	node_modules/.bin/nuxt-ts generate
 	cp static/resume/index.html dist/resume/

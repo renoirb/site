@@ -13,10 +13,13 @@ Rewriting [renoirb/site][github-renoirb-site]
   (nuxt-content 1.8.1, nuxt 2.14)
   - [**Nuxt v2 Docs**](https://v2.nuxt.com/docs/)
   - [**Nuxt**: fetch](https://github.com/nuxt/docs/blob/master/en/api/pages-fetch.md)
-  - [**Nuxt/content** Querying](https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/fetching.md#wherequery)
+- **Nuxt/content** `v1.8.1`
+  - [Advanced](https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/advanced.md)
+  - [Querying](https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/fetching.md#wherequery)
   - [**Nuxt/content dependency Loki** Querying](https://github.com/techfort/LokiJS/wiki/Query-Examples)
 - **Vue** v2:
   - https://v2.vuejs.org/v2/api/#ignoredElements
+  - https://github.com/nuxt/vue-meta/tree/master/docs/api
 
 ### Official docs
 
