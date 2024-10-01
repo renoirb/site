@@ -49,7 +49,7 @@ On July 1st 2015, _The WebPlatform project_ has been discontinued, by having
 I was hired by the W3C solely to maintain the WebPlatform project. Without
 funding, and no budget at W3C/MIT to transfer me, my contract was going to end.
 
-<!-- #XXX from app-alert-box to notice-box-element -->
+<!-- #XXX from app-alert-box to rb-notice-box -->
 <app-alert-box style="display:flex">
 👀 This was written in December 2020 and taken from notes I’ve been sharing around via email.
 </app-alert-box>
@@ -451,7 +451,7 @@ SNIPPET: Ensure ALL assets uploads are displayed properly
 
 ## Screenshots
 
-<div style="overflow:hidden;clear:both">
+<div style="overflow:hidden;clear:both" class="thumbnails gallery">
 <app-image figcaption=" " src="~/assets/content/blog/2015/07/mediawiki-history-to-git-conversion.png">
 
 [WebPlatform/mediawiki-conversion][mediawiki-conversion] is made to run in 3

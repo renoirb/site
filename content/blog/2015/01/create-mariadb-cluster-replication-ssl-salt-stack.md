@@ -29,8 +29,6 @@ preamble:
     Part of this article was written while maintaining WebPlatform’s Infrastructure maintenance. Mostly [in *WPD/Infrastructure/procedures/* **Replacing a VM**](https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Replacing_a_VM/), and [*WPD/Infrastructure/procedures/* **Managing  MariaDB replication**](https://webplatform.github.io/docs/WPD/Infrastructure/procedures/Managing_MySQL_replication/)
 ---
 
-<!-- #XXX from app-alert-box to notice-box-element -->
-
 While reworking WebPlatform infrastructure I had to rebuild a new database
 cluster.
 
@@ -99,6 +97,7 @@ The rest of this article will assume the following:
   cat /srv/opsconfigs/userdata.txt
   ```
 
+  <!-- #XXX from app-alert-box to rb-notice-box -->
   <app-alert-box title="While migrating this article...">
 
   I've noticed that this `userdata.txt` file I've initially written for this

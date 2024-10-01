@@ -28,7 +28,6 @@ preamble:
   disable: true
   text: ' '
 ---
-<!-- #XXX from app-alert-box to notice-box-element -->
 
 One of the components that I worked on [during my time on the WebPlatform
 project][wpd], [Publican][0], that I had to manage has many moving parts. The
@@ -144,6 +143,7 @@ it to the public.
 - ~~Download Bikeshed stuff that i didn't figure out yet what's important to
   keep, extract it in `/srv/webapps/publican/spec-data/`~~.
 
+ <!-- #XXX from app-alert-box to rb-notice-box -->
  <app-alert-box title="Archive mentioned no longer exists">
  The archive used in the initial procedure no longer exists, it was a series of W3C specification Git repository working copies that Publican was expecting.
  </app-alert-box>

@@ -53,8 +53,7 @@ The [original script][1] wasn't getting any data in the cluster. Most likely due
 to API changes and that EC2 API exposes dynamic meta-data that the
 DreamCompute/OpenStack cluster don't.
 
-<!-- #XXX from app-alert-box to notice-box-element -->
-
+<!-- #XXX from app-alert-box to rb-notice-box -->
 <app-alert-box title="Script source">
 
 The article’s source script is available on GitHub as a Python script we can

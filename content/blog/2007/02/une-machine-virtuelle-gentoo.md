@@ -13,7 +13,6 @@ tags:
   - logiciel-libre
   - procedure
 ---
-<!-- #XXX from app-alert-box to notice-box-element -->
 
 ## Introduction
 
@@ -65,6 +64,7 @@ Mirror 3 gentoovm.intarweb.net This mirror generously provided by Phaerus
 
 **La prise en main de la Gentoo VM**
 
+<!-- #XXX from app-alert-box to rb-notice-box -->
 <app-alert-box title="Dans le terminal">
 Chaque ligne de commande peux être faite soit en tant que root, ou avec la commande `sudo`
 </app-alert-box>

@@ -147,7 +147,7 @@ site [http://www.vmware.com][21], obligatoire.
 La console VMWare Vù qu'on a pas de XWindows pour gérer, on utilise une console
 vmware-server à partir d'une autre machine sur notre LAN.
 
-<!-- #XXX notice-box-element -->
+<!-- #XXX rb-notice-box -->
 <app-alert-box alert-type="error" title="Note lors de la migration 2020-09-26" message="Après re-lecture (et 14 ans plus tard) je réalise les risques que j’aurai pu causer sur mon propre serveur. Ne suivez pas aveuglément ce type de conseil! Assurez-vous de seulement installer des binaires de sources que vous faites confiance, comme celles provenant du vendeur. Pas d’un blogue au hasard! A moins que vous puissiez lire le code, et compiler vous-même."></app-alert-box>
 
 ```bash
@@ -185,3 +185,9 @@ Source
 
 [0]: https://www.ubuntu.com/getubuntu/download/
 [21]: https://www.vmware.com/
+
+
+<!--
+https://web.archive.org/web/20060916043739/http://www.flock.com/
+https://web.archive.org/web/20071109134548/http://www.flock.com/blogged-with-flock
+-->

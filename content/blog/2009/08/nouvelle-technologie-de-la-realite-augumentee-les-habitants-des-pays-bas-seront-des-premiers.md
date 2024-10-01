@@ -39,7 +39,6 @@ preamble:
     [twitter-rww]: https://twitter.com/RWW 'ReadWriteWeb Twitter account'
     [11]: https://readwrite.com/2009/06/25/augmented_reality_heres_our_wishlist_of_apps_whats/ 'Augmented Reality: Here’s Our Wishlist of Apps, What’s On Yours?'
 ---
-<!-- #XXX from app-alert-box to notice-box-element -->
 
 La technologie est spéculée depuis quelques années déjà. Le concept est simple:
 Lorsqu'on «filme» une scène on peut voir ce que l'objectif capte. Imaginez
@@ -96,6 +95,7 @@ J'ai fait quelques recherches et je suis tombé sur quelques exemples du concept
 Ce prototype démontre qu'il est possible a partir d'indices imprimés qu'on peut
 disposer d'éléments 3D sur un ecran et par dessus l'objet réel.
 
+<!-- #XXX from app-alert-box to rb-notice-box -->
 <app-alert-box alert-type="warn" title="Lien perdu">
 
 Le lien vers ce vidéo sur Vimeo est brisé et perdu. Originalement, nous pouvions

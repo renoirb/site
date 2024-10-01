@@ -49,7 +49,7 @@ traditionnel et l'informatique.
 Imaginez pouvoir classer les choses sur le «bureau» comme sur un «bureau
 physique».
 
-<!-- #XXX notice-box-element -->
+<!-- #XXX rb-notice-box -->
 <app-alert-box title="Note laissée lors de révision faite en Août 2009">
 
 Sur le marché (en 2009), l’écran ne peux détecter qu’un seul point de pression à
