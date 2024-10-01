@@ -14,7 +14,7 @@
           <ul class="list-none list-inside">
             <li>
               <a
-                href="https://renoirb.github.io/site/files/resume/Resume-Renoir-Boulanger.pdf"
+                href="https://renoirboulanger.com/files/resume/Resume-Renoir-Boulanger.pdf"
                 title="Renoir Boulanger Resume in Adobe Acrobat Format"
               >
                 PDF
@@ -22,7 +22,7 @@
             </li>
             <li>
               <a
-                href="https://renoirb.github.io/site/files/resume/Resume-Renoir-Boulanger.doc"
+                href="https://renoirboulanger.com/files/resume/Resume-Renoir-Boulanger.doc"
                 title="Renoir Boulanger Resume in Microsoft Word Format"
               >
                 Word
