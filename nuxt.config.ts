@@ -75,8 +75,29 @@ const main: NuxtConfig = {
  */
 import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
 import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
-registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
         `,
+      },
+      {
+        // <script src="https://hypothes.is/embed.js" async></script>
+        src: 'https://hypothes.is/embed.js',
+        vmid: 'hypothes-is-embed',
+        async: true,
+        callback: (e) => {
+          const { remove, ownerDocument } = e
+          const { hostname = 'bogus' } = ownerDocument?.location
+          const isAcceptableOrigin = !/(localhost|renoirboulanger\.com)/.test(
+            hostname,
+          )
+          if (isAcceptableOrigin) {
+            remove?.()
+          }
+        },
       },
     ],
     __dangerouslyDisableSanitizers: [
@@ -107,6 +128,13 @@ registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
   router: {
     middleware: ['init', 'redirects'],
     base: IS_CI ? PRODUCTION_BASE_PATH : '/',
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/error-404.vue'),
+      })
+    },
   },
   /*
    ** Nuxt.js dev-modules
