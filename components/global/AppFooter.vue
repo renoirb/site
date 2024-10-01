@@ -5,19 +5,21 @@
       class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto"
     >
       <dl class="contact items-item disposition-item">
-        <dt class="mb-4 font-serif text-2xl">Contact</dt>
+        <dt class="mb-4 font-serif text-2xl">
+          <NuxtLink to="/contact" class="underline">Contact</NuxtLink>
+        </dt>
         <dd>{{ description }}</dd>
         <dd class="underline">
           <a :href="`mailto:${email}`">{{ email }}</a>
         </dd>
-        <dd class="underline">
+        <dd class="underline sr-only">
           <a rel="me" href="https://mastodon.social/@renoirb">
-            renoirb@mastodon.social
+            @renoirb@mastodon.social
           </a>
         </dd>
-        <dd class="underline">
+        <dd class="underline sr-only">
           <a rel="me" href="https://w3c.social/@renoirb">
-            renoirb@w3c.social
+            @renoirb@w3c.social
           </a>
         </dd>
         <dd class="font-mono">v{{ version }}</dd>
@@ -27,7 +29,7 @@
         <dl lang="fr-CA" class="see-also">
           <dt>Voir aussi&hellip;</dt>
           <dd>
-            <NuxtLink to="/ligne-editoriale"> Ligne éditoriale </NuxtLink>
+            <NuxtLink to="/ligne-editoriale"> Ligne&nbsp;éditoriale </NuxtLink>
           </dd>
           <dd>
             <NuxtLink to="/projects"> Projets </NuxtLink>

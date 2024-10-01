@@ -1,7 +1,7 @@
 ---
 meta:
   theme: elegant
-  lastModified: 2024-02-20T23:39:60
+  lastModified: 2024-09-30T11:22:00
   canonical: http://registry.jsonresume.org/renoirb
   alternate: https//renoirb.github.io/site/resume
   source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
@@ -13,7 +13,7 @@ basics:
   image: &image 'https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?size=420'
   picture: *image
   email: hello@renoirboulanger.com
-  url: &url https://renoirb.com
+  url: &url https://renoirboulanger.com
   website: *url
   summary:
     Experienced full-stack developer dedicated to creating web solutions that
@@ -40,8 +40,8 @@ basics:
       username: renoirb
       url: https://gitlab.com/renoirb
   highlights:
-    - Polyglot programmer; TypeScript, ECMAScript, JavaScript, PHP, GNU Make, Ruby, C#,
-      Vagrant, Ruby
+    - 'Polyglot programmer; TypeScript, ECMAScript, JavaScript, PHP, GNU Make, Ruby, C#,
+      Vagrant, Ruby'
     - Experience in Infrastructure As Code with Salt Stack, Vagrant, Ansible,
       Puppet, Bash
     - Contributor to open-source projects such as Nuxt.js, Alpine Linux,
@@ -70,8 +70,8 @@ work:
     location: Montréal, QC, Canada
     remote: false
     contract: false
-    startDate: '2025-09-01'
-    url: &url 'https://renoirb.com'
+    startDate: '2025-01-01'
+    url: &url 'https://renoirboulanger.com'
     website: *url
     summary:
       Plan to build and publish open-source UI library packages, including

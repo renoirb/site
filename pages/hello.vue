@@ -1,20 +1,22 @@
 <template>
   <section
     id="is"
-    class="content-center w-2/3 m-20 mx-auto font-sans text-xl"
+    class="w-2/3 m-20 mx-auto font-sans text-xl"
     itemscope
     itemtype="http://schema.org/Person"
   >
-    <b class="w-150 float-left my-2 mr-4">
-      <img width="150" itemprop="image" src="@/assets/images/avatar.jpg" />
-    </b>
+    <div
+      class="md:float-left sm:float-none md:m-0 md:my-2 md:mr-4 md:w-1/4 sm:m-20 sm:mb-10"
+    >
+      <img itemprop="image" src="@/assets/images/avatar.jpg" />
+    </div>
     <nuxt-content :document="content" />
   </section>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import type { INuxtContentResult } from '~/lib'
   export interface Data {
     content: INuxtContentResult
   }
@@ -46,5 +48,30 @@
   }
   .dark-mode body {
     color: #fff !important;
+  }
+  :target.is-fe-pulse {
+    padding: 10px 0;
+    border: dotted !important;
+    text-align: center;
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(0.85);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  :target.is-fe-pulse.fe-pulse-w-pause {
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  :target.is-fe-pulse.fe-pulse-w-pause:hover,
+  :target.is-fe-pulse.fe-pulse-w-pause:focus {
+    animation-name: unset;
   }
 </style>

@@ -33,7 +33,7 @@ xjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=
 /**
  * Where this site will be hosted as
  */
-export const PUBLIC_BASE_URL = 'https://renoirb.com'
+export const PUBLIC_BASE_URL = 'https://renoirboulanger.com'
 
 export const FALLBACK_LOCALE = 'en-CA' as const
 
