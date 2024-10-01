@@ -35,12 +35,14 @@
           .sortBy('created', 'desc')
           .only([
             'created',
-            'updated',
+            'excerpt',
             'locale',
-            'tags',
             'path',
+            'preamble',
             'slug',
+            'tags',
             'title',
+            'updated',
           ])
           .fetch()
       } catch (_) {

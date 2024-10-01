@@ -31,9 +31,7 @@ preamble:
   text: |
     Cet article était écrit pour faire suite à [un statut Twitter de ReadWriteWeb][twitter-rww], publié en Août 2009. (lien vers le statut n'était pas inclus dans cet article).
 
-    Le statut était:
-
-    «<blockquote lang="en">Is Augmented Reality Garbage of Golden?</blockquote>»
+    Le statut était: «<em lang="en">Is Augmented Reality Garbage of Golden?</em>»
 
     Il invitait à réponre à un sondage à propos de la réalité augumentée, si c'est une mode passagère («<span lang="en">Garbage</span>») ou s'il y a un potentiel («<span lang="en">Golden</span>»).
     Malheureusement, le lien de l'article et du sondage n’est plus retrouvable.

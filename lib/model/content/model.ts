@@ -142,7 +142,17 @@ export const queryNuxtContent = async (
    */
   let ds = $content('blog', { deep: true })
     .sortBy('created', 'desc')
-    .only(['created', 'updated', 'locale', 'path', 'slug', 'tags', 'title'])
+    .only([
+      'created',
+      'excerpt',
+      'locale',
+      'path',
+      'preamble',
+      'slug',
+      'tags',
+      'title',
+      'updated',
+    ])
   if (q) {
     ds = ds.search(q)
   }

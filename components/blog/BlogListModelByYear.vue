@@ -28,11 +28,20 @@
           />
           <div
             v-if="content.prettyfiedTemporalDate"
-            class="mt-0 mb-5 font-serif text-sm italic"
+            class="mt-0 mb-2 font-serif text-sm italic"
           >
             <time :datetime="content.prettyfiedTemporalDate.temporalDate">
               {{ content.prettyfiedTemporalDate.prettified }}
             </time>
+          </div>
+          <div
+            v-if="content.preamble"
+            class="mt-0 mb-5 font-serif text-md"
+          >
+            <nuxt-content
+              v-if="content.preamble && content.preamble.document !== null"
+              :document="content.preamble && content.preamble.document"
+            />
           </div>
           <app-article-tags
             :link="true"

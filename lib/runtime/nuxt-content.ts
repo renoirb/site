@@ -4,13 +4,13 @@ import {
 } from '../model/content'
 import {
   extractFrontMatterTagsAndNormalize,
-  isFrontMatterInnerDocument,
   isFrontMatterCoverImageInnerDocument,
+  isFrontMatterInnerDocument,
 } from '../model'
 import type {
-  INuxtOptionsHooks,
-  IFrontMatterInnerDocument,
   IFrontMatterCoverImageInnerDocument,
+  IFrontMatterInnerDocument,
+  INuxtOptionsHooks,
 } from '../model/content'
 
 export const nuxtContentHooks: INuxtOptionsHooks = {
@@ -23,7 +23,7 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
       'categories',
       document,
     )
-    Object.assign(document, { categories })
+    Reflect.set(document, 'categories', categories)
     // ------------------------------------------------------------------------
     let preamble: IFrontMatterInnerDocument | null = null
     const preambleMaybe = extractFrontMatterInnerDocument(document, 'preamble')
@@ -36,7 +36,7 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
         preamble = merging
       }
     }
-    document.preamble = preamble
+    Reflect.set(document, 'preamble', preamble)
     // ------------------------------------------------------------------------
     let coverImage: IFrontMatterCoverImageInnerDocument | null = null
     const coverImageMaybe = extractFrontMatterInnerDocument(
@@ -52,7 +52,7 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
         coverImage = merging
       }
     }
-    document.coverImage = coverImage
+    Reflect.set(document, 'coverImage', coverImage)
     // ------------------------------------------------------------------------
   },
 }
