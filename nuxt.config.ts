@@ -88,6 +88,7 @@ try {
         src: 'https://hypothes.is/embed.js',
         vmid: 'hypothes-is-embed',
         async: true,
+        skip: true,
         callback: (e) => {
           const { remove, ownerDocument } = e
           const { hostname = 'bogus' } = ownerDocument?.location
