@@ -61,23 +61,37 @@ export interface IFrontMatterCallToAction {
   type: IFrontMatterCallToActionType
 }
 
+type StringPrefixHttp = string // `http${string}` — #TODO
+
+export interface WaybackMachineSnapshots {
+  orig: StringPrefixHttp
+  snapshots: StringPrefixHttp[]
+}
+
 export interface INuxtContentResult extends IBaseNuxtContentResult {
   callToAction?: IFrontMatterCallToAction
   canonical?: string
-  categories: string[]
-  cover?: string
-  coverAlt?: string
-  coverCaption?: string
+  categories: string[] | string
+  tags: string[]
   coverImage?: IFrontMatterCoverImageInnerDocument
   date: string
   description?: string
   keywords?: string[]
-  locale: string
+  /**
+   * BCP 47 IETF Language tag.
+   */
+  locale: 'fr' | 'en' | 'fr-CA' | 'en-CA'
   oldArticle?: string
   preamble?: IFrontMatterPreambleInnerDocument
+  waybackMachineSnapshots: WaybackMachineSnapshots
+  excerpt?: string
   redirect?: string
-  tags: string[]
   title: string
+  /**
+   * WordPress wp:status value
+   */
+  status: 'publish' | 'draft' | 'private'
+  revising: boolean
 }
 
 export type INuxtContentPrevNext = Pick<

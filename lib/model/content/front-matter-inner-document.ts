@@ -30,6 +30,26 @@ export interface IFrontMatterCoverImageInnerDocument
   extends IFrontMatterInnerDocument {
   src: string
   alt?: string
+  /**
+   * Responsive images srcset alternate images
+   *
+   * List of image location and size
+   *
+   * @example
+   * ```
+   * IMG_0325-225x300.jpg 225w
+   * ```
+   */
+  srcset?: string[]
+  /**
+   * Responsive images size attribute
+   *
+   * @example
+   * ```
+   * (max-width: 225px) 100vw, 225px
+   * ```
+   */
+  sizes?: string
 }
 
 export interface IFrontMatterInnerDocumentParsed
