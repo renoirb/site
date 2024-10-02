@@ -19,6 +19,9 @@ preamble:
     aussi populaires qu’après 2019. Les tantes, oncles, cousins, qui n’étaient pas
     aussi connectés a l’Internet aimaient partager des choses
     de nature comédiques ("memes") et se les échangeaient par courriel.
+description: >-
+  Réponse a un courriel annoncant qu'un service deviendrait payant. Une réponse
+  a une plaie sur le web: les chaînes de lettre
 excerpt: >-
   Voici ce que j'ai écrit a des amis de famille qui partageaient avec moi
   des découvertes et « aubaines » via courriel. Je partage quelques observations et

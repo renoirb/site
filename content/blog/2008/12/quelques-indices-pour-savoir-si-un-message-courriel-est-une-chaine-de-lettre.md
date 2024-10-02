@@ -12,6 +12,12 @@ categories:
 tags:
   - fraude
   - vulgarization
+description: >-
+  Les chaînes de lettres sont l'une des façons de gaspiller du temps les plus
+  populaires. Les raisons pour y participer sont multiples.
+title_alternate: >-
+  Indices pour savoir si un courriel est une chaîne de lettre - (pieges
+  internet)
 excerpt: >-
   Les chaînes de lettres sont l'une des façons de gaspiller du temps les plus
   populaires. Les raisons pour y participer peuvent passer par le désir d'un

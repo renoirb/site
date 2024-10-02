@@ -15,6 +15,11 @@ tags:
   - conference
   - slides
   - talk
+description: >-
+  La séance couvre les sujets: Optimise le cahier de charge, Des techniques pour
+  éviter le gaspillage, et des Indicateurs de qualité HTML/CSS
+title_alternate: >-
+  Conférence présenté au Web à Québec: Comment évaluer le niveau de qualité d’un site web selon les techniques d'actualité
 excerpt: >-
   La façon de concevoir des sites Web a beaucoup évolué au cours des deux
   dernières années. Concevez-vous encore vos sites comme en 2009? Trouvez-vous
