@@ -34,6 +34,10 @@ coverImage:
 excerpt: >-
   Here’s how I setup a Discourse web application so that I can scale it by
   adding more Docker instances while keeping a low number of exposed web servers
+description: >-
+  Allow horizontal scaling by separating internal app servers from exposed
+  frontend web servers
+title_alternate: Enable a CDN for your Discourse
 ---
 
 The following is a copy of what I published in a question on

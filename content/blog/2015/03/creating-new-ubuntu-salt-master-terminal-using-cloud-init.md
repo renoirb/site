@@ -25,6 +25,7 @@ coverImage:
   src: ~/assets/content/blog/2015/03/openstack-cloudinit-screenshot.jpg
   text: |
     [Open Stack Cloud-Init](https://cloudinit.readthedocs.io/en/latest/) documentation.
+description: Creating new Salt master in a few commands with Cloud-Init
 ---
 
 If you run on Virtual Machines on a provider that runs OpenStack you can also

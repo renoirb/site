@@ -7,8 +7,9 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1/
 status: publish
 revising: true
+categories:
+  - tranche-de-vie
 tags: []
-categories: []
 excerpt: >-
   Nous sommes de vieux amis de longue date. Nous nous sommes croisés souvent
   dans les dix dernières années. Autant avec moi durant l’époque ou j’étais en

@@ -16,6 +16,9 @@ tags:
 keywords:
   - GNU
   - usermod
+description: >-
+  A common task while writing server configuration management manifests is to
+  make sure that some enforcements are run in specific situations.
 excerpt: >-
   A common task while writing server configuration management manifests is to
   make sure that some enforcements are run in specific situations.

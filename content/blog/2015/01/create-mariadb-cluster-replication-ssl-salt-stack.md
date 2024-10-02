@@ -5,7 +5,7 @@ created: 2015-01-28
 updated: 2015-02-03
 canonical: 'https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/'
 status: publish
-revising: true
+revising: false
 categories:
   - projects
 tags:
@@ -20,6 +20,7 @@ keywords:
   - configuration
   - mysql
   - MariaDB
+description: Create a MariaDB cluster with replication over SSL with Salt Stack
 excerpt: >-
   Some notes on how I created our updated MariaDB database cluster with
   replication.
@@ -186,7 +187,7 @@ addresses
      | ... | db2          | ACTIVE  | Running     | private-network=10.10.10.74 |
    ```
 
-   <app-image style="float:unset;" src="~/assets/content/blog/2015/05/webplatform-openstack-cluster-2014-10-06.png" alt="OpenStack nova command">
+   <app-image style="float:unset;" src="~/assets/content/blog/2015/05/webplatform-openstack-cluster-2014-10-06.png" alt="OpenStack nova command" figcaption=" " alt="Terminal screen">
    Command output when issuing `nova list`
    </app-image>
 

@@ -5,7 +5,7 @@ created: 2015-05-22
 updated: 2023-11-17
 canonical: https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/
 status: publish
-revising: true
+revising: false
 categories:
   - experiments
 tags:
@@ -53,15 +53,15 @@ The [original script][1] wasn't getting any data in the cluster. Most likely due
 to API changes and that EC2 API exposes dynamic meta-data that the
 DreamCompute/OpenStack cluster don't.
 
-<!-- #XXX from app-alert-box to rb-notice-box -->
-<app-alert-box title="Script source">
+<rb-notice-box variant="info" class="my-5">
+<strong slot="header">Script source</strong>
 
 The article’s source script is available on GitHub as a Python script we can
 insert into SaltStack as a grain
 
 - [github.com/webplatform/salt-states][dreamcompute-grain-webplatform-gh]
 
-</app-alert-box>
+</rb-notice-box>
 
 In the end, I edited the file to make it work on DreamCompute and also truncated
 some data that the grains subsystem already has.
@@ -264,6 +264,9 @@ You can add this feature by adding a file in your salt states repository in the
 `_grains/` folder. The file can have any name ending by `.py`.
 
 You can grab the grain python code [in this gist][4].
+
+<!--#TODO-Display-Or-Migrate-Gists-->
+<!--script lazy src="https://gist.github.com/WebPlatformDocs/6b26b67321fe15870aa0.js"></script-->
 
 [0]: https://github.com/saltstack/salt-contrib
 [1]: https://github.com/saltstack/salt-contrib/blob/master/grains/ec2_info.py

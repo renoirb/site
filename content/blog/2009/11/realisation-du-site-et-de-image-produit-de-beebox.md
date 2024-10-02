@@ -14,11 +14,14 @@ tags:
 categories:
   - portfolio
 excerpt: ''
+coverImage:
+  src: ~/assets/content/blog/2009/11/screenshot_beeboxca_small1.png
+  alt: Capture d’écran d’un navigateur web sur le site de BeeBox
+  text: Page d’accueil
 ---
 
-<center><img src="http://renoirboulanger.com/wp-content/uploads/2009/11/screenshot_beeboxca_small1.png" alt="beebox.ca : Page Accueil" title="beebox.ca : Page Accueil" width="600" height="387" class="size-full wp-image-1435" /></center>
-<p>&nbsp;</p>
-<p>Comme j'en ai parlé dans <a href="http://renoirboulanger.com/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007/">ce billet</a> j'ai eu plusieurs rôles dans la réalisation du logiciel <a href="http://www.beebox.ca">beebox</a>. L'un d'eux était de m'occuper de l'image du produit.</p>
+Comme j'en ai parlé dans <a href="http://renoirboulanger.com/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007/">ce billet</a> j'ai eu plusieurs rôles dans la réalisation du logiciel <a href="http://www.beebox.ca">beebox</a>. L'un d'eux était de m'occuper de l'image du produit.
+
 
 <p>Pour résumer l'usage du produit je vous laisser aller visiter le site web (<a href="http://www.beebox.ca">beebox.ca</a>) mais pour ce qui me concerne j'ai conçu et entretenu l'image du produit jusqu'en 2009.</p>
 <p>&nbsp;</p>
@@ -39,4 +42,58 @@ excerpt: ''
 
 <h3>Images</h3>
 <p>Voici quelques captures. Certaines d'entre-elles proviennent du site. Je n'entretiens plus <a href="http://www.beebox.ca/">le site</a> et je ne peut garantir qu'ils vont conserver mon travail c'est pour ça que je les partage ici avec vous</p>
-[gallery link="file"]
+
+<!--
+#TODO-App-Image: Implement data-larger-src
+-->
+<div style="overflow:hidden;clear:both" class="thumbnails gallery flex flex-row flex-wrap">
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/featurespage.png" src="~/assets/content/blog/2009/11/featurespage-150x150.png" alt="" figcaption=" ">
+Beebox : Schéma descriptif concepts Intégration continue
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/screenshot_tscm_features.png" src="~/assets/content/blog/2009/11/screenshot_tscm_features-150x150.png" alt="" figcaption=" ">
+Beebox : Époque TSCM : Page pour illustrer les fonctions
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/screenshot_tscm_featuredetail.png" src="~/assets/content/blog/2009/11/screenshot_tscm_featuredetail-150x150.png" alt="" figcaption=" ">
+Beebox : Page prototype époque TSCM
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/screenshot_beeboxca_small1.png" src="~/assets/content/blog/2009/11/screenshot_beeboxca_small1-150x150.png" alt="" figcaption=" ">
+beebox.ca : Page Accueil
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/screenshot_beeboxca3.png" src="~/assets/content/blog/2009/11/screenshot_beeboxca3-150x150.png" alt="" figcaption=" ">
+beebox.ca : Capture écran page Séquences
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/screenshot_beeboxca2.png" src="~/assets/content/blog/2009/11/screenshot_beeboxca2-150x150.png" alt="" figcaption=" ">
+beebox.ca : Page téléchargement
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/screenshot_beeboxca1.png" src="~/assets/content/blog/2009/11/screenshot_beeboxca1-150x150.png" alt="" figcaption=" ">
+beebox.ca : Page accueil
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/beeboxbmd_1680.png" src="~/assets/content/blog/2009/11/beeboxbmd_1680-150x150.png" alt="" figcaption=" ">
+beebox : Fonds écran de branding (Build Manage Deploy)
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/beeboxwss_1680.png" src="~/assets/content/blog/2009/11/beeboxwss_1680-150x150.png" alt="" figcaption=" ">
+beebox : Fonds écran de branding (Rappel trois vues)
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/tentative1.png" src="~/assets/content/blog/2009/11/tentative1-150x150.png" alt="" figcaption=" ">
+Beebox : développement de l’image: Une des tentatives du logo
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/tentative6.png" src="~/assets/content/blog/2009/11/tentative6-150x150.png" alt="" figcaption=" ">
+Beebox : développement de l’image: Une des tentatives du logo
+</app-image>
+
+<app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/beebox_logo.png" src="~/assets/content/blog/2009/11/beebox_logo-150x96.png" alt="" figcaption=" ">
+Beebox logo final
+</app-image>
+
+</div>

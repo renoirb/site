@@ -1,5 +1,5 @@
 ---
-title: Detection de langue
+title: Detection de langue en PHP
 locale: fr-CA
 created: 2005-12-22
 updated: 2024-08-08

@@ -6,7 +6,7 @@ updated: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/
 status: publish
-revising: true
+revising: false
 categories:
   - projects
 tags:
@@ -143,15 +143,11 @@ it to the public.
 - ~~Download Bikeshed stuff that i didn't figure out yet what's important to
   keep, extract it in `/srv/webapps/publican/spec-data/`~~.
 
- <!-- #XXX from app-alert-box to rb-notice-box -->
- <app-alert-box title="Archive mentioned no longer exists">
- The archive used in the initial procedure no longer exists, it was a series of W3C specification Git repository working copies that Publican was expecting.
- </app-alert-box>
- <app-image src="~/assets/content/blog/2015/05/publican-preview.png" alt="A W3C Specification preview where we can see on the left the specification, and on the right the source highlighting changes in the source">
- W3C Publican prototype build process helping with specification change tracking during review process
-</app-image>
- <app-image src="~/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" figcaption="Annotated screenshot, when changing a file a hook is called and regenerates the specification">
-</app-image>
+<rb-notice-box class="my-5" variant="info">
+<strong slot="header">Archive mentioned no longer exists</strong>
+The archive used in the initial procedure no longer exists, it was a series of W3C specification Git repository working copies that Publican was expecting.
+</rb-notice-box>
+
 
 - You can open up another terminal session and connect to the Vagrant VM
   `vagrant ssh` (e.g. if you don't use `tmux` or `screen`)
@@ -175,18 +171,18 @@ it to the public.
   webapps@2f33f5c6e183:~$
   ```
 
+  <app-image src="~/assets/content/blog/2015/05/publican-init.png" alt="A terminal window with a few commands and a build process status and green lines, no errors" figcaption=" ">
+    Launching the container
+  </app-image>
 - Initiate the empty shell we just created (it'll create stuff in the `data/`
   folder _outside_ of the container)
+
 
   ```bash
   publican.js init
   ```
 
-- It should look like this
-  <app-image src="~/assets/content/blog/2015/05/publican-init.png" alt="A terminal window with a few commands and a build process status and green lines, no errors">
-  </app-image>
-
-![publican-init](/wp-content/uploads/6ec2800223d2c41499e9f30744d397293fd9cca0.png)
+- It should look like the screenshot with caption "*Launching the container*".
 
 - Once done, exit the container. Notice that by doing this, you lose the state
   of the VM and anything that has been written in the container. But, since we
@@ -217,19 +213,22 @@ it to the public.
   ```bash
   su webapps cd /srv/webapps/publican/
   ```
+<app-image src="~/assets/content/blog/2015/05/publican-run-hook.png" alt="A terminal window with a build process status and green lines, no errors" figcaption=" ">
+Starting a build process
+</app-image>
 
-- **Launch the container**; this will also be managed automatically in
+- **Starting a build process**; this will also be managed automatically in
   production.
 
-  ```bash
+
+  ```shell
   docker run -it --rm -v "$(pwd)/data":/srv/webapps/publican/data \
              -v "$(pwd)/spec-data":/opt/bikeshed/bikeshed/spec-data \
              -p 7002:7002 webspecs/publican:wip
   ```
 
-It should look like this
-<app-image src="~/assets/content/blog/2015/05/publican-run-hook.png" alt="A terminal window with a build process status and green lines, no errors">
-</app-image>
+It should look like the screenshot with caption "*Starting a build process*".
+
 
 - get your Vagrant VM IP address
 
@@ -394,10 +393,27 @@ node_modules/forever/bin/forever start $RUNDIR/bin/server.js
 node_modules/forever/bin/forever --fifo logs 0
 ```
 
-### More to come
+That’s it, it’s all I had.
 
-I have more notes to put up, but not enough time to give more context. Come back
-later for more!
+
+### Screenshots
+
+<!--
+#TODO-App-Image: Implement data-larger-src
+-->
+
+<div style="overflow:hidden;clear:both" class="thumbnails gallery">
+
+<app-image src="~/assets/content/blog/2015/05/publican-preview.png" alt="A W3C Specification preview where we can see on the left the specification, and on the right the source highlighting changes in the source" figcaption=" ">
+ W3C Publican prototype build process helping with specification change tracking during review process
+</app-image>
+
+<app-image src="~/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" figcaption=" ">
+Annotated screenshot, when changing a file a hook is called and regenerates the specification
+</app-image>
+
+</div>
+
 
 [0]: https://github.com/webspecs/publican
 [1]: https://specs.webplatform.org/

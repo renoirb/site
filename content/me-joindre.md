@@ -3,6 +3,7 @@ title: Me joindre
 locale: fr-CA
 created: 2009-08-13
 updated: 2013-04-19
+redirect: /contact
 canonical: https://renoirboulanger.com/me-joindre/
 status: publish
 revising: true

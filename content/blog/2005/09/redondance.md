@@ -13,14 +13,12 @@ tags:
 excerpt: ''
 ---
 
-<p>Travailler avec DNS Bind8 n'est pas toujours évident pour les novices.
+Travailler avec DNS Bind8 n'est pas toujours évident pour les novices.
 
 <rb-notice-box variant="info" class="my-5">
 <strong slot="header">Renoir de 2023:</strong>
 Je dois dire qu’a l'époque ce n'était pas évident car il n’y avait pas autant de documentation et tutoriels. Mais aussi, pour être honnête en 2005 j’étais très débutant!
 </rb-notice-box>
-
-<!--more-->
 
 <p>Je suis a tenter de permettre une redondance dans mes sites web. On dirait que tous les «<em>host-masters</em>» de la planète se donnent le mot pour conserveur leur secrets concernant le <abbr title="DNSPro and Bind">RoundRobin</abbr> <abbr>Fail Over DNS</abbr> pour permettre aux sites d'aller sur une autre adresse <code>IP</code> lorsque l'hôte manque sa résolution... et permet ainsi d'avoir quand meme un site web encore plus stable!</p>
 
