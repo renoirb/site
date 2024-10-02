@@ -15,6 +15,13 @@ const isProduction = process.env.NODE_ENV === 'production'
 // - site-map.xml
 // - list of all URLs to articles markdown files published with title, created, locale
 
+console.log('Nuxt Config', {
+  isProduction,
+  NODE_ENV: process.env.NODE_ENV,
+  IS_CI,
+  baseURL: IS_CI ? PRODUCTION_BASE_PATH : '/',
+})
+
 const main: NuxtConfig = {
   /*
    ** Nuxt rendering mode
