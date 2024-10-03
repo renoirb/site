@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme/
 status: publish
 revising: true
+caption: true
 created: '2010-07-01'
 updated: '2013-03-27'
 tags: []

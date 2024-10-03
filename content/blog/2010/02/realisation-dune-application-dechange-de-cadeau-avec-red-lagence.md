@@ -7,6 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence-le-%c2%abclub-echangiste%c2%bb-2009/
 status: publish
 revising: true
+gallery: true
+images: true
 created: '2010-02-03'
 updated: '2013-03-27'
 tags:

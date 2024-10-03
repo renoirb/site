@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/realisationgestionnaire-de-service-a-la-clientele-pour-cable-axion/
 status: publish
 revising: true
+images: true
 created: '2009-08-20'
 updated: '2013-03-27'
 tags:

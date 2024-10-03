@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page/
 status: publish
 revising: true
+images: true
 created: '2010-02-12'
 updated: '2013-03-27'
 tags:

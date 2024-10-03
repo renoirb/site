@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/09/lappel-aux-conferenciers-pour-confoo-2011-est-lance/
 status: publish
 revising: true
+caption: true
 created: '2010-09-28'
 updated: '2023-11-16'
 tags:

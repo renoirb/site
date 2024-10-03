@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur/
 status: publish
 revising: true
+images: true
 created: '2009-08-30'
 updated: '2013-03-27'
 tags:

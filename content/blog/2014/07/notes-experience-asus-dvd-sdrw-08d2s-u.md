@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2014/07/notes-experience-asus-dvd-sdrw-08d2s-u/
 status: publish
 revising: true
+images: true
 created: '2014-07-10'
 updated: '2014-07-10'
 tags: []

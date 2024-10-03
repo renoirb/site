@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim/
 status: publish
 revising: true
+caption: true
 created: '2010-04-14'
 updated: '2013-03-27'
 tags:

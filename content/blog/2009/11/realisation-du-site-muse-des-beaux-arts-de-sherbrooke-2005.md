@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/11/realisation-du-site-muse-des-beaux-arts-de-sherbrooke-2005/
 status: publish
 revising: true
+gallery: true
 created: '2009-11-17'
 updated: '2023-11-16'
 tags:

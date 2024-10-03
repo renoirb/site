@@ -4,6 +4,7 @@ title: Answers I gave for an article  about the impacts of Heartbleed
 canonical: https://renoirboulanger.com/blog/2014/07/article-impacts-of-heartbleed/
 status: publish
 revising: true
+images: true
 created: '2014-07-04'
 updated: '2014-07-04'
 tags:

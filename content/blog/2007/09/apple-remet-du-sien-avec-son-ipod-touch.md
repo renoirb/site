@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/09/apple-remet-du-sien-avec-son-ipod-touch/
 status: publish
 revising: true
+images: true
 created: '2007-09-06'
 updated: '2013-03-27'
 tags: []

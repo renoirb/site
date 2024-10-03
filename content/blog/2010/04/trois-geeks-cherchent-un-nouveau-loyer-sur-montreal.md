@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/
 status: publish
 revising: true
+caption: true
 created: '2010-04-05'
 updated: '2013-03-27'
 tags: []

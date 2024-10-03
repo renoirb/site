@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/06/retour-sur-la-semaine-des-logiciels-libres-mondev-et-de-la-conference-make-web-not-war-2010/
 status: publish
 revising: true
+gallery: true
 created: '2010-06-22'
 updated: '2013-03-27'
 tags: []

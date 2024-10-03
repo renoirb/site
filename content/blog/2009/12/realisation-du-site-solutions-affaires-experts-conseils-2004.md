@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/12/realisation-du-site-solutions-affaires-experts-conseils-2004/
 status: publish
 revising: true
+gallery: true
+images: true
 created: '2009-12-04'
 updated: '2013-03-27'
 tags:

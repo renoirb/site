@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent/
 status: publish
 revising: true
+images: true
 created: '2007-10-12'
 updated: '2013-03-27'
 tags:

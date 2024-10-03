@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs/
 status: publish
 revising: true
+images: true
 created: '2007-05-31'
 updated: '2013-03-27'
 tags:

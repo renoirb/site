@@ -4,6 +4,7 @@ title: GeekNight ce soir!
 canonical: https://renoirboulanger.com/blog/2009/08/geeknight-ce-soir/
 status: publish
 revising: true
+caption: true
 created: '2009-08-19'
 updated: '2013-03-27'
 tags: []

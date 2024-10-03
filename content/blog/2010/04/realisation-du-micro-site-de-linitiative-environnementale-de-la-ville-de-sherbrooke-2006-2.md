@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/realisation-du-micro-site-de-linitiative-environnementale-de-la-ville-de-sherbrooke-2006-2/
 status: publish
 revising: true
+gallery: true
 created: '2010-04-26'
 updated: '2013-03-27'
 tags:

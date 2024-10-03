@@ -4,6 +4,7 @@ title: Accessibilité et les liens externes
 canonical: https://renoirboulanger.com/blog/2009/08/accessibilite-et-les-liens-externes/
 status: publish
 revising: true
+images: true
 created: '2009-08-20'
 updated: '2013-03-27'
 tags:

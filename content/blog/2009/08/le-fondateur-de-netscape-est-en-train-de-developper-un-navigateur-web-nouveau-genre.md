@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/le-fondateur-de-netscape-est-en-train-de-developper-un-navigateur-web-nouveau-genre/
 status: publish
 revising: true
+images: true
 created: '2009-08-14'
 updated: '2013-03-27'
 tags: []

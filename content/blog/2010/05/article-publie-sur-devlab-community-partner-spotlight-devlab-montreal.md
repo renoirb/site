@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/05/article-publie-sur-devlab-community-partner-spotlight-devlab-montreal/
 status: publish
 revising: true
+images: true
 created: '2010-05-19'
 updated: '2013-03-27'
 tags:

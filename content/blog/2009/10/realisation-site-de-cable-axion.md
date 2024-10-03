@@ -4,6 +4,7 @@ title: Réalisation du site de Câble Axion [2006]
 canonical: https://renoirboulanger.com/blog/2009/10/realisation-site-de-cable-axion/
 status: publish
 revising: true
+caption: true
 created: '2009-10-30'
 updated: '2013-03-27'
 tags:

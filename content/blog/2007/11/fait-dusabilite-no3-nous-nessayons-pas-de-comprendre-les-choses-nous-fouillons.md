@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons/
 status: publish
 revising: true
+images: true
 created: '2007-11-23'
 updated: '2013-03-27'
 tags:

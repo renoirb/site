@@ -4,6 +4,7 @@ title: Revue de DON'T MAKE ME THINK
 canonical: https://renoirboulanger.com/blog/2007/09/revue-de-dont-make-me-think/
 status: publish
 revising: true
+images: true
 created: '2007-09-07'
 updated: '2013-03-27'
 tags: []

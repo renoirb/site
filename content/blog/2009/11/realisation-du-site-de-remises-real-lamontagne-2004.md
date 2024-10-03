@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/11/realisation-du-site-de-remises-real-lamontagne-2004/
 status: publish
 revising: true
+caption: true
 created: '2009-11-05'
 updated: '2013-03-27'
 tags:

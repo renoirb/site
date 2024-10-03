@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/05/mise-a-jour-de-lhoraire-de-la-semaine-des-logiciels-libres-mondev-du-24-28-mai-prochain/
 status: publish
 revising: true
+caption: true
 created: '2010-05-17'
 updated: '2013-03-27'
 tags: []

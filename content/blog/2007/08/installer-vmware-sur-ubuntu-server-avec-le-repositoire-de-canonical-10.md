@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/08/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical-10/
 status: publish
 revising: true
+images: true
 created: '2007-08-22'
 updated: '2013-03-27'
 tags:

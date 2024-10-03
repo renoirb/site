@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/01/le-defi-%c2%abproject52%c2%bb-un-billet-par-semaine-minimum/
 status: publish
 revising: true
+images: true
 tags: []
 categories: []
 excerpt: ''

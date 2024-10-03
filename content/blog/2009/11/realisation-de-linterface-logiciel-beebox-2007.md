@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007/
 status: publish
 revising: true
+caption: true
 created: '2009-11-10'
 updated: '2013-03-27'
 tags:

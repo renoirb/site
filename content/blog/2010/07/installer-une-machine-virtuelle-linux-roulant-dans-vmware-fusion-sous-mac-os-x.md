@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/
 status: publish
 revising: true
+caption: true
 created: '2010-07-07'
 updated: '2023-11-16'
 tags: []

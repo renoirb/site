@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/la-semaine-des-logiciels-libres-a-montreal-mondev/
 status: publish
 revising: true
+caption: true
 created: '2010-04-15'
 updated: '2013-03-27'
 tags:

@@ -7,6 +7,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/01/revue-de-fonctions-qui-sont-selon-moi-ideales-a-un-cms-entre-cms-made-simple-et-modx/
 status: publish
 revising: true
+images: true
 created: '2010-01-12'
 updated: '2013-03-27'
 tags: []
