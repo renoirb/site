@@ -4,6 +4,7 @@ import {
   fromProcessEnvToAppIdentity,
   IS_CI,
   nuxtContentHooks,
+  createNuxtFeedCreate,
 } from './lib'
 import tailwindConfig from './tailwind.config'
 
@@ -12,8 +13,10 @@ const appIdentity = fromProcessEnvToAppIdentity(process.env)
 const isProduction = process.env.NODE_ENV === 'production'
 
 // #TODO
-// - site-map.xml
-// - list of all URLs to articles markdown files published with title, created, locale
+// - [ ] site-map.xml
+// - [x] RSS Feed
+// - [ ] list of all URLs to articles markdown files published with title, created, locale
+// - [ ] During build, remove search index we do not use https://damieng.com/blog/2024/05/14/nuxt-content-db-and-size/
 
 const main: NuxtConfig = {
   /*
@@ -55,7 +58,21 @@ const main: NuxtConfig = {
         content: '@renoirb',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'Renoir Boulanger’s Page Updates RSS Feed',
+        href: 'https://renoirboulanger.com/feed.xml',
+      },
+      {
+        rel: 'alternate',
+        type: 'application/feed+json',
+        title: 'Renoir Boulanger’s Page Updates Feed',
+        href: 'https://renoirboulanger.com/feed.json',
+      },
+    ],
     script: [
       // <script src="https://myawesome-lib.js"></script>
       // { src: 'https://awesome-lib.js' },
@@ -134,6 +151,7 @@ try {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/feed',
     'nuxt-purgecss',
     'nuxt-webfontloader',
   ],
@@ -150,6 +168,48 @@ try {
       },
     },
   },
+
+  feed: [
+    {
+      path: '/feed.xml',
+      async create(feed, args) {
+        const { $content } = require('@nuxt/content')
+        const nuxtFeedCreate = createNuxtFeedCreate($content)
+        await nuxtFeedCreate(feed, args)
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2',
+      data: {
+        BASE_PATH,
+        appIdentity: {
+          ...appIdentity,
+          homepage:
+            'https://renoirboulanger.com' /** #TODO Fix build for this */,
+        },
+        isProduction,
+      },
+    },
+    {
+      path: '/feed.json',
+      async create(feed, args) {
+        const { $content } = require('@nuxt/content')
+        const nuxtFeedCreate = createNuxtFeedCreate($content)
+        await nuxtFeedCreate(feed, args)
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'json1',
+      data: {
+        BASE_PATH,
+        appIdentity: {
+          ...appIdentity,
+          homepage:
+            'https://renoirboulanger.com' /** #TODO Fix build for this */,
+        },
+        isProduction,
+      },
+    },
+  ],
+
   // https://tailwindcss.nuxtjs.org/setup/
   tailwindcss: {
     cssPath: '~/assets/styles/main.css',

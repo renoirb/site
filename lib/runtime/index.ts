@@ -1,5 +1,6 @@
 export * from './hypothesis'
 export * from './nuxt-content'
+export * from './nuxt-feed'
 export * from './nuxt'
 export * from './page-redirect'
 export * from './tailwind'

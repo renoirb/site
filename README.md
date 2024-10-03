@@ -18,6 +18,7 @@ Rewriting [renoirb/site][github-renoirb-site]
   - [Querying](https://github.com/nuxt/content/blob/%40nuxt/content%401.8.1/docs/content/en/fetching.md#wherequery)
   - [Snippets](https://github.com/nuxt/content/blob/v1-dev/docs/content/en/snippets.md#L0)
   - [**Nuxt/content dependency Loki** Querying](https://github.com/techfort/LokiJS/wiki/Query-Examples)
+  - https://content.nuxt.com/v1/getting-started/writing
 - **Vue** v2:
   - https://v2.vuejs.org/v2/api/#ignoredElements
   - https://github.com/nuxt/vue-meta/tree/master/docs/api

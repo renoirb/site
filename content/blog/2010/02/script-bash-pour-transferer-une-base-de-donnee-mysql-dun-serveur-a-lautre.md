@@ -2,9 +2,11 @@
 title:
   Script bash pour transférer une base de donnée MySQL d’un serveur à l’autre
 locale: fr-CA
-date: 2010-02-09
+created: 2010-02-09
 updated: 2013-06-12
 canonical: 'https://renoirboulanger.com/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre/'
+status: publish
+revising: true
 categories:
   - projects
 tags:
