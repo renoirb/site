@@ -1,10 +1,12 @@
 import { MetaInfo } from 'vue-meta'
 import { Context } from '@nuxt/types'
-import type { IAppIdentity, Flatten, RefreshMetaInfo } from '../types'
-import {
-  sanitizeHtmlTagAttributeExpectingOneWord,
+import type {
   CreateVueMetaInfoOptions,
-} from '.'
+  Flatten,
+  IAppIdentity,
+  RefreshMetaInfo,
+} from '../types'
+import { sanitizeHtmlTagAttributeExpectingOneWord } from '.'
 
 /* eslint-disable camelcase */
 const identityFallbackValues: IAppIdentity = {

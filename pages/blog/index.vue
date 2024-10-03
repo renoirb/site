@@ -1,7 +1,7 @@
 <template>
   <div class="pages-blog--index">
     <div class="document document--item z-30">
-      <div class="body">
+      <div class="body" :data-count="contents.length">
         <blog-list-model-by-year :contents="contents" :q="q" />
       </div>
     </div>

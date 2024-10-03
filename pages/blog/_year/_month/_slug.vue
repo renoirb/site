@@ -79,6 +79,7 @@
     INuxtContentResult,
     IPrettyfiedTemporalDate,
     createVueMetaInfo,
+    createVueMetaHeadScriptForHypothesis,
   } from '~/lib'
   export interface Data {
     canonical: null | string
@@ -163,10 +164,8 @@
         .sortBy('created', 'asc')
         .surround(slug)
 
-      const [prev, next] = (await dal.fetch()) as [
-        INuxtContentPrevNext,
-        INuxtContentPrevNext,
-      ]
+      const items = await dal.fetch()
+      const [prev, next] = items
 
       return {
         canonical: leakOutCanonical,
@@ -190,6 +189,10 @@
         redirect = `/blog/${this.year}/${this.month}/${redirect}`
       }
       const out = createVueMetaInfo({ ...this.content, redirect })
+      if (redirect === '') {
+        const item = createVueMetaHeadScriptForHypothesis()
+        Reflect.set(out, 'script', [item])
+      }
       return out
     },
   })

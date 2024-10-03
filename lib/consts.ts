@@ -53,6 +53,10 @@ export const YEAR_CONSIDERED_OLD = 2017 as const
 
 export const PRODUCTION_BASE_PATH = '/site'
 
+export const BASE_PATH = Reflect.has(process.env, 'BASE_PATH')
+  ? Reflect.get(process.env, 'BASE_PATH')
+  : '/'
+
 export const IS_CI =
   ('IS_CI' in process.env && typeof process.env.IS_CI === 'string') ||
   'GITHUB_ACTION' in process.env

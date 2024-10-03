@@ -1,9 +1,9 @@
 import { NuxtConfig } from '@nuxt/types'
 import {
-  nuxtContentHooks,
-  PRODUCTION_BASE_PATH,
+  BASE_PATH,
   fromProcessEnvToAppIdentity,
   IS_CI,
+  nuxtContentHooks,
 } from './lib'
 import tailwindConfig from './tailwind.config'
 
@@ -15,19 +15,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 // - site-map.xml
 // - list of all URLs to articles markdown files published with title, created, locale
 
-console.log('Nuxt Config', {
-  isProduction,
-  NODE_ENV: process.env.NODE_ENV,
-  IS_CI,
-  baseURL: IS_CI ? PRODUCTION_BASE_PATH : '/',
-})
-
 const main: NuxtConfig = {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'universal',
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
@@ -90,23 +78,6 @@ try {
 }
         `,
       },
-      {
-        // <script src="https://hypothes.is/embed.js" async></script>
-        src: 'https://hypothes.is/embed.js',
-        vmid: 'hypothes-is-embed',
-        async: true,
-        skip: true,
-        callback: (e) => {
-          const { remove, ownerDocument } = e
-          const { hostname = 'bogus' } = ownerDocument?.location
-          const isAcceptableOrigin = !/(localhost|renoirboulanger\.com)/.test(
-            hostname,
-          )
-          if (isAcceptableOrigin) {
-            remove?.()
-          }
-        },
-      },
     ],
     __dangerouslyDisableSanitizers: [
       /* YOLO. Plus, I don’t want WebPack to inline and mangle what’s here. */ 'script',
@@ -135,7 +106,7 @@ try {
   components: true,
   router: {
     middleware: ['init', 'redirects'],
-    base: IS_CI ? PRODUCTION_BASE_PATH : '/',
+    base: BASE_PATH,
     extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
@@ -230,5 +201,13 @@ try {
   },
   typescript: {},
 }
+
+// eslint-disable-next-line no-console
+console.log('Nuxt Config', {
+  isProduction,
+  NODE_ENV: process.env.NODE_ENV,
+  IS_CI,
+  'router.base': main?.router?.base,
+})
 
 export default main

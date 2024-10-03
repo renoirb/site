@@ -31,7 +31,7 @@ patch:
 deploy-gh: patch
 	yarn clean
 	touch nuxt.config.ts
-	IS_CI=aye node_modules/.bin/nuxt-ts generate
+	BASE_PATH=/site node_modules/.bin/nuxt-ts generate
 	cp static/resume/index.html dist/resume/
 	node_modules/.bin/push-dir --dir=dist --branch=gh-pages --local-branch-name=2020 --cleanup
 

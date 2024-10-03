@@ -25,11 +25,9 @@
   ],
   "scripts": {
     "build": "use-cross-env use-run-all clean build:*",
-    "build:generate": "IS_CI=aye nuxt-ts generate",
+    "build:generate": "nuxt-ts generate",
     "clean": "use-cross-env use-rimraf .nuxt dist",
     "commit": "git-cz",
-    "deploy": "use-cross-env IS_CI=aye use-run-all clean build:* deploy:push",
-    "deploy:push": "push-dir --dir=dist --branch=gh-pages --local-branch-name=2020 --cleanup",
     "dev": "nuxt-ts dev -H 0.0.0.0",
     "fix": "use-run-all fix:*",
     "fix:js": "use-cross-env conventions-use-eslint --fix --ext .ts,.tsx,.js,.vue --ignore-path .gitignore --ignore-pattern 'static/' .",
