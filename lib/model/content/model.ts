@@ -235,6 +235,18 @@ export const nuxtPageAsyncDataForTaxonomyIndex = async (
   }
 }
 
+/**
+ * Because we cannot do
+ *
+ * find({ redirect: { $exists: false }})
+ */
+export const findExcludingRedirectPredicate = (
+  value: INuxtContentResult,
+) => {
+  const { redirect } = value
+  return typeof redirect !== 'string'
+}
+
 export const nuxtPageAsyncDataForTaxonomyList = async (
   taxonomyPredicateKey: string = 'tags',
   urlParam: string = 'tag',
