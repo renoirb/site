@@ -29,7 +29,7 @@ Ajoutez y tout vos hosts que vous voulez... Je ne prendrai pas d'exemple réel �
 <pre lang="bash">
 $ mkdir ~/Drives/web1
 $ mkdir ~/Drives/web2</pre>
-Dans mon exemple, sur ces deux machines j'ai mon propre usager et j'ai ajouté mon login dans le <tt>~/.ssh/authorized_keys</tt> de mon homedir. Si vous avez pas ça, faites vous le en suivant le howto ici: <a href="/login-ssh-sans-mot-de-passe" title="SSH sans mot de passe">login ssh sans mot de passe</a>. Vous pourrez tester en faisant <tt>$ ssh hostname</tt> il devrait se loguer tout seul. Si vous ne faites pas cela, vous serez oubligé d'entrer vos mots de passes de TOUTES vos machines... A chaque login.
+Dans mon exemple, sur ces deux machines j'ai mon propre usager et j'ai ajouté mon login dans le <tt>~/.ssh/authorized_keys</tt> de mon homedir. Si vous avez pas ça, faites vous le en suivant le howto ici: <a href="/blog/2007/04/login-ssh-sans-mot-de-passe" title="SSH sans mot de passe">login ssh sans mot de passe</a>. Vous pourrez tester en faisant <tt>$ ssh hostname</tt> il devrait se loguer tout seul. Si vous ne faites pas cela, vous serez oubligé d'entrer vos mots de passes de TOUTES vos machines... A chaque login.
 
 Pour continuer, on doit aussi installer le paquetage sshfs
 <pre lang="bash">$ sudo apt-get install sshfs</pre>
