@@ -39,6 +39,7 @@
   type FlagsString = (m: WithReviewingProps) => string
   export interface Data {
     contents: INuxtContentResult[]
+    count: number
   }
   export interface Methods {
     createFlagString: FlagsString
@@ -76,6 +77,7 @@
     data() {
       return {
         contents: [],
+        count: 0,
       }
     },
     methods: {

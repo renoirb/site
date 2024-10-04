@@ -64,11 +64,11 @@
       const tag = 'on-front-page'
 
       let contents: IDatedNuxtContentResult[] = []
-      contents = await $content('blog', { deep: true })
+      const db = $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
         .limit(4)
         .sortBy('created', 'desc')
-        .fetch()
+      contents = await db.fetch()
 
       for (const content of contents) {
         const prettyfiedTemporalDate = getPrettyfiedTemporalDate(
@@ -85,5 +85,6 @@
     methods: {
       abbreviatize,
     },
+    fetchKey: 'on-front-page',
   })
 </script>
