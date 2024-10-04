@@ -19,11 +19,21 @@ Rewriting [renoirb/site][github-renoirb-site]
   - [Snippets](https://github.com/nuxt/content/blob/v1-dev/docs/content/en/snippets.md#L0)
   - [**Nuxt/content dependency Loki** Querying](https://github.com/techfort/LokiJS/wiki/Query-Examples)
   - https://content.nuxt.com/v1/getting-started/writing
+  - [**Nuxt/content** integrations](https://github.com/nuxt/content/blob/v1-dev/docs/content/en/integrations.md)
+    - @nuxtjs/feed `v2.0`
+      - [Integration Docs](https://github.com/nuxt/content/blob/v1-dev/docs/content/en/integrations.md#nuxtjsfeed)
+      - [Code](https://github.com/nuxt-community/feed-module), [Depends on **feed** `^4.2.0`](https://github.com/nuxt-community/feed-module/blob/7c8595d1/package.json#L36)
+      - [**feed** NPM package](https://www.npmjs.com/package/feed)
+      - [**feed** Source](https://github.com/jpmonette/feed/blob/4.2.0/package.json)
+    - [@nuxtjs/sitemap](https://github.com/nuxt/content/blob/v1-dev/docs/content/en/integrations.md#nuxtjssitemap)
 - **Vue** v2:
   - https://v2.vuejs.org/v2/api/#ignoredElements
   - https://github.com/nuxt/vue-meta/tree/master/docs/api
+- **@nuxt/vue-app** **vue-meta** v`^2.4.0`
+  - https://github.com/nuxt/vue-meta/tree/v2.4.0/docs
 
-Insightful in-depth posts I appreciated:
+#### Insightful in-depth posts I appreciated
+
 - [**nuxt/content** common issues and how to shrink static db file](https://damieng.com/blog/2024/05/14/nuxt-content-db-and-size/)
 
 ### Official docs

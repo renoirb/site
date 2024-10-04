@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import { NuxtConfig } from '@nuxt/types'
 import pkg from './package.json'
 import {
@@ -22,6 +24,8 @@ const isProduction = process.env.NODE_ENV === 'production'
 // - [x] RSS Feed
 // - [ ] list of all URLs to articles markdown files published with title, created, locale
 // - [ ] During build, remove search index we do not use https://damieng.com/blog/2024/05/14/nuxt-content-db-and-size/
+
+const allContent = new Map<string, string>()
 
 const main: NuxtConfig = {
   /*
@@ -110,6 +114,47 @@ try {
   },
   hooks: {
     ...nuxtContentHooks,
+    'generate:distCopied'(generator) {
+      const indexNlJson = path.join(
+        generator.options.generate.dir,
+        'index.ndjson',
+      )
+      const nljson: string[] = []
+      for (const [, data] of allContent) {
+        nljson.push(data)
+      }
+      fs.writeFileSync(indexNlJson, nljson.join('\n'))
+    },
+    'content:file:beforeInsert'(contentFile) {
+      const {
+        categories = [],
+        description = '',
+        excerpt = '',
+        extension,
+        locale,
+        path = '',
+        redirect = '',
+        tags = [],
+        title,
+      } = contentFile
+      let category = ''
+      if (categories && categories.length > 0) {
+        category = categories[0]
+      }
+      const item = {
+        path,
+        file: path + extension,
+        title,
+        locale,
+        category,
+        tags,
+        description,
+        excerpt,
+      }
+      if (!allContent.has(path) && redirect === '') {
+        allContent.set(path, JSON.stringify(item))
+      }
+    },
   },
   /*
    ** Global CSS

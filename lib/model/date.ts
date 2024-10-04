@@ -198,3 +198,11 @@ export const getMonthNames: IMonthNamesFn = (
 
   return out
 }
+
+export const fromDateToString = (d: Date): string => {
+  if (!('toISOString' in d)) {
+    const message = `Invalid argument for ${typeof d}`
+    throw new Error(message)
+  }
+  return d.toISOString()?.split('T')?.[0] ?? ''
+}
