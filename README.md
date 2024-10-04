@@ -23,6 +23,9 @@ Rewriting [renoirb/site][github-renoirb-site]
   - https://v2.vuejs.org/v2/api/#ignoredElements
   - https://github.com/nuxt/vue-meta/tree/master/docs/api
 
+Insightful in-depth posts I appreciated:
+- [**nuxt/content** common issues and how to shrink static db file](https://damieng.com/blog/2024/05/14/nuxt-content-db-and-size/)
+
 ### Official docs
 
 - Nuxt.js
