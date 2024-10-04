@@ -25,7 +25,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 // - [ ] list of all URLs to articles markdown files published with title, created, locale
 // - [ ] During build, remove search index we do not use https://damieng.com/blog/2024/05/14/nuxt-content-db-and-size/
 
-const allContent = new Map<string, string>()
+const allContent = new Map<string, Record<string, string | string[]>>()
 
 const main: NuxtConfig = {
   /*
@@ -117,13 +117,13 @@ try {
     'generate:distCopied'(generator) {
       const indexNlJson = path.join(
         generator.options.generate.dir,
-        'index.ndjson',
+        'content.json',
       )
-      const nljson: string[] = []
+      const items: Record<string, string | string[]>[] = []
       for (const [, data] of allContent) {
-        nljson.push(data)
+        items.push(data)
       }
-      fs.writeFileSync(indexNlJson, nljson.join('\n'))
+      fs.writeFileSync(indexNlJson, JSON.stringify(items))
     },
     'content:file:beforeInsert'(contentFile) {
       const {
@@ -152,7 +152,7 @@ try {
         excerpt,
       }
       if (!allContent.has(path) && redirect === '') {
-        allContent.set(path, JSON.stringify(item))
+        allContent.set(path, item)
       }
     },
   },
