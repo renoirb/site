@@ -1,6 +1,5 @@
 import { Context } from '@nuxt/types'
-// import Vue from 'vue'
-import { pageTitleForBlogIndex, getColorModeClassName } from '../lib'
+import { getColorModeClassName } from '../lib'
 
 /**
  * Initial state.
@@ -11,7 +10,6 @@ import { pageTitleForBlogIndex, getColorModeClassName } from '../lib'
  *   take it into account, or just fallback to english, and add locale per article
  */
 export default (ctx: Context) => {
-  const pageTitle = pageTitleForBlogIndex(ctx.route)
   const colorModeClassName = getColorModeClassName(ctx)
   if (ctx && ctx.app.$colorMode && ctx.app.$colorMode.value) {
     if (ctx.app.head) {
@@ -20,9 +18,6 @@ export default (ctx: Context) => {
         Array.isArray(ctx.app.head.htmlAttrs)
       ) {
         ctx.app.head.htmlAttrs.push(colorModeClassName)
-      }
-      if ('title' in ctx.app.head && typeof pageTitle === 'string') {
-        ctx.app.head.title = pageTitle
       }
     }
   }
