@@ -31,7 +31,7 @@
   import Vue from 'vue'
   import {
     fromNuxtContextToAppIdentity,
-    fromProcessEnvToAppIdentity,
+    fromPackageToAppIdentity,
     IAppIdentity,
     pageTitleForBlogIndex,
     getColorModeClassName,
@@ -51,7 +51,7 @@
       'inline-svg': () => import('vue-inline-svg'),
     },
     data() {
-      const appIdentityFallback = fromProcessEnvToAppIdentity({} as any)
+      const appIdentityFallback = fromPackageToAppIdentity({} as any)
       const appIdentityPicks = fromNuxtContextToAppIdentity(this.$nuxt.context)
       const colorModeClassName = getColorModeClassName(this.$nuxt.context)
       const appIdentity: IAppIdentity = {

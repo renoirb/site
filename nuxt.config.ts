@@ -1,14 +1,19 @@
 import { NuxtConfig } from '@nuxt/types'
+import pkg from './package.json'
 import {
   BASE_PATH,
-  fromProcessEnvToAppIdentity,
+  createNuxtFeedCreate,
+  fromPackageToAppIdentity,
   IS_CI,
   nuxtContentHooks,
-  createNuxtFeedCreate,
 } from './lib'
 import tailwindConfig from './tailwind.config'
 
-const appIdentity = fromProcessEnvToAppIdentity(process.env)
+const appIdentity = {
+  // #TODO Configure this somewhere else. Also, this is more of a "configuration" than an "identity"
+  ...fromPackageToAppIdentity(pkg, 'America/Montreal'),
+  description: 'Fascinated By The Open Web Platform',
+}
 
 const isProduction = process.env.NODE_ENV === 'production'
 

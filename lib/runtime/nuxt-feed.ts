@@ -70,8 +70,7 @@ export const createNuxtFeedCreate =
     await Promise.resolve(undefined)
 
     const { BASE_PATH } = data
-    const { email, name, description, homepage } = data.appIdentity
-    const TIME_ZONE = 'America/Montreal'
+    const { email, name, description, homepage, timeZone } = data.appIdentity
 
     const authorName = name
     const authorEmail = email
@@ -185,7 +184,7 @@ export const createNuxtFeedCreate =
       }
       */
 
-      const published = dateStringToDateObject(article.created, TIME_ZONE)
+      const published = dateStringToDateObject(article.created, timeZone)
       if (published) {
         Reflect.set(item, 'published', published)
       } else {
@@ -195,7 +194,7 @@ export const createNuxtFeedCreate =
           value: article.created,
         })
       }
-      const updated = dateStringToDateObject(article.updated, TIME_ZONE)
+      const updated = dateStringToDateObject(article.updated, timeZone)
       if (updated) {
         // Because "date" field is for updated
         Reflect.set(item, 'date', updated)

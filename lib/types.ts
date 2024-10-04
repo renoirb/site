@@ -18,6 +18,7 @@ export interface IAppIdentity {
   description: string
   homepage: string
   version: string
+  timeZone: string
 }
 
 export interface CreateVueMetaInfoOptions {

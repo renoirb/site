@@ -8,32 +8,44 @@ import type {
 } from '../types'
 import { sanitizeHtmlTagAttributeExpectingOneWord } from '.'
 
-/* eslint-disable camelcase */
-const identityFallbackValues: IAppIdentity = {
-  email: 'renoir.boulanger@example.org',
+export const identityFallbackValues: IAppIdentity = {
+  email: 'hello@renoirboulanger.com',
   name: 'Renoir Boulanger',
   description: '',
   homepage: 'https://github.com/renoirb/site',
   version: '1.0.0',
+  timeZone: 'America/New_York',
 } as const
 
-export const fromProcessEnvToAppIdentity = (
-  penv: NodeJS.ProcessEnv,
+export const fromPackageToAppIdentity = (
+  pkg: {
+    name: string
+    version: string
+    homepage: string
+    description: string
+    author: { name: string; email: string }
+  },
+  timeZone,
 ): IAppIdentity => {
   const {
-    npm_package_author_email = identityFallbackValues.email,
-    npm_package_author_name = identityFallbackValues.name,
-    npm_package_description = identityFallbackValues.description,
-    npm_package_homepage = identityFallbackValues.homepage,
-    npm_package_version = identityFallbackValues.version,
-  } = penv || {}
-  return {
-    email: npm_package_author_email,
-    name: npm_package_author_name,
-    description: npm_package_description,
-    homepage: npm_package_homepage,
-    version: npm_package_version,
-  }
+    author,
+    description = identityFallbackValues.description,
+    homepage = identityFallbackValues.homepage,
+    version = identityFallbackValues.version,
+  } = pkg
+  const {
+    name = identityFallbackValues.name,
+    email = identityFallbackValues.email,
+  } = author ?? {}
+  const appIdentity = {
+    email,
+    name,
+    description,
+    homepage,
+    version,
+    timeZone: timeZone ?? identityFallbackValues.timeZone,
+  } as IAppIdentity
+  return appIdentity
 }
 
 export const fromNuxtContextToAppIdentity = (ctx: Context): IAppIdentity => {

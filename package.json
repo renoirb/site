@@ -29,6 +29,7 @@
     "clean": "use-cross-env use-rimraf .nuxt dist",
     "commit": "git-cz",
     "dev": "nuxt-ts dev -H 0.0.0.0",
+    "check-env": "node -e 'console.log(process.env)' | grep npm",
     "fix": "use-run-all fix:*",
     "fix:js": "use-cross-env conventions-use-eslint --fix --ext .ts,.tsx,.js,.vue --ignore-path .gitignore --ignore-pattern 'static/' .",
     "fix:prettier": "use-cross-env prettier --ignore-path .prettierignore --ignore-unknown --write '**/*.{svg,yaml,yml,vue,css,js,ts,json,md}'",
