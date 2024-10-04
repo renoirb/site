@@ -1,7 +1,12 @@
 <template>
   <div class="pages-blog--index">
     <div class="document document--item z-30">
-      <div class="body" :data-count="contents.length">
+      <div
+        v-memo="[contents]"
+        class="body"
+        :data-count="contents.length"
+        data-v-memo
+      >
         <blog-list-model-by-year :contents="contents" :q="q" />
       </div>
     </div>

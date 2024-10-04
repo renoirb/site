@@ -18,7 +18,12 @@
           v-html="abbreviatize(taxonomyHumanDescription)"
         />
       </div>
-      <div class="body">
+      <div
+        v-memo="[contents]"
+        class="body"
+        :data-count="contents.length"
+        data-v-memo
+      >
         <blog-list-model-by-year
           :contents="contents"
           :q="$route && $route.query && $route.query.q"

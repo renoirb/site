@@ -1,7 +1,12 @@
 <template>
   <div class="pages__blog__year__month--index">
     <div class="document document--collection">
-      <div class="body">
+      <div
+        v-memo="[contents]"
+        class="body"
+        :data-count="contents.length"
+        data-v-memo
+      >
         <blog-list-model-by-year
           :show-year="false"
           :contents="contents"
