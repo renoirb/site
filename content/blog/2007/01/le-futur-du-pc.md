@@ -35,7 +35,7 @@ existent déjà et ce qui pourrait arriver dans un futur pas si loin que ça.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yx9FgLr9oTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Ensuite, imaginez la personne utilise avec un touch-screen (le desktop en 3d ne
+Ensuite, imaginez la personne utilise avec un touch-screen (le desktop en 3D ne
 requiert pas obligatoirement le touch-screen).
 
 > Dans l'exemple, la personne utilise Linux avec l'interface XGL/Compiz par

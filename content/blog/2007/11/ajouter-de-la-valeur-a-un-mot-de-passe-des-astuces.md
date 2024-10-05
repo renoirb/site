@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/11/ajouter-de-la-valeur-a-un-mot-de-passe-des-astuces/
 status: publish
 revising: true
+caracteresBizzares: true
 created: '2007-11-20'
 updated: '2013-03-27'
 tags: []

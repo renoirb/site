@@ -4,6 +4,7 @@ title: Un équivalent &#8220;Open&#8221; du iPhone
 canonical: https://renoirboulanger.com/blog/2007/08/un-equivalent-open-du-iphone/
 status: publish
 revising: true
+caracteresBizzares: true
 created: '2007-08-14'
 updated: '2013-03-27'
 tags: []

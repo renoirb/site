@@ -6,6 +6,7 @@ updated: 2023-11-15
 canonical: https://renoirboulanger.com/blog/2005/09/redondance/
 status: publish
 revising: true
+caracteresBizzares: true
 categories:
   - tranche-de-vie
 tags:

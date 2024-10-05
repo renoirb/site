@@ -4,6 +4,7 @@ title: Critique de roman le DaVinci Code
 canonical: https://renoirboulanger.com/blog/2007/06/critique-de-roman-le-davinci-code/
 status: publish
 revising: true
+caracteresBizzares: true
 created: '2007-06-13'
 updated: '2013-03-27'
 tags: []

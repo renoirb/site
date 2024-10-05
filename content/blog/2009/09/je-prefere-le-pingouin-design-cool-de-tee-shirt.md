@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/09/je-prefere-le-pingouin-design-cool-de-tee-shirt/
 status: publish
 revising: true
+accentsBizzares: true
 created: '2009-09-14'
 updated: '2013-03-27'
 tags: []

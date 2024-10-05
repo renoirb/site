@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/quelques-options-de-configuration-recurentes-pour-apache-mysql-et-php/
 status: publish
 revising: true
+caracteresBizzares: true
 created: '2010-04-22'
 updated: '2013-03-27'
 tags: []

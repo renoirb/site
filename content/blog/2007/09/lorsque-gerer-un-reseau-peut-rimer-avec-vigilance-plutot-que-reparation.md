@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/09/lorsque-gerer-un-reseau-peut-rimer-avec-vigilance-plutot-que-reparation/
 status: publish
 revising: true
+caracteresBizzares: true
 created: '2007-09-28'
 updated: '2013-03-27'
 tags:

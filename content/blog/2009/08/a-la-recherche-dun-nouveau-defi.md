@@ -4,6 +4,7 @@ title: À la recherche d'un nouveau défi!
 canonical: https://renoirboulanger.com/blog/2009/08/a-la-recherche-dun-nouveau-defi/
 status: publish
 revising: true
+caracteresBizzares: true
 created: '2009-08-05'
 updated: '2013-03-27'
 tags: []

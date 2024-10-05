@@ -6,6 +6,7 @@ updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/06/une-boite-qui-traine/
 status: publish
 revising: true
+caracteresBizzares: true
 categories: []
 tags: []
 excerpt: ''

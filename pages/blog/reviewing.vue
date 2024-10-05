@@ -35,6 +35,7 @@
     caption?: boolean
     gallery?: boolean
     images?: boolean
+    caracteresBizzares?: boolean
   }
   type FlagsString = (m: WithReviewingProps) => string
   export interface Data {
@@ -81,11 +82,12 @@
       }
     },
     methods: {
-      createFlagString: ({ caption, gallery, images }) => {
+      createFlagString: ({ caption, gallery, images, caracteresBizzares }) => {
         return [
           caption === true ? 'C' : '-',
           gallery === true ? 'G' : '-',
           images === true ? 'I' : '-',
+          caracteresBizzares === true ? '√©' : '-',
         ].join(' ')
       },
     },
