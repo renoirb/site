@@ -9,15 +9,26 @@
       <div class="body">
         <ul>
           <li v-for="content in contents" :key="content.slug">
-            <NuxtLink :to="content.path">
-              {{ content.dir }} {{ content.title }}
-            </NuxtLink>
+            <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
+            <NuxtLink
+              :to="content.path"
+              target="_blank"
+              v-html="content.dir + ' ' + content.title"
+            />
             &nbsp;
             <small v-if="content.canonical">
-              (<a :href="content.canonical"> canonical </a>)
+              (<a :href="content.canonical" target="_blank">canonical </a>)
             </small>
             <details>
-              <summary>{{ createFlagString(content) }}</summary>
+              <summary>
+                score
+                {{
+                  createSortScoreForFlagThing(
+                    createFlagString(content).split(' '),
+                  )
+                }}:
+                {{ createFlagString(content) }}
+              </summary>
               <pre>{{ content }}</pre>
             </details>
           </li>
@@ -29,8 +40,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import type { MetaInfo } from 'vue-meta'
   import { findExcludingRedirectPredicate } from '~/lib'
   import type { INuxtContentResult } from '~/lib'
+  type NuxtContentResult = WithReviewingProps & INuxtContentResult
   interface WithReviewingProps {
     caption?: boolean
     gallery?: boolean
@@ -39,14 +52,63 @@
   }
   type FlagsString = (m: WithReviewingProps) => string
   export interface Data {
-    contents: INuxtContentResult[]
+    contents: NuxtContentResult[]
     count: number
   }
   export interface Methods {
     createFlagString: FlagsString
+    createSortScoreForFlagThing: (input: string[]) => number
   }
   export interface Computed {}
   export interface Props {}
+  const createFlagThing = (arg: WithReviewingProps): string[] => {
+    const a = arg.images && arg.images === true ? 'I' : '-'
+    const b = arg.gallery && arg.gallery === true ? 'G' : '-'
+    const c = arg.caption && arg.caption === true ? 'C' : '-'
+    const d =
+      arg.caracteresBizzares && arg.caracteresBizzares === true ? '√©' : '-'
+    return [a, b, c, d]
+  }
+  const createSortScoreForFlagThing = (input: string[]): number => {
+    let score = 0
+    input.filter(String).forEach((e) => (e !== '-' && e !== '' ? score++ : 0))
+    return score
+  }
+  /**
+   * This is just to make sorting logic readable and explicit.
+   *
+   * I walked thru all my blog posts, added flags. When a WordPress
+   * short code was present. Or image stored somewhere I want to
+   * harmonize all at the same place. Or with broken text due to
+   * the many database migration and it's just uggly.
+   * For each criteria, i've given an attribute name and if it's
+   * present and the value is true.
+   *
+   * Which items to review first.
+   *
+   * This is therefore to get items with most flags on, and
+   * the newest on top before the rest. So I can prioritize
+   * revising content for older articles, without images for
+   * whenever later and not be a blocker.
+   */
+  const sortCompareFn = (a: NuxtContentResult, b: NuxtContentResult) => {
+    const aProp1 = createSortScoreForFlagThing(createFlagThing(a))
+    const bProp1 = createSortScoreForFlagThing(createFlagThing(b))
+    if (aProp1 > bProp1) {
+      return -1
+    } else if (aProp1 < bProp1) {
+      return 1
+    }
+    const aProp2 = a.created.split('T')[0]
+    const bProp2 = b.created.split('T')[0]
+    if (aProp2 > bProp2) {
+      return -1
+    } else if (aProp2 < bProp2) {
+      return 1
+    }
+    // a must be equal to b
+    return 0
+  }
   export default Vue.extend<Data, Methods, Computed, Props>({
     async asyncData({ $content }) {
       const ds = $content('blog', { deep: true })
@@ -64,11 +126,11 @@
           'toc',
           'waybackMachineSnapshots',
         ])
-        .sortBy('created', 'desc')
-      const fetched = await ds.fetch()
-      const contents = fetched.filter((a) =>
-        findExcludingRedirectPredicate(a as INuxtContentResult),
-      )
+        .sortBy('created', 'asc')
+      const fetched = (await ds.fetch()) as NuxtContentResult[]
+      const contents: NuxtContentResult[] = fetched
+        .filter((a) => findExcludingRedirectPredicate(a))
+        .sort(sortCompareFn)
       const count = contents.length
       return {
         contents,
@@ -82,14 +144,16 @@
       }
     },
     methods: {
-      createFlagString: ({ caption, gallery, images, caracteresBizzares }) => {
-        return [
-          caption === true ? 'C' : '-',
-          gallery === true ? 'G' : '-',
-          images === true ? 'I' : '-',
-          caracteresBizzares === true ? '√©' : '-',
-        ].join(' ')
+      createFlagString(arg) {
+        return createFlagThing(arg).join(' ')
       },
+      createSortScoreForFlagThing,
+    },
+    head() {
+      const out: MetaInfo = {
+        meta: [{ name: 'robots', content: 'noindex' }],
+      }
+      return out
     },
   })
 </script>
