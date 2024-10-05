@@ -1,68 +1,136 @@
 ---
-locale: fr-CA
 title: Montage de dossiers distants via sshfs
+locale: fr-CA
+created: 2007-05-31
+updated: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs/
 status: publish
-revising: true
-images: true
-created: '2007-05-31'
-updated: '2013-03-27'
+revising: false
+categories:
+  - procedures
 tags:
   - linux
-  - tutoriels
-categories:
-  - tranche-de-vie
 excerpt: ''
+waybackMachineSnapshots:
+- orig: http://ubuntu.wordpress.com/2005/10/28/how-to-mount-a-remote-ssh-filesystem-using-sshfs/
+  snapshots:
+  - https://web.archive.org/web/20070324014306/http://ubuntu.wordpress.com/2005/10/28/how-to-mount-a-remote-ssh-filesystem-using-sshfs/
+- orig: https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs/
+  snapshots:
+  - https://web.archive.org/web/20090903051709/https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs/
 ---
 
-J'ai souvent vanté les mérites du SSHFS mais je n'ai jamais réellement expliqué le concept du partage à -la-windows... mais sécuritaire!
+J’ai souvent vanté les mérites du SSHFS mais je n’ai jamais réellement expliqué
+le concept du partage à-la-Windows... mais sécuritaire!
 
-Attention aux non initiés en linux... c'est un howto très technique!
+Le concept est simple. Un dossier de mount points sur diverses machines dans le
+local en Linux. Disons que votre dossier ~ est dans /home/username, ajoutez vos
+serveurs, par exemple, dans un dossier "Drives".
+
+Attention aux non initiés en Linux... c’est un howto très technique!
+
+Le résultat de cette procédure vous permettra d’accéder a des fichiers sur une
+autre machine comme si vous y étiez. Ce n’est pas un système qui synchronise les
+fichiers sur plus d’une machine. Ce n'est pas une copie de sauvegarde.
 
 <!--more-->
-Le concept est simple. Un dossier de mount points sur diverses machines dans le local en linux. Disons que votre dossier <tt>~</tt> est dans <tt>/home/username</tt>, ajoutez vos serveurs, par exemple, dans un dossier "Drives".
 
-<pre lang="bash">$ mkdir ~/Drives</pre>
+## Assomptions
 
-Ajoutez y tout vos hosts que vous voulez... Je ne prendrai pas d'exemple réel étant donné qu'on a pas nécessairement tous les même droits partout sur les machines et vm. Personnellement, je l'ai fait sur les serveurs web1 et web2 deux serveurs redondants d'hébergement de services web. J'ai donc créé <tt>~/Drives/web1</tt> et <tt>~/Drives/web2</tt>
-<pre lang="bash">
-$ mkdir ~/Drives/web1
-$ mkdir ~/Drives/web2</pre>
-Dans mon exemple, sur ces deux machines j'ai mon propre usager et j'ai ajouté mon login dans le <tt>~/.ssh/authorized_keys</tt> de mon homedir. Si vous avez pas ça, faites vous le en suivant le howto ici: <a href="/blog/2007/04/login-ssh-sans-mot-de-passe" title="SSH sans mot de passe">login ssh sans mot de passe</a>. Vous pourrez tester en faisant <tt>$ ssh hostname</tt> il devrait se loguer tout seul. Si vous ne faites pas cela, vous serez oubligé d'entrer vos mots de passes de TOUTES vos machines... A chaque login.
+J’assumerai que vous avez deux machines Linux.
 
-Pour continuer, on doit aussi installer le paquetage sshfs
-<pre lang="bash">$ sudo apt-get install sshfs</pre>
-Pour avoir le droit de monter les hôtes en sshfs, vous devez vous autoriser l'exécution du mount sinon vous êtes condamné a entrer le mot de passe root a chaque login. Vous pouvez aller via: <tt>System-&gt;Administration-&gt;Users and Groups</tt> Puis ajoutez dans <tt>Manage groups</tt> (ou quelque chose qui parle de ça) puis trouvez le groupe <tt>fuse</tt> puis dans <tt>Properties</tt> ajoutez votre propre login qui est probablement non coché.
+Pour la procédure, j’utiliserai les informations suivantes.
 
-Aussi:
-Une manière alternative de s'ajouter le droit fuse, serait de faire en shell
-<pre lang="bash">$ sudo usermod -G fuse username</pre>
+Veuillez ajuster pour votre situation:
 
-Finalement... l'auto exécution.
+<dl>
+  <dt>Utilistaeur distant</dt>
+    <dd>sa-storage</dd>
+  <dt>Hôte Linux qui va stocker les fichiers</dt>
+    <dd>192.168.0.2</dd>
+  <dt>Chemin pour fichiers sur l’hôte Linux</dt>
+    <dd>/home/sa-storage/Drives/web1</dd>
+    <dd>/home/sa-storage/Drives/web2</dd>
+</dl>
 
-Il faut aller dans <tt>System-&gt;Préférences-&gt;Sessions</tt> puis ajouter un <tt>Startup programs</tt> avec la commande suivante:
+### Considérations
 
-<pre lang="bash">
-$ sshfs REMOTE_USERNAME@REMOTE_HOSTNAME:/FULL/REMOTE/PATH/ /FULL/LOCAL/MOUNTED/PATH/Drives/web1/ -o reconnect
-</pre>
-Vous devinerez comment écrire correctement la commande en l'appliquant a vos besoins.
+Je suis prends pour acquis les détails suivants;
 
-Oubliez pas de faire sauvegarder votre session GNOME, <tt>ALT+F2</tt> puis tapez <tt>gnome-session-save</tt> puis enter.
+- Le caractère `~` est un caractère qui de décrire le chemin vers le dossier
+  Maison de l’utilisateur courrant, si vous êtes connecté en tant que "bob", le
+  dossier sera `/home/bob`
+- J’ai utilisé Ubuntu, le nom du paquet peut changer et le gestionnaire de
+  paquet aussi, mais le reste devrait demeurer la même chose.
+- Synonymes: _fusermount_, _sshfs_
+- La commande <kbd>ALT</kbd>+<kbd>F2</kbd> est un raccourci clavier pour faire
+  exécuter une commande, on pourrait trouver <kbd>RUN</kbd> dans le menu aussi.
 
-Déloguez vous et reloguez vous. En naviguant dans votre homedir, dans le dossier <tt>~/Drives/</tt> vous avez maintenant vos homedirectories sur toutes vos machines distantes... localement!
+## Prodécure
 
-<strong class="strong">Considérations</strong>
-Je tiens pour acquis certains détails dans ce document
-<ul>
-	<li>Une <tt>$</tt> devant une commande dans un bloc de code indique que l'on exécute la commande en tant que son user local</li>
-	<li>Un <tt>#</tt> indique, quant a lui qu'on est en root, on pourrait aussi bien le faire <pre lang="bash">$ sudo [commande]</pre></li>
-	<li>Le caractère <tt>~</tt> est un caractère shortcut au lieu de mentionner <em>/home/username</em></li>
-	<li>Le howto utilise Ubuntu pour l'installation mais le nom du paquetage reste le meme soit <em>fusermount</em> ou <em>sshfs</em></li>
-	<li>La commande <tt>ALT+F2</tt> est un raccourci clavier pour faire exécuter une commande, on pourrait trouver RUN dans le menu aussi.</li>
-</ul>
-<h3>Références</h3>
-<ul>
-	<li>Mon expérience... et un peu de;</li>
-	<li><span class="nobr"><a href="http://ubuntu.wordpress.com/2005/10/28/how-to-mount-a-remote-ssh-filesystem-using-sshfs/" rel="nofollow">http://ubuntu.wordpress.com/2005/10/28/how-to-mount-a-remote-ssh-filesystem-using-sshfs/<sup><img src="/images/icons/linkext7.gif" class="rendericon" align="absmiddle" border="0" height="7" width="7" /></sup></a></span></li>
-</ul>
+Sur notre machine locale, si dans le Terminal.
+
+```sh
+mkdir ~/Drives
+```
+
+Ajoutez y tout vos hosts que vous voulez... Je ne prendrai pas d’exemple réel
+étant donné qu’on a pas nécessairement tous les même droits partout sur les
+machines et vm. Personnellement, je l’ai fait sur les serveurs web1 et web2 deux
+serveurs redondants d’hébergement de services web. J’ai donc créé ~/Drives/web1
+et ~/Drives/web2
+
+```sh
+mkdir ~/Drives/web1
+mkdir ~/Drives/web2
+```
+
+Dans mon exemple, sur ces deux machines j’ai mon propre usager et j’ai ajouté
+mon login dans le ~/.ssh/authorized_keys de mon homedir. Si vous avez pas ça,
+faites vous le en suivant le howto ici:
+[login ssh sans mot de passe](/blog/2007/04/login-ssh-sans-mot-de-passe 'SSH sans mot de passe').
+Vous pourrez tester en faisant $ ssh hostname il devrait se loguer tout seul. Si
+vous ne faites pas cela, vous serez oubligé d’entrer vos mots de passes de
+TOUTES vos machines... A chaque login. Pour continuer, on doit aussi installer
+le paquetage sshfs
+
+```sh
+sudo apt-get install sshfs
+```
+
+Pour avoir le droit de monter les hôtes en sshfs, vous devez vous autoriser
+l’exécution du mount sinon vous êtes condamné a entrer le mot de passe root a
+chaque login. Vous pouvez aller via: <kbd class="nav">System <kbd>Administration
+<kbd>Users</kbd></kbd></kbd> and Groups Puis ajoutez dans Manage groups (ou
+quelque chose qui parle de ça) puis trouvez le groupe fuse puis dans Properties
+ajoutez votre propre login qui est probablement non coché. Aussi: Une manière
+alternative de s’ajouter le droit fuse, serait de faire en shell
+
+```sh
+sudo usermod -G fuse username
+```
+
+Finalement... l’auto exécution. Il faut aller dans <kbd class="nav">System
+<kbd>Préférences <kbd>Sessions</kbd></kbd></kbd> puis ajouter un Startup
+programs avec la commande suivante:
+
+```sh
+sshfs sa-storage@192.168.0.2:/home/sa-storage/Drives/web1 \
+      ~/Drives/web1 \
+      -o reconnect
+```
+
+Vous devinerez comment écrire correctement la commande en l’appliquant a vos
+besoins. Oubliez pas de faire sauvegarder votre session GNOME,
+<kbd>ALT</kbd>+<kbd>F2</kbd> puis tapez `gnome-session-save` puis enter.
+
+Déconnectez et re-connectez-vous. En naviguant dans votre dossier _Maison_
+(`~`), dans le dossier `~/Drives/` vous avez maintenant vos dossiers sur toutes
+vos machines distantes... localement!
+
+### Références
+
+Mon expérience... et un peu de;
+
+- [**How to mount a remote ssh filesystem using sshfs** October 28, 2005](https://web.archive.org/web/20070324014306/http://ubuntu.wordpress.com/2005/10/28/how-to-mount-a-remote-ssh-filesystem-using-sshfs/)

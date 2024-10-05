@@ -18,7 +18,9 @@ keywords:
   - Fiesty Fawn
   - Canonical Repository
 excerpt: ''
-description: Procedure pour installer Ubuntu 7.04 Fiesty Fawn pour faire rouler VMWare Server
+description:
+  Procedure pour installer Ubuntu 7.04 Fiesty Fawn pour faire rouler VMWare
+  Server
 preamble:
   text: |
     Dans le temps où le «cloud computing» n’était pas très fréquent, ni
@@ -45,7 +47,7 @@ j’ai fait.
 ## Télécharger Ubuntu
 
 L'idée c'est d'installer le serveur en minimal... donc une visite sur
-[http://www.ubuntu.com/getubuntu/download/][0] s'impose.
+http://www.ubuntu.com/getubuntu/download/ s'impose.
 
 La dernière mouture en version server suffit.
 
@@ -53,8 +55,9 @@ Actuellement, celle utilisée a été la Ubuntu server 7.04 Feisty Fawn de son n
 
 Il ne reste qu'a brûler le ISO sur un CD.
 
-Booter le médium d'installation Une fois le démarrage fait, un écran de la sorte
-apparaît.
+## Booter le médium d'installation
+
+Une fois le démarrage fait, un écran de la sorte apparaît.
 
 <app-image src="lost-image"></app-image>
 
@@ -79,8 +82,8 @@ Setter un nom c’t’important. Fiez vous aux normes de votre data-center.
 
 <app-image src="lost-image"></app-image>
 
-Setter son username habituel, car ensuite faire on peut copier sa clé publique
-direct dans le nouveau serveur
+Setter son username habituel, car ensuite faire on peut copier sa clé SSH
+publique direct dans le nouveau serveur
 
 ```bash
 scp ~/.ssh/id_dsa.pub ubuntu:~/.ssh/authorized_keys
@@ -88,6 +91,14 @@ scp ~/.ssh/id_dsa.pub ubuntu:~/.ssh/authorized_keys
 
 et pouvoir vivre sans entrer son password a chaque fois :) (hors du sujet mais
 j'ai mis la commande au cas où)
+
+<rb-notice-box variant="info" class="my-5" data-date="2024-09-30">
+  <strong slot="header">Méthode alternative</strong>
+
+Plutôt que d’utiliser `scp`, nous pouvons aussi utiliser la commande
+`ssh-copy-id`
+
+</rb-notice-box>
 
 <app-image src="lost-image"></app-image>
 
@@ -108,7 +119,7 @@ l'installation.
 Utiliser `sudo su --` (ou "`sudo -s`") pour s'élever au commandes d'un shell
 root.
 
-```bash
+```sh
 sudo -s
 vi /etc/apt/sources.list
 ```
@@ -126,7 +137,7 @@ deb http://archive.canonical.com/ubuntu feisty/commercial main
 Ensuite un update et un upgrade s'impose... question de garder à jour le
 serveur.
 
-```bash
+```sh[root]
 apt-get update
 apt-get upgrade
 ```
@@ -135,7 +146,7 @@ apt-get upgrade
 
 Puis, installer les kernel-modules
 
-```bash
+```bash[root]
 apt-get install vmware-server vmware-tools-kernel-modules
 ```
 
@@ -147,12 +158,22 @@ site [http://www.vmware.com][21], obligatoire.
 La console VMWare Vù qu'on a pas de XWindows pour gérer, on utilise une console
 vmware-server à partir d'une autre machine sur notre LAN.
 
-<!-- #XXX rb-notice-box -->
-<app-alert-box alert-type="error" title="Note lors de la migration 2020-09-26" message="Après re-lecture (et 14 ans plus tard) je réalise les risques que j’aurai pu causer sur mon propre serveur. Ne suivez pas aveuglément ce type de conseil! Assurez-vous de seulement installer des binaires de sources que vous faites confiance, comme celles provenant du vendeur. Pas d’un blogue au hasard! A moins que vous puissiez lire le code, et compiler vous-même."></app-alert-box>
+<rb-notice-box variant="error" class="my-5" data-date="2024-09-30">
+  <strong slot="header">Après re-lecture (et 18 ans plus tard(!!))</strong>
 
-```bash
+Je réalise à me relire que cette procédure recommande de télécharger un binaire
+(`pam_unix_vm.so`) d’un autre blogue. Ne faites pas ça!
+
+Ne suivez pas aveuglément ce type de conseil! Assurez-vous de seulement
+installer des binaires de sources que vous faites confiance, comme celles
+provenant du vendeur. Pas d’un blogue au hasard! A moins que vous puissiez lire
+le code, et compiler vous-même.
+
+</rb-notice-box>
+
+```bash{2}[root]
 cd /lib/security
-wget www.matthewbrowne.com/blog/wp-content/uploads/pam_unix_vm.so
+curl https://www.matthewbrowne.com/blog/wp-content/uploads/pam_unix_vm.so -o pam_unix_vm.so
 ```
 
 <app-image src="lost-image"></app-image>
@@ -170,22 +191,25 @@ Alors j'ai suivi, récrit le fichier comme suit
 
 Ensuite on redémarre la machine
 
-```bash
+```bash[root]
 init 6
 ```
 
 Généralement, sur la console, tu pourrait te connecter sur "Remote host" avec
 tes crédentiels et ton host et gérer tes VM :)
 
-Source
+## References
 
-- Les notes très utiles et les screenshots de
-  ~~`http://matthewbrowne.com/blog/?p=92`~~ (site maintenant hors-ligne)
-- Last.fm et la musique et le café :PpP
+- Les notes très utiles et les screenshots de ~~`matthewbrowne.com`~~ est non
+  disponible et l’Internet Archive n’a rien. Je n'ai plus les images localement
+  alors ce post est là pour des raisons historiques.
+- Mon expérience, car en fait j'ai traduit son blog-post. Mais je conaissait
+  pourtant déja les étapes, son post m'a principalement donné une structure pour
+  la traduction.
 
-[0]: https://www.ubuntu.com/getubuntu/download/
+* Last.fm et la musique et le café :PpP
+
 [21]: https://www.vmware.com/
-
 
 <!--
 https://web.archive.org/web/20060916043739/http://www.flock.com/
