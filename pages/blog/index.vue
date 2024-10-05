@@ -44,6 +44,7 @@
         pageTitle: 'Blog',
       }
     },
+    /*
     watch: {
       q: {
         immediate: true,
@@ -71,5 +72,6 @@
       // This is wrong. Improve. Plz
       this.contents = contents
     },
+    */
   })
 </script>
