@@ -35,13 +35,10 @@
             </time>
           </div>
           <div
-            v-if="content.preamble"
+            v-if="content.excerpt"
             class="mt-0 mb-5 font-serif text-md"
           >
-            <nuxt-content
-              v-if="content.preamble && content.preamble.document !== null"
-              :document="content.preamble && content.preamble.document"
-            />
+            {{ content.excerpt }}
           </div>
           <app-article-tags
             :link="true"
