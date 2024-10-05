@@ -24,7 +24,9 @@ a[href^="https://web.archive.org/"]:after
 a:not([href^="https://renoirb.github.io/"])[target="_blank"]:after,
 a:not([href^="https://renoirboulanger.com/"])[target="_blank"]:after
 {
-  content: ' ⧉';
+  /* https://stackoverflow.com/a/32317444 */
+  /* content: ' ⧉'; */
+  content: '\29C9';
 }
 
 [data-fou-de-la-pouitte]:after {

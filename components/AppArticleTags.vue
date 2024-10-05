@@ -17,9 +17,8 @@
         class="px-2 py-1 mb-3 mr-3"
         :class="{ 'is-hoverizable': link }"
       >
-        <!-- eslint-disable vue/no-v-html -->
+        <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
         <span v-if="link === false" v-html="abbreviatize(tag)" />
-        <!-- eslint-disable vue/no-v-html -->
         <NuxtLink
           v-else
           :to="`/blog/tag/${String(tag).toLocaleLowerCase()}`"
