@@ -451,7 +451,7 @@ SNIPPET: Ensure ALL assets uploads are displayed properly
 
 ## Screenshots
 
-<div style="overflow:hidden;clear:both" class="thumbnails gallery">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery">
 <app-image figcaption=" " src="~/assets/content/blog/2015/07/mediawiki-history-to-git-conversion.png">
 
 [WebPlatform/mediawiki-conversion][mediawiki-conversion] is made to run in 3

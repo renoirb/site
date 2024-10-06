@@ -181,7 +181,7 @@ Done!
 
 ## Screenshots
 
-<div style="overflow:hidden;clear:both">
+<div style="overflow:hidden;clear:both;">
 
 <app-image src="~/assets/content/blog/2015/02/sessions_memcached_before2.png" alt="OpenStack Cloud-Init dialog">
 

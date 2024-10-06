@@ -108,3 +108,4 @@ Mon ami [François Légaré][4] a pris cette photo:
 [6]: https://twitter.com/joplam
 [7]: https://twitter.com/cybik
 [8]: https://twitter.com/vivrass
+[fb-post-waq]: https://www.facebook.com/photo/?fbid=511482285570250&set=a.511431488908663 "2013-02-22 Publication Facebook du WAQ"

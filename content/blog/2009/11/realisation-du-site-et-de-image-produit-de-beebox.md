@@ -46,7 +46,7 @@ Comme j'en ai parlé dans <a href="http://renoirboulanger.com/blog/2009/11/reali
 <!--
 #TODO-App-Image: Implement data-larger-src
 -->
-<div style="overflow:hidden;clear:both" class="thumbnails gallery flex flex-row flex-wrap">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
 
 <app-image class="w-1/3" data-larger-src="~/assets/content/blog/2009/11/featurespage.png" src="~/assets/content/blog/2009/11/featurespage-150x150.png" alt="" figcaption=" ">
 Beebox : Schéma descriptif concepts Intégration continue

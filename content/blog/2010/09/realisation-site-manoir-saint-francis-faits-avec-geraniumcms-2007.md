@@ -35,7 +35,7 @@ Dans ma série d'articles ou je parle des <a href="https://renoirboulanger.com/b
 
 ## Gallerie d'images
 
-<div style="overflow:hidden;clear:both">
+<div style="overflow:hidden;clear:both;">
 
 <app-image figcaption="Boutons mode édition" src="~/assets/content/blog/2010/08/screenshot_manoirstfrancis1_cms-150x150.png" data-larger-src="~/assets/content/blog/2010/08/screenshot_manoirstfrancis1_cms.png"></app-image>
 

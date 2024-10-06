@@ -57,8 +57,7 @@ Je sais pas si vous êtes comme moi. J’aime avoir le bon clavier pour pouvoir 
 
 ... à moins que j'apprenne le Dvorak <del>(un jour!)</del>
 
-Ma solution
------------
+## Ma solution
 
 J'ai trouvé cet article dans le [Wiki de Ubuntu Linux qui portait un nom très peu évocateur («LocaleConf»)](https://help.ubuntu.com/community/LocaleConf "LocaleConf  you need to change the language and keyboard configuration, follow these instructions").
 
@@ -68,7 +67,7 @@ En gros c'est simple, il faut:
 *   `console-data`
 *   `localeconf`
 
-### Installer
+## Installer
 
 ```sh
 sudo apt-get install console-data console-tools
@@ -88,20 +87,21 @@ J'ai suivi:
 4.  «French»
 
 
-<div style="overflow:hidden;clear:both" class="thumbnails gallery">
-<app-image data-larger-src="~/assets/content/blog/2010/12/Configure-console-data.png" src="~/assets/content/blog/2010/12/Configure-console-data-150x150.png" alt="Console text base user interface" figcaption=" ">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
+
+<app-image class="w-1/3" src="~/assets/content/blog/2010/12/Configure-console-data.png" data-smaller-src="~/assets/content/blog/2010/12/Configure-console-data-150x150.png" alt="Console text base user interface" figcaption=" ">
 
 Configure console-data
 
 
 </app-image>
-<app-image data-larger-src="~/assets/content/blog/2010/12/Configure_console-data_Keyboard_variant_french.png" src="~/assets/content/blog/2010/12/Configure_console-data_Keyboard_variant_french-150x150.png" alt="Console text base user interface" figcaption=" ">
+<app-image class="w-1/3" src="~/assets/content/blog/2010/12/Configure_console-data_Keyboard_variant_french.png" data-smaller-src="~/assets/content/blog/2010/12/Configure_console-data_Keyboard_variant_french-150x150.png" alt="Console text base user interface" figcaption=" ">
 
 </app-image>
-<app-image data-larger-src="~/assets/content/blog/2010/12/Configure_console-data_specify_layout_family.png" src="~/assets/content/blog/2010/12/Configure_console-data_specify_layout_family-150x150.png" alt="Console text base user interface" figcaption=" ">
+<app-image class="w-1/3" src="~/assets/content/blog/2010/12/Configure_console-data_specify_layout_family.png" data-smaller-src="~/assets/content/blog/2010/12/Configure_console-data_specify_layout_family-150x150.png" alt="Console text base user interface" figcaption=" ">
 
 </app-image>
-<app-image data-larger-src="~/assets/content/blog/2010/12/Configuring_console-data_Keyboard_layout_Canadian.png" src="~/assets/content/blog/2010/12/Configuring_console-data_Keyboard_layout_Canadian-150x150.png" alt="Console text base user interface" figcaption=" ">
+<app-image class="w-1/3" src="~/assets/content/blog/2010/12/Configuring_console-data_Keyboard_layout_Canadian.png" data-smaller-src="~/assets/content/blog/2010/12/Configuring_console-data_Keyboard_layout_Canadian-150x150.png" alt="Console text base user interface" figcaption=" ">
 
 </app-image>
 </div>

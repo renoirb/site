@@ -402,7 +402,7 @@ That’s it, it’s all I had.
 #TODO-App-Image: Implement data-larger-src
 -->
 
-<div style="overflow:hidden;clear:both" class="thumbnails gallery">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery">
 
 <app-image src="~/assets/content/blog/2015/05/publican-preview.png" alt="A W3C Specification preview where we can see on the left the specification, and on the right the source highlighting changes in the source" figcaption=" ">
  W3C Publican prototype build process helping with specification change tracking during review process

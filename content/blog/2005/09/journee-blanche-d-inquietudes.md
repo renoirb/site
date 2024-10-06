@@ -10,6 +10,7 @@ categories:
   - tranche-de-vie
 tags:
   - entrepreneurial-life
+  - inexis
 excerpt: >-
   J’adore mon travail d'administrateur système Linux. Sauf que lorsque lorsque
   je passe une nuit blanche pour un simple détail… c’est frustrant si je ne peux

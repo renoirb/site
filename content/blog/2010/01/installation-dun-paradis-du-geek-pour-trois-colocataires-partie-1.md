@@ -81,7 +81,7 @@ En gros ce que nous avons installé:
 #TODO-App-Image: Implement data-larger-src
 -->
 
-<div style="overflow:hidden;clear:both" class="thumbnails gallery">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery">
 
 <app-image data-larger-src="~/assets/content/blog/2010/01/IMG_0336.jpg" src="~/assets/content/blog/2010/01/IMG_0336-150x150.jpg" figcaption=" " alt="Une couette de fils">
 </app-image>
