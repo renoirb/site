@@ -48,6 +48,7 @@
     caption?: boolean
     gallery?: boolean
     images?: boolean
+    migrateImages?: boolean
     caracteresBizzares?: boolean
   }
   type FlagsString = (m: WithReviewingProps) => string
@@ -67,7 +68,8 @@
     const c = arg.caption && arg.caption === true ? 'C' : '-'
     const d =
       arg.caracteresBizzares && arg.caracteresBizzares === true ? '√©' : '-'
-    return [a, b, c, d]
+    const e = arg.migrateImages && arg.migrateImages === true ? 'M' : '-'
+    return [a, b, c, d, e]
   }
   const createSortScoreForFlagThing = (input: string[]): number => {
     let score = 0

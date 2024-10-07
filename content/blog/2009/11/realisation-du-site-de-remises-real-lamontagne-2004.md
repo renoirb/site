@@ -6,6 +6,7 @@ canonical: >-
 status: publish
 revising: true
 caption: true
+migrateImages: true
 created: '2009-11-05'
 updated: '2013-03-27'
 tags:

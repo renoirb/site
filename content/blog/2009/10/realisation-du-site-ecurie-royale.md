@@ -6,6 +6,7 @@ status: publish
 revising: true
 caption: true
 images: true
+migrateImages: true
 created: '2009-10-28'
 updated: '2013-03-27'
 tags:
@@ -33,7 +34,7 @@ excerpt: ''
 </tr>
 <tr>
 <th class="spec" scope="row">Graphisme</th>
-<td><a href="http://www.tatou.ca/">Tatou Communication visuelle</a></td>
+<td><a href="http://www.tatou.ca/" rel="nofollow">Tatou Communication visuelle</a></td>
 </tr>
 <tr>
 <th class="spec" scope="row">Date de réalisation</th>
@@ -41,7 +42,7 @@ excerpt: ''
 </tr>
 <tr>
 <th class="spec" scope="row">Nom de domaine</th>
-<td><a href="http://www.ecurieroyale.com/">ecurieroyale.com</a></td>
+<td><a href="http://www.ecurieroyale.com/" rel="nofollow">ecurieroyale.com</a></td>
 </tr>
 </tbody></table>
 <h3>D'autres captures</h3>

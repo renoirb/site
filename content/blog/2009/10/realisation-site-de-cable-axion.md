@@ -5,6 +5,7 @@ canonical: https://renoirboulanger.com/blog/2009/10/realisation-site-de-cable-ax
 status: publish
 revising: true
 caption: true
+migrateImages: true
 created: '2009-10-30'
 updated: '2013-03-27'
 tags:
