@@ -9,7 +9,8 @@ migrateImages: true
 created: '2009-08-20'
 updated: '2013-03-27'
 tags: []
-categories: []
+categories:
+- portfolio
 excerpt: ''
 ---
 
