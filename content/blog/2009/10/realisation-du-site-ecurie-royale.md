@@ -1,54 +1,91 @@
 ---
-locale: fr-CA
 title: Réalisation du site Écurie Royale [2004]
+locale: fr-CA
+created: 2009-10-28
+updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2009/10/realisation-du-site-ecurie-royale/
 status: publish
-revising: true
-caption: true
-images: true
-migrateImages: true
-created: '2009-10-28'
-updated: '2013-03-27'
+revising: false
+categories:
+  - portfolio
 tags:
   - css
   - geraniumcms
   - html
   - inexis
   - integration
-categories:
-  - portfolio
+coverImage:
+  src: ~/assets/content/blog/2009/10/ecurieroyale1-150x150.jpg
+  alt: 'Capture d’écran'
+  text: 'Site Web de l’Écurie Royale.'
 excerpt: ''
 ---
 
-<center>[caption id="" align="alignnone" width="450" caption="Prise de vue site Écurie Royale."]<a href="http://www.flickr.com/photos/inexisdotnet/4051258827/"><img title="Prise de vue site Écurie Royale. Redirige sur Flickr." src="http://farm3.static.flickr.com/2584/4051258827_0aec2be244.jpg" alt="Prise de vue site Écurie Royale." width="450" height="436" /></a>[/caption]</center>
+Il s’agit d’un site que j’ai fait en 2004 avec l’une des premières moutures de
+GéraniumCMS dans le temps que je le surnommait Inexis SiS. Système d’Intégration
+Standard... bref mon propre «<span lang="en">framework</span>» que j’ai
+éventuellement laissé tomber au fil des ans.
 
-<p>Il s'agit d'un site que j'ai fait en 2004 avec l'une des premières moutures de GéraniumCMS dans le temps que je le surnommait Inexis SiS. Système d'Intégration Standard... bref mon propre «framework».</p>
 <!--more-->
 
-<p>Je n'ai pas beaucoup d'informations sur la durée de la programmation mais le site, encore aujourd'hui (je ne sais pas pour encore combien de temps) toujours en ligne.</p>
-<table class="dltable" border="0" cellspacing="0">
-<tbody>
-<tr>
-<th class="nobg"></th>
-<th scope="col">Détails</th>
-</tr>
-<tr>
-<th class="spec" scope="row">Graphisme</th>
-<td><a href="http://www.tatou.ca/" rel="nofollow">Tatou Communication visuelle</a></td>
-</tr>
-<tr>
-<th class="spec" scope="row">Date de réalisation</th>
-<td>Février 2004</td>
-</tr>
-<tr>
-<th class="spec" scope="row">Nom de domaine</th>
-<td><a href="http://www.ecurieroyale.com/" rel="nofollow">ecurieroyale.com</a></td>
-</tr>
-</tbody></table>
-<h3>D'autres captures</h3>
-<ul>
-	<li><a title="Page accueil en 2009" rel="lightbox[1]" href="http://farm4.static.flickr.com/3525/4052003364_327fc6da48.jpg">Screenshot un</a></li>
-	<li><a title="Page accueil en 2005" rel="lightbox[1]" href="http://farm1.static.flickr.com/53/192068263_3110890177.jpg">Screenshot deux</a></li>
-</ul>
+Le site Web était fait dans le temps ou le CSS ne permettait pas tant de
+contrôler les fontes et les maquettes graphiques voulaient des fontes très
+précises qui s’alignent très précisément avec la partie du haut et du bas des
+lettres en typographie qui s’alignent directement avec le changement de couleur.
+Les items de menus étaient des images découpées, comme il en était pratique
+courrante à l’époque. Les images étaient découpés en plusieurs morceaux, puis
+certains avaient du code JavaScript pour détecter si le curseur de la souris est
+sur un element du menu, et de changer la couleur du texte en remplacant par une
+autre variante du même menu. Ce qui donnait l’illusion que c’était un texte en
+hyperlien. Il y avait plusieurs autres pratiques similaires avec les images. Les
+coins ronds étaient aussi des images. Il fallait découper l’image d’une façon
+pour pouvoir la faire répéter.
 
-<p>Voir la suite de <strong><a href="/blog/category/portfolio">mon Portfolio</a></strong></p>
+<rb-notice-box variant="info" class="my-5" date="2024-10-07">
+  <strong slot="header">Révision faite en 2024</strong>
+
+Une grande partie de cette page a été écrite
+[lors de la refonte de mon site](/blog/2024/10/refonte-majeure-de-mon-site-web)
+et de son contenu. Cet article n’expliquait pas vraiment les défis techniques
+reliés aux attentes visuelles et ce qui était possible de faire en Intégration
+Web a l’époque.
+
+</rb-notice-box>
+
+<dl>
+  <dt>Graphisme</dt>
+    <dd><a href="http://www.tatou.ca/">Tatou Communication visuelle</a></dd>
+  <dt>Date de réalisation</dt>
+    <dd><time datetime="2004-02">Février 2004</time></dd>
+  <dt>Nom de domaine</dt>
+    <dd><a href="http://www.ecurieroyale.com/">ecurieroyale.com</a></dd>
+</dl>
+
+## J’ai aussi visité l’écurie
+
+Outre cette description des aspects technique de la réaliastion J’aimerai aussi
+dire que j’ai aussi eu la chance d’utiliser et de profiter des installations
+d’Hélène Coulombe et de faire de l’équitation à
+<a href="http://www.ecurieroyale.com/">l’Écurie Royale</a>. J’avais organisé une
+activité en tant que chef de troupe dans les Scouts et ai fait profiter ma
+troupe d’enfants (9-11 ans, _Louveteaux_).
+
+C’était très agréable de pouvoir faire de l’équitation et d’avoir de
+l’encadrement pour introduire ce sport aux enfants.
+
+## Captures d’écran
+
+<div style="overflow:hidden;clear:both" class="thumbnails gallery flex flex-row flex-wrap">
+
+<app-image class="w-1/3" src="~/assets/content/blog/2009/10/ecurieroyale_192068263_3110890177_b.jpg" alt="" figcaption=" ">
+
+Page accueil en 2005
+
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/10/ecurieroyale_4052003364_327fc6da48_c.jpg" alt="" figcaption=" ">
+
+Page accueil en 2009
+
+</app-image>
+
+</div>
