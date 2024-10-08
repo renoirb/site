@@ -5,7 +5,10 @@ created: 2010-03-17
 updated: 2013-03-27
 canonical: 'https://renoirboulanger.com/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab/'
 status: publish
-revising: false
+revising: true
+migrateImages: true
+gallery: true
+caption: true
 categories:
   - tranche-de-vie
 tags:
@@ -29,6 +32,10 @@ preamble:
     entre 2010-2012.
     J’y ai rencontré de bons amis et bonnes conaissances avec qui je garde de beaux souvenirs.
     Voici ce à quoi le site ressemblait sur [**DevLabMtl.org** en 2011 via Le *Web Archive*](https://web.archive.org/web/20110814135755/http://devlabmtl.org/).
+webarchiveSnapshots:
+- orig: http://www.webnotwar.ca/ftw/
+  snapshots:
+  - https://web.archive.org/web/20100309195343/http://www.webnotwar.ca/ftw/
 ---
 
 Moi et mes partenaires d’affaires des [GeekNights][1] (_Stéphan Champagne_,
@@ -107,4 +114,4 @@ du projet.
 
 [1]: /blog/tag/geeknight
 [6]:
-  http://www.webnotwar.ca/ftw/?wt.mc_id=can_partner-ftw-en_blog_community&who=evocatio
+  https://web.archive.org/web/20100309195343/http://www.webnotwar.ca/ftw/

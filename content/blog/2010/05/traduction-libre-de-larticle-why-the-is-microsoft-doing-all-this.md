@@ -5,6 +5,9 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this/
 status: publish
 revising: true
+migratingImages: true
+gallery: true
+caption: true
 created: '2010-05-30'
 updated: '2023-11-15'
 tags:
@@ -43,7 +46,7 @@ excerpt: >-
 
 <p>Alors C'est quoi le vrai objectif de Microsoft de faire tout ceci.</p>
 
-<p>Quelques uns disent que c'est pour l'amour de la technologie, pour aider les programmeurs et les designers web (<acronym title="Note de la Traduction">N.D.L.T</acronym>: parlant de <a href="http://www.microsoft.com/bizspark/">BizSpark</a>).  D'autres pensent que <a href="http://vanillaforums.org/blog/make-web-not-war-ftw-competition/#comments" target="_blank" rel="noopener">Microsoft est <em>désespéré</em></a>, et qu'ils sont forcé sur le chemin du Logiciel Libre. D'autres comme les gens de la communauté des Logiciels Libre comme ceux avec qui Microsoft Canada contribue: <a href="http://www.phpquebec.org/" target="_blank" rel="noopener">PHP Quebec</a>, <a href="http://impresscms.org/" target="_blank" rel="noopener">Impress CMS</a>, <a href="http://tikiwiki.org" target="_blank" rel="noopener">TikiWiki</a>, <a href="http://vanillaforums.org/" target="_blank" rel="noopener">Vanilla Forums</a>, <a href="http://status.net/" target="_blank" rel="noopener">Status.net</a>, <a href="http://phug.ca" target="_blank" rel="noopener">PHUG</a> et plusieurs autres, disent que c'est bon pour leur projets et leur permet un nouveau spectre d'exposition. Particulièrement dans les boîtes pro-Microsoft.</p>
+<p>Quelques uns disent que c'est pour l'amour de la technologie, pour aider les programmeurs et les designers web (<abbr title="Note de la Traduction">N.D.L.T</abbr>: parlant de <a href="https://web.archive.org/web/20100328124942/http://www.microsoft.com/bizspark/">Microsoft BizSpark</a>).  D'autres pensent que <a href="https://web.archive.org/web/20100527021607/http://vanillaforums.org/blog/make-web-not-war-ftw-competition/" target="_blank" rel="noopener">Microsoft est <em>désespéré</em></a>, et qu'ils sont forcé sur le chemin du Logiciel Libre. D'autres comme les gens de la communauté des Logiciels Libre comme ceux avec qui Microsoft Canada contribue: <a href="http://www.phpquebec.org/" target="_blank" rel="noopener">PHP Quebec</a>, <a href="http://impresscms.org/" target="_blank" rel="noopener">Impress CMS</a>, <a href="http://tikiwiki.org" target="_blank" rel="noopener">TikiWiki</a>, <a href="http://vanillaforums.org/" target="_blank" rel="noopener">Vanilla Forums</a>, <a href="http://status.net/" target="_blank" rel="noopener">Status.net</a>, <a href="http://phug.ca" target="_blank" rel="noopener">PHUG</a> et plusieurs autres, disent que c'est bon pour leur projets et leur permet un nouveau spectre d'exposition. Particulièrement dans les boîtes pro-Microsoft.</p>
 
 <p>Tout ceci fait que du bon sens d'un point de vue Affaires. On ne peut contredire son bienfait.</p>
 

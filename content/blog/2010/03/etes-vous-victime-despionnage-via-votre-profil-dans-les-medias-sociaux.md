@@ -117,12 +117,6 @@ Je crois avoir fait le tour de mes indices.
 Il n’y a pas de recettes miracle. Personnellement le simple fait de se tenir
 informé des méthodes qu’ils utilisent.
 
-### Suggestions, indices?
-
-Si vous avez des idées, indices, suggestions, faites moi le savoir dans le [fil
-de commentaires][3].
 
 [1]: https://en.wikipedia.org/wiki/Spy_vs._Spy
 [2]: https://fr.wikipedia.org/wiki/Spam
-[3]:
-  https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux#comments

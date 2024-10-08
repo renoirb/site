@@ -88,7 +88,7 @@ j’ai pu produire dans les temps une grande charge de travail a moi seul.
 
 Ce projet arrivait dans un bon timing car j’était dans une passe où je ne
 voulait que coder pour passer ma
-[certification ZCE](http://renoirboulanger.com/blog/2009/09/devenir-zend-certified-engineer-avec-php5/)
+[certification ZCE](/blog/2009/09/devenir-zend-certified-engineer-avec-php5/)
 (que je n’ai toujours pas). Je cherchait des petits projets pour jouer avec des
 frameworks PHP. Je crois que ce projet fut une réussite.
 

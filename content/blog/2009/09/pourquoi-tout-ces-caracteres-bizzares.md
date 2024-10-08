@@ -1,6 +1,6 @@
 ---
 locale: fr-CA
-title: Pourquoi tout ces caractères bizzares?
+title: Pourquoi tout ces caract√®res bizzares?
 canonical: >-
   https://renoirboulanger.com/blog/2009/09/pourquoi-tout-ces-caracteres-bizzares/
 status: publish
@@ -26,7 +26,7 @@ C'est pour rester poli car vous pouvez vous imaginer que ça me met pas de bonne
 Les lettres bizzares qui remplacent les accents (é, √ä)... c'est un problème de traduction de «<a href="http://fr.wikipedia.org/wiki/Codage_de_caract%C3%A8res">Character set</a>».
 
 <h2>Pourquoi?</h2>
-Parceque j'ai fait la gaffe de ne pas «Backuper» ma base de donnée de mon blogue avant de faire une mise a jour sur le serveur <a href="/blog/2009/08/geeknight-ce-soir/">des Geeks</a> et après l'avoir réinstallé. 
+Parceque j'ai fait la gaffe de ne pas «Backuper» ma base de donnée de mon blogue avant de faire une mise a jour sur le serveur <a href="/blog/2009/08/geeknight-ce-soir/">des Geeks</a> et après l'avoir réinstallé.
 
 Ça m'apprendra!
 
