@@ -1,3 +1,30 @@
+#
+# Redirects
+#
+# Format:
+#
+# [source] [destination] [code?]
+#
+# source required
+#     A file path.
+#     Can include wildcards (*) and placeholders.
+#     Because fragments are evaluated by your browser and not Cloudflare’s network, any fragments in the source are not evaluated.
+#
+# destination required
+#     A file path or external link.
+#     Can include fragments, query strings, splats, and placeholders.
+#
+# code default: 302
+#     Optional parameter
+#
+#
+# A project is limited to 2000 static redirects and 100 dynamic redirects,
+# for a combined total of 2100 redirects.
+# Each redirect declaration has a 1000-character limit.
+#
+# Bookmarks:
+# - https://developers.cloudflare.com/pages/configuration/redirects/
+#
 /files/cvrenoir_latest.pdf /files/resume/Resume-Renoir-Boulanger.pdf
 /files/cvrenoir_latest_en.pdf /files/resume/Resume-Renoir-Boulanger.pdf 301
 /files/Resume-Renoir-Boulanger.pdf /files/resume/Resume-Renoir-Boulanger.pdf 301
@@ -6,7 +33,7 @@
 /me-joindre/ /contact/ 301
 /renoir-boulanger/ /about/ 301
 /about/renoirb-2/ /about/ 301
-/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/ /error/?c=deleted
+/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/ /error/?c=disabled-img-url
 /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical-2/ /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical/ 301
 /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical-3/ /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical/ 301
 /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical-4/ /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical/ 301

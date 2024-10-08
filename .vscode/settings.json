@@ -13,7 +13,8 @@
   "eslint.packageManager": "yarn",
   "eslint.run": "onType",
   "files.associations": {
-    "*.css": "vue-postcss"
+    "*.css": "vue-postcss",
+    "static/_redirects": "plaintext"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
