@@ -5,6 +5,7 @@ canonical: https://renoirboulanger.com/blog/2014/07/article-impacts-of-heartblee
 status: publish
 revising: true
 images: true
+migrateLinks: true
 created: '2014-07-04'
 updated: '2014-07-04'
 tags:
@@ -20,11 +21,30 @@ excerpt: >-
   a few questions for an article for Dell.com Tech Page One blog, the following
   is the answers I gave.
 description: Answers I gave for an article about the impacts of Heartbleed
+coverImage:
+  src: ~/assets/content/blog/2014/07/heartbleed-247x300.png
+  alt: Hand drawn shape of a heart on white background
+  text: >-
+    Logo representing [Heartbleed][wikipedia-heartbleed].
+    Awareness and media coverage of Heartbleed was unusually high for a software bug.
+    **CVE**: [CVE-2014-0160][CVE]
+    [CVE]: https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160
+    [wikipedia-heartbleed]: https://en.wikipedia.org/wiki/Heartbleed
 ---
+<!--
+migrateLinks:
+  external: 3
+  waybackMachine:
+  - www.saltstack.com
+  - saltproject.io
+  - www.w3.org
+  - www.webplatform.org
+  - techpageone.dell.com
+-->
 
-<p>Last spring, I had been invited to answer questions for an article about Heartbleed. It was an invitation extended by my friends at <a href="http://www.saltstack.com/">SaltStack</a>. Since I use extensively automated deployment techniques with Salt Stack, they thought i’d have things to say.</p>
+<p>Last spring, I had been invited to answer questions for an article about Heartbleed. It was an invitation extended by my friends at <a href="https://saltproject.io/">SaltStack</a>. Since I use extensively automated deployment techniques with Salt Stack, they thought i’d have things to say.</p>
 
-<p>I accepted to answer the questions on my personal time as the DevOps lead of <a href="http://www.webplatform.org/">WebPlatform.org</a>, rather than directly as a <a href="http://www.w3.org/People/">W3C</a> team member. And that, even though I had big help from my manager, <a href="http://www.w3.org/People/#schepers">Doug Schepers</a>, and a few colleagues from the team. Their help was much useful to review and add stats to my arguments.</p>
+<p>I accepted to answer the questions on my personal time as the DevOps lead of <a href="http://www.webplatform.org/">WebPlatform.org</a>, rather than directly as a <a href="http://www.w3.org/People/">W3C</a> team member. And that, even though I had big help from my manager, <a href="https://www.w3.org/People/Alumni#doug-schepers">Doug Schepers</a>, and a few colleagues from the team. Their help was much useful to review and add stats to my arguments.</p>
 
 <p>The article has been published on <a href="http://techpageone.dell.com/technology/protecting-against-cyber-warfare/">Dell.com's Tech Page One blog</a> but only quotes a few pieces of my original contribution. Here is the full answers I gave to the questions.</p>
 
@@ -77,7 +97,12 @@ list of servers using a given version of OpenSSL that is known to have the mista
 
 <p>There are dozens of other potential oops. One of the most common type of security breach is what we call "SQL injection". That’s yet another programming mistake that sends user input directly to the database server without filtering.</p>
 
-<p><img src="/wp-content/uploads/2014/07/exploits_of_a_mom.png" alt="img" title="XKCD #327: Exploits of a mom" /></p>
+
+<app-image src="~/assets/content/blog/2014/07/exploits_of_a_mom.png" figcaption=" ">
+
+Credits: [**XKCD #327**: Exploits of a mom](https://xkcd.com/327/)
+
+</app-image>
 
 <p>In the case of Heartbleed, it was a similar kind of programming error. A way to achieve peace of mind includes among others; Testing, proof techniques, "sandboxing" (protected memory), making software Open Source all helps to catch those errors.</p>
 
@@ -86,8 +111,3 @@ list of servers using a given version of OpenSSL that is known to have the mista
 <p>But all security can be completely overcome by a small human mistake answering private information to the wrong person. Education about how to validate and detect the real collaborator to the potential thief is another challenge in itself.</p>
 
 <p>Many people are talking about it for ages. The recent events makes their teachings more relevant than ever.</p>
-
-<h3>Credits</h3>
-
-<p>Heartbleed graphic: Codenomicon
-Comic strip: <a href="http://xkcd.com/327/">XKCD #327</a></p>

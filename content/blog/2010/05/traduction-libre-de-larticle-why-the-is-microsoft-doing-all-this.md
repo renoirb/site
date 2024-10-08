@@ -5,10 +5,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this/
 status: publish
 revising: true
-migrateImages: true
 gallery: true
 caption: true
-migratingLinks: true
+migrateImages: true
+migrateLinks: true
 created: '2010-05-30'
 updated: '2023-11-15'
 tags:
@@ -21,7 +21,14 @@ excerpt: >-
   j'ai eu envie de le traduire.
 ---
 
-<p><img class="size-full wp-image-2191 alignright" title="Make Web Not War bannière de commanditaires" src="/wp-content/uploads/2010/05/MWNW-sponsor-banner1.jpg" alt="" width="227" height="430" /></p>
+<p><img class="size-full wp-image-2191 alignright" title="Make Web Not War bannière de commanditaires" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/05/MWNW-sponsor-banner1.jpg" alt="" width="227" height="430" /></p>
+
+<rb-notice-box variant="info" class="my-5">
+<strong slot="header">Article publié aussi sur Port25.ca</strong>
+
+L’article avait été publié aussi sur le blogue de Microsoft *Canada* [Port25.ca/.../traduction-libre-de-l-article-...](https://web.archive.org/web/20100721000731/http://port25.ca/archive/2010/06/02/traduction-libre-de-l-article-171-why-the-amp-is-microsoft-doing-all-this-187.aspx)
+
+</rb-notice-box>
 
 <p>Ceci est une traduction libre du <a href="https://web.archive.org/web/20100601083657/http://port25.ca/archive/2010/05/27/why-the-amp-is-microsoft-doing-this.aspx">billet originalement écrit en anglais</a>, par <a href="http://twitter.com/Nik_G">Nik G.</a> de Microsoft Canada sur le <a href="https://web.archive.org/web/20100604060922/http://port25.ca/">blogue Port25<strong>.ca</strong></a> et j'ai eu envie de le traduire pour la postérité.</p>
 

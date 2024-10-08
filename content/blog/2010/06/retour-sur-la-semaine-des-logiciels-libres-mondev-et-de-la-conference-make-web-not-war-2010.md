@@ -10,6 +10,7 @@ revising: true
 gallery: true
 caption: true
 migrateImages: true
+migrateLinks: true
 created: '2010-06-22'
 updated: '2013-03-27'
 tags: []
@@ -17,7 +18,7 @@ categories: []
 excerpt: ''
 ---
 
-<img class="alignright" title="Des gens de PHP Québec et devLAB Montréal sur la même table" src="http://renoirboulanger.com/wp-content/uploads/2010/05/Codefest.jpg" alt="Des gens de PHP Québec et devLAB Montréal sur la même table" width="320" height="165" />Ça y est. Ça fait plusieurs semaines que la semaine du <a href="http://webnotwar.ca">Make Web Not War</a> et <a href="http://mondev.org">MonDev</a> est passée. Ce fut une semaine très occupée.
+<img class="alignright" title="Des gens de PHP Québec et devLAB Montréal sur la même table" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/05/Codefest.jpg" alt="Des gens de PHP Québec et devLAB Montréal sur la même table" width="320" height="165" />Ça y est. Ça fait plusieurs semaines que la semaine du <a href="http://webnotwar.ca">Make Web Not War</a> et <a href="http://mondev.org">MonDev</a> est passée. Ce fut une semaine très occupée.
 
 Nous travaillons (m'incluant avec <a href="http://devlabmtl.org">devLAB Montréal</a>) avec <a href="http://dropthedigibomb.com">digibomb</a> (Brendan) pour la planification de ces deux événements et j'aimerai contribuer ce que j'ai appris de l'expérience.
 

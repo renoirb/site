@@ -8,6 +8,7 @@ updated: 2009-08-26
 canonical: 'https://renoirboulanger.com/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers/'
 status: publish
 revising: true
+migrateLinks: true
 categories:
   - actualites
 tags:
@@ -37,8 +38,21 @@ preamble:
     Malheureusement, le lien de l'article et du sondage n’est plus retrouvable.
     Mais il est possible que le résultat du sondage [a été utilisé pour cet article][11].
     [twitter-rww]: https://twitter.com/RWW 'ReadWriteWeb Twitter account'
-    [11]: https://readwrite.com/2009/06/25/augmented_reality_heres_our_wishlist_of_apps_whats/ 'Augmented Reality: Here’s Our Wishlist of Apps, What’s On Yours?'
+    [11]: https://readwrite.com/augmented_reality_heres_our_wishlist_of_apps_whats/ 'Article dated on 2009-06-25 titled: Augmented Reality. Here’s Our Wishlist of Apps, What’s On Yours?'
 ---
+<!--
+migrateLinks:
+  external: 8
+  waybackMachine:
+  - fr.wikipedia.org
+  - hrmpf.com
+  - en.wikipedia.org
+  - layar.eu
+  - www.wikitude.org
+  - www.dailymotion.com
+  - twitter.com
+  - readwrite.com
+-->
 
 La technologie est spéculée depuis quelques années déjà. Le concept est simple:
 Lorsqu'on «filme» une scène on peut voir ce que l'objectif capte. Imaginez
@@ -105,13 +119,18 @@ le travail de recherche qui avait été fait entre 2009 et 2010.
 
 </app-alert-box>
 
-<app-image src="~/assets/content/blog/2009/08/dailymotion-xc863i.png" figcaption="Une nouvelle expérience 3D de réalité augmentée conçue et réalisée par Dassault Systèmes. Transformez votre paquet de Chocapic ou de Nesquik en jeu vidéo 3D. [Pour jouer] branchez votre webcam. Disponible partout en France début Novembre 2009.">
+<app-image src="~/assets/content/blog/2009/08/dailymotion-xc863i.png" figcaption=" ">
+
+Une nouvelle expérience 3D de réalité augmentée conçue et réalisée par Dassault Systèmes. Transformez votre paquet de Chocapic ou de Nesquik en jeu vidéo 3D. [Pour jouer] branchez votre webcam. Disponible partout en France début Novembre 2009.
 
 [Lien vers le vidéo][xc863i]
 
 </app-image>
 
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xc863i" width="100%" height="100%" allowfullscreen > </iframe> </div>
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<!--#TODO-Video-Lazy-Load-->
+<iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xc863i" width="100%" height="100%" allowfullscreen > </iframe>
+</div>
 
 [xc863i]:
   https://www.dailymotion.com/video/xc863i
@@ -122,6 +141,7 @@ le travail de recherche qui avait été fait entre 2009 et 2010.
 L'idée a avancée depuis le temps et nVidia a fait son prototype avec un jeu au
 thème de la chasse au zoombie.
 
+<!--#TODO-Video-Lazy-Load-->
 <iframe height="315" src="https://www.youtube.com/embed/cNu4CluFOcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Sur le marché: _Layar_ le premier apareil de _Réalité Augumentée_
@@ -138,7 +158,7 @@ Cet article a été inspiré par un article trouvé sur _ReadWriteWeb_ ([@rww][1
 [2]: https://fr.wikipedia.org/wiki/Retour_vers_le_futur
 [3]: http://hrmpf.com/wordpress/48/new-apple-patents/
 [4]: https://en.wikipedia.org/wiki/Multi_Point_Interface
-[5]: http://renoirboulanger.com/blog/2007/01/le-futur-du-pc/
+[5]: /blog/2007/01/le-futur-du-pc/
 [6]: http://layar.eu/
 [7]: http://www.wikitude.org/
 [8]: https://www.dailymotion.com/swf/x4cwdb_realite-augmentee_tech

@@ -2,11 +2,12 @@
 title: Les navigateurs web, programmes de courriels, vous avez le choix!
 locale: fr-CA
 created: 2008-12-05
-updated: 2013-06-07
+updated: 2013-06-06
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix/
 status: publish
 revising: true
+migrateLinks: true
 categories:
   - actualites
 tags:
@@ -32,6 +33,15 @@ excerpt: >-
   m'envoyait des chaînes de lettres. J'ai séparé en plusieurs billets, celui-ci
   traite des outils du web tels qu'ils étaient en 2008.
 ---
+<!--
+migrateLinks:
+  external: 4
+  waybackMachine:
+  - virtuelvis.com
+  - www.livinginternet.com
+  - browsers.evolt.org
+  - www.ghacks.net
+-->
 
 En fait, il y en a plus d'un. À mes yeux, n'importe lequel est mieux qu’Internet
 Explorer 6 ("_IE 6_"). Mais si tu n'as pas le choix, essaie d'avoir la version
@@ -94,7 +104,17 @@ l'interpréteur («ce qui fait fonctionner») JavaScript.
 
 J'ai seulement cette image, et je la trouve drôle:
 
-<app-image alt="HA HA! I'm using «the Internet»" figcaption="Si l’on compare le engins de rendu HTML modernes à des véhicules. Les navigateurs faits par la compétition de Microsoft Internet Explorer seraient des autos. Les engins de rendus qui seraient des autos pour WebKit (Chromium, Safari) et Presto (Opera). Tandis qu’Internet Explorer (Trident) serait une pauvre calèche." src="~/assets/content/blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg"></app-image>
+<app-image src="~/assets/content/blog/2008/12/fccc309ec7c1e08ed41d710bf5c9d2fa804934ed.jpg" alt="Vieille photo style époque victorienne avec deux hommes avec chapeaux haut de forme sur une calèche avec entête: Microsoft Internet Explorer." figcaption=" ">
+
+<blockquote class="sr-only"><em lang="en">HA HA! I'm using «the Internet»</em></blockquote>
+
+Si l’on compare le engins de rendu HTML modernes à des véhicules. Les
+navigateurs faits par la compétition de Microsoft Internet Explorer seraient des
+autos. Les engins de rendus qui seraient des autos pour WebKit (Chromium,
+Safari) et Presto (Opera). Tandis qu’Internet Explorer (Trident) serait une
+pauvre calèche.
+
+</app-image>
 
 C'est, au final, une question de choix
 
@@ -105,7 +125,7 @@ programmes comme IncrédiMail. Qu'ils utilisent un programme qui est connu par
 bien des experts comme étant un programme qui héberge des programmes-espions.
 
 Si vous utilisez Outlook Express ou Incredimail... vous utilisez un programme
-qui date de 1999\. Pensez-y!
+qui date de 1999. Pensez-y!
 
 ### A suivre...
 
@@ -116,15 +136,6 @@ Ce billet a été crée a partir du message original «[Sensibilisation sur les
 courriels non sollicités][4]» et continue sur le billet «[quelques indices pour
 savoir si il s'agit d'une chaîne de lettres][5]».
 
-### En lire plus sur le même thème
-
-Ce billet fait partie d'une série d'articles portant sur mes observations au
-sujet des attrapes sur le web.
-
-Vous pouvez voir tous les articles dans la section [Projets][6], dans la section
-spécifique aux [**arnaques sur internet**][7].
-
-Ce billet a été révisé le 6 juin 2013\.
 
 [0]: http://www.livinginternet.com/w/wi_browse.htm
 [1]: http://browsers.evolt.org/
@@ -133,5 +144,5 @@ Ce billet a été révisé le 6 juin 2013\.
 [4]: /blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/
 [5]:
   /blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/
-[6]: /projets
+[6]: /projects
 [7]: /projets/les-arnaques-sur-internet

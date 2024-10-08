@@ -53,7 +53,7 @@ La dernière mouture en version server suffit.
 
 Actuellement, celle utilisée a été la Ubuntu server 7.04 Feisty Fawn de son nom.
 
-Il ne reste qu'a brûler le ISO sur un CD.
+Il ne reste qu'a brûler le <abbr>ISO</abbr> sur un <abbr>CD</abbr>.
 
 ## Booter le médium d'installation
 
@@ -158,6 +158,8 @@ site [http://www.vmware.com][21], obligatoire.
 La console VMWare Vù qu'on a pas de XWindows pour gérer, on utilise une console
 vmware-server à partir d'une autre machine sur notre LAN.
 
+<!--#TODO-inline-edit-->
+
 <rb-notice-box variant="error" class="my-5" data-date="2024-09-30">
   <strong slot="header">Après re-lecture (et 18 ans plus tard(!!))</strong>
 
@@ -199,6 +201,8 @@ Généralement, sur la console, tu pourrait te connecter sur "Remote host" avec
 tes crédentiels et ton host et gérer tes VM :)
 
 ## References
+
+<!--#TODO-inline-edit-->
 
 - Les notes très utiles et les screenshots de ~~`matthewbrowne.com`~~ est non
   disponible et l’Internet Archive n’a rien. Je n'ai plus les images localement

@@ -5,7 +5,8 @@ created: 2010-03-03
 updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal
 status: publish
-revising: false
+revising: true
+migrateLinks: true
 categories:
   - tranche-de-vie
 tags:
@@ -18,6 +19,14 @@ coverImage:
   alt: 'Logo'
   text: Ignite Montréal
 ---
+<!--
+migrateLinks:
+  external: 3
+  waybackMachine:
+  - www.ignitemontreal.com
+  - www.scoutsmm.qc.ca
+  - communities.canada.com
+-->
 
 Mardi 2 Mars 2010 avait lieu la première soirée de [Ignite Montréal][0]. Il
 s’agit dune soirée ou les participants ont 5 minutes pour nous parler d’un sujet
@@ -44,6 +53,7 @@ autre contexte. C’était une formation _\[Scoute\]_ au [District du Montréal
 Métropolitain][3].
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7fzt7JSc4aM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--#TODO-Video-Lazy-Load-->
 
 ### Les sujets couverts
 
@@ -67,6 +77,7 @@ particulière car elle a vécu plus de 466 jours sans domicile fixe. Elle nous a
 expliqué comment se débrouiller dans la rue pour y survivre.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/H5TaqO-n0lQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--#TODO-Video-Lazy-Load-->
 
 ### Ignite, c’est quoi?
 

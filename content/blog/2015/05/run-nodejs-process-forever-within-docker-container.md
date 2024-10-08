@@ -6,7 +6,8 @@ updated: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/
 status: publish
-revising: false
+revising: true
+migrateLinks: true
 categories:
   - projects
 tags:
@@ -28,6 +29,16 @@ preamble:
   disable: true
   text: ' '
 ---
+<!--
+migrateLinks:
+  external: 2
+  waybackMachine:
+  - specs.webplatform.org
+migrateImages:
+  flickr:
+  - 1111111111_0000000000
+  should have total: 4
+-->
 
 One of the components that I worked on [during my time on the WebPlatform
 project][wpd], [Publican][0], that I had to manage has many moving parts. The
@@ -242,6 +253,8 @@ It should look like the screenshot with caption "*Starting a build process*".
 
 Here are the files mentioned in this post
 
+<!--#TODO-Display-Or-Migrate-Gists-->
+
 #### config.json
 
 [Publican][0] expects this file as `data/config.json`.
@@ -402,23 +415,25 @@ That’s it, it’s all I had.
 #TODO-App-Image: Implement data-larger-src
 -->
 
-<div style="overflow:hidden;clear:both;" class="thumbnails gallery">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
 
-<app-image src="~/assets/content/blog/2015/05/publican-preview.png" alt="A W3C Specification preview where we can see on the left the specification, and on the right the source highlighting changes in the source" figcaption=" ">
- W3C Publican prototype build process helping with specification change tracking during review process
+<app-image class="w-1/3" src="~/assets/content/blog/2015/05/publican-preview.png" alt="A W3C Specification preview where we can see on the left the specification, and on the right the source highlighting changes in the source" figcaption=" ">
+
+W3C Publican prototype build process helping with specification change tracking during review process
+
 </app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" figcaption=" ">
 
-<app-image src="~/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" figcaption=" ">
 Annotated screenshot, when changing a file a hook is called and regenerates the specification
-</app-image>
 
+</app-image>
 </div>
 
 
 [0]: https://github.com/webspecs/publican
 [1]: https://specs.webplatform.org/
 [2]: https://www.w3.org/People/#rberjon
-[3]: http://berjon.com/
+[3]: https://berjon.com/
 [4]: https://github.com/w3c/respec
 [5]: https://github.com/tabatkins/bikeshed
 [6]: https://www.vagrantup.com/

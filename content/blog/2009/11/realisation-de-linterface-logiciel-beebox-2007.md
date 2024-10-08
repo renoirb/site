@@ -18,7 +18,7 @@ categories:
 excerpt: ''
 ---
 
-<center>[caption id="attachment_1338" align="aligncenter" width="300" caption="Rapports de séquence"]<a rel="lightbox[0]" href="http://renoirboulanger.com/wp-content/uploads/2009/11/sequencereports_2.png"><img class="size-medium wp-image-1338" title="Rapports de séquence" src="http://renoirboulanger.com/wp-content/uploads/2009/11/sequencereports_2-300x209.png" alt="Rapports de séquence" width="300" height="209" /></a>[/caption]</center>
+<center>[caption id="attachment_1338" align="aligncenter" width="300" caption="Rapports de séquence"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/sequencereports_2.png"><img class="size-medium wp-image-1338" title="Rapports de séquence" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/sequencereports_2-300x209.png" alt="Rapports de séquence" width="300" height="209" /></a>[/caption]</center>
 
 <p>J'ai eu la chance de travailler sur l'interface d'un logiciel fait en Java avec Struts.</p>
 
@@ -35,7 +35,7 @@ excerpt: ''
 <p>Tout ce qui touchait le design du produit, l'image, le site, l'interface utilisateur, et son intégration html.</p>
 
 
-[caption id="attachment_1340" align="alignright" width="300" caption="Description d&#39;un module"]<a rel="lightbox[0]" href="http://renoirboulanger.com/wp-content/uploads/2009/11/module_1.png"><img class="size-medium wp-image-1340" title="Description d'un module" src="http://renoirboulanger.com/wp-content/uploads/2009/11/module_1-300x197.png" alt="Description d'un module" width="300" height="197" /></a>[/caption]
+[caption id="attachment_1340" align="alignright" width="300" caption="Description d&#39;un module"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/module_1.png"><img class="size-medium wp-image-1340" title="Description d'un module" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/module_1-300x197.png" alt="Description d'un module" width="300" height="197" /></a>[/caption]
 
 <p>En gros j'ai collaboré avec le créateur du produit pour donner une interface plus actuelle.</p>
 
@@ -49,7 +49,9 @@ excerpt: ''
 	<li>Produit le site web (billet à venir...);</li>
 	<li>Programmé les behaviors en Javascript sous <a href="http://mootools.net/">MooTools</a>;</li>
 </ul>
-[caption id="attachment_1340" align="alignright" width="300" caption="Sécurité des modules"]<a rel="lightbox[0]" href="http://renoirboulanger.com/wp-content/uploads/2009/11/securite_4.png"><img class="size-medium wp-image-1341" title="beebox: Sécurité des modules" src="http://renoirboulanger.com/wp-content/uploads/2009/11/securite_4-300x269.png" alt="beebox: Sécurité des modules" width="300" height="269" /></a>[/caption]
+
+[caption id="attachment_1340" align="alignright" width="300" caption="Sécurité des modules"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/securite_4.png"><img class="size-medium wp-image-1341" title="beebox: Sécurité des modules" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/securite_4-300x269.png" alt="beebox: Sécurité des modules" width="300" height="269" /></a>[/caption]
+
 <p>&nbsp;</p>
 
 <p>Pour avoir plus de détails a propos du produit, <a href="http://beebox.ca" target="_blank">allez-voir le site web</a>.</p>
@@ -59,6 +61,3 @@ excerpt: ''
 <p>Personnellement, je compte développer des suites de scripts qui seraient utilisés pour administrer des projets en PHP avec cet outil. Je n'ai rien de publiable pour le moment.</p>
 
 <p>Voir la suite de <a href="/blog/category/portfolio/"><strong>mon Portfolio</strong></a>.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>

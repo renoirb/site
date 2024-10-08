@@ -152,7 +152,7 @@ The output ...
 
 Success!
 
-6. Look at the phpinfo
+6. Look at the `phpinfo` output
 
 <app-image style="float:unset;" src="~/assets/content/blog/2015/02/sessions_memcached_after.png" alt="OpenStack Cloud-Init dialog">
 Ater: registered session handlers
@@ -181,15 +181,15 @@ Done!
 
 ## Screenshots
 
-<div style="overflow:hidden;clear:both;">
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
 
-<app-image src="~/assets/content/blog/2015/02/sessions_memcached_before2.png" alt="OpenStack Cloud-Init dialog">
+<app-image class="w-1/3" src="~/assets/content/blog/2015/02/sessions_memcached_before2.png" alt="OpenStack Cloud-Init dialog">
 
 Session handlers shows memcached
 
 </app-image>
 
-<app-image src="~/assets/content/blog/2015/02/sessions_memcached_before.png" alt="OpenStack Cloud-Init dialog">
+<app-image class="w-1/3" src="~/assets/content/blog/2015/02/sessions_memcached_before.png" alt="OpenStack Cloud-Init dialog">
 
 *igbinary* support no?
 

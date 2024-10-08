@@ -89,7 +89,7 @@ the same paths in the CMS.
 
 ## How about we separate dynamic from static?
 
-<app-image figcaption="An example of running a presentation only HTML partial serving specialized service." alt="Experimenting with Django/Kuma and making HTML Partial URLs" src="~/assets/content/blog/2015/10/2015-09-21-Running-MDN-and-BrowserCompat.png">
+<app-image src="~/assets/content/blog/2015/10/2015-09-21-Running-MDN-and-BrowserCompat.png" figcaption="An example of running a presentation only HTML partial serving specialized service." alt="Experimenting with Django/Kuma and making HTML Partial URLs">
 
 For example, we could make [**MDN**’s _BrowserCompat_ API][browsercompat-api]
 where we could leverage to fill in compatibiliby table back into MDN. This

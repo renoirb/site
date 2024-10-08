@@ -50,6 +50,9 @@ projet.
 
 ### Aujourd’hui
 
+<!--#TODO-inline-edit-->
+<!--<rb-notice-box-->
+
 Lorsque je l’ai réinstallée, hier. J’ai eu mon sourire en coin en réalisant
 comment j’avait déjà cerné les outils du web2.0 de 2005.
 
@@ -89,35 +92,49 @@ m’a permis d’évoluer.
 ### Les captures d’écran
 
 <div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_1.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_1-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_1.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_1-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_3.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_3-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_3.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_3-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_8.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_8-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_8.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_8-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_14.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_14-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_14.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_14-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_2.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_2-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_2.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_2-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_4.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_4-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_4.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_4-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_6.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_6-150x150.png" alt="" figcaption="caption">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_6.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_6-150x150.png" alt="" figcaption="caption"></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_7.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_7-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_7.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_7-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_9.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_9-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_9.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_9-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_10.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_10-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_10.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_10-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_12.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_12-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_12.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_12-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_13.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_13-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_13.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_13-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_15.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_15-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_15.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_15-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_16.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_16-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_16.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_16-150x150.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_17.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_17-150x150.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2009/12/scr_sacanton_17.png" data-smaller-src="~/assets/content/blog/2009/12/scr_sacanton_17-150x150.png" alt="" figcaption=" "></app-image>
-
+</app-image>
 </div>

@@ -38,6 +38,7 @@ Toujours est-il que mon Mac commence a être vieux et même s'il est maximisé a
 
 Vous savez, les touches pour écrire des choses qui semblent obscures lorsque l’on est pas habitué, comme par exemple
 
+<!--#TODO-inline-edit-->
 <figure>
 
 ```js
@@ -91,8 +92,7 @@ J'ai suivi:
 
 <app-image class="w-1/3" src="~/assets/content/blog/2010/12/Configure-console-data.png" data-smaller-src="~/assets/content/blog/2010/12/Configure-console-data-150x150.png" alt="Console text base user interface" figcaption=" ">
 
-Configure console-data
-
+Configure `console-data`
 
 </app-image>
 <app-image class="w-1/3" src="~/assets/content/blog/2010/12/Configure_console-data_Keyboard_variant_french.png" data-smaller-src="~/assets/content/blog/2010/12/Configure_console-data_Keyboard_variant_french-150x150.png" alt="Console text base user interface" figcaption=" ">

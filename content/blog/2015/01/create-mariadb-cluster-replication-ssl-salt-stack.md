@@ -188,7 +188,9 @@ addresses
    ```
 
    <app-image style="float:unset;" src="~/assets/content/blog/2015/05/webplatform-openstack-cluster-2014-10-06.png" alt="OpenStack nova command" figcaption=" " alt="Terminal screen">
+
    Command output when issuing `nova list`
+
    </app-image>
 
 5. Add them to the pillars. Note that the part of the name "masterdb" is what
@@ -537,7 +539,7 @@ salt -G 'roles:masterdb' mysql.grant_add 'ALL PRIVILEGES' 'accounts_oauth.*' 'ac
 - http://dev.mysql.com/doc/refman/5.7/en/replication-solutions-ssl.html
 - https://mariadb.com/kb/en/mariadb/documentation/managing-mariadb/replication/standard-replication/setting-up-replication/
 
-[0]: https://docs.saltstack.com/en/latest/topics/reactor/
+[0]: https://docs.saltproject.io/en/latest/topics/reactor/
 [1]: https://gist.github.com/WebPlatformDocs/563cb12326b92b22a452
 [2]: https://gist.github.com/WebPlatformDocs/dee3c76a88b3c44da564
 [3]: https://gist.github.com/renoirb/b2e0222ad52e5d453298

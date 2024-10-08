@@ -18,10 +18,22 @@ categories:
   - portfolio
 excerpt: ''
 ---
+<!--
+migrateLinks:
+  external: 2
+  waybackMachine:
+  - remisesreallamontagne.com
+  - www.imacom.qc.ca
+migrateImages:
+  flickr:
+  - 390579080_ec97e069b3
+  - 390579078_5cab8b7d5e
+  estimated total: 3
+-->
 
-<center>[caption id="attachment_1324" align="aligncenter" width="300" caption="Page fabriquez votre remise"]<a rel="lightbox[0]" href="http://renoirboulanger.com/wp-content/uploads/2009/11/screenshot_remises2.png"><img class="size-medium wp-image-1324" title="Page fabriquez votre remise" src="http://renoirboulanger.com/wp-content/uploads/2009/11/screenshot_remises2-300x239.png" alt="Page fabriquez votre remise" width="300" height="239" /></a>[/caption]</center>
+<center>[caption id="attachment_1324" align="aligncenter" width="300" caption="Page fabriquez votre remise"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/screenshot_remises2.png"><img class="size-medium wp-image-1324" title="Page fabriquez votre remise" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/screenshot_remises2-300x239.png" alt="Page fabriquez votre remise" width="300" height="239" /></a>[/caption]</center>
 
-Parmi les sites que j'ai fait dans les dernières années. Celui de <a href="http://www.remisesreallamontagne.com/" target="_blank">Remises Réal Lamontagne</a> était parmi les plus agréables a travailler. L'équipe de <a href="http://www.imacom.qc.ca/" target="_blank">IMACOM</a> (<a href="http://maps.google.com/maps/place?cid=17198655896694201908&amp;q=imacom%2Bsherbrooke" target="_blank">sherbrooke</a>) avait fait un très beau travail. Chacun avait sa tâche de fait et mon travail consistait qu'a intégrer en html valide le code.
+Parmi les sites que j'ai fait dans les dernières années. Celui de <a href="http://www.remisesreallamontagne.com/" target="_blank">Remises Réal Lamontagne</a> était parmi les plus agréables a travailler. L'équipe de <a href="http://www.imacom.qc.ca/" target="_blank" rel="nofollow noreferrer">IMACOM</a> avait fait un très beau travail. Chacun avait sa tâche de fait et mon travail consistait qu'a intégrer en html valide le code.
 
 C'est aussi l'un des derniers sites que j'ai fait en utilisant Macromedia Dreamweaver.
 

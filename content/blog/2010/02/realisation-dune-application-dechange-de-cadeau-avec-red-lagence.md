@@ -8,7 +8,8 @@ updated: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence-le-%c2%abclub-echangiste%c2%bb-2009/
 status: publish
-revising: false
+revising: true
+migrateLinks: true
 tags:
   - outils
   - php
@@ -31,6 +32,13 @@ coverImage:
   alt: ' '
   text: RED propose de finir l'année dans un Club échangiste
 ---
+<!--
+migrateLinks:
+  external: 2
+  waybackMachine:
+  - stephanchampagne.com
+  - www.grenier.qc.ca
+-->
 
 Il s’agit d’une réalisation que j’ai effectuée en deux semaines pour
 [RED L’agence](http://www.agencered.ca/). L’idée vient de François Sauvé lors
@@ -82,7 +90,7 @@ Javascript, les deux cartes, les photos de chaque cadeaux, chaque description
 
 J’ai planifié, rédigé les besoins techniques, les cas d’utilisations et
 programmé en utilisant _symfony framework (v1.2 en PHP)_.
-[Stéphan Champagne](http://stephanchampagne.com/) m’a accompagné pour ce qui
+**Stéphan Champagne** m’a accompagné pour ce qui
 concerne la normalisation de la base de donnée et les controleurs. Grâce à lui
 j’ai pu produire dans les temps une grande charge de travail a moi seul.
 
@@ -114,23 +122,35 @@ d’Excellence** dans la catégorie **JEU ET INTERACTIVITÉ**.
 
 <div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
 
-<app-image class="w-1/3 focus-devant" id="focus-devant" src="~/assets/content/blog/2010/02/carte_postale_1_front.jpg" alt="Photo du devant de la carte postale. Il est écrit: RED propo de finir l’année dans un Club échangiste" figcaption="Devant"></app-image>
+<app-image class="w-1/3 focus-devant" id="focus-devant" src="~/assets/content/blog/2010/02/carte_postale_1_front.jpg" alt="Photo du devant de la carte postale. Il est écrit: RED propo de finir l’année dans un Club échangiste" figcaption="Devant"
 
-<app-image class="w-1/3 focus-dos" id="focus-dos" src="~/assets/content/blog/2010/02/carte_postale_1_back.jpg" alt="Photo du derrière de la carte postale. Il est écrit: Visitez echangiste.agencered.ca, entrez votre numéro d’accès exclusif et voyez le cadeau que RED vous offre (...)" figcaption="Dos"></app-image>
+></app-image>
+<app-image class="w-1/3 focus-dos" id="focus-dos" src="~/assets/content/blog/2010/02/carte_postale_1_back.jpg" alt="Photo du derrière de la carte postale. Il est écrit: Visitez echangiste.agencered.ca, entrez votre numéro d’accès exclusif et voyez le cadeau que RED vous offre (...)" figcaption="Dos">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Accueil.png" alt="Capture d’écran de l’application web avec image d’une porte avec affiche." figcaption="CLUB ÉCHANGISTE, entrez votre code."></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Accueil.png" alt="Capture d’écran de l’application web avec image d’une porte avec affiche." figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Gifts.png" alt="Capture d’écran de l’application web on y voit une series de boîtes avec des photos de cadeaux. Nous voyons que c’est Eric T qui est connecté et le cadeau qu’il a pour le moment. Eric est présenté le choix de tenter d’échanger son cadeau encore 10 fois, et qu’il a jusqu’au 16 décembre 2009 a 23:00 pour le faire." figcaption=" ">(...)
-Vous avez droit a 10 échanges d’ici au 16 décembre 2009 à 23:59. Ensuite, le
+CLUB ÉCHANGISTE, entrez votre code
+
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Gifts.png" alt="Capture d’écran de l’application web on y voit une series de boîtes avec des photos de cadeaux. Nous voyons que c’est Eric T qui est connecté et le cadeau qu’il a pour le moment. Eric est présenté le choix de tenter d’échanger son cadeau encore 10 fois, et qu’il a jusqu’au 16 décembre 2009 a 23:00 pour le faire." figcaption=" ">
+
+(...) vous avez droit a 10 échanges d’ici au 16 décembre 2009 à 23:59. Ensuite, le
 sort en est jeté et vous recevrez dans les heures qui suivent votre
-cadeau.</app-image>
+cadeau.
 
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Confirm.png" alt="Confirmation d'un échange" figcaption="Voulez-vous vraiment échanger votre cadeau avec celui de Francois S. Ensuite, il vous restera 9 echanges. voulez-vous continuer? OUI NON"></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Confirm.png" alt="Confirmation d'un échange" figcaption="Voulez-vous vraiment échanger votre cadeau avec celui de Francois S. Ensuite, il vous restera 9 echanges. voulez-vous continuer? OUI NON">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Ferme.png" alt="" figcaption=" "></app-image>
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Ferme.png" alt="" figcaption=" ">
 
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/carte_postale_2_front.jpg" alt="" figcaption=" "></app-image>
+</app-image>
 
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/carte_postale_2_back.jpg" alt="" figcaption=" "></app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/carte_postale_2_front.jpg" alt="" figcaption=" ">
+</app-image>
 
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/carte_postale_2_back.jpg" alt="" figcaption=" ">
+
+</app-image>
 </div>

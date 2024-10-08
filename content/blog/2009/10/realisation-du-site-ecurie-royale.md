@@ -76,7 +76,6 @@ l’encadrement pour introduire ce sport aux enfants.
 ## Captures d’écran
 
 <div style="overflow:hidden;clear:both" class="thumbnails gallery flex flex-row flex-wrap">
-
 <app-image class="w-1/3" src="~/assets/content/blog/2009/10/ecurieroyale_192068263_3110890177_b.jpg" alt="" figcaption=" ">
 
 Page accueil en 2005
@@ -87,5 +86,4 @@ Page accueil en 2005
 Page accueil en 2009
 
 </app-image>
-
 </div>

@@ -6,6 +6,7 @@ canonical: >-
 status: publish
 revising: true
 images: true
+migrateLinks: true
 created: '2014-07-10'
 updated: '2014-07-10'
 tags: []
@@ -16,18 +17,26 @@ excerpt: >-
   Dear chief of marketing at ASUS. This is me, a web developer, who’s giving
   some feedback about my purchase and first contact an ASUS product.
 ---
+<!--
+migrateLinks:
+  external: 3
+  waybackMachine:
+  - www.asus.com
+  - www.amazon.com
+  - www.mikesacks.com
+-->
 
 <p>How do you feel when you purchase a tech product from a respected brand and it feels sketchy and you figure out, after receiving the desired piece of hardware that it doesn’t fit at all.</p>
 
 <p>What got me even more disappointed is the fact I went through product reviews, read tech specs, shopped around for other products and decided to give a chance.</p>
 
-<p>Before getting in the depth of the topic; I’d like to apologize for the tone of this message. My “gage of good will” (ref: <a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758">Steve Krug</a> ) is very low and I hope this gets somewhere so it can become an incentive to improve the site and product support medias.</p>
+<p>Before getting in the depth of the topic; I’d like to apologize for the tone of this message. My “gage of good will” (ref: <a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758" target="_blank" rel="nofollow noreferrer">Steve Krug</a> ) is very low and I hope this gets somewhere so it can become an incentive to improve the site and product support medias.</p>
 
 <p><em>NOTE</em> I have (some) theoretical knowledge about User-Interaction design due to my numerous conversations on the topic with relatives and professional contacts who are in the field of software ergonomics. Its in the spirit to remove pain-points that i'm outlining them. Since I spent some time writing this essay, i decided to also share it on my site.</p>
 
 <h2>0. The product</h2>
 
-<p><img src="/wp-content/uploads/2014/07/SDRW-08D2S-U-150x150.jpg" alt="img" title="ASUS SDRW-08D2S-U in all its glory" id="SDRW-08D2S-U" class="alignright size-medium pull-right" /> My original expectation wasn’t very big. I wanted a lightweight, small DVD recorder for my backups. You know, to store files you do not need often. I also wanted to encode what I’m burning on disc so if I ever have to let go of the disc, i can be reassured that the data is not accessible without cracking it.</p>
+<p><img src="https://renoirb.github.io/site-assets/assets/content/blog/2014/07/SDRW-08D2S-U-150x150.jpg" alt="Product photo of the ASUS SDRW USB Optical Drive " title="ASUS SDRW-08D2S-U in all its glory" id="SDRW-08D2S-U" class="alignright size-medium pull-right" /> My original expectation wasn’t very big. I wanted a lightweight, small DVD recorder for my backups. You know, to store files you do not need often. I also wanted to encode what I’m burning on disc so if I ever have to let go of the disc, i can be reassured that the data is not accessible without cracking it.</p>
 
 <p>So, what I was expecting:</p>
 
@@ -35,9 +44,10 @@ excerpt: >-
 <li>Small</li>
 <li>USB2 powered (only one cable)</li>
 <li>Lightweight</li>
+<li>Reads and writes DVD</li>
 </ul>
 
-<p>My purchase was then a <a href="http://www.asus.com/Storage_Optical_Drives/SDRW08D2SU/">ASUS SDRW-08D2S-U</a></p>
+<p>My purchase was then a <a href="http://www.asus.com/Storage_Optical_Drives/SDRW08D2SU/" target="_blank" rel="nofollow noreferrer">ASUS SDRW-08D2S-U</a></p>
 
 <p>And supporting encryption got me close the deal. Sadly, ASUS didn’t do anything for Mac OS users.</p>
 
@@ -59,7 +69,7 @@ excerpt: >-
 
 <p>Its only after 10 minutes searching the site, only finding how to compare another product to buy and cannot find appropriate way to navigate to product, downloads/drivers. I got only promotional navigation. This makes the human who purchased something frustrated.</p>
 
-<p>The funny thing is that I had to use a search engine that is NOT from asus.com (in useful results, again). Found plenty of other places to buy and <a href="http://support.asus.com/faq/detail.aspx?SLanguage=en&amp;p=2&amp;m=SDRW-08D2S-U&amp;s=10&amp;hashedid=vinKDnObEKvp2AnW&amp;os=&amp;no=365B1762-61C4-5102-77A7-3B63610A1BE2#">then I found that page where I made this comment</a> by using the comment form at the bottom.</p>
+<p>The funny thing is that I had to use a search engine that is NOT from asus.com (in useful results, again). Found plenty of other places to buy and <a href="http://support.asus.com/faq/detail.aspx?SLanguage=en&amp;p=2&amp;m=SDRW-08D2S-U&amp;s=10&amp;hashedid=vinKDnObEKvp2AnW&amp;os=&amp;no=365B1762-61C4-5102-77A7-3B63610A1BE2#" target="_blank" rel="nofollow noreferrer">then I found that page where I made this comment</a> by using the comment form at the bottom.</p>
 
 <p>The fact that the page had no images made me think of two things; one more detail that makes it look sketchy, and that maybe the page has outdated information and therefore would not apply to my case.</p>
 
@@ -77,7 +87,7 @@ excerpt: >-
 
 <h2>6. Reading the manual</h2>
 
-<p><img src="/wp-content/uploads/2014/07/full-text-ikea-instructions-235x300.jpg" alt="img" title="IKEA Instructions are word less, let’s have a middle ground" class="size-medium pull-right" /> I saw NO reviews about this. The interesting part is that, unlike most people, I actually read the manual and it was a pain to figure out which boxes was in my own language.</p>
+<p><img src="https://renoirb.github.io/site-assets/assets/content/blog/2014/07/full-text-ikea-instructions-235x300.jpg" alt="Example of IKEA Instructions manual without using any words" title="IKEA Instructions are word less, let’s have a middle ground" class="size-medium pull-right" /> I saw NO reviews about this. The interesting part is that, unlike most people, I actually read the manual and it was a pain to figure out which boxes was in my own language.</p>
 
 <p>It was basically me skipping each boxes, in case it was in either french or english. Just to realize after flipping the full “map” around that I just needed to plug the cable.</p>
 
@@ -90,6 +100,6 @@ excerpt: >-
 <p>I really hope that ASUS gears toward improving their software products.</p>
 
 <p><small>Image credits:
-* <a href="http://www.mikesacks.com/wp/ikea-instructions/">IKEA instructions, by Mike Sacks</a>
+* <a href="http://www.mikesacks.com/wp/ikea-instructions/" target="_blank" rel="nofollow noreferrer">IKEA instructions, by Mike Sacks</a>
 * Product picture is promotional material from ASUS website.
 </small></p>
