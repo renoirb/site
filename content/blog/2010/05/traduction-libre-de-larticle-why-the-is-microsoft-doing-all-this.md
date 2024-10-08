@@ -5,9 +5,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this/
 status: publish
 revising: true
-migratingImages: true
+migrateImages: true
 gallery: true
 caption: true
+migratingLinks: true
 created: '2010-05-30'
 updated: '2023-11-15'
 tags:

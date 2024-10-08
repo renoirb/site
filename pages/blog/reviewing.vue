@@ -46,10 +46,11 @@
   type NuxtContentResult = WithReviewingProps & INuxtContentResult
   interface WithReviewingProps {
     caption?: boolean
+    caracteresBizzares?: boolean
     gallery?: boolean
     images?: boolean
     migrateImages?: boolean
-    caracteresBizzares?: boolean
+    migrateLinks?: boolean
   }
   type FlagsString = (m: WithReviewingProps) => string
   export interface Data {
@@ -69,7 +70,8 @@
     const d =
       arg.caracteresBizzares && arg.caracteresBizzares === true ? '√©' : '-'
     const e = arg.migrateImages && arg.migrateImages === true ? 'M' : '-'
-    return [a, b, c, d, e]
+    const f = arg.migrateLinks && arg.migrateLinks === true ? 'L' : '-'
+    return [a, b, c, d, e, f]
   }
   const createSortScoreForFlagThing = (input: string[]): number => {
     let score = 0
@@ -134,6 +136,12 @@
         .filter((a) => findExcludingRedirectPredicate(a))
         .sort(sortCompareFn)
       const count = contents.length
+      const lines = [
+        ...contents.map(({ path }: NuxtContentResult) =>
+          [path].map((i) => `"${i}"`).join(';'),
+        ),
+      ].join('\n')
+      console.log(lines)
       return {
         contents,
         count,

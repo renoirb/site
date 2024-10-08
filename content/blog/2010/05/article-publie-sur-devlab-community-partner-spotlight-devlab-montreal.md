@@ -6,7 +6,8 @@ canonical: >-
 status: publish
 revising: true
 images: true
-migratingImages: true
+migrateImages: true
+migrateLinks: true
 gallery: true
 caption: true
 created: '2010-05-19'

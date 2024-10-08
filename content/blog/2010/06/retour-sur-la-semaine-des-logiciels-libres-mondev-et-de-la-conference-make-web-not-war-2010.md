@@ -9,7 +9,7 @@ status: publish
 revising: true
 gallery: true
 caption: true
-migratingImages: true
+migrateImages: true
 created: '2010-06-22'
 updated: '2013-03-27'
 tags: []
