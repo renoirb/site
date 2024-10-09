@@ -95,7 +95,7 @@ if address :matches :domain ["to", "cc", "bcc"] "alias.example.org" {
     # Make sure Boxes folder exists
     fileinto "Boxes";
     fileinto "Boxes/${pigeon_hole}";
-    # Proton ^^ doesn’t support fileinto :create, instead give a parent, and tentatively try in pigeonhole
+    # Proton ^^ doesn’t support `fileinto :create "Foo/Bar"`, instead give a parent, and tentatively try in pigeonhole
   }
 }
 ```

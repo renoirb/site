@@ -7,6 +7,7 @@ status: publish
 revising: true
 caption: true
 migrateImages: true
+migrateLinks: true
 created: '2009-11-10'
 updated: '2013-03-27'
 tags:
@@ -17,6 +18,12 @@ categories:
   - portfolio
 excerpt: ''
 ---
+<!--
+migrateLinks:
+  external: 1
+  waybackMachine:
+  - beebox.ca
+-->
 
 <center>[caption id="attachment_1338" align="aligncenter" width="300" caption="Rapports de séquence"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/sequencereports_2.png"><img class="size-medium wp-image-1338" title="Rapports de séquence" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/sequencereports_2-300x209.png" alt="Rapports de séquence" width="300" height="209" /></a>[/caption]</center>
 
