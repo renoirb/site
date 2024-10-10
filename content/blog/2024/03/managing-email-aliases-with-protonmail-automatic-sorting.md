@@ -37,20 +37,23 @@ and have recovery lost over time because I didn’t own the domain name. Don’t
 me wrong, SimpleLogin aliases are great and their best use-case is for privacy,
 to hide your real email. An account alias is a bit different.
 
-Basically, instead of having an email address we pass everywhere. Create an email address specifically for each service, newsletter, product. You can keep your mail address, but the lesser it’s known, the less it’ll receive.
+Basically, instead of having an email address we pass everywhere. Create an
+email address specifically for each service, newsletter, product. You can keep
+your mail address, but the lesser it’s known, the less it’ll receive.
 
 Let’s backtrack a bit. Over the years, we’ve witnessed numerous breaches of
-security. Maybe you’re receiving many emails, some trying to pass as a service provider you’ve used, or another person.
+security. Maybe you’re receiving many emails, some trying to pass as a service
+provider you’ve used, or another person.
 
-For me, I receive a lot. Probably because I’ve used the same address for almost 2 decades already. With 2023’s LastPass breach who had  all their vaults backups copied by attackers,
-it was a wake up call for me to review my accounts.
+For me, I receive a lot. Probably because I’ve used the same address for almost
+2 decades already. With 2023’s LastPass breach who had all their vaults backups
+copied by attackers, it was a wake up call for me to review my accounts.
 
-In any case, if you’ve had an email
-address for more than a decade, chances are it’s already on multiple lists
-floating around the Internet. One effective strategy to combat identity theft is
-to adopt strong passwords managed by a reliable password manager. However, when
-it comes to safeguarding against identity theft and unsolicited emails (spam),
-what else can we do?
+In any case, if you’ve had an email address for more than a decade, chances are
+it’s already on multiple lists floating around the Internet. One effective
+strategy to combat identity theft is to adopt strong passwords managed by a
+reliable password manager. However, when it comes to safeguarding against
+identity theft and unsolicited emails (spam), what else can we do?
 
 Enter the concept of email aliases. By having a different email address for
 every service or provider we interact with, we can effectively manage our online
@@ -63,8 +66,6 @@ for a random component alongside a designated name for the purpose. For example,
 `<service>.<something random>@alias.example.org`. To streamline the organization
 of these aliases, I’ve developed a Sieve script that automatically sorts
 incoming emails into appropriate folders.
-
-
 
 ```
 require "comparator-i;ascii-numeric";

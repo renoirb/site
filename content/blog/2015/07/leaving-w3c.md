@@ -19,7 +19,7 @@ coverImage:
     was an autographied book signed by [Sir Tim Berners-Lee][whois-timbl]
     and a small trophy. Today (2020), my name appears in
     [the W3C Team Alumni][w3t-alumni]
-    [w3t-alumni]: https://www.w3.org/People/Alumni#renoir-boulanger
+    [w3t-alumni]: https://www.w3.org/staff/alumni/#renoir-boulanger
     [whois-timbl]: https://www.w3.org/People/Berners-Lee/FAQ.html
 preamble:
   disable: true

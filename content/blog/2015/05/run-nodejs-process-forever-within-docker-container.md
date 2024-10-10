@@ -430,6 +430,18 @@ Annotated screenshot, when changing a file a hook is called and regenerates the 
 </div>
 
 
+
+<div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
+<app-image class="w-1/3" src="~/assets/content/blog/2015/05/publican-preview.png" alt="..." figcaption=" ">
+...
+</app-image>
+<app-image class="w-1/3" src="~/assets/content/blog/2015/05/publican-deleted-spec-regeneration-question.png" figcaption=" ">
+
+Annotated screenshot, when changing a file a hook is called and regenerates the specification
+
+</app-image>
+</div>
+
 [0]: https://github.com/webspecs/publican
 [1]: https://specs.webplatform.org/
 [2]: https://www.w3.org/People/#rberjon
