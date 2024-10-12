@@ -1,6 +1,6 @@
 ---
-locale: en-CA
-title: Traduction libre de l'article «Why the @&*# is Microsoft doing all this??»
+title: Traduction libre de l’article «Why the @&*# is Microsoft doing all this??»
+locale: fr-CA
 canonical: >-
   https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this/
 status: publish
