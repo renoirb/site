@@ -1,6 +1,6 @@
 ---
 locale: fr-CA
-title: Login ssh sans mot de passe
+title: Login SSH sans mot de passe
 canonical: https://renoirboulanger.com/blog/2007/04/login-ssh-sans-mot-de-passe/
 status: publish
 revising: true

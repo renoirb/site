@@ -8,10 +8,9 @@ revising: true
 caption: true
 created: '2010-09-28'
 updated: '2023-11-16'
-tags:
-  - php
 categories:
-  - programmation
+  - events
+tags: []
 excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2010/09/4463325427_251399c227.jpg

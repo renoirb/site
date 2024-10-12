@@ -12,7 +12,7 @@ revising: true
 categories:
   - tranche-de-vie
 tags:
-  - evenements
+  - events
 keywords:
   - party
   - ubuntu

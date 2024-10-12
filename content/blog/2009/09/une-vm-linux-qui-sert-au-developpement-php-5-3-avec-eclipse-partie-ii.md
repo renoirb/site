@@ -12,6 +12,7 @@ tags:
   - logiciel-libre
   - securite
   - tutoriels
+  - techniques
 categories: []
 excerpt: ''
 ---

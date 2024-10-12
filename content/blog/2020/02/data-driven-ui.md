@@ -8,7 +8,7 @@ revising: false
 categories:
   - experiments
 tags:
-  - front-end
+  - frontend
   - architecture
 description: Research summary on experiments made in 2018 and 2019
 preamble:

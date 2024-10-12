@@ -8,7 +8,7 @@ canonical: >-
 status: publish
 revising: false
 categories:
-  - procedures
+  - procedure
 tags:
   - linux
 excerpt: ''

@@ -112,7 +112,7 @@ const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
   ['tpac', 'W3C’s (World Wide Web’s) Technical Plenary meetings'],
   ['tls', 'Transport Layer Security'],
   ['sass', 'Syntactically Awesome Stylesheets, A variant of CSS Style Sheets '],
-  ['ssh', 'Secure Shell'],
+  ['ssh', 'Secure Shell or Secure Socket Shell'],
   [
     'ssl',
     'SSL as Secure Sockets Layer, which is the colloquial term used to refer to what is now called Transport Layer Security (TLS)',

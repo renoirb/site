@@ -11,7 +11,7 @@ images: true
 created: '2010-02-12'
 updated: '2013-03-27'
 tags:
-  - accessibilite
+  - accessibility
   - html
   - integration
   - web

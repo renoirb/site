@@ -8,8 +8,8 @@ revising: true
 created: '2011-02-08'
 updated: '2023-11-16'
 tags:
-  - accessibilite
-  - evenements
+  - accessibility
+  - events
   - html
   - linux
   - php

@@ -8,7 +8,7 @@ revising: true
 created: '2012-07-04'
 updated: '2013-03-27'
 tags:
-  - good-practices
+  - best-practices
   - php
   - symfony2
 categories:

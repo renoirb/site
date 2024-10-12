@@ -26,10 +26,10 @@ coverImage:
 webarchiveSnapshots:
   - key: saltstack
     orig: https://saltproject.io/
-  - key: webplatform
-    orig: http://www.webplatform.org/
-  - key: w3c-staff
-    orig: https://www.w3.org/staff/
+  - key: new-at-webplatform
+    orig: https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
+  - key: w3c-staff-me
+    orig: https://www.w3.org/staff/alumni/#renoir-boulanger
   - key: doug-schepers
     orig: https://www.w3.org/staff/alumni/#doug-schepers
   - key: dell-techpageone
@@ -53,9 +53,9 @@ with Salt Stack, they thought i'd have things to say.
 <!--#TODO-inline-edit SaltStack now bought by VMWare that got bought by Broadcom is now Salt Project -->
 <!--#TODO-inline-edit WebPlatform is now finished, link to post about it -->
 
-I accepted to answer the questions on my personal time as the DevOps lead of
-[WebPlatform.org][webplatform], rather than directly as a [W3C][w3c] team
-member. And that, even though I had big help from my manager, [Doug
+I accepted to answer the questions on my personal time as the [DevOps lead of
+**WebPlatform.org**][new-at-webplatform], rather than directly as a [*W3C* team
+member][w3c-staff-me]. And that, even though I had big help from my manager, [Doug
 Schepers][doug-schepers], and a few colleagues from the team. Their help was
 much useful to review and add stats to my arguments.
 
@@ -180,9 +180,9 @@ Many people are talking about it for ages. The recent events makes their
 teachings more relevant than ever.
 
 [saltstack]: https://saltproject.io/
-[webplatform]:
+[new-at-webplatform]:
   https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
-[w3c-staff]: https://www.w3.org/staff/
+[w3c-staff-me]: https://www.w3.org/staff/alumni/#renoir-boulanger
 [doug-schepers]: https://www.w3.org/staff/alumni/#doug-schepers
 [dell-techpageone]:
   https://web.archive.org/web/20140708174445/http://techpageone.dell.com/technology/protecting-against-cyber-warfare/

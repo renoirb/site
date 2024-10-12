@@ -10,7 +10,7 @@ revising: true
 categories:
   - actualites
 tags:
-  - fraude
+  - fraud
   - vulgarization
 preamble:
   date: 2024-09-12

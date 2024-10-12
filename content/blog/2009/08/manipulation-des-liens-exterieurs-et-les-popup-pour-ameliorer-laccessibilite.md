@@ -10,7 +10,7 @@ updated: '2013-03-27'
 categories:
   - programmation
 tags:
-  - accessibilite
+  - accessibility
   - tutoriels
   - web
   - frontend

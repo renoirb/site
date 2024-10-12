@@ -11,10 +11,11 @@ migrateImages: true
 migrateLinks: true
 created: '2010-05-30'
 updated: '2023-11-15'
-tags:
-  - logiciel-libre
 categories:
-  - tranche-de-vie
+  - events
+tags:
+  - open-source
+  - published
 excerpt: >-
   Ceci est une traduction libre du billet originalement écrit en anglais, par
   Microsoft Canada sur leur blogue Port25.ca (qui est maintenant hors-ligne) et

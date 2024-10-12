@@ -24,7 +24,7 @@ migrateLinks:
 -->
 
 Pour ajouter a ma collection de billets de mon
-<a href="/blog/categorie/portfolio">Portfolio professionnel</a> j’ai fait en
+<a href="/blog/category/portfolio">Portfolio professionnel</a> j’ai fait en
 2008 ce petit site.
 
 J’ai de la difficulté à trouver des mots pour decrire ce projet. Un pamphlet

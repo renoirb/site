@@ -7,11 +7,12 @@ status: publish
 revising: true
 created: '2013-04-01'
 updated: '2013-04-02'
-tags:
-  - php
-  - techniques
 categories:
   - snippet
+tags:
+  - techniques
+  - php
+  - web
 excerpt: >-
   While I was writing an authentication and privileges assignation mechanism
   using information provided by an ActiveDirectory's LDAP DN string into my

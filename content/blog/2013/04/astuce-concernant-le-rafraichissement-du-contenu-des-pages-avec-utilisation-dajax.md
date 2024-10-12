@@ -12,7 +12,7 @@ updated: '2013-05-24'
 categories:
   - programmation
 tags:
-  - accessibilite
+  - accessibility
   - javascript
 description: >-
   Réponse donnée a une question concernant l'Accessibilité et le

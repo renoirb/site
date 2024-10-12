@@ -8,7 +8,7 @@ images: true
 created: '2009-08-20'
 updated: '2013-03-27'
 tags:
-  - accessibilite
+  - accessibility
   - html
   - techniques
 categories:

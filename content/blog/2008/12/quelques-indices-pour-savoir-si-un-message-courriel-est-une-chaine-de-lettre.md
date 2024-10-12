@@ -10,7 +10,7 @@ revising: true
 categories:
   - actualites
 tags:
-  - fraude
+  - fraud
   - vulgarization
 description: >-
   Les chaînes de lettres sont l'une des façons de gaspiller du temps les plus

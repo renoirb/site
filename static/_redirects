@@ -34,14 +34,17 @@
 # PAGES KNOWN NOT TO BE IN USE ----------
 #
 /home/ /blog/ 301
-/fr/me-joindre/ /contact/ 301
-/me-joindre/ /contact/ 301
+/fr/me-joindre/ /contact/ 302
+/me-joindre/ /contact/ 302
 /renoir-boulanger/ /about/ 301
 /about/renoirb-2/ /about/ 301
 #
 # DELETED ----------
 #
-/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/ /error/?c=deleted
+/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/ /error/?c=deleted 301
+/screenshot/ /error/?c=gone
+/github/ /error/?c=gone
+/forrst/ /error/?c=gone
 #
 # REWRITING URL TO SOMETHING BETTER ----------
 #
@@ -64,8 +67,20 @@
 /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical-5/ /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical/ 301
 /blog/2007/08/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical-10/ /blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical/ 301
 #
+# TAXONOMY THAT CHANGED NAMES
+#
+/blog/tag/procedures/ /blog/tag/procedure/ 302
+/blog/tag/evenements/ /blog/tag/events/ 302
+/blog/tag/fraude/ /blog/tag/fraud/ 302
+/blog/tag/logiciel-libre/ /blog/tag/open-source/ 302
+/blog/tag/good-practices/ /blog/tag/best-practices/ 302
+/blog/tag/front-end/ /blog/tag/frontend/ 302
+/blog/tag/accessibilite/ /blog/tag/accessibility/ 302
+/blog/category/projets/ /blog/category/projects/ 302
+#
 # PAGES FOR IMAGES THAT WORDPRESS WOULD HAVE ----------
 #
+/?attachment_id=5998 /error/?c=gone
 /blog/2007/11/mon-espace-de-travail/le-desktop-de-renoir/ /error/?c=disabled-img-url
 /blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons/dmmt_coverjpg/ /error/?c=disabled-img-url
 /renoirb/ /error/?c=disabled-img-url

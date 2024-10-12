@@ -10,7 +10,7 @@ migrateLinks: true
 categories:
   - tranche-de-vie
 tags:
-  - evenements
+  - events
 keywords:
   - ignite
   - montreal

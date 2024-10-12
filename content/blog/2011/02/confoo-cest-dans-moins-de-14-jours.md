@@ -6,8 +6,9 @@ status: publish
 revising: true
 created: '2011-02-24'
 updated: '2023-11-16'
+categories:
+  - events
 tags: []
-categories: []
 excerpt: ''
 ---
 

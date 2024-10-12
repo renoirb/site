@@ -10,7 +10,7 @@ updated: '2015-03-09'
 tags:
   - cloud-computing
   - favourites
-  - good-practices
+  - best-practices
   - logiciel-libre
   - salt-stack
 categories: []

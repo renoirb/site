@@ -10,7 +10,7 @@ revising: true
 categories:
   - tranche-de-vie
 tags:
-  - logiciel-libre
+  - open-source
 excerpt: >-
   C’est une réécriture complète de PHP, qui a apporté aussi une syntaxe qui
   permet d’annoter les signatures des arguments d’entrée et de sortie, et plus.

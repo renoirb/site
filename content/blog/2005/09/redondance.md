@@ -1,5 +1,6 @@
 ---
-title: Redondance
+title: >-
+  Redondance des serveurs : stratégie pour améliorer la résilience des sites web
 locale: fr-CA
 created: 2005-09-21
 updated: 2023-11-15
@@ -8,10 +9,11 @@ status: publish
 revising: true
 caracteresBizzares: true
 categories:
-  - tranche-de-vie
+  - techniques
 tags:
   - entrepreneurial-life
-excerpt: ''
+excerpt: >-
+  Je partage mes réflexions et mes récentes découvertes concernant les techniques d'amélioration de la résilience des sites web. J'y explore particulièrement l'utilisation de BIND et du mécanisme de 'Round Robin' dans le contexte d'une architecture multi-serveurs. Cette approche implique la mise en place de plusieurs serveurs, chacun hébergeant une copie identique des sites, et la configuration d'un système de distribution des requêtes permettant d'alterner efficacement entre les serveurs disponibles.
 ---
 
 Travailler avec DNS Bind8 n'est pas toujours évident pour les novices.
@@ -25,6 +27,7 @@ Je dois dire qu’a l'époque ce n'était pas évident car il n’y avait pas au
 
 <p><strong>Erreur de vérification!</strong></p>
 
+<!--#TODO notice caracteresBizzares √î -->
 <p>Aujourd'hui, j'ai eu la brillante idée de vérifier ma configuration quand √î, Surprise!! mon domaine principal est vide... la zone dns (<code>/var/named/<em>mon-domaine-principal</em>.conf.db</code>) est vidée avec un truc que j'ai configuré pour le fun hier avec DirectAdmin! Vous savez l'option Sub-Domains... Bien, faites attention whiz du shell en SSH. Faites sûr que toutes vos configuraitons httpd sont bien faites DANS LE CONTROL PANEL! sinon, on peut faire le saut!</p>
 
 <p><strong>Groupe du jour</strong>: Seether, <a href="http://music.yahoo.com/ar-292620-discography--Seether"><em>Karma and effect</em></a></p>

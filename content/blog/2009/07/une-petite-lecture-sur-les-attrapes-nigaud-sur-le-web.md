@@ -10,7 +10,7 @@ revising: true
 categories:
   - tranche-de-vie
 tags:
-  - fraude
+  - fraud
   - with-images
   - vulgarization
 excerpt: ''

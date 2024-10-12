@@ -10,7 +10,8 @@ revising: true
 created: '2011-01-25'
 updated: '2013-03-27'
 tags: []
-categories: []
+categories:
+- events
 excerpt: ''
 ---
 

@@ -7,11 +7,12 @@ canonical: https://renoirboulanger.com/blog/2015/05/converting-dynamic-site-stat
 status: publish
 revising: true
 categories:
-  - projects
+  - techniques
 tags:
   - archiving
   - procedure
   - webplatform
+  - techniques
 keywords:
   - curl
   - wget

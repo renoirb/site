@@ -8,7 +8,7 @@ revising: false
 categories:
   - experiments
 tags:
-  - front-end
+  - frontend
   - packaging
   - architecture
   - on-front-page

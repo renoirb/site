@@ -10,6 +10,7 @@ updated: '2013-03-27'
 tags:
   - linux
   - tutoriels
+  - techniques
 categories:
   - tranche-de-vie
 excerpt: >-

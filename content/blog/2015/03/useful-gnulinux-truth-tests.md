@@ -7,7 +7,7 @@ canonical: 'https://renoirboulanger.com/blog/2015/03/useful-gnulinux-truth-tests
 status: publish
 revising: true
 categories:
-  - techniques
+  - snippet
 tags:
   - linux
   - salt-stack

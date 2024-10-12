@@ -7,12 +7,13 @@ canonical: https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-
 status: publish
 revising: false
 categories:
-  - experiments
+  - snippet
 tags:
   - linux
   - operations
   - salt-stack
   - cloud-computing
+  - open-source
 keywords:
   - Ansible
   - Infrastructure as Code
