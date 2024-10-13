@@ -8,6 +8,7 @@ import {
   fromPackageToAppIdentity,
   IS_CI,
   nuxtContentHooks,
+  getNuxtContentAllPages,
 } from './lib'
 import tailwindConfig from './tailwind.config'
 
@@ -24,8 +25,6 @@ const isProduction = process.env.NODE_ENV === 'production'
 // - [x] RSS Feed
 // - [ ] list of all URLs to articles markdown files published with title, created, locale
 // - [ ] During build, remove search index we do not use https://damieng.com/blog/2024/05/14/nuxt-content-db-and-size/
-
-const allContent = new Map<string, Record<string, string | string[]>>()
 
 const main: NuxtConfig = {
   /*
@@ -114,46 +113,14 @@ try {
   },
   hooks: {
     ...nuxtContentHooks,
-    'generate:distCopied'(generator) {
+    // reminder: don't have two hooks the same
+    'generate:distCopied': (generator) => {
+      const pages = getNuxtContentAllPages()
       const indexNlJson = path.join(
         generator.options.generate.dir,
         'content.json',
       )
-      const items: Record<string, string | string[]>[] = []
-      for (const [, data] of allContent) {
-        items.push(data)
-      }
-      fs.writeFileSync(indexNlJson, JSON.stringify(items))
-    },
-    'content:file:beforeInsert'(contentFile) {
-      const {
-        categories = [],
-        description = '',
-        excerpt = '',
-        extension,
-        locale,
-        path = '',
-        redirect = '',
-        tags = [],
-        title,
-      } = contentFile
-      let category = ''
-      if (categories && categories.length > 0) {
-        category = categories[0]
-      }
-      const item = {
-        path,
-        file: path + extension,
-        title,
-        locale,
-        category,
-        tags,
-        description,
-        excerpt,
-      }
-      if (!allContent.has(path) && redirect === '') {
-        allContent.set(path, item)
-      }
+      fs.writeFileSync(indexNlJson, JSON.stringify(pages))
     },
   },
   /*

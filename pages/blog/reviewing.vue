@@ -21,13 +21,8 @@
             </small>
             <details>
               <summary>
-                score
-                {{
-                  createSortScoreForFlagThing(
-                    createFlagString(content).split(' '),
-                  )
-                }}:
-                {{ createFlagString(content) }}
+                score {{ content.score }}:
+                {{ content.flags.join(' ') }}
               </summary>
               <pre>{{ content }}</pre>
             </details>
@@ -45,6 +40,8 @@
   import type { INuxtContentResult } from '~/lib'
   type NuxtContentResult = WithReviewingProps & INuxtContentResult
   interface WithReviewingProps {
+    score: string
+    flags: string
     caption?: boolean
     caracteresBizzares?: boolean
     gallery?: boolean
@@ -64,13 +61,13 @@
   export interface Computed {}
   export interface Props {}
   const createFlagThing = (arg: WithReviewingProps): string[] => {
-    const a = arg.images && arg.images === true ? 'I' : '-'
-    const b = arg.gallery && arg.gallery === true ? 'G' : '-'
+    const a = arg.images && arg.images === true ? 'A' : '-'
+    const b = arg.gallery && arg.gallery === true ? 'B' : '-'
     const c = arg.caption && arg.caption === true ? 'C' : '-'
     const d =
-      arg.caracteresBizzares && arg.caracteresBizzares === true ? '√©' : '-'
-    const e = arg.migrateImages && arg.migrateImages === true ? 'M' : '-'
-    const f = arg.migrateLinks && arg.migrateLinks === true ? 'L' : '-'
+      arg.caracteresBizzares && arg.caracteresBizzares === true ? 'D' : '-'
+    const e = arg.migrateImages && arg.migrateImages === true ? 'E' : '-'
+    const f = arg.migrateLinks && arg.migrateLinks === true ? 'F' : '-'
     return [a, b, c, d, e, f]
   }
   const createSortScoreForFlagThing = (input: string[]): number => {
@@ -134,6 +131,11 @@
       const fetched = (await ds.fetch()) as NuxtContentResult[]
       const contents: NuxtContentResult[] = fetched
         .filter((a) => findExcludingRedirectPredicate(a))
+        .map((a) => {
+          const flags = createFlagThing(a)
+          const score = createSortScoreForFlagThing(flags)
+          return { ...a, score, flags }
+        })
         .sort(sortCompareFn)
       const count = contents.length
       const lines = [
