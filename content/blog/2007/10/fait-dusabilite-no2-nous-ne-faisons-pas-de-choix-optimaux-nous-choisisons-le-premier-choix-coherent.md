@@ -51,6 +51,6 @@ Lorsqu'on créé une interface, le point d'ordre serait: de Suivre les conventio
 <h3>Aussi sur le sujet</h3>
 Il y a quelques posts que j'ai fait dans le temps
 <ul>
-	<li><a href="http://renoirboulanger.com/blog/2007/11/fait-d%e2%80%99usabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons/">Fait d’usabilité no3, Nous n’essayons pas de comprendre les choses, nous fouillons</a></li>
-	<li><a href="http://renoirboulanger.com/blog/2007/09/revue-de-dont-make-me-think/">Revue de don't make me think</a></li>
+	<li><a href="/blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons/">Fait d’usabilité no3, Nous n’essayons pas de comprendre les choses, nous fouillons</a></li>
+	<li><a href="/blog/2007/09/revue-de-dont-make-me-think/">Revue de don't make me think</a></li>
 </ul>

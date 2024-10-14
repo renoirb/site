@@ -23,7 +23,7 @@ I would like to remind that OOCSS as far as I recall is to use CSS selectors in 
 
 Nicole Sullivan, who coined the term made it pretty clear.
 
-Separate CSS effects and assemble afterward. 
+Separate CSS effects and assemble afterward.
 
 Namely, separating:
 <ul>
@@ -54,7 +54,7 @@ All this and more are the benefits of imementing OOCSS
 
 I recommend to have a look at markup libraries such as Twitter bootstrap, <a href="http://addyosmani.github.com/jquery-ui-bootstrap/">jQuery UI Bootstrap</a> (jQuery UI, writing Twitter Bootstrap markup), Kickstrap, Zurb Foundation, Pea.rs, and others. I have a list on my <a href="http://delicious.com/inexisdotnet/css+framework">delicious account tagged as <code>css+framework</code></a>
 
-As an example of this concept, I wrote <a href="http://beta.renoirboulanger.com/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window">a plugin to create a form confirmation window using only two class names</a>.
+As an example of this concept, I wrote <a href="/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window">a plugin to create a form confirmation window using only two class names</a>.
 
 
 <h3>References</h3>

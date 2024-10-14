@@ -117,7 +117,7 @@ account required pam_permit.so</pre>
 <pre lang="bash"># chown -R ftp:ftp /var/ftp/
 # chmod -R 740 /var/ftp</pre>
 </li>
-	<li><strong><a href="http://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-AjouterunutilisateurFTP">Ajouter un utilisateur FTP</a></strong></li>
+	<li><strong><a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-AjouterunutilisateurFTP">Ajouter un utilisateur FTP</a></strong></li>
 	<li>Ajuster <tt>fail2ban</tt>
 <div class="code panel" style="border-width: 1px;">
 <div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><strong>Ajuster le bloc [vsftpd]</strong></div>
@@ -165,13 +165,13 @@ Voir les options suivantes a la connection
 On utilise le truc simple de htpasswd pour l'authentification. Pas de gossage :-)
 <h3><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Cr%C3%A9erunnouveaucompte"></a>Créer un nouveau compte</h3>
 <ol>
-	<li>Créer le <em>premier compte</em>, sinon, <strong>passer	a la directive suivante</strong>! ou Utiliser mon script <a href="http://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur">Script pour créer un compte utilisateur</a>
+	<li>Créer le <em>premier compte</em>, sinon, <strong>passer	a la directive suivante</strong>! ou Utiliser mon script <a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur">Script pour créer un compte utilisateur</a>
 <pre lang="bash"># htpasswd -c /etc/vsftpd.passwd ftpuser
 New password:
 Re-type new password:
 Adding password for user ftpuser</pre>
 <strong>Note</strong> l'option <strong><tt>-c</tt></strong> est	pour créer le fichier la première fois.</li>
-	<li>Voir les directives de *<a href="http://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur">Script pour créer un compte utilisateur</a></li>
+	<li>Voir les directives de *<a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur">Script pour créer un compte utilisateur</a></li>
 </ol>
 <h3><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Ajouteroumodifierunutilisateur"></a><strong>Ajouter ou modifier un utilisateur</strong></h3>
 <ol>
@@ -185,7 +185,7 @@ Adding password for user foo
  * Création du dossier /home/ibottin/FTP/foo ...  OK
  * Changement des permissions du dossier ...  OK
 Terminé!</pre>
-Voir les directives de <strong><a href="http://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur">Script pour créer un compte utilisateur</a></strong></li>
+Voir les directives de <strong><a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur">Script pour créer un compte utilisateur</a></strong></li>
 </ol>
 <h3><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur"></a>Script pour créer un compte utilisateur</h3>
 <ol>

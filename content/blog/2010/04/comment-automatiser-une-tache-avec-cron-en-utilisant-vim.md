@@ -55,9 +55,9 @@ source: <a href="http://matrix.samizdat.net/pratique/documentation/guide-survie-
 <h3>Créer une tâche CRON</h3>
 Pour créer une tâche sur un système Linux il y a plusieurs méthodes possibles.
 <ol>
-	<li><a href="http://renoirboulanger.com/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim#crontab">Ajouter une ligne dans le «crontab», la table d'actions CRON</a></li>
-	<li><a href="http://renoirboulanger.com/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim#crond">Ajouter fichier avec directives dans /etc/cron.d/</a></li>
-	<li><a href="http://renoirboulanger.com/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim#etccron">Ajouter une ligne dans un des dossiers /etc/cron.daily/, /etc/cron.hourly/, /etc/cron.monthly</a></li>
+	<li><a href="/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim#crontab">Ajouter une ligne dans le «crontab», la table d'actions CRON</a></li>
+	<li><a href="/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim#crond">Ajouter fichier avec directives dans /etc/cron.d/</a></li>
+	<li><a href="/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim#etccron">Ajouter une ligne dans un des dossiers /etc/cron.daily/, /etc/cron.hourly/, /etc/cron.monthly</a></li>
 </ol>
 <h4><a name="crontab"></a>1. Ajouter une ligne dans le «crontab», la table d'actions CRON</h4>
 C'est fait soit en utilisant la commande crontab, ou en éditant le fichier /etc/crontab

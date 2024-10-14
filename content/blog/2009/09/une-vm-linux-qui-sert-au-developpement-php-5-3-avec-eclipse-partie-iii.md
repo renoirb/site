@@ -25,9 +25,9 @@ Cette partie couvrira l'installation de Apache et de PHP 5.3 (la dernière versi
 
 J'ai séparé cette série en quatre volets.
 <ol>
-<li><strong><a href="http://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i/">Description du concept</a></strong>
+<li><strong><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i/">Description du concept</a></strong>
 Ce que je vais discuter dans cette série d'articles n'est pas nécessairement connu de tous. Je vais donc vulgariser un peu avant de commencer.</li>
-<li><strong><a href="http://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/">Installation du système</a></strong>
+<li><strong><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/">Installation du système</a></strong>
 Je donne ici mon secret de magicien avec quelques configurations que je considère importantes pour un environement d'hébergement web pour améliorer la sécruité (le strict minimum pour cette série d'articles. Je pourrai en faire un plus poussé plus tard).</li>
 <li><strong>Compilation de PHP 5.3</strong> (cet article)
 Comment installer Apache 2.x avec le dernier cutting-edge PHP.</li>
@@ -104,7 +104,7 @@ Sortir avec :wq puis exécuter le script.
 <pre lang="bash"># /bin/bash ./configure.sh</pre>
 L'écran devrait bouger beaucoup... généralement dans la doc on conseille ici d'aller prendre un café!
 
-... Si tout va bien tout devrait terminer par quelque chose qui ressemble à "Thanks for using php". Sinon.... je conseille ma <a href="http://renoirboulanger.com/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur/">solution aux problèmes numéro un</a>. ;)
+... Si tout va bien tout devrait terminer par quelque chose qui ressemble à "Thanks for using php". Sinon.... je conseille ma <a href="/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur/">solution aux problèmes numéro un</a>. ;)
 
 Faut pas s'en faire. Généralement c'est de tenter avec "<strong>apt-cache search</strong>" et "<strong>apt-get install</strong>" le nom de la librairie manquante.
 <h4>6. Make et Make Install</h4>

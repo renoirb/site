@@ -189,6 +189,6 @@ disque devrait être totalement rempli d'ordures aléatoire.
 
 Au plaisir!
 
-[0]: http://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/#six
+[0]: /blog/2008/04/effacer-un-disque-dur/#six
 [1]: https://wiki.debian.org/LiveCD
 [2]: https://www.ubuntu.com/

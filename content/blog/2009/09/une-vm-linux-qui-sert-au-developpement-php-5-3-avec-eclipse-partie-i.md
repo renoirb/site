@@ -33,14 +33,14 @@ Je mentionne PHP 5.3 mais en fait ce type d'installation pourrait être utilisé
 J'ai séparé cette série en quatre volets.
 <ol>
 	<li><strong>Description du concept</strong> (cet article)Ce que je vais discuter dans cette série d'articles n'est pas nécessairement connu de tous. Je vais donc vulgariser un peu avant de commencer.</li>
-	<li><strong><a href="http://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/">Installation du système</a></strong>Je donne ici mon secret de magicien avec quelques configurations que je considère importantes pour un environement d'hébergement web pour améliorer la sécruité (le strict minimum pour cette série d'articles. Je pourrai en faire un plus poussé plus tard).</li>
-	<li><strong><a href="http://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii">Compilation de PHP 5.3</a></strong>Comment installer Apache 2.x avec le dernier cutting-edge PHP.</li>
+	<li><strong><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/">Installation du système</a></strong>Je donne ici mon secret de magicien avec quelques configurations que je considère importantes pour un environement d'hébergement web pour améliorer la sécruité (le strict minimum pour cette série d'articles. Je pourrai en faire un plus poussé plus tard).</li>
+	<li><strong><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii">Compilation de PHP 5.3</a></strong>Comment installer Apache 2.x avec le dernier cutting-edge PHP.</li>
 	<li><strong>Installation de l'environnement de développement avec Eclipse PDT</strong> (à venir)La magie se passe par là! Avec ce setup votre équipe pourra répliquer l'installation de développement a volonté.</li>
 </ol>
 
 <div style="background: #ececec; margin: 5px 0px; padding: 18px 8px 8px 50px; border: 1px solid #333;"> 
 <h4 style="color: #777; margin-bottom: 10px;">Mise à jour et façon différente de fonctionner</h4> 
-<p>Dans un billet plus récent (que celui-ci) <a href="http://renoirboulanger.com/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/">j'explique comment le faire pour un Mac</a>.</p> 
+<p>Dans un billet plus récent (que celui-ci) <a href="/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/">j'explique comment le faire pour un Mac</a>.</p>
 </div> 
 
 <h3>Mise en contexte</h3>
@@ -51,7 +51,7 @@ Ce type d'installation est idéal car il permet d'avoir a installer les prérequ
 A la fin de cette série d'articles vous aurez accès a une VM qui représentera votre environement de production (ajuster à vos besoins de production, évidemment).
 <!--more-->
 <h3>Concept</h3>
-Comme j'<a href="http://renoirboulanger.com/blog/2007/11/mon-espace-de-travail/">en ai déjà parlé ici</a> une VM roule avec toutes les versions désirés pour pouvoir développer et tester live le code développé. Le code est envoyé au serveur de source (<tt>git</tt>, <tt>subversion</tt>, <tt>cvs</tt>, etc) de toute façon.  C'est ce qui rend cette VM "jettable" et facilement copiée pour des collègues.
+Comme j'<a href="/blog/2007/11/mon-espace-de-travail/">en ai déjà parlé ici</a> une VM roule avec toutes les versions désirés pour pouvoir développer et tester live le code développé. Le code est envoyé au serveur de source (<tt>git</tt>, <tt>subversion</tt>, <tt>cvs</tt>, etc) de toute façon.  C'est ce qui rend cette VM "jettable" et facilement copiée pour des collègues.
 
 C'est très utile car souvent, les outils utilisés (serveur applicatif, environement de développement, configuration de "debug", scripts sur mesure de l'équipe infrastructure) doivent être reproduits le plus fidèlement au niveau développement pour s'assurer de ne pas tomber sur des coquilles rendu au jour "J".
 

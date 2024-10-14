@@ -18,7 +18,7 @@ excerpt: ''
 
 <div style="background: #ececec; margin: 5px 0px; padding: 18px 8px 8px 50px; border: 1px solid #333;"> 
 <h4 style="color: #777; margin-bottom: 10px;">Mise à jour et façon différente de fonctionner</h4> 
-<p>Dans un billet plus récent (que celui-ci) <a href="http://renoirboulanger.com/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/">j'explique comment le faire pour un Mac</a>.</p> 
+<p>Dans un billet plus récent (que celui-ci) <a href="/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/">j'explique comment le faire pour un Mac</a>.</p>
 </div> 
 
 J'ai discuté lors d'un dîner d'apprentissage avec quelques collegues et montré comment j'ai monté mon setup de dev avec VMWare.

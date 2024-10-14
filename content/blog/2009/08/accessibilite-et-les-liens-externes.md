@@ -20,7 +20,7 @@ excerpt: ''
 
 <p>Soit que c'est pas manque de temps, trop de choses à penser, ou on n'y pense simplement pas.</p>
 
-<p>Dans cet article j'exprime mon opinion sur l'importance (du point de vue utilisabilité) des icones de liens extérieurs. <del>Plus tard je montrerai une méthode pour automatiser</del> <ins>[EDIT 2009-08-23] J'ai documenté comment faire dans <a href="http://renoirboulanger.com/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite">Manipulation des liens extérieurs et les popup pour améliorer l'Accessibilité</a>.</ins></p>
+<p>Dans cet article j'exprime mon opinion sur l'importance (du point de vue utilisabilité) des icones de liens extérieurs. <del>Plus tard je montrerai une méthode pour automatiser</del> <ins>[EDIT 2009-08-23] J'ai documenté comment faire dans <a href="/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite">Manipulation des liens extérieurs et les popup pour améliorer l'Accessibilité</a>.</ins></p>
 
 <!--more-->
 <p>Le problème que j'ai voulu me pencher consiste avec la <a href="http://www.accessibiliteweb.org/bdc/directives/theme/comprehension#pc13_1">règle qui suit</a> :

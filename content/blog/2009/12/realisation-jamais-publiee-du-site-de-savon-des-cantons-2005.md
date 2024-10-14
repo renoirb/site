@@ -62,7 +62,7 @@ comment j’avait déjà cerné les outils du web2.0 de 2005.
 - Carte électronique format VCF (pour les carnets d’adresses)
 
 C’est quand même surprenant que je n’ai pas commencé à ce moment là a
-[étudier le PHP en orienté-objet avec PHP 5](http://renoirboulanger.com/blog/2009/09/devenir-zend-certified-engineer-avec-php5/)
+[étudier le PHP en orienté-objet avec PHP 5](/blog/2009/09/devenir-zend-certified-engineer-avec-php5/)
 qui était sorti un an avant. Car même si la fin du projet m’a déçu, j’ai
 définitivement eu beaucoup de plaisir de le programmer.
 

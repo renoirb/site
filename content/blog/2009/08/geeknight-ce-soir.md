@@ -22,6 +22,8 @@ C'est un peu le but!
 
 ... faire rire :)
 
+<!--#TODO Re-Formulate this awkward thing here -->
+
 <h3>Historique</h3>
 Depuis deux ans nous sommes quelques amis qui aimons les technologies du web et de Linux qui se rassemblent une fois semaine pour apprendre a les utiliser. Éventuellement, nous apportons nos connaissances à notre milieu de travail.
 
@@ -38,7 +40,7 @@ Depuis deux ans nous sommes quelques amis qui aimons les technologies du web et 
 <h3>Un réseau privé sécurisé entre chaque Geek dans son foyer!</h3>
 C'est pas compliqué. Nous avons un Wiki personnel (<a href="http://www.atlassian.com/software/confluence"><strong>Confluence</strong></a>) et on utilise <em>Subversion</em> et <em>Trac</em> pour réviser notre code et apprendre entre nous!
 
-UPDATE 2010-01-03: Maintenant que nous vivons ensemble (voir <a href="http://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1/">ce billet</a>) le réseau est bien différent.
+UPDATE 2010-01-03: Maintenant que nous vivons ensemble (voir <a href="/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1/">ce billet</a>) le réseau est bien différent.
 
 <h3>Et vous?</h3>
 Avez-vous déjà fait ce type de soirée?

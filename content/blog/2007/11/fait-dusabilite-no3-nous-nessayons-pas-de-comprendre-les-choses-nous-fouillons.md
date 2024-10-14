@@ -59,6 +59,6 @@ Il s'agit de quelques trucs simples tels que;
 <h3>Aussi sur le sujet</h3>
 Il y a quelques posts que j'ai fait dans le temps
 <ul>
-	<li><a href="http://renoirboulanger.com/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent/">Fait d’usabilité no2, Nous ne faisons pas de choix optimaux. Nous choisisons le premier choix cohérent</a></li>
-	<li><a href="http://renoirboulanger.com/blog/2007/09/revue-de-dont-make-me-think/">Revue de don't make me think</a></li>
+	<li><a href="/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent/">Fait d’usabilité no2, Nous ne faisons pas de choix optimaux. Nous choisisons le premier choix cohérent</a></li>
+	<li><a href="/blog/2007/09/revue-de-dont-make-me-think/">Revue de don't make me think</a></li>
 </ul>

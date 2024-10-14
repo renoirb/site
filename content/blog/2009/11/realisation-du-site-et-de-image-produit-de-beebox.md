@@ -20,7 +20,7 @@ coverImage:
   text: Page d’accueil
 ---
 
-Comme j'en ai parlé dans <a href="http://renoirboulanger.com/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007/">ce billet</a> j'ai eu plusieurs rôles dans la réalisation du logiciel <a href="http://www.beebox.ca">beebox</a>. L'un d'eux était de m'occuper de l'image du produit.
+Comme j'en ai parlé dans <a href="/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007/">ce billet</a> j'ai eu plusieurs rôles dans la réalisation du logiciel <a href="http://www.beebox.ca">beebox</a>. L'un d'eux était de m'occuper de l'image du produit.
 
 
 <p>Pour résumer l'usage du produit je vous laisser aller visiter le site web (<a href="http://www.beebox.ca">beebox.ca</a>) mais pour ce qui me concerne j'ai conçu et entretenu l'image du produit jusqu'en 2009.</p>

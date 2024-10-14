@@ -14,7 +14,7 @@ excerpt: ''
 
 <img class="size-full wp-image-1205" style="border:none !important;float:right;" title="Utiliser le même mot de passe pour tout ses services c'est mal... 'Voyez?" src="http://renoirboulanger.com/wp-content/uploads/2009/10/hm36drugs-are-bad-posters.jpg" alt="Utiliser le même mot de passe pour tout ses services c'est mal... 'Voyez?" width="318" height="450" />
 
-Durant mon ménage aujourd'hui je suis tombé mon archive de podcasts de <a href="http://www.grc.com/securitynow/">mon podast préféré: Security Now</a> avec Leo Laporte <a href="http://fr.wikipedia.org/wiki/Leo_Laporte"></a> et Steve Gibson<a href="http://en.wikipedia.org/wiki/Steve_Gibson_%28computer_programmer%29"></a> qui expliquait certains concepts pour améliorer la sécurité des mots de passe <a href="http://renoirboulanger.com/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser/#two">[2]</a>.
+Durant mon ménage aujourd'hui je suis tombé mon archive de podcasts de <a href="http://www.grc.com/securitynow/">mon podast préféré: Security Now</a> avec Leo Laporte <a href="http://fr.wikipedia.org/wiki/Leo_Laporte"></a> et Steve Gibson<a href="http://en.wikipedia.org/wiki/Steve_Gibson_%28computer_programmer%29"></a> qui expliquait certains concepts pour améliorer la sécurité des mots de passe <a href="/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser/#two">[2]</a>.
 
 Il est prouvé que beaucoup trop de gens utilisent le même mot de passe pour tous les services qu'ils utilisent. Encore pire, plusieurs utilisent un mot de passe trop évident.
 
@@ -27,7 +27,7 @@ Je vais donc partager avec vous certains trucs que fait pour protéger mon ident
 Pour plusieurs raisons.
 <ul>
 	<li>C'est pas tout les gestionnaires de serveurs qui sont honnêtes;</li>
-	<li><a href="http://www.win.tue.nl/hashclash/rogue-ca/">Briser</a> un algorithme «<a href="http://en.wikipedia.org/wiki/MD5">MD5</a> hash» est assez facile! <a href="http://renoirboulanger.com/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser/#one">[1]</a> (pas impossible, disons);</li>
+	<li><a href="http://www.win.tue.nl/hashclash/rogue-ca/">Briser</a> un algorithme «<a href="http://en.wikipedia.org/wiki/MD5">MD5</a> hash» est assez facile! <a href="/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser/#one">[1]</a> (pas impossible, disons);</li>
 	<li>Le code de crypto n'est pas toujours bien fait, et possible de faire du «reverse engineering»;</li>
 	<li>C'est pas sûr que le code encrypte en autre chose que MD5 (SHA par exemple), mais encore... c'est aussi (potentiellement) brisable que le MD5;</li>
 	<li>Si c'est un mot de passe trop facile a deviner qui cite quelque chose que tout le monde sait que vous aimez, par exemple, et sans même l'obscurcir.... et qu'il est utilisé partout.</li>

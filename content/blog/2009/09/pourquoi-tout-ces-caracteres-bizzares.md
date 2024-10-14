@@ -17,7 +17,7 @@ excerpt: ''
 
 <div style="background:#ececec;margin:5px 0px;padding:18px 8px 8px 50px;border:1px solid #333">
 <h3 style="color:#777;margin-bottom:10px;">UNE SOLUTION A ÉTÉ PUBLIÉE</h3>
-<p>J'ai enfin réglé la situation! J'ai pris du temps avant de le faire, mais j'ai réussi. Suite sur <a href="http://renoirboulanger.com/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion/">Comment remplacer les caractères bizzares dans WordPress lorsqu'on a mal fait la conversion</a>.</p></div>
+<p>J'ai enfin réglé la situation! J'ai pris du temps avant de le faire, mais j'ai réussi. Suite sur <a href="/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion/">Comment remplacer les caractères bizzares dans WordPress lorsqu'on a mal fait la conversion</a>.</p></div>
 
 C'est dommage.
 

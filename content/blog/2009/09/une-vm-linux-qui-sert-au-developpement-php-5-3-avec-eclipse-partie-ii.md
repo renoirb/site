@@ -23,13 +23,13 @@ Ce billet expliquera comment j'installe un système Linux que je considère de b
 <!--more-->
 J'ai séparé cette série en quatre volets.
 <ol>
-	<li><strong><a href="http://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i">Description du concept</a></strong> (article précédent)
+	<li><strong><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i">Description du concept</a></strong> (article précédent)
 
 Ce que je vais discuter dans cette série d'articles n'est pas nécessairement connu de tous. Je vais donc vulgariser un peu avant de commencer.</li>
 	<li><strong>Installation du système</strong> (cet article)
 
 Je donne ici mon secret de magicien avec quelques configurations que je considère importantes pour un environement d'hébergement web pour améliorer la sécruité (le strict minimum pour cette série d'articles. Je pourrai en faire un plus poussé plus tard).</li>
-	<li><strong><a href="http://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii">Compilation de PHP 5.3</a></strong>
+	<li><strong><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii">Compilation de PHP 5.3</a></strong>
 
 Comment installer Apache 2.x avec le dernier cutting-edge PHP.</li>
 	<li><strong>Installation de l'environnement de développement avec Eclipse PDT</strong> (à venir)

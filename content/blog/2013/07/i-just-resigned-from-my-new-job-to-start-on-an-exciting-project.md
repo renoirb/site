@@ -24,7 +24,9 @@ excerpt: >-
 
 <p>However, after all, I have just received a new offer <ins><a href="/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project">to work for the W3C</a>; something I cannot</ins> <del> that I could not</del> turn down.</p>
 
-<p>I am very excited to have <a href="http://blog.webplatform.org/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/">this opportunity</a>. I would even say more: it is a honour.</p>
+<p>I am very excited to have 
+<a href="https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/">this opportunity</a>
+. I would even say more: it is a honour.</p>
 
 <p>I will explain more about it in another moment.</p>
 

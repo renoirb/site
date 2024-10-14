@@ -18,7 +18,7 @@ excerpt: ''
 
 <p>Je suis actuellement en mode "Documentation" et je me suis dit que le web pourrait profiter d'un résumé, en français, du Jargon de l'univers Java.</p>
 
-<p>Je ne suis pas un développeur Java mais j'ai eu a administrer des serveurs pendant 4 ans, et j'en fais encore aujourd'hui. Ce document résume ma compréhension des usages. Si vous avez des suggestions ou vous voulez me corriger, dites-moi le <a href="http://renoirboulanger.com/blog/2010/02/crash-course-sur-les-environnements-java#comments">dans les commentaires</a> et j'ajusterai mon billet.</p>
+<p>Je ne suis pas un développeur Java mais j'ai eu a administrer des serveurs pendant 4 ans, et j'en fais encore aujourd'hui. Ce document résume ma compréhension des usages. Si vous avez des suggestions ou vous voulez me corriger, dites-moi le <a href="/blog/2010/02/crash-course-sur-les-environnements-java#comments">dans les commentaires</a> et j'ajusterai mon billet.</p>
 <p>&nbsp;</p>
 
 <h3>Les versions</h3>
@@ -52,10 +52,10 @@ excerpt: ''
 </p><p>&nbsp;</p>
 
 <h3>Une classe</h3>
-<p>C'est quoi?.  C'est du code java compilé.</p> 
+<p>C'est quoi?.  C'est du code java compilé.</p>
 <p>La hiérarchie est faite en fonction du « <em>namespacing </em>» inspiré des standards du DNS. Une classe spécifique Java pour un WebService SOAP pour traduire du français au <em>Klingon</em> pourrait être appelé : i.e. com.renoirboulanger.startrek.klingon.soap.jar.</p>
 <p>&nbsp;</p>
 
 <h3>Suggestions</h3>
-<p>Je pense avoir fait le tour du sujet. Dites-moi dans <a href="http://renoirboulanger.com/blog/2010/02/crash-course-sur-les-environnements-java#comments">les commentaires</a> si j'ai oublié quelque chose d'important.</p>
+<p>Je pense avoir fait le tour du sujet. Dites-moi dans <a href="/blog/2010/02/crash-course-sur-les-environnements-java#comments">les commentaires</a> si j'ai oublié quelque chose d'important.</p>
 <p>&nbsp;</p>

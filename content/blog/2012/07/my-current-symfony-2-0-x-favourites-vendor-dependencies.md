@@ -19,7 +19,7 @@ excerpt: >-
   computers.
 ---
 
-After trying to use <a href="http://beta.renoirboulanger.com/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests">my own <strong>composer.json</strong> file</a> for development. I fell back to the deps file. I fell in the trap of removing the vendor and I had to spend two full evenings to get to a proper config set on up to date and working bundles.
+After trying to use <a href="/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests">my own <strong>composer.json</strong> file</a> for development. I fell back to the deps file. I fell in the trap of removing the vendor and I had to spend two full evenings to get to a proper config set on up to date and working bundles.
 
 Enjoy
 

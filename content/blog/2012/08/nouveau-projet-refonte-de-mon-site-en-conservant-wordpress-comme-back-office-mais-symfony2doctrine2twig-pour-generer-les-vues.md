@@ -21,7 +21,7 @@ J'ai décidé de refaire mon site web. J'aime bien utiliser le backend de WordPr
 
 Il s'agit d'une première élaboration brute des concepts qui motivent mon choix d'implémentation.
 
-Je suis en plein effort d'élaboration des requis et si vous voulez voir le <a href="http://beta.renoirboulanger.com/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing">pendant rédigé en anglais, j'ai publié ici</a>.
+Je suis en plein effort d'élaboration des requis et si vous voulez voir le <a href="/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing">pendant rédigé en anglais, j'ai publié ici</a>.
 <h3>But ultime des fonctionnalités</h3>
 <ul>
 	<li>Utiliser l'administration de WordPress pour gerer le contenu</li>

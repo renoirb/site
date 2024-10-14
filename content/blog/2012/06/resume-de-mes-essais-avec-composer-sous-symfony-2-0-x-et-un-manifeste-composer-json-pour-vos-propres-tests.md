@@ -24,7 +24,7 @@ excerpt: >-
 Ce soir j'ai pris le temps d'essayer de configurer une distribution Symfony 2.0.x sous Composer.  Je ne suis pas certain encore si j'ai totalement réussi.  J'aimerai votre avis sur ma proposition de fichier <a href="#composer-json">composer.json</a>.
 
 <strong>Statut mis à jour</strong>
-<p>Je suis <a href="http://beta.renoirboulanger.com/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies">retourné avec le fichier <strong>deps</strong></a> à cause que je n'ai pas réussi a avoir toutes mes dépendances fonctionnelles dans un délai raisonnable (trois soirs). J'essaierai à nouveau plus tard.
+<p>Je suis <a href="/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies">retourné avec le fichier <strong>deps</strong></a> à cause que je n'ai pas réussi a avoir toutes mes dépendances fonctionnelles dans un délai raisonnable (trois soirs). J'essaierai à nouveau plus tard.
 
 <h2>Résultat</h2>
 En ce moment je n'arrive pas a faire fonctionner <strong>JmsDiExtraBundle</strong> ni la nouvelle version de <strong>MopaBootstrapBundle</strong> notamment pour le <em>mopa/bootstrap-sandbox-bundle</em>.   Je mettrai ce billet a jour lorsque j'aurai terminé mes essais.

@@ -46,7 +46,7 @@ Nous sommes de vieux amis de longue date. Nous nous sommes croisés souvent dans
 
 Depuis 3 ans, nous passons un soir semaine a «Geeker» sur ce qui nous tente.
 J’en ai déjà parlé ici, dans
-<a href="http://renoirboulanger.com/blog/2009/08/geeknight-ce-soir/">mon billet
+<a href="/blog/2009/08/geeknight-ce-soir/">mon billet
 "Geek night ce soir"</a> de ces «Geek Nights». Que ce soit de monter une ferme
 machines virtuelles a utiliser un «framework PHP» pour expérimenter des trucs.
 On en a fait pas mal.
