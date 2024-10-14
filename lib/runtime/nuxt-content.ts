@@ -12,8 +12,25 @@ import type {
   IFrontMatterInnerDocument,
   INuxtOptionsHooks,
 } from '../model/content'
+import { extractVueTreeLinks } from './nuxt-content-links'
 
 const allPages = new Map<string, Record<string, string | string[]>>()
+const allLinks: string[] = []
+
+export const getNuxtContentAllPages = (): Record<
+  string,
+  string | string[]
+>[] => {
+  const pages: Record<string, string | string[]>[] = []
+  for (const [, data] of allPages) {
+    pages.push(data)
+  }
+  return pages
+}
+
+export const getNuxtContentAllLinks = (): string[] => {
+  return allLinks
+}
 
 export const nuxtContentHooks: INuxtOptionsHooks = {
   'content:file:beforeInsert': async (document, database) => {
@@ -49,17 +66,23 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
     )
     Reflect.set(document, 'categories', categories)
 
-    let category = ''
+    let category = '' // 'uncategorized'
     if (categories && categories.length > 0) {
       category = categories[0]
     }
     Reflect.set(document, 'category', category)
 
+    const links = extractVueTreeLinks(document)
+    if (links.length > 0) {
+      allLinks.push(...links)
+    }
+
     // ------------------------------------------------------------------------
     let preamble: IFrontMatterInnerDocument | null = null
     const preambleMaybe = extractFrontMatterInnerDocument(document, 'preamble')
-    if (preambleMaybe) {
-      const parsedDocument = await parseMarkdownText(database, preambleMaybe)
+    if (isFrontMatterInnerDocument(preambleMaybe)) {
+      const parsedDocument = await parseMarkdownText(preambleMaybe, database)
+
       const merging = Object.assign(document.preamble, {
         document: parsedDocument,
       })
@@ -74,8 +97,8 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
       document,
       'coverImage',
     )
-    if (coverImageMaybe) {
-      const parsedDocument = await parseMarkdownText(database, coverImageMaybe)
+    if (isFrontMatterInnerDocument(coverImageMaybe)) {
+      const parsedDocument = await parseMarkdownText(coverImageMaybe, database)
       const merging = Object.assign(document.coverImage, {
         document: parsedDocument,
       })
@@ -86,15 +109,4 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
     Reflect.set(document, 'coverImage', coverImage)
     // ------------------------------------------------------------------------
   },
-}
-
-export const getNuxtContentAllPages = (): Record<
-  string,
-  string | string[]
->[] => {
-  const pages: Record<string, string | string[]>[] = []
-  for (const [, data] of allPages) {
-    pages.push(data)
-  }
-  return pages
 }

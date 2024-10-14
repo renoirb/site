@@ -1,4 +1,5 @@
 export * from './hypothesis'
+export * from './nuxt-content-links'
 export * from './nuxt-content'
 export * from './nuxt-feed'
 export * from './nuxt'

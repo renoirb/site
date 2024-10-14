@@ -1,7 +1,14 @@
 import { strict as assert } from 'assert'
 import { isObject } from '../../runtime'
 import { abbreviatize } from '../abbreviations'
-import type { INuxtContentParsedDocument, INuxtContentDatabase } from './parser'
+import type {
+  INuxtContentParsedDocument,
+  VueNodeType,
+  VueRenderTree,
+  VueRenderTreeNonRoot,
+  VueNodeTag,
+} from '../../types'
+import type { INuxtContentDatabase } from './parser'
 import type { INuxtContentResult } from './model'
 
 export interface IFrontMatterInnerDocument {
@@ -62,30 +69,30 @@ export interface IFrontMatterInnerDocumentParsed
 }
 
 export const parseMarkdownText = async (
+  document: IFrontMatterInnerDocument,
   database: INuxtContentDatabase,
-  input: IFrontMatterInnerDocument,
 ): Promise<INuxtContentParsedDocument> => {
-  let out: INuxtContentParsedDocument
-  if (isObject(input) === false) {
+  let body: INuxtContentParsedDocument
+  if (isObject(document) === false) {
     const message = `Unexpected input, we expect an object`
     throw new TypeError(message)
   }
   let errorSuffix = ''
-  if (input.text) {
+  if (isFrontMatterInnerDocument(document)) {
     try {
       /**
        * Make all text with abbreviations to be wrapped into
        * appropriate abbr tag.
        */
-      const textContent = abbreviatize(input.text)
+      const textContent = abbreviatize(document.text)
       /**
        * Taking on what markdown.toJSON returns
        * https://github.com/nuxt/content/blob/%40nuxt/content%401.10.0/packages/content/parsers/markdown/index.js#L95
        */
       const parsed = await database.markdown.toJSON(textContent)
       if (parsed && 'body' in parsed) {
-        out = parsed as INuxtContentParsedDocument
-        return out
+        body = parsed as INuxtContentParsedDocument
+        return body
       }
     } catch (e) {
       errorSuffix += String(e)
@@ -148,4 +155,34 @@ export const extractFrontMatterInnerDocument = (
     }
   }
   return out
+}
+
+
+export const getVueNodeTag = (node: VueRenderTreeNonRoot): VueNodeTag => {
+  if (getVueNodeType(node) === 'element' && 'tag' in node) {
+    const { tag } = node
+    return tag
+  }
+  const message = `Unexpected input, only VueRenderTreeNonRoot of type 'element' has a tag property`
+  throw new Error(message)
+}
+
+export const getVueNodeType = (node: VueRenderTree): VueNodeType | '' => {
+  const { type = '' } = node
+  return type
+}
+
+export const isVueNodeWithChildren = (input: object): input is { children: VueRenderTreeNonRoot[] } => {
+  if (input && 'children' in input && Array.isArray(input.children)) {
+    return true
+  }
+  return false
+}
+
+export const getVueNodeChildren = (body): VueRenderTreeNonRoot[] => {
+  if (isVueNodeWithChildren(body)) {
+    const { children = [] } = body
+    return children
+  }
+  return []
 }

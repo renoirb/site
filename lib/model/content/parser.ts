@@ -1,4 +1,4 @@
-import { NuxtOptions } from '@nuxt/types'
+import type { NuxtOptions } from '@nuxt/types'
 import type { INuxtContentResult, IBaseNuxtContentResult } from './model'
 
 type INuxtContentParser = Record<
@@ -29,30 +29,3 @@ export interface INuxtOptionsHooks extends NuxtOptionsHooks {
   ) => void
 }
 
-export interface INuxtContentParsedTreeChild {
-  type: string | 'element'
-  tag: string | 'p' | 'nuxt-link' | 'li'
-  props: Record<string, string>
-}
-
-export interface INuxtContentParsedTreeTextNode {
-  type: 'text'
-  value: string
-}
-
-export type INuxtContentParsedTreeChidren = (
-  | INuxtContentParsedTreeTextNode
-  | INuxtContentParsedTreeChild
-)[]
-
-/**
- * What Nuxt content internally uses when transforming files.
- */
-export interface INuxtContentParsedTreeRoot {
-  type: 'root'
-  children: INuxtContentParsedTreeChidren
-}
-
-export interface INuxtContentParsedDocument {
-  body: INuxtContentParsedTreeRoot
-}

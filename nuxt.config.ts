@@ -9,6 +9,7 @@ import {
   IS_CI,
   nuxtContentHooks,
   getNuxtContentAllPages,
+  getNuxtContentAllLinks,
 } from './lib'
 import tailwindConfig from './tailwind.config'
 
@@ -115,12 +116,21 @@ try {
     ...nuxtContentHooks,
     // reminder: don't have two hooks the same
     'generate:distCopied': (generator) => {
-      const pages = getNuxtContentAllPages()
-      const indexNlJson = path.join(
+      const content = getNuxtContentAllPages()
+      let fullyQualifiedFilePath = path.join(
         generator.options.generate.dir,
         'content.json',
       )
-      fs.writeFileSync(indexNlJson, JSON.stringify(pages))
+      fs.writeFileSync(fullyQualifiedFilePath, JSON.stringify(content))
+      const allLinks = getNuxtContentAllLinks()
+      fullyQualifiedFilePath = path.join(
+        generator.options.generate.dir,
+        'links.csv',
+      )
+      fs.writeFileSync(
+        fullyQualifiedFilePath,
+        Array.from(new Set(allLinks)).join('\n'),
+      )
     },
   },
   /*
