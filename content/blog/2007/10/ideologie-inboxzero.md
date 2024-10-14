@@ -25,7 +25,7 @@ Voici les grandes lignes:
 <a HREF="#sentences"><strong>Répondre en quelques phrases courtes</strong></a> (#Five sentenc.es)
 <a HREF="#folders">Classement dans des folders</a>
 <h3>What's the action here</h3>
-En gros l'<strong><a HREF="http://www.renoirboulanger.com/wp-admin/auteur" TARGET="_blank">auteur</a> mentionne les questions cohérente</strong> a poser lorsqu'on recoit un courriel:
+En gros l'<strong>auteur mentionne les questions cohérente</strong> a poser lorsqu'on recoit un courriel:
 <ul>
 	<li><strong>Qu'est-ce que ce message,</strong> en ce qui<strong> me concerne</strong>? siginifie¬†et¬†<strong>pourquoi¬†je¬†devrait¬†m'en¬†préoccuper</strong>?</li>
 	<li><strong>Quelle action</strong>, s'il y en a, que ce message peut <strong>me demander de faire</strong>?</li>

@@ -53,7 +53,7 @@ Voici comment j'ai fait pour préparer un serveur web... d'autres directives pou
 </ul>
 </li>
 	<li>Aller sur <span class="nobr"><a href="http://www.redhat.com/network/" title="Visit page outside Confluence" rel="nofollow">http://www.redhat.com/network/</a></span> et se loguer avec lesdits credentiels</li>
-	<li>Executer le fichier <a href="http://www.renoirboulanger.com/files/cleanRHEL.sh" title="Fichier de nettoyage RHEL4"><span class="nobr">cleanRHEL.sh</span></a>
+	<li>Executer le fichier <a href="https://renoirboulanger.com/files/cleanRHEL.sh" title="Fichier de nettoyage RHEL4"><span class="nobr">cleanRHEL.sh</span></a><!--#TODO-Import-Code-From-External-->
 <ul>
 	<li>Voici comment:  <tt>#/bin/bash cleanRHEL.sh</tt></li>
 </ul>

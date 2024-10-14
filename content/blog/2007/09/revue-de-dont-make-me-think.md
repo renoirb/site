@@ -18,7 +18,11 @@ En tant que mélange de Graphiste-Programmeur il m'arrive souvent de devoir pren
 
 Avec cet ouvrage (quoi qu'il en a d'autres) vous pourrez comprendre comment optimiser l'impact visuel de vos projets tout en ayant l'assurance que le message passera. L'important lorsqu'on édite du contenu ce n'est pas que le contenu... mais aussi le "public cible"... s'il se désintéresse a notre travail. On est pas plus avancé .
 
-Bon, allez! On continue avec la critique.<!--more--><div style="float:left"><img src="http://www.renoirboulanger.com/wp-content/uploads/2007/09/dmmt_cover.jpg" title="Couverture de Don't make me think a common sense of usability" alt="Couverture de Don't make me think a common sense of usability" border="0" style="border:0;" /></div>
+Bon, allez! On continue avec la critique.
+
+<!--more-->
+
+<div style="float:left"><img src="https://renoirboulanger.com/wp-content/uploads/2007/09/dmmt_cover.jpg" title="Couverture de Don't make me think a common sense of usability" alt="Couverture de Don't make me think a common sense of usability" border="0" style="border:0;" /></div>
 
 Le livre s'appelait: <strong><em>Don't make me think. A Common Sense Approach to Web Usability</em></strong>
 
@@ -28,7 +32,7 @@ Il s'agit d'un livre que<em> toute personne</em> qui à a prendre des décisions
 
 Pourquoi? Parceque lorsque nous travaillons sur ledit projet nous oublions parfois de nous re-placer dans notre position d'utilisateur.
 
-<img src="http://www.renoirboulanger.com/wp-content/uploads/2007/09/dmmt_back_ex.gif" title="Illustration placée au dos du livre" alt="Illustration placée au dos du livre" align="right" border="0" />Lorsque j'ai vu le livre et que j'ai lu l'image suivante:
+<img src="https://renoirboulanger.com/wp-content/uploads/2007/09/dmmt_back_ex.gif" title="Illustration placée au dos du livre" alt="Illustration placée au dos du livre" align="right" border="0" />Lorsque j'ai vu le livre et que j'ai lu l'image suivante:
 
 L'exemple de droite explique souvent comment nous <u><strong><em>Aimerions</em></strong></u> que la page soit regardée... alors qu'en réalité nous agissons comme l'exemple de gauche.
 

@@ -36,7 +36,8 @@ Voici comment j'ai fait, en linux, pour transférer les TIF en JPG. Puis ensuite
 Pour commencer, on va lister tout les fichiers TIF, formater la commande de conversion type avec ImageMagick (ex: convert original.TIF original.jpg)
 
 <del><em>copier la ligne 1 du fichier texte, la ligne 2 donne un pointeur pour la description plus bas.</em>
-<a href="http://www.renoirboulanger.com/wp-content/uploads/2007/02/commande_longue.txt" title="Commande">Afficher le fichier texte</a></del>
+<a href="https://renoirboulanger.com/wp-content/uploads/2007/02/commande_longue.txt" title="Commande">Afficher le fichier texte</a></del>
+<!--#TODO-Import-Code-From-External-->
 
 <rb-notice-box variant="info" class="my-5">
 <strong slot="header">Renoir de 2024:</strong>
