@@ -28,7 +28,7 @@ patch:
 	patch node_modules/@nuxt/content/lib/database.js nuxt-content-database.patch
 
 .PHONY: deploy-gh
-deploy-gh: patch
+deploy-gh:
 	yarn clean
 	touch nuxt.config.ts
 	BASE_PATH=/site node_modules/.bin/nuxt-ts generate
@@ -37,7 +37,7 @@ deploy-gh: patch
 	node_modules/.bin/push-dir --dir=dist --branch=gh-pages --local-branch-name=2020 --cleanup
 
 .PHONY: deploy-prod
-deploy-prod: patch
+deploy-prod:
 	yarn clean
 	touch nuxt.config.ts
 	node_modules/.bin/nuxt-ts generate
