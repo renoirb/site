@@ -53,7 +53,7 @@
                 : undefined,
             )
           "
-          class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 z-30 float-none pb-5 pl-0 mx-auto mt-1"
+          class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1"
         >
           <nuxt-content
             v-if="content.coverImage && content.coverImage.document !== null"
