@@ -10,6 +10,7 @@
       <div class="body mt-8">
         <div
           v-for="content in contents"
+          :id="content.slug"
           :key="content.slug"
           :lang="content.locale"
           class="pb-8 mb-8 border-b border-black border-dashed"
