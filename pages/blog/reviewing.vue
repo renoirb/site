@@ -139,8 +139,8 @@
         .sort(sortCompareFn)
       const count = contents.length
       const lines = [
-        ...contents.map(({ path }: NuxtContentResult) =>
-          [path].map((i) => `"${i}"`).join(';'),
+        ...contents.map(({ path, score }: NuxtContentResult) =>
+          [path].map((i) => `- [ ]\tscore ${score}\t<${i}>`).join(';'),
         ),
       ].join('\n')
       console.log(lines)
