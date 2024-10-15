@@ -86,13 +86,13 @@
         return candidate
       },
       isOldEnough(): boolean {
-        return YEAR_CONSIDERED_OLD > this.year
+        const out = YEAR_CONSIDERED_OLD > this.year
+        return out
       },
     },
-    created() {
+    async beforeMount() {
+      await this.$nextTick()
       this.shouldBeVisible = this.isOldEnough
-    },
-    beforeMount() {
       if (this.preamble && this.preamble.disable === true) {
         this.shouldBeVisible = false
       }
@@ -116,6 +116,10 @@
       if (typeof titleTextContentMaybe === 'string') {
         this.titleTextContent = titleTextContentMaybe
       }
+      // I'm probably doing this wrong.
+      // That's 5 years old now and I can't remember if this was done when I
+      // fully understood Vue’s internals. Or before.
+      await this.$nextTick()
     },
   })
 </script>

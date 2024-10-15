@@ -21,7 +21,7 @@
       v-if="messageTextContent !== ''"
       v-html="abbreviatize(messageTextContent)"
     />
-    <slot class="addemdum" />
+    <slot />
   </rb-notice-box>
 </template>
 
@@ -64,11 +64,12 @@
     data() {
       const messageTextContent = this.message || ''
       const titleTextContent = this.title || ''
-      return {
+      const out = {
         messageTextContent,
         titleTextContent,
         shouldBeVisible: true,
       }
+      return out
     },
     methods: {
       abbreviatize,

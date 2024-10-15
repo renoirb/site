@@ -6,6 +6,7 @@
       :date="content.created"
       class="my-4"
       alert-type="warn"
+      role="alert"
     >
       <nuxt-content
         v-if="content.preamble && content.preamble.document !== null"
