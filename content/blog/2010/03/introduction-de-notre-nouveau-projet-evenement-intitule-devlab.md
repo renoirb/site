@@ -1,5 +1,5 @@
 ---
-title: Introduction de notre nouveau projet-événement intitulé DevLab
+title: DevLab Montréal — Introduction de nos événements hebdomadaire pour programmeurs
 locale: fr-CA
 created: 2010-03-17
 updated: 2013-03-27
@@ -18,6 +18,11 @@ keywords:
   - montreal
   - geek-night
   - events
+webarchiveSnapshots:
+- key: webnotwar-ftw
+  orig: http://www.webnotwar.ca/ftw/
+  snapshots:
+  - https://web.archive.org/web/20100309195343/http://www.webnotwar.ca/ftw/
 coverImage:
   src: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
   alt: devLabMtl.org
@@ -32,18 +37,16 @@ preamble:
     entre 2010-2012.
     J’y ai rencontré de bons amis et bonnes conaissances avec qui je garde de beaux souvenirs.
     Voici ce à quoi le site ressemblait sur [**DevLabMtl.org** en 2011 via Le *Web Archive*](https://web.archive.org/web/20110814135755/http://devlabmtl.org/).
-webarchiveSnapshots:
-- orig: http://www.webnotwar.ca/ftw/
-  snapshots:
-  - https://web.archive.org/web/20100309195343/http://www.webnotwar.ca/ftw/
 ---
 
 Moi et mes partenaires d’affaires des [GeekNights][1] (_Stéphan Champagne_,
 _Etienne Lachance_) planifions un projet qu’on a baptisé
-<em lang="en">devLab</em>.
+<em lang="en">devLab</em> Montréal.
+
+<!--#TODO-inline-edit probablement ajouter lien vers page décrivant Evocatio etc. -->
 
 Nos [GeekNights][1] étaient bien plaisants a nous trois mais nous voulons
-partager avec d’autres passionnés. C’est l’origine de l’idée du DevLab.
+partager avec d’autres passionnés. C’est l’origine de l’idée du <em lang="en">devLab</em>.
 
 Nous avons choisi le nom «Lab», parce que l’idée est d’augmenter ses capacités
 avec des gens expérimentés et de partager lors d’une soirée ou une fin de
@@ -56,7 +59,7 @@ Open-Source.
 - Plusieurs types de sessions pour travailler les divers aspects et faire
   avancer le projet
 - UNE rencontre aux trois mois ou quelque chose de la sorte.
-- On va lancer le nouveau projet pour la semaine WebCom, lors du FTW (vers le 25 mai 2010) .
+- On va lancer le nouveau projet pour la semaine WebCom, lors du FTW (vers le 25 mai 2010).
 
 ### Qui est invité à participer a l’organisation
 
@@ -95,10 +98,11 @@ les alliances pour permettre ce type d’événement d’une façon récurrente.
 
 ### Première sortie publique
 
-<app-image figcaption="MonDev Open Source Week Montreal" alt="MonDev: Montreal Developer community" src="~/assets/content/blog/2010/03/mondev_logo.jpg"></app-image>
+<app-image figcaption="MonDev Open Source Week Montreal" alt="MonDev: Montreal Developer community" src="~/assets/content/blog/2010/03/mondev_logo.jpg">
+</app-image>
 
 Nous serons présents lors de la première de ~~MonDev~~ et nous participerons
-aussi à la compétition «[For the Web coding competition][6]» sponsorisé par
+aussi à la compétition «[For the Web coding competition][webnotwar-ftw]» sponsorisé par
 Microsoft Canada. Venez nous voir!
 
 ### Appel a la collaboration
@@ -113,5 +117,5 @@ du projet.
 
 
 [1]: /blog/tag/geeknight
-[6]:
+[webnotwar-ftw]:
   https://web.archive.org/web/20100309195343/http://www.webnotwar.ca/ftw/
