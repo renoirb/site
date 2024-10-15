@@ -2,18 +2,14 @@
   <div class="document document--item z-30">
     <header class="title page-title mb-4 font-serif text-2xl italic">
       <h1>Kitchen Sink</h1>
-      <em>
-        Some hard-coded HTML patterns to make sure PostCSS purging doesn’t
-        remove stuff
-      </em>
+      <small>
+        <em>
+          Some hard-coded HTML patterns to make sure PostCSS purging doesn’t
+          remove stuff
+        </em>
+      </small>
     </header>
     <div class="body">
-      <div class="mb-5">
-        <h2 class="mb-5">Vue &lt;app-very-old-article /&gt;</h2>
-        <div>
-          <app-very-old-article locale="en-UK" date="2014-01-01" />
-        </div>
-      </div>
       <div class="mb-5">
         <h2 class="mb-5">HTML CustomElement &lt;rb-notice-box /&gt;</h2>
         <rb-notice-box

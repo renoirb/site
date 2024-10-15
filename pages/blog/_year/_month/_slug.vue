@@ -3,7 +3,7 @@
     <app-very-old-article
       :preamble="content.preamble"
       :locale="content.locale || 'en-CA'"
-      :date="content.date"
+      :date="content.created"
       class="my-4"
       alert-type="warn"
     >

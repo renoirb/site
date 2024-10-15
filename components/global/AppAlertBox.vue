@@ -1,8 +1,7 @@
 <template>
-  <div
+  <rb-notice-box
     v-if="shouldBeVisible"
-    :class="styleMap.outer"
-    :data-alert-type="alertType"
+    :variant="alertType"
     class="disposition-parent app-alert-box"
     role="alert"
   >
@@ -12,30 +11,23 @@
       removes them. Gotta fix this before re-using styleMap.
     -->
     <!-- eslint-disable vue/no-v-html -->
-    <header
+    <strong
       v-if="titleTextContent !== ''"
-      class="disposition-item"
+      slot="header"
       v-html="abbreviatize(titleTextContent)"
     />
     <!-- eslint-disable vue/no-v-html -->
-    <div
+    <p
       v-if="messageTextContent !== ''"
-      class="disposition-item"
       v-html="abbreviatize(messageTextContent)"
     />
-    <slot />
-  </div>
+    <slot class="addemdum" />
+  </rb-notice-box>
 </template>
 
 <script lang="ts">
   import Vue, { PropOptions } from 'vue'
-  import {
-    abbreviatize,
-    IAbbreviatize,
-    IAlertType,
-    IStyleMapAlert,
-    styleMapAlert,
-  } from '~/lib'
+  import { abbreviatize, IAbbreviatize, IAlertType } from '~/lib'
   export interface Data {
     messageTextContent: string
     titleTextContent: string
@@ -44,9 +36,7 @@
   export interface Methods {
     abbreviatize: IAbbreviatize
   }
-  export interface Computed {
-    styleMap: IStyleMapAlert
-  }
+  export interface Computed {}
   export interface Props {
     title: string
     message: string
@@ -79,13 +69,6 @@
         titleTextContent,
         shouldBeVisible: true,
       }
-    },
-    computed: {
-      styleMap(): IStyleMapAlert {
-        const alertType: IAlertType = this.alertType
-        const map = styleMapAlert(alertType)
-        return map
-      },
     },
     methods: {
       abbreviatize,
