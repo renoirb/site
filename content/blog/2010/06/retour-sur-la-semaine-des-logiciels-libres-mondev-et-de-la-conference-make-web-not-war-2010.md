@@ -2,7 +2,7 @@
 title: >-
   Retour sur la semaine des logiciels Libres MonDev et de la conférence Make Web
   Not War 2010
-locale: en-CA
+locale: fr-CA
 created: 2010-06-22
 updated: 2013-03-27
 canonical: >-
