@@ -65,8 +65,7 @@ pour quitter plus rapidement de l'attente
 
 Permet d'éviter de remplir le compte courriel d'un client.
 
-- Créer un compte dans [DirectAdmin][0], "[Show all Users][1]", _username_, "
-  [E-Mail Accounts][2]"
+- Créer un compte dans **DirectAdmin**, "**Show all Users**", _username_, "**E-Mail Accounts**"
 
 ### Test envoi local vers virtual_local avec exim
 
@@ -136,7 +135,7 @@ sudo tail -f /var/log/exim/mainlog
 
 ### Tester réception IMAP
 
-Généralement dans [https://web1.renoirboulanger.com/webmail/][4] (vérifie le
+Généralement dans *le client <abbr>IMAP</abbr> (vérifie le
 processus IMAP) on peut aller accéder au compte créé dans "Créer un compte de
 test courriel".
 
@@ -260,8 +259,7 @@ est le 22 Feb... C'est ok!
 
 Faut entrer "`helo`" puis le domaine de l'envoyant
 
-helo est un standard pour savoir quel est le hostname qui envoit le courriel
-[\#Description de HELO][6]
+`helo` (et `ehlo`) sont des conventions pour savoir quel est le hostname qui envoit le courriel
 
 - **`mail from: john.doe@example.org`**
 
@@ -619,13 +617,7 @@ after the \*\*LO, however.
 
 - [Definition messages d'erreur SMTP][9]
 
-[0]: https://web1.renoirboulanger.com:2222/
-[1]: https://web1.renoirboulanger.com:2222/CMD_ALL_USER_SHOW
-[2]: https://web1.renoirboulanger.com:2222/CMD_EMAIL_POP
-[3]: /cdn-cgi/l/email-protection
-[4]: https://web1.renoirboulanger.com/webmail/
 [5]: http://email.about.com/cs/standards/a/smtp_error_code_2.htm
-[6]: #Testerlebonfonctionnementduserveurdecourriel-DescriptiondeHELO
 [7]: http://email.about.com/cs/standards/a/smtp.htm
 [8]: http://www.netadmintools.com/part276.html
 [9]: http://email.about.com/cs/standards/a/smtp_error_code.htm

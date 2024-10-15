@@ -12,7 +12,7 @@ tags: []
 excerpt: ''
 ---
 
-<p><a href="http://www.flickr.com/photos/vanillaforums/4717676858/"><img src="https://renoirboulanger.com/wp-content/uploads/2011/02/4717676858_352a50afe9.jpg" alt="" style="border:none" title="Renoir lors du BBQ de Geek de l&#039;été 2010" width="375" height="500" class="alignright size-full wp-image-2453" /></a>Cette année, comme je <a href="https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo/">l'ai dit je fais partie de l'équipe d'organisation</a> de la conférence web techno ConFoo.</p>
+<p><a href="http://www.flickr.com/photos/vanillaforums/4717676858/"><img src="https://renoirboulanger.com/wp-content/uploads/2011/02/4717676858_352a50afe9.jpg" alt="" style="border:none" title="Renoir lors du BBQ de Geek de l&#039;été 2010" width="375" height="500" class="alignright size-full wp-image-2453" /></a>Cette année, comme je <a href="/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo/">l'ai dit je fais partie de l'équipe d'organisation</a> de la conférence web techno ConFoo.</p>
 
 <p>Pour moi il s'agit d'une toute nouvelle expérience. J'ai jamais organisé de conférence de cette ampleur. J'ai déjà aidé a l'organisation du site web (<a href="http://americana.org">Americana 2011</a> fait en Tiki.org) mais de participer activement a sa promotion c'est une toute autre chose.</p>
 

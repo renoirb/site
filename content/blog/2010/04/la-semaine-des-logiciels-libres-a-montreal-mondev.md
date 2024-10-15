@@ -17,9 +17,9 @@ categories:
 excerpt: ''
 ---
 
-[caption id="attachment_2094" align="alignright" width="270" caption="Montreal Open Source Week - La semaine des Logiciels Libres de Montréal MonDev"]<img class="size-full wp-image-2094 " title="MonDev" src="http://renoirboulanger.com/wp-content/uploads/2010/03/mondev_logo.png" alt="MonDev" width="270" height="159" />[/caption]
+[caption id="attachment_2094" align="alignright" width="270" caption="Montreal Open Source Week - La semaine des Logiciels Libres de Montréal MonDev"]<img class="size-full wp-image-2094 " title="MonDev" src="https://renoirboulanger.com/wp-content/uploads/2010/03/mondev_logo.png" alt="MonDev" width="270" height="159" />[/caption]
 
-Durant la semaine du 24 au 28 Mai 2010 aura lieu la semaine des logiciels libres <a href="http://mondev.org">MonDev</a>. Pour cette semaine particulière nous allons vous guider sur les activités <em>geek</em> de la semaine.
+Durant la semaine du 24 au 28 Mai 2010 aura lieu la semaine des logiciels libres <em>MonDev</em>. Pour cette semaine particulière nous allons vous guider sur les activités <em>geek</em> de la semaine.
 
 Au menu: Rencontrer les membres de la communauté des logiciels libres à Montréal, notamment: les gens de PHPQuébec, et de TikiWiki.
 
@@ -33,7 +33,7 @@ J'ai traduit l'annonce officielle et je voulait la partager ici:
 
 Joignez-vous à la fête en participant à nos événements, pour ne citer que ceux ci :
 <ul>
-	<li>Le <a href="http://webcom-montreal.com/">Webcom 2010 de Montréal</a></li>
+	<li>Le <a href="https://web.archive.org/web/20100204035915/https://www.webcom-montreal.com/">Webcom 2010 de Montréal</a></li>
 	<li>L'événement «<a href="http://webnotwar.ca/">Make Web Not War</a>» de Microsoft</li>
 </ul>
 L'idéologie des Logiciels Libres est une philosophie et une pratique qui est en train de révolutionner le développement logiciel dans le monde.
@@ -45,15 +45,9 @@ Grâce aux Logiciels Libres les communautés, villes et pays du monde ont la ch
 
 Montréal est un centre important de l'activité mondiale du Logiciel Libre et abrite de nombreux développeurs, et entreprises qui partagent cette idéologie. La semaine réunira des leaders de l'industrie, des enseignants et des étudiants de partout dans le monde pour une semaine complète. Plusieurs ateliers et séminaires seront prévus.
 
-<strong>source</strong>: Texte descriptif fait par <a href="http://dropthedigibomb.com/">DigiBomb</a>, traduit par <a href="http://renoirboulanger.com/">Renoir Boulanger</a> pour <a href="http://mondev.org">MonDev.org</a></blockquote>
+<strong>source</strong>: Texte descriptif fait par <em>DigiBomb</em> (<span lang="en">Brendan Sera-Shriar</span>), traduit par <a href="https://renoirboulanger.com/">Renoir Boulanger</a> pour <em>MonDev.org</em></blockquote>
 <h3>A la recherche de présentations pour le MonDev</h3>
 Au MonDev, nous sommes actuellement à la recherche de volontaires pour faire une présentation dans un format similaire au Ignite.
 <blockquote>Chaque participant a 5 minutes pour présenter son sujet avec 20 écrans a 20 secondes par écrans.</blockquote>
 Avec comme thématique les logiciels libres.
 
-<h3>Pour participer!</h3>
-L'équipe d'organisation du MonDev offre un horraire qui vous permet d'aller autant au Make Web Not War 2010 et au WebCom que d'autres événements connexes.
-<ul>
-	<li><strong><a href="http://mondev.org/general/schedule/">Consulter l'horraire des activités de la semaine &gt;</a></strong></li>
-	<li><strong><a href="http://mondev.org/submit/">Soumettre votre sujet pour les présentations pour le MonDev &gt;</a></strong></li>
-</ul>

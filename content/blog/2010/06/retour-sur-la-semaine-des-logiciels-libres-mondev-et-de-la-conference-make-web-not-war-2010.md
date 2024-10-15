@@ -19,16 +19,14 @@ coverImage:
   alt: Des gens de PHP Québec et devLAB Montréal sur la même table
   text: Des gens de PHP Québec et devLAB Montréal sur la même table
 webarchiveSnapshots:
-  - key: mondev
-    orig: http://mondev.org
   - key: devlabmtl
     orig: http://devlabmtl.org
     snapshots:
     - https://web.archive.org/web/20110814135755/http://devlabmtl.org/
-  - key: dropthedigibomb
-    orig: http://dropthedigibomb.com
-  - key: mondev-schedule
-    orig: http://mondev.org/general/schedule/
+  - key: digibomb-recap
+    orig: http://dropthedigibomb.com/2010/mondev-and-web-not-war-recap/
+    snapshots:
+    - https://web.archive.org/web/20100809033429/http://dropthedigibomb.com/2010/mondev-and-web-not-war-recap/
   - key: webcamp-facebook
     orig: http://www.facebook.com/event.php?eid=118951614801137&ref=mf
   - key: startupdrinks
@@ -54,11 +52,11 @@ webarchiveSnapshots:
 excerpt: ''
 ---
 
-Ça y est. Ça fait plusieurs semaines que la semaine du [Make Web Not War][webnotwar] et [MonDev][mondev] est passée. Ce fut une semaine très occupée.
+Ça y est. Ça fait plusieurs semaines que la semaine du [Make Web Not War][webnotwar] et *MonDev* est passée. Ce fut une semaine très occupée.
 
-Nous travaillons (m'incluant avec [devLAB Montréal][devlabmtl]) avec [digibomb][dropthedigibomb] (Brendan) pour la planification de ces deux événements et j'aimerai contribuer ce que j'ai appris de l'expérience.
+Nous travaillons (m'incluant avec [devLAB Montréal][devlabmtl]) avec *DigiBomb* (Brendan Sera-Shriar) pour la planification de ces deux événements et j'aimerai contribuer ce que j'ai appris de l'expérience.
 
-J'en profite pour traduire en [partie le billet de Brendan][dropthedigibomb] (en ajoutant mes notes personnelles) car il l'a tellement bien décrit ;)
+J'en profite pour traduire en [partie le billet de *Brendan*][digibomb-recap] (en ajoutant mes notes personnelles) car il l'a tellement bien décrit ;)
 
 ## MonDev
 
@@ -75,7 +73,7 @@ Une liste très codensée de ce qui s'est passé durant la semaine.
 - **[\#DEVTrain][webnotwar-devtrain]** (aussi connu sous le nom de \#nerdtrain) – des gens de Toronto qui venaient passer la semaine à Montréal dans une cabine de VIA Rail réservée pour eux seuls. C'était une initiative de Microsoft. Ils avaient même un tracker GPS, des XBox pour jouer et tout ce qu'un train de Geek peut imaginer!
 - **YulBiz Spécial WebCom** – (mon ajout personnel) – YulBiz est une communauté d'entrepreneurs blogeurs francophone de Montréal. J'y vais depuis plus d'un an et j'y ai rencontré beaucoup de gens passionnés et intéressants. Le soir du «MonDev Open Source Demo Camp» il y avait *ausi* une rencontre. J'ai donc passé dire bonjour a plusieurs YulBiz-ers mais je n'ai pas pu rester longtemps :(
 - **WebCom Montréal** – Une conférence sur le Web 2.0 et l'entreprise organisé par quelques YulBiz-eurs. Une journée vraiment le fun ou l'on mélange réseautage, entrepreneurship, et vulgarisation. Je trouve personnellement l'équipe de WebCom généreuse car ils ont offert 100 entrées gratuites pour les participants au WebCamp.
-- **[«MonDev Open Source Demo Camp»][mondev-schedule]** – Une soirée [à-la-Ignite][ignite] où nous parlions de nos projets! Nous avons même joué a un jeu de [PowerPointKaraoké][powerpoint-karaoke] un jeu qui consiste a improviser une présentation avec une série aléatoire de pages de présentations.
+- **«<span lang="en">MonDev Open Source Demo Camp</span>»** – Une soirée [à-la-Ignite][ignite] où nous parlions de nos projets! Nous avons même joué a un jeu de [<span lang="en">PowerPointKaraoké</span>][powerpoint-karaoke] un jeu qui consiste a improviser une présentation avec une série aléatoire de pages de présentations.
 - [**WebCamp** Montréal][webcamp-montreal-2010] 2010 – une forme d'anti-conférence non-formelle avec des gens du web a Montréal, des passionnés et vivent du web pour discuter ouvertement. (pour en savoir plus sur le format, voir [la page Wikipedia][barcamp-wiki])
 - **[«StartUpDrinks Montreal»][startupdrinks]** – C'est une rencontre mensuelle de réseautage libre organisé par la communauté anglophone d'entrepreneurs Montréalais.
 - **[«Make Web Not War»][webnotwar-schedule]** – La première conférence Canadienne sur l'inter-opérabilité multiple-plateforme. Une conférence ou on pouvait y voir des techniques de travail et des technologies et illustrer autant le point de vue de la communauté des logiciels libres que de Microsoft.
@@ -164,7 +162,7 @@ Aussi, voir [celles sur Flickr][webnotwar-flickr]! Ici quelques unes de mes favo
 [confoo]: http://www.confoo.ca
 [cory]: http://blog.syntaxc4.net/
 [devlabmtl]: http://devlabmtl.org
-[dropthedigibomb]: http://dropthedigibomb.com
+[digibomb-recap]: https://web.archive.org/web/20100809033429/http://dropthedigibomb.com/2010/mondev-and-web-not-war-recap/
 [guelph]: http://www.guelphcoffeeandcode.org/
 [ignite]: http://en.wikipedia.org/wiki/Ignite_(event)
 [jello-martini]: http://jellomartinilounge.com/
@@ -172,8 +170,6 @@ Aussi, voir [celles sur Flickr][webnotwar-flickr]! Ici quelques unes de mes favo
 [jeremy]: http://twitter.com/jeremywright
 [jetcooper]: http://www.jetcooper.com/
 [marc]: http://www.twitter.com/tikiwikisearch
-[mondev-schedule]: http://mondev.org/general/schedule/
-[mondev]: http://mondev.org
 [nvi]: http://www.nvisolutions.com/
 [phpquebec]: http://www.phpquebec.net/
 [port25]: http://port25.ca/
