@@ -3,6 +3,7 @@
     <div :key="content.slug + '--' + content.created">
       <keep-alive>
         <app-very-old-article
+          :preamble="preamble"
           :locale="content.locale || 'en-CA'"
           :date="content.created"
           class="my-4"
