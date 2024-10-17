@@ -1,17 +1,5 @@
-import {
-  extractFrontMatterInnerDocument,
-  parseMarkdownText,
-} from '../model/content'
-import {
-  extractFrontMatterTagsAndNormalize,
-  isFrontMatterCoverImageInnerDocument,
-  isFrontMatterInnerDocument,
-} from '../model'
-import type {
-  IFrontMatterCoverImageInnerDocument,
-  IFrontMatterInnerDocument,
-  INuxtOptionsHooks,
-} from '../model/content'
+import { extractFrontMatterTagsAndNormalize } from '..'
+import type { INuxtOptionsHooks } from '..'
 import { extractVueTreeLinks } from './nuxt-content-links'
 
 const allPages = new Map<string, Record<string, string | string[]>>()
@@ -32,8 +20,30 @@ export const getNuxtContentAllLinks = (): string[] => {
   return allLinks
 }
 
+/**
+ * nuxt/content's
+ * - `'content:file:beforeParse ?`
+ * - `'content:file:beforeInsert': async (document, database) => {}`
+ * - `'content:options ?`
+ * - `'content:ready': ($content) => {}`
+ *
+ * Probably the best place to do AppVeryOldArticle
+ *
+ * Bookmarks:
+ * - https://content.nuxt.com/v1/getting-started/advanced#contentfilebeforeparse
+ */
 export const nuxtContentHooks: INuxtOptionsHooks = {
-  'content:file:beforeInsert': async (document, database) => {
+  'content:file:beforeInsert': async (document) => {
+    await Promise.resolve()
+    /**
+     * Reminder
+     * This is a hook that runs before the content is inserted
+     * for every page.
+     *
+     * What's also available here
+     *
+     * - `process.client`
+     */
     const {
       description = '',
       excerpt = '',
@@ -52,6 +62,7 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
       description,
       excerpt,
     }
+
     if (!allPages.has(path) && redirect === '') {
       allPages.set(path, item)
     }
@@ -59,7 +70,7 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
     // Normalize tags from the source so we can have articles
     // with same word, different CaSiNg (e.g. Foo and foo) as the same
     const tags = extractFrontMatterTagsAndNormalize('tags', document)
-    Object.assign(document, { tags })
+    Reflect.set(document, 'tags', tags)
     const categories = extractFrontMatterTagsAndNormalize(
       'categories',
       document,
@@ -76,37 +87,5 @@ export const nuxtContentHooks: INuxtOptionsHooks = {
     if (links.length > 0) {
       allLinks.push(...links)
     }
-
-    // ------------------------------------------------------------------------
-    let preamble: IFrontMatterInnerDocument | null = null
-    const preambleMaybe = extractFrontMatterInnerDocument(document, 'preamble')
-    if (isFrontMatterInnerDocument(preambleMaybe)) {
-      const parsedDocument = await parseMarkdownText(preambleMaybe, database)
-
-      const merging = Object.assign(document.preamble, {
-        document: parsedDocument,
-      })
-      if (isFrontMatterInnerDocument(merging)) {
-        preamble = merging
-      }
-    }
-    Reflect.set(document, 'preamble', preamble)
-    // ------------------------------------------------------------------------
-    let coverImage: IFrontMatterCoverImageInnerDocument | null = null
-    const coverImageMaybe = extractFrontMatterInnerDocument(
-      document,
-      'coverImage',
-    )
-    if (isFrontMatterInnerDocument(coverImageMaybe)) {
-      const parsedDocument = await parseMarkdownText(coverImageMaybe, database)
-      const merging = Object.assign(document.coverImage, {
-        document: parsedDocument,
-      })
-      if (isFrontMatterCoverImageInnerDocument(merging)) {
-        coverImage = merging
-      }
-    }
-    Reflect.set(document, 'coverImage', coverImage)
-    // ------------------------------------------------------------------------
   },
 }

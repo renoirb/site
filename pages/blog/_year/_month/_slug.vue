@@ -1,19 +1,22 @@
 <template>
-  <div :key="content.slug" class="pages__blog__year__month__slug--item">
-    <app-very-old-article
-      :preamble="content.preamble"
-      :locale="content.locale || 'en-CA'"
-      :date="content.created"
-      class="my-4"
-      alert-type="warn"
-      role="alert"
-    >
-      <nuxt-content
-        v-if="content.preamble && content.preamble.document !== null"
-        :document="content.preamble && content.preamble.document"
-      />
-    </app-very-old-article>
-    <div class="document document--item z-30">
+  <div class="pages__blog__year__month__slug--item">
+    <div :key="content.slug + '--' + content.created">
+      <keep-alive>
+        <app-very-old-article
+          :locale="content.locale || 'en-CA'"
+          :date="content.created"
+          class="my-4"
+          alert-type="warn"
+          role="alert"
+        >
+          <nuxt-content
+            v-if="preamble && preamble.body !== null"
+            :document="preamble"
+          />
+        </app-very-old-article>
+      </keep-alive>
+    </div>
+    <div :key="content.slug" class="document document--item z-30">
       <div
         class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic"
         data-wip="pages/blog/_year/_month/_slug.vue"
@@ -42,14 +45,14 @@
       <app-article-tags :content="content" class="mt-0 mb-5" />
       <div class="body mt-10">
         <app-image
-          v-if="content.coverImage && content.coverImage.src"
-          :src="content.coverImage.src"
-          :alt="content.coverImage.alt ? content.coverImage.alt : undefined"
+          v-if="coverImage && coverImage.src"
+          :src="coverImage.src"
+          :alt="coverImage.alt ? coverImage.alt : undefined"
           :figcaption="
             abbreviatize(
-              content.coverImage.figcaption
-                ? content.coverImage.figcaption
-                : content.coverImage.document !== null
+              coverImage.figcaption
+                ? coverImage.figcaption
+                : coverImage.body !== null
                 ? ' '
                 : undefined,
             )
@@ -57,8 +60,8 @@
           class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1"
         >
           <nuxt-content
-            v-if="content.coverImage && content.coverImage.document !== null"
-            :document="content.coverImage.document"
+            v-if="coverImage && coverImage.body !== null"
+            :document="coverImage"
           />
         </app-image>
         <nuxt-content :document="content" />
@@ -72,25 +75,33 @@
 <script lang="ts">
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
+  import { IFrontMatterInnerDocument } from '../../../../lib'
   import {
     abbreviatize,
+    createNuxtContentParsedDocument,
+    createVueMetaHeadScriptForHypothesis,
+    createVueMetaInfo,
     getPrettyfiedTemporalDate,
+  } from '~/lib'
+  import type {
     IAbbreviatize,
+    IFrontMatterCoverImageInnerDocument,
+    INuxtContentParsedDocument,
     INuxtContentPrevNext,
     INuxtContentResult,
     IPrettyfiedTemporalDate,
-    createVueMetaInfo,
-    createVueMetaHeadScriptForHypothesis,
-  } from '~/lib'
+  } from '~/types'
   export interface Data {
     canonical: null | string
-    prev: INuxtContentPrevNext
-    next: INuxtContentPrevNext
     content: INuxtContentResult
-    prettyfiedTemporalDate: IPrettyfiedTemporalDate
-    year: string
+    coverImage: IFrontMatterCoverImageInnerDocument
     month: string
+    next: INuxtContentPrevNext
+    preamble: INuxtContentParsedDocument
+    prettyfiedTemporalDate: IPrettyfiedTemporalDate
+    prev: INuxtContentPrevNext
     slug: string
+    year: string
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -132,6 +143,28 @@
         error({ message: 'Document not found' })
       }
 
+      const parsedPreamble = await createNuxtContentParsedDocument(
+        content?.preamble,
+        $content,
+      )
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { text: __text1, ...restPreamble } = content?.preamble ?? {}
+      const preamble: IFrontMatterInnerDocument = {
+        ...parsedPreamble,
+        ...restPreamble,
+      }
+      const parsedCoverImage = await createNuxtContentParsedDocument(
+        content?.coverImage,
+        $content,
+      )
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { text: __text2, ...restCoverImage } = content?.coverImage ?? {}
+      const coverImage: IFrontMatterCoverImageInnerDocument = {
+        ...parsedCoverImage,
+        ...restCoverImage,
+      }
+
       if (leakOutLocale === '') {
         /** @TODO find out why no errors, yet no locale set */
         leakOutLocale = fallbackLocale
@@ -170,13 +203,15 @@
 
       return {
         canonical: leakOutCanonical,
-        prev,
-        next,
         content,
-        prettyfiedTemporalDate,
-        year,
+        coverImage,
         month,
+        next,
+        preamble,
+        prettyfiedTemporalDate,
+        prev,
         slug,
+        year,
       }
     },
     methods: {

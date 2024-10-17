@@ -1,6 +1,6 @@
 import { strict as assert } from 'assert'
-import { isObject } from '../../runtime'
-import { abbreviatize } from '../abbreviations'
+import type { contentFunc } from '@nuxt/content'
+import { abbreviatize } from '../..'
 import type {
   INuxtContentParsedDocument,
   VueNodeType,
@@ -8,8 +8,6 @@ import type {
   VueRenderTreeNonRoot,
   VueNodeTag,
 } from '../../types'
-import type { INuxtContentDatabase } from './parser'
-import type { INuxtContentResult } from './model'
 
 export interface IFrontMatterInnerDocument {
   /**
@@ -68,93 +66,65 @@ export interface IFrontMatterInnerDocumentParsed
   document: INuxtContentParsedDocument | null
 }
 
-export const parseMarkdownText = async (
-  document: IFrontMatterInnerDocument,
-  database: INuxtContentDatabase,
+
+export const createNuxtContentParsedDocument = async (
+  input: { text: string } | undefined,
+  $content: contentFunc,
 ): Promise<INuxtContentParsedDocument> => {
-  let body: INuxtContentParsedDocument
-  if (isObject(document) === false) {
-    const message = `Unexpected input, we expect an object`
-    throw new TypeError(message)
+  let md = ''
+  if (input && Reflect.has(input, 'text')) {
+    md = input.text
   }
-  let errorSuffix = ''
-  if (isFrontMatterInnerDocument(document)) {
-    try {
-      /**
-       * Make all text with abbreviations to be wrapped into
-       * appropriate abbr tag.
-       */
-      const textContent = abbreviatize(document.text)
-      /**
-       * Taking on what markdown.toJSON returns
-       * https://github.com/nuxt/content/blob/%40nuxt/content%401.10.0/packages/content/parsers/markdown/index.js#L95
-       */
-      const parsed = await database.markdown.toJSON(textContent)
-      if (parsed && 'body' in parsed) {
-        body = parsed as INuxtContentParsedDocument
-        return body
-      }
-    } catch (e) {
-      errorSuffix += String(e)
-    }
-  }
-  const message = `There is no content to parse` + errorSuffix
-  throw new Error(message)
+  await Promise.resolve()
+  /**
+   * Make all text with abbreviations to be wrapped into
+   * appropriate abbr tag.
+   */
+  md = abbreviatize(md)
+  /**
+   * Taking on what markdown.toJSON returns
+   * https://github.com/nuxt/content/blob/%40nuxt/content%401.10.0/packages/content/parsers/markdown/index.js#L95
+   */
+  const out = await $content?.database?.markdown?.toJSON(md)
+  return out as INuxtContentParsedDocument
 }
 
 export const isFrontMatterInnerDocument = (
-  input: any,
+  input: unknown,
 ): input is IFrontMatterInnerDocument => {
   let out: boolean = false
-  if (input && 'text' in input) {
+  if (input && Reflect.has(input, 'text')) {
     out = true
   }
   return out
 }
 
-export const assertsFrontMatterInnerDocument = (
-  input: any,
-): asserts input is IFrontMatterInnerDocument => {
+export const assertsFrontMatterInnerDocument: (input: unknown) => asserts input is IFrontMatterInnerDocument = (
+  input,
+) => {
   const expectedMessage = `We expected to receive an IFrontMatterInnerDocument`
   assert.equal(isFrontMatterInnerDocument(input), true, expectedMessage)
 }
 
 export const isFrontMatterCoverImageInnerDocument = (
-  input: any,
+  input: unknown,
 ): input is IFrontMatterCoverImageInnerDocument => {
   let out: boolean = false
-  if (input && 'text' in input && 'src' in input) {
+  if (isFrontMatterInnerDocument(input) && Reflect.has(input, 'src')) {
     out = true
   }
   return out
 }
 
-export const assertsFrontMatterCoverImageInnerDocument = (
-  input: any,
-): asserts input is IFrontMatterCoverImageInnerDocument => {
+export const assertsFrontMatterCoverImageInnerDocument: (input: unknown) => asserts input is IFrontMatterInnerDocument = (
+  input,
+) => {
   const expectedMessage = `We expected to receive an IFrontMatterCoverImageInnerDocument`
   assert.equal(
     isFrontMatterCoverImageInnerDocument(input),
     true,
     expectedMessage,
   )
-}
-
-export const extractFrontMatterInnerDocument = (
-  input: INuxtContentResult,
-  key: string,
-): IFrontMatterInnerDocument | null => {
-  let out: null | IFrontMatterInnerDocument = null
-  if (isObject(input) === false) {
-    const message = `Unexpected input, we expect an object`
-    throw new TypeError(message)
-  }
-  if (key in input) {
-    if (isFrontMatterInnerDocument(input[key])) {
-      out = input[key]
-    }
-  }
-  return out
 }
 
 
