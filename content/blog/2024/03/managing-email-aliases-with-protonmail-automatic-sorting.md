@@ -19,12 +19,10 @@ keywords:
   - inbox
   - Sieve mail filtering language rule
 description: Protect inbox against spam and phishing and sort automatically
-preamble:
-  disable: false
-  text:
-    Streamline your email management with automatic sorting for messages
-    received through aliases. Learn how to efficiently organize your inbox for
-    your Email aliases without manual intervention.
+excerpt: >-
+  Streamline your email management with automatic sorting for messages
+  received through aliases. Learn how to efficiently organize your inbox for
+  your Email aliases without manual intervention.
 ---
 
 I’ve been using ProtonMail for my email needs for quite some time now. Recently,
