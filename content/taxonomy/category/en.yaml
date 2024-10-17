@@ -1,0 +1,31 @@
+human:
+  - key: experiments
+    text: Experiments
+    description: |
+      Thoughts and experiments
+
+  - key: open-source
+    text: Open Source
+    description: |
+      Open Source software I’ve contributed to or worked with
+
+  - key: organization
+    text: Organization
+    description: |
+      Thoughts about how to organize and/or structure things
+
+  - key: projects
+    text: Projects
+    description: |
+      Projects I’ve worked on
+
+  - key: tranche-de-vie
+    text: Sharing about my life
+    description: |
+      Essays written giving updates about my professional life or events I wrote about
+
+  - key: web-integration-review
+    text: Web Integration Review
+    description: |
+      Essays written sharing my thoughts and commenting about the HTML and CSS of web sites.
+      The mentioned sites may not be ones I’ve worked on or had been involved.

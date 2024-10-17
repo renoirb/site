@@ -1,0 +1,144 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Montage de dossiers distants via sshfs - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/site/_nuxt/runtime.js" as="script"><link rel="preload" href="/site/_nuxt/commons/app.js" as="script"><link rel="preload" href="/site/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/site/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/site/_nuxt/app.css" as="style"><link rel="preload" href="/site/_nuxt/app.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/site/_nuxt/vendors/app.css"><link rel="stylesheet" href="/site/_nuxt/app.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729139383/blog/2007/05/montage-de-dossiers-distants-via-sshfs/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729139383/blog/2007/05/montage-de-dossiers-distants-via-sshfs/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/site/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/site/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/site/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/site/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/site/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/site/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/site/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/site/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/site/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/site/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/site/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2007" class="nuxt-link-active" data-v-ede238bc>2007</a></li><li class="flex items-center" data-v-ede238bc><a href="/site/blog/2007/05" class="nuxt-link-active" data-v-ede238bc>05</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-6fee202d><div data-v-6fee202d><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-6fee202d data-v-6fee202d><!----> <!----> <div class="nuxt-content" data-v-6fee202d></div></rb-notice-box></div> <div class="document document--item z-30" data-v-6fee202d><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-6fee202d><h1 data-v-6fee202d>Montage de dossiers distants via sshfs</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-6fee202d><time datetime="2007-05-31" data-v-6fee202d>
+        jeudi 31 mai 2007
+      </time> <a href="https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link" data-v-6fee202d>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-6fee202d><strong id="tags__536" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__536" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/site/blog/category/procedure" class="no-underline">📁 procedure</a></li></ul></div> <div class="body mt-10" data-v-6fee202d><!----> <div class="nuxt-content" data-v-6fee202d data-v-6fee202d><p data-v-6fee202d data-v-6fee202d>J’ai souvent vanté les mérites du SSHFS mais je n’ai jamais réellement expliqué
+le concept du partage à-la-Windows... mais sécuritaire!</p>
+<p data-v-6fee202d data-v-6fee202d>Le concept est simple. Un dossier de mount points sur diverses machines dans le
+local en Linux. Disons que votre dossier ~ est dans /home/username, ajoutez vos
+serveurs, par exemple, dans un dossier "Drives".</p>
+<p data-v-6fee202d data-v-6fee202d>Attention aux non initiés en Linux... c’est un howto très technique!</p>
+<p data-v-6fee202d data-v-6fee202d>Le résultat de cette procédure vous permettra d’accéder a des fichiers sur une
+autre machine comme si vous y étiez. Ce n’est pas un système qui synchronise les
+fichiers sur plus d’une machine. Ce n'est pas une copie de sauvegarde.</p>
+
+<h2 id="assomptions" data-v-6fee202d data-v-6fee202d><a href="#assomptions" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>Assomptions</h2>
+<p data-v-6fee202d data-v-6fee202d>J’assumerai que vous avez deux machines Linux.</p>
+<p data-v-6fee202d data-v-6fee202d>Pour la procédure, j’utiliserai les informations suivantes.</p>
+<p data-v-6fee202d data-v-6fee202d>Veuillez ajuster pour votre situation:</p>
+<dl data-v-6fee202d data-v-6fee202d>
+  <dt data-v-6fee202d data-v-6fee202d>Utilistaeur distant</dt>
+    <dd data-v-6fee202d data-v-6fee202d>sa-storage</dd>
+  <dt data-v-6fee202d data-v-6fee202d>Hôte Linux qui va stocker les fichiers</dt>
+    <dd data-v-6fee202d data-v-6fee202d>192.168.0.2</dd>
+  <dt data-v-6fee202d data-v-6fee202d>Chemin pour fichiers sur l’hôte Linux</dt>
+    <dd data-v-6fee202d data-v-6fee202d>/home/sa-storage/Drives/web1</dd>
+    <dd data-v-6fee202d data-v-6fee202d>/home/sa-storage/Drives/web2</dd>
+</dl>
+<h3 id="considérations" data-v-6fee202d data-v-6fee202d><a href="#consid%C3%A9rations" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>Considérations</h3>
+<p data-v-6fee202d data-v-6fee202d>Je suis prends pour acquis les détails suivants;</p>
+<ul data-v-6fee202d data-v-6fee202d>
+<li data-v-6fee202d data-v-6fee202d>Le caractère <code data-v-6fee202d data-v-6fee202d>~</code> est un caractère qui de décrire le chemin vers le dossier
+Maison de l’utilisateur courrant, si vous êtes connecté en tant que "bob", le
+dossier sera <code data-v-6fee202d data-v-6fee202d>/home/bob</code></li>
+<li data-v-6fee202d data-v-6fee202d>J’ai utilisé Ubuntu, le nom du paquet peut changer et le gestionnaire de
+paquet aussi, mais le reste devrait demeurer la même chose.</li>
+<li data-v-6fee202d data-v-6fee202d>Synonymes: <em data-v-6fee202d data-v-6fee202d>fusermount</em>, <em data-v-6fee202d data-v-6fee202d>sshfs</em></li>
+<li data-v-6fee202d data-v-6fee202d>La commande <kbd data-v-6fee202d data-v-6fee202d>ALT</kbd>+<kbd data-v-6fee202d data-v-6fee202d>F2</kbd> est un raccourci clavier pour faire
+exécuter une commande, on pourrait trouver <kbd data-v-6fee202d data-v-6fee202d>RUN</kbd> dans le menu aussi.</li>
+</ul>
+<h2 id="prodécure" data-v-6fee202d data-v-6fee202d><a href="#prod%C3%A9cure" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>Prodécure</h2>
+<p data-v-6fee202d data-v-6fee202d>Sur notre machine locale, si dans le Terminal.</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="language-sh line-numbers" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d><span class="token function" data-v-6fee202d data-v-6fee202d>mkdir</span> ~/Drives
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Ajoutez y tout vos hosts que vous voulez... Je ne prendrai pas d’exemple réel
+étant donné qu’on a pas nécessairement tous les même droits partout sur les
+machines et vm. Personnellement, je l’ai fait sur les serveurs web1 et web2 deux
+serveurs redondants d’hébergement de services web. J’ai donc créé ~/Drives/web1
+et ~/Drives/web2</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="language-sh line-numbers" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d><span class="token function" data-v-6fee202d data-v-6fee202d>mkdir</span> ~/Drives/web1
+<span class="token function" data-v-6fee202d data-v-6fee202d>mkdir</span> ~/Drives/web2
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Dans mon exemple, sur ces deux machines j’ai mon propre usager et j’ai ajouté
+mon login dans le ~/.ssh/authorized_keys de mon homedir. Si vous avez pas ça,
+faites vous le en suivant le howto ici:
+<a href="/site/blog/2007/04/login-ssh-sans-mot-de-passe" title="SSH sans mot de passe" data-v-6fee202d>login ssh sans mot de passe</a>.
+Vous pourrez tester en faisant $ ssh hostname il devrait se loguer tout seul. Si
+vous ne faites pas cela, vous serez oubligé d’entrer vos mots de passes de
+TOUTES vos machines... A chaque login. Pour continuer, on doit aussi installer
+le paquetage sshfs</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="language-sh line-numbers" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d><span class="token function" data-v-6fee202d data-v-6fee202d>sudo</span> <span class="token function" data-v-6fee202d data-v-6fee202d>apt-get</span> <span class="token function" data-v-6fee202d data-v-6fee202d>install</span> sshfs
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Pour avoir le droit de monter les hôtes en sshfs, vous devez vous autoriser
+l’exécution du mount sinon vous êtes condamné a entrer le mot de passe root a
+chaque login. Vous pouvez aller via: <kbd class="nav" data-v-6fee202d data-v-6fee202d>System <kbd data-v-6fee202d data-v-6fee202d>Administration
+<kbd data-v-6fee202d data-v-6fee202d>Users</kbd></kbd></kbd> and Groups Puis ajoutez dans Manage groups (ou
+quelque chose qui parle de ça) puis trouvez le groupe fuse puis dans Properties
+ajoutez votre propre login qui est probablement non coché. Aussi: Une manière
+alternative de s’ajouter le droit fuse, serait de faire en shell</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="language-sh line-numbers" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d><span class="token function" data-v-6fee202d data-v-6fee202d>sudo</span> <span class="token function" data-v-6fee202d data-v-6fee202d>usermod</span> <span class="token parameter variable" data-v-6fee202d data-v-6fee202d>-G</span> fuse username
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Finalement... l’auto exécution. Il faut aller dans <kbd class="nav" data-v-6fee202d data-v-6fee202d>System
+<kbd data-v-6fee202d data-v-6fee202d>Préférences <kbd data-v-6fee202d data-v-6fee202d>Sessions</kbd></kbd></kbd> puis ajouter un Startup
+programs avec la commande suivante:</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="language-sh line-numbers" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>sshfs sa-storage@192.168.0.2:/home/sa-storage/Drives/web1 <span class="token punctuation" data-v-6fee202d data-v-6fee202d>\</span>
+      ~/Drives/web1 <span class="token punctuation" data-v-6fee202d data-v-6fee202d>\</span>
+      <span class="token parameter variable" data-v-6fee202d data-v-6fee202d>-o</span> reconnect
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Vous devinerez comment écrire correctement la commande en l’appliquant a vos
+besoins. Oubliez pas de faire sauvegarder votre session GNOME,
+<kbd data-v-6fee202d data-v-6fee202d>ALT</kbd>+<kbd data-v-6fee202d data-v-6fee202d>F2</kbd> puis tapez <code data-v-6fee202d data-v-6fee202d>gnome-session-save</code> puis enter.</p>
+<p data-v-6fee202d data-v-6fee202d>Déconnectez et re-connectez-vous. En naviguant dans votre dossier <em data-v-6fee202d data-v-6fee202d>Maison</em>
+(<code data-v-6fee202d data-v-6fee202d>~</code>), dans le dossier <code data-v-6fee202d data-v-6fee202d>~/Drives/</code> vous avez maintenant vos dossiers sur toutes
+vos machines distantes... localement!</p>
+<h3 id="références" data-v-6fee202d data-v-6fee202d><a href="#r%C3%A9f%C3%A9rences" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>Références</h3>
+<p data-v-6fee202d data-v-6fee202d>Mon expérience... et un peu de;</p>
+<ul data-v-6fee202d data-v-6fee202d>
+<li data-v-6fee202d data-v-6fee202d><a href="https://web.archive.org/web/20070324014306/http://ubuntu.wordpress.com/2005/10/28/how-to-mount-a-remote-ssh-filesystem-using-sshfs/" rel="nofollow noopener noreferrer" target="_blank" data-v-6fee202d data-v-6fee202d><strong data-v-6fee202d data-v-6fee202d>How to mount a remote ssh filesystem using sshfs</strong> October 28, 2005</a></li>
+</ul></div> <div class="clearfix" data-v-6fee202d></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-4d2003f9 data-v-6fee202d><div class="text-left" data-v-4d2003f9><a href="/site/blog/2007/05/critique-de-roman-deception-point" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Critique de Roman Deception point
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/site/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Doubler la fiabilité avec un miroir MySQL, un mini-Howto
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/site/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/site/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/site/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/site/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/site/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729139383/blog/2007/05/montage-de-dossiers-distants-via-sshfs/state.js"></script><script src="/site/_nuxt/runtime.js" defer></script><script src="/site/_nuxt/pages/blog.js" defer></script><script src="/site/_nuxt/pages/blog/_year.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/site/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/site/_nuxt/commons/app.js" defer></script><script src="/site/_nuxt/vendors/app.js" defer></script><script src="/site/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>
