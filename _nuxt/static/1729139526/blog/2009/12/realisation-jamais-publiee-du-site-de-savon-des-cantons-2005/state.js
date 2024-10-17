@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1729139526",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2009\u002F12\u002Frealisation-jamais-publiee-du-site-de-savon-des-cantons-2005",config:{content:{dbHash:"5896f587"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

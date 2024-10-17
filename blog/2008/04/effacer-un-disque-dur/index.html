@@ -1,0 +1,178 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Effacer complètement un disque dur de façon sécuritaire - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords-disque-dur-disq" name="keywords" content="disque dur, disques, linux, script"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1729139526/blog/2008/04/effacer-un-disque-dur/state.js" as="script"><link rel="preload" href="/_nuxt/static/1729139526/blog/2008/04/effacer-un-disque-dur/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2008" class="nuxt-link-active" data-v-ede238bc>2008</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2008/04" class="nuxt-link-active" data-v-ede238bc>04</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-6fee202d><div data-v-6fee202d><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-6fee202d data-v-6fee202d><!----> <!----> <div class="nuxt-content" data-v-6fee202d></div></rb-notice-box></div> <div class="document document--item z-30" data-v-6fee202d><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-6fee202d><h1 data-v-6fee202d>Effacer complètement un disque dur de façon sécuritaire</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-6fee202d><time datetime="2008-04-16" data-v-6fee202d>
+        mercredi 16 avril 2008
+      </time> <a href="https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link" data-v-6fee202d>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-6fee202d><strong id="tags__493" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__493" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/techniques" class="no-underline">techniques</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/tutoriels" class="no-underline">tutoriels</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/procedure" class="no-underline">procedure</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/best-practices" class="no-underline">best-practices</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/security" class="no-underline">security</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/projects" class="no-underline">📁 projects</a></li></ul></div> <div class="body mt-10" data-v-6fee202d><!----> <div class="nuxt-content" data-v-6fee202d data-v-6fee202d><p data-v-6fee202d data-v-6fee202d>Lorsqu'on se préocupe de ses informations personnelles et qu'on veut se
+débarrasser d'un ordinateur ou d'un vieux disque dur il faut, idéalement, le
+vider. J'ai une petite méthode pour le faire pas trop compliqué et totalement
+sécuritaire pour les données.</p>
+<p data-v-6fee202d data-v-6fee202d>Ma méthode implique</p>
+<ul data-v-6fee202d data-v-6fee202d>
+<li data-v-6fee202d data-v-6fee202d>Un disque dur qu'on veut wiper (effacer)</li>
+<li data-v-6fee202d data-v-6fee202d>Un LiveCD de Linux</li>
+<li data-v-6fee202d data-v-6fee202d>Du temps</li>
+<li data-v-6fee202d data-v-6fee202d>Une tour d'ordinateur pour le processus, idéalement inutilisée... sinon où
+chercher ou quoi utiliser pour se «dé-s'emmerder»
+<ul data-v-6fee202d data-v-6fee202d>
+<li data-v-6fee202d data-v-6fee202d>Un lecteur CD-Rom</li>
+</ul>
+</li>
+</ul>
+<p data-v-6fee202d data-v-6fee202d>Attention, un peu technique... mais tellement conseillé :)</p>
+<h3 id="étape-un-backups" data-v-6fee202d data-v-6fee202d><a href="#%C3%A9tape-un-backups" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>ÉTAPE UN... backups?!</h3>
+<p data-v-6fee202d data-v-6fee202d>C'est un peu stupide de le préciser... mais assurez-vous qu'il est vraiment vide
+de vos données avant de faire quoi que ce soit!</p>
+<p data-v-6fee202d data-v-6fee202d><strong data-v-6fee202d data-v-6fee202d>Je vous recommande DE NE PAS AVOIR D'AUTRES DISQUES D'INSTALLÉ lors de
+l'exécution de ce script</strong> Tant que vous exécutez pas le script a l'<a href="/blog/2008/04/effacer-un-disque-dur/#six" data-v-6fee202d>étape
+six</a> vous ne risquez rien (!).</p>
+<h3 id="étape-deux-graver-le-livecd" data-v-6fee202d data-v-6fee202d><a href="#%C3%A9tape-deux-graver-le-livecd" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>ÉTAPE DEUX... Graver le LiveCD</h3>
+<p data-v-6fee202d data-v-6fee202d>Pour faire la chose facile, vous pouvez prendre le LiveCD de Debian, ma
+distribution préférée:</p>
+<p data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>http://live.debian.net/cdimage/release/current/i386/iso-cd/</code></p>
+<p data-v-6fee202d data-v-6fee202d>Une version 'debian-live-(.*)-i386-rescue.iso' fera l'affaire.</p>
+<h4 id="où-trouver-linux" data-v-6fee202d data-v-6fee202d><a href="#o%C3%B9-trouver-linux" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>OÙ TROUVER LINUX</h4>
+<p data-v-6fee202d data-v-6fee202d>Vous pouvez regarder <a href="https://wiki.debian.org/LiveCD" rel="nofollow noopener noreferrer" target="_blank" data-v-6fee202d data-v-6fee202d>ici</a> pour d'autres versions de Debian.</p>
+<p data-v-6fee202d data-v-6fee202d>Pour remplacer Windows, ce que je recommande c'est d'utiliser <a href="https://www.ubuntu.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-6fee202d data-v-6fee202d>Ubuntu Linux</a>
+(ce que j'utilise pour mon environnement de Bureau).</p>
+<p data-v-6fee202d data-v-6fee202d>Mais ce n'est pas le but de cet article ;)</p>
+<p data-v-6fee202d data-v-6fee202d>Juste une dernière note comme ça: Debian, pour moi, sert pour les serveurs... et
+Ubuntu est basé sur Debian.</p>
+<p data-v-6fee202d data-v-6fee202d>Pour ce qui concerne Linux et notre utilisation actuelle, n'importe quelle
+version fera l'affaire.</p>
+<p data-v-6fee202d data-v-6fee202d>Les commandes nécessaires seront celles de base pour n'importe quel Linux depuis
+ses débuts :</p>
+<ul data-v-6fee202d data-v-6fee202d>
+<li data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>/dev/urandom</code>, ou</li>
+<li data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>/dev/zero</code></li>
+<li data-v-6fee202d data-v-6fee202d><abbr lang="en" title="Device to Device command" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>dd</code></abbr></li>
+</ul>
+<p data-v-6fee202d data-v-6fee202d>Je ne me rappelle pas quand Linux en général a inclus ces trucs mais c'est ce
+qu'il faut.</p>
+<p data-v-6fee202d data-v-6fee202d>En gros les deux premiers sont des device files qui fournissent du junk
+aléatoire... et l'autre. Que des zéros!</p>
+<p data-v-6fee202d data-v-6fee202d>Tandis que "dd" est un utilitaire pour écrire en device to device.... (aka. dd)
+:)</p>
+<h3 id="étape-trois-on-vide" data-v-6fee202d data-v-6fee202d><a href="#%C3%A9tape-trois-on-vide" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>ÉTAPE TROIS, on vide</h3>
+<p data-v-6fee202d data-v-6fee202d>En fait, on enlève tout les autres disques durs question de ne pas se tromper!</p>
+<p data-v-6fee202d data-v-6fee202d>Ensuite, il est bien de remarquer que le processus peut prendre du temps. Ce
+serait idéal d'avoir une tour qui sert a rien... sinon on tombe a devoir
+attendre après.</p>
+<h3 id="étape-quatre-on-démarre-le-livecd" data-v-6fee202d data-v-6fee202d><a href="#%C3%A9tape-quatre-on-d%C3%A9marre-le-livecd" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>ÉTAPE QUATRE, On démarre le LiveCD</h3>
+<p data-v-6fee202d data-v-6fee202d>... On attend le command prompt. C'est comme du DOS à l'époque, sauf que c'est
+vraiment plus puissant!</p>
+<p data-v-6fee202d data-v-6fee202d>Pour reconnaitre un prompt linux, on voit quelque chose du genre:</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>user@debian:~ $
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>ou encore... si on voit le dièze (#)... c'est qu'on est un super utilisateur
+(root). Un LiveCD nous envoit généralement en root alors on devrait voir quelque
+chose de similaire à:</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>root@debian: ~ #
+</code></pre></div>
+<h3 id="étape-cinq-on-script-un-peu" data-v-6fee202d data-v-6fee202d><a href="#%C3%A9tape-cinq-on-script-un-peu" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>ÉTAPE CINQ, on script un peu</h3>
+<p data-v-6fee202d data-v-6fee202d>On peut le faire de plusieurs façon la même chose. En gros, on se doit, pour
+s'assurer d'effacer complètement le disque de le remplir au moins huit fois au
+minimum de données random. Alors je propose le petit script qui se copie bien à
+la main.</p>
+<p data-v-6fee202d data-v-6fee202d>Si vous avez vidé vos disques durs le disque dur a vider devraît être /dev/hda</p>
+<p data-v-6fee202d data-v-6fee202d>Pour vous en assurer, faites</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>file /dev/hda
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Un output similaire ceci devrait sortir...</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>/dev/hda: block special (3/0)
+</code></pre></div>
+<h4 id="«crash-course»-sur-les-partitions-et-linux" data-v-6fee202d data-v-6fee202d><a href="#%C2%ABcrash-course%C2%BB-sur-les-partitions-et-linux" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>«CRASH COURSE» SUR LES PARTITIONS ET LINUX</h4>
+<p data-v-6fee202d data-v-6fee202d>Pour vous assurer de ne pas effacer un bon disque dur, je vous <strong data-v-6fee202d data-v-6fee202d>re-recommande
+DE NE PAS AVOIR D'AUTRES DISQUES D'INSTALLÉ lors de l'exécution de ce script</strong>
+(<a href="/blog/2008/04/effacer-un-disque-dur/#six" data-v-6fee202d>étape six</a>)!!!</p>
+<p data-v-6fee202d data-v-6fee202d>Parceque si c'est pas le disque /dev/hda, c'est peut être /dev/sda ou même un
+autre nom.</p>
+<p data-v-6fee202d data-v-6fee202d>Petit cours rapide de partitionnement sous Linux.</p>
+<p data-v-6fee202d data-v-6fee202d>Les disques durs n'ont pas de lettres... tout dépend où dans le système on
+"monte" la partition.</p>
+<p data-v-6fee202d data-v-6fee202d>En fait les noms vont ainsi</p>
+<ul data-v-6fee202d data-v-6fee202d>
+<li data-v-6fee202d data-v-6fee202d>hda, hdb, hdc... pour les disques durs IDE</li>
+<li data-v-6fee202d data-v-6fee202d>sda, sdb, sdc.... pour les disques SATA et SCSI et USB</li>
+</ul>
+<p data-v-6fee202d data-v-6fee202d>Vous imaginez que le 'a' (b,c,d...) représente l'ordre selon la nappe de
+connecteurs.</p>
+<p data-v-6fee202d data-v-6fee202d>La première partition du premier disque sera donc: /dev/sda1</p>
+<p data-v-6fee202d data-v-6fee202d>Si tout est beau... on continue.</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>vi wipedisk.sh
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>En <em title="Vim Editor" data-v-6fee202d data-v-6fee202d>vi</em>, il faut faire 'i' (lettre <em data-v-6fee202d data-v-6fee202d>i</em> minuscule, pour
+entrer en mode "<em data-v-6fee202d data-v-6fee202d>insert</em>") avant de commencer d'écrire...</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-bash" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d><span class="token shebang important" data-v-6fee202d data-v-6fee202d>#!/bin/bash</span>
+<span class="token keyword" data-v-6fee202d data-v-6fee202d>for</span> <span class="token variable" data-v-6fee202d data-v-6fee202d><span class="token punctuation" data-v-6fee202d data-v-6fee202d>((</span> i <span class="token operator" data-v-6fee202d data-v-6fee202d>=</span> <span class="token number" data-v-6fee202d data-v-6fee202d>1</span> <span class="token punctuation" data-v-6fee202d data-v-6fee202d>;</span> i <span class="token operator" data-v-6fee202d data-v-6fee202d>&lt;=</span> <span class="token number" data-v-6fee202d data-v-6fee202d>10</span> <span class="token punctuation" data-v-6fee202d data-v-6fee202d>;</span> i <span class="token operator" data-v-6fee202d data-v-6fee202d>+=</span> <span class="token number" data-v-6fee202d data-v-6fee202d>1</span> <span class="token punctuation" data-v-6fee202d data-v-6fee202d>))</span></span><span class="token punctuation" data-v-6fee202d data-v-6fee202d>;</span> <span class="token keyword" data-v-6fee202d data-v-6fee202d>do</span>
+  <span class="token builtin class-name" data-v-6fee202d data-v-6fee202d>echo</span> <span class="token string" data-v-6fee202d data-v-6fee202d>"Passe <span class="token variable" data-v-6fee202d data-v-6fee202d>$i</span>"</span>
+  <span class="token function" data-v-6fee202d data-v-6fee202d>dd</span> <span class="token assign-left variable" data-v-6fee202d data-v-6fee202d>if</span><span class="token operator" data-v-6fee202d data-v-6fee202d>=</span>/dev/urandom <span class="token assign-left variable" data-v-6fee202d data-v-6fee202d>of</span><span class="token operator" data-v-6fee202d data-v-6fee202d>=</span>/dev/hda
+  <span class="token function" data-v-6fee202d data-v-6fee202d>sleep</span> <span class="token number" data-v-6fee202d data-v-6fee202d>1</span>
+<span class="token keyword" data-v-6fee202d data-v-6fee202d>done</span>
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Ensuite on quitte <strong data-v-6fee202d data-v-6fee202d>en faisant</strong> <kbd title="Escape" data-v-6fee202d data-v-6fee202d>ESC</kbd> "<code data-v-6fee202d data-v-6fee202d>:wq</code>" (deux
+points... "w" et "q"... qui signifie commande <em data-v-6fee202d data-v-6fee202d>write</em> and <em data-v-6fee202d data-v-6fee202d>quit</em>)</p>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>chmod 755 wipedisk.sh
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>Qui va rendre le fichier exécutable.</p>
+<h3 id="étape-six-on-exécute" data-v-6fee202d data-v-6fee202d><a href="#%C3%A9tape-six-on-ex%C3%A9cute" aria-hidden="true" tabindex="-1" data-v-6fee202d data-v-6fee202d><span class="icon icon-link" data-v-6fee202d data-v-6fee202d></span></a>ÉTAPE SIX... on exécute.</h3>
+<div class="nuxt-content-highlight" data-v-6fee202d data-v-6fee202d><pre class="line-numbers language-text" data-v-6fee202d data-v-6fee202d><code data-v-6fee202d data-v-6fee202d>./wipedisk.sh
+</code></pre></div>
+<p data-v-6fee202d data-v-6fee202d>En général, ça peut prendre du temps. Mais à la fin d'une soirée de film... le
+disque devrait être totalement rempli d'ordures aléatoire.</p>
+<p data-v-6fee202d data-v-6fee202d>Au plaisir!</p></div> <div class="clearfix" data-v-6fee202d></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-4d2003f9 data-v-6fee202d><div class="text-left" data-v-4d2003f9><a href="/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Jeudi 24 avril 2008 Party de lancement de Hardy Heron an Ubuntu Linux Party au Saint-Sulpice
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Tester le fonctionnement d'un serveur SMTP
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1729139526/blog/2008/04/effacer-un-disque-dur/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>
