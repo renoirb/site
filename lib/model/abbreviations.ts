@@ -38,6 +38,7 @@ const ABBREVIATION = [
   'sql',
   'tpac',
   'tls',
+  'rss',
   'vim',
   'vm',
   'vms',
@@ -111,6 +112,7 @@ const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
   ['php5', 'Hypertext Pre Processor Programming language, version 5'],
   ['tpac', 'W3C’s (World Wide Web’s) Technical Plenary meetings'],
   ['tls', 'Transport Layer Security'],
+  ['rss', 'Really Simple Syndication'],
   ['sass', 'Syntactically Awesome Stylesheets, A variant of CSS Style Sheets '],
   ['ssh', 'Secure Shell or Secure Socket Shell'],
   [
