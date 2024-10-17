@@ -20,8 +20,8 @@ tags:
 excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2009/12/sacanton_logo.png
-  alt: ' '
-  text: 'Savon des cantons : logo'
+  text: |
+    Savon des cantons : logo
 ---
 
 Il s’agit d’une de mes dernières réalisation avant un an et demi sans produire

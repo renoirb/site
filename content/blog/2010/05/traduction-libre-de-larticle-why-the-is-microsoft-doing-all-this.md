@@ -56,7 +56,8 @@ webarchiveSnapshots:
 coverImage:
   src: ~/assets/content/blog/2010/05/MWNW-sponsor-banner1.jpg
   alt: Make Web Not War bannière de commanditaires
-  text: Bannière des commanditaires de l’événement Make Web Not War
+  text: |
+    Bannière des commanditaires de l’événement Make Web Not War
 excerpt: >-
   Ceci est une traduction libre du billet originalement écrit en anglais, par
   Microsoft Canada sur leur blogue Port25.ca (qui est maintenant hors-ligne) et

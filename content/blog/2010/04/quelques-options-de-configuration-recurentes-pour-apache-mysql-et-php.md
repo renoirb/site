@@ -15,7 +15,8 @@ webarchiveSnapshots: []
 coverImage:
   src: ~/assets/content/blog/2010/04/apache_logo.png
   alt: Apache Logo
-  text: Apache Logo
+  text: |
+    Apache Logo
 excerpt: ''
 ---
 

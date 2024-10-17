@@ -17,7 +17,8 @@ excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2009/11/screenshot_beeboxca_small1.png
   alt: Capture d’écran d’un navigateur web sur le site de BeeBox
-  text: Page d’accueil
+  text: |
+    Page d’accueil
 ---
 
 Comme j'en ai parlé dans <a href="/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007/">ce billet</a> j'ai eu plusieurs rôles dans la réalisation du logiciel <a href="http://www.beebox.ca">beebox</a>. L'un d'eux était de m'occuper de l'image du produit.

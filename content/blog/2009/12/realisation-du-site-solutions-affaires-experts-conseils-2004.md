@@ -20,7 +20,8 @@ excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2009/12/screenshot_saffaires_home.png
   alt: ' '
-  text: 'Solutions Affaires Experts-Conseils : Accueil'
+  text: |
+    Solutions Affaires Experts-Conseils : Accueil
 waybackMachineSnapshots:
 - orig: http://www.htdig.org/
   snapshots:

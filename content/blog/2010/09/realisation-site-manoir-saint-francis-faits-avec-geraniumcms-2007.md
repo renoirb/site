@@ -19,8 +19,9 @@ categories:
 excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2010/08/screenshot_manoirstfrancis2-300x285.png
-  text: Une page du site du Manoir Saint-Francis avec images cartes généré par GéraniumCMS.
   alt: Capture d’écran du site web pour le Manoir Saint-Francis
+  text: |
+    Une page du site du Manoir Saint-Francis avec images cartes généré par GéraniumCMS.
 ---
 
 Dans ma série d'articles ou je parle des <a href="https://renoirboulanger.com/blog/category/portfolio/">sites que j'ai fait dans le passé</a>. J'ai mentionné quelques fois que <a href="https://renoirboulanger.com/blog/tag/GeraniumCMS/">j'utilisait GéraniumCMS</a>. Le projet du site du <a href="http://manoirstfrancis.com">Manoir Saint-Francis à Magog</a>, est l'un des derniers déployés.

@@ -16,7 +16,7 @@ preamble:
   text: |
     D’autant plus que j’ai écrit ça bien avant de réaliser comment c’est très
     risqué et contribue aux erreurs en temps d’exécution que de tout placer dans
-    le «global scope».
+    le «<em lang="en">global scope</em>».
 ---
 
 Lorsqu’on travaille sur un site qui doit avoir plusieurs langues... il m’arrive

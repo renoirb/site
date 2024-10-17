@@ -28,7 +28,8 @@ coverImage:
   sizes: '(max-width: 300px) 100vw, 300px'
   alt: >-
     Illustration souvent utilisée pour un mème de l’Internet d’un dessin fait rapidement à la main illustrant un personnage avec une lumière éclatante derrière comme l’introduction d’un super héros. Le personnage tient un balai d’une main et brandissant l’autre bras et les yeux pas très alignés. Il proclame Automatisons tout!
-  text: Automatisons Tout!!1
+  text: |
+    Automatisons Tout!!1
 ---
 
 Ce billet n’est qu’un simple «link dump» pour retrouver parmi plusieurs notes

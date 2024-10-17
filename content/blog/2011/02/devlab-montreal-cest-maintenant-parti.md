@@ -21,13 +21,6 @@ tags:
   - virtualisation
   - vulgarisation
   - web
-coverImage:
-  src: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
-  alt: devLabMtl.org
-  text: |
-    Dev Lab Montréal, un «Lab» d’expérimentation pour partager et
-    augmenter ses aptitudes en programmation Web
-    via des rencontres hebdomadaires en soirée.
 webarchiveSnapshots:
   - key: devlabmtl
     orig: http://devlabmtl.org/
@@ -57,6 +50,13 @@ webarchiveSnapshots:
     orig: http://www.facebook.com/home.php?sk=group_191829357497601
   - key: facebook-page
     orig: http://www.facebook.com/devlabmtl
+coverImage:
+  src: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
+  alt: devLabMtl.org
+  text: |
+    Dev Lab Montréal, un «Lab» d’expérimentation pour partager et
+    augmenter ses aptitudes en programmation Web
+    via des rencontres hebdomadaires en soirée.
 excerpt: >-
   devLAB Montréal, un événement hebdomadaire pour les passionnés de technologie, est maintenant lancé. Découvrez comment ce projet est né, son concept unique et comment vous pouvez y participer.
 ---

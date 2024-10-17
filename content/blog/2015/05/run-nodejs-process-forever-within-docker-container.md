@@ -19,7 +19,8 @@ tags:
   - webplatform
 coverImage:
   src: ~/assets/content/blog/2015/05/publican-spec-rangefinder.png
-  text: Specification Document for RangeFinder API
+  text: |
+    Specification Document for RangeFinder API
 excerpt: >-
   I’ve recently been through the steps to make a NodeJS web app to run from
   inside a Docker container. The objective of this project was to simplify the

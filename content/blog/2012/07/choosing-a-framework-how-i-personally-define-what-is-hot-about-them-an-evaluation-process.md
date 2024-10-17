@@ -27,7 +27,8 @@ keywords:
 coverImage:
   src: ~/assets/content/blog/2012/07/everything-with-php-sauce.png
   alt: Everything goes with PHP Sauce
-  text: Everything goes with PHP Sauce
+  text: |
+    Everything goes with PHP Sauce
 excerpt: >-
   I do not want to say that I am an expert in programming languages, nor a PHP
   guru. But with my experience in web development and discussions with other

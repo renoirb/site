@@ -15,11 +15,9 @@ coverImage:
   src: ~/assets/content/blog/2010/12/Configure-console-data.png
   srcset:
   -  ~/assets/content/blog/2010/12/Configure-console-data-150x150.png 150w
-  text: Écran console-data
   alt: Capture d’écran configuration clavier Ubuntu
-excerpt: >-
-  Dans cet article, je vous montre comment configurer votre clavier sous Linux, spécifiquement pour les besoins des programmeurs québécois ou canadiens-français. Cela inclut la prise en charge des lettres accentuées et des caractères spéciaux essentiels pour la programmation.
-  En tant que programmeur Québecois (Canadien-Français), j'ai grandi en apprenant à taper au clavier durant mon adolescence. Cela m'a amené à m'habituer non seulement aux lettres accentuées, une disposition essentielle pour moi lors de chaque moment que je suis devant un clavier.
+  text: |
+    Écran console-data
 preamble:
   date: 2024-10-05
   text: |
@@ -28,6 +26,9 @@ preamble:
     [documentation <em lang="en">Keyboard Portal</em>][0] de Debian Linux.
     [LocaleConf]: https://help.ubuntu.com/community/LocaleConf
     [0]: https://wiki.debian.org/Keyboard "Debian Linux Keyboard Portal"
+excerpt: >-
+  Dans cet article, je vous montre comment configurer votre clavier sous Linux, spécifiquement pour les besoins des programmeurs québécois ou canadiens-français. Cela inclut la prise en charge des lettres accentuées et des caractères spéciaux essentiels pour la programmation.
+  En tant que programmeur Québecois (Canadien-Français), j'ai grandi en apprenant à taper au clavier durant mon adolescence. Cela m'a amené à m'habituer non seulement aux lettres accentuées, une disposition essentielle pour moi lors de chaque moment que je suis devant un clavier.
 ---
 
 Mise en situation.

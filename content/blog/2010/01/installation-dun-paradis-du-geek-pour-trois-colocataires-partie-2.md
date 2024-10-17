@@ -13,6 +13,8 @@ coverImage:
   src: ~/assets/content/blog/2010/01/geek_cartoon.jpg
   alt: |
     Un dessin fait a la main d’un petit garçon penché sur un petit ordinateur.
+preamble:
+  disable: true
 excerpt: ''
 ---
 <!--

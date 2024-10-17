@@ -17,7 +17,8 @@ tags: []
 coverImage:
   src: ~/assets/content/blog/2010/05/Codefest.jpg
   alt: Des gens de PHP Québec et devLAB Montréal sur la même table
-  text: Des gens de PHP Québec et devLAB Montréal sur la même table
+  text: |
+    Des gens de PHP Québec et devLAB Montréal sur la même table
 webarchiveSnapshots:
   - key: devlabmtl
     orig: http://devlabmtl.org

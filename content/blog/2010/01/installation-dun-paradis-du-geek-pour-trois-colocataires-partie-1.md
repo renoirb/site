@@ -10,12 +10,6 @@ revising: true
 categories:
   - tranche-de-vie
 tags: []
-excerpt: >-
-  Nous sommes de vieux amis de longue date. Nous nous sommes croisés souvent
-  dans les dix dernières années. Autant avec moi durant l’époque ou j’étais en
-  entreprise incorporée individuelle avec INEXIS Solution Web Inc. que le plus
-  agé de ces amis lorsqu’il avait sa propre boutique sur la Rue King Est à
-  Sherbrooke jusqu’en l’an 2000.
 coverImage:
   src: ~/assets/content/blog/2010/01/IMG_0325-225x300.jpg
   srcset:
@@ -27,6 +21,14 @@ coverImage:
     Une photo humoristique épique ou l’on voit Etienne se défendre contre un serpent imaginaire qui n’est qu'une grappe de fils réseau.
   text: |
     Etienne qui doit reprendre le contrôle des fils réseaux qui passent dans l’appartement.
+preamble:
+  disable: true
+excerpt: >-
+  Nous sommes de vieux amis de longue date. Nous nous sommes croisés souvent
+  dans les dix dernières années. Autant avec moi durant l’époque ou j’étais en
+  entreprise incorporée individuelle avec INEXIS Solution Web Inc. que le plus
+  agé de ces amis lorsqu’il avait sa propre boutique sur la Rue King Est à
+  Sherbrooke jusqu’en l’an 2000.
 ---
 <!--
 #TODO-Images:

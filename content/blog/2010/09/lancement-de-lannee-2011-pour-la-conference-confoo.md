@@ -19,7 +19,10 @@ keywords:
 coverImage:
   src: ~/assets/content/blog/2010/09/logo_confoo_150_39.gif
   alt: ConFoo.ca Web Tehno Conference Logo
-  text: ConFoo.ca Web Tehno Conference
+  text: |
+    ConFoo.ca Web Tehno Conference
+preamble:
+  disabled: true
 ---
 
 Depuis le debut de l’ete je me suis joint à l’organisation de la [conférence

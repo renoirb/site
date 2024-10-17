@@ -20,10 +20,9 @@ keywords:
   - migration
 coverImage:
   src: ~/assets/content/blog/2015/11/discourse_migration_list_gravatar_images.png
-  alt:
-    &coverImageAlt Side by side comparison while working on migrating Discourse
+  text: |
+    Side by side comparison while working on migrating Discourse
     with WICG
-  text: *coverImageAlt
 preamble:
   text: |
     This was written at the time I was closing loops at the [end of my time with the W3C][leaving-w3c].

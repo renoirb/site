@@ -30,7 +30,8 @@ excerpt: >-
 coverImage:
   src: ~/assets/content/blog/2010/02/echangistes_mini.png
   alt: ' '
-  text: RED propose de finir l'année dans un Club échangiste
+  text: |
+    RED propose de finir l'année dans un Club échangiste
 ---
 <!--
 migrateLinks:

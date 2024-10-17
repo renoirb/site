@@ -21,7 +21,8 @@ tags:
 coverImage:
   src: ~/assets/content/blog/2010/04/mwnw_logo.png
   alt: Make Web Not War logo
-  text: Logo of Make Web Not War event
+  text: |
+    Logo of Make Web Not War event
 excerpt: >-
   Microsoft Canada’s Make Web Not War initiative wanted to partner with local
   Montreal Web Developer community particularily ones that are proponent for

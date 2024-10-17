@@ -11,6 +11,8 @@ updated: '2023-11-16'
 categories:
   - events
 tags: []
+preamble:
+  disabled: true
 excerpt: ''
 coverImage:
   src: ~/assets/content/blog/2010/09/4463325427_251399c227.jpg

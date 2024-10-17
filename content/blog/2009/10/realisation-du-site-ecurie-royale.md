@@ -17,7 +17,8 @@ tags:
 coverImage:
   src: ~/assets/content/blog/2009/10/ecurieroyale1-150x150.jpg
   alt: 'Capture d’écran'
-  text: 'Site Web de l’Écurie Royale.'
+  text: |
+    Site Web de l’Écurie Royale.
 excerpt: ''
 ---
 

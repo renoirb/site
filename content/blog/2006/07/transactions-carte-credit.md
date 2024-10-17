@@ -25,8 +25,8 @@ preamble:
   text: |
     Géranium était (2003..2008) une Application Web pour aider les entreprises à faire le
     virage numérique.
-    Il était possible de gérer son propre site web, et avoir son propre «rolodex» de contacts
-    sur le web, tel un «CRM».
+    Il était possible de gérer son propre site web, et avoir son propre « rolodex » de contacts
+    sur le web, tel un « CRM ».
     Le produit était en code source fermé et son dévelopement à cessé en 2008.
 ---
 

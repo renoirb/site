@@ -17,7 +17,8 @@ keywords:
 coverImage:
   src: ~/assets/content/blog/2010/03/giw_montreal.png
   alt: 'Logo'
-  text: Ignite Montréal
+  text: |
+    Ignite Montréal
 ---
 <!--
 migrateLinks:
