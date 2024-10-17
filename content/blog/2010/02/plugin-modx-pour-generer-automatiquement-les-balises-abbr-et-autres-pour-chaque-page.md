@@ -21,7 +21,7 @@ categories:
 excerpt: ''
 ---
 
-<div style="width:230px;float:right;"><img src="http://renoirboulanger.com/wp-content/uploads/2010/01/modx_logo.png" alt="" title="MODx" width="230" height="64" style="border:none;float:right;margin-top:10px;margin-right:10px;" /></div>
+<div style="width:230px;float:right;"><img src="https://renoirboulanger.com/wp-content/uploads/2010/01/modx_logo.png" alt="" title="MODx" width="230" height="64" style="border:none;float:right;margin-top:10px;margin-right:10px;" /></div>
 <p>Il s'agit d'un plugin que j'ai fait, en <abbr title="PHP Hypertext Pre-Processor Languagte version 4." lang="en">PHP 4</abbr> il y a deux ans pour <a href="http://modxcms.com/download/">MODx 0.9.6.3</a>, pour un site web et je pense qu'il vaut la peine que je partage le code avec la communauté.</p>
 
 <p>Le plugin sert a entourer des mots définis dans un fichier <abbr title="Coma Separated Values." lang="en">CSV</abbr> (séparé par des virgules) dans le contenu qui est retourné par le CMS. </p>
@@ -57,26 +57,26 @@ excerpt: ''
 <h3>UTILISER LE PLUGIN</h3>
 <div style="background-color:#FFEEEE;border:1px solid #666600;color:#660000;margin:20px;padding:20px 30px;text-align:center;"><h4>Avertissement!<br />
 </h4><p>Le plugin a été fait à l'époque de <a href="http://modxcms.com/download/">MODx 0.9.6.x</a> (regardez tout au bas). Il risque de bien fonctionner dans cette version mais n'est pas assuré de fonctionner dans la version stable présente. Vous aurez été avertis!</p>
-<p>Si vous voulez que j'en fasse une adaptation, <a href="http://renoirboulanger.com/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page/#vote"><strong>laissez une note a ce billet</strong></a>!.</p></div>
+<p>Si vous voulez que j'en fasse une adaptation, <a href="https://renoirboulanger.com/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page/#vote"><strong>laissez une note a ce billet</strong></a>!.</p></div>
 <p>On ne peut s'attendre à simplement installer le plugin et que tout fonctionne. Voici les prérequis pour pouvoir utiliser le plugin</p>
 <ul>
 	<li>Au niveau 0 (enfant de la racine dans MODx) il y ait un répertoire servant à spécifier la langue de ses enfants.</li>
-	<li><a href="http://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/ContentAbbrGenerator.txt"><strong>ContentAbbrGenerator</strong></a> (le plugin en question)<br />
+	<li><a href="https://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/ContentAbbrGenerator.txt"><strong>ContentAbbrGenerator</strong></a> (le plugin en question)<br />
 Un plugin de base qui était fourni avec la version 0.9.6.x qui fournit le numéro ID de la page parent absolu</li>
 	<li>Il faut 2 Snippet de code (fonctions PHP spécifique a MODx) pour utiliser mon plugin
 <ul>
-	<li><a href="http://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/Lang.txt">Lang</a><br />
+	<li><a href="https://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/Lang.txt">Lang</a><br />
 Sert, justement a aller chercher le ID de la page ci-haut mentionnée.</li>
-	<li><a href="http://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/UltimateParent.txt">UltimateParent</a><br />
+	<li><a href="https://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/UltimateParent.txt">UltimateParent</a><br />
 Un plugin de base qui était fourni avec la version 0.9.6.x qui fournit le numéro ID de la page parent absolu</li>
 </ul></li>
-	<li><a href="http://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/abbreviations.txt">abbreviations.txt</a><br />
-Le fichier CSV qui contient les valeurs pour le remplacement des balises. Le contenu de ce fichier peut être une page dans MODx (si <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html">mod_rewrite</a> est activé) mais il doit être définitivement être disponible à l'adresse fournie dans le Snippet <a href="http://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/ContentAbbrGenerator.txt">ContentAbbrGenerator</a> définie par la variable de plugin "<tt>cagPluginAttrOverrideFileLoc</tt>"</li>
+	<li><a href="https://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/abbreviations.txt">abbreviations.txt</a><br />
+Le fichier CSV qui contient les valeurs pour le remplacement des balises. Le contenu de ce fichier peut être une page dans MODx (si <a href="http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html">mod_rewrite</a> est activé) mais il doit être définitivement être disponible à l'adresse fournie dans le Snippet <a href="https://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator/ContentAbbrGenerator.txt">ContentAbbrGenerator</a> définie par la variable de plugin "<tt>cagPluginAttrOverrideFileLoc</tt>"</li>
 </ul>
 <p>&nbsp;</p>
 
 <h3>TÉLÉCHARGER ET INSTALLER</h3>
-<p>Suivre les instructions dans chaque fichier de l'<strong><a href="http://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator.tar.gz">Archive</a></strong></p>
+<p>Suivre les instructions dans chaque fichier de l'<strong><a href="https://renoirboulanger.com/wp-content/uploads/2010/02/ContentAbbrGenerator.tar.gz">Archive</a></strong></p>
 <p>&nbsp;</p>
 
 <h3>SOURCES ET  <em>CRÉDITS</em></h3>
@@ -89,3 +89,10 @@ Le fichier CSV qui contient les valeurs pour le remplacement des balises. Le con
 
 <h3><a name="vote"></a>A VOS COMMENTAIRES...</h3>
 <p>J'ai déjà considéré commencer a modifier ce plugin pour le rendre fonctionnel dans WordPress mais j'ai d'autres priorités. Alors, si vous avez un intérêt à ce que je produise un plugin pour WordPress ou MODx (pour la version courrante) laissez moi un commentaire!</p>
+
+<!--#TODO-inline-edit Add link to other Abbr adjacent things I wrote over time, including here in JS and a Nuxt module that I could create off from this project-->
+<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/ContentAbbrGenerator.txt -->
+<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/Lang.txt -->
+<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/UltimateParent.txt -->
+<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/abbreviations.txt -->
+<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator.tar.gz -->

@@ -31,7 +31,7 @@ Objectifs proposés pour un «Nuage» qui suit les concepts du «Open Cloud» :
 
 Principes pour un «Open Cloud» :
 
-<em>Je n'ai pas traduit le texte, vous pouvez <a href="http://renoirboulanger.com/me-joindre/">me le demander</a> et je le traduirai</em>
+<em>Je n'ai pas traduit le texte, vous pouvez <a href="https://renoirboulanger.com/me-joindre/">me le demander</a> et je le traduirai</em>
 
 <ol>
 	<li>providers must work together to ensure that the challenges to cloud adoption (security, integration, portability, interoperability, governance/management, metering/monitoring) are addressed through open collaboration and the appropriate use of standards.</li>

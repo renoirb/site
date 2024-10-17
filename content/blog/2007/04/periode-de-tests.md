@@ -19,7 +19,7 @@ UPDATE: le serveur est maintenant en redondance SQL alors chaque post est identi
 
 <!--more-->
 
-La théorie est facile, voici un schéma:<a href="http://renoirboulanger.com/wp-content/uploads/2007/04/lvs_ha.jpg"><img class="aligncenter size-full wp-image-1163" title="lvs_ha" src="http://renoirboulanger.com/wp-content/uploads/2007/04/lvs_ha.jpg" alt="lvs_ha" width="531" height="599" style="border:none !important" /></a>
+La théorie est facile, voici un schéma:<a href="https://renoirboulanger.com/wp-content/uploads/2007/04/lvs_ha.jpg"><img class="aligncenter size-full wp-image-1163" title="lvs_ha" src="https://renoirboulanger.com/wp-content/uploads/2007/04/lvs_ha.jpg" alt="lvs_ha" width="531" height="599" style="border:none !important" /></a>
 <small>Source:  <a title="Linux virtual server tutorial" href="http://www.linuxvirtualserver.org/">http://www.linuxvirtualserver.org</a></small>
 
 Le principe est assez simple. Pour que ce soit optimal, il faut au minimum, plus de quatre serveurs. Il faudrait que les deux premiers (LinuxDirector, Backup) servent pour rediriger le traffic vers les serveurs redondants (Real Server 1, RealServer2, etc...).

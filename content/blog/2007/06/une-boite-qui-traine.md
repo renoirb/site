@@ -24,6 +24,8 @@ Dans mes résolutions je m'était promi de, justement, diversifier les ouvrages 
 
 J'ai fait le saut. Je me suis dit : "*non, non! ça se peut pas!*" J'était abasourdi, dans cette boîte pleine et destinée a être gaspillée trainaît des livres aussi respectables que:
 
+(Notez que les étoiles ne sont par pour donner une préférence, mais plutôt pour regrouper selon un thème.)
+
 <ul>
 	<li><a href="http://books.google.com/books?id=eJSLAAAACAAJ&amp;dq=The+hobbit" target="_blank">The Hobbit</a> ⭐⭐</li>
 	<li><a href="http://books.google.com/books?id=CtdgAAAACAAJ&amp;dq=The+fellowship+of+the+ring" target="_blank">Fellowship of the rings</a> ⭐</li>
@@ -47,13 +49,18 @@ Avec tout ces nouveaux ajouts a ma bibliothèque personnelle, je crois que je ne
 
 Cette nouvelle collection de livres va me permettre de varier les livres que j'ai lu jusqu'à présent.
 
-Depuis toujours, je suivait principalement lu <a href="http://books.google.com/books?q=R.A.+Salvatore&amp;lr=&amp;sa=N&amp;start=10" target="_blank">R.A. Salvatore</a>, et ses romans sur <a href="http://en.wikipedia.org/wiki/Drizzt_Do'Urden" target="_blank">Drizzt Do'Urden</a>, La "<a href="http://en.wikipedia.org/wiki/War_of_the_Spider_Queen" target="_blank">Guerre de la reine araignée</a>" et de <a href="http://en.wikipedia.org/wiki/Cadderly" target="_blank">Cadderly</a> ce sont des romans qui font toujours partie de mes "must-read", varier les autres devrait améliorer ma culture.
+Depuis toujours, je suivait principalement lu <a href="http://rasalvatore.com/" target="_blank">R.A. Salvatore</a>, et ses romans <a href="https://en.wikipedia.org/wiki/R._A._Salvatore_bibliography#Forgotten_Realms" target="_blank">en relation avec <strong>Drizzt Do'Urden</strong> dans les <strong lang="en">Forgotten Realms</strong></a>.
 
-Je dit que je veut varier, mais je ne lisait pas que de cet auteur là, avant. √Ä preuve, j'ai dévoré les livres de¬† <a href="http://books.google.ca/books?q=Dan+Brown&amp;btnG=Search+Books" target="_blank">Dan Brown</a> et les ouvrages d'<a href="http://books.google.ca/books?q=Alexandre+Jardin&amp;btnG=Search+Books" target="_blank">Alexandre Jardin</a>.
+<!--#TODO-inline-edit ajouts annotés-->
+En fait j'ai lu tout ce qui était sur la série jusqu’en 2004. C’est aussi avec ses livres que j’ai commencé à lire en Anglais.
+
+La majorité des livres trouvés dans cette boîte est comme un signe que je devrai commencer a suivre cette idée de varier ce que je lis, et voir ce qui a été écrit par ceux qui ont été des avant-gardistes dans le genre.
+
+Je dit que je veut varier, mais je ne lisait pas que de cet auteur là, avant. La preuve, j'ai dévoré les livres de <a href="http://books.google.ca/books?q=Dan+Brown&amp;btnG=Search+Books" target="_blank">Dan Brown</a> et les ouvrages d'<a href="http://books.google.ca/books?q=Alexandre+Jardin&amp;btnG=Search+Books" target="_blank">Alexandre Jardin</a>.
 
 J'ai hâte de voir ce qui m'attend dans ces ouvrages!
 
-<strong>Les étoiles </strong>
+<strong>Légende des groupes</strong>
 <ul>
 	<li>⭐ =&gt; La triologie du Seigneur des Anneaux"</li>
 	<li>⭐⭐ =&gt;  Le prélude a la triologie du "Seigneur des Anneaux" l'histoire dont Bilbon parle dans le film :)</li>

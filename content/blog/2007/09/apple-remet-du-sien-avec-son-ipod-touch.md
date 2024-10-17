@@ -10,6 +10,11 @@ created: '2007-09-06'
 updated: '2013-03-27'
 tags: []
 categories: []
+coverImage:
+  src: ~/assets/content/blog/2007/09/ipod_hero.jpg
+  alt: Photo promotionelle du iPod Touch de Apple
+  text: |
+    Le iPod Touch
 excerpt: ''
 ---
 
@@ -23,7 +28,7 @@ Tout le monde a le "buzz" a propos du iPod, on en veut tous un. Hier ils ont ann
 
 J'imagine qu'ils ont fait cela pour se faire pardonner d'avoir "ignore" le reste de la planete en nous privant de ce joujou si enviable.
 
-C'est le genre de joujou qui semble vraiment interessant... mais peut-il etre un remplacement pour un pocket-pc (ou un blackberry)? Personnellement je suis kinda addict a ce type de gadget (les pocket-pc, tant que c'est pas windows qui roule dessus <img src="https://www.techsolcomintranet.ca/confluence/images/icons/emoticons/tongue.gif" class="emoticon" align="absmiddle" border="0" height="20" width="20" />).
+C'est le genre de joujou qui semble vraiment interessant... mais peut-il etre un remplacement pour un pocket-pc (ou un blackberry)? Personnellement je suis kinda addict a ce type de gadget (les pocket-pc, tant que ce n'est pas Microsoft Windows qui roule dessus).
 
 Le site de <span class="nobr"><a href="http://www.apple.com/ipodtouch/" rel="nofollow">Apple</a></span> ne mentionne pas si leur nouveau produit peut etre utilise comme un organiseur personnel.
 

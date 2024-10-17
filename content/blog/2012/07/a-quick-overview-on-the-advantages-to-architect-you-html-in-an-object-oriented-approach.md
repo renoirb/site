@@ -56,6 +56,7 @@ I recommend to have a look at markup libraries such as Twitter bootstrap, <a hre
 
 As an example of this concept, I wrote <a href="/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window">a plugin to create a form confirmation window using only two class names</a>.
 
+<!--#TODO Slides-->
 
 <h3>References</h3>
 <ul>

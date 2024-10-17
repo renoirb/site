@@ -26,7 +26,7 @@ excerpt: >-
   production, évidemment).
 ---
 
-<img class="size-medium wp-image-1082" style="border: none; float: right;" title="La Virtualisation c'est comme des roches en équilibre" src="http://renoirboulanger.com/wp-content/uploads/2009/09/virtualization-200x300.jpg" alt="La Virtualisation c'est comme des roches en équilibre" width="200" height="300" />Ce billet est le <strong>premier</strong> d'une série d'articles décrivant la fabrication d'une Machine Virtuelle (VM) de développement pour une équipe de dévelopeurs.
+<img class="size-medium wp-image-1082" style="border: none; float: right;" title="La Virtualisation c'est comme des roches en équilibre" src="https://renoirboulanger.com/wp-content/uploads/2009/09/virtualization-200x300.jpg" alt="La Virtualisation c'est comme des roches en équilibre" width="200" height="300" />Ce billet est le <strong>premier</strong> d'une série d'articles décrivant la fabrication d'une Machine Virtuelle (VM) de développement pour une équipe de dévelopeurs.
 
 Je mentionne PHP 5.3 mais en fait ce type d'installation pourrait être utilisé pour n'importe quelle technologie web qui peut rouler sous Linux (<tt>Ruby on Rails</tt>, <tt>Java</tt>, <tt>Perl</tt>, etc).
 

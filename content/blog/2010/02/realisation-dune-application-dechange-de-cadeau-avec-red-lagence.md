@@ -122,11 +122,14 @@ Year after:
 d’Excellence** dans la catégorie **JEU ET INTERACTIVITÉ**.
 
 <div style="overflow:hidden;clear:both;" class="thumbnails gallery flex flex-row flex-wrap">
+<app-image class="w-1/3 focus-devant" id="focus-devant" src="~/assets/content/blog/2010/02/carte_postale_1_front.jpg" alt="Photo du devant de la carte postale. Il est écrit: RED propo de finir l’année dans un Club échangiste" figcaption=" ">
 
-<app-image class="w-1/3 focus-devant" id="focus-devant" src="~/assets/content/blog/2010/02/carte_postale_1_front.jpg" alt="Photo du devant de la carte postale. Il est écrit: RED propo de finir l’année dans un Club échangiste" figcaption="Devant"
+Devant
 
-></app-image>
-<app-image class="w-1/3 focus-dos" id="focus-dos" src="~/assets/content/blog/2010/02/carte_postale_1_back.jpg" alt="Photo du derrière de la carte postale. Il est écrit: Visitez echangiste.agencered.ca, entrez votre numéro d’accès exclusif et voyez le cadeau que RED vous offre (...)" figcaption="Dos">
+</app-image>
+<app-image class="w-1/3 focus-dos" id="focus-dos" src="~/assets/content/blog/2010/02/carte_postale_1_back.jpg" alt="Photo du derrière de la carte postale. Il est écrit: Visitez echangiste.agencered.ca, entrez votre numéro d’accès exclusif et voyez le cadeau que RED vous offre (...)" figcaption=" ">
+
+Dos
 
 </app-image>
 <app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Accueil.png" alt="Capture d’écran de l’application web avec image d’une porte avec affiche." figcaption=" ">
@@ -141,16 +144,17 @@ sort en est jeté et vous recevrez dans les heures qui suivent votre
 cadeau.
 
 </app-image>
-<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Confirm.png" alt="Confirmation d'un échange" figcaption="Voulez-vous vraiment échanger votre cadeau avec celui de Francois S. Ensuite, il vous restera 9 echanges. voulez-vous continuer? OUI NON">
+<app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Confirm.png" alt="Confirmation d'un échange" figcaption=" ">
+
+Voulez-vous vraiment échanger votre cadeau avec celui de Francois S. Ensuite, il vous restera 9 echanges. voulez-vous continuer? OUI NON
 
 </app-image>
 <app-image class="w-1/3" src="~/assets/content/blog/2010/02/scr_echange2009_Ferme.png" alt="" figcaption=" ">
 
 </app-image>
-
 <app-image class="w-1/3" src="~/assets/content/blog/2010/02/carte_postale_2_front.jpg" alt="" figcaption=" ">
-</app-image>
 
+</app-image>
 <app-image class="w-1/3" src="~/assets/content/blog/2010/02/carte_postale_2_back.jpg" alt="" figcaption=" ">
 
 </app-image>

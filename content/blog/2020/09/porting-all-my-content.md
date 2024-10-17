@@ -28,6 +28,8 @@ It’s been more than ten years that I haven't touched my site and I want to
 make-use of my skills working with Vue.js and modern Front End of the last years
 back to my own profit.
 
+<!--#TODO Slides-->
+
 So this is going to be a complete port of all my previous content, talk slides,
 experiments, posts, Twitter feed, examples, code bits all in a static site.
 

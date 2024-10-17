@@ -164,7 +164,7 @@ Si tout est beau... on continue.
 En <em title="Vim Editor">vi</em>, il faut faire 'i' (lettre _i_ minuscule, pour
 entrer en mode "_insert_") avant de commencer d'écrire...
 
-```bash
+```bash[wipedisk.sh]
 #!/bin/bash
 for (( i = 1 ; i <= 10 ; i += 1 )); do
   echo "Passe $i"

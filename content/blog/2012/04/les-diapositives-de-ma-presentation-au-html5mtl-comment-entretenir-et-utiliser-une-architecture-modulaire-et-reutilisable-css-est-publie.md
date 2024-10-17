@@ -14,11 +14,11 @@ categories: []
 excerpt: ''
 ---
 
-Vous pouvez les trouver ici: <strong><a href="http://renoirboulanger.com/slides/comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-CSS/">Comment entretenir et utiliser une architecture modulaire et réutilisable CSS</a></strong>.
+Vous pouvez les trouver ici: <strong><a href="https://renoirboulanger.com/slides/comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-CSS/">Comment entretenir et utiliser une architecture modulaire et réutilisable CSS</a></strong>.
 
 La présentation a eu lieu pendant la rencontre d'Avril du <a href="http://www.meetup.com/HTML5mtl/">HTML5Mtl</a>.  Le groupe HTML5Mtl est un sous-projet du <strong><a href="http://w3qc.org/">W3Québec</a></strong> pour promouvoir la nouvelle norme du W3c. Le HTML5.
 
-Mon expérience sur le sujet est assez forte car depuis 2010 je ne fais que ça, du HTML5. En fait, j'y décrit un sommaire de mes recherches faites dans la dernière année chez Evocatio. 
+Mon expérience sur le sujet est assez forte car depuis 2010 je ne fais que ça, du HTML5. En fait, j'y décrit un sommaire de mes recherches faites dans la dernière année chez Evocatio.
 
 <h3>Sommaire de la présentatin</h3>
 Avec le temps, j'ai envie d'être optimal sur tout ce qui touche le projet, et rendre réutilisable:
@@ -38,6 +38,8 @@ Avec tout ça, il y a des avantages qui me semblent très intéressants:
 <h3>Expérience passée</h3>
 C'était ma 2ème occasion de présenter devant des gens. La première a été durant un devCamp de Microsoft sur le sujet "<a href="http://www.slideshare.net/renoirb/how-to-manage-a-big-scale-htmlcss-project">How to manage big scale HTML/CSS project</a>". Le même sujet mais avec beaucoup plus de matière.
 
+<!--#TODO Slides-->
+
 <h3>Finalement</h3>
 Je crois que je devrais ajouter du contenu et améliorer sa structure. Je compte ajuster ma présentation avec:
 <ul>
@@ -50,4 +52,4 @@ Je crois que je devrais ajouter du contenu et améliorer sa structure. Je compte
 
 
 <h3>Vous voulez que je présente?</h3>
-Je suis disponible pour faire présentation dans votre école, université, groupe. <a href="/me-joindre/">Laissez-moi le savoir</a>.
+Je suis disponible pour faire présentation dans votre école, université, groupe. <a href="/contact/">Laissez-moi le savoir</a>.

@@ -20,7 +20,7 @@ excerpt: >-
   tutorial shows how to create a patch, sign it, and make sure it is applied.
 ---
 
-<p>Quick tutorial on how to create a patch and ensure it is applied using <a href="http://saltstack.com/">salt stack</a>.</p>
+<p>Quick tutorial on how to create a patch and ensure it is applied using <a href="https://saltproject.io/">salt stack</a>.</p>
 
 <h3>Procedure</h3>
 

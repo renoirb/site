@@ -95,6 +95,8 @@ mv migrate.tar.gz _prod/web/
 <li>Download https://morpheus.networkname.net/migrate.tar.gz</li>
 </ul>
 
+<!--#TODO-Import-Code-From-External-->
+
 <h3>2. Clone the <em>New VM</em> that will replace the Old</h3>
 
 <p>This step is about cloning the functionnal VM.</p>

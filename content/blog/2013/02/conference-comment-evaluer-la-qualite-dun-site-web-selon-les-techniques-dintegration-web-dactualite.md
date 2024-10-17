@@ -78,6 +78,8 @@ de pouvoir en entretenir le code après plusieurs révisions.
 
 ## Les «slides»
 
+<!--#TODO Slides-->
+
 <script async class="speakerdeck-embed" data-id="e6b55b505ea10130f6bb22000a952b58" data-ratio="1.77777777777778" src="https://speakerdeck.com/assets/embed.js"></script>
 
 **[Télécharger en format PDF][3]**
@@ -89,7 +91,11 @@ conférence, c'était une belle surprise.
 
 Mon ami [François Légaré][4] a pris cette photo:
 
-<app-image figcaption="Il y avait foule lors de ma présentation au Web à Québec" src="~/assets/content/blog/2013/02/presentation-renoir-web-a-quebec-qualite-integration-web.jpg"></app-image>
+<app-image src="~/assets/content/blog/2013/02/presentation-renoir-web-a-quebec-qualite-integration-web.jpg" figcaption=" ">
+
+Il y avait foule lors de ma présentation au Web à Québec
+
+</app-image>
 
 ## Merci à
 
@@ -102,10 +108,12 @@ Mon ami [François Légaré][4] a pris cette photo:
 [0]: https://web.archive.org/web/20121121144432/http://mtldgtl.com/fr/web-in/
 [1]: http://webaquebec.org/
 [2]: https://twitter.com/snookca
-[3]: http://renoirboulanger.com/files/201302-slides.pdf
+[3]: https://renoirboulanger.com/files/201302-slides.pdf
 [4]: https://twitter.com/frLegare
 [5]: https://twitter.com/gabiviana
 [6]: https://twitter.com/joplam
 [7]: https://twitter.com/cybik
 [8]: https://twitter.com/vivrass
 [fb-post-waq]: https://www.facebook.com/photo/?fbid=511482285570250&set=a.511431488908663 "2013-02-22 Publication Facebook du WAQ"
+
+<!--#TODO Slides /files/201302-slides.pdf-->

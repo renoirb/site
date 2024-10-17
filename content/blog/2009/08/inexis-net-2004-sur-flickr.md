@@ -8,3 +8,5 @@ categories: []
 tags: []
 excerpt: ''
 ---
+
+<NuxtLink to="/blog/2009/08/realisation-site-web-inexis-solution-web-2004">Moved</NuxtLink>

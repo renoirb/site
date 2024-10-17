@@ -12,7 +12,7 @@ categories: []
 excerpt: ''
 ---
 
-<p><img class="size-full wp-image-1035" style="float:right;border:none !important;" title="Zend Certified Engineer on a book" src="http://renoirboulanger.com/wp-content/uploads/2009/09/store-zce-certification-training-product-page_1.gif" alt="Zend Certified Engineer on a book" width="190" height="190" /></p>
+<p><img class="size-full wp-image-1035" style="float:right;border:none !important;" title="Zend Certified Engineer on a book" src="https://renoirboulanger.com/wp-content/uploads/2009/09/store-zce-certification-training-product-page_1.gif" alt="Zend Certified Engineer on a book" width="190" height="190" /></p>
 <p>C'est quoi «<a href="http://www.zend.com/services/certification/">Zend Certified Engineer</a>» (ZCE, voir <a href="http://en.wikipedia.org/wiki/Zend_Certified_Engineer">définition Wikipedia</a>). C'est  une certification professionnelle pour prouver son expérience avec le langage de programmation <a href="http://www.php.net/">PHP</a>. Zend est l'entreprise derrière le ZendEngine qui fait rouler PHP depuis la version 2.</p>
 <p>J'ai commencé à coder en PHP depuis 2001 (PHP3) mais je n'ai jamais «prouvé» mes capacités avec un tel diplôme. Je crois qu'il est plus que temps de le faire.</p>
 <p>Je n'avait pas pris la route des certifications  parceque j'ai jamais manqué d'ouvrage et mon expérience et mes aspirations ne m'avaient jamais demandé d'aller par là. Sauf qu'après toutes ces années, lorsque vient l'idée de vouloir se déclarer expérimenté  sur le marché de l'emploi... on a plus vraiment le choix.</p>

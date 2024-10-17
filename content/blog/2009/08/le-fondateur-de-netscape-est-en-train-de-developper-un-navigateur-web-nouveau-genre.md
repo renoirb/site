@@ -19,7 +19,7 @@ excerpt: >-
   qui a introduit l'Internet a des milions de personnes autour du monde.
 ---
 
-<p><img src="http://renoirboulanger.com/wp-content/uploads/2009/08/browser1_190-150x150.jpg" alt="Marc Andreessen is backing a start-up called RockMelt." title="Marc Andreessen is backing a start-up called RockMelt. " width="150" height="150" class="alignleft size-thumbnail wp-image-660" />Article publié dans le <a href="http://nytimes.com">NYTimes</a> ce matin. &mdash; ça fait maintenant 15 ans que <a href="http://en.wikipedia.org/wiki/Marc_Andreessen">Marc Anderssen</a> a développé Netscape qui a introduit l'Internet a des milions de personnes autour du monde.</p>
+<p><img src="https://renoirboulanger.com/wp-content/uploads/2009/08/browser1_190-150x150.jpg" alt="Marc Andreessen is backing a start-up called RockMelt." title="Marc Andreessen is backing a start-up called RockMelt. " width="150" height="150" class="alignleft size-thumbnail wp-image-660" />Article publié dans le <a href="http://nytimes.com">NYTimes</a> ce matin. &mdash; ça fait maintenant 15 ans que <a href="http://en.wikipedia.org/wiki/Marc_Andreessen">Marc Anderssen</a> a développé Netscape qui a introduit l'Internet a des milions de personnes autour du monde.</p>
 
 <p>Aujourd'hui l'histoire en aurait beaucoup a dire. L'article que j'ai trouvé mentionne que M. Anderssen désire revenir en avant plan et innover encore. Trouvé dans "<a href="http://bit.ly/93xGj">Netscape Founder Backs New Browser - NYTimes.com </a>"</p>
 <!--more-->

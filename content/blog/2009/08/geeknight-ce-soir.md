@@ -12,7 +12,7 @@ categories: []
 excerpt: ''
 ---
 
-[caption id="attachment_762" align="alignright" width="320" caption="Donne moi l&#39;argent de ton dîner ou je vais Hacker ton site web!"]<a href="http://renoirboulanger.com/wp-content/uploads/2009/08/les_geeks_font_la_loi.jpg"><img class="size-full wp-image-762" title="Les Geeks font la loi!" src="http://renoirboulanger.com/wp-content/uploads/2009/08/les_geeks_font_la_loi.jpg" alt="Donne moi l'argen de ton dîner ou je vais Hacker ton site web!" width="320" height="287" /></a>[/caption]
+[caption id="attachment_762" align="alignright" width="320" caption="Donne moi l&#39;argent de ton dîner ou je vais Hacker ton site web!"]<a href="https://renoirboulanger.com/wp-content/uploads/2009/08/les_geeks_font_la_loi.jpg"><img class="size-full wp-image-762" title="Les Geeks font la loi!" src="https://renoirboulanger.com/wp-content/uploads/2009/08/les_geeks_font_la_loi.jpg" alt="Donne moi l'argen de ton dîner ou je vais Hacker ton site web!" width="320" height="287" /></a>[/caption]
 
 Je dois sortir du placard! Je n'en peut plus.
 
@@ -38,7 +38,7 @@ Depuis deux ans nous sommes quelques amis qui aimons les technologies du web et 
 </ul>
 
 <h3>Un réseau privé sécurisé entre chaque Geek dans son foyer!</h3>
-C'est pas compliqué. Nous avons un Wiki personnel (<a href="http://www.atlassian.com/software/confluence"><strong>Confluence</strong></a>) et on utilise <em>Subversion</em> et <em>Trac</em> pour réviser notre code et apprendre entre nous!
+C'est pas compliqué. Nous avons un Wiki personnel (Atlassian Confluence) et on utilise <em>Subversion</em> et <em>Trac</em> pour réviser notre code et apprendre entre nous!
 
 UPDATE 2010-01-03: Maintenant que nous vivons ensemble (voir <a href="/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1/">ce billet</a>) le réseau est bien différent.
 

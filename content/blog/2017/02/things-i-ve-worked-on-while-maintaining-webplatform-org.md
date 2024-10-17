@@ -17,6 +17,8 @@ excerpt: >-
   project that required all my skills all at once.
 ---
 
+<!--#TODO With Hypothes.is annotations-->
+
 <p>I’ve worked at the W3C for two years. My assignment was on the WebPlatform.org project and my responsibility was to keep everything in order.</p>
 
 <p>While I am archiving things and closing my notes of the last two years I thought I’d share with you from where I started, and what I’ve done.</p>
@@ -27,7 +29,7 @@ excerpt: >-
 
 <p>When I arrived into the project, every component of the site was in a good shape. I could build any server by booting a from a blank Ubuntu 10.04 LTS with a name that’ll tell the configuration management what to install on the new "minion". <strong><a href="https://ryandlane.com/blog/">Ryan Lane</a></strong>, the person I came to replace, <a href="https://webplatform.github.io/blog/2012/10/building-web-platforms-infrastructure/">did a great job</a>!</p>
 
-<p>This was the first time in my career where I could replace any server using a configuration management tool. I’ve used Puppet, Chef on small projects, but <em>WebPlatform</em>.org was much bigger and was using <a href="https://www.saltstack.com/">Salt Stack</a>.</p>
+<p>This was the first time in my career where I could replace any server using a configuration management tool. I’ve used Puppet, Chef on small projects, but <em>WebPlatform</em>.org was much bigger and was using <a href="https://saltproject.io/">Salt Stack</a>.</p>
 
 <p>It felt great to be assured that almost every piece was replaceable without worrying about individual pieces. But still, to change a password required to dig in folders, edit and cross fingers. It was a cry for improvement.</p>
 
