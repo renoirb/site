@@ -64,31 +64,38 @@ export type VueNodeTag =
   | 'rb-notice-box'
   | GolbalHTMLElementTagName
 
-export type VueNodeType = 'element' | 'text' | 'root' | unknown
+export type VueNodeTreeType = 'element' | 'text' | 'root' | unknown
 
-export type VueRenderTreeNonRoot =
+export type VueNodeTreeNonRoot =
   | {
       type: 'element'
       tag: VueNodeTag
       props: Record<string, string>
-      children: VueRenderTreeNonRoot[]
+      children: VueNodeTreeNonRoot[]
     }
   | {
       type: 'text'
       value: string
     }
 
-export type VueRenderTreeRoot = {
+export type VueNodeTreeRoot = {
   type: 'root'
-  children: VueRenderTreeNonRoot[]
+  children: VueNodeTreeNonRoot[]
 }
 
-export type VueRenderTree = VueRenderTreeRoot | VueRenderTreeNonRoot
+export type VueNodeTree = VueNodeTreeRoot | VueNodeTreeNonRoot
+
+export interface INuxtContentTableOfContents {
+  id: string
+  depth: number
+  text: string
+}
 
 /**
  * What Nuxt content internally uses when transforming files.
  */
 export interface INuxtContentParsedDocument {
-  body: VueRenderTreeRoot
+  body: VueNodeTreeRoot
   text?: string
+  toc?: INuxtContentTableOfContents[]
 }

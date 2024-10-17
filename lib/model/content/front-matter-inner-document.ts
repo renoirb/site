@@ -3,9 +3,9 @@ import type { contentFunc } from '@nuxt/content'
 import { abbreviatize } from '../..'
 import type {
   INuxtContentParsedDocument,
-  VueNodeType,
-  VueRenderTree,
-  VueRenderTreeNonRoot,
+  VueNodeTreeType,
+  VueNodeTree,
+  VueNodeTreeNonRoot,
   VueNodeTag,
 } from '../../types'
 
@@ -128,28 +128,28 @@ export const assertsFrontMatterCoverImageInnerDocument: (input: unknown) => asse
 }
 
 
-export const getVueNodeTag = (node: VueRenderTreeNonRoot): VueNodeTag => {
+export const getVueNodeTag = (node: VueNodeTreeNonRoot): VueNodeTag => {
   if (getVueNodeType(node) === 'element' && 'tag' in node) {
     const { tag } = node
     return tag
   }
-  const message = `Unexpected input, only VueRenderTreeNonRoot of type 'element' has a tag property`
+  const message = `Unexpected input, only VueNodeTreeNonRoot of type 'element' has a tag property`
   throw new Error(message)
 }
 
-export const getVueNodeType = (node: VueRenderTree): VueNodeType | '' => {
+export const getVueNodeType = (node: VueNodeTree): VueNodeTreeType | '' => {
   const { type = '' } = node
   return type
 }
 
-export const isVueNodeWithChildren = (input: object): input is { children: VueRenderTreeNonRoot[] } => {
+export const isVueNodeWithChildren = (input: object): input is { children: VueNodeTreeNonRoot[] } => {
   if (input && 'children' in input && Array.isArray(input.children)) {
     return true
   }
   return false
 }
 
-export const getVueNodeChildren = (body): VueRenderTreeNonRoot[] => {
+export const getVueNodeChildren = (body): VueNodeTreeNonRoot[] => {
   if (isVueNodeWithChildren(body)) {
     const { children = [] } = body
     return children
