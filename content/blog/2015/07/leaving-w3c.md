@@ -77,3 +77,5 @@ The last billed hours I made for the project was to host a static HTML version [
 [4]: https://www.webplatform.org/
 [5]: http://schepers.cc/
 [6]: https://www.w3.org/People/gallery/#year2013
+
+<!--#TODO With Hypothes.is annotations-->
