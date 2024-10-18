@@ -5,7 +5,11 @@ created: 2010-03-22
 updated: 2020-11-07
 canonical: ’https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux/'
 status: publish
-revising: false
+revising: true
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - tranche-de-vie
 tags:

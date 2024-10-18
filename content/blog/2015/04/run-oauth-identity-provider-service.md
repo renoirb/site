@@ -5,7 +5,7 @@ created: 2015-04-13
 updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/run-oauth-identity-provider-service/
 status: publish
-revising: true
+revising: false
 categories:
   - experiments
 tags:
@@ -27,6 +27,7 @@ preamble:
     All infrastructure related to WebPlatform Docs is shut down since 2016.
     Mentions about SSO and OAuth is still (2020) accessible from the archived [`webplatform.github.io/docs/WPD/Projects/SSO` wiki pages][wpd-projects-sso].
     [wpd-projects-sso]: https://webplatform.github.io/docs/WPD/Projects/SSO/
+  figcaption: ' '
 excerpt: >-
   Tutorials and explanation on how to be your own OAuth Identity Provider are
   very scarce and I’ve come to achieve this, this is an attempt to outline the
@@ -50,6 +51,7 @@ the basics.
 
 ## Whitelist
 
+
 Big sites aren't generally one big code repository but a set of separate
 components. A way to make each component to share your account details is most
 possibly by making a difference between their own infrastructure and third
@@ -59,12 +61,16 @@ If your app were to use an external resource such as Google, the process would
 end up making Google users to be asked if they really want to share their
 information with you. This is why they would get a dialog similar to this.
 
-<app-image style="float:unset;" src="~/assets/content/blog/2015/02/oauth_tutorial_authorization_sample.png" alt="My project is requesting permission to: Manage your calendars, manage your documents. Allow access? No thanks.">
-</app-image>
 
 While its OK to ask confirmation from a user if he wants to share his details
 with an external site, in the case of two components from the same site can
 share this information transparently.
+
+<app-image src="~/assets/content/blog/2015/02/oauth_tutorial_authorization_sample.png" alt="OAuth confirmation modal with Google logo. Asking: My project is requesting permission to: Manage your calendars, manage your documents." figcaption=" ">
+
+Looking at this OAuth dialog, I can't help but feel a bit uneasy. Sure, it looks clean and official, but I'm noticing how many apps are asking for more access than they seem to need. What bugs me is we can't pick and choose - it's all or nothing. I've got this nagging feeling that companies might use this to grab as much data as they can about us, building detailed profiles along the way. With how quickly this is catching on, it's starting to feel like a ticking time bomb for our personal info. Maybe I'm overthinking it, but something about this just doesn't sit right with me.
+
+</app-image>
 
 If you are your own Identity Provider, you can configure your relying parties as
 "whitelisted" so that your accounts system don't display such dialog.

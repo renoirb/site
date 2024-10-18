@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/09/realisation-de-lintegration-du-site-de-jean-emond-2008/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 tags:
   - css
   - html

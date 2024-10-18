@@ -31,8 +31,13 @@ Surtout pour la rédaction qui se fout un peu de faire du *HTML propre*
 
 Les méthodes qui suit font bel et bien le travail mais elles ont leurs faiblesses. Aussi elles peuvent devenir rapidement hors de contrôle. Beaucoup d’attributs.
 
+<!--#TODO-inline-edit Renoir de 2024-->
 <rb-notice-box variant="info" class="my-5">
-  <strong slot="header">Révision faite en 2024: remise en contexte</strong>
+  <span slot="header">
+
+[Renoir de <time datetime="2024-10">2024</time>](/blog/2024/10/refonte-majeure-de-mon-site-web): Remise en contexte
+
+  </span>
 
 Cet article a été écrit en 2009 et à l'époque, la majorité des gens n’utilisaient que Microsoft Internet Explorer et il n’y avait pas des onglets. Il s’agissait d’une fenêtre par site. Nous pouvions avoir une dizaines de fenêtres. Les onglets existaient en 2009, mais il fallait utiliser Mozilla Firefox, ou Opera.
 
@@ -128,7 +133,8 @@ Source: ma mémoire... j'ai pas trouvé de lien référence.
 
 ### Ce qu'il faudrait...
 
-En gros, il faudrait, que pour chaque lien... (Renoir de 2024: Il y en a probablement beaucoup aujourd’hui!)
+<!--#TODO-inline-edit Renoir de 2024-->
+En gros, il faudrait, que pour chaque lien... (Renoir de <time datetime="2024-10">2024</time>: Il y en a probablement beaucoup aujourd’hui!)
 
 *   Avertir qu'il y a un lien externe dans un icône image ajouté automatiquement
 *   Placer l'icone avec la bonne balise et ne pas utiliser le CSS.

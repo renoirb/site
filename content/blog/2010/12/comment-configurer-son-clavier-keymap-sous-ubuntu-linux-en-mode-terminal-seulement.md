@@ -9,6 +9,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/12/comment-configurer-son-clavier-keymap-sous-ubuntu-linux-en-mode-terminal-seulement/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 tags: []
 categories: []
 coverImage:

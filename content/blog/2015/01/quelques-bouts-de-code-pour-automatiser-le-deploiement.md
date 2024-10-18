@@ -3,9 +3,13 @@ title: Quelques bouts de code pour automatiser le déploiement
 locale: fr-CA
 created: 2015-01-28
 updated: 2015-02-17
-canonical: https://renoirboulanger.com/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement
+canonical: 'https://renoirboulanger.com/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement/'
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - projects
 tags:
@@ -13,23 +17,24 @@ tags:
   - development
   - operations
   - salt-stack
-preamble:
-  disable: true
-  text: ' '
-excerpt: >-
-  Avez-vous déjà voulu automatiser le déploiement de votre infrastructure
-  serveurs web de A-Z? C’est exactement sur quoi je travaille en ce moment.
 coverImage:
   src: ~/assets/content/blog/2015/01/automate-all-the-things-300x284.png
   srcset:
     - https://renoirboulanger.com/wp-content/uploads/2015/01/automate-all-the-things-300x284.png 300w
     - https://renoirboulanger.com/wp-content/uploads/2015/01/automate-all-the-things-1024x971.png 1024w
     - https://renoirboulanger.com/wp-content/uploads/2015/01/automate-all-the-things.png 1600w
-  sizes: '(max-width: 300px) 100vw, 300px'
+  sizes: >-
+    (max-width: 300px) 100vw, 300px
   alt: >-
     Illustration souvent utilisée pour un mème de l’Internet d’un dessin fait rapidement à la main illustrant un personnage avec une lumière éclatante derrière comme l’introduction d’un super héros. Le personnage tient un balai d’une main et brandissant l’autre bras et les yeux pas très alignés. Il proclame Automatisons tout!
   text: |
     Automatisons Tout!!1
+preamble:
+  disable: true
+  text: ' '
+excerpt: >-
+  Avez-vous déjà voulu automatiser le déploiement de votre infrastructure
+  serveurs web de A-Z? C’est exactement sur quoi je travaille en ce moment.
 ---
 
 Ce billet n’est qu’un simple «link dump» pour retrouver parmi plusieurs notes
@@ -100,6 +105,8 @@ Dans mon cas, ce sera: WordPress, MediaWiki, Discourse, et quelques autres.
 - [The missing piece operating systems for "Web Scale" Cloud Apps][13]
 - [Why an X (VM) "instance" isn’t a server][14]
 - [Simplifying cloud reliability][15]
+
+<!--#TODO-Display-Or-Migrate-Gists-->
 
 [0]:
   https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/

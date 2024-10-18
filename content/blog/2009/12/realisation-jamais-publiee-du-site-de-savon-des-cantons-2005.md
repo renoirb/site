@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/12/realisation-jamais-publiee-du-site-de-savon-des-cantons-2005/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - portfolio
 tags:

@@ -5,6 +5,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/
 status: publish
 revising: true
+migrateLinks: true
+migrateImages: true
+gallery: false
+caption: false
 created: '2014-01-22'
 updated: '2015-03-09'
 tags:
@@ -108,3 +112,5 @@ joe@master:~$ sudo salt 'db*' state.sls hosts
 joe@master:~$ sudo salt 'memcache*' state.sls hosts
 </code></pre></li>
 </ol>
+
+<!--#TODO-Improve-Code-Blocks-->

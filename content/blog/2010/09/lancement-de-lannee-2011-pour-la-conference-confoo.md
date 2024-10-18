@@ -4,6 +4,12 @@ locale: fr-CA
 created: 2010-09-08
 updated: 2023-11-16
 canonical: 'https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo/'
+status: publish
+revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - events
 tags:

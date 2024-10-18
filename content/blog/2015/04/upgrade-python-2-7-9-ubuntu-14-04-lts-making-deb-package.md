@@ -1,6 +1,6 @@
 ---
 title:
-  Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS, and make your own .deb package
+  Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS and make your own .deb package
   for deployment
 locale: en-CA
 created: 2015-04-05
@@ -20,7 +20,7 @@ keywords:
   - ubuntu
 excerpt: >-
   Need to run your web app with Python 2.7.9, but server environment uses Ubuntu
-  14.04 LTS? Don’t replace Python, leverage VirtualEnv instead!
+  Long Term Support? Don’t replace Python, leverage VirtualEnv instead!
 ---
 
 I had this post hanging in my drafts on how I attempted to install a valid

@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2015/08/managing-pgp-private-keys-share-across-machines/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - procedure
 tags:

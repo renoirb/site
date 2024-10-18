@@ -6,6 +6,10 @@ updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2009/10/realisation-du-site-ecurie-royale/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - portfolio
 tags:
@@ -42,8 +46,13 @@ hyperlien. Il y avait plusieurs autres pratiques similaires avec les images. Les
 coins ronds étaient aussi des images. Il fallait découper l’image d’une façon
 pour pouvoir la faire répéter.
 
+<!--#TODO-inline-edit Renoir de 2024-->
 <rb-notice-box variant="info" class="my-5" date="2024-10-07">
-  <strong slot="header">Révision faite en 2024</strong>
+  <strong slot="header">
+
+[Renoir de <time datetime="2024-10">2024</time>](/blog/2024/10/refonte-majeure-de-mon-site-web): Remise en contexte
+
+  </strong>
 
 Une grande partie de cette page a été écrite
 [lors de la refonte de mon site](/blog/2024/10/refonte-majeure-de-mon-site-web)
@@ -55,11 +64,11 @@ Web a l’époque.
 
 <dl>
   <dt>Graphisme</dt>
-    <dd><a href="http://www.tatou.ca/">Tatou Communication visuelle</a></dd>
+    <dd><a href="https://www.tatou.ca/">Tatou Communication visuelle</a></dd>
   <dt>Date de réalisation</dt>
     <dd><time datetime="2004-02">Février 2004</time></dd>
   <dt>Nom de domaine</dt>
-    <dd><a href="http://www.ecurieroyale.com/">ecurieroyale.com</a></dd>
+    <dd><a href="https://www.ecurieroyale.com/">ecurieroyale.com</a></dd>
 </dl>
 
 ## J’ai aussi visité l’écurie
@@ -67,7 +76,7 @@ Web a l’époque.
 Outre cette description des aspects technique de la réaliastion J’aimerai aussi
 dire que j’ai aussi eu la chance d’utiliser et de profiter des installations
 d’Hélène Coulombe et de faire de l’équitation à
-<a href="http://www.ecurieroyale.com/">l’Écurie Royale</a>. J’avais organisé une
+<a href="https://www.ecurieroyale.com/">l’Écurie Royale</a>. J’avais organisé une
 activité en tant que chef de troupe dans les Scouts et ai fait profiter ma
 troupe d’enfants (9-11 ans, _Louveteaux_).
 

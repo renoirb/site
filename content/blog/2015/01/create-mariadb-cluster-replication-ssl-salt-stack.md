@@ -6,6 +6,10 @@ updated: 2015-02-03
 canonical: 'https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/'
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - projects
 tags:
@@ -538,6 +542,8 @@ salt -G 'roles:masterdb' mysql.grant_add 'ALL PRIVILEGES' 'accounts_oauth.*' 'ac
 
 - http://dev.mysql.com/doc/refman/5.7/en/replication-solutions-ssl.html
 - https://mariadb.com/kb/en/mariadb/documentation/managing-mariadb/replication/standard-replication/setting-up-replication/
+
+<!--#TODO-Import-Code-From-External-->
 
 [0]: https://docs.saltproject.io/en/latest/topics/reactor/
 [1]: https://gist.github.com/WebPlatformDocs/563cb12326b92b22a452
