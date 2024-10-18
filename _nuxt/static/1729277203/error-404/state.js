@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1729277203",layout:"nothing-around-stuff-in-middle",error:null,serverRendered:a,routePath:"\u002Ferror-404",config:{content:{dbHash:"ffb8dcab"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));
