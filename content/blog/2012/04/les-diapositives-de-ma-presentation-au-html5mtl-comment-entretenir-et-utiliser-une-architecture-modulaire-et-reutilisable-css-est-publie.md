@@ -48,8 +48,3 @@ Je crois que je devrais ajouter du contenu et améliorer sa structure. Je compte
 	<li>Ajuster le "ce que j'assume" au début de la présentation, et m'assurer que l'audience sait de quoi je parle</li>
 	<li>Donner plus de raisons sur ce que je considère une mauvaise pratique</li>
 </ul>
-
-
-
-<h3>Vous voulez que je présente?</h3>
-Je suis disponible pour faire présentation dans votre école, université, groupe. <a href="/contact/">Laissez-moi le savoir</a>.
