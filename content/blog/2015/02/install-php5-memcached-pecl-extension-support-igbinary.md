@@ -6,6 +6,10 @@ updated: 2023-02-18
 canonical: 'https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/'
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - projects
 tags:
@@ -197,6 +201,7 @@ Session handlers shows memcached
 
 </div>
 
+<!--#TODO-Improve-Code-Blocks-->
 
 [0]: https://github.com/jordansissel/fpm
 [1]:

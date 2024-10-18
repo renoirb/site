@@ -93,7 +93,10 @@ Let's say you have two public facing frontends running NGINX.
 
 Those would be the ones you setup in Fastly like this.
 
-<app-image style="float:unset;" src="~/assets/content/blog/2015/04/discuss-fastly-origins.png" figcaption="Fastly service configuration, at Hosts tab">
+<app-image style="float:unset;" src="~/assets/content/blog/2015/04/discuss-fastly-origins.png" figcaption=" ">
+
+Fastly service configuration, at Hosts tab
+
 </app-image>
 
 Here we see two _Backends_ in Fastly pannel at `Configure -> Hosts`.

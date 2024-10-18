@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/12/realisation-du-site-solutions-affaires-experts-conseils-2004/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - portfolio
 tags:
@@ -30,9 +34,11 @@ waybackMachineSnapshots:
 - orig: http://www.htdig.org/htsearch.html
   snapshots:
   - https://web.archive.org/web/20040816032810/http://www.htdig.org/htsearch.html
+- key: tatoue
+  orig: https://www.tatou.ca/
 ---
 
-Il s’agit d’un site que j’ai fait en 2004 qui provient du graphisme produit par [Tatou Communication visuelle](http://www.tatou.ca/). Je n’avait pas dans mon dossier d’archives tout les documents ni de captures d’écran car à l’époque je ne faisait pas attention a ce genre de truc.
+Il s’agit d’un site que j’ai fait en 2004 qui provient du graphisme produit par [Tatou Communication visuelle][tatoue]. Je n’avait pas dans mon dossier d’archives tout les documents ni de captures d’écran car à l’époque je ne faisait pas attention a ce genre de truc.
 
 <!--more-->
 
@@ -41,7 +47,7 @@ Ce site web a été développé durant une période où l’approche de l’iden
 
 <dl>
   <dt>Graphisme</dt>
-    <dd><a href="http://www.tatou.ca/">Tatou Communication visuelle</a></dd>
+    <dd><a href="https://www.tatou.ca/">Tatou Communication visuelle</a></dd>
   <dt>Date de réalisation</dt>
     <dd><time datetime="2004-03">Mars 2004</time> (environ)</dd>
   <dt>Nom de domaine</dt>
@@ -104,3 +110,4 @@ Nous pouvons voir très subtilement le noms Geranium CMS et de Tatou communicati
 </div>
 
 [htdig-home]: https://web.archive.org/web/20040816030226/http://www.htdig.org/
+[tatoue]: https://www.tatou.ca/

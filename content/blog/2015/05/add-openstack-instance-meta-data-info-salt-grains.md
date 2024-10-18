@@ -3,9 +3,13 @@ title: Add OpenStack instance meta-data info in your salt grains
 locale: en-CA
 created: 2015-05-22
 updated: 2023-11-17
-canonical: https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/
+canonical: 'https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/'
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - snippet
 tags:
@@ -266,6 +270,7 @@ You can add this feature by adding a file in your salt states repository in the
 
 You can grab the grain python code [in this gist][4].
 
+<!--#TODO-Improve-Code-Blocks-->
 <!--#TODO-Display-Or-Migrate-Gists-->
 <!--script lazy src="https://gist.github.com/WebPlatformDocs/6b26b67321fe15870aa0.js"></script-->
 

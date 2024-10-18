@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - web-integration-review
 tags:
@@ -71,7 +75,7 @@ done the same way.
 In the end, the HTTP caching layer basically keeps in RAM generated HTTP
 Response body and keeps in memory based on the headers it had when it passed it
 through to the original request. Only GET Responses, _without cookies_, are
-cacheable. Other response body coming from a \[PUT, DELETE, POST\] request
+cacheable. Other response body coming from a \[`PUT`, `DELETE`, `POST`\] request
 aren't.
 
 To come back on my previous example, what part is unique in the the current user
@@ -89,11 +93,13 @@ the same paths in the CMS.
 
 ## How about we separate dynamic from static?
 
-<app-image src="~/assets/content/blog/2015/10/2015-09-21-Running-MDN-and-BrowserCompat.png" figcaption="An example of running a presentation only HTML partial serving specialized service." alt="Experimenting with Django/Kuma and making HTML Partial URLs">
+<app-image src="~/assets/content/blog/2015/10/2015-09-21-Running-MDN-and-BrowserCompat.png" alt="Experimenting with Django/Kuma and making HTML Partial URLs" figcaption=" ">
 
-For example, we could make [**MDN**’s _BrowserCompat_ API][browsercompat-api]
-where we could leverage to fill in compatibiliby table back into MDN. This
-screenshot dates back from 2015.
+An example of running a presentation only HTML partial serving specialized service.
+
+We could make [**MDN**’s _BrowserCompat_ API][browsercompat-api] where we could
+leverage to fill in compatibiliby table back into MDN.
+This screenshot dates back from 2015.
 
 </app-image>
 

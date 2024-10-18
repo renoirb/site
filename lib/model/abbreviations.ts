@@ -10,6 +10,7 @@ const ABBREVIATION = [
   'cms',
   'css',
   'cdn',
+  '.deb',
   'dns',
   'gnu',
   'gnome',
@@ -33,6 +34,7 @@ const ABBREVIATION = [
   'php5',
   'sass',
   'ssh',
+  'sshfs',
   'ssl',
   'smtp',
   'sql',
@@ -86,6 +88,7 @@ const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
   ['cms', 'Content Management System'],
   ['cdn', 'Content Delivery Network'],
   ['css', 'Cascading Style Sheet'],
+  ['.deb', 'Debian package'],
   ['dns', 'Domain Name Service (network Name resolution)'],
   ['gnu', 'GNU’s Not Unix'],
   [
@@ -115,6 +118,7 @@ const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
   ['rss', 'Really Simple Syndication'],
   ['sass', 'Syntactically Awesome Stylesheets, A variant of CSS Style Sheets '],
   ['ssh', 'Secure Shell or Secure Socket Shell'],
+  ['sshfs', 'Secure Shell or Secure Socket Shell File System'],
   [
     'ssl',
     'SSL as Secure Sockets Layer, which is the colloquial term used to refer to what is now called Transport Layer Security (TLS)',

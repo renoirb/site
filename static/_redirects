@@ -41,7 +41,7 @@
 #
 # DELETED ----------
 #
-/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/ /error/?c=deleted 301
+/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/ /error/?c=gone 301
 /screenshot/ /error/?c=gone
 /github/ /error/?c=gone
 /forrst/ /error/?c=gone
@@ -58,6 +58,7 @@
 /blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence-le-«club-echangiste»-2009/ /blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence/ 301
 /blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence-le-%c2%abclub-echangiste%c2%bb-2009/ /blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence/ 301
 /blog/2024/03/managing-email-aliases-with-protonmail-and-simplelogin-to-sort-automatically-into-inbox-folders-based-local-part/ /blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting/ 301
+/blog/2013/07/i-am-joining-w3c-to-work-on-the-webplatform-project-2/ /blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project/ 301
 #
 # PAGES THAT HAPPENED TO HAVE MANY URLS FOR THE SAME ARTICLE BECAUSE OF FLOCK BROWSER ----------
 #
@@ -269,7 +270,6 @@
 /blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/bbc-co-uk-feb-2001-screenshot/ /error/?c=disabled-img-url
 /webplatform_padding_xlg/ /error/?c=disabled-img-url
 /wplogo_transparent_lg/ /error/?c=disabled-img-url
-/blog/2013/07/i-am-joining-w3c-to-work-on-the-webplatform-project-2/ /blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project/ 301
 /blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project/logo-w3c-screen-lg/ /error/?c=disabled-img-url
 /blog/2013/07/i-just-resigned-from-my-new-job-to-start-on-an-exciting-project/new-horizons-bird/ /error/?c=disabled-img-url
 /blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes/computercloud/ /error/?c=disabled-img-url

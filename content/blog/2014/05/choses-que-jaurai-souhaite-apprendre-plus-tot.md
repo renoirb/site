@@ -1,20 +1,24 @@
 ---
-locale: fr-CA
 title: Recette du succès en quelques règles simples
+locale: fr-CA
 canonical: >-
   https://renoirboulanger.com/blog/2014/05/choses-que-jaurai-souhaite-apprendre-plus-tot/
 status: publish
 revising: true
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 created: '2014-05-07'
 updated: '2014-07-04'
 tags: []
 categories: []
+description: Parmi les choses que j’aurai aimé apprendre il y a cette suite règles simples
+title_alternate: Recette du succès en quelques règles simples
 excerpt: >-
   Ce qui suit fait partie des choses que jaurai aimé apprendre plus tôt dans ma
   vie. C'est une suite de petites règles très simples. Elles proviennent d’un
   tweet, j’ai pris la liberté de le traduire et d’en conserver une copie.
-description: Parmi les choses que j’aurai aimé apprendre il y a cette suite règles simples
-title_alternate: Recette du succès en quelques règles simples
 ---
 
 <p>Je copie pas souvent du contenu trouvé sur le web, mais cette publication est tellement bien faite que je n’ai pu me retenir!</p>
@@ -36,6 +40,7 @@ title_alternate: Recette du succès en quelques règles simples
 
 <p>J’ai trouvé la recette à partir de ce tweet, j’ai pris la liberté de le traduire et d’en conserver une copie sur mon blogue. Aussi j'ai ajouté une règle personnelle après celle du «oui».</p>
 
+<!--#TODO-app-twitter-quote-->
 
 <app-twitter-quote tweet="464068618066460673">
 

@@ -159,7 +159,7 @@ En fait les noms vont ainsi
 Vous imaginez que le ’a’ (b,c,d...) représente l’ordre selon la nappe de
 connecteurs.
 
-La première partition du premier disque sera donc: `/dev/sda1`
+La première partition du premier disque sera donc: <abbr>`/dev/sda1`</abbr>
 
 Si tout est beau... on continue.
 
@@ -179,7 +179,8 @@ done
 ```
 
 Ensuite on quitte **en faisant** <kbd title="Escape">ESC</kbd> "`:wq`" (deux
-points... "w" et "q"... qui signifie commande _write_ and _quit_)
+points, la lettres minuscules "`w`" et "`q`" qui signifient
+<span lang="en">_write_ and _quit_</span>)
 
     chmod 755 wipedisk.sh
 

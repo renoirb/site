@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2015/11/recover-discourse-backup-change-domain-name/
 status: publish
 revising: false
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
 categories:
   - experiments
 tags:
@@ -94,7 +98,10 @@ Refer to
 - https://meta.discourse.org/t/multisite-configuration-with-docker/14084/8
 - [Work notes on WebPlatform GitHub issue tracker][2]
 
+<!--#TODO-Improve-Code-Blocks-->
+
 [0]:
   https://meta.discourse.org/t/move-your-discourse-instance-to-a-different-server/15721
 [1]: https://github.com/discourse/discourse/blob/master/config/nginx.sample.conf
 [2]: https://github.com/webplatform/ops/issues/152
+
