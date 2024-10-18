@@ -1,140 +1,262 @@
 ---
-locale: fr-CA
 title: >-
   Comment je valide et convertit des documents HTML trop chargés ou provenant de
   Microsoft Word en HTML valide et simplifié
+locale: fr-CA
+created: 2012-08-30
+updated: 2013-06-11
 canonical: >-
   https://renoirboulanger.com/blog/2012/08/comment-je-valide-et-convertit-des-documents-html-trop-charges-ou-provenant-de-microsoft-word-en-html-valide-et-simplifie/
 status: publish
 revising: true
-created: '2012-08-30'
-updated: '2013-06-11'
+migrateLinks: true
+migrateImages: false
+gallery: false
+caption: false
+categories:
+  - programmation
 tags:
   - integration
   - outils
   - techniques
   - tutoriels
-categories:
-  - programmation
+  - php
+webarchiveSnapshots:
+  - key: unoconv
+    orig: http://dag.wieers.com/home-made/unoconv/#download
+  - key: stackoverflow-openoffice
+    orig: http://stackoverflow.com/questions/3405687/openoffice-org-using-uno-to-convert-docx-to-html
+  - key: tidy-options
+    orig: http://tidy.sourceforge.net/docs/quickref.html
+  - key: htmlawed-docs
+    orig: http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/more.htm
+  - key: htmlawed-settings
+    orig: http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/example_settings.htm
+  - key: htmlawed-home
+    orig: http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/index.php
+preamble:
+  date: 2024-09-12
+  text: |
+    Il est fort possible que la méthode utilisée ne sois plus reproduisible car les dépendances
+    ne sont plus disponibles aux versions utilisées.
+
+    Cette méthode a été très utile pour convertir des fichiers complexes en pages HTML simplifiées
+    pour affichier des documents légaux.
+
+    Le site qui utilisait cette méthode était pour [l’Union des Artistes (UDA)](https://site.uda.ca/)
+    pour les [ententes collectives](https://site.uda.ca/page/ententes-collectives) et l’engin de recherche
+    des documents pour les membres.
+    L’autre partie que j’ai été impliquée pour l'<abbr>UDA</abbr> était notamment l’**écriture**
+    et l’**architecture** du HTML et le styling CSS pour l’ensemble du site.
+
+    La [maquette de travail («<span lang="en">styleguide</span>») est
+    disponible ici](https://renoirb.com/past-projects/2012/UnionDesArtistes/)
 excerpt: >-
   Cette procédure est faite pour permettre de prendre n'importe quel fichier
   Word ou HTML généré avec beaucoup de tagsoup en en simplifier a sa plus simple
   expression html. Valide.
 ---
 
-<h3>Description</h3>
+### Description
 
-<p>Cette procédure est faite optimiser la conversion document word en html, spécialement ceux qui sont généré avec beaucoup de «tagsoup» en en simplifier a sa plus simple expression html. Valide.</p>
+Cette procédure est faite optimiser la conversion document word en html,
+spécialement ceux qui sont généré avec beaucoup de «tagsoup» en en simplifier a
+sa plus simple expression <abbr>HTML</abbr>. Valide.
 
-<p><strong>Sauter à la <a href="#CommentconvertirunfichierWordversduHTMLsimpleetvalide-Proc%C3%A9dure">Procédure</a></strong></p>
+#### Exemple
 
-<h4>Exemple</h4>
+##### Avant
 
-<h5>Avant</h5>
+Le HTML a les balises brisées à l'intérieur de chaque balise pour illustrer le
+poid et la répétition
 
-<pre><code>&lt;h2 class="Standard" dir="ltr" lang="fr-FR" style="margin-top: 0; margin-bottom: 0; text-align: center;" xml:lang="fr-FR"&gt;
-  &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;TERMS AND CONDITIONS OF 1&lt;/span&gt; &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;‐&lt;/span&gt; &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;YEAR OR 30&lt;/span&gt; &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;‐&lt;/span&gt; &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;DAY ACCESS AND USE&lt;/span&gt;
-&lt;/h2&gt;
+<div lang="en">
 
-&lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;OF THE SERVICE BY SUBSCRIBERS&lt;/span&gt; &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;SECTION 1&lt;/span&gt; &lt;span lang="en-CA" style="font-weight: bold; font-size: 16.0px;" xml:lang="en-CA"&gt;PURPOSE OF THE SERVICE&lt;/span&gt;
-</code></pre>
+```html
+<h2
+  class="Standard"
+  dir="ltr"
+  lang="fr-FR"
+  style="margin-top: 0; margin-bottom: 0; text-align: center;"
+  xml:lang="fr-FR"
+>
+  <span
+    lang="en-CA"
+    style="font-weight: bold; font-size: 16.0px;"
+    xml:lang="en-CA"
+  >
+    TERMS AND CONDITIONS OF 1
+  </span>
+  <span
+    lang="en-CA"
+    style="font-weight: bold; font-size: 16.0px;"
+    xml:lang="en-CA"
+    >‐</span
+  >
+  <span
+    lang="en-CA"
+    style="font-weight: bold; font-size: 16.0px;"
+    xml:lang="en-CA"
+  >
+    YEAR OR 30
+  </span>
+  <span
+    lang="en-CA"
+    style="font-weight: bold; font-size: 16.0px;"
+    xml:lang="en-CA"
+    >‐</span
+  >
+  <span
+    lang="en-CA"
+    style="font-weight: bold; font-size: 16.0px;"
+    xml:lang="en-CA"
+  >
+    DAY ACCESS AND USE
+  </span>
+</h2>
 
-<h5>Après</h5>
+<span
+  lang="en-CA"
+  style="font-weight: bold; font-size: 16.0px;"
+  xml:lang="en-CA"
+  >OF THE SERVICE BY SUBSCRIBERS</span
+>
+<span
+  lang="en-CA"
+  style="font-weight: bold; font-size: 16.0px;"
+  xml:lang="en-CA"
+  >SECTION 1</span
+>
+<span
+  lang="en-CA"
+  style="font-weight: bold; font-size: 16.0px;"
+  xml:lang="en-CA"
+>
+  PURPOSE OF THE SERVICE
+</span>
+```
 
-<pre><code>&lt;h2&gt;TERMS AND CONDITIONS OF 1 ‐ YEAR OR 30 ‐ DAY ACCESS AND USE&lt;/h2&gt;
+</div>
 
-&lt;span&gt;OF THE SERVICE BY SUBSCRIBERS SECTION 1 PURPOSE OF THE SERVICE&lt;/span&gt; 
-</code></pre>
 
-<p> </p>
+##### Après
 
-<h3>Inspiration et pistes</h3>
+<div lang="en">
 
-<ol>
-<li>Convertir de format document en ligne de commandeDe Word2000 vers HTML, voir <strong>UNOCONV</strong> <a class="external-link" href="http://dag.wieers.com/home-made/unoconv/#download" rel="nofollow">http://dag.wieers.com/home-made/unoconv/#download</a></li>
-</ol>
+```html
+<h2>TERMS AND CONDITIONS OF 1 ‐ YEAR OR 30 ‐ DAY ACCESS AND USE</h2>
 
-<ul>
-<li>Utiliser open office en mode "headless" (en le transformant en service) et y envoyer les documents pour conversionVoir: <a class="external-link" href="http://stackoverflow.com/questions/3405687/openoffice-org-using-uno-to-convert-docx-to-html" rel="nofollow">http://stackoverflow.com/questions/3405687/openoffice-org-using-uno-to-convert-docx-to-html</a></li>
-</ul>
+<span>OF THE SERVICE BY SUBSCRIBERS SECTION 1 PURPOSE OF THE SERVICE</span>
+```
 
-<p> </p>
+</div>
 
-<p> </p>
+### Inspiration et pistes
 
-<p> </p>
+1. Convertir de format document en ligne de commande De *Microsoft Word 2000* vers du <abbr>HTML</abbr>.
+   Pour ce faire, j’ai suivi [la documentation d’**<abbr>UNOCONV</abbr>**][unoconv].
 
-<h3>Procédure </h3>
+2. Utiliser open office en mode "headless" (en le transformant en service) et y
+   envoyer les documents pour conversion. (Renoir de
+   <time datetime="2024-10">2024</time>: l’article original sur _StackOverflow_
+   a été supprimé par l’auteur. Probablement que cette méthode n’est plus
+   valide.)
 
-<h4>Version abstraite</h4>
+<!--#TODO-inline-edit-->
 
-<ol>
-<li>Utiliser Open Office (ou peu importe) pour exporter le document en HTML</li>
-</ol>
+### Procédure
 
-<p>*   Purifier via <tt>HTMLTidy</tt>
-*   Nettoyer les attributs inutiles avec la classe <tt>htmLawed</tt> </p>
+#### Version abstraite
 
-<h3>Use cases</h3>
+1. Utiliser Open Office (ou peu importe) pour exporter le document en HTML
 
-<h4>Document texte seulement</h4>
+- Purifier via `HTMLTidy`
+- Nettoyer les attributs inutiles avec la classe `htmLawed`
 
-<ul>
-<li>Pas de formulaire, ni images, etc</li>
-<li>Idéal pour un document légal, par exemple.</li>
-</ul>
+### Use cases
 
-<h3>Étapes concrètes:</h3>
+#### Document texte seulement
 
-<ol>
-<li>A partir du fichier HTML généré <strong>exemple</strong>: Fichier appelé "1.1.2.en.html"</li>
-</ol>
+- Pas de formulaire, ni images, etc.
+- Idéal pour un document légal, par exemple.
 
-<p>*   Extraire le fichier <a href="#">htmLawed.zip</a>
- 
-    cd ~
-    mkdir htmlawed
-    mv htmLawed.zip htmlawed/
-    cd htmlawed
-    unzip htmLawed.zip</p>
+### Étapes concrètes:
 
-<p>Passer au travers de la classe <tt>htmLawed</tt></p>
+1. A partir du fichier HTML généré **exemple**: Fichier appelé "`1.1.2.en.html`"
 
-<pre><code>require('htmLawed.php');
-$config = array('safe'=&gt;1,'elements'=&gt;'a,em,strong,p,ul,li,ol,h1,h2,h3,h4,h5,div,tr,td,table','deny_attribute'=&gt;'* -title -href');
+- Extraire le fichier `htmLawed.zip` ([voir site officiel][htmlawed-home])
+qui contient la classe <abbr>PHP</abbr> que nous allons utiliser.
+
+```bash
+cd ~
+mkdir htmlawed
+mv htmLawed.zip htmlawed/
+cd htmlawed
+unzip htmLawed.zip
+```
+
+Passer au travers de la classe `htmLawed`
+
+```php
+require('htmLawed.php');
+$config = array('safe'=>1,'elements'=>'a,em,strong,p,ul,li,ol,h1,h2,h3,h4,h5,div,tr,td,table','deny_attribute'=>'* -title -href');
 $out = htmLawed(file_get_contents('in.html'), $config);
 echo $out;
-</code></pre>
+```
 
-<p>Rouler le script. Déplacer le fichier a utiliser, puis exécuter le script pour en générer dans out.html</p>
+Rouler le script. Déplacer le fichier a utiliser, puis exécuter le script pour
+en générer dans `out.html`
 
-<pre><code>cp ~/1.1.2.en.tidy.html in.html
-php cleanup.php &amp;gt; out.html&lt;/pre&gt;
-</code></pre>
+```bash
+cp ~/1.1.2.en.tidy.html in.html
+php cleanup.php > out.html
+```
 
-<p>Rouler Tidy. <strong>Normaliser le fichier "1.1.2.en.html", Nettoyer les balises, minuscules, etc</strong></p>
+Rouler Tidy. **Normaliser le fichier "`1.1.2.en.html`", Nettoyer les balises,
+minuscules, etc**
 
-<pre><code>tidy --drop-font-tags 1 --logical-emphasis 1 --clean 1 --merge-spans 1 --show-body-only 1 --output-xhtml 1 --word-2000 1 --indent "auto" --char-encoding "utf8" --indent-spaces "2" --wrap "90" 1.1.2.en.html &amp;gt; 1.1.2.en.tidy.html
-</code></pre>
+```bash
+tidy \
+  --drop-font-tags 1 \
+  --logical-emphasis 1 \
+  --clean 1 \
+  --merge-spans 1 \
+  --show-body-only 1 \
+  --output-xhtml 1 \
+  --word-2000 1 \
+  --indent "auto" \
+  --char-encoding "utf8" \
+  --indent-spaces "2" \
+  --wrap "90" \
+  1.1.2.en.html > 1.1.2.en.tidy.html
+```
 
-<p>tada!</p>
+tada!
 
-<h3>Précautions</h3>
+### Précautions
 
-<p>Ordre d'exécution des tâches</p>
+Ordre d'exécution des tâches
 
-<p><strong>Remarque:</strong></p>
+**Remarque:**
 
-<p>J'ai essayé de passer Tidy avant htmLawed et j'ai réalisé que le nettoyage de htmLawed est assez drastique et que Tidy rend le code plus propre. Sans oublier que htmLawed peut générer des balises vides que Tidy va éliminer.</p>
+J'ai essayé de passer Tidy avant htmLawed et j'ai réalisé que le nettoyage de
+htmLawed est assez drastique et que Tidy rend le code plus propre. Sans oublier
+que htmLawed peut générer des balises vides que Tidy va éliminer.
 
-<h3>Références</h3>
+### Références
 
-<ol>
-<li><a class="external-link" href="http://tidy.sourceforge.net/docs/quickref.html">Options Tidy</a></li>
-<li>htmLawed Documentation a PHP Html purification Class 
+1. [Options Tidy][tidy-options]
+2. htmLawed Documentation a PHP Html purification Class
+   1. [original documentation][htmlawed-docs]
+   2. [Example settings][htmlawed-settings]
 
-<ol>
-<li><a class="external-link" href="http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/more.htm" rel="nofollow">original documentation</a></li>
-<li><a class="external-link" href="http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/example_settings.htm" rel="nofollow">Example settings</a></li>
-</ol></li>
-</ol>
+[unoconv]: http://dag.wieers.com/home-made/unoconv/#download
+[stackoverflow-openoffice]:
+  http://stackoverflow.com/questions/3405687/openoffice-org-using-uno-to-convert-docx-to-html
+[tidy-options]: http://tidy.sourceforge.net/docs/quickref.html
+[htmlawed-docs]:
+  http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/more.htm
+[htmlawed-settings]:
+  http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/example_settings.htm
+[htmlawed-home]:
+  http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/index.php
