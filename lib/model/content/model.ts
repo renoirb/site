@@ -162,6 +162,7 @@ export const queryNuxtContent = async (
       'locale',
       'path',
       'preamble',
+      'redirect',
       'slug',
       'tags',
       'title',
@@ -172,6 +173,9 @@ export const queryNuxtContent = async (
   }
 
   contents = await ds.fetch()
+  contents = contents.filter((a) =>
+    findExcludingRedirectPredicate(a as INuxtContentResult),
+  )
 
   return contents
 }
