@@ -1,8 +1,8 @@
 ---
 title: Le futur du PC
 locale: fr-CA
-created: 2007-01-25
-updated: 2009-08-27
+createdAt: 2007-01-25
+updatedAt: 2009-08-27
 canonical: https://renoirboulanger.com/blog/2007/01/le-futur-du-pc/
 status: publish
 revising: true

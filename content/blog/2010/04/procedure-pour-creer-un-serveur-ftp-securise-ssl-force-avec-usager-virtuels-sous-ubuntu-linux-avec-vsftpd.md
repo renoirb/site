@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd/
 status: publish
 revising: true
-created: '2010-04-30'
-updated: '2013-03-29'
+createdAt: '2010-04-30'
+updatedAt: '2013-03-29'
 tags:
   - linux
   - logiciel-libre

@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/06/mon-souhait-pour-bien-ecrire-sur-le-web-lettre-ouverte-a-druide/
 status: publish
 revising: true
-created: '2012-06-28'
-updated: '2013-03-31'
+createdAt: '2012-06-28'
+updatedAt: '2013-03-31'
 tags:
   - outils
   - web

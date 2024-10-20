@@ -8,8 +8,8 @@ canonical: >-
 status: publish
 revising: true
 migrateCode: true
-created: '2007-09-25'
-updated: '2013-03-27'
+createdAt: '2007-09-25'
+updatedAt: '2013-03-27'
 tags:
   - linux
   - outils

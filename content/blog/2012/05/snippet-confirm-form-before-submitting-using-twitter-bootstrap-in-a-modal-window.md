@@ -12,8 +12,8 @@ gallery: false
 migrateCode: true
 migrateImages: false
 migrateLinks: true
-created: '2012-05-28'
-updated: '2023-11-16'
+createdAt: '2012-05-28'
+updatedAt: '2023-11-16'
 tags:
   - favourites
   - patterns

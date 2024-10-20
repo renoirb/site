@@ -1,8 +1,8 @@
 ---
 title: Une boîte qui traîne
 locale: fr-CA
-created: 2007-06-26
-updated: 2013-03-27
+createdAt: 2007-06-26
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/06/une-boite-qui-traine/
 status: publish
 revising: true

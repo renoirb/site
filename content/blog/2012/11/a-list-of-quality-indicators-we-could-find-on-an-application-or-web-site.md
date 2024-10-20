@@ -7,8 +7,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2012-11-11'
-updated: '2013-04-01'
+createdAt: '2012-11-11'
+updatedAt: '2013-04-01'
 tags:
   - architecture
   - software

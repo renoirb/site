@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/a-vendre-mon-ipod-touch-16go-avec-son-kit-pour-me-procurer-un-iphone/
 status: publish
 revising: true
-created: 2009-08-26
-updated: 2015-05-01
+createdAt: 2009-08-26
+updatedAt: 2015-05-01
 tags: []
 categories: []
 excerpt: ''

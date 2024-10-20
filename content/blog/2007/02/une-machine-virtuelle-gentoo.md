@@ -1,8 +1,8 @@
 ---
 title: Une machine virtuelle Gentoo
 locale: fr-CA
-created: 2007-02-10
-updated: 2013-03-27
+createdAt: 2007-02-10
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo/
 status: publish
 revising: true

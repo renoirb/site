@@ -11,8 +11,8 @@ gallery: false
 migrateCode: true
 migrateImages: false
 migrateLinks: false
-created: '2013-04-01'
-updated: '2013-04-02'
+createdAt: '2013-04-01'
+updatedAt: '2013-04-02'
 categories:
   - snippet
 tags:

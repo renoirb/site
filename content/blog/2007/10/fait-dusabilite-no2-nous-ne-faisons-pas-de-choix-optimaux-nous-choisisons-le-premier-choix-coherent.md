@@ -8,8 +8,8 @@ canonical: >-
 status: publish
 revising: true
 images: true
-created: '2007-10-12'
-updated: '2013-03-27'
+createdAt: '2007-10-12'
+updatedAt: '2013-03-27'
 tags:
   - integration
   - usability

@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/02/crash-course-sur-les-environnements-java/
 status: publish
 revising: true
-created: '2010-02-25'
-updated: '2013-03-27'
+createdAt: '2010-02-25'
+updatedAt: '2013-03-27'
 tags:
   - tutoriels
   - vulgarisation

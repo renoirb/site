@@ -1,8 +1,8 @@
 ---
 title: Effacer complètement un disque dur de façon sécuritaire
 locale: fr-CA
-created: 2008-04-16
-updated: 2013-03-27
+createdAt: 2008-04-16
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur/
 status: publish
 revising: true

@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing/
 status: publish
 revising: true
-created: '2012-08-10'
-updated: '2013-04-10'
+createdAt: '2012-08-10'
+updatedAt: '2013-04-10'
 tags: []
 categories: []
 excerpt: >-

@@ -1,8 +1,8 @@
 ---
 title: Les arnaques sur Internet
 locale: fr-CA
-created: 2011-08-04
-updated: 2023-02-22
+createdAt: 2011-08-04
+updatedAt: 2023-02-22
 canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/'
 status: publish
 revising: true

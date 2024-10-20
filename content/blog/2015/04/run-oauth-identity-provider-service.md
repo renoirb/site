@@ -1,8 +1,8 @@
 ---
 title: How to run your own OAuth Identity provider service
 locale: en-CA
-created: 2015-04-13
-updated: 2023-02-18
+createdAt: 2015-04-13
+updatedAt: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/run-oauth-identity-provider-service/
 status: publish
 revising: false

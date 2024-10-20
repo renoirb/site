@@ -10,8 +10,8 @@ revising: true
 migrateCode: true
 migrateImages: true
 migrateLinks: true
-created: '2012-04-07'
-updated: '2023-11-16'
+createdAt: '2012-04-07'
+updatedAt: '2023-11-16'
 tags: []
 categories: []
 excerpt: ''

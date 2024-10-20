@@ -1,8 +1,8 @@
 ---
 title: Make Discourse “long polling” work behind Fastly or Varnish
 locale: en-CA
-created: 2015-05-03
-updated: 2023-02-18
+createdAt: 2015-05-03
+updatedAt: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/
 status: publish

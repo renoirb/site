@@ -7,8 +7,8 @@ status: publish
 revising: true
 caption: true
 migrateImages: true
-created: '2010-07-07'
-updated: '2023-11-16'
+createdAt: '2010-07-07'
+updatedAt: '2023-11-16'
 tags: []
 categories: []
 excerpt: ''

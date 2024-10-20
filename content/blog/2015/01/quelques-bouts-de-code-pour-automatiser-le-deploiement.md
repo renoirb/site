@@ -1,8 +1,8 @@
 ---
 title: Quelques bouts de code pour automatiser le déploiement
 locale: fr-CA
-created: 2015-01-28
-updated: 2015-02-17
+createdAt: 2015-01-28
+updatedAt: 2015-02-17
 canonical: 'https://renoirboulanger.com/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement/'
 status: publish
 revising: false

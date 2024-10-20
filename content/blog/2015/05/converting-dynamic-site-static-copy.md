@@ -1,8 +1,8 @@
 ---
 title: Converting a dynamic site into static HTML documents
 locale: en-CA
-created: 2015-05-20
-updated: 2023-02-18
+createdAt: 2015-05-20
+updatedAt: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/05/converting-dynamic-site-static-copy/
 status: publish
 revising: true

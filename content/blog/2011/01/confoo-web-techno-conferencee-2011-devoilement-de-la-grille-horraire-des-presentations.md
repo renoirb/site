@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2011/01/confoo-web-techno-conferencee-2011-devoilement-de-la-grille-horraire-des-presentations/
 status: publish
 revising: true
-created: '2011-01-25'
-updated: '2013-03-27'
+createdAt: '2011-01-25'
+updatedAt: '2013-03-27'
 tags: []
 categories:
 - events

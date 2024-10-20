@@ -1,8 +1,8 @@
 ---
 locale: fr-CA
 title: Réalisation de l’intégration du site de Jean Émond [2008]
-created: 2010-09-16
-updated: 2013-03-27
+createdAt: 2010-09-16
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/09/realisation-de-lintegration-du-site-de-jean-emond-2008/
 status: publish

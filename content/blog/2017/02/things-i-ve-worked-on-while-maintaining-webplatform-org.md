@@ -1,8 +1,8 @@
 ---
 title: Things I’ve worked on in the last two years while maintaining WebPlatform.org
 locale: en-CA
-created: 2017-02-09
-updated: 2023-11-20
+createdAt: 2017-02-09
+updatedAt: 2023-11-20
 canonical: >-
   https://renoirboulanger.com/blog/2017/02/things-i-ve-worked-on-while-maintaining-webplatform-org/
 status: publish

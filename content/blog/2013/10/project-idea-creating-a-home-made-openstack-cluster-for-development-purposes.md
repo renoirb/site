@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes/
 status: publish
 revising: true
-created: '2013-10-24'
-updated: '2014-02-04'
+createdAt: '2013-10-24'
+updatedAt: '2014-02-04'
 tags:
   - cloud-computing
   - development

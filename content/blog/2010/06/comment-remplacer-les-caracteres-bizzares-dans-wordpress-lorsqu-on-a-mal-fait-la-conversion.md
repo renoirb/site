@@ -9,8 +9,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2010-06-10'
-updated: '2013-03-29'
+createdAt: '2010-06-10'
+updatedAt: '2013-03-29'
 tags:
   - linux
   - mysql

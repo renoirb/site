@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/06/trying-to-find-templating-engine-library-of-markup-generating-schema-orgrdfa-content/
 status: publish
 revising: true
-created: '2012-06-29'
-updated: '2013-04-10'
+createdAt: '2012-06-29'
+updatedAt: '2013-04-10'
 tags:
   - symfony2
   - wish-list

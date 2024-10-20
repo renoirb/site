@@ -1,8 +1,8 @@
 ---
 title: 'Microsoft Internet Explorer 6, une mise-à-jour obligatoire, SVP.'
 locale: fr-CA
-created: 2007-06-12
-updated: 2013-03-27
+createdAt: 2007-06-12
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/06/internet-explorer-6-un-upgrade-obligatoire-svp/
 status: publish
 revising: true

@@ -1,8 +1,8 @@
 ---
 title: Réalisation (jamais publiée) du site de Savon des Cantons [2005]
 locale: fr-CA
-created: 2009-12-12
-updated: 2013-03-27
+createdAt: 2009-12-12
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2009/12/realisation-jamais-publiee-du-site-de-savon-des-cantons-2005/
 status: publish

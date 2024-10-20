@@ -13,8 +13,8 @@ gallery: false
 migrateCode: true
 migrateImages: false
 migrateLinks: false
-created: '2013-04-12'
-updated: '2013-05-24'
+createdAt: '2013-04-12'
+updatedAt: '2013-05-24'
 categories:
   - programmation
 tags:

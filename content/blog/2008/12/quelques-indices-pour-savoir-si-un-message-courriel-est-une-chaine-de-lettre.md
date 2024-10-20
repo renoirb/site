@@ -1,8 +1,8 @@
 ---
 title: Quelques indices pour savoir si un message courriel est une chaîne de lettre
 locale: fr-CA
-created: 2008-12-04
-updated: 2013-06-07
+createdAt: 2008-12-04
+updatedAt: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre/
 status: publish

@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 accentsBizzares: true
-created: '2009-09-14'
-updated: '2013-03-27'
+createdAt: '2009-09-14'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

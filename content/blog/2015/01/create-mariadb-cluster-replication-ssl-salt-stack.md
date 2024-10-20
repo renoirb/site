@@ -1,8 +1,8 @@
 ---
 title: Create a MariaDB cluster with replication over SSL with Salt Stack
 locale: en-CA
-created: 2015-01-28
-updated: 2015-02-03
+createdAt: 2015-01-28
+updatedAt: 2015-02-03
 canonical: 'https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack/'
 status: publish
 revising: false

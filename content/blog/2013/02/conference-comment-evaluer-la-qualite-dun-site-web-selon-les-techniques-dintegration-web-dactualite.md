@@ -3,8 +3,8 @@ title:
   'Conférence: Comment évaluer le niveau de qualité d’un site web selon les
   techniques d’intégration web d’actualité'
 locale: fr-CA
-created: 2013-02-21
-updated: 2023-11-16
+createdAt: 2013-02-21
+updatedAt: 2023-11-16
 canonical: 'https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/'
 status: publish
 revising: true

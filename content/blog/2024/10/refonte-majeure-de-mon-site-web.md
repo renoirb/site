@@ -2,8 +2,8 @@
 title: >-
   J’ai refait et migré tout mon site web
 locale: fr-CA
-created: 2024-10-26
-updated: 2024-10-26
+createdAt: 2024-10-26
+updatedAt: 2024-10-26
 status: draft
 categories:
   - projects

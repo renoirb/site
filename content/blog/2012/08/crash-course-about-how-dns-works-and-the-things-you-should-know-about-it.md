@@ -7,8 +7,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2012-08-01'
-updated: '2013-03-27'
+createdAt: '2012-08-01'
+updatedAt: '2013-03-27'
 tags:
   - tutoriels
   - vulgarisation
