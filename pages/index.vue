@@ -14,7 +14,7 @@
               path: content.path,
               meta: {
                 locale: content.locale ? content.locale : 'en-CA',
-                date: content.date,
+                date: content.createdAt,
               },
             }"
             class="font-serif italic no-underline"
@@ -67,7 +67,7 @@
       const db = $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
         .limit(4)
-        .sortBy('created', 'desc')
+        .sortBy('createdAt', 'desc')
       contents = await db.fetch()
 
       for (const content of contents) {

@@ -20,7 +20,7 @@
               path: content.path,
               meta: {
                 locale: content.locale ? content.locale : 'en-CA',
-                date: content.date,
+                date: content.createdAt,
               },
             }"
             class="font-serif text-xl italic no-underline"

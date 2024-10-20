@@ -44,7 +44,7 @@
       try {
         contents = await $content(contentFirstDirName)
           .sortBy('title', 'desc')
-          .only(['created', 'updated', 'locale', 'path', 'slug', 'title'])
+          .only(['createdAt', 'updatedAt', 'locale', 'path', 'slug', 'title'])
           .fetch()
       } catch (_) {
         // ..
