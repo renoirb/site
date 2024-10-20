@@ -5,8 +5,8 @@ canonical: https://renoirboulanger.com/blog/2009/12/le-souper-du-mage/
 status: publish
 revising: true
 images: true
-created: '2009-12-19'
-updated: '2013-03-27'
+createdAt: '2009-12-19'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

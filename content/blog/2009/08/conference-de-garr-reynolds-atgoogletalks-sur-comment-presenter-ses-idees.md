@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/conference-de-garr-reynolds-atgoogletalks-sur-comment-presenter-ses-idees/
 status: publish
 revising: true
-created: '2009-08-18'
-updated: '2013-03-29'
+createdAt: '2009-08-18'
+updatedAt: '2013-03-29'
 tags:
   - inspiration
   - talk

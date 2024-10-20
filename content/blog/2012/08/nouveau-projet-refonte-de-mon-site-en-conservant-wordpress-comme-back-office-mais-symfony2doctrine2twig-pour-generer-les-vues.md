@@ -3,8 +3,8 @@ title: >-
   Nouveau projet: Refonte de mon site en conservant WordPress comme back-office,
   mais Symfony2 / Doctrine2 / Twig pour générer les vues
 locale: fr-CA
-created: 2012-08-10
-updated: 2013-03-27
+createdAt: 2012-08-10
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues/
 status: publish

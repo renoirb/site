@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/08/crash-course-about-how-dns-works-and-the-things-you-should-know-about-it/
 status: publish
 revising: true
-created: '2012-08-01'
-updated: '2013-03-27'
+createdAt: '2012-08-01'
+updatedAt: '2013-03-27'
 tags:
   - tutoriels
   - vulgarisation

@@ -9,8 +9,8 @@ migrateLinks: true
 migrateImages: true
 gallery: false
 caption: false
-created: '2014-01-22'
-updated: '2015-03-09'
+createdAt: '2014-01-22'
+updatedAt: '2015-03-09'
 tags:
   - cloud-computing
   - favourites

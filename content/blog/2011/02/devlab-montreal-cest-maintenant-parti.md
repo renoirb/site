@@ -1,8 +1,8 @@
 ---
 title: devLAB Montréal c'est maintenant parti!
 locale: fr-CA
-created: 2011-02-08
-updated: 2023-11-16
+createdAt: 2011-02-08
+updatedAt: 2023-11-16
 canonical: https://renoirboulanger.com/blog/2011/02/devlab-montreal-cest-maintenant-parti/
 status: publish
 revising: true

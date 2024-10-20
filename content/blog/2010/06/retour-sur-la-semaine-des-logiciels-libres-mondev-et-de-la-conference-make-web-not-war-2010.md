@@ -3,8 +3,8 @@ title: >-
   Retour sur la semaine des logiciels Libres MonDev et de la conférence Make Web
   Not War 2010
 locale: fr-CA
-created: 2010-06-22
-updated: 2013-03-27
+createdAt: 2010-06-22
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/06/retour-sur-la-semaine-des-logiciels-libres-mondev-et-de-la-conference-make-web-not-war-2010/
 status: publish

@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/04/feuille-de-style-pour-imprimante-pour-les-pages-de-documentation-de-doctrine2-et-symfony2/
 status: publish
 revising: true
-created: '2012-04-07'
-updated: '2023-11-16'
+createdAt: '2012-04-07'
+updatedAt: '2023-11-16'
 tags: []
 categories: []
 excerpt: ''

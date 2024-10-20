@@ -1,8 +1,8 @@
 ---
 title: Réalisation site Manoir Saint-Francis faits avec GéraniumCMS [2007]
 locale: fr-CA
-created: 2010-09-12
-updated: 2023-11-16
+createdAt: 2010-09-12
+updatedAt: 2023-11-16
 canonical: >-
   https://renoirboulanger.com/blog/2010/09/realisation-site-manoir-saint-francis-faits-avec-geraniumcms-2007/
 status: publish

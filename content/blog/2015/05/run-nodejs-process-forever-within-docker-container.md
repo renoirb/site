@@ -1,8 +1,8 @@
 ---
 title: Run a NodeJS process through forever from within a Docker container
 locale: en-CA
-created: 2015-05-12
-updated: 2023-02-18
+createdAt: 2015-05-12
+updatedAt: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container/
 status: publish

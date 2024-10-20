@@ -5,8 +5,8 @@ canonical: https://renoirboulanger.com/blog/2009/08/a-la-recherche-dun-nouveau-d
 status: publish
 revising: true
 caracteresBizzares: true
-created: '2009-08-05'
-updated: '2013-03-27'
+createdAt: '2009-08-05'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

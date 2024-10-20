@@ -1,8 +1,8 @@
 ---
 title: Pensées concernant mon orientation professionnelle
 locale: fr-CA
-created: 2009-10-19
-updated: 2013-03-27
+createdAt: 2009-10-19
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2009/10/pensees-ecrites-a-voix-haute-pour-mon-orientation-professionnelle/
 status: publish

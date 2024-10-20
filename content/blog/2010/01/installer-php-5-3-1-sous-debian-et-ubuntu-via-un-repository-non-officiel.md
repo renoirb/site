@@ -1,8 +1,8 @@
 ---
 title: Installer PHP 5.3.1 sous Debian et/ou Ubuntu via un repository non officiel
 locale: fr-CA
-created: 2010-01-09
-updated: 2013-03-27
+createdAt: 2010-01-09
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/01/installer-php-5-3-1-sous-debian-et-ubuntu-via-un-repository-non-officiel/
 status: publish

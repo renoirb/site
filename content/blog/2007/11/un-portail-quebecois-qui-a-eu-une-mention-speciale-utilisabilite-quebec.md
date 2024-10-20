@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/11/un-portail-quebecois-qui-a-eu-une-mention-speciale-utilisabilite-quebec/
 status: publish
 revising: true
-created: '2007-11-07'
-updated: '2013-03-27'
+createdAt: '2007-11-07'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

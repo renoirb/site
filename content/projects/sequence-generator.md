@@ -1,8 +1,8 @@
 ---
 title: Générateur de séquence
 locale: fr-CA
-created: 2013-02-19
-updated: 2013-02-19
+createdAt: 2013-02-19
+updatedAt: 2013-02-19
 status: publish
 revising: true
 pageKey: page-projets-initiale-pour-faire-une-migration

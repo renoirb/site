@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/09/copier-un-fichier-dun-serveur-a-lautre-en-le-compressant-pour-la-route/
 status: publish
 revising: true
-created: '2007-09-25'
-updated: '2013-03-27'
+createdAt: '2007-09-25'
+updatedAt: '2013-03-27'
 tags:
   - linux
   - outils

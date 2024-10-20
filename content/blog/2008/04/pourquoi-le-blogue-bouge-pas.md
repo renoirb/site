@@ -1,8 +1,8 @@
 ---
 title: Pourquoi le blogue bouge pas?
 locale: fr-CA
-created: 2008-04-11
-updated: 2013-03-27
+createdAt: 2008-04-11
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2008/04/pourquoi-le-blogue-bouge-pas/
 status: publish
 revising: true

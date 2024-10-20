@@ -3,8 +3,8 @@ title:
   Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS and make your own .deb package
   for deployment
 locale: en-CA
-created: 2015-04-05
-updated: 2023-02-18
+createdAt: 2015-04-05
+updatedAt: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package/
 status: publish
 revising: true

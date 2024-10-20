@@ -1,8 +1,8 @@
 ---
 title: Une erreur de manipulation qui a coûté
 locale: fr-CA
-created: 2006-06-10
-updated: 2023-11-15
+createdAt: 2006-06-10
+updatedAt: 2023-11-15
 canonical: >-
   https://renoirboulanger.com/blog/2006/06/une-erreur-de-manipulation-qui-a-coute/
 status: publish

@@ -1,8 +1,8 @@
 ---
 title: Journée blanche d’inquiétudes
 locale: fr-CA
-created: 2005-09-23
-updated: 2023-11-15
+createdAt: 2005-09-23
+updatedAt: 2023-11-15
 canonical: https://renoirboulanger.com/blog/2005/09/journee-blanche-d-inquietudes/
 status: publish
 revising: true

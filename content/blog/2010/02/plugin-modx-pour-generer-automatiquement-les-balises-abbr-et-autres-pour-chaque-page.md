@@ -8,8 +8,8 @@ canonical: >-
 status: publish
 revising: true
 images: true
-created: '2010-02-12'
-updated: '2013-03-27'
+createdAt: '2010-02-12'
+updatedAt: '2013-03-27'
 tags:
   - accessibility
   - html

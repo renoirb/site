@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/05/procedure-environnement-developement-local-facile-a-entretenir-avec-apache/
 status: publish
 revising: true
-created: '2013-05-23'
-updated: '2013-05-24'
+createdAt: '2013-05-23'
+updatedAt: '2013-05-24'
 tags:
   - best-practices
   - favourites

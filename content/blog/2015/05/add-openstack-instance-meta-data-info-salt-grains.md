@@ -1,8 +1,8 @@
 ---
 title: Add OpenStack instance meta-data info in your salt grains
 locale: en-CA
-created: 2015-05-22
-updated: 2023-11-17
+createdAt: 2015-05-22
+updatedAt: 2023-11-17
 canonical: 'https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains/'
 status: publish
 revising: false

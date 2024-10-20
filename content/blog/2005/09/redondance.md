@@ -2,8 +2,8 @@
 title: >-
   Redondance des serveurs : stratégie pour améliorer la résilience des sites web
 locale: fr-CA
-created: 2005-09-21
-updated: 2023-11-15
+createdAt: 2005-09-21
+updatedAt: 2023-11-15
 canonical: https://renoirboulanger.com/blog/2005/09/redondance/
 status: publish
 revising: true

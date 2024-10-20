@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/04/astuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax/
 status: publish
 revising: true
-created: '2013-04-12'
-updated: '2013-05-24'
+createdAt: '2013-04-12'
+updatedAt: '2013-05-24'
 categories:
   - programmation
 tags:

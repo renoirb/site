@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/03/creating-and-using-javascript-events-while-combining-events-on-two-separates-behaviors/
 status: publish
 revising: true
-created: '2013-03-29'
-updated: '2013-04-01'
+createdAt: '2013-03-29'
+updatedAt: '2013-04-01'
 categories:
   - programmation
 tags:

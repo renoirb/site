@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2011/03/comment-installer-ruby-on-rails-sur-ubuntu-10-10/
 status: publish
 revising: true
-created: '2011-03-25'
-updated: '2013-03-27'
+createdAt: '2011-03-25'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: >-

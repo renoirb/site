@@ -1,8 +1,8 @@
 ---
 title: Setting up Discourse with Fastly as a CDN provider and TLS
 locale: en-CA
-created: 2015-04-29
-updated: 2023-02-18
+createdAt: 2015-04-29
+updatedAt: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl/
 status: publish
 revising: true

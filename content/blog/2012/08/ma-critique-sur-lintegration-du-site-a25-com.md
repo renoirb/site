@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/08/ma-critique-sur-lintegration-du-site-a25-com/
 status: publish
 revising: true
-created: '2012-08-28'
-updated: '2023-11-18'
+createdAt: '2012-08-28'
+updatedAt: '2023-11-18'
 tags: []
 categories: []
 excerpt: >-

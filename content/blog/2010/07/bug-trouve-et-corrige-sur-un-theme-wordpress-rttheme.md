@@ -1,8 +1,8 @@
 ---
 title: Bug trouvé et corrigé sur un thème WordPress rtTheme
 locale: fr-CA
-created: 2010-07-01
-updated: 2013-03-27
+createdAt: 2010-07-01
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme/
 status: publish

@@ -4,8 +4,8 @@ title: Invitalisation
 canonical: https://renoirboulanger.com/blog/2007/05/invitalisation/
 status: publish
 revising: true
-created: '2007-05-19'
-updated: '2013-03-27'
+createdAt: '2007-05-19'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

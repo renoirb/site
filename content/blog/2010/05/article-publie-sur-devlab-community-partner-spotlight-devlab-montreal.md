@@ -3,8 +3,8 @@ title:
   'devLAB Montreal is in the Community Partner Spotlight at Microsoft’s Make Web
   Not War 2010'
 locale: en-CA
-created: 2010-05-19
-updated: 2013-03-27
+createdAt: 2010-05-19
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/05/article-publie-sur-devlab-community-partner-spotlight-devlab-montreal/
 status: publish

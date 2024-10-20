@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests/
 status: publish
 revising: true
-created: '2012-06-18'
-updated: '2013-03-31'
+createdAt: '2012-06-18'
+updatedAt: '2013-03-31'
 tags:
   - php
   - symfony2

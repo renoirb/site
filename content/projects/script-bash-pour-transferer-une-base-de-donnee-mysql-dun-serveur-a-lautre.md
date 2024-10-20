@@ -2,8 +2,8 @@
 title:
   Script bash pour transférer une base de donnée MySQL d’un serveur à l’autre
 locale: fr-CA
-created: 2010-02-19
-updated: 2010-02-19
+createdAt: 2010-02-19
+updatedAt: 2010-02-19
 status: publish
 revising: true
 pageKey: page-projets-initiale-pour-faire-une-migration

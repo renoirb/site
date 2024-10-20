@@ -1,8 +1,8 @@
 ---
 title: Le Défi «Project52» un billet par semaine (minimum)
 locale: fr-CA
-created: 2010-01-06
-updated: 2013-03-27
+createdAt: 2010-01-06
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/01/le-defi-%c2%abproject52%c2%bb-un-billet-par-semaine-minimum/
 status: publish

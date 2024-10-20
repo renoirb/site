@@ -4,8 +4,8 @@ title: ConFoo c'est dans moins de 14 jours!
 canonical: https://renoirboulanger.com/blog/2011/02/confoo-cest-dans-moins-de-14-jours/
 status: publish
 revising: true
-created: '2011-02-24'
-updated: '2023-11-16'
+createdAt: '2011-02-24'
+updatedAt: '2023-11-16'
 categories:
   - events
 tags: []

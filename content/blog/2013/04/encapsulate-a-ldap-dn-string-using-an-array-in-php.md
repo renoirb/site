@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/04/encapsulate-a-ldap-dn-string-using-an-array-in-php/
 status: publish
 revising: true
-created: '2013-04-01'
-updated: '2013-04-02'
+createdAt: '2013-04-01'
+updatedAt: '2013-04-02'
 categories:
   - snippet
 tags:

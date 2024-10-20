@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies/
 status: publish
 revising: true
-created: '2012-07-04'
-updated: '2013-03-27'
+createdAt: '2012-07-04'
+updatedAt: '2013-03-27'
 tags:
   - best-practices
   - php

@@ -8,8 +8,8 @@ revising: true
 caption: true
 migrateLinks: true
 migrateImages: true
-created: '2010-04-15'
-updated: '2013-03-27'
+createdAt: '2010-04-15'
+updatedAt: '2013-03-27'
 tags:
   - events
   - logiciel-libre

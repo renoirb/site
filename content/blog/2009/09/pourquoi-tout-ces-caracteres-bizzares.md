@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/09/pourquoi-tout-ces-caracteres-bizzares/
 status: publish
 revising: true
-created: '2009-09-19'
-updated: '2013-03-27'
+createdAt: '2009-09-19'
+updatedAt: '2013-03-27'
 tags:
   - html
   - vulgarisation

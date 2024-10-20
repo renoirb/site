@@ -7,8 +7,8 @@ status: publish
 revising: true
 images: true
 migrateLinks: true
-created: '2014-07-10'
-updated: '2014-07-10'
+createdAt: '2014-07-10'
+updatedAt: '2014-07-10'
 tags: []
 categories:
   - technologies

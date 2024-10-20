@@ -8,8 +8,8 @@ revising: true
 caption: true
 migrateLinks: true
 migrateImages: true
-created: '2010-04-14'
-updated: '2013-03-27'
+createdAt: '2010-04-14'
+updatedAt: '2013-03-27'
 tags:
   - logiciel-libre
   - tutoriels

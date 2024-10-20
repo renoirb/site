@@ -1,8 +1,8 @@
 ---
 title: Thoughts about improving load resiliency for CMS driven Websites
 locale: en-CA
-created: 2015-08-12
-updated: 2023-02-18
+createdAt: 2015-08-12
+updatedAt: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites/
 status: publish

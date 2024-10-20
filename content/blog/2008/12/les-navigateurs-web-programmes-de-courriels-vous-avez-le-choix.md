@@ -1,8 +1,8 @@
 ---
 title: Les navigateurs web, programmes de courriels, vous avez le choix!
 locale: fr-CA
-created: 2008-12-05
-updated: 2013-06-06
+createdAt: 2008-12-05
+updatedAt: 2013-06-06
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix/
 status: publish

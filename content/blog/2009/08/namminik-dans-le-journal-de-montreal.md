@@ -4,8 +4,8 @@ title: Namminik dans le Journal de Montréal
 canonical: https://renoirboulanger.com/blog/2009/08/namminik-dans-le-journal-de-montreal/
 status: publish
 revising: true
-created: '2009-08-14'
-updated: '2013-03-27'
+createdAt: '2009-08-14'
+updatedAt: '2013-03-27'
 tags:
   - outils
 categories:

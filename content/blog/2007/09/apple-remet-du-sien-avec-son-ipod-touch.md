@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 images: true
-created: '2007-09-06'
-updated: '2013-03-27'
+createdAt: '2007-09-06'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 coverImage:
