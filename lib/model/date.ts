@@ -71,7 +71,7 @@ export const formatTemporal = (
 }
 
 export const getPrettyfiedTemporalDate = (
-  content: Record<'created' | 'updated', string>,
+  content: Record<'createdAt' | 'updatedAt', string>,
   locale = 'fr-CA',
   format?: Intl.DateTimeFormatOptions,
 ): IPrettyfiedTemporalDate => {
@@ -83,7 +83,7 @@ export const getPrettyfiedTemporalDate = (
    *
    * @TODO #23 It MUST be a string that has no Z in its notation.
    */
-  let field = content?.date ?? content?.created ?? content?.updated ?? 0
+  let field = content?.date ?? content?.createdAt ?? content?.updatedAt ?? 0
 
   if (/\d\d\d\d-\d\d-\d\dT/.test(field)) {
     field = field.split('T')[0]

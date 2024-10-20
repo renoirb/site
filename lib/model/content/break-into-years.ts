@@ -16,17 +16,17 @@ export const extractYearFromDateString = (dateString: string | ''): number => {
 }
 
 export const extractYearFromRecord = (
-  content: Record<'created' | 'updated', string>,
+  content: Record<'createdAt' | 'updatedAt', string>,
 ): number => {
   let out: number = 0
 
-  const { created = '', updated } = content
+  const { createdAt = '', updatedAt } = content
 
-  if (created !== '') {
-    out = extractYearFromDateString(created)
+  if (createdAt !== '') {
+    out = extractYearFromDateString(createdAt)
   }
-  if (out === 0 && updated) {
-    out = extractYearFromDateString(updated)
+  if (out === 0 && updatedAt) {
+    out = extractYearFromDateString(updatedAt)
   }
 
   return out
@@ -58,5 +58,5 @@ export const breakIntoYears = (
   // Make sure it's sorted by year, chronologically
   return out.filter(([y]) => y !== 0).sort((a, b) => b[0] - a[0])
   //                         ^^^^^^^
-  //                         | We set all with no created date into a bucket aside and don't display them.
+  //                         | We set all with no createdAt date into a bucket aside and don't display them.
 }

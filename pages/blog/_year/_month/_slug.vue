@@ -1,11 +1,11 @@
 <template>
   <div class="pages__blog__year__month__slug--item">
-    <div :key="content.slug + '--' + content.created">
+    <div :key="content.slug + '--' + content.createdAt">
       <keep-alive>
         <app-very-old-article
           :preamble="preamble"
           :locale="content.locale || 'en-CA'"
-          :date="content.created"
+          :date="content.createdAt"
           class="my-4"
           alert-type="warn"
           role="alert"
@@ -193,7 +193,7 @@
            * Ideally, should:
            * - Be `status: publish`
            * - Not have a `redirect: #####`
-           * - At the neighbooring published date
+           * - At the neighbooring published (createdAt) date
            *
            * [1]: ~/blog/2015/11/recover-discourse-backup-change-domain-name
            * [2]: ~/blog/2024/03/managing-email-aliases-with-protonmail-and-simplelogin-to-sort-automatically-into-inbox-folders-based-local-part
@@ -201,8 +201,8 @@
            */
         })
         .only(['title', 'path', 'locale'])
-        .sortBy('created', 'asc')
         .surround(slug)
+        .sortBy('createdAt', 'asc')
 
       const items = await dal.fetch()
       const [prev, next] = items

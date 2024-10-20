@@ -106,8 +106,8 @@
     } else if (aProp1 < bProp1) {
       return 1
     }
-    const aProp2 = a.created.split('T')[0]
-    const bProp2 = b.created.split('T')[0]
+    const aProp2 = a.createdAt.split('T')[0]
+    const bProp2 = b.createdAt.split('T')[0]
     if (aProp2 > bProp2) {
       return -1
     } else if (aProp2 < bProp2) {
@@ -133,7 +133,7 @@
           'toc',
           'waybackMachineSnapshots',
         ])
-        .sortBy('created', 'asc')
+        .sortBy('createdAt', 'asc')
       const fetched = (await ds.fetch()) as NuxtContentResult[]
       const contents: NuxtContentResult[] = fetched
         .filter((a) => findExcludingRedirectPredicate(a))
