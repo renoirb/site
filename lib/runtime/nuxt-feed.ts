@@ -11,13 +11,11 @@ const EXAMPLE_NUXT_CONTENT_RESULT: Partial<INuxtContentResult>[] = [
     title:
       'Things I’ve worked on in the last two years while maintaining WebPlatform.org',
     locale: 'en-CA',
-    created: '2017-02-09T00:00:00.000Z',
-    updated: '2023-11-20T00:00:00.000Z',
+    createdAt: '2017-02-09T00:00:00.000Z',
+    updatedAt: '2023-11-20T00:00:00.000Z',
     dir: '/blog/2017/02',
     path: '/blog/2017/02/things-i-ve-worked-on-while-maintaining-webplatform-org',
     slug: 'things-i-ve-worked-on-while-maintaining-webplatform-org',
-    createdAt: '2024-10-01T17:48:55.423Z',
-    updatedAt: '2024-10-01T17:48:55.424Z',
   },
 ]
 
@@ -36,14 +34,16 @@ const baseUrlNoTrailingSlash = (u: string): string => {
 
 let failedDatesOnce = false
 
-const dateStringToDateObject = (created, tz) => {
+const dateStringToDateObject = (createdAt, tz) => {
   // #TODO Make sure we return with proper time offset for Montreal, not UTC
-  const createdNormalized =
-    !!created && !created.includes('T') ? created + 'T00:00:00.000Z' : created
+  const createdAtNormalized =
+    !!createdAt && !createdAt.includes('T')
+      ? createdAt + 'T00:00:00.000Z'
+      : createdAt
   let published: Date | undefined
   let instant
   try {
-    instant = Temporal.Instant.from(createdNormalized)
+    instant = Temporal.Instant.from(createdAtNormalized)
     instant = instant.toZonedDateTimeISO(tz)
     published = new Date(instant.epochMilliseconds)
   } catch {
@@ -102,10 +102,10 @@ export const createNuxtFeedCreate =
 
     // ------ BEGIN [ /blog ] ------------------------------
     const ds1 = $content('blog', { deep: true })
-      .sortBy('created', 'desc')
+      .sortBy('createdAt', 'desc')
       .only([
         'categories',
-        'created',
+        'createdAt',
         'description',
         'dir',
         'excerpt',
@@ -115,7 +115,7 @@ export const createNuxtFeedCreate =
         'slug',
         'tags',
         'title',
-        'updated',
+        'updatedAt',
       ])
     const p1 = (await ds1.fetch()) as INuxtContentResult[]
     all.push(
@@ -127,9 +127,9 @@ export const createNuxtFeedCreate =
 
     // ------ BEGIN [ /code-review ] ------------------------------
     const ds2 = $content('code-review', { deep: true })
-      .sortBy('created', 'desc')
+      .sortBy('createdAt', 'desc')
       .only([
-        'created',
+        'createdAt',
         'description',
         'excerpt',
         'locale',
@@ -138,7 +138,7 @@ export const createNuxtFeedCreate =
         'slug',
         'tags',
         'title',
-        'updated',
+        'updatedAt',
       ])
     const p2 = (await ds2.fetch()) as INuxtContentResult[]
     all.push(...p2)
@@ -146,9 +146,9 @@ export const createNuxtFeedCreate =
 
     // ------ BEGIN [ /glossary ] ------------------------------
     const ds3 = $content('glossary', { deep: true })
-      .sortBy('created', 'desc')
+      .sortBy('createdAt', 'desc')
       .only([
-        'created',
+        'createdAt',
         'description',
         'excerpt',
         'locale',
@@ -157,7 +157,7 @@ export const createNuxtFeedCreate =
         'slug',
         'tags',
         'title',
-        'updated',
+        'updatedAt',
       ])
     const p3 = (await ds3.fetch()) as INuxtContentResult[]
     all.push(...p3)
@@ -184,17 +184,17 @@ export const createNuxtFeedCreate =
       }
       */
 
-      const published = dateStringToDateObject(article.created, timeZone)
+      const published = dateStringToDateObject(article.createdAt, timeZone)
       if (published) {
         Reflect.set(item, 'published', published)
       } else {
         failedDates.push({
           path: article.path,
-          propertyName: 'article.created',
-          value: article.created,
+          propertyName: 'article.createdAt',
+          value: article.createdAt,
         })
       }
-      const updated = dateStringToDateObject(article.updated, timeZone)
+      const updated = dateStringToDateObject(article.updatedAt, timeZone)
       if (updated) {
         // Because "date" field is for updated
         Reflect.set(item, 'date', updated)
@@ -202,7 +202,7 @@ export const createNuxtFeedCreate =
         failedDates.push({
           path: article.path,
           propertyName: 'article.updated',
-          value: article.updated,
+          value: article.updatedAt,
         })
       }
 

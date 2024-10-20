@@ -1,5 +1,5 @@
 <template>
-  <time v-if="content.date" :datetime="datetime" :title="textual">
+  <time v-if="content.createdAt" :datetime="datetime" :title="textual">
     {{ yyyymmdd }}
   </time>
 </template>
@@ -35,7 +35,7 @@
     },
     computed: {
       yyyymmdd(): string {
-        const { date } = this.content
+        const date = this.content?.createdAt
         let out = ''
         if (date) {
           const first = date.split('T')[0]
@@ -44,8 +44,8 @@
         return out
       },
       datetime(): string {
-        const { date } = this.content
-        return date
+        const createdAt = this.content?.createdAt
+        return createdAt
       },
       textual(): string {
         return this.formatDate({
@@ -60,7 +60,7 @@
         let out = ''
         try {
           const locale = this.content?.locale ?? 'fr-CA'
-          out = this.content?.date ?? ''
+          out = this.content?.createdAt ?? ''
           const { temporalDate = '' } = getPrettyfiedTemporalDate(
             this.content,
             locale,
