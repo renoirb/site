@@ -13,8 +13,8 @@ gallery: false
 migrateCode: true
 migrateImages: false
 migrateLinks: false
-created: '2013-05-23'
-updated: '2013-05-24'
+createdAt: '2013-05-23'
+updatedAt: '2013-05-24'
 tags:
   - best-practices
   - favourites

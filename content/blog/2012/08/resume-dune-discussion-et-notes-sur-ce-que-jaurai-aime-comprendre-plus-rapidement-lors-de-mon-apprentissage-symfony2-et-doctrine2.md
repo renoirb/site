@@ -9,8 +9,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2012-08-10'
-updated: '2013-03-27'
+createdAt: '2012-08-10'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: >-

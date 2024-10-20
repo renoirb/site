@@ -1,8 +1,8 @@
 ---
 title: Porting all my content into a static-site
 locale: en-CA
-created: 2020-09-10
-updated: 2024-01-25
+createdAt: 2020-09-10
+updatedAt: 2024-10-25
 status: publish
 revising: false
 categories:

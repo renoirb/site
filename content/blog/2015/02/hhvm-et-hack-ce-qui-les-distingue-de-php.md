@@ -1,8 +1,8 @@
 ---
 title: HHVM et Hack; ce qui les distingue de PHP
 locale: fr-CA
-created: 2015-02-03
-updated: 2023-11-16
+createdAt: 2015-02-03
+updatedAt: 2023-11-16
 canonical: >-
   https://renoirboulanger.com/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php/
 status: publish

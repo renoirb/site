@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/si-la-terre-etait-un-village-de-100-personnes/
 status: publish
 revising: true
-created: '2009-08-17'
-updated: '2013-03-27'
+createdAt: '2009-08-17'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: >-

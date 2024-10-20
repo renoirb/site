@@ -3,8 +3,8 @@ title:
   'Type d’escroquerie sur le web: Faire du bruit pour avoir des vues de page de
   médias sociaux'
 locale: fr-CA
-created: 2013-06-06
-updated: 2013-06-06
+createdAt: 2013-06-06
+updatedAt: 2013-06-06
 canonical: 'https://renoirboulanger.com/projets/les-arnaques-sur-internet/type-descroquerie-sur-le-web-faire-du-bruit-pour-avoir-des-vues-de-page-de-medias-sociaux/'
 status: publish
 revising: true

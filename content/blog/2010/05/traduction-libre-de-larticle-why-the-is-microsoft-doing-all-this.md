@@ -1,8 +1,8 @@
 ---
 title: Traduction libre de l’article «Why the @&*# is Microsoft doing all this?»
 locale: fr-CA
-created: 2010-05-30
-updated: 2023-11-15
+createdAt: 2010-05-30
+updatedAt: 2023-11-15
 canonical: >-
   https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this/
 status: publish

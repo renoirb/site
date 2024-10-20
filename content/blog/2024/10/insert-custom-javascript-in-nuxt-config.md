@@ -1,8 +1,8 @@
 ---
 title: Insert ESM Module as custom script tag with contents with Nuxt v2
 locale: en-CA
-created: 2024-10-25
-updated: 2024-10-25
+createdAt: 2024-10-25
+updatedAt: 2024-10-25
 status: publish
 categories:
   - snippet

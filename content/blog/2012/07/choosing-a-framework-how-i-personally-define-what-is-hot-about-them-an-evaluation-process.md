@@ -3,8 +3,8 @@ title:
   Choosing a framework, how I personally check as “hot” characteristics, my
   evaluation process
 locale: en-CA
-created: 2012-07-23
-updated: 2013-03-29
+createdAt: 2012-07-23
+updatedAt: 2013-03-29
 canonical: 'https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process/'
 status: publish
 revising: true

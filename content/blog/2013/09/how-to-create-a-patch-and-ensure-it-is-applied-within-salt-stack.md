@@ -7,8 +7,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2013-09-12'
-updated: '2014-02-04'
+createdAt: '2013-09-12'
+updatedAt: '2014-02-04'
 tags:
   - salt-stack
   - techniques

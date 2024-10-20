@@ -7,8 +7,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2012-10-27'
-updated: '2023-11-16'
+createdAt: '2012-10-27'
+updatedAt: '2023-11-16'
 tags:
   - architecture
   - web

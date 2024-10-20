@@ -1,8 +1,8 @@
 ---
 title: La première de Ignite Montréal
 locale: fr-CA
-created: 2010-03-03
-updated: 2013-03-27
+createdAt: 2010-03-03
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal
 status: publish
 revising: true

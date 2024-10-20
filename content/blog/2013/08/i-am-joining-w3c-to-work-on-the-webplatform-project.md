@@ -1,8 +1,8 @@
 ---
 title: I am joining W3C to work on the WebPlatform project!
 locale: en-CA
-created: 2013-08-01
-updated: 2013-08-01
+createdAt: 2013-08-01
+updatedAt: 2013-08-01
 canonical: >-
   https://renoirboulanger.com/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project/
 status: publish

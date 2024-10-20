@@ -1,8 +1,8 @@
 ---
 title: Montage de dossiers distants via SSHFS
 locale: fr-CA
-created: 2007-05-31
-updated: 2013-03-27
+createdAt: 2007-05-31
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs/
 status: publish

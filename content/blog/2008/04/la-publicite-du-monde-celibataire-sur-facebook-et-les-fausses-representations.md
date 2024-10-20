@@ -1,8 +1,8 @@
 ---
 title: La publicite du monde celibataire sur Facebook et les fausses representations
 locale: fr-CA
-created: 2008-04-30
-updated: 2013-06-07
+createdAt: 2008-04-30
+updatedAt: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations/
 status: publish

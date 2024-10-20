@@ -7,8 +7,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2009-09-09'
-updated: '2013-03-29'
+createdAt: '2009-09-09'
+updatedAt: '2013-03-29'
 tags:
   - linux
   - logiciel-libre

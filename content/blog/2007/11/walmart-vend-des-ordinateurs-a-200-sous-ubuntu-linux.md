@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/11/walmart-vend-des-ordinateurs-a-200-sous-ubuntu-linux/
 status: publish
 revising: true
-created: '2007-11-09'
-updated: '2013-03-27'
+createdAt: '2007-11-09'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

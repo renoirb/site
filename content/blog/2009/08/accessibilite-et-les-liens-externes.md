@@ -10,8 +10,8 @@ gallery: false
 migrateImages: true
 migrateLinks: true
 migrateCode: true
-created: '2009-08-20'
-updated: '2013-03-27'
+createdAt: '2009-08-20'
+updatedAt: '2013-03-27'
 tags:
   - accessibility
   - html

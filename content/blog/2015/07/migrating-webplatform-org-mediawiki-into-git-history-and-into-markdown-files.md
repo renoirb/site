@@ -1,8 +1,8 @@
 ---
 title: Migrating WebPlatform.org MediaWiki into Git as Markdown files
 locale: en-CA
-created: 2015-07-30
-updated: 2020-11-18
+createdAt: 2015-07-30
+updatedAt: 2020-11-18
 status: publish
 revising: true
 categories:

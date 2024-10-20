@@ -1,8 +1,8 @@
 ---
 title: Tester le fonctionnement d'un serveur SMTP
 locale: fr-CA
-created: 2008-04-19
-updated: 2014-02-19
+createdAt: 2008-04-19
+updatedAt: 2014-02-19
 canonical: >-
   https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp/
 status: publish

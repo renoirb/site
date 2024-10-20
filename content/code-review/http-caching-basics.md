@@ -1,8 +1,8 @@
 ---
 title: HTTP Caching basics
 locale: en-CA
-created: 2022-04-06
-updated: 2022-04-06
+createdAt: 2022-04-06
+updatedAt: 2022-04-06
 status: publish
 revising: false
 tags:

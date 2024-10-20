@@ -9,8 +9,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2012-07-11'
-updated: '2013-03-29'
+createdAt: '2012-07-11'
+updatedAt: '2013-03-29'
 tags:
   - php
   - symfony2

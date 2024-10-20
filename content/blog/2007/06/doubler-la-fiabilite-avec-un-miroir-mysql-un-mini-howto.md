@@ -11,8 +11,8 @@ gallery: false
 migrateCode: true
 migrateImages: false
 migrateLinks: true
-created: '2007-06-14'
-updated: '2013-03-27'
+createdAt: 2007-06-14
+updatedAt: 2013-03-27
 tags:
   - linux
   - tutoriels

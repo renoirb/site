@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 migrateCode: true
-created: '2009-08-23'
-updated: '2013-03-27'
+createdAt: '2009-08-23'
+updatedAt: '2013-03-27'
 categories:
   - programmation
 tags:

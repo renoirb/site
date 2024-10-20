@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/07/i-just-resigned-from-my-new-job-to-start-on-an-exciting-project/
 status: publish
 revising: true
-created: '2013-07-19'
-updated: '2013-08-01'
+createdAt: '2013-07-19'
+updatedAt: '2013-08-01'
 tags:
   - favourites
 categories:

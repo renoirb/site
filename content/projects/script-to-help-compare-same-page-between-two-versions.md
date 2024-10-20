@@ -2,8 +2,8 @@
 title: >-
   Compare The Same Page Between Two Versions Of The Same Site Prior Rolling Out
 locale: en-CA
-created: 2024-10-12
-updated: 2024-10-12
+createdAt: 2024-10-12
+updatedAt: 2024-10-12
 status: draft
 revising: true
 excerpt: >-

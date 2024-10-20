@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 migrateLinks: true
-created: '2009-11-12'
-updated: '2023-11-20'
+createdAt: '2009-11-12'
+updatedAt: '2023-11-20'
 tags: []
 categories: []
 excerpt: ''

@@ -3,8 +3,8 @@ title: >-
   Réalisation du Micro-site de l'Initiative Environnementale de la Ville de
   Sherbrooke [2006]
 locale: fr-CA
-created: 2010-04-26
-updated: 2013-03-27
+createdAt: 2010-04-26
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/04/realisation-du-micro-site-de-linitiative-environnementale-de-la-ville-de-sherbrooke-2006-2/
 status: publish

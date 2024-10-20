@@ -5,8 +5,8 @@ canonical: https://renoirboulanger.com/blog/2007/06/critique-de-roman-le-davinci
 status: publish
 revising: true
 caracteresBizzares: true
-created: '2007-06-13'
-updated: '2013-03-27'
+createdAt: '2007-06-13'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

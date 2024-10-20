@@ -4,8 +4,8 @@ title: Critique de Roman Deception point
 canonical: https://renoirboulanger.com/blog/2007/05/critique-de-roman-deception-point/
 status: publish
 revising: true
-created: '2007-05-28'
-updated: '2013-03-27'
+createdAt: '2007-05-28'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

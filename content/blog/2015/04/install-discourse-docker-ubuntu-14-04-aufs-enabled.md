@@ -1,8 +1,8 @@
 ---
 title: Install Discourse and Docker on Ubuntu 14.04 with aufs enabled
 locale: en-CA
-created: 2015-04-02
-updated: 2023-02-18
+createdAt: 2015-04-02
+updatedAt: 2023-02-18
 canonical: 'https://renoirboulanger.com/blog/2015/04/install-discourse-docker-ubuntu-14-04-aufs-enabled/'
 status: publish
 revising: true

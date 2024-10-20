@@ -1,8 +1,8 @@
 ---
 title: Detection de langue en PHP
 locale: fr-CA
-created: 2005-12-22
-updated: 2024-08-08
+createdAt: 2005-12-22
+updatedAt: 2024-08-08
 canonical: https://renoirboulanger.com/blog/2005/12/detection-langue/
 status: publish
 revising: false

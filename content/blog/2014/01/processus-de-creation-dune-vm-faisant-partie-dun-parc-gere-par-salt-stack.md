@@ -4,15 +4,14 @@ title: Processus de création d'une VM faisant partie d'un parc géré par Salt 
 canonical: >-
   https://renoirboulanger.com/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/
 status: publish
+createdAt: 2014-01-22
+updatedAt: 2015-03-09
 revising: true
 caption: false
 gallery: false
 migrateCode: true
 migrateImages: true
 migrateLinks: true
-created: '2014-01-22'
-updated: '2015-03-09'
-categories: []
 tags:
   - cloud-computing
   - favourites

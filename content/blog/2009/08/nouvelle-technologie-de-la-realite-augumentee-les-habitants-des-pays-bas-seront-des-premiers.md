@@ -3,8 +3,8 @@ title:
   Nouvelle technologie de la Réalité Augumentée, Les habitants des Pays Bas
   seront des premiers
 locale: fr-CA
-created: 2009-08-26
-updated: 2009-08-26
+createdAt: 2009-08-26
+updatedAt: 2009-08-26
 canonical: 'https://renoirboulanger.com/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers/'
 status: publish
 revising: true

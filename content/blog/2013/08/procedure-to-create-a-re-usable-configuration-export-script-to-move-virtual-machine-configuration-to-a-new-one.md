@@ -8,8 +8,8 @@ canonical: >-
 status: publish
 revising: true
 migrateCode: true
-created: '2013-08-07'
-updated: '2013-08-07'
+createdAt: '2013-08-07'
+updatedAt: '2013-08-07'
 tags:
   - linux
   - logiciel-libre

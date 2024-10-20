@@ -2,8 +2,8 @@
 title: Ligne éditoriale
 locale: fr-CA
 canonical: https://renoirboulanger.com/ligne-editoriale/
-created: 2009-09-19
-updated: 2013-03-30
+createdAt: 2009-09-19
+updatedAt: 2013-03-30
 status: publish
 revising: true
 pageKey: page-editorial-guideline

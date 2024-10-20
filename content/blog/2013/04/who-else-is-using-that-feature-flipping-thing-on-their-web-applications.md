@@ -11,8 +11,8 @@ gallery: true
 migrateCode: false
 migrateImages: false
 migrateLinks: true
-created: '2013-04-09'
-updated: '2013-04-09'
+createdAt: '2013-04-09'
+updatedAt: '2013-04-09'
 tags:
   - best-practices
   - development

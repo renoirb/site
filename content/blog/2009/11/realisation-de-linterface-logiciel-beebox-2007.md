@@ -8,8 +8,8 @@ revising: true
 caption: true
 migrateImages: true
 migrateLinks: true
-created: '2009-11-10'
-updated: '2013-03-27'
+createdAt: '2009-11-10'
+updatedAt: '2013-03-27'
 tags:
   - css
   - html

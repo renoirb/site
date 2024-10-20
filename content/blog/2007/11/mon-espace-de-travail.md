@@ -9,8 +9,8 @@ gallery: false
 migrateCode: true
 migrateImages: true
 migrateLinks: false
-created: '2007-11-26'
-updated: '2013-03-27'
+createdAt: '2007-11-26'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

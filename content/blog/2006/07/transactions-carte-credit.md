@@ -1,8 +1,8 @@
 ---
 title: Transactions carte credit
 locale: fr-CA
-created: 2006-07-14
-updated: 2009-08-14
+createdAt: 2006-07-14
+updatedAt: 2009-08-14
 canonical: https://renoirboulanger.com/blog/2006/07/transactions-carte-credit/
 status: publish
 revising: true

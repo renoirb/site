@@ -10,8 +10,8 @@ gallery: true
 images: true
 migrateImages: false
 migrateLinks: false
-created: '2009-11-17'
-updated: '2023-11-16'
+createdAt: '2009-11-17'
+updatedAt: '2023-11-16'
 tags:
   - css
   - geraniumcms

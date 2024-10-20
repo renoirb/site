@@ -1,8 +1,8 @@
 ---
 title: Installer VMWare sur Ubuntu server avec le repositoire de Canonical
 locale: fr-CA
-created: 2006-12-21
-updated: 2006-12-25
+createdAt: 2006-12-21
+updatedAt: 2006-12-25
 canonical: 'https://renoirboulanger.com/blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical/'
 status: publish
 revising: false

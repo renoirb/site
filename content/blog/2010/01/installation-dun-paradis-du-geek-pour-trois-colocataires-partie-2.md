@@ -1,8 +1,8 @@
 ---
 title: Installation d’un paradis du Geek pour trois colocataires, partie 2
 locale: fr-CA
-created: 2010-01-09
-updated: 2013-03-27
+createdAt: 2010-01-09
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-2/
 status: publish

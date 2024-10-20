@@ -7,8 +7,8 @@ status: publish
 revising: true
 migrateCode: true
 migrateLinks: true
-created: '2009-08-19'
-updated: '2013-03-27'
+createdAt: '2009-08-19'
+updatedAt: '2013-03-27'
 tags:
   - linux
   - securite

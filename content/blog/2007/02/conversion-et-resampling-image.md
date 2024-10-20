@@ -1,8 +1,8 @@
 ---
 title: Conversion et resampling image
 locale: fr-CA
-created: 2007-02-21
-updated: 2013-03-27
+createdAt: 2007-02-21
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/02/conversion-et-resampling-image/
 status: publish
 revising: true

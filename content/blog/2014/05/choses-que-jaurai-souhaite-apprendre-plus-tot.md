@@ -9,8 +9,8 @@ migrateLinks: true
 migrateImages: false
 gallery: false
 caption: false
-created: '2014-05-07'
-updated: '2014-07-04'
+createdAt: '2014-05-07'
+updatedAt: '2014-07-04'
 tags: []
 categories: []
 description: Parmi les choses que j’aurai aimé apprendre il y a cette suite règles simples

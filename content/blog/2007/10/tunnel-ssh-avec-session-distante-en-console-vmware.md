@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware/
 status: publish
 revising: true
-created: '2007-10-03'
-updated: '2013-03-27'
+createdAt: '2007-10-03'
+updatedAt: '2013-03-27'
 tags:
   - linux
   - securite

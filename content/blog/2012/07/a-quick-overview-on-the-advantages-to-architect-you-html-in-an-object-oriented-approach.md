@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/07/a-quick-overview-on-the-advantages-to-architect-you-html-in-an-object-oriented-approach/
 status: publish
 revising: true
-created: '2012-07-24'
-updated: '2013-03-27'
+createdAt: '2012-07-24'
+updatedAt: '2013-03-27'
 tags:
   - architecture
   - html

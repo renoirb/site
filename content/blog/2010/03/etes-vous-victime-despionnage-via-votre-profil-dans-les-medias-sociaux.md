@@ -1,8 +1,8 @@
 ---
 title: Êtes-vous victime d’espionnage via votre profil dans les médias sociaux
 locale: fr-CA
-created: 2010-03-22
-updated: 2020-11-07
+createdAt: 2010-03-22
+updatedAt: 2020-11-07
 canonical: ’https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux/'
 status: publish
 revising: true
