@@ -29,16 +29,10 @@
   import DefaultLayout from './default.vue'
   export default Vue.extend({
     extends: DefaultLayout,
-    head() {
-      // https://vue-meta.nuxtjs.org/api/#htmlattrs
-      const htmlAttrs = {
-        class: ['layout--homepage', 'zone__sandwich'],
-      }
-
-      const out = {
-        htmlAttrs,
-      }
-      return out
+    computed: {
+      layoutClassName(): string {
+        return 'layout--homepage'
+      },
     },
   })
 </script>

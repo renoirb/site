@@ -2,12 +2,6 @@ import { Context } from '@nuxt/types'
 import { RE_FULL_PATH_BLOG_INDEX } from '../consts'
 import { transformToPrettyfiedTemporalDate } from './date'
 
-export const getColorModeClassName = (ctx: Context): string => {
-  const colorMode = ctx.app.$colorMode.value
-  const colorModeClassName = `${colorMode || 'light'}-mode`
-  return colorModeClassName
-}
-
 export const pageTitleForBlogIndex = (
   route: Context['route'],
 ): string | null => {

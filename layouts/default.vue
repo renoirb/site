@@ -34,7 +34,9 @@
     fromPackageToAppIdentity,
     IAppIdentity,
     pageTitleForBlogIndex,
+    fromColorModeToClassName,
     getColorModeClassName,
+    /*                       */
   } from '~/lib'
   export interface Data {
     appIdentity: IAppIdentity
@@ -43,7 +45,9 @@
     isOpen: boolean
   }
   export interface Methods {}
-  export interface Computed {}
+  export interface Computed {
+    layoutClassName: string
+  }
   export interface Props extends IAppIdentity {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
@@ -65,6 +69,11 @@
         pageTitle: '',
       }
     },
+    computed: {
+      layoutClassName(): string {
+        return 'layout--default'
+      },
+    },
     watch: {
       $route(to, from) {
         if (to && to.fullPath && from && from.fullPath) {
@@ -76,10 +85,10 @@
       },
     },
     mounted() {
-      const colorModeClassName = getColorModeClassName(this.$nuxt.context)
+      const colorModeClassName = fromColorModeToClassName(this?.$colorMode)
       this.colorModeClassName = colorModeClassName
       if (this.$el && this.$el.ownerDocument) {
-        const probe = this.$el.ownerDocument as HTMLDocument
+        const probe = this.$el.ownerDocument as Document
         try {
           probe.body.classList.add('before')
           probe.body.style.transform = 'none'
@@ -107,10 +116,11 @@
       },
     },
     head() {
-      const colorModeClassName = this.colorModeClassName
-      // https://vue-meta.nuxtjs.org/api/#htmlattrs
+      const colorModeClassName: ReturnType<typeof fromColorModeToClassName> =
+        fromColorModeToClassName(this?.$colorMode)
+      const layoutClassName = this.layoutClassName
       const htmlAttrs = {
-        class: ['layout--default', 'zone__sandwich', colorModeClassName],
+        class: [layoutClassName, 'zone__sandwich', colorModeClassName],
       }
       const title = this.pageTitle
       const out = {
