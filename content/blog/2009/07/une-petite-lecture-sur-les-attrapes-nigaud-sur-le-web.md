@@ -1,5 +1,5 @@
 ---
-title: Une petite lecture sur les attrapes-nigaud sur le web
+title: Une petite lecture sur les attaques d’hameçonnage et sur la fraude sur le Web
 locale: fr-CA
 created: 2009-07-02
 updated: 2013-06-07

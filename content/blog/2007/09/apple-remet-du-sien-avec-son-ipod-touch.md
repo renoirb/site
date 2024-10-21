@@ -22,9 +22,6 @@ Tout le monde a le "buzz" a propos du iPod, on en veut tous un. Hier ils ont ann
 
 <!--more-->
 
-[caption id="attachment_241" align="alignright" width="150" caption="L’image du iPodTouch"]
-<img src="https://renoirboulanger.com/wp-content/uploads/2007/09/ipod_hero.jpg" alt="L‘image du iPodTouch" align="right" />
-[/caption]
 
 J'imagine qu'ils ont fait cela pour se faire pardonner d'avoir "ignore" le reste de la planete en nous privant de ce joujou si enviable.
 

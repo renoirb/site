@@ -16,10 +16,9 @@ excerpt: >-
   permet d’annoter les signatures des arguments d’entrée et de sortie, et plus.
 ---
 
-<ol>
-<li>Il y a <a href="https://wiki.php.net/phpng">php-ng</a> qui est une réécriture par la communauté</li>
-<li>celle refaite par Facebook (<a href="https://github.com/facebook/hhvm">HHVM</a> et <a href="http://hacklang.org/">Hack</a>) pour optimiser la performance</p></li>
-</ol>
+Il y a:
+1. [php-ng](https://wiki.php.net/phpng) (PHP Nouvelle Génération) qui est une réécriture par la communaué
+- [HHVM](https://github.com/facebook/hhvm) (et « [Hack](http://hacklang.org/)», et [XHP](https://docs.hhvm.com/hack/XHP/introduction), des extension du language) celle réécrite par Facebook pour optimiser la performance
 
 <p>PHP, comme Python, stockent en quelque part une version qu’elle seule comprendra (a.k.a. bytecode) et réutilise cette version.  En Python tu va voir des fichiers ".pyc" dans le même dossier que l’original ".py".  Pour PHP, c’est ailleurs. Parfois ça peut être dans APC ou d’autres composantes.</p>
 
