@@ -19,10 +19,8 @@
         />
       </div>
       <div
-        v-memo="[contents]"
         class="body"
         :data-count="contents.length"
-        data-v-memo
       >
         <blog-list-model-by-year
           :contents="contents"

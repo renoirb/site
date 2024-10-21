@@ -1,12 +1,9 @@
 <template>
   <div class="pages__blog__year--index">
     <div class="document document--collection">
-      <!--#TODO Reminder v-memo is only in Vue 3, that's probably doing nothing-->
       <div
-        v-memo="[contents]"
         class="body"
         :data-count="contents.length"
-        data-v-memo
       >
         <blog-list-model-by-year
           :show-year="false"
