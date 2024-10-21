@@ -5,7 +5,7 @@
         class="body"
         :data-count="contents.length"
       >
-        <blog-list-model-by-year :contents="contents" :q="q" />
+        <blog-list-model-by-year :contents="contents" />
       </div>
       <rb-notice-box v-if="contents.length > 40" variant="info" lang="en">
         <strong slot="header">Apologies for the long list</strong>
@@ -38,18 +38,10 @@
   }
   export interface Methods {}
   export interface Computed {}
-  export interface Props {
-    q: string
-  }
+  export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     components: {
       'blog-list-model-by-year': BlogListModelByYear,
-    },
-    props: {
-      q: {
-        type: String,
-        default: '',
-      },
     },
     async asyncData({ $content, route }) {
       let contents: INuxtContentIndexResult[] = []
@@ -60,28 +52,6 @@
       }
     },
     /*
-    watch: {
-      q: {
-        immediate: true,
-        async handler(val, oldVal) {
-          let pageTitle = 'Blog'
-          if (!val) {
-            this.contents = [] as INuxtContentResult[]
-            return
-          }
-          if (val === oldVal) {
-            // No change, nothing to do
-            return
-          }
-          if (val !== '') {
-            pageTitle += `, search results for «${val}»`
-          }
-          const contents = await queryNuxtContent(this.$content, this.$route)
-          this.contents = contents
-          this.pageTitle = pageTitle
-        },
-      },
-    },
     async beforeMount() {
       const contents = await queryNuxtContent(this.$content, this.$route)
       // This is wrong. Improve. Plz

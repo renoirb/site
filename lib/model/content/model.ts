@@ -149,8 +149,8 @@ export const queryNuxtContent = async (
    * - http://localhost:3000/_content/blog?deep=true
    * - http://localhost:3000/_content/blog?deep=true&created_defined=asdf
    */
-  let ds = $content('blog', { deep: true })
-    .sortBy('created', 'desc')
+  const db = $content('blog', { deep: true })
+    .sortBy('createdAt', 'desc')
     .only([
       'createdAt',
       'excerpt',
@@ -163,11 +163,8 @@ export const queryNuxtContent = async (
       'title',
       'updatedAt',
     ])
-  if (q) {
-    ds = ds.search(q)
-  }
 
-  contents = await ds.fetch()
+  contents = await db.fetch()
   contents = contents.filter((a) =>
     findExcludingRedirectPredicate(a as INuxtContentResult),
   )

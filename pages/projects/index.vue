@@ -70,7 +70,6 @@
     pageBlurb: string
     pageLocale: string
     pageTitle: string
-    q: string
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -79,18 +78,9 @@
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({
     watchQuery: true,
-    async asyncData({ $content, route }) {
-      const q = route.query.q
-      let query = $content('projects', { deep: true }).sortBy(
-        'createdAt',
-        'desc',
-      )
-      if (q) {
-        query = query.search(q)
-        // OR query = query.search('title', q)
-      }
-      // const contents = await query.where({ index: { $ne: true } }).fetch()
-      const contents = await query.fetch()
+    async asyncData({ $content }) {
+      const db = $content('projects', { deep: true }).sortBy('createdAt', 'desc')
+      const contents = await db.fetch()
       const pageLocale = 'fr-CA'
       const pageTitle = `Projets`
       const pageBlurb = `Quelques projets personnels que je publie, classé par catégorie.`
@@ -100,15 +90,7 @@
         pageBlurb,
         pageLocale,
         pageTitle,
-        q,
       }
-    },
-    watch: {
-      q() {
-        this.$router
-          .replace({ query: this.q ? { q: this.q } : undefined })
-          .catch(() => {})
-      },
     },
     methods: {
       abbreviatize,
