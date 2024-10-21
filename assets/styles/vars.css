@@ -15,8 +15,8 @@
   --border-color: #aaa;
   --color-taxonomy-bg: hsl(250 8% 27.1%);
   --color-taxonomy-bg-hover: var(--color-secondary);
-  --color-taxonomy-text-hover: #fff;
-  --color-taxonomy-text: #fff;
+  --color-taxonomy-text-hover: var(--color-sandwich-text);
+  --color-taxonomy-text: var(--color-sandwich-text);
   --color-container-text-link: var(--color-primary);
   --color-container-text-link-hover: var(--color-secondary);
 }
@@ -24,7 +24,7 @@
 .dark-mode {
   --color-sandwich-bg: #214761;
   --color-sandwich-left-splat-bg: #0d334d;
-  --color-sandwich-text: #fff;
+  --color-sandwich-text: #bdbdbd;
   --color-container: #2d2c2c;
   --color-backdrop: #000;
   --bg: var(--color-backdrop);
@@ -36,9 +36,9 @@
   --bg-secondary: #214761;
   --border-color: #061a17;
   --color-taxonomy-bg: hsl(250 8% 27.1%);
-  --color-taxonomy-bg-hover: var(--color-secondary);
-  --color-taxonomy-text-hover: #fff;
-  --color-taxonomy-text: #fff;
+  --color-taxonomy-bg-hover: var(--color-primary);
+  --color-taxonomy-text-hover: var(--color-sandwich-text);
+  --color-taxonomy-text: var(--color-sandwich-text);
   --color-container-text-link: var(--color-sandwich-text);
   --color-container-text-link-hover: var(--color-sandwich-text);
 }
