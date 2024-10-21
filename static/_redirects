@@ -31,6 +31,10 @@
 /files/cvrenoir_latest_en.pdf /files/resume/Resume-Renoir-Boulanger.pdf 301
 /files/Resume-Renoir-Boulanger.pdf /files/resume/Resume-Renoir-Boulanger.pdf 301
 #
+# URL Path based blog navigation
+#
+/page/* /blog/?page=:splat 302
+#
 # PAGES KNOWN NOT TO BE IN USE ----------
 #
 /home/ /blog/ 301
