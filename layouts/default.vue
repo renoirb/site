@@ -33,7 +33,7 @@
     fromNuxtContextToAppIdentity,
     fromPackageToAppIdentity,
     IAppIdentity,
-    pageTitleForBlogIndex,
+    eageTitleForBlogIndex,
     getColorModeClassName,
   } from '~/lib'
   export interface Data {
@@ -67,6 +67,7 @@
     },
     watch: {
       $route(to, from) {
+        const pageTitle = pageTitleForBlogIndex(to)
         if (to && to.fullPath && from && from.fullPath) {
           const pageTitle = pageTitleForBlogIndex(to)
           if (to.fullPath !== from.fullPath && pageTitle) {
@@ -112,10 +113,9 @@
       const htmlAttrs = {
         class: ['layout--default', 'zone__sandwich', colorModeClassName],
       }
-      const title = this.pageTitle
       const out = {
         htmlAttrs,
-        title,
+        title: this.pageTitle,
       }
       return out
     },
