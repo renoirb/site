@@ -14,7 +14,7 @@ categories: []
 excerpt: ''
 ---
 
-<p><a href="https://renoirboulanger.com/wp-content/uploads/2012/04/Screenshot-at-2012-04-07-200750-d.png"><img class="alignright size-thumbnail wp-image-2552" title="View of the document for print after applying my @media print css" src="https://renoirboulanger.com/wp-content/uploads/2012/04/Screenshot-at-2012-04-07-200750-d-150x150.png" alt="" width="150" height="150" /></a>Je suis  en train d'étudier activement <a href="http://symfony.com/">Symfony2</a> et <a href="http://doctrine-project.org/">Doctrine2</a> car j'ai fait le saut du coté développement applicatif a temps plein.</p>
+<p><a href="https://renoirb.github.io/site-assets/assets/content/blog/2012/04/Screenshot-at-2012-04-07-200750-d.png"><img class="alignright size-thumbnail wp-image-2552" title="View of the document for print after applying my @media print css" src="https://renoirb.github.io/site-assets/assets/content/blog/2012/04/Screenshot-at-2012-04-07-200750-d-150x150.png" alt="" width="150" height="150" /></a>Je suis  en train d'étudier activement <a href="http://symfony.com/">Symfony2</a> et <a href="http://doctrine-project.org/">Doctrine2</a> car j'ai fait le saut du coté développement applicatif a temps plein.</p>
 
 <p>Mon apprentissage va très bien et j'ai appris beaucoup sur les meilleurs pratiques et je ne me vois plus dutout faire de php sans le Dependency Injection, les pratiques de namespacing et fonctions lambda de PHP 5.3.</p>
 

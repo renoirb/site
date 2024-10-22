@@ -34,12 +34,12 @@ I mean in the web application hosting realm. Not the storage (Google Drive, Drop
 
 <h4>Let's talk about a use case before and my own experience.</h4>
 
-My former company <a href="http://evocatio.com/" rel="nofollow">Evocatio Solutions technologiques</a> manage a pretty large site at the domain <a href="https://uda.ca/">uda.ca</a>.
+My former company <a href="https://web.archive.org/web/20110808064111/http://evo.cat.io/" rel="nofollow">Evocatio Solutions technologiques</a> manage a pretty large site at the domain <a href="https://uda.ca/">uda.ca</a>.
 
 <h3>The use-case on my recent experience</h3>
 This is a complete business management web application that manages an union who represents french speaking artists in north america (mostly residents of Canada).  We built a complete web application that manages many aspects an artist needs to represent themselves and be found. A big part of it is a 140 tables worth of artist description listing details as small a hair length and types of musical instruments to voice tones. It also manages renewal, communication with agencies, portfolios, and management of contracts with managers and more.
 
-Not to forget the very heavy databases queries we generate to search, for example: &lt;example&gt;An <em>asian woman</em> with <em>white hair</em> playing <em>yuku lélé</em> who can <em>pilot helicopter</em> AND ride <em>motorcycle</em> ...&lt;/example&gt; 
+Not to forget the very heavy databases queries we generate to search, for example: &lt;example&gt;An <em>asian woman</em> with <em>white hair</em> playing <em>yuku lélé</em> who can <em>pilot helicopter</em> AND ride <em>motorcycle</em> ...&lt;/example&gt;
 
 Yes. Database queries get very big, very quickly. Not only in the search engine I described, but through all the features.
 

@@ -13,9 +13,8 @@ tags: []
 coverImage:
   src: ~/assets/content/blog/2010/01/IMG_0325-225x300.jpg
   srcset:
-    - https://renoirboulanger.com/wp-content/uploads/2010/01/IMG_0325-225x300.jpg
-      225w
-    - https://renoirboulanger.com/wp-content/uploads/2010/01/IMG_0325.jpg 600w
+    - ~/assets/content/blog/2010/01/IMG_0325-225x300.jpg 225w
+    - ~/assets/content/blog/2010/01/IMG_0325.jpg 600w
   sizes: '(max-width: 225px) 100vw, 225px'
   alt: |
     Une photo humoristique épique ou l’on voit Etienne se défendre contre un serpent imaginaire qui n’est qu'une grappe de fils réseau.

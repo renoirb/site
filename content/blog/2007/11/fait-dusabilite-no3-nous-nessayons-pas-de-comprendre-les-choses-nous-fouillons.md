@@ -19,7 +19,7 @@ categories: []
 excerpt: ''
 ---
 
-<div style="float:right;"><img src="https://renoirboulanger.com/wp-content/uploads/2007/09/dmmt_cover.jpg" title="dmmt_cover.jpg" alt="dmmt_cover.jpg" style="border:0"  /></div>Voici la suite de ma revue du livre que j'ai lu récemment qui traîte de l'Utilisabilité. Le livre s'appelait: <strong>Don't make me think</strong>. <strong>A Common Sense Approach to Web Usability</strong>, voici un troisième fait qu'il est bien de considérer.
+<div style="float:right;"><img src="https://renoirb.github.io/site-assets/assets/content/blog/2007/09/dmmt_cover.jpg" title="dmmt_cover.jpg" alt="dmmt_cover.jpg" style="border:0"  /></div>Voici la suite de ma revue du livre que j'ai lu récemment qui traîte de l'Utilisabilité. Le livre s'appelait: <strong>Don't make me think</strong>. <strong>A Common Sense Approach to Web Usability</strong>, voici un troisième fait qu'il est bien de considérer.
 
 Attention à l'anglicisme;
 Fact of life #3 &gt; We don't figure out how things work. We muddle through.

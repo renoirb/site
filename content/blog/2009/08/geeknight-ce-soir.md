@@ -12,11 +12,11 @@ categories: []
 excerpt: ''
 ---
 
-[caption id="attachment_762" align="alignright" width="320" caption="Donne moi l&#39;argent de ton dîner ou je vais Hacker ton site web!"]<a href="https://renoirboulanger.com/wp-content/uploads/2009/08/les_geeks_font_la_loi.jpg"><img class="size-full wp-image-762" title="Les Geeks font la loi!" src="https://renoirboulanger.com/wp-content/uploads/2009/08/les_geeks_font_la_loi.jpg" alt="Donne moi l'argen de ton dîner ou je vais Hacker ton site web!" width="320" height="287" /></a>[/caption]
+[caption id="attachment_762" align="alignright" width="320" caption="Donne moi l&#39;argent de ton dîner ou je vais Hacker ton site web!"]<a href="https://renoirb.github.io/site-assets/assets/content/blog/2009/08/les_geeks_font_la_loi.jpg"><img class="size-full wp-image-762" title="Les Geeks font la loi!" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/08/les_geeks_font_la_loi.jpg" alt="Donne moi l'argen de ton dîner ou je vais Hacker ton site web!" width="320" height="287" /></a>[/caption]
 
 Je dois sortir du placard! Je n'en peut plus.
 
-Le terme est comique parcequ'il sonne "Gay nights". 
+Le terme est comique parcequ'il sonne "Gay nights".
 
 C'est un peu le but!
 

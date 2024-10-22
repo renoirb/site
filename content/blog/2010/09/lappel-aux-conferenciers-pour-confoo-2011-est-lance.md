@@ -34,7 +34,7 @@ migrateLinks:
 <p>La procédure est simple, il faut proposer sa présentation par le formulaire d’appel aux conférenciers sur le site officiel.</p>
 
 <p>La date et le lieux de la conférence sont maintenant officielles et se déroulera à l'Hôtel
-<del>Hilton Bonaventure de Montreal</del> du 9 au 11 Mars 2011. Durant cette semaine il y aura aussi des journées de formation privés.</p>
+<del>Hilton Bonaventure de Montreal</del> du 9 au 11 Mars 2011. Durant cette semaine il y aura aussi des journées de formation privés.</p><!--#TODO-inline-edit-->
 
 <h3>Ma participation</h3>
 

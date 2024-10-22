@@ -12,14 +12,14 @@ categories: []
 excerpt: ''
 ---
 
-[caption id="attachment_726" align="alignright" width="150" caption="Ecran Eclipse de configuration Tomcat avec mention &quot;on tsc-lamp-dev&quot; "]<a href="https://renoirboulanger.com/wp-content/uploads/2007/11/desktoprenoir1.png"><img class="size-thumbnail wp-image-726" title="desktoprenoir" src="https://renoirboulanger.com/wp-content/uploads/2007/11/desktoprenoir1-150x150.png" alt="Ecran Eclipse de configuration Tomcat avec mention &quot;on tsc-lamp-dev&quot; " width="150" height="150" /></a>[/caption]
+[caption id="attachment_726" align="alignright" width="150" caption="Ecran Eclipse de configuration Tomcat avec mention &quot;on tsc-lamp-dev&quot; "]<a href="https://renoirb.github.io/site-assets/assets/content/blog/2007/11/desktoprenoir1.png"><img class="size-thumbnail wp-image-726" title="desktoprenoir" src="https://renoirb.github.io/site-assets/assets/content/blog/2007/11/desktoprenoir1-150x150.png" alt="Ecran Eclipse de configuration Tomcat avec mention &quot;on tsc-lamp-dev&quot; " width="150" height="150" /></a>[/caption]
 
 [Edit: 2009-08-17 je vais mettre a jour ce billet avec une nouvelle version des outils et plus de détails sur comment faire]
 
-<div style="background: #ececec; margin: 5px 0px; padding: 18px 8px 8px 50px; border: 1px solid #333;"> 
-<h4 style="color: #777; margin-bottom: 10px;">Mise à jour et façon différente de fonctionner</h4> 
+<div style="background: #ececec; margin: 5px 0px; padding: 18px 8px 8px 50px; border: 1px solid #333;">
+<h4 style="color: #777; margin-bottom: 10px;">Mise à jour et façon différente de fonctionner</h4>
 <p>Dans un billet plus récent (que celui-ci) <a href="/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/">j'explique comment le faire pour un Mac</a>.</p>
-</div> 
+</div>
 
 J'ai discuté lors d'un dîner d'apprentissage avec quelques collegues et montré comment j'ai monté mon setup de dev avec VMWare.
 

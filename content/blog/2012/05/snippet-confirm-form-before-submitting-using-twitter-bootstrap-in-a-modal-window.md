@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window/
 status: publish
 revising: true
+migrateLinks: false
+migrateImages: true
+gallery: true
+caption: false
 created: '2012-05-28'
 updated: '2023-11-16'
 tags:
@@ -18,7 +22,7 @@ categories:
 excerpt: ''
 ---
 
-<p><a href="https://renoirboulanger.com/wp-content/uploads/2012/05/confirm-modal.jpg" rel="lightbox[20120606]"><img src="https://renoirboulanger.com/wp-content/uploads/2012/05/confirm-modal-300x205.jpg" alt="" title="Transform any Bootstrap form to use a confirmation window" width="300" height="205" class="alignright size-medium wp-image-2569" border="0" style="border:0" /></a></p>
+<p><a href="https://renoirb.github.io/site-assets/assets/content/blog/2012/05/confirm-modal.jpg" rel="lightbox[20120606]"><img src="https://renoirb.github.io/site-assets/assets/content/blog/2012/05/confirm-modal-300x205.jpg" alt="" title="Transform any Bootstrap form to use a confirmation window" width="300" height="205" class="alignright size-medium wp-image-2569" border="0" style="border:0" /></a></p>
 
 <h3>Idea</h3>
 
@@ -51,6 +55,7 @@ excerpt: ''
 <h3>The code</h3>
 
 <p>You can play with this <a href="http://jsfiddle.net/renoirb/xNCNb/16/">Fiddle</a> in the meantime i make it ready-er</p>
+<!--#TODO-Import-Code-From-External-->
 
 <h4>The javascript</h4>
 
@@ -174,6 +179,7 @@ excerpt: ''
     }
 
 </pre>
+<!--#TODO-Improve-Code-Blocks-->
 
 <h4>The CSS</h4>
 

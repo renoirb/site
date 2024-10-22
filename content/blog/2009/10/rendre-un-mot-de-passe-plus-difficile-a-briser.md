@@ -12,7 +12,7 @@ categories: []
 excerpt: ''
 ---
 
-<img class="size-full wp-image-1205" style="border:none !important;float:right;" title="Utiliser le même mot de passe pour tout ses services c'est mal... 'Voyez?" src="https://renoirboulanger.com/wp-content/uploads/2009/10/hm36drugs-are-bad-posters.jpg" alt="Utiliser le même mot de passe pour tout ses services c'est mal... 'Voyez?" width="318" height="450" />
+<img class="size-full wp-image-1205" style="border:none !important;float:right;" title="Utiliser le même mot de passe pour tout ses services c'est mal... 'Voyez?" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/10/hm36drugs-are-bad-posters.jpg" alt="Utiliser le même mot de passe pour tout ses services c'est mal... 'Voyez?" width="318" height="450" />
 
 Durant mon ménage aujourd'hui je suis tombé mon archive de podcasts de <a href="http://www.grc.com/securitynow/">mon podast préféré: Security Now</a> avec Leo Laporte <a href="http://fr.wikipedia.org/wiki/Leo_Laporte"></a> et Steve Gibson<a href="http://en.wikipedia.org/wiki/Steve_Gibson_%28computer_programmer%29"></a> qui expliquait certains concepts pour améliorer la sécurité des mots de passe <a href="/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser/#two">[2]</a>.
 

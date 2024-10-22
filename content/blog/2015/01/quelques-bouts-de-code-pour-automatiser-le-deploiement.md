@@ -20,9 +20,9 @@ tags:
 coverImage:
   src: ~/assets/content/blog/2015/01/automate-all-the-things-300x284.png
   srcset:
-    - https://renoirboulanger.com/wp-content/uploads/2015/01/automate-all-the-things-300x284.png 300w
-    - https://renoirboulanger.com/wp-content/uploads/2015/01/automate-all-the-things-1024x971.png 1024w
-    - https://renoirboulanger.com/wp-content/uploads/2015/01/automate-all-the-things.png 1600w
+    - https://renoirb.github.io/site-assets/assets/content/blog/2015/01/automate-all-the-things-300x284.png 300w
+    - https://renoirb.github.io/site-assets/assets/content/blog/2015/01/automate-all-the-things-1024x971.png 1024w
+    - https://renoirb.github.io/site-assets/assets/content/blog/2015/01/automate-all-the-things.png 1600w
   sizes: >-
     (max-width: 300px) 100vw, 300px
   alt: >-

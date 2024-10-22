@@ -161,7 +161,7 @@ Ensuite, voir un phpinfo() dans le docroot. (Généralement /var/www/index.php).
 <pre lang="php">< ?php
   phpinfo();
 ?></pre>
-<img class="size-full wp-image-1113" style="border:none;" title="PHP 5.3 phpinfo()" src="https://renoirboulanger.com/wp-content/uploads/2009/09/phpinfo_php5_3.png" alt="PHP 5.3 phpinfo()" width="612" height="429" />
+<img class="size-full wp-image-1113" style="border:none;" title="PHP 5.3 phpinfo()" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/09/phpinfo_php5_3.png" alt="PHP 5.3 phpinfo()" width="612" height="429" />
 <h3>Conclusion</h3>
 Je crois avoir bien réussi mon interprétation et ma traduction de l'article que j'ai utilisé. J'y ai ajouté mon grain de sel et rectifié ce qui a marché pour moi. Je vous conseille de documenter pour vos propres besoins ce que vous faites, on sait jamais quand on a besoin de refaire ce qu'on a déjà fait !
 <h3>Références</h3>

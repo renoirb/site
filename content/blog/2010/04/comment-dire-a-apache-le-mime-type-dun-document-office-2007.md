@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/04/comment-dire-a-apache-le-mime-type-dun-document-office-2007/
 status: publish
 revising: true
+migrateLinks: true
 created: '2010-04-21'
 updated: '2013-03-27'
 tags:

@@ -21,7 +21,7 @@ categories:
 excerpt: ''
 ---
 
-<div style="width:230px;float:right;"><img src="https://renoirboulanger.com/wp-content/uploads/2010/01/modx_logo.png" alt="" title="MODx" width="230" height="64" style="border:none;float:right;margin-top:10px;margin-right:10px;" /></div>
+<div style="width:230px;float:right;"><img src="https://renoirb.github.io/site-assets/assets/content/blog/2010/01/modx_logo.png" alt="" title="MODx" width="230" height="64" style="border:none;float:right;margin-top:10px;margin-right:10px;" /></div>
 <p>Il s'agit d'un plugin que j'ai fait, en <abbr title="PHP Hypertext Pre-Processor Languagte version 4." lang="en">PHP 4</abbr> il y a deux ans pour <a href="http://modxcms.com/download/">MODx 0.9.6.3</a>, pour un site web et je pense qu'il vaut la peine que je partage le code avec la communauté.</p>
 
 <p>Le plugin sert a entourer des mots définis dans un fichier <abbr title="Coma Separated Values." lang="en">CSV</abbr> (séparé par des virgules) dans le contenu qui est retourné par le CMS. </p>

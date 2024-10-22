@@ -15,7 +15,7 @@ categories: []
 excerpt: ''
 ---
 
-<div style="width:430px;float:right;"><img src="https://renoirboulanger.com/wp-content/uploads/2010/01/cmsmslogo.gif" alt="" title="CMS Made Simple" width="174" height="78" style="border:1px solid #888;float:right;" /><img src="https://renoirboulanger.com/wp-content/uploads/2010/01/modx_logo.png" alt="" title="MODx" width="230" height="64" style="border:none;float:right;margin-top:10px;margin-right:10px;" /></div><p>C'est en cherchant ce que j'ai publié sur le web dans les dernières années que je suis tombé sur un envoi que j'ai fait sur la liste AccessTech de <a href="http://www.netaccessible.com/">NetAccessible</a>. Un lecteur avait demandé si CMSMS (CMS Made Simple) était si "simple".</p>
+<div style="width:430px;float:right;"><img src="https://renoirb.github.io/site-assets/assets/content/blog/2010/01/cmsmslogo.gif" alt="" title="CMS Made Simple" width="174" height="78" style="border:1px solid #888;float:right;" /><img src="https://renoirb.github.io/site-assets/assets/content/blog/2010/01/modx_logo.png" alt="" title="MODx" width="230" height="64" style="border:none;float:right;margin-top:10px;margin-right:10px;" /></div><p>C'est en cherchant ce que j'ai publié sur le web dans les dernières années que je suis tombé sur un envoi que j'ai fait sur la liste AccessTech de <a href="http://www.netaccessible.com/">NetAccessible</a>. Un lecteur avait demandé si CMSMS (CMS Made Simple) était si "simple".</p>
 
 <p><ins>a mon avis, <strong>CMS Made Simple n'est pas idéal</strong>. Mais j'ai pensé le re-publier ici quand même, pour les biens de la postérité. Vous remarquerez que ce qui est ajouté est dans des balises &lt;INS&gt;. Ce message a été rédigé en 2008 et il est possible que CMS Made Simple ait changé.</ins></p>
 

@@ -26,7 +26,7 @@ excerpt: >-
   production, évidemment).
 ---
 
-<img class="size-medium wp-image-1082" style="border: none; float: right;" title="La Virtualisation c'est comme des roches en équilibre" src="https://renoirboulanger.com/wp-content/uploads/2009/09/virtualization-200x300.jpg" alt="La Virtualisation c'est comme des roches en équilibre" width="200" height="300" />Ce billet est le <strong>premier</strong> d'une série d'articles décrivant la fabrication d'une Machine Virtuelle (VM) de développement pour une équipe de dévelopeurs.
+<img class="size-medium wp-image-1082" style="border: none; float: right;" title="La Virtualisation c'est comme des roches en équilibre" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/09/virtualization-200x300.jpg" alt="La Virtualisation c'est comme des roches en équilibre" width="200" height="300" />Ce billet est le <strong>premier</strong> d'une série d'articles décrivant la fabrication d'une Machine Virtuelle (VM) de développement pour une équipe de dévelopeurs.
 
 Je mentionne PHP 5.3 mais en fait ce type d'installation pourrait être utilisé pour n'importe quelle technologie web qui peut rouler sous Linux (<tt>Ruby on Rails</tt>, <tt>Java</tt>, <tt>Perl</tt>, etc).
 
@@ -38,10 +38,10 @@ J'ai séparé cette série en quatre volets.
 	<li><strong>Installation de l'environnement de développement avec Eclipse PDT</strong> (à venir)La magie se passe par là! Avec ce setup votre équipe pourra répliquer l'installation de développement a volonté.</li>
 </ol>
 
-<div style="background: #ececec; margin: 5px 0px; padding: 18px 8px 8px 50px; border: 1px solid #333;"> 
-<h4 style="color: #777; margin-bottom: 10px;">Mise à jour et façon différente de fonctionner</h4> 
+<div style="background: #ececec; margin: 5px 0px; padding: 18px 8px 8px 50px; border: 1px solid #333;">
+<h4 style="color: #777; margin-bottom: 10px;">Mise à jour et façon différente de fonctionner</h4>
 <p>Dans un billet plus récent (que celui-ci) <a href="/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/">j'explique comment le faire pour un Mac</a>.</p>
-</div> 
+</div>
 
 <h3>Mise en contexte</h3>
 Pour développer, j'utilise depuis deux ans une <em>machine virtuelle</em> (VM) Linux (minimale) qui me sert de "bac à sable"... Le but de cette série d'articles. Dans cette VM il y a tout les outils nécessaires aux projets en-cours et ils sont configurés pour refléter l'environnement de production où je déploie mon travail.

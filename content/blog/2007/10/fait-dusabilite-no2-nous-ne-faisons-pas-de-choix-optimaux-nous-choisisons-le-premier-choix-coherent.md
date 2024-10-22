@@ -19,7 +19,7 @@ categories:
 excerpt: ''
 ---
 
-<div style="float:right;"><img src="https://renoirboulanger.com/wp-content/uploads/2007/09/dmmt_cover.jpg" ALT="Couverture de Don't make me think a common sense of usability" style="border:0" /></div>J'ai dit il y a quelques semaines que je ferait une revue allégée d'un livre très inspirant qui traite de l'<strong>Utilisabilité</strong> (peut être un nouveau mot?).
+<div style="float:right;"><img src="https://renoirb.github.io/site-assets/assets/content/blog/2007/09/dmmt_cover.jpg" ALT="Couverture de Don't make me think a common sense of usability" style="border:0" /></div>J'ai dit il y a quelques semaines que je ferait une revue allégée d'un livre très inspirant qui traite de l'<strong>Utilisabilité</strong> (peut être un nouveau mot?).
 
 Le livre s'appelait: <strong><em>Don't make me think. A Common Sense Approach to Web Usability</em></strong>, voici le second point qu'il est important de considérer.
 

@@ -6,6 +6,8 @@ canonical: >-
 status: publish
 revising: true
 caption: true
+migrateLinks: true
+migrateImages: true
 created: '2010-04-15'
 updated: '2013-03-27'
 tags:
@@ -17,7 +19,7 @@ categories:
 excerpt: ''
 ---
 
-[caption id="attachment_2094" align="alignright" width="270" caption="Montreal Open Source Week - La semaine des Logiciels Libres de Montréal MonDev"]<img class="size-full wp-image-2094 " title="MonDev" src="https://renoirboulanger.com/wp-content/uploads/2010/03/mondev_logo.png" alt="MonDev" width="270" height="159" />[/caption]
+[caption id="attachment_2094" align="alignright" width="270" caption="Montreal Open Source Week - La semaine des Logiciels Libres de Montréal MonDev"]<img class="size-full wp-image-2094 " title="MonDev" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/03/mondev_logo.png" alt="MonDev" width="270" height="159" />[/caption]
 
 Durant la semaine du 24 au 28 Mai 2010 aura lieu la semaine des logiciels libres <em>MonDev</em>. Pour cette semaine particulière nous allons vous guider sur les activités <em>geek</em> de la semaine.
 

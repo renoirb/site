@@ -25,8 +25,8 @@ coverImage:
     But reducing programming to simple translation misses the point entirely.
     Features and systems can't be directly translated like we do with speech and text.
   srcset:
-    https://renoirboulanger.com/wp-content/uploads/2014/08/morse-code-straight-key-j38-badwsky-532871465-300x225.jpg 300w
-    https://renoirboulanger.com/wp-content/uploads/2014/08/morse-code-straight-key-j38-badwsky-532871465.jpg 640w
+    https://renoirb.github.io/site-assets/assets/content/blog/2014/08/morse-code-straight-key-j38-badwsky-532871465-300x225.jpg 300w
+    https://renoirb.github.io/site-assets/assets/content/blog/2014/08/morse-code-straight-key-j38-badwsky-532871465.jpg 640w
   sizes: '(max-width: 300px) 100vw, 300px'
 excerpt: >-
   Being a programmer is all about solving puzzles, review existing components,

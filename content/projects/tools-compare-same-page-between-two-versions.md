@@ -7,7 +7,6 @@ updated: 2024-10-12
 status: draft
 revising: true
 excerpt: >-
-
 ---
 
 It’s a tool to help compare pages of the same Web site before a major code upgrade:
