@@ -32,7 +32,7 @@
           class="pb-8 mb-8 border-b border-black border-dashed"
         >
           <h2 class="mb-2 font-serif text-lg italic">
-            <!-- eslint-disable vue/no-v-html -->
+            <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
             <NuxtLink
               v-if="content.callToAction && content.callToAction.href"
               :to="content.callToAction.href"
@@ -40,7 +40,7 @@
               class="no-underline"
               v-html="abbreviatize(content.title)"
             />
-            <!-- eslint-disable vue/no-v-html -->
+            <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
             <span
               v-else
               :lang="content.locale ? content.locale : 'en-CA'"
@@ -56,7 +56,15 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
+  import {
+    abbreviatize,
+    IAbbreviatize,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     contents: INuxtContentResult
     pageBlurb: string

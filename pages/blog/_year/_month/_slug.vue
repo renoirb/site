@@ -76,13 +76,17 @@
 <script lang="ts">
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
-  import { IFrontMatterInnerDocument } from '../../../../lib'
+  import {
+    IFrontMatterInnerDocument,
+    /*                       */
+  } from '../../../../lib'
   import {
     abbreviatize,
     createNuxtContentParsedDocument,
     createVueMetaHeadScriptForHypothesis,
     createVueMetaInfo,
     getPrettyfiedTemporalDate,
+    /*                       */
   } from '~/lib'
   import type {
     IAbbreviatize,
@@ -91,6 +95,7 @@
     INuxtContentPrevNext,
     INuxtContentResult,
     IPrettyfiedTemporalDate,
+    /*                       */
   } from '~/types'
   export interface Data {
     canonical: null | string

@@ -8,7 +8,7 @@
           class="mb-8 text-lg"
           :lang="content.locale ? content.locale : 'en-CA'"
         >
-          <!-- eslint-disable vue/no-v-html -->
+          <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
           <NuxtLink
             :to="{
               path: content.path,
@@ -41,17 +41,17 @@
 <script lang="ts">
   import Vue from 'vue'
   import {
-    INuxtContentResult,
     getPrettyfiedTemporalDate,
-    IPrettyfiedTemporalDate,
     abbreviatize,
     IAbbreviatize,
+    /*                       */
   } from '~/lib'
-  export interface IDatedNuxtContentResult extends INuxtContentResult {
-    prettyfiedTemporalDate: IPrettyfiedTemporalDate
-  }
+  import type {
+    INuxtContentIndexResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
-    contents: IDatedNuxtContentResult[]
+    contents: INuxtContentIndexResult[]
   }
   export interface Methods {
     abbreviatize: IAbbreviatize
@@ -63,7 +63,7 @@
     async asyncData({ $content }) {
       const tag = 'on-front-page'
 
-      let contents: IDatedNuxtContentResult[] = []
+      let contents: INuxtContentIndexResult[] = []
       const db = $content('blog', { deep: true })
         .where({ tags: { $contains: tag } })
         .limit(4)

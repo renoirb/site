@@ -1,5 +1,4 @@
 import { strict as assert } from 'assert'
-import type { contentFunc } from '@nuxt/content'
 import { abbreviatize } from '../..'
 import type {
   INuxtContentParsedDocument,
@@ -8,6 +7,7 @@ import type {
   VueNodeTreeNonRoot,
   VueNodeTag,
 } from '../../types'
+import type { contentFunc } from './imports'
 
 export interface IFrontMatterInnerDocument {
   /**

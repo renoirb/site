@@ -1,3 +1,7 @@
+/**
+ * Bookmarks:
+ * - https://prismjs.com/#supported-languages
+ */
 const PRISM_LANGUAGES = [
   'abap',
   'abnf',

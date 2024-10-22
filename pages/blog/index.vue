@@ -24,9 +24,16 @@
 <script lang="ts">
   import Vue from 'vue'
   import BlogListModelByYear from '@/components/blog/BlogListModelByYear.vue'
-  import { INuxtContentResult, queryNuxtContent } from '~/lib'
+  import {
+    queryNuxtContent,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentIndexResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
-    contents: INuxtContentResult[]
+    contents: INuxtContentIndexResult[]
     pageTitle: string
   }
   export interface Methods {}
@@ -45,7 +52,7 @@
       },
     },
     async asyncData({ $content, route }) {
-      let contents: INuxtContentResult[] = []
+      let contents: INuxtContentIndexResult[] = []
       contents = await queryNuxtContent($content, route)
       return {
         contents,

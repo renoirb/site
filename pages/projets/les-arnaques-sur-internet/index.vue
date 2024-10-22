@@ -8,7 +8,10 @@
 <script lang="ts">
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import type {
+    INuxtContentResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     document: INuxtContentResult
   }

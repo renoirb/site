@@ -13,8 +13,14 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import type { INuxtContentResult } from '~/lib'
-  import { createVueMetaInfo } from '~/lib'
+  import type {
+    INuxtContentResult,
+    /*                       */
+  } from '~/lib'
+  import {
+    createVueMetaInfo,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     content: INuxtContentResult
   }

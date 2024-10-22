@@ -36,8 +36,14 @@
 <script lang="ts">
   import Vue from 'vue'
   import type { MetaInfo } from 'vue-meta'
-  import { findExcludingRedirectPredicate } from '~/lib'
-  import type { INuxtContentResult } from '~/lib'
+  import {
+    findExcludingRedirectPredicate,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
+    /*                       */
+  } from '~/lib'
   type NuxtContentResult = WithReviewingProps & INuxtContentResult
   interface WithReviewingProps {
     score: string

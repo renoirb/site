@@ -17,7 +17,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import type { INuxtContentIndexResult } from '~/lib'
+  import type {
+    INuxtContentIndexResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
     title: string

@@ -7,12 +7,12 @@
       <div class="body">
         <ul>
           <li v-for="item in items" :key="item.key">
+            <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
             <NuxtLink
               :to="`/blog/${urlParam}/${item.key}`"
               :title="toTaxonomyHumanLink(item).description"
-            >
-              {{ toTaxonomyHumanLink(item).text }}
-            </NuxtLink>
+              v-html="toTaxonomyHumanLink(item).text"
+            />
           </li>
         </ul>
       </div>
@@ -23,16 +23,23 @@
 <script lang="ts">
   import Vue from 'vue'
   import {
-    ITaxonomyItem,
     toTaxonomyHumanLink,
     nuxtPageAsyncDataForTaxonomyIndex,
+    /*                       */
+  } from '~/lib'
+  import type {
+    ITaxonomyItem,
+    IToTaxonomyHumanLink,
+    /*                       */
   } from '~/lib'
   export interface Data {
     items: ITaxonomyItem[]
     title: string
     urlParam: string
   }
-  export interface Methods {}
+  export interface Methods {
+    toTaxonomyHumanLink: IToTaxonomyHumanLink
+  }
   export interface Computed {}
   export interface Props {}
   export default Vue.extend<Data, Methods, Computed, Props>({

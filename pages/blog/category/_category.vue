@@ -6,7 +6,14 @@
     Computed,
     Props,
   } from '../tag/_tag.vue'
-  import { nuxtPageAsyncDataForTaxonomyList, ITaxonomyItem } from '~/lib'
+  import {
+    nuxtPageAsyncDataForTaxonomyList,
+    /*                       */
+  } from '~/lib'
+  import type {
+    ITaxonomyItem,
+    /*                       */
+  } from '~/lib'
   export default Vue.extend<Data, Methods, Computed, Props>({
     extends: NuxtPageTagList,
     async asyncData(ctx) {

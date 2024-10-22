@@ -35,11 +35,15 @@
   import Vue from 'vue'
   import BlogListModelByYear from '@/components/blog/BlogListModelByYear.vue'
   import {
-    INuxtContentResult,
     abbreviatize,
-    IAbbreviatize,
     nuxtPageAsyncDataForTaxonomyList,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
+    IAbbreviatize,
     ITaxonomyItem,
+    /*                       */
   } from '~/lib'
   export interface Data {
     urlParam: string

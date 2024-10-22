@@ -15,7 +15,7 @@
           :lang="content.locale"
           class="pb-8 mb-8 border-b border-black border-dashed"
         >
-          <!-- eslint-disable vue/no-v-html -->
+          <!-- eslint-disable vue/no-v-html vue/no-v-text-v-html-on-component -->
           <h2 class="mb-2 font-serif text-xl italic">
             <NuxtLink
               v-if="
@@ -58,7 +58,13 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
+  import {
+    abbreviatize,
+    INuxtContentResult,
+    IAbbreviatize,
+    /*                       */
+  } from '~/lib'
+
   export interface Data {
     contents: INuxtContentResult
     pageBlurb: string

@@ -1,8 +1,3 @@
-import { Context } from '@nuxt/types'
-import type {
-  Result as IResult,
-  NuxtContentInstance as INuxtContentInstance,
-} from '@nuxt/content'
 import type { IPrettyfiedTemporalDate } from '../date'
 import {
   ITaxonomyHuman,
@@ -11,6 +6,11 @@ import {
   extractTaxonomyHuman,
   hydrateTaxonomyCollection,
 } from '../taxonomy'
+import type {
+  Context,
+  INuxtContentInstance,
+  IResult,
+} from './imports'
 import type {
   IFrontMatterPreambleInnerDocument,
   IFrontMatterCoverImageInnerDocument,

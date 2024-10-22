@@ -6,7 +6,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { INuxtContentResult } from '~/lib'
+  import type {
+    INuxtContentResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     content: INuxtContentResult
   }

@@ -4,7 +4,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { createVueMetaInfo } from '~/lib'
+  import {
+    createVueMetaInfo,
+    /*                       */
+  } from '~/lib'
   export interface Data {}
   export interface Methods {}
   export interface Computed {}

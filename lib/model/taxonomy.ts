@@ -118,6 +118,8 @@ export const toTaxonomyHumanLink = (
   return out
 }
 
+export type IToTaxonomyHumanLink = typeof toTaxonomyHumanLink
+
 export const isTaxonomyItem = (input: any): input is ITaxonomyItem => {
   let out: boolean = false
   if ('key' in input) {

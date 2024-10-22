@@ -17,6 +17,7 @@
   import Vue from 'vue'
   import {
     createVueMetaInfo,
+    /*                       */
   } from '~/lib'
   export interface Data {
     title: string

@@ -61,7 +61,14 @@
   import Vue from 'vue'
   import * as JsYaml from 'js-yaml'
   import { ResumeInterface } from 'jsonresume-from-yaml'
-  import { INuxtContentResult, trimText } from '~/lib'
+  import {
+    trimText,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
+    /*                       */
+  } from '~/lib'
 
   /**
    * @TODO

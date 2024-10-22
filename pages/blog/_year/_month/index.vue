@@ -18,7 +18,14 @@
 <script lang="ts">
   import Vue from 'vue'
   import BlogListModelByYear from '@/components/blog/BlogListModelByYear.vue'
-  import { INuxtContentIndexResult } from '~/lib'
+  import {
+    queryNuxtContent,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentIndexResult,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     contents: INuxtContentIndexResult[]
   }

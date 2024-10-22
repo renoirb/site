@@ -36,7 +36,12 @@
 <script lang="ts">
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
-  import { INuxtContentResult, abbreviatize, IAbbreviatize } from '~/lib'
+  import {
+    INuxtContentResult,
+    abbreviatize,
+    IAbbreviatize,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     content: INuxtContentResult
   }
