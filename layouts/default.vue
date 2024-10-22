@@ -35,6 +35,7 @@
     IAppIdentity,
     pageTitleForBlogIndex,
     getColorModeClassName,
+    getColorModeFromElement,
   } from '~/lib'
   export interface Data {
     appIdentity: IAppIdentity
@@ -58,6 +59,8 @@
         ...appIdentityFallback,
         ...appIdentityPicks,
       }
+
+      console.log('layout/default.vue data', colorModeClassName)
       return {
         appIdentity,
         colorModeClassName,
@@ -67,6 +70,22 @@
     },
     watch: {
       $route(to, from) {
+        const colorModeClassName = this.$data.colorModeClassName
+        console.log(
+          'layout/default.vue watch.$route 1 colorModeClassName',
+          colorModeClassName,
+        )
+        const colorMode = getColorModeFromElement(this.$el)
+        console.log('layout/default.vue watch.$route 2', colorMode)
+        const colorModeClassName2 = getColorModeClassName(this.$nuxt.context)
+        console.log('layout/default.vue watch.$route 3', colorModeClassName2)
+        if (colorModeClassName !== colorMode) {
+          const cl = this.$el.ownerDocument.documentElement
+          cl.classList.remove(colorModeClassName)
+          cl.classList.add(colorMode)
+          const four = getColorModeFromElement(this.$el)
+          console.log('layout/default.vue watch.$route 4', four)
+        }
         if (to && to.fullPath && from && from.fullPath) {
           const pageTitle = pageTitleForBlogIndex(to)
           if (to.fullPath !== from.fullPath && pageTitle) {
@@ -77,6 +96,10 @@
     },
     mounted() {
       const colorModeClassName = getColorModeClassName(this.$nuxt.context)
+      console.log(
+        'layout/default.vue mounted colorModeClassName',
+        colorModeClassName,
+      )
       this.colorModeClassName = colorModeClassName
       if (this.$el && this.$el.ownerDocument) {
         const probe = this.$el.ownerDocument as HTMLDocument
@@ -107,7 +130,17 @@
       },
     },
     head() {
-      const colorModeClassName = this.colorModeClassName
+      console.log('layout/default.vue head', this.$el)
+      const colorModeClassName2 = this.colorModeClassName
+      console.log(
+        'layout/default.vue head this.colorModeClassName\n',
+        colorModeClassName2,
+      )
+      const colorModeClassName = getColorModeClassName(this.$nuxt.context)
+      console.log(
+        'layout/default.vue head getColorModeClassName\n',
+        colorModeClassName,
+      )
       // https://vue-meta.nuxtjs.org/api/#htmlattrs
       const htmlAttrs = {
         class: ['layout--default', 'zone__sandwich', colorModeClassName],
