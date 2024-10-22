@@ -30,6 +30,7 @@ export const pageTitleForBlogIndex = (
         ? prettyfiedTemporalDate.prettified
         : ''
     let pageTitle = ''
+    console.log('pageTitleForBlogIndex 0 $route', route)
     if (prettified) {
       const publishedIn = locale.startsWith('fr') ? 'Publié en' : 'Published in'
       pageTitle = `${publishedIn} ${prettified}`
