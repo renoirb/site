@@ -8,7 +8,6 @@
         <blog-list-model-by-year
           :show-year="false"
           :contents="contents"
-          :q="$route && $route.query && $route.query.q"
         />
       </div>
     </div>
