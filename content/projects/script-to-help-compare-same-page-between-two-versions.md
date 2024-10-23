@@ -16,6 +16,7 @@ It’s a tool to help compare pages of the same Web site before a major code upg
 
 To allow us quickly flip through files, compare visually, and take notes.
 
-See [GiHub repo **renoirb/tools-compare-same-page-between-two-versions**][github-repo]
+See [on **GiHub**, project: **renoirb/tools-compare-same-page-between-two-versions**][github-repo]
 
-[github-repo]: https://github.com/renoirb/tools-compare-same-page-between-two-versions
+[github-repo]: https://github.com/renoirb/tools-compare-same-page-between-two-versions 'Compare The Same Page Between Two Versions Of The Same Site Prior Rolling Out'
+
