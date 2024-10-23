@@ -28,7 +28,7 @@ preamble:
 <!-- #TODO Review how to manage images and breaking points under other modes -->
 
 [wpd-stewards]:
-  https://web.archive.org/web/20160303233844/http://www.webplatform.org/stewards/
+  https://web.archive.org/web/20130328132045/http://www.webplatform.org/stewards/
   'WebPlatform Project sponsors'
 [wpd-blog-i-am-renoir]:
   https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/

@@ -24,63 +24,65 @@ excerpt: >-
 waybackMachineSnapshots:
   - orig: http://blog.webplatform.org/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
     snapshots:
+      - https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
       - https://web.archive.org/web/20131005213607/http://blog.webplatform.org/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
   - orig: http://www.webplatform.org/stewards/
     snapshots:
-      - http://web.archive.org/web/20130328132045/http://www.webplatform.org/stewards/
+      - https://web.archive.org/web/20130328132045/http://www.webplatform.org/stewards/
   - orig: http://html.adobe.com/opensource/#wpd
     snapshots:
-      - http://web.archive.org/web/20130903062156/http://html.adobe.com/opensource/#wpd
+      - https://web.archive.org/web/20141012080018/http://html.adobe.com/opensource/#wpd
+      - https://web.archive.org/web/20130903062156/http://html.adobe.com/opensource/#wpd
   - orig: http://www.webplatform.org/stewards/google/
     snapshots:
-      - http://web.archive.org/web/20130807101413/http://www.webplatform.org/stewards/google/
+      - https://web.archive.org/web/20130807101413/http://www.webplatform.org/stewards/google/
   - orig: http://www.webplatform.org/stewards/intel/
     snapshots:
-      - http://web.archive.org/web/20130116171710/http://www.webplatform.org/stewards/intel/
+      - https://web.archive.org/web/20130116171710/http://www.webplatform.org/stewards/intel/
   - orig: http://webplatform.org/stewards/facebook/
     snapshots:
-      - http://web.archive.org/web/20130212083250/http://webplatform.org:80/stewards/facebook/
+      - https://web.archive.org/web/20130212083250/http://webplatform.org:80/stewards/facebook/
   - orig: http://webplatform.org/stewards/google/
     snapshots:
-      - http://web.archive.org/web/20130212083254/http://webplatform.org/stewards/google/
+      - https://web.archive.org/web/20130212083254/http://webplatform.org/stewards/google/
   - orig: http://www.webplatform.org/stewards/hp/
     snapshots:
-      - http://web.archive.org/web/20130806182941/http://www.webplatform.org/stewards/hp/
+      - https://web.archive.org/web/20130806182941/http://www.webplatform.org/stewards/hp/
   - orig: http://www.webplatform.org/stewards/mozilla
     snapshots:
-      - http://web.archive.org/web/20130718224134/http://www.webplatform.org:80/stewards/mozilla
+      - https://web.archive.org/web/20130718224134/http://www.webplatform.org:80/stewards/mozilla
   - orig: http://webplatform.org/stewards/opera/
     snapshots:
-      - http://web.archive.org/web/20130213053724/http://webplatform.org/stewards/opera/
+      - https://web.archive.org/web/20130213053724/http://webplatform.org/stewards/opera/
   - orig: http://www.webplatform.org/stewards/microsoft/
     snapshots:
-      - http://web.archive.org/web/20130806125714/http://www.webplatform.org/stewards/microsoft/
+      - https://web.archive.org/web/20130806125714/http://www.webplatform.org/stewards/microsoft/
   - orig: http://www.webplatform.org/stewards/nokia/
     snapshots:
-      - http://web.archive.org/web/20130808004756/http://www.webplatform.org/stewards/nokia/
+      - https://web.archive.org/web/20130808004756/http://www.webplatform.org/stewards/nokia/
   - orig: http://www.webplatform.org/stewards/w3c/
     snapshots:
-      - http://web.archive.org/web/20131204185043/http://www.webplatform.org/stewards/w3c/
+      - https://web.archive.org/web/20131204185043/http://www.webplatform.org/stewards/w3c/
 ---
 
 In a recent post, I was explaining that [I resigned my
 position][post-resigned-to-join-another].
 
 The [new _exciting project_][post-on-webplatform-docs-blog] that I was referring
-to is the <a href="http://www.webplatform.org/">WebPlatform</a> project at the
+to is the <a href="https://web.archive.org/web/20160304014419/http://www.webplatform.org/">WebPlatform</a> project at the
 <a href="http://www.w3.org/2012/10/webplatform.html.en">W3C</a>.</p>
 
 For people who do not know what the W3C is, it is the main international standards organization for the World Wide Web.
 
-The WebPlatform project is a rapidly growing web development <a href="http://docs.webplatform.org/wiki/WPD:Community">collaborative documentation website</a>.
+The WebPlatform project is a rapidly growing web development <a href="https://webplatform.github.io/docs/WPD/Community">collaborative documentation website</a>.
 
 > I would even call it the Web developer's missing manual for web developers to build quality web applications using the latest techniques.
 
 As for the sponsors, it is backed by well known companies, that we refer to as
-[stewards](http://web.archive.org/web/20130328132045/http://www.webplatform.org/stewards/),
+[stewards](https://web.archive.org/web/20130328132045/http://www.webplatform.org/stewards/),
 such as [Adobe][wbm-steward-adobe],
-[Google](http://web.archive.org/web/20130807101413/http://www.webplatform.org/stewards/google/),
-[Mozilla](https://developer.mozilla.org/en-US/docs/Project:MDN_content_on_WebPlatform.org),
+[Google](https://web.archive.org/web/20130404094726/http://www.webplatform.org/stewards/google),
+[Mozilla](https://web.archive.org/web/20140304140402/https://developer.mozilla.org/en-US/docs/Project:MDN_content_on_WebPlatform.org),
 and Microsoft to name a few.
 
 <rb-notice-box variant="info" class="my-5">
@@ -100,15 +102,15 @@ the public website:
 
 - [Adobe][wbm-steward-adobe]
 - Apple
-- [Facebook](http://web.archive.org/web/20130212083250/http://webplatform.org:80/stewards/facebook/)
-- [Google](http://web.archive.org/web/20130212083254/http://webplatform.org/stewards/google/)
-- [HP](http://web.archive.org/web/20130806182941/http://www.webplatform.org/stewards/hp/ 'HewlettHewlett-Packard, HP Inc.')
-- [Intel](http://web.archive.org/web/20130116171710/http://www.webplatform.org/stewards/intel/)
-- [Microsoft](http://web.archive.org/web/20130806125714/http://www.webplatform.org/stewards/microsoft/)
-- [Mozilla](http://web.archive.org/web/20130718224134/http://www.webplatform.org:80/stewards/mozilla)
-- [Nokia](http://web.archive.org/web/20130808004756/http://www.webplatform.org/stewards/nokia/)
-- [Opera](http://web.archive.org/web/20130213053724/http://webplatform.org/stewards/opera/)
-- [W3C](http://web.archive.org/web/20131204185043/http://www.webplatform.org/stewards/w3c/)
+- [Facebook](https://web.archive.org/web/20130212083250/http://www.webplatform.org/stewards/facebook/)
+- [Google](https://web.archive.org/web/20130212083254/http://www.webplatform.org/stewards/google/)
+- [HP](https://web.archive.org/web/20130806182941/http://www.webplatform.org/stewards/hp/ 'HewlettHewlett-Packard, HP Inc.')
+- [Intel](https://web.archive.org/web/20130116171710/http://www.webplatform.org/stewards/intel/)
+- [Microsoft](https://web.archive.org/web/20130806125714/http://www.webplatform.org/stewards/microsoft/)
+- [Mozilla](https://web.archive.org/web/20130718224134/http://www.webplatform.org:80/stewards/mozilla/)
+- [Nokia](https://web.archive.org/web/20130808004756/http://www.webplatform.org/stewards/nokia/)
+- [Opera](https://web.archive.org/web/20130213053724/http://webplatform.org/stewards/opera/)
+- [W3C](https://web.archive.org/web/20131204185043/http://www.webplatform.org/stewards/w3c/)
 
 Later on, HP stopped providing hosting and DreamHost graciously helped us.
 
@@ -141,5 +143,5 @@ answer~~.
 [post-one-of-my-first-talks]:
   /blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/
 [wbm-steward-adobe]:
-  http://web.archive.org/web/20130903062156/http://html.adobe.com/opensource/#wpd
+  https://web.archive.org/web/20141012080018/http://html.adobe.com/opensource/#wpd
   'As it was visible at the time via the WebArchive.org Wayback Machine'

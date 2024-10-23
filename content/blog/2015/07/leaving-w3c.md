@@ -70,11 +70,11 @@ The last billed hours I made for the project was to host a static HTML version [
 [0]: /blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project
 [1]:
   https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/
-[2]: https://www.w3.org/People/
+[2]: https://www.w3.org/staff/
 [3]:
   https://www.w3.org/Consortium/facts#org
   'Facts about the W3C and its Organizational structure'
-[4]: https://www.webplatform.org/
+[4]: https://web.archive.org/web/20130115092509/http://www.webplatform.org/
 [5]: http://schepers.cc/
 [6]: https://www.w3.org/People/gallery/#year2013
 

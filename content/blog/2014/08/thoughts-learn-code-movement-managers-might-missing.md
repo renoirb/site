@@ -52,8 +52,8 @@ excerpt: >-
 
 <p>I've seen companies who allows participation to open source projects, and/or share their knowledge openly on sites such as Stack Overflow and documentation sites. This is another great way to make developers more engaged to their role, and stay in your company.</p>
 
-<p>When I think of learning resources for web developers in general, there is an independent, and vendor neutral, resource where web developers can learn. The site is convened by the W3C, and sponsored by industry leaders to create just what we’ve been missing all along. The site is <a href="http://www.webplatform.org/">webplatform.org</a>, and I feel like it’s not enough set forward by the industry. Maybe because its not complete, but its a wiki, anybody can participate.</p>
+<p>When I think of learning resources for web developers in general, there is an independent, and vendor neutral, resource where web developers can learn. The site is convened by the W3C, and sponsored by industry leaders to create just what we’ve been missing all along. The site is <a href="https://web.archive.org/web/20130115092509/http://www.webplatform.org/">webplatform.org</a>, and I feel like it’s not enough set forward by the industry. Maybe because its not complete, but its a wiki, anybody can participate.</p>
 
-<p>Full disclosure; I work full time on the  <a href="http://www.webplatform.org/">webplatform.org</a> project, but note that regardless of my current position, I would participate to the site regardless of whether or not i’m hired to do so.</p>
+<p>Full disclosure; I work full time on the  <a href="https://web.archive.org/web/20130115092509/http://www.webplatform.org/">webplatform.org</a> project, but note that regardless of my current position, I would participate to the site regardless of whether or not i’m hired to do so.</p>
 
 <p><em>Photo credits</em>: <a href="https://www.flickr.com/photos/badwsky/532871465/"><strong>Anthony Catalano</strong>, Morse Code Straight Key J-38</a></p>

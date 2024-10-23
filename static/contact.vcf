@@ -3,17 +3,10 @@ VERSION:3.0
 PRODID:-//Apple Inc.//Mac OS X 10.8.4//EN
 N:Boulanger (Professionnal);Renoir;;;
 FN:Renoir Boulanger (Professionnal)
-ORG:W3C;WebPlatform.org
-TITLE:Developer Operations engineer
-EMAIL;type=INTERNET;type=pref:renoir@w3.org
+TITLE:Web Developer
 EMAIL;type=INTERNET;type=HOME:hello@renoirboulanger.com
-TEL;type=CELL;type=VOICE;type=pref:(973) 664-7286
-NOTE:Other links:\nhttp://github.com/renoirb\nhttp://forrst.me/renoirb\nhttp://about.me/renoirb\nhttp://careers.stackoverflow.com/renoirb
+NOTE:Other links:\nhttp://github.com/renoirb\nhttps://renoirb.com/
 URL;type=HOME;type=pref:https://renoirboulanger.com
-URL;type=WORK:http://w3.org/People/#renoirb
-URL;type=WORK:http://webplatform.org/
-item1.URL:http://blog.webplatform.org/author/renoirb/
-item1.X-ABLabel:_$!<Other>!$_
 X-JABBER;type=WORK;type=pref:renoirb
 item2.IMPP;X-SERVICE-TYPE=GoogleTalk;type=pref:xmpp:renoirb
 item2.X-ABLabel:None

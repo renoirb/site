@@ -71,7 +71,7 @@ class BlogController extends Controller
 }</pre>
 On peut sauver des lignes de code et utiliser les <strong>@annotation</strong> pour définir le Template qui sera utilisé, va aller chercher l'entrée dans la base de donnée pour nous (via le <a href="http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html">@ParamConverter</a>), retourner une Exception si elle existe pas.
 
-Vous pouvez voir plus en détails l'implémentation dans Dans mon exemple pris de mon <a href="https://github.com/renoirb/PSSBlogBundle/tree/develop"> <em>fork</em> du bundle PSSBlogBundle</a> qui sert a lire la base de donnée WordPress de mon site, et utiliser Symfony2/Doctrine2/Twig pour le devant de mon site (<a href="http://beta.renoirboulanger.com/"><strong>beta</strong>.renoirboulannger.com</a>, à l'inverse de la version hébergée sur le domaine non "beta").
+Vous pouvez voir plus en détails l'implémentation dans Dans mon exemple pris de mon <a href="https://github.com/renoirb/PSSBlogBundle/tree/develop"> <em>fork</em> du bundle PSSBlogBundle</a> qui sert a lire la base de donnée WordPress de mon site, et utiliser Symfony2/Doctrine2/Twig pour le devant de mon site (<strong>beta</strong><tt>.renoirboulannger.com</tt>, à l'inverse de la version hébergée sur le domaine non "beta").
 <pre lang="php">&lt; ?php
 namespace PSS\Bundle\BlogBundle\Controller;
 

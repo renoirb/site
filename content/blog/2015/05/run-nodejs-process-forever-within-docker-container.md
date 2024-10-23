@@ -445,7 +445,7 @@ Annotated screenshot, when changing a file a hook is called and regenerates the 
 
 [0]: https://github.com/webspecs/publican
 [1]: https://specs.webplatform.org/
-[2]: https://www.w3.org/People/#rberjon
+[2]: https://www.w3.org/staff/alumni/#robin-berjon
 [3]: https://berjon.com/
 [4]: https://github.com/w3c/respec
 [5]: https://github.com/tabatkins/bikeshed
@@ -456,7 +456,7 @@ Annotated screenshot, when changing a file a hook is called and regenerates the 
 [10]: https://github.com/webplatform/publican/blob/task-based-docker/DOCKER.md
 [11]: https://registry.hub.docker.com/u/webspecs/publican/
 [13]: https://github.com/foreverjs/forever
-[wpd]: /blog/tag/webplatform
+[wpd]: /blog/tag/webplatform-docs
 [gist-run-publican-salt-basesystem-docker]:
   https://gist.github.com/renoirb/4e52d93949cf2d049556
   'Run publican inside renoirb/salt-basesystem, inside a Docker container!'

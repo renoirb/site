@@ -32,8 +32,8 @@ Later in a script you may be compelled to do something similar to the following 
 // Rest of the document in document.ready
 // DO NOT USE AS-IS, SEE LAST EXAMPLE
 
-    $('.flip-icon.).click(function(event){  
-        event.preventDefault(); 
+    $('.flip-icon.).click(function(event){
+        event.preventDefault();
         var clicked = $(this);
         var flipElement = clicked.find('i');
         if (flipElement.hasClass('icon-plus')) {
@@ -130,7 +130,7 @@ And of the following:
 </ul>
 <em>References</em>
 <ul>
-	<li><a href="http://docs.webplatform.org/wiki/tutorials/events_in_javascript"><strong>WPD</strong> Events in Javascript (WebPlatform.org)</a></li>
+	<li><a href="https://webplatform.github.io/docs/tutorials/events_in_javascript"><strong>WPD</strong> Events in Javascript (WebPlatform.org)</a></li>
 	<li><a href="https://github.com/jquery/jquery/blob/master/src/event.js#L206">jQuery <code>trigger</code> method</a> from the jQuery source</li>
 	<li><a href="https://github.com/jquery/jquery/blob/master/src/event.js#L715">jQuery <code>on</code> method</a> from the jQuery source</li>
 	<li><a href="http://api.jquery.com/on/">jQuery documentation <code>on</code> method</a> * <strong>Note</strong> direct events handlers such as <code>live</code>, or <code>delegate</code> are considered deprecated (as of jQuery 1.7) <a href="http://api.jquery.com/delegate/">see delegate API</a> and <a href="http://api.jquery.com/live/">live API</a> notes.</li>

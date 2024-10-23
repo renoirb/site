@@ -69,7 +69,7 @@ excerpt: >-
 
 <p>Most of the code had <code>https://*.webplatform.org</code> hardcoded manually. Meaning that I couldn’t install a full copy of the site. This made it hard to rework parts of the site without impacting the live site.</p>
 
-<p>Like I was saying, the <a href="https://blog.webplatform.org/2012/10/building-web-platforms-infrastructure/">work that has been done before me was great</a>! Everything was in place and the community was already writing docs! In fact, <em>before start working on WebPlatform, I knew that I was jumping in a complex project that required all my skills all at once</em>. <em>Rewriting deployment code</em> crucially needed time.</p>
+<p>Like I was saying, the <a href="https://webplatform.github.io/blog/2012/10/building-web-platforms-infrastructure/">work that has been done before me was great</a>! Everything was in place and the community was already writing docs! In fact, <em>before start working on WebPlatform, I knew that I was jumping in a complex project that required all my skills all at once</em>. <em>Rewriting deployment code</em> crucially needed time.</p>
 
 <p>That’s what I did while making sure the site was running smoothly.</p>
 

@@ -91,7 +91,9 @@ we it can query and bootstrap users locally based on the accounts system. We
 call those "relying parties".
 
 Once we have relying party adapter in place, a web app will have the ability to
-check by itself with the [accounts server][4] to see if there's a session for
+check by itself with the
+*accounts server* <!--#TODO-inline-edit-->
+to see if there's a session for
 the current browsing session. If it has, it'll give either an already generated
 OAuth Bearer token, or generate one for the one for the service in question —
 the "SSO" behavior.
@@ -135,5 +137,4 @@ Here is a recording I made showing how it looked like;
 [1]:
   https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization
 [2]: https://dev.twitter.com/oauth
-[3]: https://webplatform.github.io/
-[4]: https://accounts.webplatform.org/
+[3]: /blog/tag/webplatform-docs

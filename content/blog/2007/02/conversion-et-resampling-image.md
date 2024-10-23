@@ -12,7 +12,7 @@ excerpt: ''
 waybackMachineSnapshots:
   - orig: http://www-128.ibm.com/developerworks/library/l-graf/?ca=dnt-428
     snapshots:
-    - http://web.archive.org/web/20070305233450/http://www-128.ibm.com/developerworks/library/l-graf/?ca=dnt-428
+    - https://web.archive.org/web/20070305233450/http://www-128.ibm.com/developerworks/library/l-graf/?ca=dnt-428
   - orig: http://www-128.ibm.com/developerworks/linux/library/l-p101/
     snapshots:
     - https://web.archive.org/web/20070123020354/http://www-128.ibm.com/developerworks/linux/library/l-p101/
@@ -78,5 +78,5 @@ A plus tout le monde :)
 
 - [<em lang=en>Some Perl Scripts</em> par Jean-Paul Le Fevre](https://web.archive.org/web/20070329025336/http://jeanpaul.lefevre.free.fr/ariane/perls.html)
 - [<em lang=en>IBM DeveloperWorks Linux: **Cultured Perl: One-liners 101**](https://web.archive.org/web/20070123020354/http://www-128.ibm.com/developerworks/linux/library/l-p101/)
-- [<em lang=en>IBM DeveloperWorks Linux: **Graphics from the command line** with ImageMagick</em>](http://web.archive.org/web/20070305233450/http://www-128.ibm.com/developerworks/library/l-graf/?ca=dnt-428)
+- [<em lang=en>IBM DeveloperWorks Linux: **Graphics from the command line** with ImageMagick</em>](https://web.archive.org/web/20070305233450/http://www-128.ibm.com/developerworks/library/l-graf/?ca=dnt-428)
 - http://www.imagemagick.org

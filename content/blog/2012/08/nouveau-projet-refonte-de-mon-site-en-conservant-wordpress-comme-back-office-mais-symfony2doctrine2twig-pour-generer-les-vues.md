@@ -98,7 +98,7 @@ de mon site, et utiliser Symfony2/Doctrine2/Twig pour le "frontend". ~~On peut
 voir la différence de vitesse d'exécution et le look entre
 `beta.renoirboulanger.com`, à l'inverse de la version hébergée sur le domaine
 non "`beta`"~~. <ins>Nous ne pouvons voir, l’<abbr>URL</abbr> n’a
-[pas si bien archivé sur le Internet Web Archive](https://web.archive.org/web/20121226050718/http://beta.renoirboulanger.com/)
+[pas si bien archivé sur le Internet Web Archive](https://web.archive.org/web/20121226050718/http://beta.renoirboulanger.com/)</ins>
 
 <!--#TODO-inline-edit-->
 
