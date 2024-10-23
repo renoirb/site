@@ -26,7 +26,7 @@ Il s'agit du service de monitoring avec <a href="http://www.nagios.org/" target=
 
 <!--more-->
 
-Il y a un mois ou deux je me suis commandé le livre "<a href="http://www.amazon.com/Building-Monitoring-Infrastructure-Nagios-Josephsen/dp/0132236931">Building a monitoring infrastructure with Nagios</a>" qui s'avère être très utile pour comprendre le fonctionnement.
+Il y a un mois ou deux je me suis commandé le livre "<a href="https://www.goodreads.com/book/show/1348002.Building_a_Monitoring_Infrastructure_with_Nagios">Building a monitoring infrastructure with Nagios</a>" de David Josephsen <!--#TODO-inline-edit--> qui s'avère être très utile pour comprendre le fonctionnement.
 
 Je ne l'ai pas tout lu car j'avait déja de l'expérience avec Nagios. Puis de toute façon je voulait faire comme on fait souvent, me débrouiller et apprendre avant de "lire le manuel".
 

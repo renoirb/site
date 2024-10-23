@@ -137,7 +137,7 @@ courriels non sollicités][4]» et continue sur le billet «[quelques indices po
 savoir si il s'agit d'une chaîne de lettres][5]».
 
 
-[0]: http://www.livinginternet.com/w/wi_browse.htm
+[0]: https://livinginternet.com/w/wi_browse.htm 'Living Internet - Web Browser History - First, Early'
 [1]: http://browsers.evolt.org/
 [2]: https://www.ghacks.net/2007/09/27/firefox-vs-opera-vs-internet-explorer/
 [3]: http://virtuelvis.com/archives/2004/11/opera-over-firefox

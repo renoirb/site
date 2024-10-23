@@ -36,6 +36,7 @@ Pourquoi? Parceque lorsque nous travaillons sur ledit projet nous oublions parfo
 
 L'exemple de droite explique souvent comment nous <u><strong><em>Aimerions</em></strong></u> que la page soit regardée... alors qu'en réalité nous agissons comme l'exemple de gauche.
 
-J'ai l'intention de donner quelques trucs que l'<a href="http://www.sensible.com/about.html" title="Steve Krug" target="_blank">auteur</a> a plaçé dans son ouvrage.  Étant un ouvrage en anglais, je prendrai soin de traduire pour que tous puissent en profiter.
+J'ai l'intention de donner quelques trucs que l'<a href="https://sensible.com/about/" title="Steve Krug" target="_blank">auteur</a> a plaçé dans son ouvrage.  Étant un ouvrage en anglais, je prendrai soin de traduire pour que tous puissent en profiter.
 
-Pour ceux qui ont la chance de comprendre l'anglais: <a href="http://www.amazon.com/Dont-Make-Me-Think-Usability/dp/0321344758/ref=pd_bbs_1/103-4661001-9188617?ie=UTF8&amp;s=books&amp;qid=1189695817&amp;sr=8-1" title="Se procurer le livre via Amazon." target="_blank">ça vaut la peine de se le procurer</a>!
+Pour ceux qui ont la chance de comprendre l'anglais, ça vaut la peine de se le procurer!
+<!--#TODO-inline-edit--> Il y a probablement aussi une version en Français.

@@ -52,7 +52,7 @@ Afin de garantir le nombre adéquat de portions, ~~veuillez confirmer votre
 présence en envoyant un message par courriel~~. Noubliez pas de mentionner le
 nombre de personne qui vous accompagnera.
 
-(...)
+(...)<!--#TODO-inline-edit-->
 
 ### Détails de l’évènement
 
@@ -61,7 +61,7 @@ nombre de personne qui vous accompagnera.
 - **Pour qui: ** les développeurs, les acteurs du Web et leurs familles
 - **Tarif: ** gratuit!
 
-(...)
+(...)<!--#TODO-inline-edit-->
 
 [0]: http://confoo.ca/
 [1]: http://www.w3qc.org/
