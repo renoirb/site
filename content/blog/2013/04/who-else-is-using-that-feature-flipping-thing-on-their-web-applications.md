@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/04/who-else-is-using-that-feature-flipping-thing-on-their-web-applications/
 status: publish
 revising: true
-created: '2013-04-09'
-updated: '2013-04-09'
+createdAt: '2013-04-09'
+updatedAt: '2013-04-09'
 tags:
   - best-practices
   - development

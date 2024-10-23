@@ -1,8 +1,8 @@
 ---
 title: Sensibilisation sur les courriels non sollicités
 locale: fr-CA
-created: 2008-12-03
-updated: 2013-06-07
+createdAt: 2008-12-03
+updatedAt: 2013-06-07
 canonical: >-
   https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/
 status: publish

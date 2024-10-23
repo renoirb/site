@@ -8,8 +8,8 @@ canonical: >-
 status: publish
 revising: true
 images: true
-created: '2009-08-14'
-updated: '2013-03-27'
+createdAt: '2009-08-14'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: >-

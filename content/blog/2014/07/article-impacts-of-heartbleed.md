@@ -1,8 +1,8 @@
 ---
 title: Answers I gave for an article  about the impacts of Heartbleed
 locale: en-CA
-created: 2014-07-04
-updated: 2014-07-04
+createdAt: 2014-07-04
+updatedAt: 2014-07-04
 canonical: https://renoirboulanger.com/blog/2014/07/article-impacts-of-heartbleed/
 status: publish
 revising: true

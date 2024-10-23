@@ -4,8 +4,8 @@ title: Le film Farenheit 9/11 de Michael More et mes impressions
 canonical: https://renoirboulanger.com/blog/2007/08/farenheit-911-et-mes-impressions/
 status: publish
 revising: true
-created: '2007-08-21'
-updated: '2013-03-27'
+createdAt: '2007-08-21'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

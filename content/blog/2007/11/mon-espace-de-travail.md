@@ -5,8 +5,8 @@ canonical: https://renoirboulanger.com/blog/2007/11/mon-espace-de-travail/
 status: publish
 revising: true
 caption: true
-created: '2007-11-26'
-updated: '2013-03-27'
+createdAt: '2007-11-26'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

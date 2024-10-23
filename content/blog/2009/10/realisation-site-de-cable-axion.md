@@ -6,8 +6,8 @@ status: publish
 revising: true
 caption: true
 migrateImages: true
-created: '2009-10-30'
-updated: '2013-03-27'
+createdAt: '2009-10-30'
+updatedAt: '2013-03-27'
 tags:
   - css
   - geraniumcms

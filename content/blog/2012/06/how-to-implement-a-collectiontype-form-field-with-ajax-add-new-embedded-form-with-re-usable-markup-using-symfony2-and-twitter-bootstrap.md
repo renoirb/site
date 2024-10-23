@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/06/how-to-implement-a-collectiontype-form-field-with-ajax-add-new-embedded-form-with-re-usable-markup-using-symfony2-and-twitter-bootstrap/
 status: publish
 revising: true
-created: '2012-06-21'
-updated: '2013-03-31'
+createdAt: '2012-06-21'
+updatedAt: '2013-03-31'
 tags:
   - jquery
   - symfony2

@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/11/a-list-of-quality-indicators-we-could-find-on-an-application-or-web-site/
 status: publish
 revising: true
-created: '2012-11-11'
-updated: '2013-04-01'
+createdAt: '2012-11-11'
+updatedAt: '2013-04-01'
 tags:
   - architecture
   - software

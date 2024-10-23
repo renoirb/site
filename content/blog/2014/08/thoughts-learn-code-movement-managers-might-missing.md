@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2014/08/thoughts-learn-code-movement-managers-might-missing/
 status: publish
 revising: true
-created: '2014-08-24'
-updated: '2014-08-24'
+createdAt: '2014-08-24'
+updatedAt: '2014-08-24'
 tags:
   - development
   - favourites

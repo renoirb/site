@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 gallery: true
-created: '2009-11-17'
-updated: '2023-11-16'
+createdAt: '2009-11-17'
+updatedAt: '2023-11-16'
 tags:
   - css
   - geraniumcms

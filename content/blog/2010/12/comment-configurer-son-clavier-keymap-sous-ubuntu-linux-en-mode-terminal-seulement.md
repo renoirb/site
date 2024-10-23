@@ -3,8 +3,8 @@ title: >-
   Comment configurer son clavier («keymap») sous Ubuntu Linux en mode terminal
   seulement
 locale: fr-CA
-created: 2010-12-08
-updated: 2024-10-05
+createdAt: 2010-12-08
+updatedAt: 2024-10-05
 canonical: >-
   https://renoirboulanger.com/blog/2010/12/comment-configurer-son-clavier-keymap-sous-ubuntu-linux-en-mode-terminal-seulement/
 status: publish

@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 images: true
-created: '2009-08-30'
-updated: '2013-03-27'
+createdAt: '2009-08-30'
+updatedAt: '2013-03-27'
 tags:
   - humour
 categories:

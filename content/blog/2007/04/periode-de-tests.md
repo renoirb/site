@@ -8,8 +8,8 @@ migrateLinks: false
 migrateImages: false
 gallery: false
 caption: false
-created: '2007-04-25'
-updated: '2013-03-27'
+createdAt: '2007-04-25'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

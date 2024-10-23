@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/04/les-diapositives-de-ma-presentation-au-html5mtl-comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-css-est-publie/
 status: publish
 revising: true
-created: '2012-04-29'
-updated: '2013-03-27'
+createdAt: '2012-04-29'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

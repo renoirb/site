@@ -1,8 +1,8 @@
 ---
 title: Le Manifeste "Open Cloud" pour standardiser l'informatique «dans les nuages»
 locale: fr-CA
-created: 2010-01-02
-updated: 2013-03-27
+createdAt: 2010-01-02
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/01/le-manifeste-open-cloud-pour-standardiser-linformatique-%c2%abdans-les-nuages%c2%bb/
 status: publish

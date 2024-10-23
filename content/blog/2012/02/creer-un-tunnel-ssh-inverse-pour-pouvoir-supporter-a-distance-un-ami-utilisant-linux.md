@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/02/creer-un-tunnel-ssh-inverse-pour-pouvoir-supporter-a-distance-un-ami-utilisant-linux/
 status: publish
 revising: true
-created: '2012-02-29'
-updated: '2013-03-29'
+createdAt: '2012-02-29'
+updatedAt: '2013-03-29'
 tags:
   - linux
   - logiciel-libre

@@ -1,8 +1,8 @@
 ---
 title: A few useful GNU/Linux truth tests while creating salt states
 locale: en-CA
-created: 2015-03-10
-updated: 2023-02-18
+createdAt: 2015-03-10
+updatedAt: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/03/useful-gnulinux-truth-tests/
 status: publish
 revising: true

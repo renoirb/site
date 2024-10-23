@@ -3,8 +3,8 @@ title: >-
   Comment je valide et convertit des documents HTML trop chargés ou provenant de
   Microsoft Word en HTML valide et simplifié
 locale: fr-CA
-created: 2012-08-30
-updated: 2013-06-11
+createdAt: 2012-08-30
+updatedAt: 2013-06-11
 canonical: >-
   https://renoirboulanger.com/blog/2012/08/comment-je-valide-et-convertit-des-documents-html-trop-charges-ou-provenant-de-microsoft-word-en-html-valide-et-simplifie/
 status: publish

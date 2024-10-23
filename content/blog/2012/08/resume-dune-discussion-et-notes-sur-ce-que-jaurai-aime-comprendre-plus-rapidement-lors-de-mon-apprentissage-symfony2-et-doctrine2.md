@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/08/resume-dune-discussion-et-notes-sur-ce-que-jaurai-aime-comprendre-plus-rapidement-lors-de-mon-apprentissage-symfony2-et-doctrine2/
 status: publish
 revising: true
-created: '2012-08-10'
-updated: '2013-03-27'
+createdAt: '2012-08-10'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: >-

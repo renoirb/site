@@ -4,8 +4,8 @@ title: Enfin! J'ai refait mon site
 canonical: https://renoirboulanger.com/blog/2013/04/enfin-jai-refait-mon-site/
 status: publish
 revising: true
-created: '2013-04-09'
-updated: '2013-05-23'
+createdAt: '2013-04-09'
+updatedAt: '2013-05-23'
 tags:
   - integration
   - symfony2

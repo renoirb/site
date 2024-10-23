@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/02/jai-decide-darreter-de-participer-au-conseil-dadministration-du-w3qc/
 status: publish
 revising: true
-created: '2013-02-14'
-updated: '2013-09-07'
+createdAt: '2013-02-14'
+updatedAt: '2013-09-07'
 tags: []
 categories: []
 excerpt: ''

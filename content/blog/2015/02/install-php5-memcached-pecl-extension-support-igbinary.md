@@ -1,8 +1,8 @@
 ---
 title: Install PHP5 Memcached PECL extension and have it support igbinary
 locale: en-CA
-created: 2015-02-18
-updated: 2023-02-18
+createdAt: 2015-02-18
+updatedAt: 2023-02-18
 canonical: 'https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/'
 status: publish
 revising: false

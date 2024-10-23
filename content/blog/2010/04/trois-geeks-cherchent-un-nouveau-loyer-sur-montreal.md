@@ -1,8 +1,8 @@
 ---
 title: Trois Geeks cherchent un nouveau Loyer sur Montréal
 locale: fr-CA
-created: 2010-04-05
-updated: 2010-04-05
+createdAt: 2010-04-05
+updatedAt: 2010-04-05
 canonical: >-
   https://renoirboulanger.com/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal/
 status: publish

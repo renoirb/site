@@ -1,8 +1,8 @@
 ---
 locale: en-CA
 title: Harmonizing how to bundle and package JavaScript/ECMAScript features
-created: 2020-02-04
-updated: 2020-02-04
+createdAt: 2020-02-04
+updatedAt: 2020-02-04
 status: publish
 revising: false
 categories:

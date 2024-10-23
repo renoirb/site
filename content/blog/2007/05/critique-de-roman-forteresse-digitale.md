@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/05/critique-de-roman-forteresse-digitale/
 status: publish
 revising: true
-created: '2007-05-12'
-updated: '2013-03-27'
+createdAt: '2007-05-12'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

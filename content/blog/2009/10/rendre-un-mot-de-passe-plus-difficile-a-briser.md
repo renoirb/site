@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser/
 status: publish
 revising: true
-created: '2009-10-18'
-updated: '2013-03-27'
+createdAt: '2009-10-18'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

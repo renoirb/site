@@ -3,8 +3,8 @@ title: >-
   Réalisation d'une application d'échange de cadeau avec RED L'agence le «club
   échangiste» [2009]
 locale: fr-CA
-created: 2010-02-03
-updated: 2013-03-27
+createdAt: 2010-02-03
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence-le-%c2%abclub-echangiste%c2%bb-2009/
 status: publish

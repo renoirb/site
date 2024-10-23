@@ -1,8 +1,8 @@
 ---
 title: Réalisation du site Écurie Royale [2004]
 locale: fr-CA
-created: 2009-10-28
-updated: 2013-03-27
+createdAt: 2009-10-28
+updatedAt: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2009/10/realisation-du-site-ecurie-royale/
 status: publish
 revising: false

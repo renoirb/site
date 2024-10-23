@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 caption: true
-created: '2010-09-28'
-updated: '2023-11-16'
+createdAt: '2010-09-28'
+updatedAt: '2023-11-16'
 categories:
   - events
 tags: []

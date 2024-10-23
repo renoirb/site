@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/09/devenir-zend-certified-engineer-avec-php5/
 status: publish
 revising: true
-created: '2009-09-29'
-updated: '2013-03-27'
+createdAt: '2009-09-29'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

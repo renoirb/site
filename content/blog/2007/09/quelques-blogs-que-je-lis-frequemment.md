@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/09/quelques-blogs-que-je-lis-frequemment/
 status: publish
 revising: true
-created: '2007-09-18'
-updated: '2013-03-27'
+createdAt: '2007-09-18'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

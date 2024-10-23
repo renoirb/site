@@ -1,8 +1,8 @@
 ---
 title: Recover Discourse from a backup, adjust domain name
 locale: en-CA
-created: 2015-11-20
-updated: 2023-02-18
+createdAt: 2015-11-20
+updatedAt: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/11/recover-discourse-backup-change-domain-name/
 status: publish

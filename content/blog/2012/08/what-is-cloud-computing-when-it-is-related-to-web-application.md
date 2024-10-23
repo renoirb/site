@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/08/what-is-cloud-computing-when-it-is-related-to-web-application/
 status: publish
 revising: true
-created: '2012-08-15'
-updated: '2013-03-27'
+createdAt: '2012-08-15'
+updatedAt: '2013-03-27'
 tags:
   - architecture
   - best-practices

@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/09/reflexion-a-voix-haute-la-realite-frustrante-des-developpeurs-dans-lindustrie-du-web/
 status: publish
 revising: true
-created: '2012-09-20'
-updated: '2013-03-27'
+createdAt: '2012-09-20'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: >-

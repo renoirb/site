@@ -5,8 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/un-firewall-simple-sous-linux-avec-ferm/
 status: publish
 revising: true
-created: '2009-08-19'
-updated: '2013-03-27'
+createdAt: '2009-08-19'
+updatedAt: '2013-03-27'
 tags:
   - linux
   - securite

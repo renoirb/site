@@ -1,8 +1,8 @@
 ---
 title: Creating a new Ubuntu Salt master from the terminal using Cloud-Init
 locale: en-CA
-created: 2015-03-09
-updated: 2023-02-18
+createdAt: 2015-03-09
+updatedAt: 2023-02-18
 canonical: 'https://renoirboulanger.com/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init/'
 status: publish
 revising: true

@@ -3,8 +3,8 @@ title:
   Managing Email Aliases with ProtonMail and SimpleLogin to sort automatically
   into inbox folders based local part
 locale: en-CA
-created: 2024-03-03
-updated: 2024-03-03
+createdAt: 2024-03-03
+updatedAt: 2024-03-03
 canonical: https://renoirboulanger.com/blog/2024/03/managing-email-aliases-with-protonmail-and-simplelogin-to-sort-automatically-into-inbox-folders-based-local-part/
 status: publish
 revising: false

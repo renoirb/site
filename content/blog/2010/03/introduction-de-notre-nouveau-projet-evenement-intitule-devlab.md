@@ -1,8 +1,8 @@
 ---
 title: DevLab Montréal — Introduction de nos événements hebdomadaire pour programmeurs
 locale: fr-CA
-created: 2010-03-17
-updated: 2013-03-27
+createdAt: 2010-03-17
+updatedAt: 2013-03-27
 canonical: 'https://renoirboulanger.com/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab/'
 status: publish
 revising: true

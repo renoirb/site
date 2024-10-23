@@ -4,8 +4,8 @@ title: Mon CV est maintenant en ligne
 canonical: https://renoirboulanger.com/blog/2012/02/mon-cv-est-maintenant-en-ligne/
 status: publish
 revising: true
-created: '2012-02-08'
-updated: '2023-11-16'
+createdAt: '2012-02-08'
+updatedAt: '2023-11-16'
 tags: []
 categories: []
 excerpt: ''

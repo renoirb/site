@@ -4,8 +4,8 @@ title: Joyeux Noël et bonne Annee 2010
 canonical: https://renoirboulanger.com/blog/2009/12/joyeux-noel-et-bonne-annee-2010/
 status: publish
 revising: true
-created: '2009-12-25'
-updated: '2013-03-27'
+createdAt: '2009-12-25'
+updatedAt: '2013-03-27'
 tags: []
 categories: []
 excerpt: ''

@@ -24,23 +24,16 @@ export interface IBaseNuxtContentResult extends IResult {
   /**
    * Nuxt internal file creation date
    *
-   * #ToLearn: Figure Out Unsure if it's filesystem
+   * Hard-coded, per file, desired publication date.
+   * If it's in the file (i.e. hardcoded), otherwise Nuxt will take from the filesystem.
    */
   createdAt: string
   /**
    * Nuxt internal file updated date
    *
-   * #ToLearn: Figure Out Unsure if it's filesystem
+   * If it's in the file (i.e. hardcoded), otherwise Nuxt will take from the filesystem.
    */
   updatedAt: string
-  /**
-   * Hard-coded, per file, desired publication date.
-   */
-  created: string
-  /**
-   * Hard-coded, per file, desired last updated date.
-   */
-  updated: string
   dir: string
   extension: string
   path: string
@@ -102,7 +95,7 @@ export type INuxtContentPrevNext = Pick<
 export interface INuxtContentIndexResult
   extends Pick<
     INuxtContentResult,
-    'created' | 'updated' | 'locale' | 'path' | 'slug' | 'title'
+    'createdAt' | 'updatedAt' | 'locale' | 'path' | 'slug' | 'title'
   > {
   prettyfiedTemporalDate?: IPrettyfiedTemporalDate
 }
@@ -138,6 +131,8 @@ export const isNuxtContentResult = (
 export const queryNuxtContent = async (
   $content: Context['$content'],
   route: Context['route'],
+  year?: string,
+  month?: string,
 ): Promise<INuxtContentResult[]> => {
   let contents: INuxtContentResult[] = []
   const { query = {} as Context['route']['query'] } = route
@@ -157,7 +152,7 @@ export const queryNuxtContent = async (
   let ds = $content('blog', { deep: true })
     .sortBy('created', 'desc')
     .only([
-      'created',
+      'createdAt',
       'excerpt',
       'locale',
       'path',
@@ -166,7 +161,7 @@ export const queryNuxtContent = async (
       'slug',
       'tags',
       'title',
-      'updated',
+      'updatedAt',
     ])
   if (q) {
     ds = ds.search(q)

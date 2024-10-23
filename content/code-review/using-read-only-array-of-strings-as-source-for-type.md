@@ -1,8 +1,8 @@
 ---
 title: Using read-only array of strings as source for type
 locale: en-CA
-created: 2021-01-27
-updated: 2021-01-27
+createdAt: 2021-01-27
+updatedAt: 2021-01-27
 status: publish
 revising: false
 tags:

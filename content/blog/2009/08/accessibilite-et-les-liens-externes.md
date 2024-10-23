@@ -5,8 +5,8 @@ canonical: https://renoirboulanger.com/blog/2009/08/accessibilite-et-les-liens-e
 status: publish
 revising: true
 images: true
-created: '2009-08-20'
-updated: '2013-03-27'
+createdAt: '2009-08-20'
+updatedAt: '2013-03-27'
 tags:
   - accessibility
   - html

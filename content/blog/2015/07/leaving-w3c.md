@@ -1,8 +1,8 @@
 ---
 title: Leaving W3C
 locale: en-CA
-created: 2015-07-30
-updated: 2023-02-18
+createdAt: 2015-07-30
+updatedAt: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/07/leaving-w3c/
 status: publish
 revising: true

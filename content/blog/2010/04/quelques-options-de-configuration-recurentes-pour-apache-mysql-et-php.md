@@ -1,8 +1,8 @@
 ---
 title: Quelques options de configuration récurentes pour Apache, MySQL et PHP
 locale: fr-CA
-created: 2010-04-22
-updated: 2013-03-27
+createdAt: 2010-04-22
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/04/quelques-options-de-configuration-recurentes-pour-apache-mysql-et-php/
 status: publish

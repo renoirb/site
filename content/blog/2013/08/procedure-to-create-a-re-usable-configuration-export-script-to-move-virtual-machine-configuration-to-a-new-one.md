@@ -7,8 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one/
 status: publish
 revising: true
-created: '2013-08-07'
-updated: '2013-08-07'
+createdAt: '2013-08-07'
+updatedAt: '2013-08-07'
 tags:
   - linux
   - logiciel-libre

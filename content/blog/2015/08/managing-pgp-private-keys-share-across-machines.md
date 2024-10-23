@@ -1,8 +1,8 @@
 ---
 title: Managing my PGP/OpenPGP keys and share across many machines
 locale: en-CA
-created: 2015-08-06
-updated: 2023-02-18
+createdAt: 2015-08-06
+updatedAt: 2023-02-18
 canonical: >-
   https://renoirboulanger.com/blog/2015/08/managing-pgp-private-keys-share-across-machines/
 status: publish

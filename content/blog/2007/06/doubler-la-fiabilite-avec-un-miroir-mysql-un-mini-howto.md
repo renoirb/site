@@ -6,8 +6,8 @@ canonical: >-
 status: publish
 revising: true
 caracteresBizzares: true
-created: '2007-06-14'
-updated: '2013-03-27'
+createdAt: '2007-06-14'
+updatedAt: '2013-03-27'
 tags:
   - linux
   - tutoriels

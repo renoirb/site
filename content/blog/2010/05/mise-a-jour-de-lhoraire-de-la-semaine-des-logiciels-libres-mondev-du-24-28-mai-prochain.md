@@ -3,8 +3,8 @@ title: >-
   Mise à jour de l'horaire de la semaine des logiciels libres MonDev du 24-28
   Mai prochain
 locale: fr-CA
-created: 2010-05-17
-updated: 2013-03-27
+createdAt: 2010-05-17
+updatedAt: 2013-03-27
 canonical: >-
   https://renoirboulanger.com/blog/2010/05/mise-a-jour-de-lhoraire-de-la-semaine-des-logiciels-libres-mondev-du-24-28-mai-prochain/
 status: publish
