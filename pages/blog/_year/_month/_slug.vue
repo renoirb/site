@@ -35,7 +35,7 @@
         <a
           v-if="canonical"
           :href="canonical"
-          class="canonical-link"
+          class="canonical-link hidden"
           lang="en"
           target="_blank"
           title="Canonical link, the URL it is meant to replace"
