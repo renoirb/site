@@ -7,6 +7,10 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/11/realisation-du-site-et-de-limage-«branding»-de-beebox-2008/
 status: publish
 revising: true
+images: true
+caption: false
+migrateLinks: true
+migrateImages: true
 tags:
   - css
   - geraniumcms

@@ -29,3 +29,4 @@ C'est le genre de joujou qui semble vraiment interessant... mais peut-il etre un
 
 Le site de <span class="nobr"><a href="http://www.apple.com/ipodtouch/" rel="nofollow">Apple</a></span> ne mentionne pas si leur nouveau produit peut etre utilise comme un organiseur personnel.
 
+<!--#TODO-missing-image ~/assets/content/blog/2007/09/ipod_hero.jpg -->

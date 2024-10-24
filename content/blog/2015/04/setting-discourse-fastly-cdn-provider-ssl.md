@@ -6,6 +6,12 @@ updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: true
+migrateLinks: false
 categories:
   - projects
 tags:
@@ -50,6 +56,7 @@ Our setup uses [Fastly][1], and leverage [their SSL feature][2]. Note that in
 order for you to use SSL too, you'll have to contact them to have it onto your
 account.
 
+<!--#TODO-inline-edit-->
 **SEE ALSO** this [post about _Make Discourse "long polling" work behind
 Fastly_][3]. This step is **required** and is a logical next step to this
 procedure.

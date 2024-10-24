@@ -24,6 +24,7 @@ migrateLinks:
   external: 1
   waybackMachine:
   - laurentbois.com
+
 -->
 
 <p>A force de travailler sur plusieurs environnement de projets il est venu le réflexe d'utiliser des Machines Virtuelles (VM) pour contenir mes espaces de travail. Avec ce type d'installation je peut partager avec mes collègues au bureau la même installation mais qui roule sur chacun de nos postes de travail.</p>

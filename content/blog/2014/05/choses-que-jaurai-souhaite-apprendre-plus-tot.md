@@ -15,6 +15,14 @@ tags: []
 categories: []
 description: Parmi les choses que j’aurai aimé apprendre il y a cette suite règles simples
 title_alternate: Recette du succès en quelques règles simples
+coverImage:
+  src: ~/assets/content/blog/2014/05/things-i-wish-i-knew-sooner-than-later.jpg
+  srcset:
+  -  ~/assets/content/blog/2014/05/things-i-wish-i-knew-sooner-than-later-300x300.jpg 300w
+  -  ~/assets/content/blog/2014/05/things-i-wish-i-knew-sooner-than-later-150x150.jpg 150w
+  -  ~/assets/content/blog/2014/05/things-i-wish-i-knew-sooner-than-later.jpg 600w
+  sizes: '(max-width: 300px) 100vw, 300px'
+  alt: Photo de l’écran du présentateur qui a été prise lors de la conférence. Les points écrits sont décrits dans cet article.
 excerpt: >-
   Ce qui suit fait partie des choses que jaurai aimé apprendre plus tôt dans ma
   vie. C'est une suite de petites règles très simples. Elles proviennent d’un
@@ -53,3 +61,5 @@ Ten Things I Wish I Knew Sooner Rather Than Later - from <a href="https://twitte
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 -->
+
+<!--#TODO-missing-image-->

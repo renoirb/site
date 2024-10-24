@@ -7,6 +7,8 @@ updated: 2013-06-12
 canonical: 'https://renoirboulanger.com/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre/'
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 categories:
   - projects
 tags:
@@ -96,6 +98,8 @@ Nous voulions...
 **Version disponible sous GitHub gist**
 
 J'ai crée une copie dans un [gist github pour partager le script][0].
+
+<!--#TODO-Improve-Code-Blocks-->
 
 <code-block label="MigrateMySQL" active>
 

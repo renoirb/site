@@ -8,6 +8,7 @@ revising: true
 caption: true
 migrateLinks: true
 migrateImages: true
+migrateCode: true
 created: '2010-04-14'
 updated: '2013-03-27'
 tags:
@@ -17,7 +18,7 @@ tags:
   - vocabulaire
   - vulgarisation
 categories: []
-excerpt: ''
+excerpt: ' '
 ---
 
 [caption id="attachment_2079" align="alignright" width="270" caption="Logo Vim, qui signifie vi-improved (amélioré)"]<img class="size-full wp-image-2079 " title="Logo Vim" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/04/Vim_logo.png" alt="Vi - Vi.... Improved (amélioré)" width="270" height="270" />[/caption]

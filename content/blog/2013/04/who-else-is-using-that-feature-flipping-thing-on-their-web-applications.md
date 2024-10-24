@@ -5,6 +5,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/04/who-else-is-using-that-feature-flipping-thing-on-their-web-applications/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: true
+migrateCode: false
+migrateImages: false
+migrateLinks: true
 created: '2013-04-09'
 updated: '2013-04-09'
 tags:
@@ -47,7 +53,7 @@ excerpt: >-
 
 <p>It may then look like something similar to that:</p>
 
-<p><img src="/wp-content/uploads/2013/04/complex-branching-strategy-can-be-harmful.png" alt="Quoting a slide from Zach Holman about branching" /></p>
+<p><img src="https://renoirb.github.io/site-assets/assets/content/blog/2013/04/complex-branching-strategy-can-be-harmful.png" alt="Quoting a slide from Zach Holman about branching" /></p>
 
 <p>It doesn't seem bad in the first place, but even though Git gives an easy way to do so, if you want to adapt quickly, it can bring overhead.</p>
 

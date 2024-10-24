@@ -7,6 +7,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/05/procedure-environnement-developement-local-facile-a-entretenir-avec-apache/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: false
 created: '2013-05-23'
 updated: '2013-05-24'
 tags:
@@ -18,6 +24,14 @@ tags:
   - tutoriels
 categories:
   - projets
+coverImage:
+  src: ~/assets/content/blog/2013/04/apache-et-virtual-document-root-logo-300x300.png
+  alt: |
+    Image décorative d’une plume rapellant le logo du logiciel Apache.
+  srcset:
+    - ~/assets/content/blog/2013/04/apache-et-virtual-document-root-logo.png 300w
+    - ~/assets/content/blog/2013/04/apache-et-virtual-document-root-logo-150x150.png 150w
+  sizes: '(max-width: 300px) 100vw, 300px'
 excerpt: >-
   Mon environment de développement est sous Linux depuis plusieurs années. Avec
   le temps j'ai traîné dans mes portails privé de documentation cette procédure.
@@ -107,8 +121,8 @@ excerpt: >-
 <li>Vérifier qu'il y a ceci:</li>
 </ul>
 
-<pre><code>    NameVirtualHost *:80 
-    Listen 80 
+<pre><code>    NameVirtualHost *:80
+    Listen 80
     UseCanonicalName Off
 </code></pre>
 

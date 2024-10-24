@@ -7,6 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2012-06-18'
 updated: '2013-03-31'
 tags:
@@ -45,7 +47,7 @@ Avoir un manifeste complet pour Symfony 2.0.x que je pourrai utiliser avec mes b
 
 
 
-
+<!--#TODO-Improve-Code-Blocks-->
 <h2 id="composer-json">Composer.json file</h2>
 <pre lang="javascript">
 {

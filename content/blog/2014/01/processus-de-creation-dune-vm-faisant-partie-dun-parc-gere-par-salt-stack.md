@@ -5,20 +5,28 @@ canonical: >-
   https://renoirboulanger.com/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/
 status: publish
 revising: true
-migrateLinks: true
-migrateImages: true
-gallery: false
 caption: false
+gallery: false
+migrateCode: true
+migrateImages: true
+migrateLinks: true
 created: '2014-01-22'
 updated: '2015-03-09'
+categories: []
 tags:
   - cloud-computing
   - favourites
   - best-practices
   - logiciel-libre
   - salt-stack
-categories: []
 description: Processus de création d'une VM faisant partie d'un parc Salt stack
+coverImage:
+  src: ~/assets/content/blog/2014/01/salt-spill-300x280.jpg
+  srcset:
+  -  ~/assets/content/blog/2014/01/salt-spill-300x280.jpg 300w
+  -  ~/assets/content/blog/2014/01/salt-spill.jpg 310w
+  sizes: '(max-width: 300px) 100vw, 300px'
+  alt: Une salière a coté d’un déversement de sel, avec le mot sel écrit en anglais.
 excerpt: >-
   Voici une courte procédure décrivant comment je crée une nouvelle machine
   virtuelle et y applique les configurations automatiquement.

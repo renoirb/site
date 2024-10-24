@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2009-09-09'
 updated: '2013-03-29'
 tags:

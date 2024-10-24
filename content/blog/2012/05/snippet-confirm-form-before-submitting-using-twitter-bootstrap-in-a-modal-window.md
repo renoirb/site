@@ -7,10 +7,11 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window/
 status: publish
 revising: true
-migrateLinks: false
-migrateImages: true
-gallery: true
 caption: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: true
 created: '2012-05-28'
 updated: '2023-11-16'
 tags:

@@ -7,6 +7,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/04/astuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: false
 created: '2013-04-12'
 updated: '2013-05-24'
 categories:
@@ -29,9 +35,9 @@ excerpt: >-
 <p>Parmi les listes de courriels que je suis, <a href="http://listes.rezo.net/mailman/listinfo/accesstech" title="La liste accesstech est une liste de discussion francophone technique sur l'accessibilité.">Accesstech</a>, une question a attiré mon attention et j'ai pensé partager ici la réponse que j'ai donnée avec un exemple en appui.</p>
 
 <blockquote>
-  <p>Concernant le rafraîchissement du contenu des pages avec utilisation d'AJAX, a-t-on trouvé une solution pour 
+  <p>Concernant le rafraîchissement du contenu des pages avec utilisation d'AJAX, a-t-on trouvé une solution pour
   qu'un lecteur d'écran le détecte et retourne l'information à l'utilisateur ?</p>
-  
+
   <p>Si non, quelles solutions alternatives avez-vous trouvées ( en dehors de recharger la page intégralement) ?</p>
 </blockquote>
 

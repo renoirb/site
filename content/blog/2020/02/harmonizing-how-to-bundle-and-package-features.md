@@ -5,6 +5,7 @@ created: 2020-02-04
 updated: 2020-02-04
 status: publish
 revising: false
+migrateCode: true
 categories:
   - experiments
 tags:
@@ -183,7 +184,8 @@ With all of this in place, we can write modern code with all testing and
 maintenance tooling and have multiple bundles of the same tested code to run in
 different run-time conditions.
 
-![Rush running build script for Internet Explorer build target](./rushx-build-for-of-example.png)
+<!--#TODO-missing-image rushx-build-for-of-example.png -->
+<!-- Rush running build script for Internet Explorer build target -->
 
 [8]:
   https://github.com/renoirb/experiments-201908-rush-typescript-just-bili-monorepo/blob/2c040828/polyfill/for-of-example/dist/index.esm.js#L39

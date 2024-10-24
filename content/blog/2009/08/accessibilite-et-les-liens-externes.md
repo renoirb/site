@@ -5,6 +5,11 @@ canonical: https://renoirboulanger.com/blog/2009/08/accessibilite-et-les-liens-e
 status: publish
 revising: true
 images: true
+caption: false
+gallery: false
+migrateImages: true
+migrateLinks: true
+migrateCode: true
 created: '2009-08-20'
 updated: '2013-03-27'
 tags:
@@ -20,6 +25,7 @@ excerpt: ''
 
 <p>Soit que c'est pas manque de temps, trop de choses à penser, ou on n'y pense simplement pas.</p>
 
+<!--#TODO-inline-edit-->
 <p>Dans cet article j'exprime mon opinion sur l'importance (du point de vue utilisabilité) des icones de liens extérieurs. <del>Plus tard je montrerai une méthode pour automatiser</del> <ins>[EDIT 2009-08-23] J'ai documenté comment faire dans <a href="/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite">Manipulation des liens extérieurs et les popup pour améliorer l'Accessibilité</a>.</ins></p>
 
 <!--more-->
@@ -41,10 +47,36 @@ La destination d'un lien peut Être déterminée à partir du libellé (label=""
 <p>Alors, j'ai décidé de trouver une manière d'automatiser?</p>
 <ul>
 	<li>de prendre une balise standard
-<pre lang="html"><a href="http://www.somesite.com/action/handler">Link</a></pre></li>
+
+```html
+<a
+  href="https://example.org/action/handler"
+>
+  Texte du lien
+</a>
+```
+
+  </li>
 	<li>d'ajouter de l'image icône qui annonce que c'est un (lien externe + popup)</li>
 	<li>d'instaurer le <tt>alt=""</tt> de l'image</li>
 	<li>de transformer le lien en popup...
-<pre lang="html"><a href="http://www.somesite.com/action/handler">Link<img src="/icons/external_link.png" alt="Avertissement: Ce lien ouvre dans une fenêtre externe car il ne fait pas partie du présent site" width="10" height="10" class="popuphreficon" /></a></pre></li>
+
+```html
+<a
+  href="https://example.org/action/handler"
+>
+  Texte du lien
+  <img
+    src="/icons/external_link.png"
+    alt="Avertissement: Ce lien ouvre dans une fenêtre externe car il ne fait pas partie du présent site"
+    width="10"
+    height="10"
+    class="popuphreficon"
+  />
+</a>
+```
+<!--#TODO-inline-edit ajouter rel et target _blank -->
+
+  </li>
 </ul>
 <p>... tout ça en Javascript qui manipule le <tt>DOM</tt> d'une manière valide... et qui suit les normes d'<strong>Accessibilité du web</strong> !!</p>

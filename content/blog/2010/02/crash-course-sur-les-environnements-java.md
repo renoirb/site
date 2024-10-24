@@ -24,7 +24,7 @@ excerpt: ''
 <h3>Les versions</h3>
 <p>La majeure différence entre les Java réside dans leur version et ce qui y est distribué avec. La différence majeure réside entre</p>
 <ul>
-	<li><strong>JDK </strong>(Java Development Kit),</li>
+	<li><strong><abbr>JDK</abbr> </strong>(Java Development Kit),</li>
 	<li><strong>JRE </strong>(Java Runtime Environement), et finalement il existe aussi la</li>
 	<li><strong>JME </strong>(Java Mobile Edition) pour les devices mobile.</li>
 </ul>

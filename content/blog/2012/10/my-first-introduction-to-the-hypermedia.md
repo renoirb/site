@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/10/my-first-introduction-to-the-hypermedia/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2012-10-27'
 updated: '2023-11-16'
 tags:

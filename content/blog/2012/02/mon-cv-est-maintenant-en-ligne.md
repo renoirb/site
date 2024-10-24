@@ -32,6 +32,7 @@ excerpt: ''
 
 <h3>Mon CV</h3>
 
+<!--#TODO-inline-edit-->
 <p><a href="https://renoirboulanger.com/resume/detailed" style="width:33%;text-decoration:none;padding:5px 10px;margin:10px 0px;background:#ececec;border:3px solid #cecece;border-radius:5px;display:block">Curriculum Vitae de <strong>Renoir Boulanger</strong></a></p>
 
 <h3>Changements de structure</h3>

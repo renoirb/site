@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/04/installation-rhel4-sur-un-dell-poweredge-860/
 status: publish
 revising: true
+migrateCode: true
 created: '2007-04-16'
 updated: '2013-03-27'
 tags:

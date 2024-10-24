@@ -29,6 +29,7 @@ migrateImages:
   - 390579080_ec97e069b3
   - 390579078_5cab8b7d5e
   estimated total: 3
+
 -->
 
 <center>[caption id="attachment_1324" align="aligncenter" width="300" caption="Page fabriquez votre remise"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/screenshot_remises2.png"><img class="size-medium wp-image-1324" title="Page fabriquez votre remise" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/screenshot_remises2-300x239.png" alt="Page fabriquez votre remise" width="300" height="239" /></a>[/caption]</center>

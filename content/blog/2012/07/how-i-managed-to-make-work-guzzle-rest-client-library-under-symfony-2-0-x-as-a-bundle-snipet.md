@@ -7,6 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/07/how-i-managed-to-make-work-guzzle-rest-client-library-under-symfony-2-0-x-as-a-bundle-snipet/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2012-07-11'
 updated: '2013-03-29'
 tags:
@@ -38,6 +40,7 @@ I am posting here the hilight of what I have been struggling with and will re-re
 
 
 
+<!--#TODO-Display-Or-Migrate-Gists-->
 <h3>The Gist</h3>
 <script src="https://gist.github.com/3074476.js"></script>
 

@@ -6,6 +6,12 @@ updated: 2023-02-18
 canonical: 'https://renoirboulanger.com/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init/'
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: false
 categories:
   - projects
 tags:

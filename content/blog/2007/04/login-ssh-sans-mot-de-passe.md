@@ -4,6 +4,7 @@ title: Login SSH sans mot de passe
 canonical: https://renoirboulanger.com/blog/2007/04/login-ssh-sans-mot-de-passe/
 status: publish
 revising: true
+migrateCode: true
 created: '2007-04-10'
 updated: '2013-03-27'
 tags:

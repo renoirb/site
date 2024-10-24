@@ -8,6 +8,10 @@ canonical: >-
 status: publish
 revising: true
 images: true
+caption: true
+migrateLinks: true
+migrateImages: true
+migrateCode: true
 created: '2010-01-12'
 updated: '2013-03-27'
 tags: []
@@ -30,9 +34,16 @@ excerpt: ''
 <!--more-->
 
 </p><p>Mais lorsqu'on doit utiliser des tags du genre:
-<pre lang="php"><h4>< ?php    echo 'Hello ' . $params['name'] . '!';    ?></h4></pre></p><p>
 
-</p><p>Dans du contenu... ca manque de paufinement. Remarquez que j'ai mis que quelques minutes pour lire. Je ne connait pas tout le produit.</p>
+```php
+echo 'Hello ' . $params['name'] . '!';
+//          ^^^^^^^^^^^^^^^^^^^^^^
+//          Risque d’attaque par injection si l'on ne filtre pas correctement
+```
+<!--#TODO-inline-edit-->
+</p>
+
+<p>Dans du contenu... ca manque de paufinement. Remarquez que j'ai mis que quelques minutes pour lire. Je ne connait pas tout le produit.</p>
 
 <p><ins>C'est que l'engin de template est absent car, dans cet exemple, il s'agit de simple PHP dans un tableau (Array) appelé <tt>$params</tt>. Faut dire que je n'ai pris qu'un exemple dans la mêlée et que en cherchant un peu j'ai trouvé des exemples qui font plus de sens que ce dernier. Si je me fie a la <a href="http://wiki.cmsmadesimple.org/index.php/User_Handbook/Getting_Started/Designer/Templates/fr">documentation ici</a> il y a quand même beaucoup de fonctions similaires a celles de MODx, ma référence.</ins></p>
 <p>&nbsp;</p>

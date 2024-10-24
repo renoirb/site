@@ -7,6 +7,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: false
 categories:
   - tranche-de-vie
 tags:

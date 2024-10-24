@@ -7,6 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/11/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2012-11-22'
 updated: '2013-03-27'
 tags: []

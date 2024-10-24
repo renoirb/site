@@ -6,6 +6,7 @@ updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo/
 status: publish
 revising: true
+migrateCode: true
 categories:
   - experiments
 tags:

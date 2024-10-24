@@ -8,6 +8,12 @@ updated: 2023-02-18
 canonical: https://renoirboulanger.com/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: false
 categories:
   - projects
 tags:

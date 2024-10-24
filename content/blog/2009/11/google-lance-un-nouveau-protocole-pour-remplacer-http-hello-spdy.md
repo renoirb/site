@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/11/google-lance-un-nouveau-protocole-pour-remplacer-http-hello-spdy/
 status: publish
 revising: true
+migrateLinks: true
 created: '2009-11-12'
 updated: '2023-11-20'
 tags: []
@@ -12,7 +13,7 @@ categories: []
 excerpt: ''
 ---
 
-<p><img src="/wp-content/uploads/2009/11/speedy_gonzales.jpg" alt="Image de Speedy Gonzales par Warner Bros." title="Image de Speedy Gonzales par Warner Bros." width="270" height="312" class="size-full wp-image-1386" style="float:right;border:none;"/>Je viens de voir passer la nouvelle mais elle semble pas passer inaperçue (voir <a href="https://twitter.com/#search?q=%23spdy">Twitter</a>). L'idée serait de voir si on pourrait accélérer les choses en <del>réécrivant un protocole</del><ins>ajoutant des modules pour compléter et améliorer le protocole HTTP (EDIT: J'ai mal interprété)</ins> plus adapté que celui écrit il y plus de dix ans.</p>
+<p><img src="https://renoirb.github.io/site-assets/assets/content/blog/2009/11/speedy_gonzales.jpg" alt="Image de Speedy Gonzales par Warner Bros." title="Image de Speedy Gonzales par Warner Bros." width="270" height="312" class="size-full wp-image-1386" style="float:right;border:none;"/>Je viens de voir passer la nouvelle mais elle semble pas passer inaperçue (voir <a href="https://twitter.com/#search?q=%23spdy">Twitter</a>). L'idée serait de voir si on pourrait accélérer les choses en <del>réécrivant un protocole</del><ins>ajoutant des modules pour compléter et améliorer le protocole HTTP (EDIT: J'ai mal interprété)</ins> plus adapté que celui écrit il y plus de dix ans.</p>
 
 <p>L'initiative est décrite dans le billet appelé «<a href="https://code.google.com/speed/">Let's make the web faster</a>» (Rendons le web plus rapide) le nom du projet serait Chromium (voir dans <a href="https://blog.chromium.org/2009/11/2x-faster-web.html">ce billet</a>) qui décrit ce qu'il pourrait être fait pour... rendre le web plus rapide.</p>
 

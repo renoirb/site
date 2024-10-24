@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2012-07-04'
 updated: '2013-03-27'
 tags:
@@ -24,4 +26,5 @@ After trying to use <a href="/blog/2012/06/resume-de-mes-essais-avec-composer-so
 Enjoy
 
 <h3><a href="https://gist.github.com/3048392">The Gist</a></h3>
+<!--#TODO-Display-Or-Migrate-Gists-->
 <script src="https://gist.github.com/3048392.js"> </script>

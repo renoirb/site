@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/09/how-to-create-a-patch-and-ensure-it-is-applied-within-salt-stack/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2013-09-12'
 updated: '2014-02-04'
 tags:

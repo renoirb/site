@@ -15,6 +15,13 @@ tags:
   - salt-stack
 categories:
   - projets
+coverImage:
+  src: ~/assets/content/blog/2013/10/computercloud-218x300.jpg
+  srcset:
+  -  ~/assets/content/blog/2013/10/computercloud-218x300.jpg 218w
+  -  ~/assets/content/blog/2013/10/computercloud.jpg 462w
+  sizes: '(max-width: 218px) 100vw, 218px'
+  alt: Decorative image of a laptop floating in front of a cloudy sky.
 description: >-
   The idea of the project is to give an alternate life to a mostly unused
   laptops a second life.
@@ -29,7 +36,7 @@ excerpt: >-
 
 <p>We can do that from our cloud provider, or create a separate project or even use Wikimedia's OpenStack infrastructure allowance for the project.</p>
 
-<p>With such setup, one could work locally with his Salt stack (or Puppet, or Ansible) deployment schemes, try them, trash VMs, rebuild.</p>
+<p>With such setup, one could work locally with his Salt stack (or Puppet, or Ansible) deployment schemes, try them, trash <abbr>VMs</abbr>, rebuild.</p>
 
 <p>The beauty of it would be that it could be made in a fashion that would not even modify the computer running the VMs. The cluster member running OpenStack hypervisor would be installed seeded through net boot. Not booting from the network would revert the computer back as if it never been used.</p>
 
@@ -46,14 +53,14 @@ excerpt: >-
 
 <ul>
 <li>1..n Computers/laptop supporting netboot</li>
-<li>1 Storage device supporting one or more storage protocol (nfs, samba, sshfs)</li>
+<li>1 Storage device supporting one or more storage protocol (<abbr>nfs</abbr>, samba, <abbr>sshfs</abbr>)</li>
 </ul>
 
 <h3>Hardware requirements</h3>
 
 <ul>
-<li>1 VM providing tftp, dhcp, dns to serve as net boot server that should run outide of the cluster ("Networking node")</li>
-<li>1 VM image of OpenStack controller ("OpS controller")</li>
+<li>1 <abbr>VM</abbr> providing tftp, dhcp, dns to serve as net boot server that should run outide of the cluster ("Networking node")</li>
+<li>1 <abbr>VM</abbr> image of OpenStack controller ("OpS controller")</li>
 <li>1 LiveCD+persistent image with OpenStack preinstalled, configured to use storage device credentials as it's root filesystem ("OpS Hypervisor")</li>
 </ul>
 
@@ -61,7 +68,7 @@ excerpt: >-
 
 <ul>
 <li>Networking node can be the smallest Linux possible, on a RaspberryPI, or a modified Router or Network Attached storage device?</li>
-<li>OpS Hypervisor to be among the supported OpenStack distributions (I think a Ubuntu precise 12.04 LTS or a variant such as Puppy Linux might work too)</li>
+<li>OpS Hypervisor to be among the supported OpenStack distributions (I think a Ubuntu precise 12.04 <abbr>LTS</abbr> or a variant such as Puppy Linux might work too)</li>
 </ul>
 
 <h3>To be continued...</h3>

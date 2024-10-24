@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite/
 status: publish
 revising: true
+migrateCode: true
 created: '2009-08-23'
 updated: '2013-03-27'
 categories:

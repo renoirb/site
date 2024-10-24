@@ -19,6 +19,7 @@ tags:
   - webplatform
 coverImage:
   src: ~/assets/content/blog/2015/05/publican-spec-rangefinder.png
+  alt: 'Screen capture of the RangeFinder API using Publican'
   text: |
     Specification Document for RangeFinder API
 excerpt: >-

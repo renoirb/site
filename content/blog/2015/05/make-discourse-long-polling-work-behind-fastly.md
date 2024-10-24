@@ -7,6 +7,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: true
+migrateLinks: true
 categories:
   - projects
 tags:

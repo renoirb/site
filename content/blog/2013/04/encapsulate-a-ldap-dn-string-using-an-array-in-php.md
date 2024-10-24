@@ -5,6 +5,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2013/04/encapsulate-a-ldap-dn-string-using-an-array-in-php/
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: false
 created: '2013-04-01'
 updated: '2013-04-02'
 categories:
@@ -47,7 +53,7 @@ In such a string, we get basically everything a user may inherit from:
 
 The main idea is to deal with different logic based on changes or assignment. The DN has all we need.
 
-Reading the data from it can be done using successive <code>explode</code> on the <code>=</code> and the <code>,</code>. But How about to use the implicit hierarchy the string conveys. 
+Reading the data from it can be done using successive <code>explode</code> on the <code>=</code> and the <code>,</code>. But How about to use the implicit hierarchy the string conveys.
 
 My objective was to read the previously shown DN string, and parse a manageable array that would look like this:`
 
@@ -64,9 +70,9 @@ My objective was to read the previously shown DN string, and parse a manageable 
 Assuming we want to work with changes in the OU field. We could do as:
 
 <pre lang="php">
-<?php 
+<?php
 
-// Fictive User object, coming from an ORM entity manager ($em) 
+// Fictive User object, coming from an ORM entity manager ($em)
 $user = $em->find($userId); // $user instanceof User
 
 // This is coming from the LDAP

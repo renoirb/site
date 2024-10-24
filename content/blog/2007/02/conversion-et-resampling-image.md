@@ -6,6 +6,7 @@ updated: 2013-03-27
 canonical: https://renoirboulanger.com/blog/2007/02/conversion-et-resampling-image/
 status: publish
 revising: true
+migrateCode: true
 categories: []
 tags: []
 excerpt: ''
@@ -40,7 +41,7 @@ Pour commencer, on va lister tout les fichiers TIF, formater la commande de conv
 <!--#TODO-Import-Code-From-External-->
 
 <rb-notice-box variant="info" class="my-5">
-<strong slot="header">Renoir de 2024:</strong>
+<strong slot="header">Renoir de 2024 :</strong>
 dix-sept ans plus tard, pendant que je relis ces vieux billets, je ne retrouve plus ce fichier et ne me rappelle plus de la commande. Dommage.
 </rb-notice-box>
 

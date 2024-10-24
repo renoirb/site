@@ -91,7 +91,9 @@ La mention disant qu'_il ne reste que 578 noms_ est n'importe quoi. C'est même
 un signe évidemment que la personne qui a créé cette chaîne ne connaît pas ce
 dont elle parle.
 
-![Capture d’écran][3]
+<!--#TODO Better alt-->
+<app-image src="~/assets/content/blog/2008/12/bbc-co-uk-feb-2001-screenshot-300x288.png" figcaption=" " alt="Capture d’écran de ce qui ressemble a un site officiel de la BBC">
+</app-image>
 
 Ensuite, la nouvelle donne un lien vers un site. La BBC, mais si vous regardez
 la date de parution de la nouvelle ([capture d'écran][3]), elle date du
@@ -145,6 +147,5 @@ spécifique aux [**arnaques sur internet**][5].
 [0]: /blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites/
 [1]: http://comicsanscriminal.com/
 [2]: http://news.bbc.co.uk/1/hi/business/1189119.stm
-[3]: /wp-content/uploads/2008/12/bbc-co-uk-feb-2001-screenshot-300x288.png
 [4]: /projets
 [5]: /projets/les-arnaques-sur-internet

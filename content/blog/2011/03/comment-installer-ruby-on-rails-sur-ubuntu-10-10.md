@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2011/03/comment-installer-ruby-on-rails-sur-ubuntu-10-10/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2011-03-25'
 updated: '2013-03-27'
 tags: []
@@ -14,7 +16,6 @@ excerpt: >-
   partir de RVM avec Gem 1.6.2 sur ma station de travail Ubuntu 10.10
 ---
 
-<!-- {EAV_BLOG_VER:54e8acfbc162ab6e} -->
 <p>Une note rapide de comment j'ai installé Ruby
 <h3>Procédure</h3><h3>
 <ul>
@@ -32,7 +33,7 @@ bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 <pre lang="bash">
 .rvm/bin/rvm install 1.9.2
 </pre></li>
-  <li>Will return: 
+  <li>Will return:
 <pre lang="bash">Installing Ruby from source to: ~/.rvm/rubies/ruby-1.9.2-p180, this may take a while depending on your cpu(s)...</pre></li>
   <li>Set the lastely installed rvm as the default    <pre lang="bash">
 rvm --default 1.9.2

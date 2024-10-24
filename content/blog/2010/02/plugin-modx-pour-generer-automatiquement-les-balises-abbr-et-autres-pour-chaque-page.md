@@ -8,6 +8,10 @@ canonical: >-
 status: publish
 revising: true
 images: true
+caption: true
+migrateLinks: true
+migrateImages: true
+migrateCode: true
 created: '2010-02-12'
 updated: '2013-03-27'
 tags:
@@ -55,6 +59,7 @@ excerpt: ''
 <p>&nbsp;</p>
 
 <h3>UTILISER LE PLUGIN</h3>
+<!--#TODO-inline-edit Renoir de 2024-->
 <div style="background-color:#FFEEEE;border:1px solid #666600;color:#660000;margin:20px;padding:20px 30px;text-align:center;"><h4>Avertissement!<br />
 </h4><p>Le plugin a été fait à l'époque de <a href="http://modxcms.com/download/">MODx 0.9.6.x</a> (regardez tout au bas). Il risque de bien fonctionner dans cette version mais n'est pas assuré de fonctionner dans la version stable présente. Vous aurez été avertis!</p>
 <p>Si vous voulez que j'en fasse une adaptation, <a href="https://renoirboulanger.com/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page/#vote"><strong>laissez une note a ce billet</strong></a>!.</p></div>
@@ -95,4 +100,4 @@ Le fichier CSV qui contient les valeurs pour le remplacement des balises. Le con
 <!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/Lang.txt -->
 <!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/UltimateParent.txt -->
 <!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator/abbreviations.txt -->
-<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator.tar.gz -->
+<!--#TODO-Import-Code-From-External /wp-content/uploads/2010/02/ContentAbbrGenerator.tar.gz  -->

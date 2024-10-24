@@ -7,6 +7,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2010-06-10'
 updated: '2013-03-29'
 tags:

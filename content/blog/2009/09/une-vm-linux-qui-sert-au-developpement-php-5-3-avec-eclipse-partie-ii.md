@@ -5,6 +5,8 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/
 status: publish
 revising: true
+migrateCode: true
+migrateLinks: true
 created: '2009-09-03'
 updated: '2013-03-27'
 tags:
@@ -133,7 +135,7 @@ Dec 30 13:39:35 willow ntpdate[1912]: adjust time server 192.168.1.5 offset 0.00
 </li></ol></li>
 <li>Installer le service d'envoi courriel...
 
-Question de pouvoir <strong>recevoir les avertissements</strong> par courriel 
+Question de pouvoir <strong>recevoir les avertissements</strong> par courriel
 <pre lang="bash"># apt-get install postfix</pre>
 <ol>
 	<li>Satellite System (On veut envoyer les courriels ailleurs et rien garder ici)</li>

@@ -7,7 +7,12 @@ updated: 2023-11-15
 canonical: https://renoirboulanger.com/blog/2005/09/redondance/
 status: publish
 revising: true
+caption: false
 caracteresBizzares: true
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: true
 categories:
   - techniques
 tags:
@@ -18,8 +23,9 @@ excerpt: >-
 
 Travailler avec DNS Bind8 n'est pas toujours évident pour les novices.
 
+<!--#TODO-inline-edit Renoir de 2024-->
 <rb-notice-box variant="info" class="my-5">
-<strong slot="header">Renoir de 2023:</strong>
+<strong slot="header">Renoir de 2024:</strong>
 Je dois dire qu’a l'époque ce n'était pas évident car il n’y avait pas autant de documentation et tutoriels. Mais aussi, pour être honnête en 2005 j’étais très débutant!
 </rb-notice-box>
 

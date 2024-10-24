@@ -8,6 +8,12 @@ updated: 2023-11-16
 canonical: 'https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite/'
 status: publish
 revising: true
+caption: false
+caracteresBizzares: false
+gallery: false
+migrateCode: false
+migrateImages: true
+migrateLinks: true
 categories:
   - web-integration-review
 tags:

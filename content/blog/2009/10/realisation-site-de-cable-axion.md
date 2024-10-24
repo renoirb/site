@@ -30,6 +30,7 @@ migrateImages:
   - 190200614_bdc735a0fd
   - 190200616_b86bf07c9b
   estimated total: 4
+
 -->
 
 [caption id="attachment_1301" align="alignright" width="300" caption="Voir la consommation modem"]<a rel="lightbox[0]" href="https://renoirb.github.io/site-assets/assets/content/blog/2009/10/Image-8.png"><img class="size-medium wp-image-1301" title="Voir la consommation modem" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/10/Image-8-300x267.png" alt="Voir la consommation modem" width="300" height="267" /></a>[/caption]

@@ -5,6 +5,7 @@ canonical: >-
   https://renoirboulanger.com/blog/2009/08/reduire-son-empreinte-ecologique-et-aussi-thebigask/
 status: publish
 revising: true
+migrateLinks: true
 created: '2009-08-28'
 updated: '2013-03-27'
 tags: []

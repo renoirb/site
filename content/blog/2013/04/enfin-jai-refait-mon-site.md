@@ -4,6 +4,7 @@ title: Enfin! J'ai refait mon site
 canonical: https://renoirboulanger.com/blog/2013/04/enfin-jai-refait-mon-site/
 status: publish
 revising: true
+migrateLinks: true
 created: '2013-04-09'
 updated: '2013-05-23'
 tags:
@@ -11,6 +12,15 @@ tags:
   - symfony2
 categories:
   - projets
+coverImage:
+  src: ~/assets/content/blog/2013/04/Screen-Shot-2013-04-09-at-9.04.51-PM-160x300.png
+  alt: |
+    Capture d’écran de mon site web avec navigateur web dans un format pour afficher la version adaptés pour les téléphones.
+  srcset:
+    - ~/assets/content/blog/2013/04/Screen-Shot-2013-04-09-at-9.04.51-PM-160x300.png 160w
+    - ~/assets/content/blog/2013/04/Screen-Shot-2013-04-09-at-9.04.51-PM-548x1024.png 548w
+    - ~/assets/content/blog/2013/04/Screen-Shot-2013-04-09-at-9.04.51-PM.png 896w
+  sizes: '(max-width: 160px) 100vw, 160px'
 excerpt: >-
   La dernière fois que j'ai fait mon site c'était en 2007. Comme plusieurs
   j'était comme un «cordonnier mal chaussé». Je viens de remédier à la

@@ -51,3 +51,5 @@ Bref, si vous êtes comme moi; un peu libre prenseur. Vous ado-re-rez le roman e
   <dt>Edition</dt>
     <dd>Jean-Claude Lattès</dd>
 </dl>
+
+<!--#TODO lier vers /blog/2007/06/une-boite-qui-traine/ -->

@@ -5,7 +5,12 @@ canonical: >-
   https://renoirboulanger.com/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto/
 status: publish
 revising: true
+caption: true
 caracteresBizzares: true
+gallery: false
+migrateCode: true
+migrateImages: false
+migrateLinks: true
 created: '2007-06-14'
 updated: '2013-03-27'
 tags:

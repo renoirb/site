@@ -7,12 +7,17 @@ canonical: >-
   https://renoirboulanger.com/blog/2012/04/feuille-de-style-pour-imprimante-pour-les-pages-de-documentation-de-doctrine2-et-symfony2/
 status: publish
 revising: true
+migrateCode: true
+migrateImages: true
+migrateLinks: true
 created: '2012-04-07'
 updated: '2023-11-16'
 tags: []
 categories: []
 excerpt: ''
 ---
+
+<!--#TODO-missing-image /wp-content/uploads/2012/04/Screenshot-at-2012-04-07-200750-d-150x150.png -->
 
 <p><a href="https://renoirb.github.io/site-assets/assets/content/blog/2012/04/Screenshot-at-2012-04-07-200750-d.png"><img class="alignright size-thumbnail wp-image-2552" title="View of the document for print after applying my @media print css" src="https://renoirb.github.io/site-assets/assets/content/blog/2012/04/Screenshot-at-2012-04-07-200750-d-150x150.png" alt="" width="150" height="150" /></a>Je suis  en train d'étudier activement <a href="http://symfony.com/">Symfony2</a> et <a href="http://doctrine-project.org/">Doctrine2</a> car j'ai fait le saut du coté développement applicatif a temps plein.</p>
 
@@ -40,6 +45,7 @@ excerpt: ''
 
 <p>J'ai aussi ajusté le fait que les blocs de configuration alternatifs (yml, php, xml) soient tous visible. En imprimé si on veut comparer la syntaxe, on n'a pas javascript pour activer les tabs.</p>
 
+<!--#TODO-Improve-Code-Blocks-->
 <pre lang="css">@media print {
   #footer,
   .footer_popout,
