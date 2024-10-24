@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/renoirb
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://renoirboulanger.com
+  * I am renoirb (https://keybase.io/renoirb) on keybase.
+  * I have a public key with fingerprint 783E 74CE 1042 6F9F 2E2C  572A BC06 4BAD 27BF 89C1
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "783e74ce10426f9f2e2c572abc064bad27bf89c1",
+            "host": "keybase.io",
+            "key_id": "BC064BAD27BF89C1",
+            "uid": "a8751f24d4ef65365ffbe50a2f2eaa00",
+            "username": "renoirb"
+        },
+        "service": {
+            "hostname": "renoirboulanger.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1395935834,
+    "expire_in": 157680000,
+    "prev": "b5c1dc8f2da4bb8a8c1f3be253f9504df18adfc22e9ba0aa0e591af9d3390190",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+owFVkVtIFFEYx3e7uLlZeCkqWsKmhzXdtbnuzqxRtJZUhlrmQzeWMzNn3El3Zpu9
+lOlWCkGuBRp2eZIu+mBRtOZDW5KFYIiZUA9JWWm0FJYlKSpE0hmph87L4fzP7/t/
+35+vcdlCg9nYlVR4x9pd/9TY/2SWN5TSuw9WY7wqVmGuaqwCzl+SrJRDza/JShBz
+YU6Wgk5agAROkw6Jk0hICoyTBLyAO2geiKSTl1hOIDAb5lUDegWy4UEA5soq0tDD
+I4tIdecj3r1tO+l0F7Bcvs6H5j8A62QIiaRFGkoOhnIwksRDBgckagUAjutgAGoK
+8EFEa1BRZY3HIjYMiWFZgPrIeuf/ATVUCfQYuYLqQw5+TQ2qglqJAG8w6A+4dINg
+lV+vOA55z18vDy8rIoqPKsJQC8iqgrkIRApBWTcnKI7hKIalaBsGT/hlDXpknWCc
+DhZHR+8Dw8iSZwRCFFiJFAHN8yxgBUKieEgylMQxOC1KBAtESSBJyPEARykhwxFA
+4kSK4nCC0zMH4DFFxVwUGhOUI8uAXK6AYEiDWKTeaFlkMJoNSYsX6As0mJNT/631
+VIppzl4yOjJxybr8dpbjwIuR4bXp532nDXH7/Y5zeLS362jjztafGzqGWp472r+K
+094jXwr7b52xxy/PtDmnM2KEufb77+yexODYr8no6HqFMr9MLU6UZeX29H3L/Oi9
+ntlUYhpePsinDW0ts7+27BiPTzQUGa+GHozNZWxK2veoLW9ITGgXSvOT627WWsyO
+5uK5tPcxa9T2uKJzY2/pSndeZ3J608Ml60yx7lXjbwtSuxL3fryqufuudWxmaXhX
+NG+K6tv8ZsaVUpQTOwn2TF1cEQFlob2mzwNTcnvdh7YWc49ttnmLNeeTZQ2oWR1J
+7B8ZmB085Dub/ezKZEq84ca1w38A
+=1zvO
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/renoirb
+
+==================================================================

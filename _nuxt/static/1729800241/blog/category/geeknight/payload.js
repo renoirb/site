@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/category/geeknight", (function(a){return {data:[{},{},{contents:[],taxonomyKey:a,taxonomy:{key:a}}],fetch:[],mutations:void 0}}("geeknight")));

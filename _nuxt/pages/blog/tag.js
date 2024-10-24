@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{361:function(t,e,n){"use strict";n.r(e);var l=n(6),component=Object(l.a)({},(function(){var t=this.$createElement;return(this._self._c||t)("nuxt-child",{key:this.$route.params.tag+"--parent",staticClass:"pages__blog__tag--parent"})}),[],!1,null,null,null);e.default=component.exports}}]);

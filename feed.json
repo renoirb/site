@@ -1,0 +1,1363 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Renoir Boulanger",
+    "home_page_url": "https://renoirboulanger.com",
+    "description": "Fascinated By The Open Web Platform",
+    "author": {
+        "name": "Renoir Boulanger",
+        "url": "https://renoirboulanger.com/site"
+    },
+    "items": [
+        {
+            "id": "https://renoirboulanger.com/site/blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting",
+            "url": "https://renoirboulanger.com/site/blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting",
+            "title": "Managing Email Aliases with ProtonMail and SimpleLogin to sort automatically into inbox folders based local part",
+            "date_modified": "2024-03-03T00:00:00.000Z",
+            "date_published": "2024-03-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2017/02/things-i-ve-worked-on-while-maintaining-webplatform-org",
+            "url": "https://renoirboulanger.com/site/blog/2017/02/things-i-ve-worked-on-while-maintaining-webplatform-org",
+            "title": "Things I’ve worked on in the last two years while maintaining WebPlatform.org",
+            "date_modified": "2023-11-20T00:00:00.000Z",
+            "date_published": "2017-02-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/11/recover-discourse-backup-change-domain-name",
+            "url": "https://renoirboulanger.com/site/blog/2015/11/recover-discourse-backup-change-domain-name",
+            "title": "Recover Discourse from a backup, adjust domain name",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-11-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites",
+            "url": "https://renoirboulanger.com/site/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites",
+            "title": "Thoughts about improving load resiliency for CMS driven Websites",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-08-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/08/managing-pgp-private-keys-share-across-machines",
+            "url": "https://renoirboulanger.com/site/blog/2015/08/managing-pgp-private-keys-share-across-machines",
+            "title": "Managing my PGP/OpenPGP keys and share across many machines",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-08-06T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files",
+            "url": "https://renoirboulanger.com/site/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files",
+            "title": "Migrating WebPlatform.org MediaWiki into Git as Markdown files",
+            "date_modified": "2020-11-18T00:00:00.000Z",
+            "date_published": "2015-07-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/07/leaving-w3c",
+            "url": "https://renoirboulanger.com/site/blog/2015/07/leaving-w3c",
+            "title": "Leaving W3C",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-07-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains",
+            "url": "https://renoirboulanger.com/site/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains",
+            "title": "Add OpenStack instance meta-data info in your salt grains",
+            "date_modified": "2023-11-17T00:00:00.000Z",
+            "date_published": "2015-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/05/converting-dynamic-site-static-copy",
+            "url": "https://renoirboulanger.com/site/blog/2015/05/converting-dynamic-site-static-copy",
+            "title": "Converting a dynamic site into static HTML documents",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-05-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/05/run-nodejs-process-forever-within-docker-container",
+            "url": "https://renoirboulanger.com/site/blog/2015/05/run-nodejs-process-forever-within-docker-container",
+            "title": "Run a NodeJS process through forever from within a Docker container",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-05-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/05/make-discourse-long-polling-work-behind-fastly",
+            "url": "https://renoirboulanger.com/site/blog/2015/05/make-discourse-long-polling-work-behind-fastly",
+            "title": "Make Discourse “long polling” work behind Fastly or Varnish",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-05-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl",
+            "url": "https://renoirboulanger.com/site/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl",
+            "title": "Setting up Discourse with Fastly as a CDN provider and TLS",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-04-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/04/run-oauth-identity-provider-service",
+            "url": "https://renoirboulanger.com/site/blog/2015/04/run-oauth-identity-provider-service",
+            "title": "How to run your own OAuth Identity provider service",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-04-13T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package",
+            "url": "https://renoirboulanger.com/site/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package",
+            "title": "Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS and make your own .deb package for deployment",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-04-05T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/04/install-discourse-docker-ubuntu-14-04-aufs-enabled",
+            "url": "https://renoirboulanger.com/site/blog/2015/04/install-discourse-docker-ubuntu-14-04-aufs-enabled",
+            "title": "Install Discourse and Docker on Ubuntu 14.04 with aufs enabled",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-04-02T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/03/useful-gnulinux-truth-tests",
+            "url": "https://renoirboulanger.com/site/blog/2015/03/useful-gnulinux-truth-tests",
+            "title": "A few useful GNU/Linux truth tests while creating salt states",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-03-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init",
+            "url": "https://renoirboulanger.com/site/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init",
+            "title": "Creating a new Ubuntu Salt master from the terminal using Cloud-Init",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-03-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary",
+            "url": "https://renoirboulanger.com/site/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary",
+            "title": "Install PHP5 Memcached PECL extension and have it support igbinary",
+            "date_modified": "2023-02-18T00:00:00.000Z",
+            "date_published": "2015-02-18T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php",
+            "url": "https://renoirboulanger.com/site/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php",
+            "title": "HHVM et Hack; ce qui les distingue de PHP",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2015-02-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement",
+            "url": "https://renoirboulanger.com/site/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement",
+            "title": "Quelques bouts de code pour automatiser le déploiement",
+            "date_modified": "2015-02-17T00:00:00.000Z",
+            "date_published": "2015-01-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack",
+            "url": "https://renoirboulanger.com/site/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack",
+            "title": "Create a MariaDB cluster with replication over SSL with Salt Stack",
+            "date_modified": "2015-02-03T00:00:00.000Z",
+            "date_published": "2015-01-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/11/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
+            "url": "https://renoirboulanger.com/site/blog/2012/11/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client",
+            "title": "Why would I NOT use my own framework and how I sell usage of Symfony2 and other current PHP 5.3+ goodies to my client",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-11-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/11/a-list-of-quality-indicators-we-could-find-on-an-application-or-web-site",
+            "url": "https://renoirboulanger.com/site/blog/2012/11/a-list-of-quality-indicators-we-could-find-on-an-application-or-web-site",
+            "title": "A list of quality indicators we could find on an application or web site",
+            "date_modified": "2013-04-01T00:00:00.000Z",
+            "date_published": "2012-11-11T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/10/my-first-introduction-to-the-hypermedia",
+            "url": "https://renoirboulanger.com/site/blog/2012/10/my-first-introduction-to-the-hypermedia",
+            "title": "Introduction to the Hypermedia",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2012-10-27T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/comment-je-valide-et-convertit-des-documents-html-trop-charges-ou-provenant-de-microsoft-word-en-html-valide-et-simplifie",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/comment-je-valide-et-convertit-des-documents-html-trop-charges-ou-provenant-de-microsoft-word-en-html-valide-et-simplifie",
+            "title": "Comment je valide et convertit des documents HTML trop chargés ou provenant de Microsoft Word en HTML valide et simplifié",
+            "date_modified": "2013-06-11T00:00:00.000Z",
+            "date_published": "2012-08-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues",
+            "title": "Nouveau projet: Refonte de mon site en conservant WordPress comme back-office, mais Symfony2 / Doctrine2 / Twig pour générer les vues",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-08-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/09/reflexion-a-voix-haute-la-realite-frustrante-des-developpeurs-dans-lindustrie-du-web",
+            "url": "https://renoirboulanger.com/site/blog/2012/09/reflexion-a-voix-haute-la-realite-frustrante-des-developpeurs-dans-lindustrie-du-web",
+            "title": "Réflexion a voix-haute: La réalité frustrante des développeurs dans l'industrie du web",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-09-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/ma-critique-sur-lintegration-du-site-a25-com",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/ma-critique-sur-lintegration-du-site-a25-com",
+            "title": "Ma critique sur l'intégration du site a25.com",
+            "date_modified": "2023-11-18T00:00:00.000Z",
+            "date_published": "2012-08-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/what-is-cloud-computing-when-it-is-related-to-web-application",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/what-is-cloud-computing-when-it-is-related-to-web-application",
+            "title": "What is Cloud computing when it is related to web application",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-08-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/some-steps-you-can-look-for-if-you-feel-your-web-application-is-slow",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/some-steps-you-can-look-for-if-you-feel-your-web-application-is-slow",
+            "title": "Some steps you can look for if you feel your web application is slow",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-08-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/my-answer-to-people-asking-whether-they-should-or-not-use-a-framework-on-their-programming-language",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/my-answer-to-people-asking-whether-they-should-or-not-use-a-framework-on-their-programming-language",
+            "title": "My answer to People asking whether they should or not use a framework on their programming language",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-08-13T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/resume-dune-discussion-et-notes-sur-ce-que-jaurai-aime-comprendre-plus-rapidement-lors-de-mon-apprentissage-symfony2-et-doctrine2",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/resume-dune-discussion-et-notes-sur-ce-que-jaurai-aime-comprendre-plus-rapidement-lors-de-mon-apprentissage-symfony2-et-doctrine2",
+            "title": "Résumé d'une discussion et notes sur ce que j'aurai aimé comprendre plus rapidement lors de mon apprentissage Symfony2 et Doctrine2",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-08-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing",
+            "title": "Project manifest: Content management publishing platform to implement Accessibility, Semantic markup, and ease web publishing",
+            "date_modified": "2013-04-10T00:00:00.000Z",
+            "date_published": "2012-08-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/08/crash-course-about-how-dns-works-and-the-things-you-should-know-about-it",
+            "url": "https://renoirboulanger.com/site/blog/2012/08/crash-course-about-how-dns-works-and-the-things-you-should-know-about-it",
+            "title": "Crash course about how DNS works and the things you should know about it",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-08-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/07/a-quick-overview-on-the-advantages-to-architect-you-html-in-an-object-oriented-approach",
+            "url": "https://renoirboulanger.com/site/blog/2012/07/a-quick-overview-on-the-advantages-to-architect-you-html-in-an-object-oriented-approach",
+            "title": "A quick overview on the advantages to architect you HTML in an \"Object Oriented\" approach",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-07-24T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/07/how-i-managed-to-make-work-guzzle-rest-client-library-under-symfony-2-0-x-as-a-bundle-snipet",
+            "url": "https://renoirboulanger.com/site/blog/2012/07/how-i-managed-to-make-work-guzzle-rest-client-library-under-symfony-2-0-x-as-a-bundle-snipet",
+            "title": "How I managed to make work Guzzle REST client library under Symfony 2.0.x as a bundle [Snipet]",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2012-07-11T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies",
+            "url": "https://renoirboulanger.com/site/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies",
+            "title": "My current Symfony 2.0.x (favourites) vendor dependencies",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-07-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process",
+            "url": "https://renoirboulanger.com/site/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process",
+            "title": "Choosing a framework, how I personally check as “hot” characteristics, my evaluation process",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2012-07-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/06/trying-to-find-templating-engine-library-of-markup-generating-schema-orgrdfa-content",
+            "url": "https://renoirboulanger.com/site/blog/2012/06/trying-to-find-templating-engine-library-of-markup-generating-schema-orgrdfa-content",
+            "title": "Trying to find templating engine library of markup generating schema.org/RDFa content",
+            "date_modified": "2013-04-10T00:00:00.000Z",
+            "date_published": "2012-06-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/06/mon-souhait-pour-bien-ecrire-sur-le-web-lettre-ouverte-a-druide",
+            "url": "https://renoirboulanger.com/site/blog/2012/06/mon-souhait-pour-bien-ecrire-sur-le-web-lettre-ouverte-a-druide",
+            "title": "Mon souhait pour bien écrire sur le web: Lettre ouverte à Druide",
+            "date_modified": "2013-03-31T00:00:00.000Z",
+            "date_published": "2012-06-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/06/how-to-implement-a-collectiontype-form-field-with-ajax-add-new-embedded-form-with-re-usable-markup-using-symfony2-and-twitter-bootstrap",
+            "url": "https://renoirboulanger.com/site/blog/2012/06/how-to-implement-a-collectiontype-form-field-with-ajax-add-new-embedded-form-with-re-usable-markup-using-symfony2-and-twitter-bootstrap",
+            "title": "How to implement a CollectionType Form field with AJAX \"add new\" embedded form with re-usable markup using Symfony2 and Twitter Bootstrap",
+            "date_modified": "2013-03-31T00:00:00.000Z",
+            "date_published": "2012-06-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests",
+            "url": "https://renoirboulanger.com/site/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests",
+            "title": "Résumé de mes essais avec composer sous Symfony 2.0.x et un manifeste composer.json pour vos propres tests",
+            "date_modified": "2013-03-31T00:00:00.000Z",
+            "date_published": "2012-06-18T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window",
+            "url": "https://renoirboulanger.com/site/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window",
+            "title": "Confirm form before submitting using Twitter Bootstrap in a Modal window [Snippet]",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2012-05-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/12/comment-configurer-son-clavier-keymap-sous-ubuntu-linux-en-mode-terminal-seulement",
+            "url": "https://renoirboulanger.com/site/blog/2010/12/comment-configurer-son-clavier-keymap-sous-ubuntu-linux-en-mode-terminal-seulement",
+            "title": "Comment configurer son clavier («keymap») sous Ubuntu Linux en mode terminal seulement",
+            "date_modified": "2024-10-05T00:00:00.000Z",
+            "date_published": "2010-12-08T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/04/les-diapositives-de-ma-presentation-au-html5mtl-comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-css-est-publie",
+            "url": "https://renoirboulanger.com/site/blog/2012/04/les-diapositives-de-ma-presentation-au-html5mtl-comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-css-est-publie",
+            "title": "Les diapositives de ma présentation au HTML5Mtl \"Comment entretenir et utiliser une architecture modulaire et réutilisable CSS\" est publié",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-04-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/04/feuille-de-style-pour-imprimante-pour-les-pages-de-documentation-de-doctrine2-et-symfony2",
+            "url": "https://renoirboulanger.com/site/blog/2012/04/feuille-de-style-pour-imprimante-pour-les-pages-de-documentation-de-doctrine2-et-symfony2",
+            "title": "Feuille de style pour imprimante pour les pages de documentation de Doctrine2 et Symfony2",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2012-04-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/02/creer-un-tunnel-ssh-inverse-pour-pouvoir-supporter-a-distance-un-ami-utilisant-linux",
+            "url": "https://renoirboulanger.com/site/blog/2012/02/creer-un-tunnel-ssh-inverse-pour-pouvoir-supporter-a-distance-un-ami-utilisant-linux",
+            "title": "Créer un tunnel SSH inverse pour pouvoir supporter à distance un ami utilisant Linux",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2012-02-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/02/comment-rapidement-acceder-aux-logs-dun-environnement-de-production-symfony-1-x-en-moins-de-tapes-clavier-posible",
+            "url": "https://renoirboulanger.com/site/blog/2012/02/comment-rapidement-acceder-aux-logs-dun-environnement-de-production-symfony-1-x-en-moins-de-tapes-clavier-posible",
+            "title": "Comment rapidement accéder aux logs d'un environnement de production symfony 1.x en moins de tapes clavier posible",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2012-02-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2012/02/mon-cv-est-maintenant-en-ligne",
+            "url": "https://renoirboulanger.com/site/blog/2012/02/mon-cv-est-maintenant-en-ligne",
+            "title": "Mon CV est maintenant en ligne",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2012-02-08T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme",
+            "url": "https://renoirboulanger.com/site/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme",
+            "title": "Bug trouvé et corrigé sur un thème WordPress rtTheme",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-07-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this",
+            "url": "https://renoirboulanger.com/site/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this",
+            "title": "Traduction libre de l’article «Why the @&*# is Microsoft doing all this?»",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "date_published": "2010-05-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion",
+            "url": "https://renoirboulanger.com/site/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion",
+            "title": "Comment remplacer les caract√®res bizzares dans WordPress lorsqu'on a mal fait la conversion",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2010-06-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/realisation-du-micro-site-de-linitiative-environnementale-de-la-ville-de-sherbrooke-2006-2",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/realisation-du-micro-site-de-linitiative-environnementale-de-la-ville-de-sherbrooke-2006-2",
+            "title": "Réalisation du Micro-site de l'Initiative Environnementale de la Ville de Sherbrooke [2006]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-04-26T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2014/08/thoughts-learn-code-movement-managers-might-missing",
+            "url": "https://renoirboulanger.com/site/blog/2014/08/thoughts-learn-code-movement-managers-might-missing",
+            "title": "Thoughts about learning in the web developer job, what managers might be missing",
+            "date_modified": "2014-08-24T00:00:00.000Z",
+            "date_published": "2014-08-24T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2014/07/notes-experience-asus-dvd-sdrw-08d2s-u",
+            "url": "https://renoirboulanger.com/site/blog/2014/07/notes-experience-asus-dvd-sdrw-08d2s-u",
+            "title": "Notes of my purchase experience with ASUS slim DVD-RW reader SDRW-08D2S-U",
+            "date_modified": "2014-07-10T00:00:00.000Z",
+            "date_published": "2014-07-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/09/lappel-aux-conferenciers-pour-confoo-2011-est-lance",
+            "url": "https://renoirboulanger.com/site/blog/2010/09/lappel-aux-conferenciers-pour-confoo-2011-est-lance",
+            "title": "L'appel aux conférenciers pour ConFoo 2011 est lancé!",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2010-09-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x",
+            "url": "https://renoirboulanger.com/site/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x",
+            "title": "Installer une Machine Virtuelle Linux roulant dans VMware Fusion sous Mac OS X",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2010-07-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd",
+            "title": "Procédure pour créer un serveur FTP sécurisé SSL forcé avec usager virtuels sous Ubuntu Linux avec vsFTPd",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2010-04-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/comment-dire-a-apache-le-mime-type-dun-document-office-2007",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/comment-dire-a-apache-le-mime-type-dun-document-office-2007",
+            "title": "Comment dire à Apache le mime-type d'un document Office 2007",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-04-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/les-differentes-versions-du-service-de-taches-planifie-cron",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/les-differentes-versions-du-service-de-taches-planifie-cron",
+            "title": "Les différentes versions du service de tâches planifié CRON",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-04-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/la-semaine-des-logiciels-libres-a-montreal-mondev",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/la-semaine-des-logiciels-libres-a-montreal-mondev",
+            "title": "La semaine Des logiciels libres à Montréal «MonDev»",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-04-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim",
+            "title": "Comment automatiser une tâche avec CRON en utilisant Vim",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-04-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page",
+            "url": "https://renoirboulanger.com/site/blog/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page",
+            "title": "Plugin MODx pour générer automatiquement les balises ABBR et autres pour chaque page",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-02-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/01/revue-de-fonctions-qui-sont-selon-moi-ideales-a-un-cms-entre-cms-made-simple-et-modx",
+            "url": "https://renoirboulanger.com/site/blog/2010/01/revue-de-fonctions-qui-sont-selon-moi-ideales-a-un-cms-entre-cms-made-simple-et-modx",
+            "title": "Revue de fonctions qui sont, selon-moi, idéales a un CMS entre CMS Made Simple et MODx",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-01-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2020/09/porting-all-my-content",
+            "url": "https://renoirboulanger.com/site/blog/2020/09/porting-all-my-content",
+            "title": "Porting all my content into a static-site",
+            "date_modified": "2020-09-10T00:00:00.000Z",
+            "date_published": "2020-09-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2020/02/harmonizing-how-to-bundle-and-package-features",
+            "url": "https://renoirboulanger.com/site/blog/2020/02/harmonizing-how-to-bundle-and-package-features",
+            "title": "Harmonizing how to bundle and package JavaScript/ECMAScript features",
+            "date_modified": "2020-02-04T00:00:00.000Z",
+            "date_published": "2020-02-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2020/02/data-driven-ui",
+            "url": "https://renoirboulanger.com/site/blog/2020/02/data-driven-ui",
+            "title": "Data Driven UI",
+            "date_modified": "2020-02-04T00:00:00.000Z",
+            "date_published": "2020-02-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2014/07/article-impacts-of-heartbleed",
+            "url": "https://renoirboulanger.com/site/blog/2014/07/article-impacts-of-heartbleed",
+            "title": "Answers I gave for an article  about the impacts of Heartbleed",
+            "date_modified": "2014-07-04T00:00:00.000Z",
+            "date_published": "2014-07-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/09/realisation-de-lintegration-du-site-de-jean-emond-2008",
+            "url": "https://renoirboulanger.com/site/blog/2010/09/realisation-de-lintegration-du-site-de-jean-emond-2008",
+            "title": "Réalisation de l’intégration du site de Jean Émond [2008]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-09-16T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/09/realisation-site-manoir-saint-francis-faits-avec-geraniumcms-2007",
+            "url": "https://renoirboulanger.com/site/blog/2010/09/realisation-site-manoir-saint-francis-faits-avec-geraniumcms-2007",
+            "title": "Réalisation site Manoir Saint-Francis faits avec GéraniumCMS [2007]",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2010-09-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo",
+            "url": "https://renoirboulanger.com/site/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo",
+            "title": "Lancement de l’annee 2011 pour la conférence ConFoo",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2010-09-08T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/06/retour-sur-la-semaine-des-logiciels-libres-mondev-et-de-la-conference-make-web-not-war-2010",
+            "url": "https://renoirboulanger.com/site/blog/2010/06/retour-sur-la-semaine-des-logiciels-libres-mondev-et-de-la-conference-make-web-not-war-2010",
+            "title": "Retour sur la semaine des logiciels Libres MonDev et de la conférence Make Web Not War 2010",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-06-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/05/article-publie-sur-devlab-community-partner-spotlight-devlab-montreal",
+            "url": "https://renoirboulanger.com/site/blog/2010/05/article-publie-sur-devlab-community-partner-spotlight-devlab-montreal",
+            "title": "devLAB Montreal is in the Community Partner Spotlight at Microsoft’s Make Web Not War 2010",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-05-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/05/mise-a-jour-de-lhoraire-de-la-semaine-des-logiciels-libres-mondev-du-24-28-mai-prochain",
+            "url": "https://renoirboulanger.com/site/blog/2010/05/mise-a-jour-de-lhoraire-de-la-semaine-des-logiciels-libres-mondev-du-24-28-mai-prochain",
+            "title": "Mise à jour de l'horaire de la semaine des logiciels libres MonDev du 24-28 Mai prochain",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-05-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/quelques-options-de-configuration-recurentes-pour-apache-mysql-et-php",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/quelques-options-de-configuration-recurentes-pour-apache-mysql-et-php",
+            "title": "Quelques options de configuration récurentes pour Apache, MySQL et PHP",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-04-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal",
+            "url": "https://renoirboulanger.com/site/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal",
+            "title": "Trois Geeks cherchent un nouveau Loyer sur Montréal",
+            "date_modified": "2010-04-05T00:00:00.000Z",
+            "date_published": "2010-04-05T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux",
+            "url": "https://renoirboulanger.com/site/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux",
+            "title": "Êtes-vous victime d’espionnage via votre profil dans les médias sociaux",
+            "date_modified": "2020-11-07T00:00:00.000Z",
+            "date_published": "2010-03-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab",
+            "url": "https://renoirboulanger.com/site/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab",
+            "title": "DevLab Montréal — Introduction de nos événements hebdomadaire pour programmeurs",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-03-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/03/la-premiere-de-ignite-montreal",
+            "url": "https://renoirboulanger.com/site/blog/2010/03/la-premiere-de-ignite-montreal",
+            "title": "La première de Ignite Montréal",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-03-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre",
+            "url": "https://renoirboulanger.com/site/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre",
+            "title": "Script bash pour transférer une base de donnée MySQL d’un serveur à l’autre",
+            "date_modified": "2013-06-12T00:00:00.000Z",
+            "date_published": "2010-02-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence",
+            "url": "https://renoirboulanger.com/site/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence",
+            "title": "Réalisation d'une application d'échange de cadeau avec RED L'agence le «club échangiste» [2009]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-02-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/01/installer-php-5-3-1-sous-debian-et-ubuntu-via-un-repository-non-officiel",
+            "url": "https://renoirboulanger.com/site/blog/2010/01/installer-php-5-3-1-sous-debian-et-ubuntu-via-un-repository-non-officiel",
+            "title": "Installer PHP 5.3.1 sous Debian et/ou Ubuntu via un repository non officiel",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-01-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-2",
+            "url": "https://renoirboulanger.com/site/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-2",
+            "title": "Installation d’un paradis du Geek pour trois colocataires, partie 2",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-01-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/01/le-defi-project52-un-billet-par-semaine",
+            "url": "https://renoirboulanger.com/site/blog/2010/01/le-defi-project52-un-billet-par-semaine",
+            "title": "Le Défi «Project52» un billet par semaine (minimum)",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-01-06T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1",
+            "url": "https://renoirboulanger.com/site/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1",
+            "title": "Installation d’un paradis du Geek pour trois colocataires, partie 1",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-01-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/01/le-manifeste-open-cloud-pour-standardiser-info-nuagique",
+            "url": "https://renoirboulanger.com/site/blog/2010/01/le-manifeste-open-cloud-pour-standardiser-info-nuagique",
+            "title": "Le Manifeste \"Open Cloud\" pour standardiser l'informatique «dans les nuages»",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-01-02T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2014/05/choses-que-jaurai-souhaite-apprendre-plus-tot",
+            "url": "https://renoirboulanger.com/site/blog/2014/05/choses-que-jaurai-souhaite-apprendre-plus-tot",
+            "title": "Recette du succès en quelques règles simples",
+            "date_modified": "2014-07-04T00:00:00.000Z",
+            "date_published": "2014-05-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack",
+            "url": "https://renoirboulanger.com/site/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack",
+            "title": "Processus de création d'une VM faisant partie d'un parc géré par Salt Stack",
+            "date_modified": "2015-03-09T00:00:00.000Z",
+            "date_published": "2014-01-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes",
+            "url": "https://renoirboulanger.com/site/blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes",
+            "title": "Project idea: Creating a home made OpenStack cluster for development purposes",
+            "date_modified": "2014-02-04T00:00:00.000Z",
+            "date_published": "2013-10-24T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/09/how-to-create-a-patch-and-ensure-it-is-applied-within-salt-stack",
+            "url": "https://renoirboulanger.com/site/blog/2013/09/how-to-create-a-patch-and-ensure-it-is-applied-within-salt-stack",
+            "title": "How to create a patch and ensure it is applied within Salt Stack",
+            "date_modified": "2014-02-04T00:00:00.000Z",
+            "date_published": "2013-09-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one",
+            "url": "https://renoirboulanger.com/site/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one",
+            "title": "Procedure to create a re-usable configuration export script to move a virtual machine configuration to a new one",
+            "date_modified": "2013-08-07T00:00:00.000Z",
+            "date_published": "2013-08-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2010/02/crash-course-sur-les-environnements-java",
+            "url": "https://renoirboulanger.com/site/blog/2010/02/crash-course-sur-les-environnements-java",
+            "title": "Crash Course sur les environnements Java",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2010-02-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project",
+            "url": "https://renoirboulanger.com/site/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project",
+            "title": "I am joining W3C to work on the WebPlatform project!",
+            "date_modified": "2013-08-01T00:00:00.000Z",
+            "date_published": "2013-08-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/12/realisation-jamais-publiee-du-site-de-savon-des-cantons-2005",
+            "url": "https://renoirboulanger.com/site/blog/2009/12/realisation-jamais-publiee-du-site-de-savon-des-cantons-2005",
+            "title": "Réalisation (jamais publiée) du site de Savon des Cantons [2005]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-12-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/12/realisation-du-site-solutions-affaires-experts-conseils-2004",
+            "url": "https://renoirboulanger.com/site/blog/2009/12/realisation-du-site-solutions-affaires-experts-conseils-2004",
+            "title": "Réalisation du site Solutions Affaires experts-conseils [2004]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-12-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/07/i-just-resigned-from-my-new-job-to-start-on-an-exciting-project",
+            "url": "https://renoirboulanger.com/site/blog/2013/07/i-just-resigned-from-my-new-job-to-start-on-an-exciting-project",
+            "title": "I have just resigned from my new job to start on an exciting project!",
+            "date_modified": "2013-08-01T00:00:00.000Z",
+            "date_published": "2013-07-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/04/astuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax",
+            "url": "https://renoirboulanger.com/site/blog/2013/04/astuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax",
+            "title": "Astuce concernant le rafraîchissement du contenu des pages avec utilisation d'AJAX en exemple",
+            "date_modified": "2013-05-24T00:00:00.000Z",
+            "date_published": "2013-04-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/04/who-else-is-using-that-feature-flipping-thing-on-their-web-applications",
+            "url": "https://renoirboulanger.com/site/blog/2013/04/who-else-is-using-that-feature-flipping-thing-on-their-web-applications",
+            "title": "Who else is using feature flipping thing on their web applications?",
+            "date_modified": "2013-04-09T00:00:00.000Z",
+            "date_published": "2013-04-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/04/encapsulate-a-ldap-dn-string-using-an-array-in-php",
+            "url": "https://renoirboulanger.com/site/blog/2013/04/encapsulate-a-ldap-dn-string-using-an-array-in-php",
+            "title": "Encapsulate a LDAP DN string using Arrays in PHP",
+            "date_modified": "2013-04-02T00:00:00.000Z",
+            "date_published": "2013-04-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/05/procedure-environnement-developement-local-facile-a-entretenir-avec-apache",
+            "url": "https://renoirboulanger.com/site/blog/2013/05/procedure-environnement-developement-local-facile-a-entretenir-avec-apache",
+            "title": "Procédure pour avoir un environnement de dévelopement local facile à configurer avec Apache",
+            "date_modified": "2013-05-24T00:00:00.000Z",
+            "date_published": "2013-05-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/04/enfin-jai-refait-mon-site",
+            "url": "https://renoirboulanger.com/site/blog/2013/04/enfin-jai-refait-mon-site",
+            "title": "Enfin! J'ai refait mon site",
+            "date_modified": "2013-05-23T00:00:00.000Z",
+            "date_published": "2013-04-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/03/creating-and-using-javascript-events-while-combining-events-on-two-separates-behaviors",
+            "url": "https://renoirboulanger.com/site/blog/2013/03/creating-and-using-javascript-events-while-combining-events-on-two-separates-behaviors",
+            "title": "Creating and using Javascript events while combining events on two separates behaviors",
+            "date_modified": "2013-04-01T00:00:00.000Z",
+            "date_published": "2013-03-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/02/jai-decide-darreter-de-participer-au-conseil-dadministration-du-w3qc",
+            "url": "https://renoirboulanger.com/site/blog/2013/02/jai-decide-darreter-de-participer-au-conseil-dadministration-du-w3qc",
+            "title": "J'ai décidé d'arrêter de participer au Conseil d'administration du W3Qc",
+            "date_modified": "2013-09-07T00:00:00.000Z",
+            "date_published": "2013-02-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/12/joyeux-noel-et-bonne-annee-2010",
+            "url": "https://renoirboulanger.com/site/blog/2009/12/joyeux-noel-et-bonne-annee-2010",
+            "title": "Joyeux Noël et bonne Annee 2010",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-12-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/12/le-souper-du-mage",
+            "url": "https://renoirboulanger.com/site/blog/2009/12/le-souper-du-mage",
+            "title": "Le Souper du Mage",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-12-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
+            "url": "https://renoirboulanger.com/site/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite",
+            "title": "Conférence: Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2013-02-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/11/realisation-du-site-muse-des-beaux-arts-de-sherbrooke-2005",
+            "url": "https://renoirboulanger.com/site/blog/2009/11/realisation-du-site-muse-des-beaux-arts-de-sherbrooke-2005",
+            "title": "Réalisation du site Musé des Beaux Arts de Sherbrooke [2005]",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2009-11-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/11/realisation-du-site-et-de-image-produit-de-beebox",
+            "url": "https://renoirboulanger.com/site/blog/2009/11/realisation-du-site-et-de-image-produit-de-beebox",
+            "title": "Réalisation du site et de l’Image «branding» de Beebox [2008]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-11-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/11/google-lance-un-nouveau-protocole-pour-remplacer-http-hello-spdy",
+            "url": "https://renoirboulanger.com/site/blog/2009/11/google-lance-un-nouveau-protocole-pour-remplacer-http-hello-spdy",
+            "title": "Google lance un nouveau protocole pour remplacer http, hello SPDY!",
+            "date_modified": "2023-11-20T00:00:00.000Z",
+            "date_published": "2009-11-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007",
+            "url": "https://renoirboulanger.com/site/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007",
+            "title": "Réalisation de l'Interface logiciel Beebox [2007]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-11-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/11/realisation-du-site-de-remises-real-lamontagne-2004",
+            "url": "https://renoirboulanger.com/site/blog/2009/11/realisation-du-site-de-remises-real-lamontagne-2004",
+            "title": "Réalisation du site de Remises Réal Lamontagne [2004]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-11-05T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers",
+            "title": "Nouvelle technologie de la Réalité Augumentée, Les habitants des Pays Bas seront des premiers",
+            "date_modified": "2009-08-26T00:00:00.000Z",
+            "date_published": "2009-08-26T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2011/03/comment-installer-ruby-on-rails-sur-ubuntu-10-10",
+            "url": "https://renoirboulanger.com/site/blog/2011/03/comment-installer-ruby-on-rails-sur-ubuntu-10-10",
+            "title": "Comment installer Ruby on Rails sur Ubuntu 10.10",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2011-03-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2011/02/confoo-cest-dans-moins-de-14-jours",
+            "url": "https://renoirboulanger.com/site/blog/2011/02/confoo-cest-dans-moins-de-14-jours",
+            "title": "ConFoo c'est dans moins de 14 jours!",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2011-02-24T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2011/01/confoo-web-techno-conferencee-2011-devoilement-de-la-grille-horraire-des-presentations",
+            "url": "https://renoirboulanger.com/site/blog/2011/01/confoo-web-techno-conferencee-2011-devoilement-de-la-grille-horraire-des-presentations",
+            "title": "ConFoo Web Techno Conferencee 2011 Dévoilement de la grille horraire des présentations",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2011-01-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/10/realisation-site-de-cable-axion",
+            "url": "https://renoirboulanger.com/site/blog/2009/10/realisation-site-de-cable-axion",
+            "title": "Réalisation du site de Câble Axion [2006]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-10-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser",
+            "url": "https://renoirboulanger.com/site/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser",
+            "title": "Rendre un mot de passe plus difficile à briser",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-10-18T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/reduire-son-empreinte-ecologique-et-aussi-thebigask",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/reduire-son-empreinte-ecologique-et-aussi-thebigask",
+            "title": "Réduire son empreinte écologique et TheBigAsk",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/10/realisation-du-site-ecurie-royale",
+            "url": "https://renoirboulanger.com/site/blog/2009/10/realisation-du-site-ecurie-royale",
+            "title": "Réalisation du site Écurie Royale [2004]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-10-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/10/pensees-ecrites-a-voix-haute-pour-mon-orientation-professionnelle",
+            "url": "https://renoirboulanger.com/site/blog/2009/10/pensees-ecrites-a-voix-haute-pour-mon-orientation-professionnelle",
+            "title": "Pensées concernant mon orientation professionnelle",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-10-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/a-vendre-mon-ipod-touch-16go-avec-son-kit-pour-me-procurer-un-iphone",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/a-vendre-mon-ipod-touch-16go-avec-son-kit-pour-me-procurer-un-iphone",
+            "title": "[VENDU] Mon iPod Touch 16Go avec son kit pour me procurer un iPhone",
+            "date_modified": "2015-05-01T00:00:00.000Z",
+            "date_published": "2009-08-26T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/09/devenir-zend-certified-engineer-avec-php5",
+            "url": "https://renoirboulanger.com/site/blog/2009/09/devenir-zend-certified-engineer-avec-php5",
+            "title": "Devenir Zend Certified Engineer avec PHP5",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-09-29T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/09/pourquoi-tout-ces-caracteres-bizzares",
+            "url": "https://renoirboulanger.com/site/blog/2009/09/pourquoi-tout-ces-caracteres-bizzares",
+            "title": "Pourquoi tout ces caract√®res bizzares?",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-09-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/09/je-prefere-le-pingouin-design-cool-de-tee-shirt",
+            "url": "https://renoirboulanger.com/site/blog/2009/09/je-prefere-le-pingouin-design-cool-de-tee-shirt",
+            "title": "Je préfère le pingouin! Design cool de Tee-Shirt",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-09-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii",
+            "url": "https://renoirboulanger.com/site/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii",
+            "title": "Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie III",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2009-09-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii",
+            "url": "https://renoirboulanger.com/site/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii",
+            "title": "Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie II",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-09-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i",
+            "url": "https://renoirboulanger.com/site/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i",
+            "title": "Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie I",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-09-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur",
+            "title": "Processus pour régler un problème avec un ordinateur",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite",
+            "title": "Manipulation des liens extérieurs et les popup pour améliorer l'Accessibilité",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/realisationgestionnaire-de-service-a-la-clientele-pour-cable-axion",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/realisationgestionnaire-de-service-a-la-clientele-pour-cable-axion",
+            "title": "Réalisation Gestionnaire de service à la clientèle pour Câble Axion [2006]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/realisation-site-web-inexis-solution-web-2004",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/realisation-site-web-inexis-solution-web-2004",
+            "title": "Réalisation du site Web de ma propre agence, Inexis Solution Web [2004]",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/accessibilite-et-les-liens-externes",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/accessibilite-et-les-liens-externes",
+            "title": "Accessibilité et les liens externes",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/un-firewall-simple-sous-linux-avec-ferm",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/un-firewall-simple-sous-linux-avec-ferm",
+            "title": "Un firewall simple sous Linux avec «Ferm»",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/geeknight-ce-soir",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/geeknight-ce-soir",
+            "title": "GeekNight ce soir!",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/conference-de-garr-reynolds-atgoogletalks-sur-comment-presenter-ses-idees",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/conference-de-garr-reynolds-atgoogletalks-sur-comment-presenter-ses-idees",
+            "title": "Conférence de Garr Reynolds atGoogleTalks sur comment présenter ses idées",
+            "date_modified": "2013-03-29T00:00:00.000Z",
+            "date_published": "2009-08-18T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/si-la-terre-etait-un-village-de-100-personnes",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/si-la-terre-etait-un-village-de-100-personnes",
+            "title": "Si la Terre était un village de 100 personnes",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/le-cloud-computing-vulgarise",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/le-cloud-computing-vulgarise",
+            "title": "Le \"Cloud computing\" vulgarisé",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-17T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/namminik-dans-le-journal-de-montreal",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/namminik-dans-le-journal-de-montreal",
+            "title": "Namminik dans le Journal de Montréal",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/le-fondateur-de-netscape-est-en-train-de-developper-un-navigateur-web-nouveau-genre",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/le-fondateur-de-netscape-est-en-train-de-developper-un-navigateur-web-nouveau-genre",
+            "title": "Le fondateur de Netscape est en train de développer un navigateur web nouveau genre",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/la-cigale-et-la-fourmi-version-quebecoise",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/la-cigale-et-la-fourmi-version-quebecoise",
+            "title": "La cigale et la fourmi version Québecoise",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/faire-son-inventaire-personnel-avec-namminik-com",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/faire-son-inventaire-personnel-avec-namminik-com",
+            "title": "Faire son inventaire personnel avec Namminik.com",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/08/a-la-recherche-dun-nouveau-defi",
+            "url": "https://renoirboulanger.com/site/blog/2009/08/a-la-recherche-dun-nouveau-defi",
+            "title": "À la recherche d'un nouveau défi!",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2009-08-05T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2011/02/devlab-montreal-cest-maintenant-parti",
+            "url": "https://renoirboulanger.com/site/blog/2011/02/devlab-montreal-cest-maintenant-parti",
+            "title": "devLAB Montréal c'est maintenant parti!",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "date_published": "2011-02-08T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web",
+            "url": "https://renoirboulanger.com/site/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web",
+            "title": "Une petite lecture sur les attaques d’hameçonnage et sur la fraude sur le Web",
+            "date_modified": "2013-06-07T00:00:00.000Z",
+            "date_published": "2009-07-02T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2006/07/transactions-carte-credit",
+            "url": "https://renoirboulanger.com/site/blog/2006/07/transactions-carte-credit",
+            "title": "Transactions carte credit",
+            "date_modified": "2009-08-14T00:00:00.000Z",
+            "date_published": "2006-07-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix",
+            "url": "https://renoirboulanger.com/site/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix",
+            "title": "Les navigateurs web, programmes de courriels, vous avez le choix!",
+            "date_modified": "2013-06-06T00:00:00.000Z",
+            "date_published": "2008-12-05T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre",
+            "url": "https://renoirboulanger.com/site/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre",
+            "title": "Quelques indices pour savoir si un message courriel est une chaîne de lettre",
+            "date_modified": "2013-06-07T00:00:00.000Z",
+            "date_published": "2008-12-04T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites",
+            "url": "https://renoirboulanger.com/site/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites",
+            "title": "Sensibilisation sur les courriels non sollicités",
+            "date_modified": "2013-06-07T00:00:00.000Z",
+            "date_published": "2008-12-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations",
+            "url": "https://renoirboulanger.com/site/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations",
+            "title": "La publicite du monde celibataire sur Facebook et les fausses representations",
+            "date_modified": "2013-06-07T00:00:00.000Z",
+            "date_published": "2008-04-30T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp",
+            "url": "https://renoirboulanger.com/site/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp",
+            "title": "Tester le fonctionnement d'un serveur SMTP",
+            "date_modified": "2014-02-19T00:00:00.000Z",
+            "date_published": "2008-04-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/04/effacer-un-disque-dur",
+            "url": "https://renoirboulanger.com/site/blog/2008/04/effacer-un-disque-dur",
+            "title": "Effacer complètement un disque dur de façon sécuritaire",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2008-04-16T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice",
+            "url": "https://renoirboulanger.com/site/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice",
+            "title": "Jeudi 24 avril 2008 Party de lancement de Hardy Heron an Ubuntu Linux Party au Saint-Sulpice",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2008-04-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2008/04/pourquoi-le-blogue-bouge-pas",
+            "url": "https://renoirboulanger.com/site/blog/2008/04/pourquoi-le-blogue-bouge-pas",
+            "title": "Pourquoi le blogue bouge pas?",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2008-04-11T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical",
+            "url": "https://renoirboulanger.com/site/blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical",
+            "title": "Installer VMWare sur Ubuntu server avec le repositoire de Canonical",
+            "date_modified": "2006-12-25T00:00:00.000Z",
+            "date_published": "2006-12-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2006/06/une-erreur-de-manipulation-qui-a-coute",
+            "url": "https://renoirboulanger.com/site/blog/2006/06/une-erreur-de-manipulation-qui-a-coute",
+            "title": "Une erreur de manipulation qui a coûté",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "date_published": "2006-06-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2005/12/detection-langue",
+            "url": "https://renoirboulanger.com/site/blog/2005/12/detection-langue",
+            "title": "Detection de langue en PHP",
+            "date_modified": "2024-08-08T00:00:00.000Z",
+            "date_published": "2005-12-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2005/09/journee-blanche-d-inquietudes",
+            "url": "https://renoirboulanger.com/site/blog/2005/09/journee-blanche-d-inquietudes",
+            "title": "Journée blanche d’inquiétudes",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "date_published": "2005-09-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2005/09/redondance",
+            "url": "https://renoirboulanger.com/site/blog/2005/09/redondance",
+            "title": "Redondance des serveurs : stratégie pour améliorer la résilience des sites web",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "date_published": "2005-09-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2005/09/first-post",
+            "url": "https://renoirboulanger.com/site/blog/2005/09/first-post",
+            "title": "Premier billet",
+            "date_modified": "2017-11-10T00:00:00.000Z",
+            "date_published": "2005-09-16T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/11/mon-espace-de-travail",
+            "url": "https://renoirboulanger.com/site/blog/2007/11/mon-espace-de-travail",
+            "title": "Mon espace de travail",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-11-26T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons",
+            "url": "https://renoirboulanger.com/site/blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons",
+            "title": "Fait d'usabilité no3, Nous n'essayons pas de comprendre les choses, nous fouillons",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-11-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/11/ajouter-de-la-valeur-a-un-mot-de-passe-des-astuces",
+            "url": "https://renoirboulanger.com/site/blog/2007/11/ajouter-de-la-valeur-a-un-mot-de-passe-des-astuces",
+            "title": "Ajouter de la valeur a un mot de passe, des astuces",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-11-20T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/11/walmart-vend-des-ordinateurs-a-200-sous-ubuntu-linux",
+            "url": "https://renoirboulanger.com/site/blog/2007/11/walmart-vend-des-ordinateurs-a-200-sous-ubuntu-linux",
+            "title": "WalMart vend des ordinateurs a 200$ sous Ubuntu Linux",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-11-09T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/11/un-portail-quebecois-qui-a-eu-une-mention-speciale-utilisabilite-quebec",
+            "url": "https://renoirboulanger.com/site/blog/2007/11/un-portail-quebecois-qui-a-eu-une-mention-speciale-utilisabilite-quebec",
+            "title": "Un portail québécois qui a eu une mention spéciale Utilisabilité Québec",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-11-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/10/ideologie-inboxzero",
+            "url": "https://renoirboulanger.com/site/blog/2007/10/ideologie-inboxzero",
+            "title": "Idéologie InboxZero",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-10-15T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent",
+            "url": "https://renoirboulanger.com/site/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent",
+            "title": "Fait d'usabilité no2, Nous ne faisons pas de choix  optimaux. Nous choisisons le premier choix cohérent",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-10-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware",
+            "url": "https://renoirboulanger.com/site/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware",
+            "title": "Créer un tunnel SSH avec session distante en Console VMWare",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-10-03T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/09/lorsque-gerer-un-reseau-peut-rimer-avec-vigilance-plutot-que-reparation",
+            "url": "https://renoirboulanger.com/site/blog/2007/09/lorsque-gerer-un-reseau-peut-rimer-avec-vigilance-plutot-que-reparation",
+            "title": "Lorsque gérer un réseau peut rimer avec vigilance plutôt que réparation",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-09-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/09/copier-un-fichier-dun-serveur-a-lautre-en-le-compressant-pour-la-route",
+            "url": "https://renoirboulanger.com/site/blog/2007/09/copier-un-fichier-dun-serveur-a-lautre-en-le-compressant-pour-la-route",
+            "title": "Copier un fichier d'un serveur à l'autre en le compressant pour la route via NetCat et",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-09-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/09/quelques-blogs-que-je-lis-frequemment",
+            "url": "https://renoirboulanger.com/site/blog/2007/09/quelques-blogs-que-je-lis-frequemment",
+            "title": "Quelques blogs que je lis fréquemment",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-09-18T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/09/revue-de-dont-make-me-think",
+            "url": "https://renoirboulanger.com/site/blog/2007/09/revue-de-dont-make-me-think",
+            "title": "Revue de DON'T MAKE ME THINK",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-09-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/09/apple-remet-du-sien-avec-son-ipod-touch",
+            "url": "https://renoirboulanger.com/site/blog/2007/09/apple-remet-du-sien-avec-son-ipod-touch",
+            "title": "Apple remet du &#8220;sien&#8221; avec son iPod Touch",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-09-06T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/08/farenheit-911-et-mes-impressions",
+            "url": "https://renoirboulanger.com/site/blog/2007/08/farenheit-911-et-mes-impressions",
+            "title": "Le film Farenheit 9/11 de Michael More et mes impressions",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-08-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/08/un-equivalent-open-du-iphone",
+            "url": "https://renoirboulanger.com/site/blog/2007/08/un-equivalent-open-du-iphone",
+            "title": "Un équivalent plus ouvert du iPhone",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-08-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/05/critique-de-roman-deception-point",
+            "url": "https://renoirboulanger.com/site/blog/2007/05/critique-de-roman-deception-point",
+            "title": "Critique de Roman Deception point",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-05-28T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/05/invitalisation",
+            "url": "https://renoirboulanger.com/site/blog/2007/05/invitalisation",
+            "title": "Invitalisation",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-05-19T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/06/une-boite-qui-traine",
+            "url": "https://renoirboulanger.com/site/blog/2007/06/une-boite-qui-traine",
+            "title": "Une boîte qui traîne",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-06-26T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/06/internet-explorer-6-un-upgrade-obligatoire-svp",
+            "url": "https://renoirboulanger.com/site/blog/2007/06/internet-explorer-6-un-upgrade-obligatoire-svp",
+            "title": "Microsoft Internet Explorer 6, une mise-à-jour obligatoire, SVP.",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-06-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/05/montage-de-dossiers-distants-via-sshfs",
+            "url": "https://renoirboulanger.com/site/blog/2007/05/montage-de-dossiers-distants-via-sshfs",
+            "title": "Montage de dossiers distants via SSHFS",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-05-31T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto",
+            "url": "https://renoirboulanger.com/site/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto",
+            "title": "Doubler la fiabilité avec un miroir MySQL, un mini-Howto",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-06-14T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/06/critique-de-roman-le-davinci-code",
+            "url": "https://renoirboulanger.com/site/blog/2007/06/critique-de-roman-le-davinci-code",
+            "title": "Critique de roman le DaVinci Code",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-06-13T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/05/critique-de-roman-forteresse-digitale",
+            "url": "https://renoirboulanger.com/site/blog/2007/05/critique-de-roman-forteresse-digitale",
+            "title": "Critique de Roman Forteresse Digitale",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-05-12T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/04/periode-de-tests",
+            "url": "https://renoirboulanger.com/site/blog/2007/04/periode-de-tests",
+            "title": "Période de tests",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-04-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/04/installation-rhel4-sur-un-dell-poweredge-860",
+            "url": "https://renoirboulanger.com/site/blog/2007/04/installation-rhel4-sur-un-dell-poweredge-860",
+            "title": "Installation RHEL4 sur un Dell PowerEdge 860",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-04-16T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/04/login-ssh-sans-mot-de-passe",
+            "url": "https://renoirboulanger.com/site/blog/2007/04/login-ssh-sans-mot-de-passe",
+            "title": "Login SSH sans mot de passe",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-04-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/02/conversion-et-resampling-image",
+            "url": "https://renoirboulanger.com/site/blog/2007/02/conversion-et-resampling-image",
+            "title": "Conversion et resampling image",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-02-21T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/02/une-machine-virtuelle-gentoo",
+            "url": "https://renoirboulanger.com/site/blog/2007/02/une-machine-virtuelle-gentoo",
+            "title": "Une machine virtuelle Gentoo",
+            "date_modified": "2013-03-27T00:00:00.000Z",
+            "date_published": "2007-02-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/blog/2007/01/le-futur-du-pc",
+            "url": "https://renoirboulanger.com/site/blog/2007/01/le-futur-du-pc",
+            "title": "Le futur du PC",
+            "date_modified": "2009-08-27T00:00:00.000Z",
+            "date_published": "2007-01-25T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/code-review/http-caching-basics",
+            "url": "https://renoirboulanger.com/site/code-review/http-caching-basics",
+            "title": "HTTP Caching basics",
+            "date_modified": "2022-04-06T00:00:00.000Z",
+            "date_published": "2022-04-06T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/code-review/we-should-not-forget-await",
+            "url": "https://renoirboulanger.com/site/code-review/we-should-not-forget-await",
+            "title": "We should not forget await",
+            "date_modified": "2021-01-27T00:00:00.000Z",
+            "date_published": "2021-01-27T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/code-review/using-read-only-array-of-strings-as-source-for-type",
+            "url": "https://renoirboulanger.com/site/code-review/using-read-only-array-of-strings-as-source-for-type",
+            "title": "Using read-only array of strings as source for type",
+            "date_modified": "2021-01-27T00:00:00.000Z",
+            "date_published": "2021-01-27T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/code-review/mocking-the-dom-during-tests",
+            "url": "https://renoirboulanger.com/site/code-review/mocking-the-dom-during-tests",
+            "title": "Mocking the DOM during tests",
+            "date_modified": "2021-01-27T00:00:00.000Z",
+            "date_published": "2021-01-27T00:00:00.000Z"
+        },
+        {
+            "id": "https://renoirboulanger.com/site/glossary/progressive-enhancement",
+            "url": "https://renoirboulanger.com/site/glossary/progressive-enhancement",
+            "title": "Progressive Enhancement and/or Graceful Degradation",
+            "date_modified": "2021-01-27T00:00:00.000Z",
+            "date_published": "2021-01-27T00:00:00.000Z"
+        }
+    ]
+}

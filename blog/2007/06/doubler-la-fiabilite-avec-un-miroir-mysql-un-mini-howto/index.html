@@ -1,0 +1,155 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Doubler la fiabilité avec un miroir MySQL, un mini-Howto - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2007" class="nuxt-link-active" data-v-ede238bc>2007</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2007/06" class="nuxt-link-active" data-v-ede238bc>06</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Doubler la fiabilité avec un miroir MySQL, un mini-Howto</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2007-06-14" data-v-79a168f2>
+        jeudi 14 juin 2007
+      </time> <a href="https://renoirboulanger.com/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__545" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__545" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/tutoriels" class="no-underline">tutoriels</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/tranche-de-vie" class="no-underline">📁 tranche-de-vie</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><!----> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><p data-v-79a168f2 data-v-79a168f2>Imaginez que vous avec plusieurs sites a gérer. Sur un serveur, disons, monté en RAID-1 sur deux disques SATA en md-devices. C'est bien, les données sont dupliqués et si un disque dur brise, les données survivent. Évidemment ça ne nous protège pas des erreur de manipulation.</p>
+<p data-v-79a168f2 data-v-79a168f2>Une redondance comme je l'ai monté implique deux serveurs distincts qui ont chacun leur adresse ip et leur setup. Les serveurs ont deux adapteurs réseau et je les ai reliés ensemble et donné une adresse ip privé pour qu'ils puissent parler ensemble sans passer par Internet. Chaque serveur à les fichiers de sites pour chaque usager et chacun se connecte a mysql en localhost. La réplication se passe donc par l'adresse privée donc aucune encryption est nécessaire entre les peers.</p>
+<p data-v-79a168f2 data-v-79a168f2>Plus tard je devrai monter un service de miroirisation via rsync mais ce n'est pas le but de "ce" post.</p>
+<p data-v-79a168f2 data-v-79a168f2>Veuillez noter qu'il s'agit d'un howto TR√àS TECHNIQUE et je NE PEUT PAS nécessairement GARANTIR le FONCTIONNEMENT si vous faites simplement que COPIER SANS RÉFLÉCHIR.</p>
+
+<p data-v-79a168f2 data-v-79a168f2>Voici ce que j'ai fait pour préparer la redondance des serveurs. Actuellement seulement une Base de donnée est répliquée sur les deux machines, plus tard la redondance sera faite sur tout les sites publics et les applications, je teste encore pour m'assurer de savoir les choses a ne pas faire.</p>
+<p data-v-79a168f2 data-v-79a168f2>La réplication de base de donnée est un processus qui demande de la préparation. J'ai commencé avec:</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Quelles tables répliquer</li>
+	<li data-v-79a168f2 data-v-79a168f2>Quelles machines seront les nodes</li>
+	<li data-v-79a168f2 data-v-79a168f2>Quelle version du serveur</li>
+</ul>
+Dans mon exemple je ne fait que répliquer qu'une seule BdD, si vous voulez en faire plus, faudra attendre que je sorte un autre billet, ou faire comme je fait... chercher :)
+<h3 data-v-79a168f2 data-v-79a168f2>Considérations</h3>
+Les serveurs sont connectés entre eux avec un cross-over cable et ont chacun leur adresses privés dans leur <tt data-v-79a168f2 data-v-79a168f2>/etc/hosts</tt> que l'un pointe vers l'autre et vice versa.
+<p data-v-79a168f2 data-v-79a168f2>Dans mon setup:
+La machine <tt data-v-79a168f2 data-v-79a168f2>web1</tt> <strong data-v-79a168f2 data-v-79a168f2>EST</strong> <tt data-v-79a168f2 data-v-79a168f2>mysql1</tt>, et <tt data-v-79a168f2 data-v-79a168f2>web2</tt> <strong data-v-79a168f2 data-v-79a168f2>EST</strong> <tt data-v-79a168f2 data-v-79a168f2>mysql2</tt></p>
+<h3 data-v-79a168f2 data-v-79a168f2>Préparer l'espace de travail</h3>
+<ul class="alternate" type="square" data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Screen window 1</strong>, par exemple:</li>
+	<li data-v-79a168f2 data-v-79a168f2>Faire un tail-follow sur les fichiers log, sur les deux machines.<pre lang="bash" data-v-79a168f2 data-v-79a168f2>$ sudo tail -f /var/log/mysql/error_log.err</pre></li>
+	<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Screen window 0</strong>, par exemple:</li>
+	<li data-v-79a168f2 data-v-79a168f2>se connecter en shell mysql sur la machine locale, sur chaque machine:
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>$ mysql -u da_admin -p</pre>
+(utiliser le compte qui a les acces nécessaires, da_admin devrait suffir, sinon root)</li>
+	<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Screen window 2</strong>, par exemple:</li>
+	<li data-v-79a168f2 data-v-79a168f2>Avoir une session root, pour redémarrer les services au besoin et éditer les fichiers</li>
+</ul>
+<h3 data-v-79a168f2 data-v-79a168f2>MODIFIER les fichiers de config</h3>
+<ul class="alternate" type="square" data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Vérifier /etc/my.cnf, modifier en fonction des besoins</li>
+	<li data-v-79a168f2 data-v-79a168f2>Modifier au niveau du bloc <tt data-v-79a168f2 data-v-79a168f2>[mysqld]</tt></li>
+	<li data-v-79a168f2 data-v-79a168f2>AVOIR, un équivalent logique au web2:</li>
+	<li data-v-79a168f2 data-v-79a168f2>/etc/my.ini sur web2, exemple
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>server-id                       = 2
+log-bin                         = mysql-bin
+log-slave-updates
+auto_increment_increment        = 10
+auto_increment_offset           = 2
+log-error = /var/log/mysql/error_log
+replicate-do-db=renoirb_blog</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>AVOIR, un équivalent logique au web1:</li>
+	<li data-v-79a168f2 data-v-79a168f2>Voir dans le fichier /etc/my.ini, et modifier le code.
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>server-id = 1
+log-bin = mysql-bin
+log-slave-updates
+auto_increment_increment = 10
+auto_increment_offset  = 1
+log-error = /var/log/mysql/error_log
+replicate-do-db = renoirb_blog</pre>
+</li>
+</ul>
+<h3 data-v-79a168f2 data-v-79a168f2>Créer les logfiles</h3>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>$ sudo vdir /var/log/mysql                    # VOIR si existant, sinon;
+$ sudo mkdir /var/log/mysql
+$ ps aux | grep mysqld                        # VOIR LE USER QUI ROULE MYSQLD
+$ chown mysql.root /var/log/mysql        # DONNER les permissions au dossier
+# service mysqld restart                      # REDEMARRER, en root, mysqld</pre>
+<h3 data-v-79a168f2 data-v-79a168f2>Création des usagers</h3>
+<ul class="alternate" type="square" data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Aller sur l'application phpmyadmin de votre serveur</li>
+	<li data-v-79a168f2 data-v-79a168f2>Dans phpmyadmin, aller dans la <strong data-v-79a168f2 data-v-79a168f2>page d'accueil</strong> et <strong data-v-79a168f2 data-v-79a168f2>privileges</strong>, Ajouter un unager avec les droits <tt data-v-79a168f2 data-v-79a168f2>RELOAD, REPLICATION CLIENT, REPLICATION SLAVE</tt></li>
+	<li data-v-79a168f2 data-v-79a168f2>Ne pas oublier de le faire sur les deux machines</li>
+	<li data-v-79a168f2 data-v-79a168f2>J'ai aussi ajouté les droits d'utilisation aux tables que je veut répliquer.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Aller sur le screen window 0 (le shell SQL)></li>
+	<li data-v-79a168f2 data-v-79a168f2>Le faire sur chaque machine
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>mysql> FLUSH PRIVILEGES;                            # RECHARGER les privileges
+mysql> USE renoirb_blog;                                # ALLER dans table desiree de replication
+mysql> FLUSH TABLES WITH READ LOCK;       # Deverrouiller les tables, au cas
+mysql> SHOW MASTER STATUS;                     # Voir le log</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Donne un output similaire a ceci:
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>+------------------+----------+--------------+------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB |
++------------------+----------+--------------+------------------+
+| mysql-bin.000003 | 325617   |              |                  |
++------------------+----------+--------------+------------------+
+</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Ensuite, on prépare la réplication</li>
+	<li data-v-79a168f2 data-v-79a168f2>MODIFIER accordignly a la machine EN SHELL mysql:</li>
+	<li data-v-79a168f2 data-v-79a168f2>SI vous êtes sur web2, placer mysql1 comme <tt data-v-79a168f2 data-v-79a168f2>MASTER_HOST</tt>, et vice versa.
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>mysql> CHANGE MASTER TO MASTER_HOST='mysql1',
+> MASTER_USER='replication_user',
+> MASTER_PASSWORD='LE MOT DE PASSE',
+> MASTER_LOG_FILE='mysql-bin.<logfile_ext data-v-79a168f2 data-v-79a168f2>',
+> MASTER_LOG_POS=<position data-v-79a168f2 data-v-79a168f2>;
+mysql> SLAVE START;                        # DEMARRER LA REPLICATION sur chaque machine</position></logfile_ext></pre>
+</li>
+</ul>
+<h3 data-v-79a168f2 data-v-79a168f2>Sources</h3>
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2><span class="nobr" data-v-79a168f2 data-v-79a168f2><tt data-v-79a168f2 data-v-79a168f2><a href="http://www.howtoforge.com/mysql_database_replication" rel="nofollow" data-v-79a168f2 data-v-79a168f2>http://www.howtoforge.com/mysql_database_replication</a></tt></span></li>
+</ul></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2007/06/critique-de-roman-le-davinci-code" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Critique de roman le DaVinci Code
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2007/05/montage-de-dossiers-distants-via-sshfs" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Montage de dossiers distants via SSHFS
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729800241/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+human:
+  - key: ar
+    text: Réalité Augmentée
+    description: |
+      Essais écrits sur mes observations de projets/produits
+      qui prennent avantage du mélange numérique et visuel
+
+  - key: architecture
+    text: Architecture
+    description: |
+      Architecture logicielle, HTML/CSS, FrontEnd, BackEnd, Infrastructure.
+
+  - key: best-practices
+    text: Bonne pratiques
+    description: |
+      Observations sur les bonne pratiques
+
+  - key: conference
+    text: Conférences
+    description: |
+      Rapport de conférence, ou présentation donnée lors d’une conférence
+
+  - key: cloud-computing
+    text: Info Nuagique
+    description: |
+      Essais écrits sur mes observations de projets/produits
+      qui prennent avantage de la virtualisation et de l’infrastructure
+      et/ou l’InfoNuagique
+
+  - key: data-persistence
+    text: persistance des données
+    description: |
+      Essais écrits sur mes recherches et expérimentations concernant la gestion des données
+      dans un contexte d’un système distribué applicatif pour Applications Web.
+      Certains articles peuvent être écrits pour résoudre des problèmes rencontrés.
+
+  - key: development
+    text: Development
+    description: |
+      Relié au dévelopment et/ou la programmation web
+
+  - key: docker
+    text: Docker
+    description: |
+      Faisant usage de Docker
+
+  - key: evenements
+    text: Événements
+    description: |
+      Événements que j’ai assisté ou contribué
+
+  - key: favourites
+    text: Favoris
+    description: Articles préférés
+
+  - key: fraud
+    text: Fraude
+    description: |
+      Un de mes sujets préférés, des articles écrits pour tenter d’expliquer les stratégies
+
+  - key: geeknight
+    text: GeekNight
+    description: |
+      Projets que je faits les soirs comme loisir
+
+  - key: geranium
+    text: Géranium
+    description: |
+      Un outil de gestion Web que j’ai écrit entre 2002..2007
+      durant les années d’opérations de INEXIS Solution Web Inc.
+
+  - key: i18n
+    text: Internationalisation
+    description: |
+      Essais écrits pour décrire mes expérimentations faites en relation
+      avec faire des Applications Web multilingue.
+
+  - key: js-montreal
+    text: JS Montréal
+    description: |
+      Le groupe d’utilisateurs de JavaScript de Montréal
+
+  - key: linux
+    text: GNU/Linux
+    description: |
+      Essais écrits pour m’aider à mieux comprendre ou partager mon expérience avec
+
+  - key: nuxt
+    text: Nuxt.js
+    description: |
+      Nuxt.js, le cadrigiciel Vue intuitif qui permet d’écrire des applications Web
+      qui prennent avantage du navigateur web et ajuste l’état dynamiquement.
+
+  - key: operations
+    text: Opérations
+    description: |
+      Essais écrits en relation au métier de gérer une infrastructure informatique ou infonuagique
+      et comment entretenir des systèmes pour des Applications Web résilientes et stables.
+
+  - key: procedure
+    text: Procédure
+    description: |
+      Essais écrits pour expliquer étape par étape comment mettre
+      quelque chose en place
+
+  - key: php
+    text: PHP
+    description: |
+      Essais écrits lors de mes expérimentations et projets faits avec PHP
+
+  - key: salt-stack
+    text: Salt Stack
+    description: |
+      Essais écrits lors de mes expérimentations avec SaltStack, l’outil de
+      gestion de déploiement par SaltStack Inc. maintenant acquis par VMWare
+
+  - key: security
+    text: Sécurite
+    description: |
+      Essais écrits concernant mes recherches sur la sécurité en informatique
+
+  - key: talk
+    text: Présentation
+    description: |
+      Présentation que j’ai donnée
+
+  - key: tools
+    text: Outils
+    description: |
+      Tools I’ve experimented and reviewed
+
+  - key: tutorials
+    text: Tutoriels
+    description: |
+      Essais écrits pour guider comment mettre quelque chose en place
+
+  - key: vuejs
+    text: Vue.js
+    description: |
+      Vue.js, le «framework» évolutif pour construire des interfaces utilisateur
+
+  - key: vuetify
+    text: Vuetify.js
+    description: |
+      Vuetify est une bibliothèque de composantes d’Interface Utilisateur suivant les conventions de la
+      spécification «Material Design»
+
+  - key: vulgarization
+    text: Vulgarisation
+    description: |
+      Essais écrits pour tenter d’expliquer
+
+  - key: webplatform
+    text: WebPlatform
+    description: |
+      Work done as a full time W3C employee and other related work as volunteer
+      contributor helping on documenting the Open Web Platform.
+
+  - key: wish-list
+    text: Dans mes rêves
+    description: |
+      Choses que j’aimerai avoir ou obtenir, soit sur le niveau progression professionelle
+      ou personnelle, ou un sujet que j’aimerai maîtriser ou mieux comprendre.

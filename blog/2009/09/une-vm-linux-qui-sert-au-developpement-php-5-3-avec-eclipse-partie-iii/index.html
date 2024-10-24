@@ -1,0 +1,196 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie III - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2009" class="nuxt-link-active" data-v-ede238bc>2009</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2009/09" class="nuxt-link-active" data-v-ede238bc>09</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Une <abbr lang="en" title="Virtual Machine">VM</abbr> Linux qui sert au développement <abbr lang="en" title="Hypertext Pre Processor Programming language">PHP</abbr> 5.3 avec Eclipse - partie III</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2009-09-09" data-v-79a168f2>
+        mercredi 9 septembre 2009
+      </time> <a href="https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__461" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__461" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/logiciel-libre" class="no-underline">logiciel-libre</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/techniques" class="no-underline">techniques</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/tutoriels" class="no-underline">tutoriels</nuxtlink></li> <!----></ul></div> <div class="body mt-10" data-v-79a168f2><!----> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><p data-v-79a168f2 data-v-79a168f2>Ce billet est le <strong data-v-79a168f2 data-v-79a168f2>troisième</strong> d'une série d'articles décrivant la fabrication d'une Machine Virtuelle (VM) de développement pour une équipe de dévelopeurs.</p>
+<p data-v-79a168f2 data-v-79a168f2>Cette partie couvrira l'installation de Apache et de PHP 5.3 (la dernière version depuis Juin 2009) qui offre beaucoup d'avancées. Je pense que c'est devenu le juste minimum a cause de ces nouvelles fonctionnalités. Voir articles faits par  <span lang="en" data-v-79a168f2 data-v-79a168f2>IBM developerworks</span> "<span lang="en" data-v-79a168f2 data-v-79a168f2>What's new in PHP 5.3 (<a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new1/index.html" data-v-79a168f2 data-v-79a168f2>part 1</a>, <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new2/index.html?S_TACT=105AGX44&S_CMP=ART" data-v-79a168f2 data-v-79a168f2>part 2</a>, <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new3/index.html?S_TACT=105AGX44&S_CMP=ART" data-v-79a168f2 data-v-79a168f2>part 3</a>, and <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new4/index.html?S_TACT=105AGX44&S_CMP=ART" data-v-79a168f2 data-v-79a168f2>part 4</a>)</span>".</p>
+
+<p data-v-79a168f2 data-v-79a168f2>J'ai séparé cette série en quatre volets.</p>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i/" data-v-79a168f2>Description du concept</a></strong>
+Ce que je vais discuter dans cette série d'articles n'est pas nécessairement connu de tous. Je vais donc vulgariser un peu avant de commencer.</li>
+<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/" data-v-79a168f2>Installation du système</a></strong>
+Je donne ici mon secret de magicien avec quelques configurations que je considère importantes pour un environement d'hébergement web pour améliorer la sécruité (le strict minimum pour cette série d'articles. Je pourrai en faire un plus poussé plus tard).</li>
+<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Compilation de PHP 5.3</strong> (cet article)
+Comment installer Apache 2.x avec le dernier cutting-edge PHP.</li>
+<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Installation de l'environnement de développement avec Eclipse PDT</strong> (à venir)
+La magie se passe par là! Avec ce setup votre équipe pourra répliquer l'installation de développement a volonté.</li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2>Avant tout, quelques précautions</h3>
+<div style="background-color:#fee;border:1px solid #660;color:#600;margin:20px;padding:20px 30px;text-align:center" data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Avertissement!  -  Changement environement:
+</strong>Faire des modifications avec Apache et PHP sur un serveur en production peut causer des problèmes sérieux!  Il est conseillé de planifier et de pratiquer le déploiement AVANT de l'appliquer dans un environnement de production. Vous aurez été avertis!</div>
+<strong data-v-79a168f2 data-v-79a168f2>Varia:</strong>
+<div data-v-79a168f2 data-v-79a168f2>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Désinstallez toutes les instances de PHP que vous avez installé. Il est recommandé d'avoir la version stable pour un environement de production et que l'environement de développement réflète la production.</li>
+<li data-v-79a168f2 data-v-79a168f2>Dans mes environements de travail j'ai choisi d'utiliser <strong data-v-79a168f2 data-v-79a168f2>Debian Linux (stable)</strong> courrant.  J'ai déjà utilisé d'autres distributions Linux pour des serveurs mais ça dépasse l'objectif de cet article.</li>
+<li data-v-79a168f2 data-v-79a168f2>Chaque ligne de commande commence soit par "$" (dollar sign)  ou "#" (hash mark). Le # signifie que vous entrez la commande en tant que <strong data-v-79a168f2 data-v-79a168f2>root</strong></li>
+<li data-v-79a168f2 data-v-79a168f2>Le retour de chariot est illustré par un anti-slash "\"  car je veut éviter de changer la largeur du billet! Vous pouvez simplement tout coller sur une ligne.</li>
+</ul>
+</div>
+<h3 data-v-79a168f2 data-v-79a168f2>Compilation de PHP 5.3</h3>
+<span data-v-79a168f2 data-v-79a168f2> </span>
+<h4 data-v-79a168f2 data-v-79a168f2>1 Installer Apache</h4>
+La première étape est d'installer Apache. Il est possible de le faire avec plusieurs autres serveurs (lighttpd par exemple) mais je ne l'utilise pas (lighttpd) pour autre chose que du caching statique ou du Proxying. Alors je ne couvrirai pas comment faire. <a href="http://www.howtoforge.com/lighttpd_mysql_php_debian_etch" data-v-79a168f2 data-v-79a168f2>Cet article le fait</a>, par contre.
+<p data-v-79a168f2 data-v-79a168f2>Cette commande devrait faire le travail.</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># apt-get install apache2 apache2-mpm-prefork apache2-prefork-dev \
+apache2-utils apache2.2-common</pre>
+<h4 data-v-79a168f2 data-v-79a168f2>2. Installer MySQL et/ou PostgreSQL</h4>
+L'engin de base de donnée utilisé est le choix de chacun. Je suis personnellement habitué avec MySQL mais pouvoir avoir les deux peut être utile.
+<h5 data-v-79a168f2 data-v-79a168f2>PostgreSQL</h5>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># apt-get install postgresql-8.3 postgresql-client-8.3 \
+postgresql-client-common postgresql-common postgresql-server-dev-8.3</pre>
+<h5 data-v-79a168f2 data-v-79a168f2>MySQL</h5>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># apt-get install mysql-client mysql-client-5.0    mysql-common \
+mysql-server mysql-server-5.0 mysql-server-core-5.0</pre>
+<h5 data-v-79a168f2 data-v-79a168f2>3. Installer les librairies requises</h5>
+PHP en tant que tel est facile a configurer mais les librairies externes font que c'est plus compliqué... malheureusement.  Ce qui est bien c'est qu'avec Debian la documentation est entretenue fréquemment et il est facile de se reprendre.
+<p data-v-79a168f2 data-v-79a168f2>Plusieurs heures peuvent être prises pour simplement préparer la commande "configure".  Avec ces notes vous devriez vous en sortir pas pire :)</p>
+<p data-v-79a168f2 data-v-79a168f2>Voici les packages que Debian fournit pour ce que PHP demande, comme ça vous pourrez éviter d'installer arbitrairement plusieurs dizaines de paquets!</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># apt-get install libtidy-dev curl libcurl4-openssl-dev libcurl3 \
+libcurl3-gnutls zlib1g zlib1g-dev libxslt1-dev libzip-dev libzip1 \
+libxml2 libsnmp-base libsnmp15 libxml2-dev libsnmp-dev libjpeg62 \
+libjpeg62-dev libpng12-0 libpng12-dev zlib1g zlib1g-dev libfreetype6 \
+libfreetype6-dev libbz2-dev libxpm-dev libmcrypt-dev libmcrypt4</pre>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Note</strong>:  libxpm4-dev proposé dans <a href="http://www.brandonsavage.net/installing-php-5-3-on-ubuntu/" data-v-79a168f2 data-v-79a168f2>ma source d'information</a> n'est pas trouvé dans Debian Lenny mis a jour le 2009-09-09 j'ai donc rectifié (pour libxpm-dev) la commande ci-haut.</p>
+<h4 data-v-79a168f2 data-v-79a168f2>4. Télécharger le code source de PHP</h4>
+Visiter <a href="http://www.php.net/" data-v-79a168f2 data-v-79a168f2>http://www.php.net</a> et télécharger la version désirée. Actuellement, la version production est la 5.3
+<p data-v-79a168f2 data-v-79a168f2>Personnellement je recommande d'avoir les fichiers de compilation dans /usr/src quoi que j'ai pas la conaissance de la science infuse ;)</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># cd /usr/src/
+# wget http://us3.php.net/get/php-5.3.0.tar.gz/from/this/mirror
+# tar xvfz php-5-3-0.tar.gz
+# cd php-5.3</pre>
+<h4 data-v-79a168f2 data-v-79a168f2>5. La commande Configure.</h4>
+La commande configure peut etre difficile a configurer surtout avec les librairies qu'on veut généralement mettre... généralement une certaine mesure du minimum.
+<p data-v-79a168f2 data-v-79a168f2>Personnellement. Je recommande de faire la commande dans un fichier et de l'exécuter par la suite.</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi configure.sh
+ ./configure --with-apxs2=/usr/bin/apxs2 \
+   --with-tidy=/usr --with-curl=/usr/bin --with-curlwrappers \
+   --with-openssl-dir=/usr --with-zlib-dir=/usr --enable-mbstring \
+   --with-xpm-dir=/usr --with-xsl=/usr --with-ldap --with-xmlrpc \
+   --with-iconv-dir=/usr --with-snmp=/usr --enable-exif --enable-calendar \
+   --with-bz2=/usr --with-mcrypt=/usr --with-gd --with-jpeg-dir=/usr \
+   --with-png-dir=/usr --with-zlib-dir=/usr --with-freetype-dir=/usr \
+   --enable-mbstring --enable-zip --with-pear</pre>
+<p data-v-79a168f2 data-v-79a168f2>Je suggère d'ajouter les commande ci bas au configure plus bas en fonction de votre choix de gestionnaire de base de donnée.</p>
+<h5 data-v-79a168f2 data-v-79a168f2>PostgreSQL</h5>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>--with-pdo-pgsql=/usr</pre>
+<h5 data-v-79a168f2 data-v-79a168f2>MySQL</h5>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2> --with-pdo-mysql=/usr --with-mysqli=/usr/bin/mysql_config --with-mysql=/usr</pre>
+Sortir avec :wq puis exécuter le script.
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># /bin/bash ./configure.sh</pre>
+L'écran devrait bouger beaucoup... généralement dans la doc on conseille ici d'aller prendre un café!
+<p data-v-79a168f2 data-v-79a168f2>... Si tout va bien tout devrait terminer par quelque chose qui ressemble à "Thanks for using php". Sinon.... je conseille ma <a href="/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur/" data-v-79a168f2>solution aux problèmes numéro un</a>. ;)</p>
+<p data-v-79a168f2 data-v-79a168f2>Faut pas s'en faire. Généralement c'est de tenter avec "<strong data-v-79a168f2 data-v-79a168f2>apt-cache search</strong>" et "<strong data-v-79a168f2 data-v-79a168f2>apt-get install</strong>" le nom de la librairie manquante.</p>
+<h4 data-v-79a168f2 data-v-79a168f2>6. Make et Make Install</h4>
+Pour l'installer. Maintenant que PHP est "configure"-é  il faut le compiler et l'installer avec make.
+<p data-v-79a168f2 data-v-79a168f2>La commande est bien simple.</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># make</pre>
+<p data-v-79a168f2 data-v-79a168f2>Beaucoup de sortie ici aussi. Ça risque même d'être plus long dépendamment de la force du processeur disponible.  C'est le temps de prendre une marche, encore.</p>
+<p data-v-79a168f2 data-v-79a168f2>Une fois que tout est terminé avec make, vous pouvez faire, accessoirement un "make test".</p>
+<p data-v-79a168f2 data-v-79a168f2>La dernière étape est de faire le "install"</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># make -i install</pre>
+<p data-v-79a168f2 data-v-79a168f2>Pourquoi le -i? Parceque Ubuntu/Debian risque d'avertir pour certaines erreurs a cause de la différence d'installation d'Apache de Debian/Ubuntu, nous le ferons nous même a bras plus loin dans ce document.</p>
+<h4 data-v-79a168f2 data-v-79a168f2>7. Ajouter le module PHP dans Apache</h4>
+Il faut ajouter le module dans Apache pour qu'il puisse interpreter... c'est logique. Étant donné que la commande make -i a surement fait son travail (sous Debian), nous devons nous assurer que tout est en ordre dans la configuration d'Apache.
+<p data-v-79a168f2 data-v-79a168f2>Premièrement, copier la librairie compilée:</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># updatedb
+# locate libphp5
+...
+/usr/lib/apache2/modules/libphp5.so
+/usr/src/php-5.3.0/libs/libphp5.la
+/usr/src/php-5.3.0/libs/libphp5.so
+...
+# cp /usr/src/php-5.3.0/libs/libphp5.so /usr/lib/apache2/modules/libphp5_3.so</pre>
+<p data-v-79a168f2 data-v-79a168f2>Je commencer par mettre a jour la base de donnée "locate", ensuite je cherche où est disponible la librairie, puis ensuite j'utilise "cp" pour déplacer sous un autre nom la librairie.</p>
+<p data-v-79a168f2 data-v-79a168f2>Ensuite,  dans le dossier:</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># cd /etc/apache2/mods-available</pre>
+<p data-v-79a168f2 data-v-79a168f2>Créez un nouveau fichier appelé php5.load et copiez-y le contenu suivant:</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>LoadModule php5_module /usr/lib/apache2/modules/libphp5_3.so</pre>
+<p data-v-79a168f2 data-v-79a168f2>Enregistrer le fichier. Ensuite créez un fichier appelé php5.conf et collez-y ce contenu:</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>AddType application/x-httpd-php .php .phtml .php3
+AddType application/x-httpd-php-source .phps</pre>
+<p data-v-79a168f2 data-v-79a168f2>On est prêts! Il faut le charger dans Apache:</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># a2enmod php5
+Enabling module php5.
+Run "/etc/init.d/apache2 restart" to activate new configuration!
+# invoke-rc.d apache2 restart
+* Restarting web server apache2
+...waiting    ...done.</pre>
+<h4 data-v-79a168f2 data-v-79a168f2>8. Tester l'installation</h4>
+C'est assez simple rendus là.
+<p data-v-79a168f2 data-v-79a168f2>On commence par le binaire en ligne de commande:</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>$ php -v
+PHP 5.3.0 (cli) (built: Aug  17 2009 19:08:32)
+Copyright (c) 1997-2009 The PHP Group
+Zend Engine v2.3.0, Copyright (c) 1998-2009 Zend Technologies</pre>
+<p data-v-79a168f2 data-v-79a168f2>Tout va bien!</p>
+<p data-v-79a168f2 data-v-79a168f2>Ensuite, voir un phpinfo() dans le docroot. (Généralement /var/www/index.php).</p>
+<pre lang="php" data-v-79a168f2 data-v-79a168f2>&lt; ?php
+  phpinfo();
+?></pre>
+<img class="size-full wp-image-1113" title="PHP 5.3 phpinfo()" src="https://renoirb.github.io/site-assets/assets/content/blog/2009/09/phpinfo_php5_3.png" alt="PHP 5.3 phpinfo()" width="612" height="429" style="border:none" data-v-79a168f2 data-v-79a168f2>
+<h3 data-v-79a168f2 data-v-79a168f2>Conclusion</h3>
+Je crois avoir bien réussi mon interprétation et ma traduction de l'article que j'ai utilisé. J'y ai ajouté mon grain de sel et rectifié ce qui a marché pour moi. Je vous conseille de documenter pour vos propres besoins ce que vous faites, on sait jamais quand on a besoin de refaire ce qu'on a déjà fait !
+<h3 data-v-79a168f2 data-v-79a168f2>Références</h3>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2><a lang="en" href="http://www.brandonsavage.net/installing-php-5-3-on-ubuntu/" data-v-79a168f2 data-v-79a168f2>BrandonSavage.net : Installing PHP 5.3 on Ubuntu</a> </strong></li>
+<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2><a href="http://www.php-experts.org/developpement-web/5-plugins-indispensables-pour-coder-en-php-avec-lide-eclipse-22" data-v-79a168f2 data-v-79a168f2>5 plugins indispensables pour coder en PHP avec l'IDE Eclipse</a></strong><br data-v-79a168f2 data-v-79a168f2>Un article que j'ai beaucoup apprécié car il mentionne ses propres plugins et j'ai cru bon les ajouter ici.</li>
+<li data-v-79a168f2 data-v-79a168f2><span lang="en" data-v-79a168f2 data-v-79a168f2>IBM developerworks</span> "<span lang="en" data-v-79a168f2 data-v-79a168f2>What's new in PHP 5.3 (<a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new1/index.html" data-v-79a168f2 data-v-79a168f2>part 1</a>, <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new2/index.html?S_TACT=105AGX44&S_CMP=ART" data-v-79a168f2 data-v-79a168f2>part 2</a>, <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new3/index.html?S_TACT=105AGX44&S_CMP=ART" data-v-79a168f2 data-v-79a168f2>part 3</a>, and <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new4/index.html?S_TACT=105AGX44&S_CMP=ART" data-v-79a168f2 data-v-79a168f2>part 4</a>)</span>".</li>
+<strong data-v-79a168f2 data-v-79a168f2> </strong></ul></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie II
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2009/09/je-prefere-le-pingouin-design-cool-de-tee-shirt" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Je préfère le pingouin! Design cool de Tee-Shirt
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729800241/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

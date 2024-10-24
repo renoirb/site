@@ -1,0 +1,109 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Créer un tunnel SSH avec session distante en Console VMWare - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2007" class="nuxt-link-active" data-v-ede238bc>2007</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2007/10" class="nuxt-link-active" data-v-ede238bc>10</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Créer un tunnel <abbr lang="en" title="Secure Shell or Secure Socket Shell">SSH</abbr> avec session distante en Console VMWare</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2007-10-03" data-v-79a168f2>
+        mercredi 3 octobre 2007
+      </time> <a href="https://renoirboulanger.com/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__532" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__532" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/securite" class="no-underline">securite</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/tranche-de-vie" class="no-underline">📁 tranche-de-vie</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><!----> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><p data-v-79a168f2 data-v-79a168f2>Il existe plusieurs page de how-to's pour se connecter a une application a distance. Mais j'ai envie de mettre pour mes propres archives.</p>
+<p data-v-79a168f2 data-v-79a168f2>Ce billet prend en considérations que...</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Vous voulez vous connecter a un service précis (disons VMWare Server Console)</li>
+	<li data-v-79a168f2 data-v-79a168f2>Sur une machine parmi un réseau de X ordinateurs</li>
+	<li data-v-79a168f2 data-v-79a168f2>Le gateway (routeur) relie toutes les connections vers un host en Linux (proxysrv) qui sert a s'authentifier et accéder au reste du réseau.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Le serveur sur le réseau qui héberge des machines virtuelles avec VMWare Server (vmserver1).</li>
+	<li data-v-79a168f2 data-v-79a168f2>Le port 902 (le port TCP que vous voulez utiliser) sur le firewall interne (de vmserver1) est ouvert. Et</li>
+	<li data-v-79a168f2 data-v-79a168f2>Vous voulez vous connecter a un de ses VM.</li>
+</ul>
+<div style="background:#ececec;margin:5px 0;padding:18px 8px 8px 50px;border:1px solid #333" data-v-79a168f2 data-v-79a168f2>
+<h4 style="color:#777;margin-bottom:10px" data-v-79a168f2 data-v-79a168f2>Mise à jour</h4>
+Ce billet a été écrit originalement en 2007. À l'époque il n'existait pas de VMware ESXi, ni de VMware Server 2. Les concepts sont toujours bons par contre.
+</div>
+
+<p data-v-79a168f2 data-v-79a168f2>Pour avoir accès a une application distante (ou une autre machine/VM), il faut se créer un tunnel vers le réseau interne. En gros il faut avoir accès au réseau (dans mon exemple le serveur <em data-v-79a168f2 data-v-79a168f2>proxysrv</em>).</p>
+<p data-v-79a168f2 data-v-79a168f2>Vous devez avoir un accès au réseau interne que vous avez accès, vous pouvez le demander a  votre Sysadmin de vous avoir un accès, mais ce n'est pas le point de ce billet.</p>
+<p data-v-79a168f2 data-v-79a168f2>Pour ouvrir une session SSH en tunnel, sous windows, il vous faut PuTTY. Si vous n'avez pas PuTTY faites une <a href="http://www.google.ca/search?q=putty" data-v-79a168f2 data-v-79a168f2>recherche google</a> c'est une petite application libre de droits. En linux, c'est simple</p>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>ssh -l username -L 902:192.168.3.97:902 -L 80:192.168.3.88:80 serveurdistant.ca</pre>
+<p data-v-79a168f2 data-v-79a168f2><small data-v-79a168f2 data-v-79a168f2>NOTE: Remarquez que vous n'avez qu'a ajouter le nombre de -L nécessaires (-L LOCAL_PORT:ON_REMOTE_NETWORK_IP:REMOTE_IP_OPENED_PORT_NUMBER)</small></p>
+<p data-v-79a168f2 data-v-79a168f2>Aussi, pour accéder a la console VMWare, il faut une version de <strong data-v-79a168f2 data-v-79a168f2>VMWare Server</strong> ou une console VMWare. Le site VMWare ne semble pas avoir de version stand-alone de la console ni pour Linux ni Windows. Alors, si vous n'avez pas encore VMWare sur votre machine, allez chercher votre exemplaire de <a href="http://www.vmware.com/download/server/" data-v-79a168f2 data-v-79a168f2>VMWare Server ici</a>. Si vous avez "VMWare" d'installé mais pas de moyen de vous connecter en local ou a distance, désinstallez la, et installez la version server prescrite.</p>
+<p data-v-79a168f2 data-v-79a168f2>Dans notre exemple, on va accéder a distance au <strong data-v-79a168f2 data-v-79a168f2>VMWare Server Console</strong> (sur vmserver1) qui utilise le port <strong data-v-79a168f2 data-v-79a168f2>902</strong>.</p>
+<h3 data-v-79a168f2 data-v-79a168f2>Les ports TCP sous Linux</h3>
+Pour pouvoir trouver d'autre ports a ouvrir le fichier texte /etc/services donne tout les ports et les alias qu'on peut utiliser comme alias. Ce fichier existe depuis longtemps dans tout ce qui est UNIX et Linux.
+<h3 data-v-79a168f2 data-v-79a168f2>Directives en résumé</h3>
+Une fois PuTTY et VMWare Server Console (ou console) fonctionnels (pour cet exemple) vous n'avez qu'a suivre les paramêtre ici:
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2> Hostname:<em data-v-79a168f2 data-v-79a168f2> <strong data-v-79a168f2 data-v-79a168f2>serveurdistant.ca</strong>
+</em></li>
+	<li data-v-79a168f2 data-v-79a168f2>Port: <strong data-v-79a168f2 data-v-79a168f2>22</strong> (ssh)</li>
+	<li data-v-79a168f2 data-v-79a168f2>Donner un nom de session, mais ne sauvegardez pas tout de suite.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Aller a <strong data-v-79a168f2 data-v-79a168f2>SSH</strong>-><strong data-v-79a168f2 data-v-79a168f2>Tunnels</strong> (plus bas)</li>
+	<li data-v-79a168f2 data-v-79a168f2>Entrer, Source port : <strong data-v-79a168f2 data-v-79a168f2>902</strong> (votre port local), Destination: (ip de vmserver1:le port) , puis cliquer Add.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Aller dans <strong data-v-79a168f2 data-v-79a168f2>Connection</strong>-><strong data-v-79a168f2 data-v-79a168f2>Data</strong>; Auto-login username, vous pouvez entrer le login qu'il faut si vous l'avez</li>
+	<li data-v-79a168f2 data-v-79a168f2>Retourner au haut du menu et sauvegarder la session</li>
+	<li data-v-79a168f2 data-v-79a168f2>Puis... [Open].</li>
+</ul>
+Ensuite, connectez vous au service sur l'hôte localhost et le port que vous avez "tunnellé".
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2> Connecter a VMWare Server</li>
+	<li data-v-79a168f2 data-v-79a168f2>Ouvrir VMWare sur votre machine hors réseau... maintenant tunnellée</li>
+	<li data-v-79a168f2 data-v-79a168f2>Connect to remote-host: <strong data-v-79a168f2 data-v-79a168f2>localhost</strong></li>
+	<li data-v-79a168f2 data-v-79a168f2>Login/pw: votre login pour accéder aux vm.</li>
+</ul>
+Utiliser la VM comme si elle était locale.
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Source</strong></p>
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2><a href="ttp://www.medicalnerds.com/port-forwarding-with-sshputty/" data-v-79a168f2 data-v-79a168f2>Exemple tunnel avec PuTTY.</a></li>
+</ul></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2007/09/lorsque-gerer-un-reseau-peut-rimer-avec-vigilance-plutot-que-reparation" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Lorsque gérer un réseau peut rimer avec vigilance plutôt que réparation
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Fait d'usabilité no2, Nous ne faisons pas de choix  optimaux. Nous choisisons le premier choix cohérent
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729800241/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

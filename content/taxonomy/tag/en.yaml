@@ -1,0 +1,171 @@
+human:
+  - key: ar
+    text: Augmented Reality
+    description: |
+      Articles written to share my discoveries for projects and products
+      taking advantage of layering information on top of images, a.k.a. AR
+
+  - key: architecture
+    text: Architecture
+    description: |
+      Software Architecture, might be either HTML/CSS «FrontEnd», «BackEnd»,
+      Infrastructure.
+
+  - key: best-practices
+    text: Best Practices
+    description: |
+      Best practices
+
+  - key: conference
+    text: Conferences
+    description: |
+      Conference report or that I’ve attended
+
+  - key: cloud-computing
+    text: Cloud Computing
+    description: |
+      Articles written to share my observations about products or
+      techniques and relevant technologies related to virtualization and
+      infrastructure as code
+
+  - key: data-persistence
+    text: data persistence
+    description: |
+      Articles written to share my research and or expriments around managing data
+      in the context of a distributed Web Application and to ensure service resiliency
+
+  - key: development
+    text: Development
+    description: |
+      Software development related
+
+  - key: docker
+    text: Docker
+    description: |
+      Docker and container
+
+  - key: events
+    text: Events
+    description: |
+      Events in which I’ve attended, or contributed to
+
+  - key: favourites
+    text: Favoris
+    description: Favorite articles
+
+  - key: fraud
+    text: Fraud
+    description: |
+      One of my favourite subject about how creative some can get to steal
+      money or identity
+
+  - key: geeknight
+    text: GeekNight
+    description: |
+      Projects I work on for leisure or to contribute back
+
+  - key: geranium
+    text: Géranium
+    description: |
+      A Software-As-Service software I was maintaining between 2002..2007
+      during my years operating INEXIS Solution Web Inc.
+
+  - key: i18n
+    text: Internationalisation
+    description: |
+      As a native French-Canadian, publishing on the Web always had to take
+      into account English.
+      Articles written to describe and share my expreiments in relation to
+      making multilingual Web Applications.
+
+  - key: js-montreal
+    text: JS Montréal
+    description: |
+      Montreal JavaScript Meetup group
+
+  - key: linux
+    text: GNU/Linux
+    description: |
+      Articles written to help myself better unerstand GNU/Linux and other
+      Open-Source and/or distributed Web technology stack.
+
+  - key: nuxt
+    text: Nuxt.js
+    description: |
+      Nuxt.js, the Intuitive Vue Framework that allows writing server-side rendered
+      web pages written in JavaScript.
+
+  - key: operations
+    text: Operations
+    description: |
+      Articles written about the craft of managing scalable, predictable and reliable distributed
+      computing infrastructure for the Web.
+
+  - key: procedure
+    text: Procedure
+    description: |
+      Articles written to explain step-by-step how to
+      set something in place
+
+  - key: php
+    text: PHP
+    description: |
+      Articles written while working with the PHP programming language
+
+  - key: salt-stack
+    text: Salt Stack
+    description: |
+      Articles written while making experiments with my favourite infrastructure as code
+      configuration management tool SaltStack, now owned by VMWare
+
+  - key: security
+    text: Security
+    description: |
+      Articles written about research related to computer and Identity protection and security
+
+  - key: standardization
+    text: standardization
+    description: |
+      Related to software architecture and standardizations work
+
+  - key: talk
+    text: Talk
+    description: |
+      Talk I’ve given
+
+  - key: tools
+    text: Tools
+    description: |
+      Tools I’ve experimented and reviewed
+
+  - key: tutorials
+    text: Tutorials
+    description: |
+      Articles written to help others based on what I’ve learned
+
+  - key: vuejs
+    text: Vue.js
+    description: |
+      Vue.js, the progressive framework for building user interfaces
+
+  - key: vuetify
+    text: Vuetify.js
+    description: |
+      Vuetify is a Vue UI Library with beautifully handcrafted Components using the Material Design specification.
+
+  - key: vulgarization
+    text: Vulgarisation
+    description: |
+      Articles written to attempt at simplifying
+
+  - key: webplatform
+    text: WebPlatform
+    description: |
+      Work done as a full time W3C employee and other related work as volunteer
+      contributor helping on documenting the Open Web Platform.
+
+  - key: wish-list
+    text: Wish List
+    description: |
+      Things I’ve been craving for or about personal introspection and/or
+      professional progress

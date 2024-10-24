@@ -1,0 +1,199 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Une machine virtuelle Gentoo - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2007/02/une-machine-virtuelle-gentoo/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2007/02/une-machine-virtuelle-gentoo/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2007" class="nuxt-link-active" data-v-ede238bc>2007</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2007/02" class="nuxt-link-active" data-v-ede238bc>02</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Une machine virtuelle Gentoo</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2007-02-10" data-v-79a168f2>
+        samedi 10 février 2007
+      </time> <a href="https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__552" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__552" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/procedure" class="no-underline">procedure</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/logiciel-libre" class="no-underline">logiciel-libre</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/experiments" class="no-underline">📁 experiments</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><!----> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><h2 id="introduction" data-v-79a168f2 data-v-79a168f2><a href="#introduction" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Introduction</h2>
+<p data-v-79a168f2 data-v-79a168f2>Pour monter une machine virtuelle, il faut VMWare player (<a href="http://www.vmware.com" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>www.vmware.com</a>) J'ai
+choisi d'utiliser Gentoo pour l'exemple car c'est un linux souple a la ligne de
+commande et hyper customisable bare-bone. Bref, pas de fla-fla, juste ce que
+l'on a besoin!</p>
+<p data-v-79a168f2 data-v-79a168f2>Voici les commandes que j'ai fait, je vulgariserai plus tard. La Gentoo VM a
+obtenir</p>
+<p data-v-79a168f2 data-v-79a168f2>Voici un snip de la page ou j'ai été chercher la GentooVM pré-configurée</p>
+<p data-v-79a168f2 data-v-79a168f2>SOURCE: <a href="http://gentoovm.com/wiki/index.php/Main_Page" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>gentoovm.com/.../Main_Page</a>, <a href="https://web.archive.org/web/20070212083334/http://gentoovm.com/wiki/index.php/Main_Page" rel="nofollow noopener noreferrer" target="_blank" title="Internet Archive version of gentoovm.com Wiki du 14 février 2007" data-v-79a168f2 data-v-79a168f2>en date du le 14 février
+2007</a></p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-txt" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>This is a relatively bare bones install of gentoo. Xorg and WM not included. So you still have to build all the stuff.
+
+Gentoo 2006.1 (Barebones) VMWare Appliance:
+MD5 Source Comments
+Mirror 1 gentoovm.com
+Mirror 2 http://gentoo.chem.wisc.edu UW-Madison Dept. of Chemistry official Gentoo source mirror
+Mirror 3 gentoovm.intarweb.net This mirror generously provided by Phaerus
+
+* Created: September 23rd, 2006
+* Filesize
+  * Compressed: 409 MB (429,163,861 bytes)
+  * Extracted: 1.16 GB (1,249,512,994 bytes)
+  * Root Password: gentoo
+  * Virtual Drive: 10.7 GB, 10737418240 bytes
+* Partitions
+  * /dev/hda1 boot ext2 32MB
+  * /dev/hda2 swap 512MB
+  * /dev/hda3 reiserfs 10GB
+* Timezone: US/Pacific
+* Hostname: gentoo-vm
+* Kernel: gentoo-sources-2.6.17-r8
+* Boot Loader: grub-0.97-r8
+* Network Interface(s): DHCP
+</code></pre></div>
+<h2 id="commencer" data-v-79a168f2 data-v-79a168f2><a href="#commencer" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Commencer</h2>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>La prise en main de la Gentoo VM</strong></p>
+
+<rb-notice-box variant="info" role="alert" class="disposition-parent app-alert-box" data-v-79a168f2><strong slot="header">Dans le terminal</strong> <!----> 
+Chaque ligne de commande peux être faite soit en tant que root, ou avec la commande `sudo`
+</rb-notice-box>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Changer le mot de passe root</strong></p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>passwd</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Toujours utile de changer son mot de passe root, oubliez pas de faire les ajouts
+des usagers... plus tard.</p>
+<h2 id="configuration-clavier" data-v-79a168f2 data-v-79a168f2><a href="#configuration-clavier" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Configuration clavier</h2>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Changer le keymap</strong> (configuration du input local (clavier))</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>nano</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-w</span> /etc/conf.d/keymaps
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Changer la variable <code data-v-79a168f2 data-v-79a168f2>KEYMAP="us"</code> pour <code data-v-79a168f2 data-v-79a168f2>KEYMAP="cf"</code> "<code data-v-79a168f2 data-v-79a168f2>cf</code>" est le clavier
+<em data-v-79a168f2 data-v-79a168f2>Canadien Français</em> avec le <kbd data-v-79a168f2 data-v-79a168f2>SHIFT</kbd>+<kbd data-v-79a168f2 data-v-79a168f2>3</kbd> pour "<code data-v-79a168f2 data-v-79a168f2>/</code>" et dièse
+"<code data-v-79a168f2 data-v-79a168f2>#</code>" a coté du chiffre "<code data-v-79a168f2 data-v-79a168f2>1</code>" au clavier. Mon keymap favori quoi!</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><span class="filename" data-v-79a168f2 data-v-79a168f2>/etc/conf.d/keymaps</span><pre class="line-numbers language-ini" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token key attr-name" data-v-79a168f2 data-v-79a168f2>KEYMAP</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>=</span><span class="token value attr-value" data-v-79a168f2 data-v-79a168f2>"<span class="token inner-value" data-v-79a168f2 data-v-79a168f2>cf</span>"</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Appliquer les changements</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>env-update <span class="token operator" data-v-79a168f2 data-v-79a168f2>&&</span> <span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>source</span> /etc/profile
+</code></pre></div>
+<h2 id="configuration-réseau" data-v-79a168f2 data-v-79a168f2><a href="#configuration-r%C3%A9seau" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Configuration réseau</h2>
+<p data-v-79a168f2 data-v-79a168f2>Changer le HOSTNAME de la machine, si désiré</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>nano</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-w</span> /etc/conf.d/hostname
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Mettre la valeur que vous voulez, dans l'exemple; simplement remplacer le "tux"</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><span class="filename" data-v-79a168f2 data-v-79a168f2>/etc/conf.d/hostname</span><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2><span class="token environment constant" data-v-79a168f2 data-v-79a168f2>HOSTNAME</span></span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token string" data-v-79a168f2 data-v-79a168f2>"tux"</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Statique-ifier son adresse IP</strong> au réseau</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>nano</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-w</span> /etc/conf.d/net
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Inscrire dans le fichier la configuration IP statique désirée</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><span class="filename" data-v-79a168f2 data-v-79a168f2>/etc/conf.d/net</span><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>config_eth0</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>"192.168.1.83 netmask 255.255.255.0 brd 192.168.1.255"</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>
+<span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>routes_eth0</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>"default gw 192.168.1.1"</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>
+</code></pre></div>
+<h2 id="démarer-le-réseau-par-défaut" data-v-79a168f2 data-v-79a168f2><a href="#d%C3%A9marer-le-r%C3%A9seau-par-d%C3%A9faut" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Démarer le réseau par défaut</h2>
+<p data-v-79a168f2 data-v-79a168f2>Cette commande ajuste la configuration interne pour s’assurer que l’interface
+réseau <code data-v-79a168f2 data-v-79a168f2>eth0</code> est active durant le processus de démarrage.</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>rc-update <span class="token function" data-v-79a168f2 data-v-79a168f2>add</span> net.eth0 default
+</code></pre></div>
+<h2 id="mapper-le-réseau" data-v-79a168f2 data-v-79a168f2><a href="#mapper-le-r%C3%A9seau" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Mapper le réseau</h2>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>nano</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-w</span> /etc/hosts
+</code></pre></div>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><span class="filename" data-v-79a168f2 data-v-79a168f2>/etc/hosts</span><pre class="line-numbers language-txt" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>192.168.1.83 gentoo-vm
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Ce peut être une bonne idée d’utiliser le fichier selon l’adressage IP du bureau</p>
+<h2 id="installer-vim-mon-éditeur-favori" data-v-79a168f2 data-v-79a168f2><a href="#installer-vim-mon-%C3%A9diteur-favori" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Installer VIM, mon éditeur favori</h2>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>emerge <span class="token function" data-v-79a168f2 data-v-79a168f2>vim</span> vim-core
+</code></pre></div>
+<h2 id="sassurer-que-sshd-de-openssh-est-au-démarrage" data-v-79a168f2 data-v-79a168f2><a href="#sassurer-que-sshd-de-openssh-est-au-d%C3%A9marrage" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>S'assurer que SSHd de OpenSSH est au démarrage</h2>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>rc-update <span class="token function" data-v-79a168f2 data-v-79a168f2>add</span> sshd default
+</code></pre></div>
+<h2 id="installer-apache2" data-v-79a168f2 data-v-79a168f2><a href="#installer-apache2" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Installer Apache2</h2>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>echo</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>'net-www/apache -mpm-worker mpm-prefork'</span> <span class="token operator" data-v-79a168f2 data-v-79a168f2>></span> /etc/portage/package.use
+emerge <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-aDNtuv</span> apache
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Répondre '<span lang="en" data-v-79a168f2 data-v-79a168f2>yes</span>' et attendre...</p>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Effacer les fichiers de config</strong>, surtout si l'install est neuve</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>find</span> /etc <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-iname</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>'._cfg????_*'</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-exec</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>rm</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-rf</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>{</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>}</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>;</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Effacer TOUT les fichiers trouvés portant la mention ._cfgTRUC (fichiers
+sauvegardés de config) safe a effacer si machine neuve, ca sert a rien de
+"gosser" avec ça! Ajouter Apache2 au default runlevel</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>rc-update <span class="token function" data-v-79a168f2 data-v-79a168f2>add</span> apache2 default
+</code></pre></div>
+<h2 id="installer-le-serveur-ftpd" data-v-79a168f2 data-v-79a168f2><a href="#installer-le-serveur-ftpd" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Installer le serveur FTPd</h2>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>emerge vsftpd net-ftp/ftp
+rc-update <span class="token function" data-v-79a168f2 data-v-79a168f2>add</span> vsftpd default
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Quick-and-dirty pour installer le FTPd... Copier le fichier config, puis
+configurer le serveur FTP</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>cp</span> /etc/vsftpd/vsftpd.conf.example /etc/vsftpd/vsftpd.conf
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Éditer puis ensuite le démarrer</strong></p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><span class="filename" data-v-79a168f2 data-v-79a168f2>/etc/vsftpd/vsftpd.conf</span><pre class="line-numbers language-ini" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token key attr-name" data-v-79a168f2 data-v-79a168f2>ascii_upload_enable</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>=</span><span class="token value attr-value" data-v-79a168f2 data-v-79a168f2>YES</span>
+<span class="token key attr-name" data-v-79a168f2 data-v-79a168f2>ascii_download_enable</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>=</span><span class="token value attr-value" data-v-79a168f2 data-v-79a168f2>YES</span>
+<span class="token key attr-name" data-v-79a168f2 data-v-79a168f2>local_umask</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>=</span><span class="token value attr-value" data-v-79a168f2 data-v-79a168f2>022</span>
+<span class="token key attr-name" data-v-79a168f2 data-v-79a168f2>anonymous_enable</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>=</span><span class="token value attr-value" data-v-79a168f2 data-v-79a168f2>NO</span>
+<span class="token key attr-name" data-v-79a168f2 data-v-79a168f2>local_enable</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>=</span><span class="token value attr-value" data-v-79a168f2 data-v-79a168f2>YES</span>
+</code></pre></div>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>/etc/init.d/vsftpd start
+</code></pre></div>
+<h2 id="rappels-de-base" data-v-79a168f2 data-v-79a168f2><a href="#rappels-de-base" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Rappels de base</h2>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Nano et Pico son des éditeurs de base en UNIX, pour quiter après une
+modification, simplement faire <kbd data-v-79a168f2 data-v-79a168f2>CTRL</kbd>+X (pour exit) et répondre aux
+questions</li>
+<li data-v-79a168f2 data-v-79a168f2>Vi ou ViM (Vi-improved) est mon éditeur préféré! pour éditer, faire
+'<kbd style="text-transform:lowercase" data-v-79a168f2 data-v-79a168f2>i</kbd>' (insert). Écrire.... puis,
+pour terminer; faire <kbd data-v-79a168f2 data-v-79a168f2>ESC</kbd> ET
+<kbd data-v-79a168f2 data-v-79a168f2>:</kbd><kbd style="text-transform:lowercase" data-v-79a168f2 data-v-79a168f2>w</kbd><kbd style="text-transform:lowercase" data-v-79a168f2 data-v-79a168f2>q</kbd>'
+(<code data-v-79a168f2 data-v-79a168f2>:wq</code> = <span lang="en" data-v-79a168f2 data-v-79a168f2>command write and quit</span>)</li>
+</ul>
+<h2 id="ressources" data-v-79a168f2 data-v-79a168f2><a href="#ressources" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Ressources</h2>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2><a href="http://www.vmwhere.net/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>http://www.vmwhere.net/</a> Un blog sur le sujet des VM <a href="http://gentoovm.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>http://gentoovm.com/</a>
+Qui offre un bon howto et une image bare-bone de Gentoo en VM</li>
+<li data-v-79a168f2 data-v-79a168f2><a href="http://www.gentoo.org/doc/en/handbook/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>http://www.gentoo.org/doc/en/handbook/</a> LE Handbook pour Gentoo linux</li>
+<li data-v-79a168f2 data-v-79a168f2><a href="http://gentoo-wiki.com/HOWTO_Subversion/#Installation" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>http://gentoo-wiki.com/HOWTO_Subversion/#Installation</a> Notes sur
+l'installation de SVN</li>
+<li data-v-79a168f2 data-v-79a168f2><a href="http://gentoo-wiki.com/HOWTO_Apache2_with_subversion_SVN_and_DAV" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>http://gentoo-wiki.com/HOWTO_Apache2_with_subversion_SVN_and_DAV</a> Howto
+pour DAV et svn... (le sharing à -la-samba)</li>
+</ul></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2007/01/le-futur-du-pc" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Le futur du PC
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2007/02/conversion-et-resampling-image" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Conversion et resampling image
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729800241/blog/2007/02/une-machine-virtuelle-gentoo/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

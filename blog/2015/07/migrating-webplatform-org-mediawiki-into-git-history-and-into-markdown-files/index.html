@@ -1,0 +1,454 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>Migrating WebPlatform.org MediaWiki into Git as Markdown files - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="description-how-to-take-a-f" name="description" content="How to take a full MediaWiki content and edit history into a Git repository keeping the history and author attributions into Markdown"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729800241/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2015" class="nuxt-link-active" data-v-ede238bc>2015</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2015/07" class="nuxt-link-active" data-v-ede238bc>07</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Migrating WebPlatform.org MediaWiki into Git as Markdown files</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2015-07-30" data-v-79a168f2>
+        Thursday, July 30, 2015
+      </time> <!----></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__224" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__224" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/archiving" class="no-underline">archiving</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/open-source" class="no-underline">open-source</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/operations" class="no-underline">operations</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/webplatform" class="no-underline">webplatform</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/projects" class="no-underline">📁 projects</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><figure class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1 app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/monit_dashboard_201502_status.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/monit_dashboard_201502_status.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> <div class="nuxt-content" data-v-33ff8cb7 data-v-79a168f2><p data-v-33ff8cb7 data-v-79a168f2>The WebPlatform project was running from a about 20 VMs
+and the availability, in part, managed by Monit.
+At the end of the project, the infrastructure "had to go away"</p></div></figcaption></figure> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>On July 1st 2015, <em data-v-79a168f2 data-v-79a168f2>The WebPlatform project</em> has been discontinued, by having
+<a href="https://web.archive.org/web/20130328132045/http://www.webplatform.org/stewards/" rel="nofollow noopener noreferrer" target="_blank" title="WebPlatform Project sponsors" data-v-79a168f2 data-v-79a168f2>its sponsors</a> retracting from the project.</p>
+<p data-v-79a168f2 data-v-79a168f2>I was hired by the W3C solely to maintain the WebPlatform project. Without
+funding, and no budget at W3C/MIT to transfer me, my contract was going to end.</p>
+
+<rb-notice-box variant="info" role="alert" class="disposition-parent app-alert-box" style="display:flex" data-v-79a168f2><!----> <!----> 
+👀 This was written in December 2020 and taken from notes I’ve been sharing around via email.
+</rb-notice-box>
+<p data-v-79a168f2 data-v-79a168f2>With me as the only full-time person on the project with knowledge of the
+infrastructure, and also as a believer of “<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards#Dont_break_the_web" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>don’t break the
+web</a>”, I wanted to keep everything online.</p>
+<p data-v-79a168f2 data-v-79a168f2>When <a href="https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>I inherited the project</a>, I <a href="https://webplatform.github.io/docs/WPD/Infrastructure/analysis/2013-Migrating_to_a_new_cloud_provider/" rel="nofollow noopener noreferrer" target="_blank" title="2013 Infrastructure project: Migrating to a new provider" data-v-79a168f2 data-v-79a168f2>went through migrating
+<em data-v-79a168f2 data-v-79a168f2>from one cloud provider to another</em></a> the full
+infrastructure, <a href="https://webplatform.github.io/docs/WPD/Infrastructure/analysis/2013-Usage_and_future_state/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>it has been running from about 20 Linux
+VMs</a>, worked on a few projects such as an attempt at having
+Single-SignOn, and better compatibility tables.</p>
+<p data-v-79a168f2 data-v-79a168f2>Since the project was being closed, most of what I’ve worked lost their use. The
+infrastructure was also going to become a burden.</p>
+<p data-v-79a168f2 data-v-79a168f2>While planning my last weeks, I’ve agreed with the W3C systems team
+"<a href="https://www.w3.org/People/functions/systeam" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>w3t-systeam</a>" to convert as much as possible as a static site.</p>
+<p data-v-79a168f2 data-v-79a168f2>The following are notes about the software I’ve written to migrate a WordPress
+blog and multiple MediaWiki namespaces into a Git repository.</p>
+<h2 id="priorities" data-v-79a168f2 data-v-79a168f2><a href="#priorities" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Priorities</h2>
+<p data-v-79a168f2 data-v-79a168f2>The priorities were to keep the documentation pages up, preserve the
+contribution history and attributions, also keep the blog contents, and have
+everything to be served as static HTML hosted on GitHub pages.</p>
+<p data-v-79a168f2 data-v-79a168f2>I wanted to have this done before <a href="/blog/2015/07/leaving-w3c/" data-v-79a168f2>I leave the W3C</a>.</p>
+<p data-v-79a168f2 data-v-79a168f2>Since the <a href="https://www.w3.org/People/functions/systeam" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>SysTeam</a> would keep control of the <code data-v-79a168f2 data-v-79a168f2>webplatform.org</code>
+domain, they’ve decided to support some redirect from the original domain to
+<a href="https://webplatform.github.io/" rel="nofollow noopener noreferrer" target="_blank" title="WebPlatform Docs Home Page" data-v-79a168f2 data-v-79a168f2>webplatform.github.io</a>.</p>
+<p data-v-79a168f2 data-v-79a168f2>Once everything was migrated, we’ve added a note;</p>
+<blockquote data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>The WebPlatform project, supported by various stewards between 2012 and 2015,
+has been discontinued</p>
+</blockquote>
+<sup data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Source: <a href="https://webplatform.github.io/" rel="nofollow noopener noreferrer" target="_blank" title="WebPlatform Docs Home Page" data-v-79a168f2 data-v-79a168f2>webplatform.github.io</a></p>
+</sup>
+<h2 id="outcome" data-v-79a168f2 data-v-79a168f2><a href="#outcome" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Outcome</h2>
+<p data-v-79a168f2 data-v-79a168f2>The conversion work took the <em data-v-79a168f2 data-v-79a168f2>two last months</em>.</p>
+<p data-v-79a168f2 data-v-79a168f2>All links to pages showing the <em data-v-79a168f2 data-v-79a168f2>WebPlatform</em> logo from this article is the
+result of what I’m describing here, as the migration and all servers were shut
+down and decommissioned in 2016.</p>
+<p data-v-79a168f2 data-v-79a168f2>The source of the site was generated from
+<a href="https://github.com/webplatform/generator-docs" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>webplatform/generator-docs</a>, and we’ve created
+<a href="https://github.com/webplatform/webplatform.github.io/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>webplatform/webplatform.github.io</a>
+to host the site on GitHub pages. Eventualy, the W3C SysTeam set the repository
+as read-only.</p>
+<p data-v-79a168f2 data-v-79a168f2>There were other things that we’ve initially planned, but couldn’t (see
+<a href="/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files#requirements-we-couldnt-meet" data-v-79a168f2>Requirements we couldn’t meet</a>):</p>
+<p data-v-79a168f2 data-v-79a168f2>Here is what I could migrate</p>
+<div class="table-parent table-auto" style="font-size:small" data-v-79a168f2 data-v-79a168f2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table data-v-79a168f2 data-v-79a168f2><thead data-v-79a168f2 data-v-79a168f2><tr data-v-79a168f2 data-v-79a168f2><th data-v-79a168f2 data-v-79a168f2>From</th><th data-v-79a168f2 data-v-79a168f2>To</th><th data-v-79a168f2 data-v-79a168f2>Repository</th><th data-v-79a168f2 data-v-79a168f2>Comment</th><th data-v-79a168f2 data-v-79a168f2>Commits</th><th data-v-79a168f2 data-v-79a168f2>Documents</th><th data-v-79a168f2 data-v-79a168f2>Deleted</th></tr></thead><tbody data-v-79a168f2 data-v-79a168f2><tr data-v-79a168f2 data-v-79a168f2><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/*</code></td><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/*</code></td><td data-v-79a168f2 data-v-79a168f2><a href="https://github.com/webplatform/docs" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/..." data-v-79a168f2 data-v-79a168f2>webplatform/docs</a></td><td data-v-79a168f2 data-v-79a168f2>The main docs pages</td><td data-v-79a168f2 data-v-79a168f2>37,000</td><td data-v-79a168f2 data-v-79a168f2>4,675</td><td data-v-79a168f2 data-v-79a168f2>418</td></tr><tr data-v-79a168f2 data-v-79a168f2><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Meta:*</code></td><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Meta/*</code></td><td data-v-79a168f2 data-v-79a168f2><a href="https://github.com/webplatform/docs-meta" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/Meta:..." data-v-79a168f2 data-v-79a168f2>webplatform/docs-meta</a></td><td data-v-79a168f2 data-v-79a168f2>Archived content that needed to be moved during initial mass imports.</td><td data-v-79a168f2 data-v-79a168f2>300</td><td data-v-79a168f2 data-v-79a168f2>58</td><td data-v-79a168f2 data-v-79a168f2>170</td></tr><tr data-v-79a168f2 data-v-79a168f2><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/WPD:*</code></td><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/WPD/*</code></td><td data-v-79a168f2 data-v-79a168f2><a href="https://github.com/webplatform/docs-wpd" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/WPD:..." data-v-79a168f2 data-v-79a168f2>webplatform/docs-wpd</a></td><td data-v-79a168f2 data-v-79a168f2>Community and notes section. Example <a href="https://web.archive.org/web/20160722084044/https://docs.webplatform.org/wiki/WPD:Infrastructure" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>/wiki/WPD:Infrastructure</a> into <a href="https://webplatform.github.io/docs/WPD/Infrastructure/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>/docs/WPD/Infrastructure</a> (<a href="https://github.com/webplatform/docs-wpd/blob/manual-edits/Infrastructure/index.md" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>source</a>)</td><td data-v-79a168f2 data-v-79a168f2>5,700</td><td data-v-79a168f2 data-v-79a168f2>358</td><td data-v-79a168f2 data-v-79a168f2>323</td></tr><tr data-v-79a168f2 data-v-79a168f2><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>blog.webplatform.org</code></td><td data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>webplatform.github.io/blog/*</code></td><td data-v-79a168f2 data-v-79a168f2><a href="https://github.com/webplatform/blog" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>webplatform/blog</a></td><td data-v-79a168f2 data-v-79a168f2>The blog content</td><td data-v-79a168f2 data-v-79a168f2>2</td><td data-v-79a168f2 data-v-79a168f2>53</td><td data-v-79a168f2 data-v-79a168f2>N/A</td></tr></tbody></table>
+</div>
+<h2 id="migration" data-v-79a168f2 data-v-79a168f2><a href="#migration" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Migration</h2>
+<rb-notice-box variant="info" role="alert" class="disposition-parent app-alert-box" style="display:flex" data-v-79a168f2><!----> <!----> 
+<p data-v-79a168f2>👀 During this migration project, I was hoping to find a way to take any web
+page, from any CMS, and get a full copy (including images) of it into Markdown.
+There was none. In 2017, I’ve created
+<a href="https://github.com/renoirb/archivator" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2><em data-v-79a168f2>Archivator</em></a>
+(<a href="https://www.npmjs.com/package/archivator" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2>npm</a>) to help with such work.
+Instead of using the last step described here, anyone could use <em data-v-79a168f2>Archivator</em> to
+retrieve a copy of their web pages.</p>
+</rb-notice-box>
+<p data-v-79a168f2 data-v-79a168f2>While building the solution, a few requirements emerged, they’re listed in
+<a href="/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files#requirements" data-v-79a168f2>Requirements</a></p>
+<h3 id="blog" data-v-79a168f2 data-v-79a168f2><a href="#blog" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Blog</h3>
+<p data-v-79a168f2 data-v-79a168f2>For migrating the <a href="https://github.com/webplatform/blog" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>blog</a>, it was made manually, I’ve just
+converted the HTML into Markdown using Pandoc.</p>
+<h3 id="mediawiki" data-v-79a168f2 data-v-79a168f2><a href="#mediawiki" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>MediaWiki</h3>
+<p data-v-79a168f2 data-v-79a168f2>For migrating MediaWiki, the proces was a bit more complex.</p>
+<rb-notice-box variant="info" role="alert" class="disposition-parent app-alert-box" data-v-79a168f2><strong slot="header">Want to migrate your own MediaWiki?</strong> <!----> 
+<p data-v-79a168f2>🤲🏼 If you’re looking for an HowTo to migrate your own MediaWiki installation,
+<a href="https://github.com/webplatform/mediawiki-conversion#use" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2>the procedure is written in ➡️ <strong data-v-79a168f2>webplatform/mediawiki-conversion</strong>’s README</a></p>
+</rb-notice-box>
+<p data-v-79a168f2 data-v-79a168f2>To migrate, we needed an history of each pages, from creation to the last edit.</p>
+<p data-v-79a168f2 data-v-79a168f2>With MediaWiki, we have <a href="https://www.mediawiki.org/wiki/Manual:DumpBackup.php" rel="nofollow noopener noreferrer" target="_blank" title="dumpBackup.php file creates an XML dump for export or backup. XML dumps contain the content of the wiki" data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Manual:DumpBackup.php</strong></a>, that creates
+an XML file ("<em data-v-79a168f2 data-v-79a168f2>MediaWiki XML dump</em>") of all history of all pages. One per
+<a href="https://www.mediawiki.org/wiki/Help:Namespaces" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>namespace</a>, for WebPlatform Docs’ wikis, we had:
+<a href="https://github.com/webplatform/docs-meta" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/Meta:..." data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>/wiki/Meta:*</code></a>, <a href="https://github.com/webplatform/docs-wpd" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/WPD:..." data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>/wiki/WPD:*</code></a>,
+<a href="https://github.com/webplatform/docs" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/..." data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>/wiki/*</code></a>.</p>
+<p data-v-79a168f2 data-v-79a168f2>A big part of processing and converting history is about the data model so we
+could read from one format and use the data model as data-source for conversion.</p>
+<p data-v-79a168f2 data-v-79a168f2>For this, I’ve created <a href="https://github.com/webplatform/content-converter" rel="nofollow noopener noreferrer" target="_blank" title="Transform CMS content from a format into another" data-v-79a168f2 data-v-79a168f2>webplatform/content-converter</a>, an
+abstract library specialized for data manipulation to help "<em data-v-79a168f2 data-v-79a168f2>Transform CMS
+content from a format into another</em> [format]". It’s written in PHP, and might
+still work even though it hasn’t been touched since 2015.</p>
+<p data-v-79a168f2 data-v-79a168f2><a href="https://github.com/webplatform/content-converter" rel="nofollow noopener noreferrer" target="_blank" title="Transform CMS content from a format into another" data-v-79a168f2 data-v-79a168f2>webplatform/content-converter</a> takes care of manipulating
+data for:</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Date of contribution and author information</p>
+<p data-v-79a168f2 data-v-79a168f2>Content management systems like <em data-v-79a168f2 data-v-79a168f2>MediaWiki</em> has a way to tell the user and
+date of an edition.</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Take each edit contents as they were</p>
+<p data-v-79a168f2 data-v-79a168f2>Do not change any of the contents for each edits, even though they are in a
+format understood by the original engine, here being <em data-v-79a168f2 data-v-79a168f2>MediaWiki</em>.</p>
+</li>
+</ul>
+<p data-v-79a168f2 data-v-79a168f2>To convert each page history edit into <strong data-v-79a168f2 data-v-79a168f2>Git commits</strong>, I’ve created
+<a href="https://github.com/webplatform/mediawiki-conversion" rel="nofollow noopener noreferrer" target="_blank" title="Export MediaWiki wiki pages and history into a git repository" data-v-79a168f2 data-v-79a168f2>webplatform/mediawiki-conversion</a>.</p>
+<p data-v-79a168f2 data-v-79a168f2>This is the utility that takes care of making the conversion <a href="https://github.com/webplatform/mediawiki-conversion/blob/master/src/WebPlatform/Importer/Commands/RunCommand.php#L48" rel="nofollow noopener noreferrer" target="_blank" title="Comments describing mediawiki-conversion" data-v-79a168f2 data-v-79a168f2>see comments made
+here</a>.</p>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Handle deleted pages</em></p>
+<p data-v-79a168f2 data-v-79a168f2>For each edit create a git revisions commit until the final file delete. At
+the end of that step, the Git repository should have an history, but no
+aparent files. At this step, we can also use the entries and make a redirect
+map.</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Handle pages that weren’t deleted in history</em></p>
+<p data-v-79a168f2 data-v-79a168f2>Do the same as above. At this step, we should have a repository with text
+files where each file has exactly the same content as the source history. So
+we can add them on top of the deleted pages following the same process as
+above. We can also use those as a list of current pages we’ll want to be
+converted into Markdown.</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Convert content</em></p>
+<p data-v-79a168f2 data-v-79a168f2>For all pages <em data-v-79a168f2 data-v-79a168f2>that weren’t deleted in history</em>. Query <em data-v-79a168f2 data-v-79a168f2>MediaWiki</em> API to
+retrieve the full HTML, including <a href="https://www.mediawiki.org/wiki/Transclusion" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>Transclusions</a> pass it to
+Pandoc, so we get it converted into Markdown. Commit the rewritten file
+contents with Markdown.</p>
+</li>
+</ol>
+<p data-v-79a168f2 data-v-79a168f2>By design <a href="https://github.com/webplatform/mediawiki-conversion" rel="nofollow noopener noreferrer" target="_blank" title="Export MediaWiki wiki pages and history into a git repository" data-v-79a168f2 data-v-79a168f2>webplatform/mediawiki-conversion</a> allows to
+re-run the 3rd step so we could always get all edits until we
+<a href="https://www.mediawiki.org/wiki/Manual:Lock_the_database" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Lock the database</em> (i.e. cut-off)</a>
+so we could keep the production site active until a cut-off date.</p>
+
+<h2 id="requirements" data-v-79a168f2 data-v-79a168f2><a href="#requirements" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Requirements</h2>
+<p data-v-79a168f2 data-v-79a168f2>Along with what's described in the
+<a href="/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files#migration-steps" data-v-79a168f2>Migration steps</a>,
+we wanted also to ensure we properly support the following.</p>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Keep author attributions but have them anonymized</p>
+<p data-v-79a168f2 data-v-79a168f2>We didn’t want to leak all contributor’s accounts email addresses to be
+published without their consent. So, I’ve setup a <a href="https://github.com/webplatform/docs/blob/manual-edits/.mailmap" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>.mailmap</code> so that
+contributors could add a PR to advertize publicly on GitHub</a>.</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Keep code examples in Markdown so we can colourize them</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Golden standard pages should look the same</p>
+<p data-v-79a168f2 data-v-79a168f2>The "Golden Standard" pages were ones we were regularly referring to see how
+they would look and see if things are broken.</p>
+<p data-v-79a168f2 data-v-79a168f2>Also, since we were removing infrastructure, we should see features that were
+enabled at the time of <em data-v-79a168f2 data-v-79a168f2>Web.Archive.org</em> snapshot, but would be omitted in
+the <em data-v-79a168f2 data-v-79a168f2>Static version</em> (i.e. <code data-v-79a168f2 data-v-79a168f2>webplatform.github.io</code>)</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Compatibility data</em> was removed</li>
+<li data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Contents</em> on the right should be removed</li>
+<li data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Overview table</em> should look different</li>
+<li data-v-79a168f2 data-v-79a168f2>On <em data-v-79a168f2 data-v-79a168f2>static version</em> code blocks should be more colorized differently (it's
+using a different process)</li>
+</ul>
+<p data-v-79a168f2 data-v-79a168f2>Examples:</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fcss%2Fproperties%2Fborder-radius" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/css/properties/border-radius</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/css/properties/border-radius" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/css/properties/border-radius</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fcss%2Fproperties%2Fdisplay" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/css/properties/display</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/css/properties/display" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/css/properties/display</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20140626071828/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fjavascript%2Ffunctions" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/javascript/functions</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/javascript/functions" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/javascript/functions</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fjavascript%2FArray%2Ffilter" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/javascript/Array/filter</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/javascript/Array/filter" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/javascript/Array/filter</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fjavascript%2FDate" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/javascript/Date</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/javascript/Date" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/javascript/Date</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150513130014/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FBeginners%2Fhtml" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Beginners/html</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/Beginners/html" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Beginners/html</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150513130014/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Ftutorials%2Fcanvas_notearsgame" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/tutorials/canvas_notearsgame</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/tutorials/canvas_notearsgame" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/tutorials/canvas_notearsgame</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150905205843/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Ftutorials%2Fsvg_clipping_and_masking" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/tutorials/svg_clipping_and_masking</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/tutorials/svg_clipping_and_masking" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/tutorials/svg_clipping_and_masking</a></span>
+</li>
+</ul>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Support MediaWiki special URL patterns</p>
+<p data-v-79a168f2 data-v-79a168f2>MediaWiki is pretty relax about what it allows in its URLs.</p>
+<p data-v-79a168f2 data-v-79a168f2>Since we’re migrating into a filesystem, we wanted to have only valid
+filesystem file names and decided to normalize all paths into ASCII
+characters.</p>
+<p data-v-79a168f2 data-v-79a168f2>For example, the <a href="https://www.mediawiki.org/wiki/Help:Namespaces" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>Namespaces</a> (e.g. <code data-v-79a168f2 data-v-79a168f2>/wiki/WPD:*</code>) adds a
+column character, that would be URLEncoded into <code data-v-79a168f2 data-v-79a168f2>%3A</code></p>
+<p data-v-79a168f2 data-v-79a168f2>There were many other discrepancies like:</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Case insensitivity — Because some URLs in pages were not in the same casing</li>
+<li data-v-79a168f2 data-v-79a168f2>Supporting spaces — Sometimes with underscore "<code data-v-79a168f2 data-v-79a168f2>_</code>", other times with <code data-v-79a168f2 data-v-79a168f2>%20</code></li>
+<li data-v-79a168f2 data-v-79a168f2>Normalize
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>URL Path</a>
+(<a href="https://url.spec.whatwg.org/#concept-url-path" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>spec</a>) (e.g. anything that
+would be URLEncoded such as <code data-v-79a168f2 data-v-79a168f2>()!@:</code>)</li>
+</ul>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Support MediaWiki special URL patterns</em>: A page in another language should
+be migrated</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20160613060459/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FMain_Page%2Fja" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Main_Page/ja</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/Main_Page/ja" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Main_Page/ja</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FMain_Page%2Fko" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Main_Page/ko</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/Main_Page/ko" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Main_Page/ko</a></span>
+</li>
+</ul>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Support MediaWiki special URL patterns</em>: A Page with <code data-v-79a168f2 data-v-79a168f2>()</code> in URL should be
+normalized</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fcss%2Ffunctions%2Ftranslate()" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/css/functions/translate()</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/css/functions/translate" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/css/functions/translate</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fsvg%2Fproperties%2FanimVal_(SVGAnimatedPreserveAspectRatio)" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/svg/properties/animVal_(SVGAnimatedPreserveAspectRatio)</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/svg/properties/animVal_SVGAnimatedPreserveAspectRatio" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/svg/properties/animVal_SVGAnimatedPreserveAspectRatio</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fsvg%2Fproperties%2Fcx_(SVGRadialGradientElement)" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/svg/properties/cx_(SVGRadialGradientElement)</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/svg/properties/cx_SVGRadialGradientElement" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/svg/properties/cx_SVGRadialGradientElement</a></span>
+</li>
+</ul>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Support MediaWiki special URL patterns</em>: Pages within WPD namespace should
+be migrated</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FWPD%3AInfrastructure%2FMonitoring%2FMonit" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/WPD:Infrastructure/Monitoring/Monit</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/WPD/Infrastructure/Monitoring/Monit" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/WPD/Infrastructure/Monitoring/Monit</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FWPD%3AInfrastructure%2Fanalysis%2F2013-Migrating_to_a_new_cloud_provider" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/WPD:Infrastructure/analysis/2013-Migrating_to_a_new_cloud_provider</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/WPD/Infrastructure/analysis/2013-Migrating_to_a_new_cloud_provider" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/WPD/Infrastructure/analysis/2013-Migrating_to_a_new_cloud_provider</a></span>
+</li>
+</ul>
+<p data-v-79a168f2 data-v-79a168f2>The image comes from <code data-v-79a168f2 data-v-79a168f2>/WPD/assets/</code> which means the image is hosted in the
+<a href="https://github.com/webplatform/docs-wpd" rel="nofollow noopener noreferrer" target="_blank" title="What was under /wiki/WPD:..." data-v-79a168f2 data-v-79a168f2>webplatform/docs-wpd</a> in the assets/ folder.</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>Support MediaWiki special URL patterns</em>: Pages in Meta namespace should be
+migrated</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FMeta%3AHTML%2FElements%2Fstyle" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Meta:HTML/Elements/style</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/Meta/HTML/Elements/style" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Meta/HTML/Elements/style</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FMeta%3Aweb_platform_wednesday" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Meta:web_platform_wednesday</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/Meta/web_platform_wednesday" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Meta/web_platform_wednesday</a></span>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2FMeta%3AEditors_Guide" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/Meta:Editors_Guide</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/Meta/Editors_Guide" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/Meta/Editors_Guide</a></span>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="requirements-we-couldnt-meet" data-v-79a168f2 data-v-79a168f2><a href="#requirements-we-couldnt-meet" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Requirements we couldn’t meet</h3>
+
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Ensure ALL assets uploads are displayed properly</p>
+<p data-v-79a168f2 data-v-79a168f2>Before, we would use GlusterFS to store images for MediaWiki. There has been
+work made to store on <code data-v-79a168f2 data-v-79a168f2>static.webplatform.org</code>, all the pages uses the link,
+but the SysTeam decided not to keep the redirects.</p>
+<p data-v-79a168f2 data-v-79a168f2>Now that the site is archived, I’m unsure this can be fixed.</p>
+<p data-v-79a168f2 data-v-79a168f2>If you want to see them, add this bookmarklet to your bookmarks bar
+<a href="javascript:(function()%7B%5B%5D.forEach.call(document.querySelectorAll('img')%2Cfunction(img)%7Bif%20('src'%20in%20img)%20%7Bsrc%20%3D%20img.src%3Bsrc%20%3D%20src.replace('static.webplatform.org'%2C%20'webplatform.github.io%2Fdocs-assets')%3Bimg.src%3Dsrc%3B%7D%7D)%7D)()" style="text-decoration:none;display:inline-block;padding:1px 6px;color:#fff;background:#32a0eb;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px" data-v-79a168f2 data-v-79a168f2>WebPlatform.github.io
+Show images</a></p>
+<p data-v-79a168f2 data-v-79a168f2>The project <a href="http://webplatform.github.io/docs-assets/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>http://webplatform.github.io/docs-assets/</a> was meant to be used as
+an origin for <code data-v-79a168f2 data-v-79a168f2>static.webplatform.org</code></p>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Should we want to fix the issue</strong>, we could setup an HTTP redirect from
+<code data-v-79a168f2 data-v-79a168f2>static.webplatform.org</code> to <code data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs-assets/</code></p>
+<p data-v-79a168f2 data-v-79a168f2>The following (should be) the same file;</p>
+<ul data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2><a href="https://static.webplatform.org/f/f1/htmlstructure1.jpg" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>https://static.webplatform.org/f/f1/htmlstructure1.jpg</a></li>
+<li data-v-79a168f2 data-v-79a168f2><a href="https://github.com/webplatform/docs-assets/blob/gh-pages/f/f1/htmlstructure1.jpg" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>https://github.com/webplatform/docs-assets/blob/gh-pages/f/f1/htmlstructure1.jpg</a></li>
+<li data-v-79a168f2 data-v-79a168f2><a href="https://webplatform.github.io/docs-assets/f/f1/htmlstructure1.jpg" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>https://webplatform.github.io/docs-assets/f/f1/htmlstructure1.jpg</a></li>
+</ul>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Make sure page links <em data-v-79a168f2 data-v-79a168f2>with different casing</em> are redirected properly</p>
+<p data-v-79a168f2 data-v-79a168f2>For example the page for "<code data-v-79a168f2 data-v-79a168f2>Internet_and_Web</code>" is sometimes linked with
+different casing, e.g. at "<code data-v-79a168f2 data-v-79a168f2>Internet_and_Web/The_History_of_the_Web</code>" or
+"<code data-v-79a168f2 data-v-79a168f2>internet_and_web/The_History_of_the_Web</code>", it is migrated once;
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fconcepts%2FInternet_and_Web%2FThe_History_of_the_Web" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/concepts/Internet_and_Web/The_History_of_the_Web</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/concepts/Internet_and_Web/The_History_of_the_Web" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/concepts/Internet_and_Web/The_History_of_the_Web</a></span></p>
+<p data-v-79a168f2 data-v-79a168f2>Some page has links to with different casing "<code data-v-79a168f2 data-v-79a168f2>internet_and_web</code>", we can see
+from
+<span class="app-link-compare-item" data-v-79a168f2 data-v-79a168f2><a href="https://web.archive.org/web/20150327033121/https%3A%2F%2Fdocs.webplatform.org%2Fwiki%2Fconcepts" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>docs.webplatform.org/wiki/concepts</a><span class="item" data-v-79a168f2 data-v-79a168f2> to </span><a href="https://webplatform.github.io/docs/concepts" rel="nofollow" target="_blank" class="item" data-v-79a168f2 data-v-79a168f2>webplatform.github.io/docs/concepts</a></span></p>
+<p data-v-79a168f2 data-v-79a168f2>MediaWiki would redirect, but on GitHub pages, nothing has been put in place
+for those. If we wanted to support, we could have used the same entries used
+to create <a href="https://github.com/webplatform/generator-docs/blob/master/config/nginx/maps/main.map" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>NGINX rewrite rules</a>, and add empty HTML pages
+like GitHub pages would. In the case of WebPlatform project, it's been
+decided to leave as-is.</p>
+</li>
+<li data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Enforce all redirects from <code data-v-79a168f2 data-v-79a168f2>*.webplatform.org</code> to properly redirect to
+<code data-v-79a168f2 data-v-79a168f2>webplatform.github.io</code>.</p>
+<p data-v-79a168f2 data-v-79a168f2>This migration process supported creating <a href="https://github.com/webplatform/generator-docs/blob/master/config/nginx/maps/main.map" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>NGINX rewrite
+rules</a>, I’m unsure if they’ve been used.</p>
+</li>
+</ol>
+<hr data-v-79a168f2 data-v-79a168f2>
+<h2 id="screenshots" data-v-79a168f2 data-v-79a168f2><a href="#screenshots" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Screenshots</h2>
+<div class="thumbnails gallery" style="overflow:hidden;clear:both" data-v-79a168f2 data-v-79a168f2>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/mediawiki-history-to-git-conversion.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/mediawiki-history-to-git-conversion.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2><a href="https://github.com/webplatform/mediawiki-conversion" rel="nofollow noopener noreferrer" target="_blank" title="Export MediaWiki wiki pages and history into a git repository" data-v-33ff8cb7 data-v-79a168f2>WebPlatform/mediawiki-conversion</a> is made to run in 3
+steps, here we see it running at the 3rd step. Where we would take the latest
+version, get the HTML version from the MediaWiki API, and pass to Pandoc to get
+Markdown.</p>
+</figcaption></figure>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/mediawiki-history-to-git-output.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/mediawiki-history-to-git-output.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2>Making sure during development that the conversion was effectively the same</p>
+</figcaption></figure>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-history-github.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-history-github.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2>We can see directly on GitHub.com the converted page's Git history</p>
+</figcaption></figure>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-markdown.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-markdown.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2>We can see directly on GitHub.com the converted Markdown contents.</p>
+</figcaption></figure>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-view-syntaxhighlight.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-view-syntaxhighlight.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2>The final output should support code blocks with</p>
+</figcaption></figure>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/mediawiki-history-to-git-log.png" alt="MediaWiki history converted into Git Commits" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/mediawiki-history-to-git-log.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2>The end result is that for each <em data-v-33ff8cb7 data-v-79a168f2>MediaWiki XML dump</em> can be converted into text
+files where each edits are made as Git commits keeping author and date of edit.</p>
+</figcaption></figure>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-history-onsite.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/07/docs-page-history-onsite.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2><strong data-v-33ff8cb7 data-v-79a168f2>Not implemented</strong> Screenshot of an experiment to display the page's Git
+history calling GitHub API. There is no trace of this to my recollection, and It
+was effectively the first time I used Vue.js.</p>
+</figcaption></figure>
+</div>
+</div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2015/07/leaving-w3c" lang="en-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Leaving W3C
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2015/08/managing-pgp-private-keys-share-across-machines" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Managing my PGP/OpenPGP keys and share across many machines
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729800241/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

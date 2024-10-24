@@ -1,0 +1,163 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D%7D">
+  <head>
+    <title>Code-review - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/code-review.css" as="style"><link rel="preload" href="/_nuxt/pages/code-review.js" as="script"><link rel="preload" href="/_nuxt/pages/code-review/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/code-review/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/code-review.css"><link rel="stylesheet" href="/_nuxt/pages/code-review/_slug.css"><link rel="preload" href="/site/_nuxt/static/1729800241/code-review/using-read-only-array-of-strings-as-source-for-type/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1729800241/code-review/using-read-only-array-of-strings-as-source-for-type/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section><div class="justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/code-review" class="nuxt-link-active" data-v-ede238bc>code-review</a></li></ol></nav></div> <!----> <div><div class="pages-glossary--slug"><div class="document document--collection"><div class="title page-title font-serif text-2xl italic"><h1>Using read-only array of strings as source for type</h1></div> <div class="body mt-10"><!----> <div class="nuxt-content"><p>Instead of doing</p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IPerson</span> <span class="token punctuation">{</span>
+  gender<span class="token operator">:</span> <span class="token string">'m'</span> <span class="token operator">|</span> <span class="token string">'f'</span> <span class="token operator">|</span> <span class="token string">'nb'</span> <span class="token comment">// Hard-coded strings</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>We can do</p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">const</span> <span class="token constant">GENDERS</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'m'</span><span class="token punctuation">,</span> <span class="token string">'f'</span><span class="token punctuation">,</span> <span class="token string">'nb'</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IPerson</span> <span class="token punctuation">{</span>
+  gender<span class="token operator">:</span> <span class="token keyword">typeof</span> <span class="token constant">GENDERS</span><span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<h2 id="using-enum-and-user-defined-discriminator"><a href="#using-enum-and-user-defined-discriminator" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Using Enum and user-defined discriminator</h2>
+<p>On the same idea as above, one can use Enum and utility functions expanded from
+Enums</p>
+<p><a href="https://gist.github.com/renoirb/d30e7edbe32d9c6b9c2006b13db7a016" rel="nofollow noopener noreferrer" target="_blank">TypeScript type Discriminator factory</a></p>
+<h2 id="create-a-type-based-on-the-property-of-another"><a href="#create-a-type-based-on-the-property-of-another" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>Create a type based on the property of another</h2>
+<p>We can create a type from picking a property from an existing nested one.</p>
+<p>Say we want <code>gender</code> from IPerson, because tat type doesn't exist</p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">const</span> <span class="token constant">GENDERS</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'m'</span><span class="token punctuation">,</span> <span class="token string">'f'</span><span class="token punctuation">,</span> <span class="token string">'nb'</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IPerson</span> <span class="token punctuation">{</span>
+  likesChocolate<span class="token operator">:</span> <span class="token builtin">boolean</span>
+  gender<span class="token operator">:</span> <span class="token keyword">typeof</span> <span class="token constant">GENDERS</span><span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>In another file we can want the same property Without re-creating it, say we're
+OK that <code>IEmployee</code> has completely separate properties ... but we want the type
+from the <code>gender</code> property</p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">import</span> <span class="token keyword">type</span> <span class="token punctuation">{</span> IPerson <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../elsewhere'</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">IPersonGender</span> <span class="token operator">=</span> IPerson<span class="token punctuation">[</span><span class="token string">'gender'</span><span class="token punctuation">]</span> <span class="token comment">// Boom!</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> IEmployee <span class="token punctuation">{</span>
+  gender<span class="token operator">:</span> IPersonGender<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>We're basically piggy-backing on <a href="https://www.typescriptlang.org/docs/handbook/interfaces.html#indexable-types" rel="nofollow noopener noreferrer" target="_blank" title="TypeScript handbook about Indexable Type">TypeScript's <em>Indexable
+Type</em></a>, it's <a href="https://github.com/microsoft/TypeScript/issues/28081#issuecomment-432710576" rel="nofollow noopener noreferrer" target="_blank" title="also described in an older issue about bracket notation">also described in an older
+issue about <em>"bracket notation"</em></a></p>
+<p>We can also reuse GENDERS for a validator too</p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">const</span> <span class="token constant">GENDERS</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'m'</span><span class="token punctuation">,</span> <span class="token string">'f'</span><span class="token punctuation">,</span> <span class="token string">'nb'</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">IPersonGender</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> <span class="token constant">GENDERS</span><span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">]</span>
+
+<span class="token comment">// But that function isn't telling what it does</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">isGender</span> <span class="token operator">=</span> <span class="token punctuation">(</span>g<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token constant">GENDERS</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span>
+</code></pre></div>
+<p>If we want to make this more useful, so we can use it in if blocks or get type
+hints.</p>
+<p>Those are This is an "User-Defined" assertions.</p>
+<h3 id="user-defined-type-assertion-functions"><a href="#user-defined-type-assertion-functions" aria-hidden="true" tabindex="-1"><span class="icon icon-link"></span></a>User-defined type assertion functions</h3>
+<blockquote>
+<p>A type guard is some expression that performs a runtime check that guarantees
+the type in some scope</p>
+</blockquote>
+<p><strong>Source</strong>
+<a href="https://exploringjs.com/tackling-ts/downloads/complete-toc.html" rel="nofollow noopener noreferrer" target="_blank">User-defined type guards</a>
+and <a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards" rel="nofollow noopener noreferrer" target="_blank" title="TypeScript Handbook: A type guard is some expression that performs a runtime check that guarantees the type in some scope">TypeScript handbook about user-defined type
+guards</a></p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">const</span> <span class="token constant">GENDERS</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'m'</span><span class="token punctuation">,</span> <span class="token string">'f'</span><span class="token punctuation">,</span> <span class="token string">'nb'</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">IPersonGender</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> <span class="token constant">GENDERS</span><span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">]</span>
+
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">IGenderIsser</span> <span class="token operator">=</span> <span class="token punctuation">(</span>gender<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> gender <span class="token keyword">is</span> IPersonGender
+
+<span class="token comment">// See https://2ality.com/2015/01/es6-set-operations.html</span>
+<span class="token keyword">const</span> gendersSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span><span class="token constant">GENDERS</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> isGender<span class="token operator">:</span> <span class="token function-variable function">IGenderIsser</span> <span class="token operator">=</span> <span class="token punctuation">(</span>gender<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> out <span class="token operator">=</span> gendersSet<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>gender<span class="token punctuation">)</span>
+  <span class="token comment">// Because it is a "x is Foo", we have to return a boolean</span>
+  <span class="token comment">// MUST return boolean</span>
+  <span class="token keyword">return</span> out
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Or, if we're inlining the type</span>
+<span class="token class-name"><span class="token keyword">export</span></span> <span class="token keyword">const</span> isGender2 <span class="token operator">=</span> <span class="token punctuation">(</span>gender<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> gender <span class="token keyword">is</span> IPersonGender <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// TYPING =>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+  <span class="token comment">// FUNCTION DEFINITION => ^^^^^^^^^^^^                           ^</span>
+  <span class="token comment">// The Typing is OVERLAPING of the function definition.</span>
+  <span class="token keyword">let</span> out <span class="token operator">=</span> gendersSet<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>gender<span class="token punctuation">)</span>
+  <span class="token comment">// Because it is a "x is Foo", we have to return a boolean</span>
+  <span class="token comment">// MUST return boolean</span>
+  <span class="token keyword">return</span> out
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>Alternatively, you can use <a href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions" rel="nofollow noopener noreferrer" target="_blank" title="TypeScript 3.7 Assertion Functions"><strong>TypeScript 3.7’s</strong> Assertion
+Functions</a></p>
+<div class="nuxt-content-highlight"><pre class="language-typescript line-numbers"><code><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">IGenderAsserter</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+  gender<span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">asserts</span> gender <span class="token keyword">is</span> IPersonGender
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> assertsIsGender<span class="token operator">:</span> <span class="token function-variable function">IGenderAsserter</span> <span class="token operator">=</span> <span class="token punctuation">(</span>input<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> out <span class="token operator">=</span> <span class="token function">isGender</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>out<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Unexpected value "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>input<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// MUST return undefined</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Or, if we're inlining the type</span>
+<span class="token class-name"><span class="token keyword">export</span></span> <span class="token keyword">const</span> <span class="token function-variable function">assertsIsGender2</span><span class="token operator">:</span> <span class="token punctuation">(</span>
+  gender<span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">asserts</span> gender <span class="token keyword">is</span> <span class="token function-variable function">IPersonGender</span> <span class="token operator">=</span> <span class="token punctuation">(</span>input<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// TYPING =>               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+  <span class="token comment">// FUNCTION DEFINITION =>                                                           ^</span>
+  <span class="token comment">// The Typing is NOT OVERLAPING of the function definition.</span>
+  <span class="token comment">// https://github.com/microsoft/TypeScript/issues/34523#issuecomment-700491122</span>
+  <span class="token keyword">const</span> out <span class="token operator">=</span> <span class="token function">isGender</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>out<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Unexpected value "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>input<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// MUST return undefined</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<p>Because the mechanics is a bit different from returning a boolean (it returns
+void), we can make it clear in the code that we're aren't sure it's there (hence
+<code>unknown</code>) and then add the assertion function.</p></div> <div class="clearfix"></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" class="nuxt-link-active" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1729800241/code-review/using-read-only-array-of-strings-as-source-for-type/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/code-review.js" defer></script><script src="/_nuxt/pages/code-review/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>
