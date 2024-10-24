@@ -10,6 +10,8 @@ updated: '2013-09-07'
 tags: []
 categories: []
 excerpt: ''
+preamble:
+  disable: true
 ---
 
 <p>J'annonce ma démission au conseil d'administration du W3Québec et a mes fonctions attachées.</p>

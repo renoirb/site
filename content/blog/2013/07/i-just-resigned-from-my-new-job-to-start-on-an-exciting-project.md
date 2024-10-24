@@ -11,6 +11,16 @@ tags:
   - favourites
 categories:
   - tranche-de-vie
+preamble:
+  disable: true
+coverImage:
+  src: ~/assets/content/blog/2013/07/new-horizons-bird.jpg
+  alt: |
+    We see an ocean sunset with a bird flying away
+  srcset:
+    - ~/assets/content/blog/2013/07/new-horizons-bird-229x300.jpg 229w
+    - ~/assets/content/blog/2013/07/new-horizons-bird.jpg 626w
+  sizes: '(max-width: 229px) 100vw, 229px'
 excerpt: >-
   Right after Ericsson, I started working at TEKsystems for the last month and a
   half. It is amazingly well organized company. Based on my own experience in
@@ -24,7 +34,7 @@ excerpt: >-
 
 <p>However, after all, I have just received a new offer <ins><a href="/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project">to work for the W3C</a>; something I cannot</ins> <del> that I could not</del> turn down.</p>
 
-<p>I am very excited to have 
+<p>I am very excited to have
 <a href="https://webplatform.github.io/blog/2013/08/hi-my-name-s-renoir-ill-be-your-devops-for-the-web-platform/">this opportunity</a>
 . I would even say more: it is a honour.</p>
 

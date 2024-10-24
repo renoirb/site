@@ -68,7 +68,12 @@
         <nuxt-content :document="content" />
         <div class="clearfix" />
       </div>
-      <app-prev-next class="my-10" :prev="prev" :next="next" />
+      <app-prev-next
+        class="my-10"
+        :prev="prev"
+        :next="next"
+        style="display: none"
+      />
     </div>
   </div>
 </template>
