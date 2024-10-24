@@ -1,30 +1,30 @@
 <template>
   <div class="pages__projets--index" :lang="pageLocale">
-    <app-very-old-article
-      date="2013-02-21T22:21:10-04:00"
-      class="mb-8"
-      alert-type="warn"
-    >
-      <p>
-        Cette section est gardée telle qu'elle l'était au moment de la
-        migration.
-      </p>
-      <p>
-        Il y a maintenant plusieurs autres projets et les projets affichés ici
-        sont ceux publiés avant 2013. Ces articles étaient écrits seulement en
-        français.
-      </p>
-      <p>
-        Une fois ce site complètement migré de WordPress, j'ajouterai plus de
-        projets et les organiserai dans la section
-        <NuxtLink to="/projects">/projects</NuxtLink>.
-      </p>
-    </app-very-old-article>
     <div class="document document--item z-30">
-      <div class="title page-title font-serif italic">
-        <h1 class="text-2xl">{{ pageTitle }}</h1>
+      <div class="title page-title mb-8 font-serif italic">
         <p>{{ pageBlurb }}</p>
       </div>
+      <app-very-old-article
+        :locale="pageLocale"
+        date="2013-02-21T22:21:10-04:00"
+        class="mb-8"
+        alert-type="warn"
+      >
+        <p>
+          Cette section est gardée telle qu'elle l'était au moment de la
+          migration.
+        </p>
+        <p>
+          Il y a maintenant plusieurs autres projets et les projets affichés ici
+          sont ceux publiés avant 2013. Ces articles étaient écrits seulement en
+          français.
+        </p>
+        <p>
+          Une fois ce site complètement migré de WordPress, j'ajouterai plus de
+          projets et les organiserai dans la section
+          <NuxtLink to="/projects">/projects</NuxtLink>.
+        </p>
+      </app-very-old-article>
       <div class="body mt-8">
         <div
           v-for="content in contents"
@@ -81,7 +81,7 @@
       const pageKey = 'page-projets-initiale-pour-faire-une-migration'
       const pageLocale = 'fr-CA'
       const pageTitle = `Projets`
-      const pageBlurb = `Quelques projets personnels que je publie, classé par catégorie.`
+      const pageBlurb = `Quelques projets personnels que je publié, classé par catégorie.`
 
       const query = $content('projects', { deep: true })
         .where({ pageKey: { $contains: pageKey }, locale: { $eq: pageLocale } })
