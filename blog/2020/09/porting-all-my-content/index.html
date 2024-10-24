@@ -1,0 +1,112 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>Porting all my content into a static-site - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1729799378/blog/2020/09/porting-all-my-content/state.js" as="script"><link rel="preload" href="/_nuxt/static/1729799378/blog/2020/09/porting-all-my-content/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2020" class="nuxt-link-active" data-v-ede238bc>2020</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2020/09" class="nuxt-link-active" data-v-ede238bc>09</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Porting all my content into a static-site</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2020-09-10" data-v-79a168f2>
+        Thursday, September 10, 2020
+      </time> <!----></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__197" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__197" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/vuejs" class="no-underline">vuejs</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/nuxt" class="no-underline">nuxt</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/projects" class="no-underline">📁 projects</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><!----> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+  <strong slot="header" data-v-79a168f2 data-v-79a168f2>Actually...</strong>
+<p data-v-79a168f2 data-v-79a168f2>I started working on it a little bit before
+<abbr title="Shortened from Coronavirus disease 2019" data-v-79a168f2 data-v-79a168f2>COVID-19</abbr>
+pandemic and only would work on it 4 years later, around the end of my Full-Time Parenting period.</p>
+</rb-notice-box>
+<p data-v-79a168f2 data-v-79a168f2>It’s been more than ten years that I haven't touched my site and I want to
+make-use of my skills working with Vue.js and modern Front End of the last years
+back to my own profit.</p>
+
+<p data-v-79a168f2 data-v-79a168f2>So this is going to be a complete port of all my previous content, talk slides,
+experiments, posts, Twitter feed, examples, code bits all in a static site.</p>
+<p data-v-79a168f2 data-v-79a168f2>It's still work in progress, at the moment <code data-v-79a168f2 data-v-79a168f2>https://renoirb.github.io/site/</code> is
+the live version of my site that'll replace what’s at
+<code data-v-79a168f2 data-v-79a168f2>https://renoirboulanger.com</code> running with WordPress.</p>
+<p data-v-79a168f2 data-v-79a168f2>I should piggy-back using my own public packages such as my <a href="https://github.com/renoirb/experiments-201908-rush-typescript-just-bili-monorepo" rel="nofollow noopener noreferrer" target="_blank" title="TypeScript monorepo using Rush.js, with a few packages, some depending on each other, and tests" data-v-79a168f2 data-v-79a168f2>Monorepo related
+content</a>, <a href="https://gitlab.com/renoirb/renoirb-particles/" rel="nofollow noopener noreferrer" target="_blank" title="Renoir’s particles" data-v-79a168f2 data-v-79a168f2>my "<em data-v-79a168f2 data-v-79a168f2>Particles</em>" monorepo
+project</a>, along with archiving my thousands of web browser
+tabs by leveraging my <a href="http://www.archivator.site/" rel="nofollow noopener noreferrer" target="_blank" title="Archivator project" data-v-79a168f2 data-v-79a168f2>Archivator</a> (<a href="https://www.npmjs.com/package/archivator" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>archivator</em> package on
+NPM</a>).</p>
+<p data-v-79a168f2 data-v-79a168f2>This is just something I've jotted down quickly so that It explains what's this
+for.</p>
+<p data-v-79a168f2 data-v-79a168f2>Keep in touch!</p>
+<h2 id="features" data-v-79a168f2 data-v-79a168f2><a href="#features" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Features</h2>
+<h3 id="code-blocks" data-v-79a168f2 data-v-79a168f2><a href="#code-blocks" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Code blocks</h3>
+<p data-v-79a168f2 data-v-79a168f2>At last, a way to display code that I'm happy with, it'll look like this</p>
+<div class="code-group" data-v-39b5aa06 data-v-79a168f2><div class="rounded-t-md relative px-2 pb-0 -mb-2 text-sm text-white bg-gray-800 border-b-2 border-gray-700" data-v-39b5aa06> <span class="highlight-underline" data-v-39b5aa06></span></div> 
+  <div class="code-block active" data-v-172c3de6 data-v-79a168f2>
+<div class="nuxt-content-highlight" data-v-172c3de6 data-v-79a168f2><pre class="language-http line-numbers" data-v-172c3de6 data-v-79a168f2><code data-v-172c3de6 data-v-79a168f2>GET /hello
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Accept</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>application/json</span></span>
+
+<span class="token response-status" data-v-172c3de6 data-v-79a168f2><span class="token http-version property" data-v-172c3de6 data-v-79a168f2>HTTP/1.1</span> <span class="token status-code number" data-v-172c3de6 data-v-79a168f2>200</span> <span class="token reason-phrase string" data-v-172c3de6 data-v-79a168f2>OK</span></span>
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Content-Type</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>application/json; charset=utf-8</span></span>
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Date</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>Fri, 16 Sep 2005 19:22:04 GMT</span></span>
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Vary</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>Accept</span></span>
+
+{
+  "body": "Hello!"
+}
+</code></pre></div>
+  </div>
+  <div class="code-block" data-v-172c3de6 data-v-79a168f2>
+<div class="nuxt-content-highlight" data-v-172c3de6 data-v-79a168f2><pre class="language-http line-numbers" data-v-172c3de6 data-v-79a168f2><code data-v-172c3de6 data-v-79a168f2>GET /hello
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Accept</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>plain/text</span></span>
+
+<span class="token response-status" data-v-172c3de6 data-v-79a168f2><span class="token http-version property" data-v-172c3de6 data-v-79a168f2>HTTP/1.1</span> <span class="token status-code number" data-v-172c3de6 data-v-79a168f2>200</span> <span class="token reason-phrase string" data-v-172c3de6 data-v-79a168f2>OK</span></span>
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Content-Type</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>plain/text; charset=utf-8</span></span>
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Date</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>Fri, 16 Sep 2005 19:22:04 GMT</span></span>
+<span class="token header" data-v-172c3de6 data-v-79a168f2><span class="token header-name keyword" data-v-172c3de6 data-v-79a168f2>Vary</span><span class="token punctuation" data-v-172c3de6 data-v-79a168f2>:</span> <span class="token header-value" data-v-172c3de6 data-v-79a168f2>Accept</span></span>
+
+Hello!
+</code></pre></div>
+  </div>
+</div></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2020/02/harmonizing-how-to-bundle-and-package-features" lang="en-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Harmonizing how to bundle and package JavaScript/ECMAScript features
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Managing Email Aliases with ProtonMail and SimpleLogin to sort automatically into inbox folders based local part
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1729799378/blog/2020/09/porting-all-my-content/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Installer une Machine Virtuelle Linux roulant dans VMware Fusion sous Mac OS X - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1729799378/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/state.js" as="script"><link rel="preload" href="/_nuxt/static/1729799378/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2010" class="nuxt-link-active" data-v-ede238bc>2010</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2010/07" class="nuxt-link-active" data-v-ede238bc>07</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Installer une Machine Virtuelle Linux roulant dans VMware Fusion sous Mac OS X</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2010-07-07" data-v-79a168f2>
+        mercredi 7 juillet 2010
+      </time> <a href="https://renoirboulanger.com/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__376" class="taxonomy-label">
+    Tags
+  </strong> <!----></div> <div class="body mt-10" data-v-79a168f2><figure class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1 app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/3_resultat.png" alt="Capture d’écran macOS coupée ou l’on voit en partie trois fenêtres superposées d’un dossier ouvert avec Finder, et Netbeans et VMWare Fusion ouvert.
+" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/3_resultat.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> <div class="nuxt-content" data-v-33ff8cb7 data-v-79a168f2><p data-v-33ff8cb7 data-v-79a168f2>Bureau Mac OS X avec applications provenant de la Machine Virtuelle roulant a l'intérieur de la Machine Virtuelle</p></div></figcaption></figure> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>A force de travailler sur plusieurs environnement de projets il est venu le réflexe d'utiliser des Machines Virtuelles (VM) pour contenir mes espaces de travail. Avec ce type d'installation je peut partager avec mes collègues au bureau la même installation mais qui roule sur chacun de nos postes de travail.</p>
+<p data-v-79a168f2 data-v-79a168f2>J'en ai parlé plusieurs fois (dont <a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i/" data-v-79a168f2>ici</a>, <a href="/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii/" data-v-79a168f2>ici</a>. <a href="/blog/2007/11/mon-espace-de-travail/" data-v-79a168f2>Je le fait depuis 2007 même</a>). L'idée de cet article est de vous montrer comment j'ai fait pour mon poste de travail Mac OS X.</p>
+<p data-v-79a168f2 data-v-79a168f2>Les particularités de cette procédure est que:</p>
+<ol data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2>J'utilise la fonction de partage de dossier de VMware Fusion sur Mac OS X
+(Qui me permet d'avoir UN dossier dans le Mac et que la VM agit comme si c'était un dossier local)</li>
+    <li data-v-79a168f2 data-v-79a168f2>J'ai essayé Netbeans pour développer en PHP (<a href="https://netbeans.apache.org/front/main/download/index.html?platform=linux&lang=en&option=php" data-v-79a168f2 data-v-79a168f2>lien de téléchargement</a>)
+(au lieu d'Eclipse... mais en fait, les programmes utilisés dans la VM n'ont pas d'importance)</li>
+    <li data-v-79a168f2 data-v-79a168f2>J'utilise VMware Fusion (sur la même machine de travail) plutôt que VMware Server ou d'utiliser un serveur distant de VM (<a href="http://www.vmware.com/products/server/" data-v-79a168f2 data-v-79a168f2>VMware server</a> et/ou <a href="https://www.vmware.com/products/cloud-infrastructure/esxi-and-esx" data-v-79a168f2 data-v-79a168f2>VMware ESXi</a>).</li>
+    <li data-v-79a168f2 data-v-79a168f2>(Pas illustré comment faire) Les dossiers que j'ai mis un label mauve (voir captures d'écran) sont des dossiers qui ne sont pas synchronisés dans le Timecapsule. Car ça sert a rien d'archiver des dossiers de travail qui sont déjà sauvegardés dans un gestionnaire de source (Subversion, eh oui, encore!)</li>
+</ol>
+<p data-v-79a168f2 data-v-79a168f2>Les avantages de cette installation:</p>
+
+
+<ol data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2>Plus besoin de faire SCP, ni NFS, et sans <a href="https://github.com/libfuse/libfuse" data-v-79a168f2 data-v-79a168f2>FUSE</a> (un <em data-v-79a168f2 data-v-79a168f2>mount</em> (<a href="http://en.wikipedia.org/wiki/Mount_(Unix)" data-v-79a168f2 data-v-79a168f2>Wikipedia</a>) mais, en SSH) pour partager entre les deux machines les dossiers</li>
+    <li data-v-79a168f2 data-v-79a168f2>On peut l'installer sur un ordinateur portable et ne pas avoir a attendre d'être sur le réseau pour travailler</li>
+    <li data-v-79a168f2 data-v-79a168f2>On peut sauver de l'espace disque en réduisant la taille des disques de la VM. Car l'espace de stockage des fichiers de travail sera dans les dossiers locaux du Mac.</li>
+</ol>
+
+<h3 data-v-79a168f2 data-v-79a168f2><a name="VMLinuxsousVMwareFusionsousMacOSX-Objectifs" data-v-79a168f2 data-v-79a168f2></a>Objectifs</h3>
+<ul data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2>Pouvoir <strong data-v-79a168f2 data-v-79a168f2>utiliser l'espace de stockage du Mac natif</strong> pour les fichiers de travail plutot que d'utiliser l'espace disque de la machine virtuelle.</li>
+</ul>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="VMLinuxsousVMwareFusionsousMacOSX-Cequ%27ilfaut" data-v-79a168f2 data-v-79a168f2></a>Ce qu'il faut</h3>
+<ul data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2>Avoir installé une VM sous Linux quelconque</li>
+    <li data-v-79a168f2 data-v-79a168f2>La VM doit être locale au Mac</li>
+    <li data-v-79a168f2 data-v-79a168f2>Une VM avec 10Go d'espace et moins est suffisant</li>
+    <li data-v-79a168f2 data-v-79a168f2>Réseau en mode «<strong data-v-79a168f2 data-v-79a168f2>Bridged</strong>»</li>
+    <li data-v-79a168f2 data-v-79a168f2>Faire après une procédure similaire a NFS et d'avoir le meme uid et guid que le serveur</li>
+</ul>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="VMLinuxsousVMwareFusionsousMacOSX-Proc%C3%A9dure" data-v-79a168f2 data-v-79a168f2></a>Procédure</h3>
+<h4 data-v-79a168f2 data-v-79a168f2><a name="VMLinuxsousVMwareFusionsousMacOSX-Changerle%7B%7Buid%7D%7Det%7B%7Bguid%7D%7Ddel%27utilisateurcourrant" data-v-79a168f2 data-v-79a168f2></a>Changer le <tt data-v-79a168f2 data-v-79a168f2>uid</tt> et <tt data-v-79a168f2 data-v-79a168f2>guid</tt> de l'utilisateur courrant</h4>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Vérifier quel `uid` et `guid`, sous Mac, dans <strong data-v-79a168f2 data-v-79a168f2>Applications</strong> > <strong data-v-79a168f2 data-v-79a168f2>Terminal</strong>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>id</span>
+<span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>uid</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>20001</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span> <span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>gid</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>20</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>staff<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span> <span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>groups</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>20</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>staff<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,404<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>com.apple.sharepoint.group.3<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,204<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>_developer<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,100<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>_lpoperator<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,98<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>_lpadmin<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,81<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>_appserveradm<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,80<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>admin<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,79<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>_appserverusr<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,61<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>localaccounts<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,12<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>everyone<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,401<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>com.apple.access_screensharing<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,403<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>com.apple.sharepoint.group.2<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,402<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>com.apple.sharepoint.group.1<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,406<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>com.apple.sharepoint.group.5<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Note</strong> sur le Mac, c'est <strong data-v-79a168f2 data-v-79a168f2>20001</strong></p></li><p data-v-79a168f2 data-v-79a168f2></p>
+<li data-v-79a168f2 data-v-79a168f2>Se connecter a la VM locale, et y créer un compte backup pour effectuer les opérations
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>ssh</span> <span class="token number" data-v-79a168f2 data-v-79a168f2>192.168</span>.0.100
+<span class="token function" data-v-79a168f2 data-v-79a168f2>sudo</span> -
+adduser patateuser
+<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>..</span>.
+<span class="token function" data-v-79a168f2 data-v-79a168f2>usermod</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-a</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-G</span> admin patateuser
+</code></pre></div>
+</li>
+</ol>
+<ol data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2>s'y déconnecter et se reconnecter
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>exit</span>
+<span class="token function" data-v-79a168f2 data-v-79a168f2>ssh</span> patateuser@192.168.0.100
+</code></pre></div>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Savoir son user id sur la machine Linux
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>id</span>
+<span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>uid</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>1000</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span> <span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>gid</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>1000</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span> <span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>groups</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>4</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>adm<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,20<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>dialout<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,24<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>cdrom<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,46<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>plugdev<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,105<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>lpadmin<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,119<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>admin<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,122<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>sambashare<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,1000<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Note</strong> sur la VM, c'est <strong data-v-79a168f2 data-v-79a168f2>1000</strong></p></li><p data-v-79a168f2 data-v-79a168f2></p>
+<li data-v-79a168f2 data-v-79a168f2>Changer les permissions du dossier user <strong data-v-79a168f2 data-v-79a168f2>vigr</strong> et <strong data-v-79a168f2 data-v-79a168f2>vipw</strong>
+<em data-v-79a168f2 data-v-79a168f2>Commandes a faire en root, puis en <tt data-v-79a168f2 data-v-79a168f2>vim</tt> pour modifier le uid d'un usager</em>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>sudo</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-s</span>
+vipw
+</code></pre></div>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-text" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>:%s/1000/20001/g
+:wq
+</code></pre></div>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Changer les permissions du <tt data-v-79a168f2 data-v-79a168f2>/home/PATATEUSER</tt>
+<rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+<p data-v-79a168f2 data-v-79a168f2>Avant de faire le <code data-v-79a168f2 data-v-79a168f2>chown</code> il faut s'assurer en regardant a l'intérieur du homedir cible à la VM si il n'y a pas un alias vers autre chose. Question de ne pas changer les permissions de d'autres fichiers dans l'arborescence et affecter ailleurs que dans le système</p>
+</rb-notice-box>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>cd</span> /home
+<span class="token function" data-v-79a168f2 data-v-79a168f2>chown</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-R</span> renoirb:renoirb renoirb/
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Attendre ...</strong></p></li><p data-v-79a168f2 data-v-79a168f2></p>
+<li data-v-79a168f2 data-v-79a168f2>Tenter de se reconnecter <strong data-v-79a168f2 data-v-79a168f2>DANS UN AUTRE SESSION SSH</strong>
+<rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+  <strong slot="header" data-v-79a168f2 data-v-79a168f2>Pourquoi?</strong>
+<p data-v-79a168f2 data-v-79a168f2>Parceque si quelque chose de malencontreux se serait produit durant le chown, le login ne pourrait pas marcher</p>
+</rb-notice-box>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>ssh</span> renoirb@192.168.0.100
+</code></pre></div>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Croiser les doigts</li>
+    <li data-v-79a168f2 data-v-79a168f2>Tester si le ID est changé
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>id</span>
+<span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>uid</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>20001</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span> <span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>gid</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>20001</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span> <span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>groups</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token number" data-v-79a168f2 data-v-79a168f2>4</span><span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>adm<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,20<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>dialout<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,24<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>cdrom<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,46<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>plugdev<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,105<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>lpadmin<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,119<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>admin<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,122<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>sambashare<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>,20001<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>(</span>renoirb<span class="token punctuation" data-v-79a168f2 data-v-79a168f2>)</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Good!</strong></p></li><p data-v-79a168f2 data-v-79a168f2></p>
+</ol>
+<h4 data-v-79a168f2 data-v-79a168f2><a name="VMLinuxsousVMwareFusionsousMacOSX-PartagedossiersentreleMacetlaVMLinux" data-v-79a168f2 data-v-79a168f2></a>Partage dossiers entre le Mac et la VM Linux</h4>
+<p data-v-79a168f2 data-v-79a168f2>Idéal pour utiliser l'espace disque Mac pour y stocker des documents de travail utilisés a l'intérieur de la VM.</p>
+<rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+  <strong slot="header" data-v-79a168f2 data-v-79a168f2>L’avantage de faire ça</strong>
+<p data-v-79a168f2 data-v-79a168f2>Ce qui est bien de tout ça c'est que l'espace disque de la VM peut rester petit et contenir les outils de travail (Apache, PHP, Eclipse/netbeans) et avoir le gros des dossiers de travail (workspace) dans la machine native.</p>
+</rb-notice-box>
+<ol data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2>Lancer <strong data-v-79a168f2 data-v-79a168f2>VMWare Fusion</strong>
+<p data-v-79a168f2 data-v-79a168f2>[caption id="attachment_2304" align="alignnone" width="216" caption="Panneau de paramètres VMware Fusion pour Mac OS X"]<a href="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/0_settings.png" data-v-79a168f2 data-v-79a168f2><img class="size-medium wp-image-2304" title="Panneau de paramètres VMware Fusion pour Mac OS X" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/0_settings-300x261.png" alt="" width="216" height="188" data-v-79a168f2 data-v-79a168f2></a>[/caption]</p></li><p data-v-79a168f2 data-v-79a168f2></p>
+<li data-v-79a168f2 data-v-79a168f2>Aller dans <strong data-v-79a168f2 data-v-79a168f2>Settings</strong> > <strong data-v-79a168f2 data-v-79a168f2>Sharing</strong> (Partage)
+<p data-v-79a168f2 data-v-79a168f2>[caption id="attachment_2305" align="alignnone" width="300" caption="Panneau paramètres VMware Fusion pour Mac OS X écran Partage"]<a href="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/1_sharing.png" data-v-79a168f2 data-v-79a168f2><img class="size-medium wp-image-2305" title="Panneau paramètres VMware Fusion pour Mac OS X écran Partage" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/1_sharing-300x228.png" alt="" width="300" height="228" data-v-79a168f2 data-v-79a168f2></a>[/caption]</p></li><p data-v-79a168f2 data-v-79a168f2></p>
+<li data-v-79a168f2 data-v-79a168f2>Ajouter le partage désiré (le petit +)
+<rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+  <strong slot="header" data-v-79a168f2 data-v-79a168f2>Recommendation</strong>
+<p data-v-79a168f2 data-v-79a168f2>Pour éviter tout risque de souçis de chemins entre les deux machines. Ne pas utiliser un dossier avec des espaces.</p>
+</rb-notice-box>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Aller dans la VM
+<rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+  <strong slot="header" data-v-79a168f2 data-v-79a168f2>Tunnel X11</strong>
+<p data-v-79a168f2 data-v-79a168f2>L'idée du Tunnel X est pour permettre de rouler une application locale (a la VM) a l'extérieur (donc afficher sur le Mac).</p>
+</rb-notice-box>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>ssh</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-X</span> renoirb@192.168.0.100
+</code></pre></div>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Lier le dossier partagé du Mac a un dossier local a la VM (workspace)... <strong data-v-79a168f2 data-v-79a168f2>Sur la VM</strong>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>sudo</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-s</span>
+<span class="token function" data-v-79a168f2 data-v-79a168f2>ln</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-s</span> /mnt/hgfs/workspace/ /home/renoirb/workspace
+</code></pre></div>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Exécuter le programme distant
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>netbeans <span class="token operator" data-v-79a168f2 data-v-79a168f2>&</span>
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Note</strong> Le «amperstand» (& ou perluet) sert a préciser que le programme roulera en arrière-plan.</p></li><p data-v-79a168f2 data-v-79a168f2></p>
+<li data-v-79a168f2 data-v-79a168f2>Configurer l'outil de développement pour qu'il puise ses fichiers de travail DANS <tt data-v-79a168f2 data-v-79a168f2>/home/renoirb/workspace</tt>
+<rb-notice-box variant="info" class="my-5" data-v-79a168f2 data-v-79a168f2>
+  <strong slot="header" data-v-79a168f2 data-v-79a168f2>Note</strong>
+<p data-v-79a168f2 data-v-79a168f2>Netbeans n'utilise pas le meme type de chemin et c'est différent d'un outil de développement a l'autre.</p>
+</rb-notice-box>
+</li>
+    <li data-v-79a168f2 data-v-79a168f2>Résultat
+<a href="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/3_resultat.png" data-v-79a168f2 data-v-79a168f2><img class="alignnone size-medium wp-image-2306" title="Bureau Mac OS X avec applications provenant de la Machine Virtuelle roulant a l'intérieur de la Machine Virtuelle" src="https://renoirb.github.io/site-assets/assets/content/blog/2010/07/3_resultat-300x242.png" alt="" width="300" height="242" style="border:none!important" data-v-79a168f2 data-v-79a168f2></a></li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="VMLinuxsousVMwareFusionsousMacOSX-R%C3%A9f%C3%A9rences" data-v-79a168f2 data-v-79a168f2></a>Références</h3>
+<ul data-v-79a168f2 data-v-79a168f2>
+    <li data-v-79a168f2 data-v-79a168f2><a href="http://laurentbois.com/2008/04/26/install-ubuntu-804-using-vmware-fusion-on-mac-os-x/" data-v-79a168f2 data-v-79a168f2>http://laurentbois.com/2008/04/26/install-ubuntu-804-using-vmware-fusion-on-mac-os-x/</a></li>
+    <li data-v-79a168f2 data-v-79a168f2><a href="http://www.cyberciti.biz/faq/howto-linux-add-user-to-group/" data-v-79a168f2 data-v-79a168f2>http://www.cyberciti.biz/faq/howto-linux-add-user-to-group/</a></li>
+</ul></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Lancement de l’annee 2011 pour la conférence ConFoo
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Bug trouvé et corrigé sur un thème WordPress rtTheme
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1729799378/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

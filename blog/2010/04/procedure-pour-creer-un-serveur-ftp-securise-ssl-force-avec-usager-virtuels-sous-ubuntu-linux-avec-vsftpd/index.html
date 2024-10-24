@@ -1,0 +1,295 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Procédure pour créer un serveur FTP sécurisé SSL forcé avec usager virtuels sous Ubuntu Linux avec vsFTPd - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1729799378/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd/state.js" as="script"><link rel="preload" href="/_nuxt/static/1729799378/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2010" class="nuxt-link-active" data-v-ede238bc>2010</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2010/04" class="nuxt-link-active" data-v-ede238bc>04</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Procédure pour créer un serveur FTP sécurisé <abbr lang="en" title="SSL as Secure Sockets Layer, which is the colloquial term used to refer to what is now called Transport Layer Security (TLS)">SSL</abbr> forcé avec usager virtuels sous Ubuntu Linux avec vsFTPd</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2010-04-30" data-v-79a168f2>
+        vendredi 30 avril 2010
+      </time> <a href="https://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__388" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__388" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/logiciel-libre" class="no-underline">logiciel-libre</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/securite" class="no-underline">securite</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/tutoriels" class="no-underline">tutoriels</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/unix" class="no-underline">unix</nuxtlink></li> <!----></ul></div> <div class="body mt-10" data-v-79a168f2><!----> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><p data-v-79a168f2 data-v-79a168f2>Je ne sais pas si vous êtes comme moi mais je n'aime pas laisser non crypté l'accès a un service qui me demande un mot de passe. Je devait monter un serveur cette semaine qui doit avoir les accès FTP.</p>
+<p data-v-79a168f2 data-v-79a168f2>J'ai pris l'initiative de sécuriser la machine avec du SSL car je crois qu'aujourd'hui c'est notre devoir de faire ce genre de chose. Ce n'est pas la première fois que je configure un serveur FTP over SSL mais je n'avait jamais pris de notes vraiment à ce jour. Je l'ai fait cette fois-ci!</p>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Cequecetteproc%C3%A9durefait..." data-v-79a168f2 data-v-79a168f2></a>Ce que cette procédure fait...</h3>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Pouvoir créer des comptes FTP sans avoir a créer un utilisateur local (donc pas accès shell (SSH)).</li>
+	<li data-v-79a168f2 data-v-79a168f2>Permet les connections FTP over SSL de façon EXPLICITE sur un port non standard  (cet exemple utilisera le port <tt data-v-79a168f2 data-v-79a168f2>6123</tt>)</li>
+	<li data-v-79a168f2 data-v-79a168f2>Ne permet pas d'utilisateur ni de connexions anonymes</li>
+	<li data-v-79a168f2 data-v-79a168f2>Bannit les hôtes qui tentent de se connecter (LOGIN FAILED)	via <strong data-v-79a168f2 data-v-79a168f2>fail2ban</strong></li>
+	<li data-v-79a168f2 data-v-79a168f2>Utilise le system PAM interne pour l'authentification</li>
+	<li data-v-79a168f2 data-v-79a168f2>Ne requiert pas d'usager local (pas de risque de tentative de connection SSH, usager séparés)</li>
+	<li data-v-79a168f2 data-v-79a168f2>Le serveur FTP roule sur son propre usager</li>
+</ol>
+
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Proc%C3%A9dure" data-v-79a168f2 data-v-79a168f2></a>Procédure</h3>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Vérifier quelle version de serveur FTP est installé
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># dpkg --list | grep ftp
+~
+ii  ftp                               0.17-19                      The FTP client
+ii  lftp                              3.7.15-1ubuntu2              Sophisticated command-line FTP/HTTP client p
+ii  vsftpd                            2.2.0-1ubuntu1               lightweight, efficient FTP server written fo</pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> vsftpd est ce qu'on veut. Dans ce cas-ci il est déjà installé (ii).</li>
+	<li data-v-79a168f2 data-v-79a168f2>Assurer que les prérequis sont installés
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># aptitude install vsftpd libpam-pwdfile openssl</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Modifier le fichier de config <strong data-v-79a168f2 data-v-79a168f2>vsftpd.conf</strong>.
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> Modifiez pour ces valeurs (ci-bas) et conservez les autres valeurs par défaut.
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi /etc/vsftpd.conf
+~
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+chroot_local_user=YES
+ftpd_banner=Un nom Quelconque FTP
+nopriv_user=vsftpd
+<h1 id="renoirboulangercom-2010-04-29-we-will-force-usage-on-an-other-port" data-v-79a168f2 data-v-79a168f2><a aria-hidden="true" href="#renoirboulangercom-2010-04-29-we-will-force-usage-on-an-other-port" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>renoirboulanger.com 2010-04-29 we will force usage on an other port</h1>
+<p data-v-79a168f2 data-v-79a168f2>#connect_from_port_20=YES</p></pre><p data-v-79a168f2 data-v-79a168f2></p>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Ajouter ou corriger (étaient pas présents lorsque j'ai crée la procédure)
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># 2010-04-28 accès usager
+virtual_use_local_privs=YES
+guest_enable=YES
+user_sub_token=$USER
+local_root=/home/ibottin/FTP/$USER
+hide_ids=YES</pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> Ajuster le <tt data-v-79a168f2 data-v-79a168f2>local_root</tt> a l'endroit	ou envoyer les fichiers.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Activer le SSL
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Créer le certificat
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># cd /etc/ssl
+# /usr/bin/openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout vsftpd.pem -out vsftpd.pem</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Ajouter au <tt data-v-79a168f2 data-v-79a168f2>/etc/vsftpd.conf</tt>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi /etc/vsftpd.conf
+~
+# renoirboulanger.com 2010-04-30 SSL configuration
+listen_port=6123
+ftp_data_port=6122
+pasv_min_port=6000
+pasv_max_port=6100
+<p data-v-79a168f2 data-v-79a168f2>ssl_enable=YES</p>
+<h1 id="allow-anonymous-users-to-use-secured-ssl-connections" data-v-79a168f2 data-v-79a168f2><a aria-hidden="true" href="#allow-anonymous-users-to-use-secured-ssl-connections" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Allow anonymous users to use secured SSL connections</h1>
+<p data-v-79a168f2 data-v-79a168f2>allow_anon_ssl=YES</p>
+<h1 id="all-non-anonymous-logins-are-forced-to-use-a-secure-ssl-connection-in-order-to" data-v-79a168f2 data-v-79a168f2><a aria-hidden="true" href="#all-non-anonymous-logins-are-forced-to-use-a-secure-ssl-connection-in-order-to" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>All non-anonymous logins are forced to use a secure SSL connection in order to</h1>
+<h1 id="send-and-receive-data-on-data-connections" data-v-79a168f2 data-v-79a168f2><a aria-hidden="true" href="#send-and-receive-data-on-data-connections" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>send and receive data on data connections.</h1>
+<p data-v-79a168f2 data-v-79a168f2>force_local_data_ssl=NO</p>
+<h1 id="all-non-anonymous-logins-are-forced-to-use-a-secure-ssl-connection-in-order-to-send-the-password" data-v-79a168f2 data-v-79a168f2><a aria-hidden="true" href="#all-non-anonymous-logins-are-forced-to-use-a-secure-ssl-connection-in-order-to-send-the-password" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>All non-anonymous logins are forced to use a secure SSL connection in order to send the password.</h1>
+<p data-v-79a168f2 data-v-79a168f2>force_local_logins_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=YES
+ssl_sslv3=YES
+rsa_cert_file=/etc/ssl/vsftpd.pem</p></pre><p data-v-79a168f2 data-v-79a168f2></p>
+</li>
+</ol>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Remplacer</strong> le contenu du fichier <tt data-v-79a168f2 data-v-79a168f2>pam.d/vsftpd</tt>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi /etc/pam.d/vsftpd
+~
+auth required pam_pwdfile.so pwdfile /etc/vsftpd.passwd
+account required pam_permit.so</pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> Il est important de remplacer le reste du fichier par ce contenu ci-haut.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Modifier permissions sur le fichier .pem
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># chown vsftpd /etc/ssl/vsftpd.pem</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Redémarrer vsftpd
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># /etc/init.d/vsftpd restart</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Créer le unix user qui va rouler le démon
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># adduser --system --no-create-home --disabled-login -s /usr/sbin/nologin --home /var/ftp vsftpd</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Modifier les permissions pour l'utilisateur qui roule vsftpd (ajuster)
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># chown -R ftp:ftp /var/ftp/
+# chmod -R 740 /var/ftp</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2><a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-AjouterunutilisateurFTP" data-v-79a168f2>Ajouter un utilisateur FTP</a></strong></li>
+	<li data-v-79a168f2 data-v-79a168f2>Ajuster <tt data-v-79a168f2 data-v-79a168f2>fail2ban</tt>
+<div class="code panel" style="border-width:1px" data-v-79a168f2 data-v-79a168f2>
+<div class="codeHeader panelHeader" style="border-bottom-width:1px" data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>Ajuster le bloc [vsftpd]</strong></div>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi /etc/fail2ban/jail.conf
+~
+[vsftpd]
+<p data-v-79a168f2 data-v-79a168f2>enabled  = true</p></pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> par defaut <tt data-v-79a168f2 data-v-79a168f2>enabled</tt> est a false...	il faut l'activer.<p data-v-79a168f2 data-v-79a168f2></p>
+</div></li>
+	<li data-v-79a168f2 data-v-79a168f2>Redémarrer vsftpd
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># /etc/init.d/vsftpd restart
+ * Stopping FTP server: vsftpd
+   ...done.
+ * Starting FTP server: vsftpd
+   ...done.
+# ps aux|grep vsftpd
+vsftpd   18771  0.0  0.0  28904  1300 ?        Ss   17:09   0:00 /usr/sbin/vsftpd
+vsftpd   18772  0.0  0.0  29100  1608 ?        S    17:09   0:00 /usr/sbin/vsftpd
+ftp      18773  0.0  0.0  28928   924 ?        S    17:09   0:00 /usr/sbin/vsftpd
+root     18795  0.0  0.0  22628  1712 ?        S    17:14   0:00 /usr/sbin/vsftpd
+...</pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> les deux premiers <tt data-v-79a168f2 data-v-79a168f2>vsftpd</tt> est le résultat attendu</li>
+	<li data-v-79a168f2 data-v-79a168f2>Nous allons forcer le FTP over SSL sur le port <strong data-v-79a168f2 data-v-79a168f2>6122</strong>, pour ça il faut autoriser le Firewall
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># iptables -A INPUT -m state --state ESTABLISHED,RELATED
+# iptables -A INPUT -m tcp -p tcp --dport 6122 -j ACCEPT
+# iptables -A INPUT -m state --state NEW,ESTABLISHED
+# iptables -A INPUT -m tcp -p tcp --dport 6123 -j ACCEPT
+# iptables -A INPUT -p tcp --dport 6000:6100 -j ACCEPT</pre>
+<strong data-v-79a168f2 data-v-79a168f2>Source</strong>: <a href="http://my.afterdawn.com/ketola/blog_entry.cfm/1262/vsftpd_ssl_and_iptables" data-v-79a168f2 data-v-79a168f2>vsftpd SSL and iptables</a></li>
+	<li data-v-79a168f2 data-v-79a168f2>Sauvegarder le Firewall
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># iptables-save > /etc/iptables.rules</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Tester de l'extérieur avec un client FTP (Filezilla, etc)
+<p data-v-79a168f2 data-v-79a168f2>Voir les options suivantes a la connection</p>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>port: 6123</li>
+	<li data-v-79a168f2 data-v-79a168f2>Forcer le SSL</li>
+</ol>
+</li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-AjouterunutilisateurFTP" data-v-79a168f2 data-v-79a168f2></a>Ajouter un utilisateur FTP</h3>
+On utilise le truc simple de htpasswd pour l'authentification. Pas de gossage :-)
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Cr%C3%A9erunnouveaucompte" data-v-79a168f2 data-v-79a168f2></a>Créer un nouveau compte</h3>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Créer le <em data-v-79a168f2 data-v-79a168f2>premier compte</em>, sinon, <strong data-v-79a168f2 data-v-79a168f2>passer	a la directive suivante</strong>! ou Utiliser mon script <a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur" data-v-79a168f2>Script pour créer un compte utilisateur</a>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># htpasswd -c /etc/vsftpd.passwd ftpuser
+New password:
+Re-type new password:
+Adding password for user ftpuser</pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> l'option <strong data-v-79a168f2 data-v-79a168f2><tt data-v-79a168f2 data-v-79a168f2>-c</tt></strong> est	pour créer le fichier la première fois.</li>
+	<li data-v-79a168f2 data-v-79a168f2>Voir les directives de *<a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur" data-v-79a168f2>Script pour créer un compte utilisateur</a></li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Ajouteroumodifierunutilisateur" data-v-79a168f2 data-v-79a168f2></a><strong data-v-79a168f2 data-v-79a168f2>Ajouter ou modifier un utilisateur</strong></h3>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Utiliser le script <strong data-v-79a168f2 data-v-79a168f2><tt data-v-79a168f2 data-v-79a168f2>evo-vsftpd-user</tt></strong>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>$ sudo evo-vsftpd-user foo
+Création d'un nouvel usager dans /etc/vsftpd.passwd ...
+New password:
+Re-type new password:
+Adding password for user foo
+ ... OK
+ * Création du dossier /home/ibottin/FTP/foo ...  OK
+ * Changement des permissions du dossier ...  OK
+Terminé!</pre>
+Voir les directives de <strong data-v-79a168f2 data-v-79a168f2><a href="/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd#ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur" data-v-79a168f2>Script pour créer un compte utilisateur</a></strong></li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Scriptpourcr%C3%A9eruncompteutilisateur" data-v-79a168f2 data-v-79a168f2></a>Script pour créer un compte utilisateur</h3>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Créer le fichier
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi /usr/sbin/evo-vsftpd-user</pre>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Coller le contenu
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2>#!/bin/bash
+if [ -z $1 ]; then
+  echo "Aucun argument usager fourni"
+  echo "usage: sudo evo-vsftpd-user foo"
+  exit 1;
+fi
+<p data-v-79a168f2 data-v-79a168f2>if [ "$(whoami)" != 'root' ]; then
+echo "Vous n'avez pas les permisions utilisateur requises."
+exit 1;
+fi</p>
+<p data-v-79a168f2 data-v-79a168f2>echo "Création d'un nouvel usager dans /etc/vsftpd.passwd ... "
+htpasswd /etc/vsftpd.passwd $1
+echo " ... OK "
+echo -n " <em data-v-79a168f2 data-v-79a168f2> Création du dossier /home/ibottin/FTP/$1 ... "
+mkdir /home/ibottin/FTP/$1
+echo " OK"
+echo -n " </em> Changement des permissions du dossier ... "
+chown -R ftp:ftp /home/ibottin/FTP/$1
+chmod -R 740 /home/ibottin/FTP/$1
+echo " OK"
+echo "Terminé!"</p></pre><p data-v-79a168f2 data-v-79a168f2></p>
+</li>
+	<li data-v-79a168f2 data-v-79a168f2>Rendre exécutable
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># chmod +x /usr/sbin/evo-vsftpd-user</pre>
+</li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Tester" data-v-79a168f2 data-v-79a168f2></a>Tester</h3>
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Installer le paquet pour tester
+<div class="code panel" style="border-width:1px" data-v-79a168f2 data-v-79a168f2>
+<div class="codeContent panelContent" data-v-79a168f2 data-v-79a168f2>
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># aptitude install ftp-ssl</pre>
+</div>
+</div></li>
+	<li data-v-79a168f2 data-v-79a168f2>Tester
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># ftp-ssl someserver.net 6123
+Connected to someserver.net.
+220 Un nom Quelconque FTP
+Name (someserver.net:renoirboulanger): ftpuser
+234 Proceed with negotiation.
+[SSL Cipher DES-XXXX-SHA]
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp></pre>
+<strong data-v-79a168f2 data-v-79a168f2>Note</strong> [SSL Cipher DES-XXXX-SHA] est ce qu'on attend :-)</li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Pourd%C3%A9boguer" data-v-79a168f2 data-v-79a168f2></a>Pour déboguer</h3>
+Le feedback est assez difficile a avoir de la part de vsftpd, mais pour en voir plus:
+<ol data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2>Pour le debug
+<pre lang="bash" data-v-79a168f2 data-v-79a168f2># vi /etc/vsftpd.conf
+~
+# for debuging
+log_ftp_protocol=YES</pre>
+</li>
+</ol>
+<h3 data-v-79a168f2 data-v-79a168f2><a name="ComptesFTPvirtuel%28sansutilisateurlocal%29sousUbuntuavecvsFTPdetcryptoSSL-Ressources" data-v-79a168f2 data-v-79a168f2></a>Ressources</h3>
+<ul data-v-79a168f2 data-v-79a168f2>
+	<li data-v-79a168f2 data-v-79a168f2><a href="http://wjholden.com/vsftpd-help.html" data-v-79a168f2 data-v-79a168f2>vsftpd help</a></li>
+	<li data-v-79a168f2 data-v-79a168f2><a href="http://vsftpd.beasts.org/vsftpd_conf.html" data-v-79a168f2 data-v-79a168f2>vsftpd.conf manpages</a></li>
+	<li data-v-79a168f2 data-v-79a168f2><a href="http://my.afterdawn.com/ketola/blog_entry.cfm/1262/vsftpd_ssl_and_iptables" data-v-79a168f2 data-v-79a168f2>vsftpd SSL and iptables</a></li>
+	<li data-v-79a168f2 data-v-79a168f2><a href="http://www.ubuntututorials.net/installing-vsftpd-using-text-file-for-virtual-users/" data-v-79a168f2 data-v-79a168f2>Installing vsftpd using text file for virtual users</a></li>
+	<li data-v-79a168f2 data-v-79a168f2><a href="http://www.cyberciti.biz/tips/configure-vsfptd-secure-connections-via-ssl-tls.html" data-v-79a168f2 data-v-79a168f2>Vsftpd SSL / TLS FTP Server Configuration</a></li>
+</ul></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2010/04/comment-dire-a-apache-le-mime-type-dun-document-office-2007" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Comment dire à Apache le mime-type d'un document Office 2007
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence" lang="fr-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Réalisation d'une application d'échange de cadeau avec RED L'agence le «club échangiste» [2009]
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1729799378/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

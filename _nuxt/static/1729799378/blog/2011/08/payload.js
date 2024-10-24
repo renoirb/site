@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/2011/08", {data:[{},{},{},{contents:[]}],fetch:[],mutations:void 0});

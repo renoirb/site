@@ -1,0 +1,188 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>Install PHP5 Memcached PECL extension and have it support igbinary - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords-memcached-pecl-" name="keywords" content="Memcached, PECL, Ubuntu, dpkg, PHP5, php-fpm"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1729799378/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/state.js" as="script"><link rel="preload" href="/_nuxt/static/1729799378/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2015" class="nuxt-link-active" data-v-ede238bc>2015</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2015/02" class="nuxt-link-active" data-v-ede238bc>02</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>Install <abbr lang="en" title="Hypertext Pre Processor Programming language, version 5">PHP5</abbr> Memcached <abbr lang="en" title="PHP Extension Community Library">PECL</abbr> extension and have it support igbinary</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2015-02-18" data-v-79a168f2>
+        Wednesday, February 18, 2015
+      </time> <a href="https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__236" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__236" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/cloud-computing" class="no-underline">cloud-computing</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/procedure" class="no-underline">procedure</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/projects" class="no-underline">📁 projects</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><figure class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1 app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/images/logos/php-igbinary.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/images/logos/php-igbinary.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> <div class="nuxt-content" data-v-33ff8cb7 data-v-79a168f2><p data-v-33ff8cb7 data-v-79a168f2><a href="https://github.com/igbinary/igbinary" rel="nofollow noopener noreferrer" target="_blank" data-v-33ff8cb7 data-v-79a168f2>Igbinary</a> is a drop in replacement for the standard <em data-v-33ff8cb7 data-v-79a168f2>PHP serializer</em>.
+Instead of the time and space consuming textual representation used by PHP’s serialize, <em data-v-33ff8cb7 data-v-79a168f2>igbinary</em> stores <abbr lang="en" title="Hypertext Pre Processor Programming language" data-v-33ff8cb7 data-v-79a168f2>PHP</abbr> data structures in a compact binary form.</p></div></figcaption></figure> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><p data-v-79a168f2 data-v-79a168f2>I was trying to figure out why my PHP setup would never have both <code data-v-79a168f2 data-v-79a168f2>igbinary</code> to
+be used to serialize sessions in Memcached using current Memcached PECL
+extension.</p>
+<p data-v-79a168f2 data-v-79a168f2>After some research I found a procedure in an answer on StackOverflow.</p>
+<p data-v-79a168f2 data-v-79a168f2>But it didn't solve my main requirement: <strong data-v-79a168f2 data-v-79a168f2>Since I do automated deployment, I
+MUST be able to move packages around</strong>. Since all my VMs are using the same
+distribution and that I already have my own <em data-v-79a168f2 data-v-79a168f2>apt</em> repo, I could just add <em data-v-79a168f2 data-v-79a168f2>one
+more</em> deb file.</p>
+<p data-v-79a168f2 data-v-79a168f2>My objective was then now to package it for deployment. To do this, I discovered
+<a href="https://github.com/jordansissel/fpm" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>Jordan Sissel's project called <strong data-v-79a168f2 data-v-79a168f2>fpm</strong></a> which stands for "<em data-v-79a168f2 data-v-79a168f2>Freaking Package
+Manager</em>" (sic)</p>
+<p data-v-79a168f2 data-v-79a168f2>My target deployment runs on Ubuntu 14.04 LTS and I want it to replace upstream
+<code data-v-79a168f2 data-v-79a168f2>php5-memcached</code> package as a simple <em data-v-79a168f2 data-v-79a168f2>.deb</em> file.</p>
+<h2 id="build-from-pecl-source" data-v-79a168f2 data-v-79a168f2><a href="#build-from-pecl-source" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Build from PECL source</h2>
+<p data-v-79a168f2 data-v-79a168f2><em data-v-79a168f2 data-v-79a168f2>NOTE</em> The following was run on an Ubuntu 14.04 VM with <a href="https://stackoverflow.com/questions/24407095/error-when-installing-pecl-memcached/28597188#answer-24892703" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>@rynop's procedure</a>.</p>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Setting the machine up to make a package.</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>mkdir</span> /tmp/php5-memcached
+<span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>cd</span> /tmp/php5-memcached
+<span class="token function" data-v-79a168f2 data-v-79a168f2>apt-get</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>install</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-y</span> php5-dev pkg-config php-pear
+</code></pre></div>
+<ol start="2" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Follow steps from the procedure. Those were taken from the <em data-v-79a168f2 data-v-79a168f2><a href="https://stackoverflow.com/questions/24407095/error-when-installing-pecl-memcached/28597188#answer-24892703" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>Original procedure</a></em>, just before issuing <code data-v-79a168f2 data-v-79a168f2>./configure</code>.</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token assign-left variable" data-v-79a168f2 data-v-79a168f2>pecl_memcached_ver</span><span class="token operator" data-v-79a168f2 data-v-79a168f2>=</span><span class="token string" data-v-79a168f2 data-v-79a168f2>"2.2.0"</span>
+pecl download memcached-<span class="token variable" data-v-79a168f2 data-v-79a168f2>${pecl_memcached_ver}</span>
+<span class="token function" data-v-79a168f2 data-v-79a168f2>tar</span> xzvf memcached-<span class="token variable" data-v-79a168f2 data-v-79a168f2>${pecl_memcached_ver}</span>.tgz
+<span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>cd</span> memcached-<span class="token variable" data-v-79a168f2 data-v-79a168f2>${pecl_memcached_ver}</span>/
+phpize
+</code></pre></div>
+<ol start="3" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>I realized that under Ubuntu 14.04 we also needed to <em data-v-79a168f2 data-v-79a168f2>disable Memcached SASL</em>
+so I had to do it differently</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>./configure <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    --enable-memcached-igbinary <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    --disable-memcached-sasl
+</code></pre></div>
+<h2 id="make-a-deb-package" data-v-79a168f2 data-v-79a168f2><a href="#make-a-deb-package" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Make a .deb package</h2>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Install <a href="https://github.com/jordansissel/fpm" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>jordansissel/fpm</a>. Ideally this should be done on a machine or VM
+image you're OK building things on and you can re-use.</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>apt-get</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>install</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-y</span> ruby-dev gcc
+
+<span class="token comment" data-v-79a168f2 data-v-79a168f2># Install fpm gem globally.</span>
+gem <span class="token function" data-v-79a168f2 data-v-79a168f2>install</span> fpm
+</code></pre></div>
+<ol start="2" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Check the package contents you want to replace and let's replicate for our
+own purposes.</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>dpkg <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>--list</span> <span class="token operator" data-v-79a168f2 data-v-79a168f2>|</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>grep</span> php5-memcached
+<span class="token function" data-v-79a168f2 data-v-79a168f2>find</span> /var/cache/apt <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-type</span> f <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-name</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>'*php5-memcached*'</span>
+dpkg <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-c</span> /var/cache/apt/archives/php5-memcached_2.1.0-6build1_amd64.deb
+</code></pre></div>
+<ol start="3" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>I figured out in the output that I only needed a few folders,
+<code data-v-79a168f2 data-v-79a168f2>etc/php5/mods-available/</code> and <code data-v-79a168f2 data-v-79a168f2>usr/lib/php5/foo</code>, so I created them
+manually.</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>mkdir</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-p</span> etc/php5/mods-available/
+
+<span class="token comment" data-v-79a168f2 data-v-79a168f2># Adjust memcached.ini to suit your tastes, then prepare it for packaging</span>
+<span class="token function" data-v-79a168f2 data-v-79a168f2>cp</span> memcached.ini etc/php5/mods-available/
+
+<span class="token comment" data-v-79a168f2 data-v-79a168f2># Make sure the usr/lib/php5/foo path matches in</span>
+<span class="token comment" data-v-79a168f2 data-v-79a168f2># the result of `dpkg -c` you issued</span>
+
+<span class="token function" data-v-79a168f2 data-v-79a168f2>mkdir</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-p</span> usr/lib/php5/20121212/
+<span class="token function" data-v-79a168f2 data-v-79a168f2>cp</span> modules/memcached.so usr/lib/php5/20121212/
+</code></pre></div>
+<ol start="4" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Magic will happen</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>fpm <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-s</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>dir</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-t</span> deb <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-n</span> php5-memcached <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-v</span> <span class="token number" data-v-79a168f2 data-v-79a168f2>2.2</span>.0-wpd <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-m</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>'&lt;your@email.org>'</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>--description</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>'PHP 5.5 PECL igbinary + memcached support'</span> <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-d</span> libmemcached10 <span class="token punctuation" data-v-79a168f2 data-v-79a168f2>\</span>
+    etc/ usr/
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>I could have used <code data-v-79a168f2 data-v-79a168f2>--replaces REPLACES</code> in <a href="https://github.com/jordansissel/fpm/wiki" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>fpm</code> options</a>, but when I did
+this package, I didn't know which syntax to use. Its an optional argument
+anyway.</p>
+<ol start="5" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Test if the package works</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>dpkg <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-i</span> /srv/webplatform/apt/php5-memcached_2.2.0-wpd_amd64.deb
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>The output ...</p>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-text" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2>  (Reading database ... 118781 files and directories currently installed.)
+  Preparing to unpack .../php5-memcached_2.2.0-wpd_amd64.deb ...
+  Unpacking php5-memcached (2.2.0-wpd) over (2.1.0-6build1) ...
+  Setting up php5-memcached (2.2.0-wpd) ...
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>Success!</p>
+<ol start="6" data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Look at the <code data-v-79a168f2 data-v-79a168f2>phpinfo</code> output</li>
+</ol>
+<figure class="app-image is-loading has-image" style="float:unset" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/sessions_memcached_after.png" alt="OpenStack Cloud-Init dialog" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/sessions_memcached_after.png" class="object-cover w-full rounded" data-v-33ff8cb7> <!----></figure>
+<h2 id="update-your-private-apt-repository-or-create-one" data-v-79a168f2 data-v-79a168f2><a href="#update-your-private-apt-repository-or-create-one" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Update your private apt repository (or create one)</h2>
+<ol data-v-79a168f2 data-v-79a168f2>
+<li data-v-79a168f2 data-v-79a168f2>Then, in your own apt repository (if you do have one) here's how I rebuild
+the index. If you only have a handful of packages, it can simply be a folder
+with a bunch of deb files.</li>
+</ol>
+<div class="nuxt-content-highlight" data-v-79a168f2 data-v-79a168f2><pre class="line-numbers language-bash" data-v-79a168f2 data-v-79a168f2><code data-v-79a168f2 data-v-79a168f2><span class="token function" data-v-79a168f2 data-v-79a168f2>mkdir</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-p</span> /srv/apt
+<span class="token function" data-v-79a168f2 data-v-79a168f2>cp</span> php5-memcached_2.2.0-wpd_amd64.deb /srv/apt
+<span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>cd</span>  /srv/apt
+<span class="token function" data-v-79a168f2 data-v-79a168f2>apt-get</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>install</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-y</span> dpkg-dev
+dpkg-scanpackages <span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>.</span> /dev/null <span class="token operator" data-v-79a168f2 data-v-79a168f2>|</span> <span class="token function" data-v-79a168f2 data-v-79a168f2>gzip</span> <span class="token parameter variable" data-v-79a168f2 data-v-79a168f2>-9c</span> <span class="token operator" data-v-79a168f2 data-v-79a168f2>></span> Packages.gz
+<span class="token builtin class-name" data-v-79a168f2 data-v-79a168f2>echo</span> <span class="token string" data-v-79a168f2 data-v-79a168f2>'deb file:/srv/apt ./'</span> <span class="token operator" data-v-79a168f2 data-v-79a168f2>></span> /etc/apt/sources.list.d/foo.list
+</code></pre></div>
+<p data-v-79a168f2 data-v-79a168f2>If you want something more scalable than a directory with a bunch of <code data-v-79a168f2 data-v-79a168f2>.deb</code> and
+a <code data-v-79a168f2 data-v-79a168f2>Package.gz</code> that you rsync around, there are other procedures available
+online.</p>
+<p data-v-79a168f2 data-v-79a168f2>Done!</p>
+<h2 id="screenshots" data-v-79a168f2 data-v-79a168f2><a href="#screenshots" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Screenshots</h2>
+<div class="thumbnails gallery flex flex-row flex-wrap" style="overflow:hidden;clear:both" data-v-79a168f2 data-v-79a168f2>
+<figure class="w-1/3" class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/sessions_memcached_before2.png" alt="OpenStack Cloud-Init dialog" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/sessions_memcached_before2.png" class="object-cover w-full rounded" data-v-33ff8cb7> <!----></figure>
+<figure class="w-1/3" class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/sessions_memcached_before.png" alt="OpenStack Cloud-Init dialog" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/sessions_memcached_before.png" class="object-cover w-full rounded" data-v-33ff8cb7> <!----></figure>
+</div>
+</div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php" lang="fr-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      HHVM et Hack; ce qui les distingue de PHP
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Creating a new Ubuntu Salt master from the terminal using Cloud-Init
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1729799378/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

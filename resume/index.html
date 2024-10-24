@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en-CA">
+  <head>
+    <meta charset=utf-8 />
+    <title>Curriculum vitæ (simple) ✪  Renoir Boulanger</title>
+    <meta property="og:image" content="http://renoirb.com/assets/avatars/201507.jpg" />
+    <!--                                                ~/assets/avatars/201507.jpg -->
+    <!-- link rel=stylesheet href="../assets/main.css" /-->
+    <link rel=stylesheet href="../assets/legacy-stuff/pre-2020-renoirboulanger-com.min.css" />
+
+    <script type="module">
+      /**
+       * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+       */
+      import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+      import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+      registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+    </script>
+
+    <style>
+
+      /* Far reaching ones */
+      body { line-height: 30px; font-size: 16px; }
+      li { line-height: 30px; }
+      .table li { line-height: 20px; }
+
+
+      /* Too much padding for the resume version of the main layout */
+      .resume .zone .zone-top { padding: 20px; }
+
+
+      /* Hopefully I won't get more spam than I already get */
+      [data-fou-de-la-pouitte]:after {
+        unicode-bidi:bidi-override;
+        direction: rtl;
+      }
+
+
+      /* Definition list, they all get no padding or margin adjustment. */
+      dt,
+      dd {
+        line-height: 24px;
+      }
+      dd + dt { margin-top: 16px; }
+      dd { margin-left: 0; }
+      /* /Definition list, they all get no padding... */
+
+
+      /* Page top warning */
+      .warn {
+        padding:10px;
+        background:#333;
+        color:#FFF;
+        font-size:0.9em;
+        content: "";
+        line-height:18px;
+      }
+      /* /Page top warning */
+
+
+      /* summary arrow replacement */
+      .details details summary::-webkit-details-marker {
+        /* Hide summary arrow at beginning.
+           Non blink/webkit browsers will have two arrows. */
+          display:none;
+      }
+      .details details summary:after {
+        content: "\25BA"; /* ► */
+        display: block;
+      }
+      .details details[open] summary:after { content: "\25BC"; /* ▼ */ }
+      .details details[open] summary { margin-left: -30px; }
+      .details details[open] { margin-left: 30px; }
+      .details details summary { cursor: zoom-in; }
+      .details details[open] { cursor: zoom-out; }
+      /* /summary arrow replacement */
+
+
+      /* Float dl on the right */
+      #summary dl,
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl {
+        float: right;
+        width: 45%;
+        margin: 0 0 20px 20px;
+        border-left: 1px dashed #ddd;
+        padding: 0 20px;
+      }
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl  {
+        margin-top: -36px; /* Which is line-height of h1,h2,h3 */
+        padding-top: 0;
+      }
+      .detailed #work-experience details,
+      .detailed #selected-project details {
+        clear:none;
+      }
+      #work-experience section,
+      #selected-projects section {
+        overflow: hidden;
+      }
+      #work-experience section + section,
+      #selected-projects section + section {
+        border-top: 1px dashed #ddd;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+      /* /Float dl on the right */
+
+      /* On non detailed resume, compact things up */
+      .not-detailed section:not(#summary) dl { margin-top: -10px; }
+      .not-detailed section:not(#summary) dt:first-child { display:none; }
+      .not-detailed section:not(#summary) dt { float:left; padding-right: 10px; }
+      .not-detailed section:not(#summary) dt:after { content: ":   "; }
+      .not-detailed section:not(#summary) dd + dt { margin-top: 0 !important; }
+
+      /* On non detailed resume, remove line separator between sections */
+      .not-detailed #work-experience section + section,
+      .not-detailed #selected-projects section + section {
+        border-top: none !important;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      /* On non detailed resume, let's put experience in two columns */
+      .not-detailed #work-experience, .not-detailed #technologies { clear: both; }
+      .not-detailed #work-experience section {
+        float: left;
+        width: 50%;
+      }
+      .not-detailed #work-experience section:nth-child(2n+0) {
+        clear: left;
+      }
+
+      /* Adjust past-employers SVG logos to harmonize them visually */
+      #past-employers img {
+        max-height: 80px;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        opacity: 0.7;
+      }
+      #past-employers a:hover img {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+        opacity: 1;
+      }
+      #past-employers img[alt="Mozilla"] { max-height:57px; }
+      #past-employers img[alt="W3C"] { max-height:57px; }
+      #past-employers a:hover { background: none; }
+      #past-employers a + a {
+        margin-left: 4%;
+      }
+      #past-employers p {
+        text-align: center;
+      }
+      /* /Adjust past-employers SVG logos */
+
+      .label {
+        border-radius: 5px;
+      }
+
+
+      @media print {
+        @page {
+          margin: 1.1cm;
+        }
+
+        /* Hide some links location in print media */
+        a[href*="renoirboulanger"]:after,
+        a[href^="tel"]:after,
+        a[href^="/"]:after,
+        a[href^="#"]:after,
+        .no-print ,
+        .details .detailed summary:before {
+          display:none;
+        }
+
+        .details .detailed details:not([open]) summary:after {
+          content: "\25B7   (More details available online, you can expand this section if you load my resume in your Web browser)";
+          font-size: 0.8em;
+        }
+      }
+    </style>
+  </head>
+  <body class="page resume">
+    <header>
+        <div class="zone">
+            <div class="zone-tools container">
+                <div class="row">&nbsp;
+                    <!--nav class="span12">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="http://feeds.feedburner.com/RenoirBoulanger"><i class="icon-rss"></i> RSS</a></li>
+                            <li class="tooltipify" title="Me rejoindre"><a href="/fr/me-joindre"><i class="icon-envelope"></i> Me joindre</a></li>
+                        </ul>
+                    </nav-->
+                </div>
+            </div>
+        </div>
+        <div class="zone">
+            <div class="zone-top container">
+                <div class="row">
+                    <div class="span4">
+                        <h1>
+                            <a href="https://renoirboulanger.com/">Renoir Boulanger</a>
+                        </h1>
+                    </div>
+                    <div class="span8 behavior-fade">
+                      <!-- Same margin and line-height as title, it's fine to tagsoup here I say. -->
+                      <p class="pull-right" style="font-size: 1.5em; font-weight: 100; margin: 10px 0px;">FULL-STACK-DEVELOPER &amp; DEVOPS ENGINEER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main" role="main" class="zone">
+
+      <div class="zone-content container">
+        <div class="wrap container" role="document">
+
+          <rb-notice-box
+            variant="warn"
+            style="margin-bottom:2em;"
+          >
+            <div slot="header">
+              <strong>
+                Currently outdated
+              </strong>
+            </div>
+            <p>This version is currently outdated, refer to the <a href="as-code">/resume/as-code</a> version of my resume.</p>
+          </rb-notice-box>
+
+          <div class="content row">
+            <div class="main span12" role="main">
+              <div class=boxes>
+                <section id="summary">
+<dl>
+<dt><span id="availability">Availability</span></dt>
+<dd><em>Not available</em> for new opportunities at the moment
+</dd>
+<dt>Preferred contact method</dt>
+<dd>Write me <em data-fou-de-la-pouitte title="Please type this manually"></em>
+</dd>
+<dt>Elsewhere</dt>
+<dd><a href="https://github.com/renoirb?tab=repositories" title="My code on GitHub"><i class="icon-github"></i> GitHub</a>
+</dd>
+<dd><a href="https://linkedin.com/in/renoirb" title="My LinkedIn profile"><i class="icon-linkedin"></i> LinkedIn</a>
+</dd>
+<dd><a href="https://gerrit.wikimedia.org/r/#/q/owner:%22Renoirb+%253Crenoir%2540w3.org%253E%22,n,z"><i class="icon-book"></i> Wikimedia Foundation</a>
+</dd>
+<dt>Languages</dt>
+<dd><em>Français</em> <span lang="fr">langue maternelle</span>
+</dd>
+<dd><em>English</em>  fluent
+</dd>
+<dt>Logistics</dt>
+<dd><em>Canadian</em> citizen
+</dd>
+<dd>Living in <em>Montréal, Québec, Canada</em>
+</dd>
+<dt>See also</dt>
+<dd><strong><a href="/resume/detailed/">Detailed</a></strong> version of this resume
+</dd>
+</dl>
+<p>Experienced full-stack developer looking for a position on a conscientious collaborative team. I have a broad and deep understanding of the Open Web stack and font-end and server techniques to build, deploy, and maintain Web sites that scale. I work effectively remotely or on-site.</p>
+<h2>Highlights</h2>
+<ul>
+<li>Created and maintained <strong>architecture for high-performance sites</strong>, including  <a href="https://web.archive.org/web/20130115092509/http://www.webplatform.org/">WebPlatform.org</a>, and the <a href="http://www.webat25.org">World Wide Web’s 25th anniversary</a> site</li>
+<li>Built more than <strong>150 websites</strong> between 2002 and 2009</li>
+<li>GNU/Linux user <strong>since 1998</strong></li>
+<li>Contributor to open-source projects such as <strong>MediaWiki</strong> and <strong>Mozilla Firefox Accounts</strong></li>
+<li>Experience with Cloud, <strong>IaaS</strong>, <strong>Containers</strong> and maintenance of <strong>continuous deployment</strong> systems</li>
+</ul>
+<h2>Certifications</h2>
+<ul>
+<li><strong>2013</strong>    <em>Zend Certified Engineer PHP 5.3</em> <small>(Vue, <a href="https://www.zend.com/en/yellow-pages/ZEND011184">certificate</a>)</small></li>
+<li><strong>2012</strong>    <em>Written English in Communication Contexts</em> <small>(McGill University)</small></li>
+<li><strong>2008</strong>    <em>Web Accessibility</em> (WCAG 1) at the <em>Nazareth &amp; Louis Braille</em> institute <small>(University of Montréal)</small></li>
+<li><strong>2007</strong>    IBM <em>WebSphere DataPower</em> SOA Appliance <small>(IBM)</small></li>
+</ul>
+<h2>Publications and Contributions</h2>
+<ul>
+<li><strong>2015</strong>    <strong>Adacemic</strong> published to the <strong><a href="http://www.acm.org/">ACM library</a></strong> with <em>André Santanchè</em> paper titled &quot;<a href="http://dl.acm.org/citation.cfm?doid=2526188.2528541&amp;preflayout=flat">Mobile development using web technologies focusing on games</a>&quot;, in chapters &quot;Markup architecture&quot;, &quot;Events&quot;, and “Web Storage”</li>
+<li><strong>2013</strong>    <strong>Book Review</strong> <a href="https://www.packtpub.com/books/content/apache-solr-php-integration">Apache Solr PHP Integration</a> by <em>Pakt publishing</em></li>
+</ul>
+<p>See more publications in <a href="/resume/detailed">detailed resume</a>.</p>
+<!-- end of #summary --></section><section id="work-experience">
+<h2>Work experience</h2>
+<section>
+<h3>Delivery Engineering Architect</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://colloquial.com/">Colloquial</a>, <a href="http://colloquial.com/">Betastream</a>, <a href="http://www.cae.com/">CAE</a>
+</dd>
+<dt>Duration</dt>
+<dd>Jan 2016 – current
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd><em>Remote work</em>, Montreal, Quebec
+</dd>
+</dl>
+</section><section id="mozilla-2015">
+<h3>Product-Owner</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.mozilla.org/">Mozilla Corporation</a>
+</dd>
+<dt>Duration</dt>
+<dd>Sept 2015 – Feb 2016 (6 months)
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd><em>Remote work</em>, Montreal, Quebec
+</dd>
+</dl>
+</section><section id="w3c-2013">
+<h3>Developer Operations Engineer <small>(i.e. DevOps)</small></h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.w3.org/">W3C/MIT</a>
+</dd>
+<dt>Duration</dt>
+<dd>Aug 2013 – Aug 2015 (2 years)
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd><em>Remote work</em>, Montreal, Quebec
+</dd>
+</dl>
+</section><section id="ericsson-2012">
+<h3>Software Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.ericsson.com/">Ericsson</a>
+</dd>
+<dt>Duration</dt>
+<dd>Feb 2012 – Jun 2013 (1 year 4 months)
+</dd>
+<dt>Type</dt>
+<dd>Contract
+</dd>
+<dt>Location</dt>
+<dd>Montreal, Quebec
+</dd>
+</dl>
+</section><section>
+<h3>Web Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><em>Evocatio Solutions technologiques</em>
+</dd>
+<dt>Duration</dt>
+<dd>Jan 2010 – Feb 2012 (2 years 2 months)
+</dd>
+<dt>Type</dt>
+<dd>Co-Founder
+</dd>
+<dt>Location</dt>
+<dd>Montreal, Quebec
+</dd>
+</dl>
+</section><section>
+<h3>Web Integrator &amp;<br/> Linux System Administrator</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.techsolcom.ca/">Groupe Informatique TechSolCom</a>
+</dd>
+<dt>Duration</dt>
+<dd>Oct 2006 – Aug 2009 (2 years 10 months)
+</dd>
+<dt>Location</dt>
+<dd>Montreal, Quebec
+</dd>
+</dl>
+</section><section>
+<h3>Web Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><a href="http://www.axion.ca/">Câble Axion Digitel</a>
+</dd>
+<dt>Duration</dt>
+<dd>Oct 2005 – Nov 2006 (1 year 1 month)
+</dd>
+<dt>Location</dt>
+<dd>Magog, Quebec
+</dd>
+</dl>
+</section><section>
+<h3>Web Developer</h3>
+<dl>
+<dt>Employer</dt>
+<dd><em>INEXIS Solution Web</em>
+</dd>
+<dt>Duration</dt>
+<dd>Feb 2002 – Nov 2006 (4 years 9 months)
+</dd>
+<dt>Type</dt>
+<dd>Self-employed
+</dd>
+<dt>Location</dt>
+<dd>Sherbrooke, Quebec
+</dd>
+</dl>
+</section>
+<hr>
+<!-- end of #work-experience --></section><section id="technologies">
+<h2>Technologies</h2>
+<table class="table table-condensed">
+<tr><td>&nbsp</td><th>Most familiar</th><th>Some experience</th></tr>
+<tr>
+<th>Programming</th>
+<td><ul><li data-xp=5><abbr title="Hyper Text Markup Language">HTML</abbr> <small>(<abbr title="Document Object Model">DOM</abbr>, APIs, etc.)</small></li><li data-xp=5><abbr title="Cascading Style Sheets">CSS</abbr> <small>(Level 3, MediaQueries, etc.)</small></li><li data-xp=5>LESS/SASS/Compass</li><li data-xp=4>PHP</li><li data-xp=4>JavaScript <small>(ECMAScript 2005, Promise, etc.)</small></li><li data-xp=4>Bash</li><li data-xp=2>VCL</li></ul></td>
+<td><ul><li data-xp=1>Python</li><li data-xp=1>Go</li></ul></td>
+</tr><tr>
+<th>Frameworks</th>
+<td><ul><li data-xp=4>Symfony 2</li><li data-xp=4>Backbone.js</li><li data-xp=4>Metalsmith</li><li data-xp=4>MediaWiki</li></ul></td>
+<td><ul><li data-xp=3>PHPUnit</li><li data-xp=2>Karma</li><li data-xp=2>AngularJS</li><li data-xp=2>React</li><li data-xp=2>Mocha/Jasmine</li></ul></td>
+</tr><tr>
+<th>Servers</th>
+<td><ul><li data-xp=5>Apache httpd</li><li data-xp=4>Node.js</li><li data-xp=4>NGINX</li><li data-xp=4>MySQL/MariaDB</li><li data-xp=4>Memcached</li></ul></td>
+<td><ul><li data-xp=3>ElasticSearch</li><li data-xp=3>Redis</li><li data-xp=3>Logstash</li><li data-xp=2><em>Self-hosted OpenStack cluster</em>: Cinder, Swift, Keystone</li></ul></td>
+</tr><tr>
+<th>Automation</th>
+<td><ul><li data-xp=5>Salt Stack</li></ul></td>
+<td><ul><li data-xp=2>Puppet</li></ul></td>
+</tr><tr>
+<th>Tools</th>
+<td><ul><li data-xp=5>Git</li><li data-xp=4>Grunt/Gulp</li><li data-xp=4>Bower</li><li data-xp=4>Docker</li><li data-xp=4>Vagrant</li><li data-xp=3>GNU Make</li></ul></td>
+<td><ul><li data-xp=2>Babel</li><li data-xp=2>WebPack/Rollup/Browserify</li></ul></td>
+</tr><tr>
+<th>Services</th>
+<td><ul><li data-xp=5>Fastly</li><li data-xp=4><em>OpenStack type providers</em>: HPCloud, DreamCompute</li></ul></td>
+<td><ul><li data-xp=4>AWS</li><li data-xp=3>CircleCI</li><li data-xp=3>Travis</li></ul></td>
+</tr></table>
+<!-- end of #technologies --></section>
+
+              </div><!-- /.boxes -->
+            </div><!-- /.main -->
+          </div><!-- /.content -->
+        </div><!-- /.wrap -->
+      </div><!-- end of .zone-content.container -->
+    </div><!-- end of #main.zone -->
+    <footer id="content-info" role="contentinfo">
+        <div class="zone">
+            <div class="zone-bottom container">
+                <div class="zone-bottom-padding">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    <style>[data-fou-de-la-pouitte]:after {content:"moc.regnaluobrioner\0040olleh";}</style>
+    <script src="../assets/legacy-stuff/renoirb-js-main.js"></script>
+    <script>
+        function querySelectorApply(selectorString, closure) {
+          Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
+        }
+        function openAllDetailsElements() {
+          querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
+            HTMLDetailsElement.setAttribute('open','');
+          });
+        }
+        /**
+         * Make label looking tags and
+         * append as child to a QuerySelector friendly location
+         * in the DOM
+         */
+        function addLabelTo(text_or_array, qs, tag) {
+          var tagType = tag||'span',
+              tagElement = document.createElement(tagType),
+              whereSelector = document.querySelector(qs||'body'),
+              tagsTexts = [],
+              loopCounter = -1;
+          tagElement.setAttribute('class', 'label label-success');
+          if (!!text_or_array &&  text_or_array.constructor == String) {
+            tagsTexts = [text_or_array];
+          }
+          if (!!text_or_array && text_or_array.constructor == Array) {
+            tagsTexts = text_or_array;
+          }
+
+          while (++loopCounter < tagsTexts.length){
+            var newTag = tagElement.cloneNode(false);
+            newTag.textContent = String(tagsTexts[loopCounter]);
+            whereSelector.appendChild(newTag);
+          }
+        }
+        window.onload = function resumeOnloadHandler() {
+          var documentClassNames = document.getElementsByTagName('html')[0].getAttribute('class'),
+              bodyClassesNames = document.body.getAttribute('class');
+
+          /**
+           * Test if we’re reading the detailed resume or not. Add different className on body
+           **/
+          if (/detailed(\/|\.html)$/.test(window.location.pathname)) {
+            bodyClassesNames += ' detailed';
+            addLabelTo('Detailed resume', '.zone-top h1:first-child', 'sup');
+          } else {
+            bodyClassesNames += ' not-detailed';
+          }
+
+          /**
+           * Very minimal feature detect for details HTML5 tag
+           *
+           * Test for existence of details element
+           *     !!window.HTMLDetailsElement
+           * or like this
+           *     !!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement
+           */
+           if (!!window.HTMLDetailsElement === true) {
+             documentClassNames += ' details';
+           } else {
+             documentClassNames += ' no-details';
+           }
+           document.body.setAttribute('class', bodyClassesNames);
+           document.getElementsByTagName('html')[0].setAttribute('class', documentClassNames);
+        };
+    </script>
+  </body>
+</html>

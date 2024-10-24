@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Renoir Boulanger</title>
+        <link>https://renoirboulanger.com</link>
+        <description>Fascinated By The Open Web Platform</description>
+        <lastBuildDate>Thu, 24 Oct 2024 19:49:55 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <copyright>All rights reserved 2002-2024, Renoir Boulanger</copyright>
+        <item>
+            <title><![CDATA[Managing Email Aliases with ProtonMail and SimpleLogin to sort automatically into inbox folders based local part]]></title>
+            <link>https://renoirboulanger.com/blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting</link>
+            <guid>https://renoirboulanger.com/blog/2024/03/managing-email-aliases-with-protonmail-automatic-sorting</guid>
+            <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Porting all my content into a static-site]]></title>
+            <link>https://renoirboulanger.com/blog/2020/09/porting-all-my-content</link>
+            <guid>https://renoirboulanger.com/blog/2020/09/porting-all-my-content</guid>
+            <pubDate>Thu, 10 Sep 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Harmonizing how to bundle and package JavaScript/ECMAScript features]]></title>
+            <link>https://renoirboulanger.com/blog/2020/02/harmonizing-how-to-bundle-and-package-features</link>
+            <guid>https://renoirboulanger.com/blog/2020/02/harmonizing-how-to-bundle-and-package-features</guid>
+            <pubDate>Tue, 04 Feb 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Data Driven UI]]></title>
+            <link>https://renoirboulanger.com/blog/2020/02/data-driven-ui</link>
+            <guid>https://renoirboulanger.com/blog/2020/02/data-driven-ui</guid>
+            <pubDate>Tue, 04 Feb 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Things I’ve worked on in the last two years while maintaining WebPlatform.org]]></title>
+            <link>https://renoirboulanger.com/blog/2017/02/things-i-ve-worked-on-while-maintaining-webplatform-org</link>
+            <guid>https://renoirboulanger.com/blog/2017/02/things-i-ve-worked-on-while-maintaining-webplatform-org</guid>
+            <pubDate>Thu, 09 Feb 2017 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Recover Discourse from a backup, adjust domain name]]></title>
+            <link>https://renoirboulanger.com/blog/2015/11/recover-discourse-backup-change-domain-name</link>
+            <guid>https://renoirboulanger.com/blog/2015/11/recover-discourse-backup-change-domain-name</guid>
+            <pubDate>Fri, 20 Nov 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Thoughts about improving load resiliency for CMS driven Websites]]></title>
+            <link>https://renoirboulanger.com/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites</link>
+            <guid>https://renoirboulanger.com/blog/2015/08/thoughts-improving-load-resiliency-cms-driven-websites</guid>
+            <pubDate>Wed, 12 Aug 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Managing my PGP/OpenPGP keys and share across many machines]]></title>
+            <link>https://renoirboulanger.com/blog/2015/08/managing-pgp-private-keys-share-across-machines</link>
+            <guid>https://renoirboulanger.com/blog/2015/08/managing-pgp-private-keys-share-across-machines</guid>
+            <pubDate>Thu, 06 Aug 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Leaving W3C]]></title>
+            <link>https://renoirboulanger.com/blog/2015/07/leaving-w3c</link>
+            <guid>https://renoirboulanger.com/blog/2015/07/leaving-w3c</guid>
+            <pubDate>Thu, 30 Jul 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Migrating WebPlatform.org MediaWiki into Git as Markdown files]]></title>
+            <link>https://renoirboulanger.com/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files</link>
+            <guid>https://renoirboulanger.com/blog/2015/07/migrating-webplatform-org-mediawiki-into-git-history-and-into-markdown-files</guid>
+            <pubDate>Thu, 30 Jul 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Add OpenStack instance meta-data info in your salt grains]]></title>
+            <link>https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains</link>
+            <guid>https://renoirboulanger.com/blog/2015/05/add-openstack-instance-meta-data-info-salt-grains</guid>
+            <pubDate>Fri, 22 May 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Converting a dynamic site into static HTML documents]]></title>
+            <link>https://renoirboulanger.com/blog/2015/05/converting-dynamic-site-static-copy</link>
+            <guid>https://renoirboulanger.com/blog/2015/05/converting-dynamic-site-static-copy</guid>
+            <pubDate>Wed, 20 May 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Run a NodeJS process through forever from within a Docker container]]></title>
+            <link>https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container</link>
+            <guid>https://renoirboulanger.com/blog/2015/05/run-nodejs-process-forever-within-docker-container</guid>
+            <pubDate>Tue, 12 May 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Make Discourse “long polling” work behind Fastly or Varnish]]></title>
+            <link>https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly</link>
+            <guid>https://renoirboulanger.com/blog/2015/05/make-discourse-long-polling-work-behind-fastly</guid>
+            <pubDate>Sun, 03 May 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Setting up Discourse with Fastly as a CDN provider and TLS]]></title>
+            <link>https://renoirboulanger.com/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl</link>
+            <guid>https://renoirboulanger.com/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl</guid>
+            <pubDate>Wed, 29 Apr 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to run your own OAuth Identity provider service]]></title>
+            <link>https://renoirboulanger.com/blog/2015/04/run-oauth-identity-provider-service</link>
+            <guid>https://renoirboulanger.com/blog/2015/04/run-oauth-identity-provider-service</guid>
+            <pubDate>Mon, 13 Apr 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS and make your own .deb package for deployment]]></title>
+            <link>https://renoirboulanger.com/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package</link>
+            <guid>https://renoirboulanger.com/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package</guid>
+            <pubDate>Sun, 05 Apr 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Install Discourse and Docker on Ubuntu 14.04 with aufs enabled]]></title>
+            <link>https://renoirboulanger.com/blog/2015/04/install-discourse-docker-ubuntu-14-04-aufs-enabled</link>
+            <guid>https://renoirboulanger.com/blog/2015/04/install-discourse-docker-ubuntu-14-04-aufs-enabled</guid>
+            <pubDate>Thu, 02 Apr 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A few useful GNU/Linux truth tests while creating salt states]]></title>
+            <link>https://renoirboulanger.com/blog/2015/03/useful-gnulinux-truth-tests</link>
+            <guid>https://renoirboulanger.com/blog/2015/03/useful-gnulinux-truth-tests</guid>
+            <pubDate>Tue, 10 Mar 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Creating a new Ubuntu Salt master from the terminal using Cloud-Init]]></title>
+            <link>https://renoirboulanger.com/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init</link>
+            <guid>https://renoirboulanger.com/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init</guid>
+            <pubDate>Mon, 09 Mar 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Install PHP5 Memcached PECL extension and have it support igbinary]]></title>
+            <link>https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary</link>
+            <guid>https://renoirboulanger.com/blog/2015/02/install-php5-memcached-pecl-extension-support-igbinary</guid>
+            <pubDate>Wed, 18 Feb 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[HHVM et Hack; ce qui les distingue de PHP]]></title>
+            <link>https://renoirboulanger.com/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php</link>
+            <guid>https://renoirboulanger.com/blog/2015/02/hhvm-et-hack-ce-qui-les-distingue-de-php</guid>
+            <pubDate>Tue, 03 Feb 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Create a MariaDB cluster with replication over SSL with Salt Stack]]></title>
+            <link>https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack</link>
+            <guid>https://renoirboulanger.com/blog/2015/01/create-mariadb-cluster-replication-ssl-salt-stack</guid>
+            <pubDate>Wed, 28 Jan 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quelques bouts de code pour automatiser le déploiement]]></title>
+            <link>https://renoirboulanger.com/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement</link>
+            <guid>https://renoirboulanger.com/blog/2015/01/quelques-bouts-de-code-pour-automatiser-le-deploiement</guid>
+            <pubDate>Wed, 28 Jan 2015 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Thoughts about learning in the web developer job, what managers might be missing]]></title>
+            <link>https://renoirboulanger.com/blog/2014/08/thoughts-learn-code-movement-managers-might-missing</link>
+            <guid>https://renoirboulanger.com/blog/2014/08/thoughts-learn-code-movement-managers-might-missing</guid>
+            <pubDate>Sun, 24 Aug 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Notes of my purchase experience with ASUS slim DVD-RW reader SDRW-08D2S-U]]></title>
+            <link>https://renoirboulanger.com/blog/2014/07/notes-experience-asus-dvd-sdrw-08d2s-u</link>
+            <guid>https://renoirboulanger.com/blog/2014/07/notes-experience-asus-dvd-sdrw-08d2s-u</guid>
+            <pubDate>Thu, 10 Jul 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Processus de création d'une VM faisant partie d'un parc géré par Salt Stack]]></title>
+            <link>https://renoirboulanger.com/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack</link>
+            <guid>https://renoirboulanger.com/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack</guid>
+            <pubDate>Wed, 22 Jan 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Answers I gave for an article  about the impacts of Heartbleed]]></title>
+            <link>https://renoirboulanger.com/blog/2014/07/article-impacts-of-heartbleed</link>
+            <guid>https://renoirboulanger.com/blog/2014/07/article-impacts-of-heartbleed</guid>
+            <pubDate>Fri, 04 Jul 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Recette du succès en quelques règles simples]]></title>
+            <link>https://renoirboulanger.com/blog/2014/05/choses-que-jaurai-souhaite-apprendre-plus-tot</link>
+            <guid>https://renoirboulanger.com/blog/2014/05/choses-que-jaurai-souhaite-apprendre-plus-tot</guid>
+            <pubDate>Wed, 07 May 2014 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why would I NOT use my own framework and how I sell usage of Symfony2 and other current PHP 5.3+ goodies to my client]]></title>
+            <link>https://renoirboulanger.com/blog/2012/11/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client</link>
+            <guid>https://renoirboulanger.com/blog/2012/11/why-would-i-not-use-my-own-framework-and-how-i-sell-usage-of-symfony2-and-other-current-php-5-3-goodies-to-my-client</guid>
+            <pubDate>Thu, 22 Nov 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A list of quality indicators we could find on an application or web site]]></title>
+            <link>https://renoirboulanger.com/blog/2012/11/a-list-of-quality-indicators-we-could-find-on-an-application-or-web-site</link>
+            <guid>https://renoirboulanger.com/blog/2012/11/a-list-of-quality-indicators-we-could-find-on-an-application-or-web-site</guid>
+            <pubDate>Sun, 11 Nov 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réflexion a voix-haute: La réalité frustrante des développeurs dans l'industrie du web]]></title>
+            <link>https://renoirboulanger.com/blog/2012/09/reflexion-a-voix-haute-la-realite-frustrante-des-developpeurs-dans-lindustrie-du-web</link>
+            <guid>https://renoirboulanger.com/blog/2012/09/reflexion-a-voix-haute-la-realite-frustrante-des-developpeurs-dans-lindustrie-du-web</guid>
+            <pubDate>Thu, 20 Sep 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Résumé d'une discussion et notes sur ce que j'aurai aimé comprendre plus rapidement lors de mon apprentissage Symfony2 et Doctrine2]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/resume-dune-discussion-et-notes-sur-ce-que-jaurai-aime-comprendre-plus-rapidement-lors-de-mon-apprentissage-symfony2-et-doctrine2</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/resume-dune-discussion-et-notes-sur-ce-que-jaurai-aime-comprendre-plus-rapidement-lors-de-mon-apprentissage-symfony2-et-doctrine2</guid>
+            <pubDate>Fri, 10 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Project manifest: Content management publishing platform to implement Accessibility, Semantic markup, and ease web publishing]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing</guid>
+            <pubDate>Fri, 10 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nouveau projet: Refonte de mon site en conservant WordPress comme back-office, mais Symfony2 / Doctrine2 / Twig pour générer les vues]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues</guid>
+            <pubDate>Fri, 10 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ma critique sur l'intégration du site a25.com]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/ma-critique-sur-lintegration-du-site-a25-com</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/ma-critique-sur-lintegration-du-site-a25-com</guid>
+            <pubDate>Tue, 28 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment je valide et convertit des documents HTML trop chargés ou provenant de Microsoft Word en HTML valide et simplifié]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/comment-je-valide-et-convertit-des-documents-html-trop-charges-ou-provenant-de-microsoft-word-en-html-valide-et-simplifie</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/comment-je-valide-et-convertit-des-documents-html-trop-charges-ou-provenant-de-microsoft-word-en-html-valide-et-simplifie</guid>
+            <pubDate>Thu, 30 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Project idea: Creating a home made OpenStack cluster for development purposes]]></title>
+            <link>https://renoirboulanger.com/blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes</link>
+            <guid>https://renoirboulanger.com/blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes</guid>
+            <pubDate>Thu, 24 Oct 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to create a patch and ensure it is applied within Salt Stack]]></title>
+            <link>https://renoirboulanger.com/blog/2013/09/how-to-create-a-patch-and-ensure-it-is-applied-within-salt-stack</link>
+            <guid>https://renoirboulanger.com/blog/2013/09/how-to-create-a-patch-and-ensure-it-is-applied-within-salt-stack</guid>
+            <pubDate>Thu, 12 Sep 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Procedure to create a re-usable configuration export script to move a virtual machine configuration to a new one]]></title>
+            <link>https://renoirboulanger.com/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one</link>
+            <guid>https://renoirboulanger.com/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one</guid>
+            <pubDate>Wed, 07 Aug 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I am joining W3C to work on the WebPlatform project!]]></title>
+            <link>https://renoirboulanger.com/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project</link>
+            <guid>https://renoirboulanger.com/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project</guid>
+            <pubDate>Thu, 01 Aug 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I have just resigned from my new job to start on an exciting project!]]></title>
+            <link>https://renoirboulanger.com/blog/2013/07/i-just-resigned-from-my-new-job-to-start-on-an-exciting-project</link>
+            <guid>https://renoirboulanger.com/blog/2013/07/i-just-resigned-from-my-new-job-to-start-on-an-exciting-project</guid>
+            <pubDate>Fri, 19 Jul 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Astuce concernant le rafraîchissement du contenu des pages avec utilisation d'AJAX en exemple]]></title>
+            <link>https://renoirboulanger.com/blog/2013/04/astuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax</link>
+            <guid>https://renoirboulanger.com/blog/2013/04/astuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax</guid>
+            <pubDate>Fri, 12 Apr 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Enfin! J'ai refait mon site]]></title>
+            <link>https://renoirboulanger.com/blog/2013/04/enfin-jai-refait-mon-site</link>
+            <guid>https://renoirboulanger.com/blog/2013/04/enfin-jai-refait-mon-site</guid>
+            <pubDate>Tue, 09 Apr 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Procédure pour avoir un environnement de dévelopement local facile à configurer avec Apache]]></title>
+            <link>https://renoirboulanger.com/blog/2013/05/procedure-environnement-developement-local-facile-a-entretenir-avec-apache</link>
+            <guid>https://renoirboulanger.com/blog/2013/05/procedure-environnement-developement-local-facile-a-entretenir-avec-apache</guid>
+            <pubDate>Thu, 23 May 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Who else is using feature flipping thing on their web applications?]]></title>
+            <link>https://renoirboulanger.com/blog/2013/04/who-else-is-using-that-feature-flipping-thing-on-their-web-applications</link>
+            <guid>https://renoirboulanger.com/blog/2013/04/who-else-is-using-that-feature-flipping-thing-on-their-web-applications</guid>
+            <pubDate>Tue, 09 Apr 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Encapsulate a LDAP DN string using Arrays in PHP]]></title>
+            <link>https://renoirboulanger.com/blog/2013/04/encapsulate-a-ldap-dn-string-using-an-array-in-php</link>
+            <guid>https://renoirboulanger.com/blog/2013/04/encapsulate-a-ldap-dn-string-using-an-array-in-php</guid>
+            <pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Creating and using Javascript events while combining events on two separates behaviors]]></title>
+            <link>https://renoirboulanger.com/blog/2013/03/creating-and-using-javascript-events-while-combining-events-on-two-separates-behaviors</link>
+            <guid>https://renoirboulanger.com/blog/2013/03/creating-and-using-javascript-events-while-combining-events-on-two-separates-behaviors</guid>
+            <pubDate>Fri, 29 Mar 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Introduction to the Hypermedia]]></title>
+            <link>https://renoirboulanger.com/blog/2012/10/my-first-introduction-to-the-hypermedia</link>
+            <guid>https://renoirboulanger.com/blog/2012/10/my-first-introduction-to-the-hypermedia</guid>
+            <pubDate>Sat, 27 Oct 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What is Cloud computing when it is related to web application]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/what-is-cloud-computing-when-it-is-related-to-web-application</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/what-is-cloud-computing-when-it-is-related-to-web-application</guid>
+            <pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Some steps you can look for if you feel your web application is slow]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/some-steps-you-can-look-for-if-you-feel-your-web-application-is-slow</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/some-steps-you-can-look-for-if-you-feel-your-web-application-is-slow</guid>
+            <pubDate>Wed, 15 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My answer to People asking whether they should or not use a framework on their programming language]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/my-answer-to-people-asking-whether-they-should-or-not-use-a-framework-on-their-programming-language</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/my-answer-to-people-asking-whether-they-should-or-not-use-a-framework-on-their-programming-language</guid>
+            <pubDate>Mon, 13 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Crash course about how DNS works and the things you should know about it]]></title>
+            <link>https://renoirboulanger.com/blog/2012/08/crash-course-about-how-dns-works-and-the-things-you-should-know-about-it</link>
+            <guid>https://renoirboulanger.com/blog/2012/08/crash-course-about-how-dns-works-and-the-things-you-should-know-about-it</guid>
+            <pubDate>Wed, 01 Aug 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How I managed to make work Guzzle REST client library under Symfony 2.0.x as a bundle [Snipet]]]></title>
+            <link>https://renoirboulanger.com/blog/2012/07/how-i-managed-to-make-work-guzzle-rest-client-library-under-symfony-2-0-x-as-a-bundle-snipet</link>
+            <guid>https://renoirboulanger.com/blog/2012/07/how-i-managed-to-make-work-guzzle-rest-client-library-under-symfony-2-0-x-as-a-bundle-snipet</guid>
+            <pubDate>Wed, 11 Jul 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My current Symfony 2.0.x (favourites) vendor dependencies]]></title>
+            <link>https://renoirboulanger.com/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies</link>
+            <guid>https://renoirboulanger.com/blog/2012/07/my-current-symfony-2-0-x-favourites-vendor-dependencies</guid>
+            <pubDate>Wed, 04 Jul 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mon souhait pour bien écrire sur le web: Lettre ouverte à Druide]]></title>
+            <link>https://renoirboulanger.com/blog/2012/06/mon-souhait-pour-bien-ecrire-sur-le-web-lettre-ouverte-a-druide</link>
+            <guid>https://renoirboulanger.com/blog/2012/06/mon-souhait-pour-bien-ecrire-sur-le-web-lettre-ouverte-a-druide</guid>
+            <pubDate>Thu, 28 Jun 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Conférence: Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité]]></title>
+            <link>https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite</link>
+            <guid>https://renoirboulanger.com/blog/2013/02/conference-comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite</guid>
+            <pubDate>Thu, 21 Feb 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Choosing a framework, how I personally check as “hot” characteristics, my evaluation process]]></title>
+            <link>https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process</link>
+            <guid>https://renoirboulanger.com/blog/2012/07/choosing-a-framework-how-i-personally-define-what-is-hot-about-them-an-evaluation-process</guid>
+            <pubDate>Mon, 23 Jul 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[J'ai décidé d'arrêter de participer au Conseil d'administration du W3Qc]]></title>
+            <link>https://renoirboulanger.com/blog/2013/02/jai-decide-darreter-de-participer-au-conseil-dadministration-du-w3qc</link>
+            <guid>https://renoirboulanger.com/blog/2013/02/jai-decide-darreter-de-participer-au-conseil-dadministration-du-w3qc</guid>
+            <pubDate>Thu, 14 Feb 2013 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A quick overview on the advantages to architect you HTML in an "Object Oriented" approach]]></title>
+            <link>https://renoirboulanger.com/blog/2012/07/a-quick-overview-on-the-advantages-to-architect-you-html-in-an-object-oriented-approach</link>
+            <guid>https://renoirboulanger.com/blog/2012/07/a-quick-overview-on-the-advantages-to-architect-you-html-in-an-object-oriented-approach</guid>
+            <pubDate>Tue, 24 Jul 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Trying to find templating engine library of markup generating schema.org/RDFa content]]></title>
+            <link>https://renoirboulanger.com/blog/2012/06/trying-to-find-templating-engine-library-of-markup-generating-schema-orgrdfa-content</link>
+            <guid>https://renoirboulanger.com/blog/2012/06/trying-to-find-templating-engine-library-of-markup-generating-schema-orgrdfa-content</guid>
+            <pubDate>Fri, 29 Jun 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to implement a CollectionType Form field with AJAX "add new" embedded form with re-usable markup using Symfony2 and Twitter Bootstrap]]></title>
+            <link>https://renoirboulanger.com/blog/2012/06/how-to-implement-a-collectiontype-form-field-with-ajax-add-new-embedded-form-with-re-usable-markup-using-symfony2-and-twitter-bootstrap</link>
+            <guid>https://renoirboulanger.com/blog/2012/06/how-to-implement-a-collectiontype-form-field-with-ajax-add-new-embedded-form-with-re-usable-markup-using-symfony2-and-twitter-bootstrap</guid>
+            <pubDate>Thu, 21 Jun 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Résumé de mes essais avec composer sous Symfony 2.0.x et un manifeste composer.json pour vos propres tests]]></title>
+            <link>https://renoirboulanger.com/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests</link>
+            <guid>https://renoirboulanger.com/blog/2012/06/resume-de-mes-essais-avec-composer-sous-symfony-2-0-x-et-un-manifeste-composer-json-pour-vos-propres-tests</guid>
+            <pubDate>Mon, 18 Jun 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Confirm form before submitting using Twitter Bootstrap in a Modal window [Snippet]]]></title>
+            <link>https://renoirboulanger.com/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window</link>
+            <guid>https://renoirboulanger.com/blog/2012/05/snippet-confirm-form-before-submitting-using-twitter-bootstrap-in-a-modal-window</guid>
+            <pubDate>Mon, 28 May 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Les diapositives de ma présentation au HTML5Mtl "Comment entretenir et utiliser une architecture modulaire et réutilisable CSS" est publié]]></title>
+            <link>https://renoirboulanger.com/blog/2012/04/les-diapositives-de-ma-presentation-au-html5mtl-comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-css-est-publie</link>
+            <guid>https://renoirboulanger.com/blog/2012/04/les-diapositives-de-ma-presentation-au-html5mtl-comment-entretenir-et-utiliser-une-architecture-modulaire-et-reutilisable-css-est-publie</guid>
+            <pubDate>Sun, 29 Apr 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Feuille de style pour imprimante pour les pages de documentation de Doctrine2 et Symfony2]]></title>
+            <link>https://renoirboulanger.com/blog/2012/04/feuille-de-style-pour-imprimante-pour-les-pages-de-documentation-de-doctrine2-et-symfony2</link>
+            <guid>https://renoirboulanger.com/blog/2012/04/feuille-de-style-pour-imprimante-pour-les-pages-de-documentation-de-doctrine2-et-symfony2</guid>
+            <pubDate>Sat, 07 Apr 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Créer un tunnel SSH inverse pour pouvoir supporter à distance un ami utilisant Linux]]></title>
+            <link>https://renoirboulanger.com/blog/2012/02/creer-un-tunnel-ssh-inverse-pour-pouvoir-supporter-a-distance-un-ami-utilisant-linux</link>
+            <guid>https://renoirboulanger.com/blog/2012/02/creer-un-tunnel-ssh-inverse-pour-pouvoir-supporter-a-distance-un-ami-utilisant-linux</guid>
+            <pubDate>Wed, 29 Feb 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment rapidement accéder aux logs d'un environnement de production symfony 1.x en moins de tapes clavier posible]]></title>
+            <link>https://renoirboulanger.com/blog/2012/02/comment-rapidement-acceder-aux-logs-dun-environnement-de-production-symfony-1-x-en-moins-de-tapes-clavier-posible</link>
+            <guid>https://renoirboulanger.com/blog/2012/02/comment-rapidement-acceder-aux-logs-dun-environnement-de-production-symfony-1-x-en-moins-de-tapes-clavier-posible</guid>
+            <pubDate>Wed, 15 Feb 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mon CV est maintenant en ligne]]></title>
+            <link>https://renoirboulanger.com/blog/2012/02/mon-cv-est-maintenant-en-ligne</link>
+            <guid>https://renoirboulanger.com/blog/2012/02/mon-cv-est-maintenant-en-ligne</guid>
+            <pubDate>Wed, 08 Feb 2012 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment configurer son clavier («keymap») sous Ubuntu Linux en mode terminal seulement]]></title>
+            <link>https://renoirboulanger.com/blog/2010/12/comment-configurer-son-clavier-keymap-sous-ubuntu-linux-en-mode-terminal-seulement</link>
+            <guid>https://renoirboulanger.com/blog/2010/12/comment-configurer-son-clavier-keymap-sous-ubuntu-linux-en-mode-terminal-seulement</guid>
+            <pubDate>Wed, 08 Dec 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation de l’intégration du site de Jean Émond [2008]]]></title>
+            <link>https://renoirboulanger.com/blog/2010/09/realisation-de-lintegration-du-site-de-jean-emond-2008</link>
+            <guid>https://renoirboulanger.com/blog/2010/09/realisation-de-lintegration-du-site-de-jean-emond-2008</guid>
+            <pubDate>Thu, 16 Sep 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation site Manoir Saint-Francis faits avec GéraniumCMS [2007]]]></title>
+            <link>https://renoirboulanger.com/blog/2010/09/realisation-site-manoir-saint-francis-faits-avec-geraniumcms-2007</link>
+            <guid>https://renoirboulanger.com/blog/2010/09/realisation-site-manoir-saint-francis-faits-avec-geraniumcms-2007</guid>
+            <pubDate>Sun, 12 Sep 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[L'appel aux conférenciers pour ConFoo 2011 est lancé!]]></title>
+            <link>https://renoirboulanger.com/blog/2010/09/lappel-aux-conferenciers-pour-confoo-2011-est-lance</link>
+            <guid>https://renoirboulanger.com/blog/2010/09/lappel-aux-conferenciers-pour-confoo-2011-est-lance</guid>
+            <pubDate>Tue, 28 Sep 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bug trouvé et corrigé sur un thème WordPress rtTheme]]></title>
+            <link>https://renoirboulanger.com/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme</link>
+            <guid>https://renoirboulanger.com/blog/2010/07/bug-trouve-et-corrige-sur-un-theme-wordpress-rttheme</guid>
+            <pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installer une Machine Virtuelle Linux roulant dans VMware Fusion sous Mac OS X]]></title>
+            <link>https://renoirboulanger.com/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x</link>
+            <guid>https://renoirboulanger.com/blog/2010/07/installer-une-machine-virtuelle-linux-roulant-dans-vmware-fusion-sous-mac-os-x</guid>
+            <pubDate>Wed, 07 Jul 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lancement de l’annee 2011 pour la conférence ConFoo]]></title>
+            <link>https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo</link>
+            <guid>https://renoirboulanger.com/blog/2010/09/lancement-de-lannee-2011-pour-la-conference-confoo</guid>
+            <pubDate>Wed, 08 Sep 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Retour sur la semaine des logiciels Libres MonDev et de la conférence Make Web Not War 2010]]></title>
+            <link>https://renoirboulanger.com/blog/2010/06/retour-sur-la-semaine-des-logiciels-libres-mondev-et-de-la-conference-make-web-not-war-2010</link>
+            <guid>https://renoirboulanger.com/blog/2010/06/retour-sur-la-semaine-des-logiciels-libres-mondev-et-de-la-conference-make-web-not-war-2010</guid>
+            <pubDate>Tue, 22 Jun 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment remplacer les caract√®res bizzares dans WordPress lorsqu'on a mal fait la conversion]]></title>
+            <link>https://renoirboulanger.com/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion</link>
+            <guid>https://renoirboulanger.com/blog/2010/06/comment-remplacer-les-caracteres-bizzares-dans-wordpress-lorsqu-on-a-mal-fait-la-conversion</guid>
+            <pubDate>Thu, 10 Jun 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Traduction libre de l’article «Why the @&*# is Microsoft doing all this?»]]></title>
+            <link>https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this</link>
+            <guid>https://renoirboulanger.com/blog/2010/05/traduction-libre-de-larticle-why-the-is-microsoft-doing-all-this</guid>
+            <pubDate>Sun, 30 May 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[devLAB Montreal is in the Community Partner Spotlight at Microsoft’s Make Web Not War 2010]]></title>
+            <link>https://renoirboulanger.com/blog/2010/05/article-publie-sur-devlab-community-partner-spotlight-devlab-montreal</link>
+            <guid>https://renoirboulanger.com/blog/2010/05/article-publie-sur-devlab-community-partner-spotlight-devlab-montreal</guid>
+            <pubDate>Wed, 19 May 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mise à jour de l'horaire de la semaine des logiciels libres MonDev du 24-28 Mai prochain]]></title>
+            <link>https://renoirboulanger.com/blog/2010/05/mise-a-jour-de-lhoraire-de-la-semaine-des-logiciels-libres-mondev-du-24-28-mai-prochain</link>
+            <guid>https://renoirboulanger.com/blog/2010/05/mise-a-jour-de-lhoraire-de-la-semaine-des-logiciels-libres-mondev-du-24-28-mai-prochain</guid>
+            <pubDate>Mon, 17 May 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du Micro-site de l'Initiative Environnementale de la Ville de Sherbrooke [2006]]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/realisation-du-micro-site-de-linitiative-environnementale-de-la-ville-de-sherbrooke-2006-2</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/realisation-du-micro-site-de-linitiative-environnementale-de-la-ville-de-sherbrooke-2006-2</guid>
+            <pubDate>Mon, 26 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quelques options de configuration récurentes pour Apache, MySQL et PHP]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/quelques-options-de-configuration-recurentes-pour-apache-mysql-et-php</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/quelques-options-de-configuration-recurentes-pour-apache-mysql-et-php</guid>
+            <pubDate>Thu, 22 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Trois Geeks cherchent un nouveau Loyer sur Montréal]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/trois-geeks-cherchent-un-nouveau-loyer-sur-montreal</guid>
+            <pubDate>Mon, 05 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Script bash pour transférer une base de donnée MySQL d’un serveur à l’autre]]></title>
+            <link>https://renoirboulanger.com/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre</link>
+            <guid>https://renoirboulanger.com/blog/2010/02/script-bash-pour-transferer-une-base-de-donnee-mysql-dun-serveur-a-lautre</guid>
+            <pubDate>Tue, 09 Feb 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation d'une application d'échange de cadeau avec RED L'agence le «club échangiste» [2009]]]></title>
+            <link>https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence</link>
+            <guid>https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence</guid>
+            <pubDate>Wed, 03 Feb 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Procédure pour créer un serveur FTP sécurisé SSL forcé avec usager virtuels sous Ubuntu Linux avec vsFTPd]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/procedure-pour-creer-un-serveur-ftp-securise-ssl-force-avec-usager-virtuels-sous-ubuntu-linux-avec-vsftpd</guid>
+            <pubDate>Fri, 30 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment dire à Apache le mime-type d'un document Office 2007]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/comment-dire-a-apache-le-mime-type-dun-document-office-2007</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/comment-dire-a-apache-le-mime-type-dun-document-office-2007</guid>
+            <pubDate>Wed, 21 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Les différentes versions du service de tâches planifié CRON]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/les-differentes-versions-du-service-de-taches-planifie-cron</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/les-differentes-versions-du-service-de-taches-planifie-cron</guid>
+            <pubDate>Mon, 19 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[La semaine Des logiciels libres à Montréal «MonDev»]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/la-semaine-des-logiciels-libres-a-montreal-mondev</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/la-semaine-des-logiciels-libres-a-montreal-mondev</guid>
+            <pubDate>Thu, 15 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment automatiser une tâche avec CRON en utilisant Vim]]></title>
+            <link>https://renoirboulanger.com/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim</link>
+            <guid>https://renoirboulanger.com/blog/2010/04/comment-automatiser-une-tache-avec-cron-en-utilisant-vim</guid>
+            <pubDate>Wed, 14 Apr 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Crash Course sur les environnements Java]]></title>
+            <link>https://renoirboulanger.com/blog/2010/02/crash-course-sur-les-environnements-java</link>
+            <guid>https://renoirboulanger.com/blog/2010/02/crash-course-sur-les-environnements-java</guid>
+            <pubDate>Thu, 25 Feb 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Plugin MODx pour générer automatiquement les balises ABBR et autres pour chaque page]]></title>
+            <link>https://renoirboulanger.com/blog/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page</link>
+            <guid>https://renoirboulanger.com/blog/2010/02/plugin-modx-pour-generer-automatiquement-les-balises-abbr-et-autres-pour-chaque-page</guid>
+            <pubDate>Fri, 12 Feb 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Revue de fonctions qui sont, selon-moi, idéales a un CMS entre CMS Made Simple et MODx]]></title>
+            <link>https://renoirboulanger.com/blog/2010/01/revue-de-fonctions-qui-sont-selon-moi-ideales-a-un-cms-entre-cms-made-simple-et-modx</link>
+            <guid>https://renoirboulanger.com/blog/2010/01/revue-de-fonctions-qui-sont-selon-moi-ideales-a-un-cms-entre-cms-made-simple-et-modx</guid>
+            <pubDate>Tue, 12 Jan 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le Manifeste "Open Cloud" pour standardiser l'informatique «dans les nuages»]]></title>
+            <link>https://renoirboulanger.com/blog/2010/01/le-manifeste-open-cloud-pour-standardiser-info-nuagique</link>
+            <guid>https://renoirboulanger.com/blog/2010/01/le-manifeste-open-cloud-pour-standardiser-info-nuagique</guid>
+            <pubDate>Sat, 02 Jan 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Comment installer Ruby on Rails sur Ubuntu 10.10]]></title>
+            <link>https://renoirboulanger.com/blog/2011/03/comment-installer-ruby-on-rails-sur-ubuntu-10-10</link>
+            <guid>https://renoirboulanger.com/blog/2011/03/comment-installer-ruby-on-rails-sur-ubuntu-10-10</guid>
+            <pubDate>Fri, 25 Mar 2011 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[devLAB Montréal c'est maintenant parti!]]></title>
+            <link>https://renoirboulanger.com/blog/2011/02/devlab-montreal-cest-maintenant-parti</link>
+            <guid>https://renoirboulanger.com/blog/2011/02/devlab-montreal-cest-maintenant-parti</guid>
+            <pubDate>Tue, 08 Feb 2011 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Êtes-vous victime d’espionnage via votre profil dans les médias sociaux]]></title>
+            <link>https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux</link>
+            <guid>https://renoirboulanger.com/blog/2010/03/etes-vous-victime-despionnage-via-votre-profil-dans-les-medias-sociaux</guid>
+            <pubDate>Mon, 22 Mar 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DevLab Montréal — Introduction de nos événements hebdomadaire pour programmeurs]]></title>
+            <link>https://renoirboulanger.com/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab</link>
+            <guid>https://renoirboulanger.com/blog/2010/03/introduction-de-notre-nouveau-projet-evenement-intitule-devlab</guid>
+            <pubDate>Wed, 17 Mar 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[La première de Ignite Montréal]]></title>
+            <link>https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal</link>
+            <guid>https://renoirboulanger.com/blog/2010/03/la-premiere-de-ignite-montreal</guid>
+            <pubDate>Wed, 03 Mar 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installer PHP 5.3.1 sous Debian et/ou Ubuntu via un repository non officiel]]></title>
+            <link>https://renoirboulanger.com/blog/2010/01/installer-php-5-3-1-sous-debian-et-ubuntu-via-un-repository-non-officiel</link>
+            <guid>https://renoirboulanger.com/blog/2010/01/installer-php-5-3-1-sous-debian-et-ubuntu-via-un-repository-non-officiel</guid>
+            <pubDate>Sat, 09 Jan 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installation d’un paradis du Geek pour trois colocataires, partie 2]]></title>
+            <link>https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-2</link>
+            <guid>https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-2</guid>
+            <pubDate>Sat, 09 Jan 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le Défi «Project52» un billet par semaine (minimum)]]></title>
+            <link>https://renoirboulanger.com/blog/2010/01/le-defi-project52-un-billet-par-semaine</link>
+            <guid>https://renoirboulanger.com/blog/2010/01/le-defi-project52-un-billet-par-semaine</guid>
+            <pubDate>Wed, 06 Jan 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installation d’un paradis du Geek pour trois colocataires, partie 1]]></title>
+            <link>https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1</link>
+            <guid>https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-1</guid>
+            <pubDate>Sun, 03 Jan 2010 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ConFoo c'est dans moins de 14 jours!]]></title>
+            <link>https://renoirboulanger.com/blog/2011/02/confoo-cest-dans-moins-de-14-jours</link>
+            <guid>https://renoirboulanger.com/blog/2011/02/confoo-cest-dans-moins-de-14-jours</guid>
+            <pubDate>Thu, 24 Feb 2011 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ConFoo Web Techno Conferencee 2011 Dévoilement de la grille horraire des présentations]]></title>
+            <link>https://renoirboulanger.com/blog/2011/01/confoo-web-techno-conferencee-2011-devoilement-de-la-grille-horraire-des-presentations</link>
+            <guid>https://renoirboulanger.com/blog/2011/01/confoo-web-techno-conferencee-2011-devoilement-de-la-grille-horraire-des-presentations</guid>
+            <pubDate>Tue, 25 Jan 2011 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation (jamais publiée) du site de Savon des Cantons [2005]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/12/realisation-jamais-publiee-du-site-de-savon-des-cantons-2005</link>
+            <guid>https://renoirboulanger.com/blog/2009/12/realisation-jamais-publiee-du-site-de-savon-des-cantons-2005</guid>
+            <pubDate>Sat, 12 Dec 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site Solutions Affaires experts-conseils [2004]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/12/realisation-du-site-solutions-affaires-experts-conseils-2004</link>
+            <guid>https://renoirboulanger.com/blog/2009/12/realisation-du-site-solutions-affaires-experts-conseils-2004</guid>
+            <pubDate>Fri, 04 Dec 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Joyeux Noël et bonne Annee 2010]]></title>
+            <link>https://renoirboulanger.com/blog/2009/12/joyeux-noel-et-bonne-annee-2010</link>
+            <guid>https://renoirboulanger.com/blog/2009/12/joyeux-noel-et-bonne-annee-2010</guid>
+            <pubDate>Fri, 25 Dec 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le Souper du Mage]]></title>
+            <link>https://renoirboulanger.com/blog/2009/12/le-souper-du-mage</link>
+            <guid>https://renoirboulanger.com/blog/2009/12/le-souper-du-mage</guid>
+            <pubDate>Sat, 19 Dec 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site et de l’Image «branding» de Beebox [2008]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/11/realisation-du-site-et-de-image-produit-de-beebox</link>
+            <guid>https://renoirboulanger.com/blog/2009/11/realisation-du-site-et-de-image-produit-de-beebox</guid>
+            <pubDate>Sat, 28 Nov 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site Musé des Beaux Arts de Sherbrooke [2005]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/11/realisation-du-site-muse-des-beaux-arts-de-sherbrooke-2005</link>
+            <guid>https://renoirboulanger.com/blog/2009/11/realisation-du-site-muse-des-beaux-arts-de-sherbrooke-2005</guid>
+            <pubDate>Tue, 17 Nov 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation de l'Interface logiciel Beebox [2007]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007</link>
+            <guid>https://renoirboulanger.com/blog/2009/11/realisation-de-linterface-logiciel-beebox-2007</guid>
+            <pubDate>Tue, 10 Nov 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Google lance un nouveau protocole pour remplacer http, hello SPDY!]]></title>
+            <link>https://renoirboulanger.com/blog/2009/11/google-lance-un-nouveau-protocole-pour-remplacer-http-hello-spdy</link>
+            <guid>https://renoirboulanger.com/blog/2009/11/google-lance-un-nouveau-protocole-pour-remplacer-http-hello-spdy</guid>
+            <pubDate>Thu, 12 Nov 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site de Remises Réal Lamontagne [2004]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/11/realisation-du-site-de-remises-real-lamontagne-2004</link>
+            <guid>https://renoirboulanger.com/blog/2009/11/realisation-du-site-de-remises-real-lamontagne-2004</guid>
+            <pubDate>Thu, 05 Nov 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site de Câble Axion [2006]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/10/realisation-site-de-cable-axion</link>
+            <guid>https://renoirboulanger.com/blog/2009/10/realisation-site-de-cable-axion</guid>
+            <pubDate>Fri, 30 Oct 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rendre un mot de passe plus difficile à briser]]></title>
+            <link>https://renoirboulanger.com/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser</link>
+            <guid>https://renoirboulanger.com/blog/2009/10/rendre-un-mot-de-passe-plus-difficile-a-briser</guid>
+            <pubDate>Sun, 18 Oct 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site Écurie Royale [2004]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/10/realisation-du-site-ecurie-royale</link>
+            <guid>https://renoirboulanger.com/blog/2009/10/realisation-du-site-ecurie-royale</guid>
+            <pubDate>Wed, 28 Oct 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pensées concernant mon orientation professionnelle]]></title>
+            <link>https://renoirboulanger.com/blog/2009/10/pensees-ecrites-a-voix-haute-pour-mon-orientation-professionnelle</link>
+            <guid>https://renoirboulanger.com/blog/2009/10/pensees-ecrites-a-voix-haute-pour-mon-orientation-professionnelle</guid>
+            <pubDate>Mon, 19 Oct 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nouvelle technologie de la Réalité Augumentée, Les habitants des Pays Bas seront des premiers]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/nouvelle-technologie-de-la-realite-augumentee-les-habitants-des-pays-bas-seront-des-premiers</guid>
+            <pubDate>Wed, 26 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[[VENDU] Mon iPod Touch 16Go avec son kit pour me procurer un iPhone]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/a-vendre-mon-ipod-touch-16go-avec-son-kit-pour-me-procurer-un-iphone</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/a-vendre-mon-ipod-touch-16go-avec-son-kit-pour-me-procurer-un-iphone</guid>
+            <pubDate>Wed, 26 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Devenir Zend Certified Engineer avec PHP5]]></title>
+            <link>https://renoirboulanger.com/blog/2009/09/devenir-zend-certified-engineer-avec-php5</link>
+            <guid>https://renoirboulanger.com/blog/2009/09/devenir-zend-certified-engineer-avec-php5</guid>
+            <pubDate>Tue, 29 Sep 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pourquoi tout ces caract√®res bizzares?]]></title>
+            <link>https://renoirboulanger.com/blog/2009/09/pourquoi-tout-ces-caracteres-bizzares</link>
+            <guid>https://renoirboulanger.com/blog/2009/09/pourquoi-tout-ces-caracteres-bizzares</guid>
+            <pubDate>Sat, 19 Sep 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Je préfère le pingouin! Design cool de Tee-Shirt]]></title>
+            <link>https://renoirboulanger.com/blog/2009/09/je-prefere-le-pingouin-design-cool-de-tee-shirt</link>
+            <guid>https://renoirboulanger.com/blog/2009/09/je-prefere-le-pingouin-design-cool-de-tee-shirt</guid>
+            <pubDate>Mon, 14 Sep 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie III]]></title>
+            <link>https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii</link>
+            <guid>https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-iii</guid>
+            <pubDate>Wed, 09 Sep 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie II]]></title>
+            <link>https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii</link>
+            <guid>https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-ii</guid>
+            <pubDate>Thu, 03 Sep 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une VM Linux qui sert au développement PHP 5.3 avec Eclipse - partie I]]></title>
+            <link>https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i</link>
+            <guid>https://renoirboulanger.com/blog/2009/09/une-vm-linux-qui-sert-au-developpement-php-5-3-avec-eclipse-partie-i</guid>
+            <pubDate>Thu, 03 Sep 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Processus pour régler un problème avec un ordinateur]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/processus-pour-regler-un-probleme-avec-un-ordinateur</guid>
+            <pubDate>Sun, 30 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réduire son empreinte écologique et TheBigAsk]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/reduire-son-empreinte-ecologique-et-aussi-thebigask</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/reduire-son-empreinte-ecologique-et-aussi-thebigask</guid>
+            <pubDate>Fri, 28 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Manipulation des liens extérieurs et les popup pour améliorer l'Accessibilité]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/manipulation-des-liens-exterieurs-et-les-popup-pour-ameliorer-laccessibilite</guid>
+            <pubDate>Sun, 23 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation Gestionnaire de service à la clientèle pour Câble Axion [2006]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/realisationgestionnaire-de-service-a-la-clientele-pour-cable-axion</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/realisationgestionnaire-de-service-a-la-clientele-pour-cable-axion</guid>
+            <pubDate>Thu, 20 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Réalisation du site Web de ma propre agence, Inexis Solution Web [2004]]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/realisation-site-web-inexis-solution-web-2004</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/realisation-site-web-inexis-solution-web-2004</guid>
+            <pubDate>Thu, 20 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Accessibilité et les liens externes]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/accessibilite-et-les-liens-externes</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/accessibilite-et-les-liens-externes</guid>
+            <pubDate>Thu, 20 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Un firewall simple sous Linux avec «Ferm»]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/un-firewall-simple-sous-linux-avec-ferm</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/un-firewall-simple-sous-linux-avec-ferm</guid>
+            <pubDate>Wed, 19 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GeekNight ce soir!]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/geeknight-ce-soir</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/geeknight-ce-soir</guid>
+            <pubDate>Wed, 19 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Conférence de Garr Reynolds atGoogleTalks sur comment présenter ses idées]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/conference-de-garr-reynolds-atgoogletalks-sur-comment-presenter-ses-idees</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/conference-de-garr-reynolds-atgoogletalks-sur-comment-presenter-ses-idees</guid>
+            <pubDate>Tue, 18 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Si la Terre était un village de 100 personnes]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/si-la-terre-etait-un-village-de-100-personnes</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/si-la-terre-etait-un-village-de-100-personnes</guid>
+            <pubDate>Mon, 17 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le "Cloud computing" vulgarisé]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/le-cloud-computing-vulgarise</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/le-cloud-computing-vulgarise</guid>
+            <pubDate>Mon, 17 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Namminik dans le Journal de Montréal]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/namminik-dans-le-journal-de-montreal</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/namminik-dans-le-journal-de-montreal</guid>
+            <pubDate>Fri, 14 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le fondateur de Netscape est en train de développer un navigateur web nouveau genre]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/le-fondateur-de-netscape-est-en-train-de-developper-un-navigateur-web-nouveau-genre</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/le-fondateur-de-netscape-est-en-train-de-developper-un-navigateur-web-nouveau-genre</guid>
+            <pubDate>Fri, 14 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[La cigale et la fourmi version Québecoise]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/la-cigale-et-la-fourmi-version-quebecoise</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/la-cigale-et-la-fourmi-version-quebecoise</guid>
+            <pubDate>Fri, 14 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Faire son inventaire personnel avec Namminik.com]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/faire-son-inventaire-personnel-avec-namminik-com</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/faire-son-inventaire-personnel-avec-namminik-com</guid>
+            <pubDate>Fri, 14 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[À la recherche d'un nouveau défi!]]></title>
+            <link>https://renoirboulanger.com/blog/2009/08/a-la-recherche-dun-nouveau-defi</link>
+            <guid>https://renoirboulanger.com/blog/2009/08/a-la-recherche-dun-nouveau-defi</guid>
+            <pubDate>Wed, 05 Aug 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une petite lecture sur les attaques d’hameçonnage et sur la fraude sur le Web]]></title>
+            <link>https://renoirboulanger.com/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web</link>
+            <guid>https://renoirboulanger.com/blog/2009/07/une-petite-lecture-sur-les-attrapes-nigaud-sur-le-web</guid>
+            <pubDate>Thu, 02 Jul 2009 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Les navigateurs web, programmes de courriels, vous avez le choix!]]></title>
+            <link>https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix</link>
+            <guid>https://renoirboulanger.com/blog/2008/12/les-navigateurs-web-programmes-de-courriels-vous-avez-le-choix</guid>
+            <pubDate>Fri, 05 Dec 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quelques indices pour savoir si un message courriel est une chaîne de lettre]]></title>
+            <link>https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre</link>
+            <guid>https://renoirboulanger.com/blog/2008/12/quelques-indices-pour-savoir-si-un-message-courriel-est-une-chaine-de-lettre</guid>
+            <pubDate>Thu, 04 Dec 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sensibilisation sur les courriels non sollicités]]></title>
+            <link>https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites</link>
+            <guid>https://renoirboulanger.com/blog/2008/12/sensibilisation-sur-les-courriels-non-sollicites</guid>
+            <pubDate>Wed, 03 Dec 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[La publicite du monde celibataire sur Facebook et les fausses representations]]></title>
+            <link>https://renoirboulanger.com/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations</link>
+            <guid>https://renoirboulanger.com/blog/2008/04/la-publicite-du-monde-celibataire-sur-facebook-et-les-fausses-representations</guid>
+            <pubDate>Wed, 30 Apr 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tester le fonctionnement d'un serveur SMTP]]></title>
+            <link>https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp</link>
+            <guid>https://renoirboulanger.com/blog/2008/04/tester-le-fonctionnement-dun-serveur-smtp</guid>
+            <pubDate>Sat, 19 Apr 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Effacer complètement un disque dur de façon sécuritaire]]></title>
+            <link>https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur</link>
+            <guid>https://renoirboulanger.com/blog/2008/04/effacer-un-disque-dur</guid>
+            <pubDate>Wed, 16 Apr 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Jeudi 24 avril 2008 Party de lancement de Hardy Heron an Ubuntu Linux Party au Saint-Sulpice]]></title>
+            <link>https://renoirboulanger.com/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice</link>
+            <guid>https://renoirboulanger.com/blog/2008/04/jeudi-24-avril-2008-party-de-lancement-de-hardy-heron-an-ubuntu-linux-party-au-saint-sulpice</guid>
+            <pubDate>Mon, 14 Apr 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pourquoi le blogue bouge pas?]]></title>
+            <link>https://renoirboulanger.com/blog/2008/04/pourquoi-le-blogue-bouge-pas</link>
+            <guid>https://renoirboulanger.com/blog/2008/04/pourquoi-le-blogue-bouge-pas</guid>
+            <pubDate>Fri, 11 Apr 2008 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installer VMWare sur Ubuntu server avec le repositoire de Canonical]]></title>
+            <link>https://renoirboulanger.com/blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical</link>
+            <guid>https://renoirboulanger.com/blog/2006/12/installer-vmware-sur-ubuntu-server-avec-le-repositoire-de-canonical</guid>
+            <pubDate>Thu, 21 Dec 2006 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une erreur de manipulation qui a coûté]]></title>
+            <link>https://renoirboulanger.com/blog/2006/06/une-erreur-de-manipulation-qui-a-coute</link>
+            <guid>https://renoirboulanger.com/blog/2006/06/une-erreur-de-manipulation-qui-a-coute</guid>
+            <pubDate>Sat, 10 Jun 2006 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mon espace de travail]]></title>
+            <link>https://renoirboulanger.com/blog/2007/11/mon-espace-de-travail</link>
+            <guid>https://renoirboulanger.com/blog/2007/11/mon-espace-de-travail</guid>
+            <pubDate>Mon, 26 Nov 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fait d'usabilité no3, Nous n'essayons pas de comprendre les choses, nous fouillons]]></title>
+            <link>https://renoirboulanger.com/blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons</link>
+            <guid>https://renoirboulanger.com/blog/2007/11/fait-dusabilite-no3-nous-nessayons-pas-de-comprendre-les-choses-nous-fouillons</guid>
+            <pubDate>Fri, 23 Nov 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ajouter de la valeur a un mot de passe, des astuces]]></title>
+            <link>https://renoirboulanger.com/blog/2007/11/ajouter-de-la-valeur-a-un-mot-de-passe-des-astuces</link>
+            <guid>https://renoirboulanger.com/blog/2007/11/ajouter-de-la-valeur-a-un-mot-de-passe-des-astuces</guid>
+            <pubDate>Tue, 20 Nov 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[WalMart vend des ordinateurs a 200$ sous Ubuntu Linux]]></title>
+            <link>https://renoirboulanger.com/blog/2007/11/walmart-vend-des-ordinateurs-a-200-sous-ubuntu-linux</link>
+            <guid>https://renoirboulanger.com/blog/2007/11/walmart-vend-des-ordinateurs-a-200-sous-ubuntu-linux</guid>
+            <pubDate>Fri, 09 Nov 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Un portail québécois qui a eu une mention spéciale Utilisabilité Québec]]></title>
+            <link>https://renoirboulanger.com/blog/2007/11/un-portail-quebecois-qui-a-eu-une-mention-speciale-utilisabilite-quebec</link>
+            <guid>https://renoirboulanger.com/blog/2007/11/un-portail-quebecois-qui-a-eu-une-mention-speciale-utilisabilite-quebec</guid>
+            <pubDate>Wed, 07 Nov 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Idéologie InboxZero]]></title>
+            <link>https://renoirboulanger.com/blog/2007/10/ideologie-inboxzero</link>
+            <guid>https://renoirboulanger.com/blog/2007/10/ideologie-inboxzero</guid>
+            <pubDate>Mon, 15 Oct 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fait d'usabilité no2, Nous ne faisons pas de choix  optimaux. Nous choisisons le premier choix cohérent]]></title>
+            <link>https://renoirboulanger.com/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent</link>
+            <guid>https://renoirboulanger.com/blog/2007/10/fait-dusabilite-no2-nous-ne-faisons-pas-de-choix-optimaux-nous-choisisons-le-premier-choix-coherent</guid>
+            <pubDate>Fri, 12 Oct 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Créer un tunnel SSH avec session distante en Console VMWare]]></title>
+            <link>https://renoirboulanger.com/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware</link>
+            <guid>https://renoirboulanger.com/blog/2007/10/tunnel-ssh-avec-session-distante-en-console-vmware</guid>
+            <pubDate>Wed, 03 Oct 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lorsque gérer un réseau peut rimer avec vigilance plutôt que réparation]]></title>
+            <link>https://renoirboulanger.com/blog/2007/09/lorsque-gerer-un-reseau-peut-rimer-avec-vigilance-plutot-que-reparation</link>
+            <guid>https://renoirboulanger.com/blog/2007/09/lorsque-gerer-un-reseau-peut-rimer-avec-vigilance-plutot-que-reparation</guid>
+            <pubDate>Fri, 28 Sep 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Copier un fichier d'un serveur à l'autre en le compressant pour la route via NetCat et]]></title>
+            <link>https://renoirboulanger.com/blog/2007/09/copier-un-fichier-dun-serveur-a-lautre-en-le-compressant-pour-la-route</link>
+            <guid>https://renoirboulanger.com/blog/2007/09/copier-un-fichier-dun-serveur-a-lautre-en-le-compressant-pour-la-route</guid>
+            <pubDate>Tue, 25 Sep 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quelques blogs que je lis fréquemment]]></title>
+            <link>https://renoirboulanger.com/blog/2007/09/quelques-blogs-que-je-lis-frequemment</link>
+            <guid>https://renoirboulanger.com/blog/2007/09/quelques-blogs-que-je-lis-frequemment</guid>
+            <pubDate>Tue, 18 Sep 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Revue de DON'T MAKE ME THINK]]></title>
+            <link>https://renoirboulanger.com/blog/2007/09/revue-de-dont-make-me-think</link>
+            <guid>https://renoirboulanger.com/blog/2007/09/revue-de-dont-make-me-think</guid>
+            <pubDate>Fri, 07 Sep 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Apple remet du &#8220;sien&#8221; avec son iPod Touch]]></title>
+            <link>https://renoirboulanger.com/blog/2007/09/apple-remet-du-sien-avec-son-ipod-touch</link>
+            <guid>https://renoirboulanger.com/blog/2007/09/apple-remet-du-sien-avec-son-ipod-touch</guid>
+            <pubDate>Thu, 06 Sep 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le film Farenheit 9/11 de Michael More et mes impressions]]></title>
+            <link>https://renoirboulanger.com/blog/2007/08/farenheit-911-et-mes-impressions</link>
+            <guid>https://renoirboulanger.com/blog/2007/08/farenheit-911-et-mes-impressions</guid>
+            <pubDate>Tue, 21 Aug 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Un équivalent plus ouvert du iPhone]]></title>
+            <link>https://renoirboulanger.com/blog/2007/08/un-equivalent-open-du-iphone</link>
+            <guid>https://renoirboulanger.com/blog/2007/08/un-equivalent-open-du-iphone</guid>
+            <pubDate>Tue, 14 Aug 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une boîte qui traîne]]></title>
+            <link>https://renoirboulanger.com/blog/2007/06/une-boite-qui-traine</link>
+            <guid>https://renoirboulanger.com/blog/2007/06/une-boite-qui-traine</guid>
+            <pubDate>Tue, 26 Jun 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Microsoft Internet Explorer 6, une mise-à-jour obligatoire, SVP.]]></title>
+            <link>https://renoirboulanger.com/blog/2007/06/internet-explorer-6-un-upgrade-obligatoire-svp</link>
+            <guid>https://renoirboulanger.com/blog/2007/06/internet-explorer-6-un-upgrade-obligatoire-svp</guid>
+            <pubDate>Tue, 12 Jun 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Montage de dossiers distants via SSHFS]]></title>
+            <link>https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs</link>
+            <guid>https://renoirboulanger.com/blog/2007/05/montage-de-dossiers-distants-via-sshfs</guid>
+            <pubDate>Thu, 31 May 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Conversion et resampling image]]></title>
+            <link>https://renoirboulanger.com/blog/2007/02/conversion-et-resampling-image</link>
+            <guid>https://renoirboulanger.com/blog/2007/02/conversion-et-resampling-image</guid>
+            <pubDate>Wed, 21 Feb 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Transactions carte credit]]></title>
+            <link>https://renoirboulanger.com/blog/2006/07/transactions-carte-credit</link>
+            <guid>https://renoirboulanger.com/blog/2006/07/transactions-carte-credit</guid>
+            <pubDate>Fri, 14 Jul 2006 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Doubler la fiabilité avec un miroir MySQL, un mini-Howto]]></title>
+            <link>https://renoirboulanger.com/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto</link>
+            <guid>https://renoirboulanger.com/blog/2007/06/doubler-la-fiabilite-avec-un-miroir-mysql-un-mini-howto</guid>
+            <pubDate>Thu, 14 Jun 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Critique de roman le DaVinci Code]]></title>
+            <link>https://renoirboulanger.com/blog/2007/06/critique-de-roman-le-davinci-code</link>
+            <guid>https://renoirboulanger.com/blog/2007/06/critique-de-roman-le-davinci-code</guid>
+            <pubDate>Wed, 13 Jun 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Critique de Roman Deception point]]></title>
+            <link>https://renoirboulanger.com/blog/2007/05/critique-de-roman-deception-point</link>
+            <guid>https://renoirboulanger.com/blog/2007/05/critique-de-roman-deception-point</guid>
+            <pubDate>Mon, 28 May 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Invitalisation]]></title>
+            <link>https://renoirboulanger.com/blog/2007/05/invitalisation</link>
+            <guid>https://renoirboulanger.com/blog/2007/05/invitalisation</guid>
+            <pubDate>Sat, 19 May 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Critique de Roman Forteresse Digitale]]></title>
+            <link>https://renoirboulanger.com/blog/2007/05/critique-de-roman-forteresse-digitale</link>
+            <guid>https://renoirboulanger.com/blog/2007/05/critique-de-roman-forteresse-digitale</guid>
+            <pubDate>Sat, 12 May 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Période de tests]]></title>
+            <link>https://renoirboulanger.com/blog/2007/04/periode-de-tests</link>
+            <guid>https://renoirboulanger.com/blog/2007/04/periode-de-tests</guid>
+            <pubDate>Wed, 25 Apr 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Une machine virtuelle Gentoo]]></title>
+            <link>https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo</link>
+            <guid>https://renoirboulanger.com/blog/2007/02/une-machine-virtuelle-gentoo</guid>
+            <pubDate>Sat, 10 Feb 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Login SSH sans mot de passe]]></title>
+            <link>https://renoirboulanger.com/blog/2007/04/login-ssh-sans-mot-de-passe</link>
+            <guid>https://renoirboulanger.com/blog/2007/04/login-ssh-sans-mot-de-passe</guid>
+            <pubDate>Tue, 10 Apr 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Le futur du PC]]></title>
+            <link>https://renoirboulanger.com/blog/2007/01/le-futur-du-pc</link>
+            <guid>https://renoirboulanger.com/blog/2007/01/le-futur-du-pc</guid>
+            <pubDate>Thu, 25 Jan 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installation RHEL4 sur un Dell PowerEdge 860]]></title>
+            <link>https://renoirboulanger.com/blog/2007/04/installation-rhel4-sur-un-dell-poweredge-860</link>
+            <guid>https://renoirboulanger.com/blog/2007/04/installation-rhel4-sur-un-dell-poweredge-860</guid>
+            <pubDate>Mon, 16 Apr 2007 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Detection de langue en PHP]]></title>
+            <link>https://renoirboulanger.com/blog/2005/12/detection-langue</link>
+            <guid>https://renoirboulanger.com/blog/2005/12/detection-langue</guid>
+            <pubDate>Thu, 22 Dec 2005 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Journée blanche d’inquiétudes]]></title>
+            <link>https://renoirboulanger.com/blog/2005/09/journee-blanche-d-inquietudes</link>
+            <guid>https://renoirboulanger.com/blog/2005/09/journee-blanche-d-inquietudes</guid>
+            <pubDate>Fri, 23 Sep 2005 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Redondance des serveurs : stratégie pour améliorer la résilience des sites web]]></title>
+            <link>https://renoirboulanger.com/blog/2005/09/redondance</link>
+            <guid>https://renoirboulanger.com/blog/2005/09/redondance</guid>
+            <pubDate>Wed, 21 Sep 2005 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Premier billet]]></title>
+            <link>https://renoirboulanger.com/blog/2005/09/first-post</link>
+            <guid>https://renoirboulanger.com/blog/2005/09/first-post</guid>
+            <pubDate>Fri, 16 Sep 2005 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[HTTP Caching basics]]></title>
+            <link>https://renoirboulanger.com/code-review/http-caching-basics</link>
+            <guid>https://renoirboulanger.com/code-review/http-caching-basics</guid>
+            <pubDate>Wed, 06 Apr 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[We should not forget await]]></title>
+            <link>https://renoirboulanger.com/code-review/we-should-not-forget-await</link>
+            <guid>https://renoirboulanger.com/code-review/we-should-not-forget-await</guid>
+            <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using read-only array of strings as source for type]]></title>
+            <link>https://renoirboulanger.com/code-review/using-read-only-array-of-strings-as-source-for-type</link>
+            <guid>https://renoirboulanger.com/code-review/using-read-only-array-of-strings-as-source-for-type</guid>
+            <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mocking the DOM during tests]]></title>
+            <link>https://renoirboulanger.com/code-review/mocking-the-dom-during-tests</link>
+            <guid>https://renoirboulanger.com/code-review/mocking-the-dom-during-tests</guid>
+            <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Progressive Enhancement and/or Graceful Degradation]]></title>
+            <link>https://renoirboulanger.com/glossary/progressive-enhancement</link>
+            <guid>https://renoirboulanger.com/glossary/progressive-enhancement</guid>
+            <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

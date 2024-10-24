@@ -1,0 +1,127 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="en-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22en-CA%22%7D%7D">
+  <head>
+    <title>How to run your own OAuth Identity provider service - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords-idp-oauth-autho" name="keywords" content="IdP, OAuth, Authorization, TLS"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><link rel="preload" href="/_nuxt/runtime.js" as="script"><link rel="preload" href="/_nuxt/commons/app.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/vendors/app.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/app.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/pages/blog.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1729799378/blog/2015/04/run-oauth-identity-provider-service/state.js" as="script"><link rel="preload" href="/_nuxt/static/1729799378/blog/2015/04/run-oauth-identity-provider-service/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-cf57f860 data-v-2b2f37b3><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-cf57f860><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-cf57f860><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-cf57f860><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-cf57f860><path d="M4 6h16M4 12h16M4 18h16" data-v-cf57f860></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-cf57f860>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-cf57f860><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-cf57f860><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-2b2f37b3>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-2b2f37b3>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-cf57f860><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-cf57f860><a href="/" class="identity__text nuxt-link-active" data-v-cf57f860>Renoir Boulanger</a></div> <div data-v-cf57f860><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-cf57f860><span class="mr-2" data-v-cf57f860>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-ede238bc><ol class="list-none p-0 inline-flex" data-v-ede238bc><li class="flex items-center" data-v-ede238bc><a href="/blog" class="nuxt-link-active" data-v-ede238bc>blog</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2015" class="nuxt-link-active" data-v-ede238bc>2015</a></li><li class="flex items-center" data-v-ede238bc><a href="/blog/2015/04" class="nuxt-link-active" data-v-ede238bc>04</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div q=""><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-79a168f2><div data-v-79a168f2><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-79a168f2 data-v-79a168f2><!----> <!----> <div class="nuxt-content" data-v-79a168f2><p data-v-79a168f2>All infrastructure related to WebPlatform Docs is shut down since 2016.
+Mentions about SSO and <abbr lang="en" title="open authorization" data-v-79a168f2>OAuth</abbr> is still (2020) accessible from the archived <a href="https://webplatform.github.io/docs/WPD/Projects/SSO/" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2><code data-v-79a168f2>webplatform.github.io/docs/WPD/Projects/SSO</code> wiki pages</a>.</p></div></rb-notice-box></div> <div class="document document--item z-30" data-v-79a168f2><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-79a168f2><h1 data-v-79a168f2>How to run your own <abbr lang="en" title="open authorization">OAuth</abbr> Identity provider service</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-79a168f2><time datetime="2015-04-13" data-v-79a168f2>
+        Monday, April 13, 2015
+      </time> <a href="https://renoirboulanger.com/blog/2015/04/run-oauth-identity-provider-service/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-79a168f2>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-79a168f2><strong id="tags__231" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__231" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/webplatform" class="no-underline">webplatform</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/security" class="no-underline">security</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/experiments" class="no-underline">📁 experiments</a></li></ul></div> <div class="body mt-10" data-v-79a168f2><figure class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1 app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/03/Oauth_logo.png" alt="" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/03/Oauth_logo.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> <div class="nuxt-content" data-v-33ff8cb7 data-v-79a168f2><p data-v-33ff8cb7 data-v-79a168f2><a href="https://oauth.net/" rel="nofollow noopener noreferrer" target="_blank" data-v-33ff8cb7 data-v-79a168f2>OAuth logo</a>, see also <a href="https://oauth.net/2/" rel="nofollow noopener noreferrer" target="_blank" data-v-33ff8cb7 data-v-79a168f2>its current <strong data-v-33ff8cb7 data-v-79a168f2>Specification</strong> document</a></p></div></figcaption></figure> <div class="nuxt-content" data-v-79a168f2 data-v-79a168f2><p data-v-79a168f2 data-v-79a168f2>Generally, we connect our application against a provider so it can share details
+about a user. Most of the documentation you'll find online explains how to use
+their service, but very few outlines concisely how it is if you want to be your
+own provider and share state across applications you also manage.</p>
+<p data-v-79a168f2 data-v-79a168f2>Documentation would generally allow your third party app to let users use their
+information from another site such as <a href="https://developers.facebook.com/docs/facebook-login/v2.3" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>Facebook</a>, <a href="https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>GitHub</a>, <a href="https://dev.twitter.com/oauth" rel="nofollow noopener noreferrer" target="_blank" data-v-79a168f2 data-v-79a168f2>Twitter</a>,
+etc.</p>
+<p data-v-79a168f2 data-v-79a168f2>But what if you wanted to share information across your web applications in a
+similar way?</p>
+<p data-v-79a168f2 data-v-79a168f2>This post is a quick summary of how things works so you can get acquainted with
+the basics.</p>
+<h2 id="whitelist" data-v-79a168f2 data-v-79a168f2><a href="#whitelist" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Whitelist</h2>
+<p data-v-79a168f2 data-v-79a168f2>Big sites aren't generally one big code repository but a set of separate
+components. A way to make each component to share your account details is most
+possibly by making a difference between their own infrastructure and third
+parties.</p>
+<p data-v-79a168f2 data-v-79a168f2>If your app were to use an external resource such as Google, the process would
+end up making Google users to be asked if they really want to share their
+information with you. This is why they would get a dialog similar to this.</p>
+<p data-v-79a168f2 data-v-79a168f2>While its OK to ask confirmation from a user if he wants to share his details
+with an external site, in the case of two components from the same site can
+share this information transparently.</p>
+<figure class="app-image is-loading has-image" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/oauth_tutorial_authorization_sample.png" alt="OAuth confirmation modal with Google logo. Asking: My project is requesting permission to: Manage your calendars, manage your documents." data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/02/oauth_tutorial_authorization_sample.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7> </span> 
+<p data-v-33ff8cb7 data-v-79a168f2>Looking at this OAuth dialog, I can't help but feel a bit uneasy. Sure, it looks clean and official, but I'm noticing how many apps are asking for more access than they seem to need. What bugs me is we can't pick and choose - it's all or nothing. I've got this nagging feeling that companies might use this to grab as much data as they can about us, building detailed profiles along the way. With how quickly this is catching on, it's starting to feel like a ticking time bomb for our personal info. Maybe I'm overthinking it, but something about this just doesn't sit right with me.</p>
+</figcaption></figure>
+<p data-v-79a168f2 data-v-79a168f2>If you are your own Identity Provider, you can configure your relying parties as
+"whitelisted" so that your accounts system don't display such dialog.</p>
+<h2 id="becoming-your-own-identity-provider" data-v-79a168f2 data-v-79a168f2><a href="#becoming-your-own-identity-provider" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Becoming your own Identity provider</h2>
+<p data-v-79a168f2 data-v-79a168f2>In the case of <a href="/blog/tag/webplatform-docs" data-v-79a168f2>WebPlatform.org</a> we wanted to become our own Identity
+provider and found that we could deploy our own fork of <em data-v-79a168f2 data-v-79a168f2>Firefox Accounts</em>
+("FxA") would allow us to do so.</p>
+<p data-v-79a168f2 data-v-79a168f2>The way its designed is that we have an OAuth protected "profile" endpoint that
+holds user details (email, full name, etc) as a "source of truth". Each relying
+party (your own wiki, discussion forum, etc) gathers information from and ensure
+it has the same information locally.</p>
+<p data-v-79a168f2 data-v-79a168f2>In order to do so, we have to make a module/plugin for each web application so
+we it can query and bootstrap users locally based on the accounts system. We
+call those "relying parties".</p>
+<p data-v-79a168f2 data-v-79a168f2>Once we have relying party adapter in place, a web app will have the ability to
+check by itself with the
+<em data-v-79a168f2 data-v-79a168f2>accounts server</em> 
+to see if there's a session for
+the current browsing session. If it has, it'll give either an already generated
+OAuth Bearer token, or generate one for the one for the service in question —
+the "SSO" behavior.</p>
+<p data-v-79a168f2 data-v-79a168f2>With the OAuth Bearer token in hand, a relying party (i.e. the
+<del data-v-79a168f2 data-v-79a168f2><strong data-v-79a168f2 data-v-79a168f2>WebPlatform.org</strong> annotation service</del>) can go read details from the
+"profile" endpoint and then check locally if it already has a user available.</p>
+<figure class="app-image is-loading has-image" style="float:unset" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/04/2014-12-16-notes-server-SSO.png" alt="WebPlatform Notes A Specification annotation tool" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/04/2014-12-16-notes-server-SSO.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7>The WebPlatform Notes specification annotation tool.</span> 
+<p data-v-33ff8cb7 data-v-79a168f2>It was one of the last parts added to the <strong data-v-33ff8cb7 data-v-79a168f2>WebPlatform</strong> project and was
+designed to support adding annotations to specifications and to <em data-v-33ff8cb7 data-v-79a168f2>leverage a
+Single-Sign-On</em> between other parts of the site.</p>
+<p data-v-33ff8cb7 data-v-79a168f2>Unfortunately the project never released the feature to the public before
+closing.</p>
+<p data-v-33ff8cb7 data-v-79a168f2>But <a href="https://youtu.be/KKeh9C4SMnw" rel="nofollow noopener noreferrer" target="_blank" data-v-33ff8cb7 data-v-79a168f2>I’ve made a YouTube video of its integration while I was building
+it</a>. The <a href="https://webplatform.github.io/docs/WPD/Projects/SSO/" rel="nofollow noopener noreferrer" target="_blank" data-v-33ff8cb7 data-v-79a168f2>notes about it are available in the archived
+wiki</a></p>
+</figcaption></figure>
+<p data-v-79a168f2 data-v-79a168f2>If the relying party doesn't have a user, it'll create one.</p>
+<figure class="app-image is-loading has-image" style="float:unset" data-v-33ff8cb7 data-v-79a168f2><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2015/04/2014-12-16-notes-server-SSO-13.33.38.png" alt="Terminal session issuing HTTP call using cURL" data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2015/04/2014-12-16-notes-server-SSO-13.33.38.png" class="object-cover w-full rounded" data-v-33ff8cb7> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-33ff8cb7><span class="figcaption-contents" data-v-33ff8cb7>With appropriate <abbr lang="en" title="Hyper Text Transfer Protocol">HTTP</abbr> headers for current <abbr lang="en" title="open authorization">OAuth</abbr> bearer token, requesting data to a profile server and giving current user’s data.</span> 
+</figcaption></figure>
+<p data-v-79a168f2 data-v-79a168f2>Each relying party is responsible to sync its local user and session state based
+on what the accounts service gives.</p>
+<h2 id="seeing-in-action" data-v-79a168f2 data-v-79a168f2><a href="#seeing-in-action" aria-hidden="true" tabindex="-1" data-v-79a168f2 data-v-79a168f2><span class="icon icon-link" data-v-79a168f2 data-v-79a168f2></span></a>Seeing in action</h2>
+<p data-v-79a168f2 data-v-79a168f2>Here is a recording I made showing how it looked like;</p>
+<iframe width="560" height="560" src="https://www.youtube.com/embed/KKeh9C4SMnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-v-79a168f2 data-v-79a168f2></iframe></div> <div class="clearfix" data-v-79a168f2></div></div> <div class="text-md grid grid-cols-2 my-10" style="display:none" data-v-4d2003f9 data-v-79a168f2><div class="text-left" data-v-4d2003f9><a href="/blog/2015/04/upgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package" lang="en-CA" class="hover:underline item-prev" data-v-4d2003f9>
+      Upgrade to Python 2.7.9 on Ubuntu 14.04 LTS and make your own .deb package for deployment
+    </a></div> <div class="text-right" data-v-4d2003f9><a href="/blog/2015/04/setting-discourse-fastly-cdn-provider-ssl" lang="en-CA" class="hover:underline item-next" data-v-4d2003f9>
+      Setting up Discourse with Fastly as a CDN provider and TLS
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-7116e49f><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-7116e49f><dl class="contact items-item disposition-item" data-v-7116e49f><dt class="mb-4 font-serif text-2xl" data-v-7116e49f><a href="/contact" class="underline" data-v-7116e49f>Contact</a></dt> <dd data-v-7116e49f>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-7116e49f>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-7116e49f><span id="why-fou-de-la-pouitte" class="sr-only" data-v-7116e49f>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://mastodon.social/@renoirb" data-v-7116e49f>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-7116e49f><a rel="me" href="https://w3c.social/@renoirb" data-v-7116e49f>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-7116e49f>v4.0.0-dev</dd> <span class="inline-flex" data-v-7116e49f><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-7116e49f><dl lang="fr-CA" class="see-also" data-v-7116e49f><dt data-v-7116e49f>Voir aussi…</dt> <dd data-v-7116e49f><a href="/ligne-editoriale" data-v-7116e49f> Ligne éditoriale </a></dd> <dd data-v-7116e49f><a href="/projects" data-v-7116e49f> Projets </a></dd> <dd data-v-7116e49f><a href="/glossary" lang="en" data-v-7116e49f> Glossary </a></dd> <dd data-v-7116e49f><a href="/code-review" lang="en" data-v-7116e49f>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1729799378/blog/2015/04/run-oauth-identity-provider-service/state.js"></script><script src="/_nuxt/runtime.js" defer></script><script src="/_nuxt/pages/blog.js" defer></script><script src="/_nuxt/pages/blog/_year.js" defer></script><script src="/_nuxt/pages/blog/_year/_month.js" defer></script><script src="/_nuxt/pages/blog/_year/_month/_slug.js" defer></script><script src="/_nuxt/commons/app.js" defer></script><script src="/_nuxt/vendors/app.js" defer></script><script src="/_nuxt/app.js" defer></script><script data-n-head="ssr" type="module" vmid="load-esm-modules-separately-please" data-body="true" defer>
+/**
+ * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+ */
+import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+try {
+  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+} catch (e) {
+  // #XXX FIX ME because this gets loaded
+  console.log('Already loaded', e)
+}
+        </script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1729799378",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2015\u002F04\u002Fupgrade-python-2-7-9-ubuntu-14-04-lts-making-deb-package",config:{content:{dbHash:"1927e629"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

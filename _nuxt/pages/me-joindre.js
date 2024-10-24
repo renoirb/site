@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[40],{350:function(e,t,n){"use strict";n.r(t);var c=n(1),r=n(11),o=c.a.extend({head:function(){return Object(r.o)({redirect:"/contact"})}}),l=n(6),component=Object(l.a)(o,(function(){var e=this.$createElement;return(this._self._c||e)("div")}),[],!1,null,null,null);t.default=component.exports}}]);

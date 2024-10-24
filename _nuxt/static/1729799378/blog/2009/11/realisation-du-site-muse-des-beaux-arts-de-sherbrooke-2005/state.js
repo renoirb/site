@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1729799378",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2009\u002F11\u002Frealisation-du-site-muse-des-beaux-arts-de-sherbrooke-2005",config:{content:{dbHash:"1927e629"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

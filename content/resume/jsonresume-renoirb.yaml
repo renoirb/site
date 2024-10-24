@@ -1,0 +1,971 @@
+---
+meta:
+  theme: elegant
+  lastModified: 2024-10-24T12:22:00
+  canonical: http://registry.jsonresume.org/renoirb
+  alternate: https//renoirb.github.io/site/resume
+  source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
+  _source: https://github.com/renoirb/site/blob/2020/content/resume/jsonresume-renoirb.yaml
+
+basics:
+  name: Renoir Boulanger
+  label: Expert in Front-End Ops, UI Libraries who crafts accessible web experiences with precision
+  image: &image 'https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?size=420'
+  picture: *image
+  email: hello@renoirboulanger.com
+  url: &url https://renoirboulanger.com
+  website: *url
+  summary: |
+    Deep technical expert in the Open Web Platform, crafting framework-agnostic solutions through native
+    browser capabilities and Web Standards.
+    Full-stack developer with comprehensive depth - from  kernel-level system tracing through
+    JavaScript framework internals to precise CSS implementations.
+    Approaches solutions with systematic analysis across all layers, emphasizing longevity through
+    standards-based patterns over framework-specific features.
+    Ensures thoughtful attention to visual details, accessibility, and internationalization to
+    support diverse user needs across languages and cultures.
+    Creates verifiable solutions through test-driven development (TDD), detailed technical
+    specifications, and systematic package management.
+    Demonstrates expertise in high-performance web server infrastructure and frontend implementations,
+    maintaining careful consideration for speed, visual consistency, and adaptability.
+  location:
+    city: Montréal
+    region: Quebec
+    countryCode: CA
+  profiles:
+    - network: LinkedIn
+      username: renoirb
+      url: https://linkedin.com/in/renoirb
+    - network: Twitter
+      username: renoirb
+      url: https://x.com/renoirb
+    - network: GitHub
+      username: renoirb
+      url: https://github.com/renoirb
+    - network: GitLab
+      username: renoirb
+      url: https://gitlab.com/renoirb
+  highlights:
+    - 'Polyglot programmer implementing precise solutions in TypeScript, ECMAScript, JavaScript, PHP, Bash, GNU Make, C#, Python'
+    - 'Experience in Infrastructure As Code with Salt Stack, Vagrant, Ansible, Puppet'
+    - 'Technical contributor to open-source projects with publicly available implementations: Nuxt.js documentation, Alpine Linux package maintenance, MediaWiki compatibility tables, and Mozilla Firefox Accounts'
+    - 'Developed and documented reusable technical solutions like type-safe bitmask operations in JavaScript, Salt Stack infrastructure states, and automated MediaWiki content conversion tools'
+    - 'Architected documented hosting infrastructure for high-visibility sites including W3C’s WebPlatform Docs project https://webplatform.github.io/ and The World Wide Web’s 25th anniversary site https://www.w3.org/webat25/'
+    - 'Deep expertise in Cloud IaaS, Containers, and continuous deployment systems with emphasis on reproducible builds and consistent environments'
+
+work:
+  - name: &name Full-time parenting
+    company: *name
+    position: Father
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    startDate: 2022-06-01
+    endDate: 2024-09-01
+    url: &url 'https://renoirboulanger.com/blog/'
+    website: *url
+    summary: Full-time caregiver for children.
+
+  - name: &name GoTo Inc.
+    company: *name
+    position: Staff Software Developer
+    location: Montréal, QC, Canada
+    remote: true
+    contract: false
+    startDate: '2021-01-11'
+    endDate: '2022-05-01'
+    url: &url https://www.GoTo.com/
+    website: *url
+    description:
+      Powered by category-defining products like GoTo Connect, GoTo Meeting,
+      GoTo Webinar, LastPass, and more.
+      With tens of millions of active users, more than 3,500 global employees,
+      over $1.3 billion in annual revenue and approximately 2 million customers
+      in over 190 countries.
+    summary: >
+      Contributed to an established micro-frontend architecture based on Web Components and lit-element,
+      helping teams leverage its framework-agnostic foundations.
+      Provided technical guidance on native Web Platform capabilities, demonstrating how to maintain
+      accessibility and performance while integrating with React, and other frameworks.
+      Created documentation and working examples showing how to effectively use the existing component
+      system across different technology stacks.
+    highlights:
+      - Contributed architectural improvements to the Application Shell infrastructure, enabling seamless
+        integration of diverse product experiences
+      - Helped development teams understand and effectively utilize the Web Components architecture,
+        ensuring consistent implementation across different framework contexts
+      - Built and documented integration patterns demonstrating how to properly implement new features
+        within the established component system
+      - Developed examples and test suites validating accessibility and internationalization implementation
+        within the architecture
+    contributions:
+      - name: lit-labs/context Web Components “Context API” Protocol
+        url: https://github.com/lit/lit/pull/2012
+    technologies:
+      - Accessibility
+      - CodeceptJS
+      - ECMAScript
+      - HTML/CSS
+      - Jest
+      - lit-html
+      - microsoft/fast
+      - Node.js
+      - Playwright
+      - TypeScript
+      - WCAG
+
+  - name: &name RBC Royal Bank of Canada Inc.
+    company: *name
+    position: Senior Full Stack Developer
+    location: Montréal, QC, Canada
+    remote: true
+    contract: false
+    startDate: '2020-03-01'
+    endDate: '2020-12-18'
+    url: &url https://www.rbcroyalbank.com
+    website: *url
+    description:
+      Royal Bank of Canada is Canada’s largest bank, and one of the largest
+      banks in the world, based on market capitalization. We have over 80,000
+      full and part-time employees who serve more than 16 million personal,
+      business, public sector and institutional clients through offices in
+      Canada, the U.S. and 37 other countries.
+    summary:
+      At RBC, I served as a Senior Full-Stack Developer, leading the
+      implementation of scalable modules for the RBC Omni platform (Online
+      Business Banking). I collaborated closely with cross-functional teams to
+      deliver solutions aligned with business objectives. Noteworthy
+      achievements include streamlining developer onboarding processes and
+      enhancing legacy systems for improved performance and reliability.
+    highlights:
+      - Make implementation proposals driven by the requirements and agenda set
+        by product owners and business analysts.
+      - Build scalable and reusable modules by collaborating with other
+        production teams, including the design system/platform team.
+      - Rewritten new developer onboarding documentation and completely
+        automated how to properly setup the current password to be used properly
+        through Git and other scripting, including the Bank’s authoritative
+        self-signed certificate that would cause many headaches.
+    highlights.more:
+      - Re-Implement and improve link manager to legacy application system. So
+        that the HTML templates contains a “Link Id”, and how it dynamically
+        creates an hidden form and properly redirects to legacy HTML views.
+      - Revise and make migration strategies for my Squad’s Angular monorepo to
+        use Jest and ESLint 7 along with Prettier with automated LintStaged
+        commit hooks.
+      - Implement advanced Angular data-driven patterns to guide my colleagues
+        away from filling HTML templates and instead use classes to provide
+        data. Including how to rewrite forms using FormGroups instead of
+        template
+      - Make module stubs for the Backend chapter to write Express.js middleware
+        in isolation instead of from a monolith
+      - Written extensive onboarding documentation taking into account how to
+        properly and automatically adjust developer tools at every password
+        change. Avoiding popular “Ignore this error” and rather use corporate
+        signed TLS certificate right
+    technologies:
+      - Angular
+      - HTML/CSS
+      - JavaScript
+      - Jest
+      - Node.js
+      - TypeScript
+      - WCAG
+
+  - name: &name CGI Inc.
+    company: *name
+    position: Senior Technical Consultant (Lead Frontend)
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    hidden: false
+    startDate: '2017-05-01'
+    endDate: '2020-02-28'
+    url: &url https://www.cgi.com/en
+    website: *url
+    description:
+      CGI Inc. (NYSE GIB), provides information technology (IT) and business
+      process services in Canada, Europe, the United States, and the Asia
+      Pacific. Its services include the management of IT and business
+      outsourcing, systems integration and consulting, and software solutions
+      selling activities.
+    summary:
+      As a Senior Technical Consultant, I led the development of Unify360, a
+      Multi-Cloud Management Platform. Leveraging microservices architecture and
+      atomic design principles, I orchestrated the design and implementation of
+      a robust frontend solution deployed across multiple regions. My role
+      involved extensive experimentation with modern technologies and mentoring
+      team members to foster a culture of innovation.
+    highlights:
+      - Experiment and document Frontend software development platform
+        technological choices
+      - Lead the team that work and coach for writing code with tests, making
+        self-contained and re-usable packages
+    highlights.more:
+      - Implement prototype for a modern Unify360 Frontend using Vue.js,
+        Nuxt.js, TypeScript, GraphQL, Koa.js and planned how to migrate all
+        views into new platform effectively replacing code written in Perl and
+        PHP 5.3, and also replacing HTML partial Microservice;
+      - Research and Technical Requirements Analysis for modernizing Unify360 UI
+        layer. Made comparison between React, Angular, Vue.js and different UI
+        Component Libraries such as Google Material Design, Element UI, Quasar;
+      - Design and implement an HTML partial Microservice with PHP 7.2, Slim
+        framework, Mustache PECL extension for a new section of Unify360 portal;
+    technologies:
+      - Alpine Linux
+      - AVA
+      - Docker
+      - Docker Swarm
+      - GitLab
+      - HTML/CSS
+      - JavaScript
+      - Jest
+      - Koa.js
+      - Node.js
+      - Nuxt.js
+      - Perl
+      - PHP 7.2
+      - RushJS
+      - Slim Framework
+      - Sonatype Nexus
+      - TypeScript
+      - Vagrant
+      - Vue.js
+    contributions:
+      - name: egoist/bili
+        url: https://github.com/egoist/bili/commits/master?author=renoirb
+      - name: nuxt.js/docs
+        url: https://github.com/nuxt/docs/issues?utf8=%E2%9C%93&q=author%3Arenoirb
+      - name: alpinelinux/aports
+        url: https://github.com/alpinelinux/aports/pulls?utf8=%E2%9C%93&q=author%3Arenoirb
+      - name: clarkdo/hare
+        url: https://github.com/clarkdo/hare/issues?q=author%3Arenoirb
+      - name: composer/composer
+        url: https://github.com/composer/composer/issues?utf8=%E2%9C%93&q=author%3Arenoirb
+      - name: graph-gophers/graphql-go
+        url: https://github.com/graph-gophers/graphql-go/issues/151
+      - name: vue-i18n
+        url: https://github.com/renoirb/issue-506-vue-i18n
+
+  - name: &name AlayaCare
+    company: *name
+    position: Senior Software Developer
+    remote: false
+    contract: false
+    url: &url https://www.alayacare.com
+    website: *url
+    hidden: false
+    startDate: '2016-11-07'
+    endDate: '2017-05-01'
+    summary:
+      During my tenure at AlayaCare, I focused on optimizing Docker Compose
+      builds and enhancing team productivity through streamlined workspace
+      setups. I led initiatives to automate development environment
+      configurations, reducing setup time from days to hours. My efforts
+      significantly improved collaboration and efficiency across the software
+      development team.
+    highlights:
+      - Overhaul of the Software development team’s workspace setup, which
+        allowed anyone to have exactly the same setup by invoking a few simple
+        commands. A fresh computer would be ready after 1h instead of taking
+        multiple days and asking around to other colleagues.
+    technologies:
+      - GNU Make
+      - Ansible
+      - Docker Compose
+      - Docker
+
+  - name: Colloquial/Betastream via 6973051 Canada Inc. (remote)
+    client: &client Colloquial / Betastream
+    company: *client
+    position: Systems Delivery Blueprinting Specialist (remote)
+    remote: true
+    contract: true
+    url: &url http://colloquial.com/
+    website: *url
+    hidden: false
+    startDate: '2016-01-01'
+    endDate: '2016-06-17'
+    description:
+      The J. Walter Thompson Company (JWT) has teamed up with Group SJR, a unit
+      of Hill+Knowlton Strategies, to launch a new content marketing unit called
+      Colloquial. Headquartered at JWT’s New York office, Colloquial is primed
+      to be the “the intersection of advertising, publishing and public
+      relations, with storytelling and creativity at its core.”
+    summary:
+      I designed and implemented robust cloud orchestration solutions, automating
+      deployment processes across multiple cloud platforms.
+    highlights:
+      - Introduce and coach the team Continuous Delivery and Code release, and
+        deployment system.
+      - Plan, Review, and Build a next-generation infrastructure and deployment
+        system for the project production pipeline.
+    highlights.more:
+      - Released a Cloud Orchestration solution using Salt Stack, running on
+        Amazon AWS, Google Cloud Platform and Microsoft Azure, where we can
+        manage automatically Web Applications, deployment levels, build steps
+        and dependencies consistently;
+      - Introduced HashiCorp Vagrant workflow to automatically manage Web
+        Developer’s PHP setup using VirtualBox and Canonical Ubuntu Linux 16.04
+        LTS. By doing so, every developer got the same Web Server setup as in
+        production;
+      - Introduced automated packaging for every WordPress projects, by
+        leveraging Composer’s archive feature. The automated build process would
+        first pull all dependencies, run code-quality linters, and if
+        successful, create a Zip archive. By merging on master on Bitbucket
+        would generate an archive, and the continuous-delivery system make all
+        web server nodes to download the archive, extract its contents in a
+        folder. Deploying a release would be changing the “live” symbolic to the
+        newly extracted package;
+      - Introduced advanced Varnish caching with Fastly. Created HashiCorp
+        Vagrant workspace network (e.g. one Web Server VM, one Database server,
+        one Varnish VM) to allow working on Varnish VCL caching scripts.
+    technologies:
+      - AWS
+      - Azure
+      - CloudFlare
+      - EC2
+      - GCP
+      - Jenkins
+      - Monit
+      - Python
+      - RDS
+      - SaltStack
+      - SysDig
+      - Vagrant
+      - Varnish
+      - WordPress
+
+  - name: CAE via 6973051 Canada Inc.
+    client: &client CAE
+    company: *client
+    position: Systems Delivery Blueprinting Specialist
+    location: Montréal, QC, Canada
+    remote: false
+    contract: true
+    url: &url https://www.cae.com/
+    website: *url
+    hidden: false
+    startDate: '2016-03-01'
+    endDate: '2016-06-01'
+    description:
+      CAE is a global leader in training for the civil aviation, defence and
+      security, and healthcare markets. Backed by a record of more than 70 years
+      of industry firsts, we continue to help define global training standards
+      with our innovative virtual-to-live training solutions to make flying
+      safer.
+    summary:
+      At CAE, I provided expert guidance on continuous delivery and code release
+      strategies, contributing to the evaluation and implementation of real-time
+      monitoring solutions. I collaborated with cross-functional teams to assess
+      and recommend open-source tools, ensuring compliance with stringent
+      security requirements. My initiatives facilitated seamless deployment and
+      monitoring of critical systems.
+    highlights:
+      - Introduce and coach the team Continuous Delivery and Code release, and
+        deployment system. Including techniques for preparing “playbooks”
+        packages for deployment within the airtight (securized) private network.
+      - Compared Prometheus, Heka, Ganglia, Grafana, Kibana, and other
+        TimeSeries aggregation and visualization systems. The ideal system had
+        to take into account the airtight networking policies which included
+        corporate TLS certificate, and deployment targets would often be
+        inaccessible to the Internet.
+    highlights.more:
+      - Introduced a method to maintain network of Virtual Machines with
+        HashiCorp Vagrant leveraging VirtualBox private networking
+      - Proposed a configuration management using Bash 4 so that current system
+        administrators could use a language they already know.
+    technologies:
+      - Beats
+      - ElasticSearch Kibana
+      - Ganglia
+      - Grafana
+      - Heka
+      - InfluxDB Telegraf
+      - LibreSSL
+      - LogStash
+      - Monit
+      - Mozilla Heka
+      - Prometheus
+      - Bash
+      - Vagrant
+
+  - name: Mozilla via 6973051 Canada Inc. (remote)
+    client: &client Mozilla
+    company: *client
+    position: Subject Matter Expert Compatibility Data Project
+    remote: true
+    contract: true
+    url: &url https://developer.mozilla.org
+    website: *url
+    hidden: false
+    startDate: '2015-08-01'
+    endDate: '2016-01-01'
+    description:
+      Mozilla is a global, nonprofit organization dedicated to making the Web
+      better. We emphasize principle over profit and believe that the Web is a
+      shared public resource to be cared for, not a commodity to be sold. We
+      work with a worldwide community to create open source products like
+      Mozilla Firefox, and to innovate for the benefit of the individual and the
+      betterment of the Web.
+    summary:
+      As a Subject Matter Expert on the Compatibility Data Project at Mozilla, I
+      spearheaded software architecture discussions and collaborated with
+      stakeholders to define project requirements. My contributions included
+      developing innovative solutions for data visualization and storage,
+      enabling developers to access accurate compatibility information across
+      various web browsers.
+    highlights:
+      - Communicate with various stakeholders about the requirements and
+        features for the system.
+    highlights.more:
+      - Created a client-side DataTable rendering system with Vanilla JavaScript
+      - Prototyped a file-based Compatibility data storage
+
+  - name: W3C/MIT via 6973051 Canada Inc. (remote)
+    client: &client W3C/MIT
+    company: *client
+    position: Developer Operations Engineer
+    remote: true
+    contract: true
+    url: &url https://www.w3.org/staff/alumni/#renoir-boulanger
+    website: *url
+    hidden: false
+    startDate: '2013-08-01'
+    endDate: '2015-08-01'
+    description:
+      The World Wide Web Consortium (W3C) is an international community where
+      Member organizations, a full-time staff, and the public work together to
+      develop Web standards. Led by Web inventor and Director Tim Berners-Lee
+      and CEO Jeffrey Jaffe, W3C’s mission is to lead the Web to its full
+      potential.
+    summary:
+      At W3C/MIT, I played a key role in maintaining and enhancing the
+      WebPlatform Docs project, overseeing infrastructure stability and feature
+      development. I implemented robust monitoring solutions and streamlined
+      deployment processes, ensuring optimal performance and reliability. My
+      efforts contributed to the project's success in becoming a premier
+      resource for web developers worldwide.
+    highlights:
+      - Convert and preserve many hundred thousand edits, and keep trace of the
+        content edition contributors and date of the change from MediaWiki into
+        Static site generators and Git (2015)
+      - Improved Infrastructure deployment code so that any service could be
+        rebuilt systematically (2015)
+      - Designed and Implemented Single Sign-On solution using OAuth2 (2014)
+    highlights.more:
+      - Implemented a self-healing monitoring (2015)
+      - Designed and built a Web Browser feature compatibility table system for
+        documentation pages (2014)
+      - Migrated the infrastructure to different providers along with
+        Operating-System upgrades (2013, 2015)
+    contributions:
+      - name: webplatform/ops
+        url: https://github.com/webplatform/ops
+      - name: renoirb/salt-basesystem
+        url: https://github.com/renoirb/salt-basesystem
+      - name: webplatform/salt-states
+        url: https://github.com/webplatform/salt-states
+      - name: renoirb/mediawiki-conversion
+        url: https://github.com/renoirb/mediawiki-conversion
+      - name: webplatform/content-converter
+        url: https://github.com/webplatform/content-converter
+      - name: webplatform.github.io/docs/WPD/Projects/SSO
+        url: https://webplatform.github.io/docs/WPD/Projects/SSO/
+      - name: webplatform.github.io/docs/WPD/Projects/CompaTables
+        url: https://webplatform.github.io/docs/WPD/Projects/CompaTables/
+    technologies:
+      - Backbone.js
+      - Bower
+      - Discourse
+      - DNS Bind
+      - Docker
+      - ElasticSearch
+      - Express.js
+      - Fastly
+      - Gerrit
+      - Gulp
+      - HTML/CSS
+      - Hypothes.is
+      - JavaScript
+      - MediaWiki
+      - Memcached
+      - Monit
+      - MySQL
+      - NGINX
+      - Node.js
+      - OpenStack Nova, Cinder, Horizon, Swift
+      - PHP
+      - Python
+      - Redis
+      - Salt Stack
+      - SASS
+      - Vagrant
+      - WordPress
+
+  - name: Ericsson via 6973051 Canada Inc.
+    client: &client Ericsson
+    company: *client
+    position: Web Developer
+    location: Montréal, QC, Canada
+    remote: false
+    contract: true
+    url: &url https://www.ericsson.com/en
+    website: *url
+    hidden: false
+    startDate: '2012-02-01'
+    endDate: '2013-06-01'
+    description: ''
+    summary:
+      As a Web Developer at Ericsson, I led the development of a web-based
+      virtualization provisioning portal, enabling users to initiate virtual
+      machines across geographically dispersed data centers. My role involved
+      architecting and implementing innovative solutions using cutting-edge
+      technologies, driving improvements in scalability and performance.
+    highlights:
+      - Architect, build and lead a Web-based “Virtualization provisioning”
+        portal.
+    technologies:
+      - Git
+      - HTML/CSS
+      - JavaScript
+      - jQuery
+      - LESSCSS
+      - MySQL
+      - OpenStack Grizzly
+      - PHP
+      - Puppet
+      - Symfony 2
+      - Twitter Bootstrap
+      - Vagrant
+      - VMWare ESXi
+
+  - name: &name Evocatio Solutions technologiques Inc.
+    company: *name
+    position: Senior Web Developer, Co-Founder
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    hidden: false
+    startDate: '2010-01-01'
+    endDate: '2012-03-01'
+    description:
+      Co-founded Evocatio Solutions technologies Inc. with two old friends. Our
+      partnership lasted 2 years and at the peak we had 10 employees on our
+      payroll, some of our work won prizes in local industry competitions and
+      other projects got deployed in cities around the globe. The company worked
+      on projects namely for the French-Canadian Artist Union (UDA), Astral
+      Media, Equisoft, Quebec’s professional farmers’ union (UPA), Rolls-Royce
+      and Rogers Media.
+    summary:
+      As Senior Web Developer and Co-Founder of Evocatio Solutions, I led web
+      development projects for prestigious clients, including UDA and Astral
+      Media. My responsibilities encompassed architecting frontend solutions,
+      collaborating with graphic designers, and optimizing web applications for
+      performance and usability. Notable achievements include spearheading major
+      website rewrites and implementing advanced e-mail delivery systems.
+    highlights:
+      - Lead and architect all Web Development work related to the FrontEnd
+        layer of the stack.
+      - In touch with Graphic Designers and Project Managers to create valid
+        HTML/CSS markup that reflects the designs, and to work on all Web
+        Browsers of the moment.
+      - Take Adobe Photoshop and PDFs document and create HTML/CSS Static style
+        guides (minimal JavaScript, no back-end) to create CSS pattern
+        libraries.
+    highlights.more:
+      - Participated in a major Web site rewrite for UDA.ca from .NET into PHP
+        with Symfony1.x, responsible of two search-engine modules and HTML/CSS
+        patterns libraries (2010-2012)
+      - Created complex e-mail delivery systems to handle bounces at the server
+        level and participated in the creation of a Web-based frontend (2011)
+      - Created an early ”Offline first” HTML5 news reader for iPad (2010)
+      - Participated in building and maintaining a major public-facing Web
+        application that had been deployed in many cities around the globe
+        (2010-2012)
+    technologies:
+      - Apache Solr
+      - Bower
+      - Compass
+      - EJS
+      - Git
+      - Grunt
+      - HTML/CSS
+      - JavaScript
+      - jQuery
+      - LESSCSS
+      - MySQL
+      - Node.js
+      - PHP
+      - SASS
+      - Subversion
+      - symfony 1.x
+      - Symfony 2
+      - Tiki Wiki CMS/Groupware
+      - Twitter Bootstrap
+      - Vagrant
+      - VMWare ESXi
+      - WordPress
+      - Yeoman
+
+  - name: &name Groupe Informatique TechSolCom Inc.
+    company: *name
+    position: Web Developer
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    url: &url http://techsolcom.ca
+    website: *url
+    hidden: false
+    startDate: '2006-10-01'
+    endDate: '2009-08-01'
+    description:
+      Groupe Informatique TechSolCom Inc. had been merged into R3D Conseil Inc.
+      R3D Conseil Inc is located in Montréal, QC, Canada and is part of the
+      Consulting Services Industry. R3D Conseil Inc has 320 total employees
+      across all of its locations and generates 62.21 million in sales (USD).
+      There are 6 companies in the R3D Conseil Inc corporate family.
+    summary:
+      During my tenure at Groupe Informatique TechSolCom Inc., I played a
+      pivotal role in maintaining the company's web presence and contributing to
+      internal R&D projects. I led the front-end development aspect of a proprietary CI server
+      web application and participated in building inventory management systems.
+      My contributions enhanced operational efficiency and scalability across
+      various projects.
+    highlights:
+      - Maintain the company corporate image on the web, maintain their Web
+        site, and participate in projects run internally as a Web developer on
+        R&D projects.
+      - Participated in maintaining company internal network, testing DataPower
+        blade, Virtualized servers on bare metal, and web hosting
+        infrastructure.
+      - Participated in building a proprietary CI server Web Application
+        (“Beebox”) for IBM WebSphere that was intended to be a competitor to
+        Jenkins and Cruise Control of the time. (2007-2009)
+      - Contributed to Inventory management application (“Namminik”) as an
+        internal R&D experiments to make a Web Application also have its native
+        iOS client. (2009)
+    highlights.more:
+      - Contributed to many projects as Frontend Developer
+      - Built a monitoring service using the SNMP protocol, centralized syslog
+        server, and configured a Nagios monitoring service (2009)
+    technologies:
+      - Ant
+      - Apache Tomcat
+      - Bind
+      - CVS
+      - Debian GNU/Linux
+      - HTML/CSS
+      - IBM WebSphere DataPower
+      - JavaScript
+      - jQuery
+      - Maven2
+      - MooTools
+      - Nagios
+      - RedHat Enterprise Linux
+      - SNMP
+      - Subversion
+      - WCAG
+      - XML/XSL/XSLT
+      - YUI 2
+
+  - name: &name Câble Axion Digitel
+    company: *name
+    position: Web Developer
+    location: Magog, QC, Canada
+    remote: false
+    contract: false
+    url: &url http://www.axion.ca/acc/accueil.php?lang=fr
+    website: *url
+    hidden: true
+    startDate: '2005-10-01'
+    endDate: '2006-11-01'
+    description:
+      Câble Axion is a cable service provider. Their network coverage goes from
+      Montreal South Shore, follows the US borders, and go up until the “Beauce”
+      area in the province of Quebec. The towns in between the Eastern-
+      Townships and Québec City.
+    summary:
+      My role was to rewrite the corporate website, maintain internal
+      applications and answer to level-2 support calls from subscribers.
+    highlights: []
+    technologies:
+      - PHP
+      - HTML/CSS
+      - Microsoft Access
+      - MySQL
+      - Sun OS (Solaris)
+      - CentOS GNU/Linux
+      - Subversion
+
+  - name: &name INEXIS Solution web Inc.
+    company: *name
+    location: Sherbrooke, QC, Canada
+    remote: false
+    contract: false
+    position: Web Developer, Owner
+    hidden: true
+    startDate: '2002-02-01'
+    endDate: '2006-11-01'
+    description: ''
+    summary:
+      INEXIS Solution web Inc., was a one-man web development service provider
+      firm I founded to serve graphic design agencies in the region of the
+      Eastern Townships. Services included managing own private Web hosting
+      infrastructure and building HTML/CSS pages based on PDF files provided by
+      graphic designers, creating e-mail templates.
+    highlights: []
+    technologies:
+      - PHP
+      - HTML/CSS
+      - MySQL
+      - Qmail
+      - Red-Hat GNU/Linux
+      - CentOS GNU/Linux
+      - Subversion
+
+education:
+  - institution: Université de Sherbrooke, CeFTI
+    area: Software Engineering
+    studyType: 2nd Cycle Program Diploma
+    startDate: '2021-01-01'
+    endDate: '2024-06-24'
+    courses:
+      - INF731 - Object-Oriented Programming in C#
+      - INF743 - Software Architecture
+      - INF747 - Designing and managing Enterprise Information Systems
+  - institution: Udemy
+    area: Web Development
+    studyType: Online Training
+    startDate: '2019-07-01'
+    courses:
+      - Nuxt.js - Vue.js on Steroids
+      - Understanding TypeScript
+  - institution: EggHead.io
+    area: Web Development
+    studyType: Online Training
+    startDate: '2019-07-01'
+    url: https://egghead.io
+    courses:
+      - Use Types Effectively in TypeScript
+      - Up and Running with TypeScript
+      - Get Started with ElasticSearch
+      - Build a Server Rendered Vue.js App with Nuxt and Vuex
+  - institution: VueMastery
+    area: Web Development
+    studyType: Online Training
+    startDate: '2019-05-01'
+    url: https://www.vuemastery.com/courses/
+    courses:
+      - Real World Vue.js
+      - Mastering Vuex
+      - Next-Level Vue
+      - Scaling Vue with Nuxt.js
+      - Advanced Components
+  - institution: Pearson Vue
+    area: Software development
+    studyType: Certification
+    startDate: '2013-07-01'
+    endDate: '2013-07-01'
+    url: https://www.zend.com/en/yellow-pages/ZEND011184
+    courses:
+      - Zend Certified Engineer PHP 5.3
+  - institution: McGill University
+    area: Continuing Studies
+    studyType: Course
+    startDate: '2012-09-01'
+    endDate: '2013-12-01'
+    courses:
+      - CEEN-421-761 - English in Written Communication Contexts
+      - CMSC-000-781 - Foundations of Mathematics
+      - CMSC-101-771 - College Algebra and Functions
+  - institution: University of Montreal
+    area: Continuing Studies
+    studyType: Course
+    startDate: '2008-02-01'
+    endDate: '2008-07-01'
+    courses:
+      - Web Accessibility (WCAG 1) at the Nazareth & Louis Braille institute
+  - institution: IBM
+    area: Software development
+    studyType: Certification
+    startDate: '2007-07-01'
+    endDate: '2007-07-01'
+    courses:
+      - IBM WebSphere DataPower SOA Appliance
+  - institution: Canadian Armed Forces
+    area: Army Communication and Information Systems Specialist
+    studyType: Millitary Career
+    startDate: '1997-07-01'
+    endDate: '2000-01-01'
+    courses:
+      - Basic training at Royal Military College Saint-Jean
+      - Private (Basic), assigned to Sherbrooke 714th Communication Squadron
+      - Wired and wireless communication and information systems (Introductory
+        training)
+      - Winter warfare training
+
+awards:
+  - title: Grenier D’Or — Agence RED/Evocatio
+    date: '2010-01-01'
+    awarder: Grenier Aux Nouvelles
+    summary:
+      Agence RED and Evocatio Solutions technologiques Inc. created an online
+      game as a corporate Holiday Card sent to its business partners. Each
+      participants would receive a post card on which a 4 character code would
+      give them access to their currently assigned gift. Each participant could
+      steal another participant’s gift to a maximum of 9 times until a specific
+      date at midnight, Montréal time.
+
+publications:
+  - name:
+      Santachè, A. “Mobile development using web technologies focusing on games”
+    publisher: ACM
+    locale: en-CA
+    type: Paper
+    releaseDate: '2013-11-01'
+    url: &url https://doi.org/10.1145/2526188.2528541
+    website: *url
+    isbn: '978-1-4503-2559-2'
+    authors:
+      - Santachè, A.
+      - Boulanger, R.
+      - Viana, G.
+      - Panaggio, R.
+      - Melo, B.
+      - Aboud, H.
+    summary:
+      Participated in chapters related to “Markup architecture”, “Events” and
+      “Web Storage”
+
+  - name: Kumar, J. “Apache Solr PHP Integration”
+    publisher: Pakt Publishing
+    locale: en-CA
+    type: Book Review
+    releaseDate: '2013-10-01'
+    url: &url https://www.packtpub.com/product/apache-solr-php-integration/9781782164920
+    website: *url
+    isbn: '9781782164920'
+    summary: Book review
+
+  - name:
+      « Techniques pour déployer WordPress de façon consistante et les rendre
+      résilients »
+    publisher: WordCamp Montréal 2016
+    locale: fr-CA
+    type: Talk
+    releaseDate: '2016-07-01'
+    url: &url http://renoirb.com/talks/2016-Techniques-pour-deployer-WordPress-de-facon-consistante-et-le-rendre-resilient/
+    website: *url
+    video: https://wordpress.tv/2016/12/09/renoir-boulanger-techniques-pour-deployer-wordpress-de-facon-consistante-et-les-rendre-resilients/
+    summary: Talk given at WordCamp Montréal 2016
+
+  - name: “Packaging for easier redeployment”
+    publisher: DevOps Montréal
+    locale: en-CA
+    type: Talk
+    releaseDate: '2015-10-01'
+    url: &url http://renoirb.com/talks/Achieve-consistent-deployments-leveraging-packaging/
+    website: *url
+    summary: Presented at two events, DevOps Montréal, PHP Québec.
+
+  - name:
+      « Comment évaluer le niveau de qualité d’un site web selon les techniques
+      d’intégration web d’actualité. »
+    publisher: Web à Québec 2013
+    locale: fr-CA
+    type: Talk
+    releaseDate: '2013-10-01'
+    url: &url http://2013.webaquebec.org/#/horaire/vendredi/evaluer-la-qualite-dun-site-selon-les-techniques-dintegration-64.html
+    website: *url
+    summary: |
+      Presented at two conferences; « Montreal WebIn », and « Web à Québec » (WAQ)
+
+skills:
+  - name: Programming
+    keywords:
+      - PHP
+      - C#
+      - VCL
+      - Bash
+      - Python
+  - name: Web Development Languages
+    level: Master
+    keywords:
+      - TypeScript
+      - JavaScript
+      - ECMAScript
+      - HTML/CSS
+  - name: PHP Frameworks
+    keywords:
+      - Symfony
+      - Slim
+      - Composer/Packagist
+  - name: Frontend Frameworks
+    keywords:
+      - Nuxt.js
+      - Vue.js
+      - Koa.js
+      - Element UI
+      - Backbone.js
+      - Marionette.js
+      - Angular
+  - name: Web Development Libraries
+    level: Master
+    keywords:
+      - Rollup
+      - Bili
+      - Rush.js
+  - name: Frontend Testing Frameworks
+    keywords:
+      - Jest
+      - CodeceptJS
+      - Playwright
+      - AVA
+      - Mocha
+      - Jasmine
+  - name: Web Platform
+    level: Master
+    keywords:
+      - Accessibility
+      - Adaptative
+      - Bundling
+      - Deployment
+      - HTML/CSS Architecture
+      - Polyfills
+      - Promises
+      - Responsive
+      - Transpilation
+  - name: Web Operations
+    level: Master
+    keywords:
+      - Configuration Management
+      - Docker Swarm
+      - Dockerflow
+      - ElasticSearch
+      - Node.js
+      - Prometheus
+      - Redis
+      - Salt Stack
+      - Self-Healing event handlers
+      - Service Monitoring
+      - Varnish
+
+languages:
+  - language: Français
+    fluency: Native speaker
+  - language: English
+    fluency: Second language
+
+interests:
+  - name: Web Platform
+    keywords:
+      - Performance
+      - Protocols
+      - Web Standards
+  - name: Systems Engineering
+    keywords:
+      - Tracing
+      - Distributed computing
+      - Load-Balancing
+      - Fault tolerance

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Error</title>
+  <style>
+    ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+    ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+    html { padding: 30px 10px; font-size: 20px; line-height: 1.4; color: #737373; background: #f0f0f0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    html, input { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    body { max-width: 500px; _width: 500px; margin: 10% auto; /* padding: 30px 20px 50px; border: 1px solid #b3b3b3; border-radius: 4px; box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff; background: #fcfcfc; */ }
+    h1 { font-family: 'Ubuntu', sans-serif; /* margin: 0 10px; */ font-size: 5em; text-align: center; }
+    h1 span { color: #bbb; }
+    h3 { margin: 1.5em 0 0.5em; }
+    p { margin: 1em 0; }
+    ul { padding: 0 0 0 40px; margin: 1em 0; }
+    .container { max-width: 80%; _width: 380px; margin: 0 auto; }
+    #title { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 title="The sweaty face I make when I see an error">
+      <span aria-hidden>(ಠ益ಠ)’</span>
+    </h1>
+  </div>
+  <script type="module">
+    /**
+     * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+     */
+    import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+    import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+    registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+  </script>
+</body>
+</html>
