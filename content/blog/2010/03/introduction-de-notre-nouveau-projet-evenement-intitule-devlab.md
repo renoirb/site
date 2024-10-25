@@ -94,7 +94,7 @@ Un nouveau software de comptabilité open-source
 Le projet ne sera pas lancé tout de suite mais nous sommes en train de monter
 les alliances pour permettre ce type d’événement d’une façon récurrente.
 
-(NDLR: événements récurrents ont cessés vers 2012)
+<rb-content-edit type="ins" date="2024-10-25">(Les événements récurrents ont cessés vers 2012)</rb-content-edit>
 
 ### Première sortie publique
 
@@ -112,8 +112,12 @@ ici est de partager nos connaissances et de créer un événement par des
 développeurs pour des développeurs qui désirent apprendre et partager leur
 connaissances.
 
-Nous allons vous tenir au courrant sur Twitter et sur cette page de l’évolution
-du projet.
+<rb-content-edit type="del" date="2024-10-25">
+Nous allons vous tenir au courrant sur Twitter et sur cette page de l’évolution du projet.
+<span slot="comment">
+Il n’y a pas vraiment eu d’annoncement
+</span>
+</rb-content-edit>
 
 
 [1]: /blog/tag/geeknight

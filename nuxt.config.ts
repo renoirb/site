@@ -85,24 +85,11 @@ const main: NuxtConfig = {
     script: [
       // <script src="https://myawesome-lib.js"></script>
       // { src: 'https://awesome-lib.js' },
+      // https://vue-meta.nuxtjs.org/api/#script
       {
+        src: './main.mjs',
         type: 'module',
-        vmid: 'load-esm-modules-separately-please',
-        body: true,
         defer: true,
-        innerHTML: `
-/**
- * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
- */
-import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
-import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
-try {
-  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
-} catch (e) {
-  // #XXX FIX ME because this gets loaded
-  console.log('Already loaded', e)
-}
-        `,
       },
     ],
     __dangerouslyDisableSanitizers: [

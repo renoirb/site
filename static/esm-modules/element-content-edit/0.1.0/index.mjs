@@ -13,6 +13,58 @@ const classNameMap = new Map([
   ['tooltipVisible', 'opacity-100 visible translate-y-0'],
 ])
 
+
+const FALLBACK_TAILIND_DEPENDENCY = '<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">'
+/**
+ * Tailwind has many CSS variables, but none has its name in it. So we need to check for a specific one.
+ */
+const TAILWIND_CSS_CUSTOM_PROPERTY = '--color-primary'
+
+
+/**
+ * Check the current host document for a CSS variable that is set by TailwindCSS
+ *
+ * @example
+ * ```js
+ * window.getComputedStyle(document.body).getPropertyValue('--color-primary')
+ * ```
+ *
+ * Bookmarks:
+ * - https://broken-links.com/2014/08/28/css-variables-updating-custom-properties-javascript/
+ *
+ * @param {Document} hostDocument
+ * @returns {string}
+ */
+const checkDependencyExistence = (hostDocument) => {
+  let hasTailindEmptyCssVar = ''
+  let out = ''
+  try {
+    const maybe = hostDocument.defaultView.getComputedStyle(hostDocument.body).getPropertyValue(TAILWIND_CSS_CUSTOM_PROPERTY)
+    hasTailindEmptyCssVar = maybe
+  } catch (_e) {
+    // Ok
+  }
+  /**
+   * This is meant to check for existence for a CSS variable that's used by Tailwind.
+   *
+   * But after 2h finagling around, when not adding Tailwind dependency, despite the fact that it's
+   * there, the component doesn't style.
+   *
+   * So we'll probably have to load all the host document's link[rel=stylesheet] into this shadow DOM.
+   *
+   * rel=#75
+   *
+   * https://github.com/renoirb/site/issues/75
+   *
+   */
+  hasTailindEmptyCssVar = '' // For now, we'll just force it to load the fallback.
+  if (hasTailindEmptyCssVar === '') {
+    out = FALLBACK_TAILIND_DEPENDENCY
+  }
+
+  return out
+}
+
 class ContentEdit extends HTMLElement {
   constructor() {
     super()
@@ -22,12 +74,21 @@ class ContentEdit extends HTMLElement {
     this.showTimeout = null
     this.hideTimeout = null
     this.lastShowTime = 0
+    this.maybeCssDependency = ''
   }
 
   connectedCallback() {
-    const type = this.getAttribute('type') || 'ins'
+    this.maybeCssDependency = checkDependencyExistence(this.ownerDocument)
+
+    let type = this.getAttribute('type') || 'ins'
     const date = this.getAttribute('date')
     const hasComment = this.querySelector('[slot="comment"]')
+
+    if (type !== 'ins' && type !== 'del') {
+      type = 'ins'
+      const message = `For <${this.tagName.toLowerCase} type="..."> element, only "ins" and "del" are supported, defaulting to "ins".`
+      console.warn(message)
+    }
 
     const mainContent = document.createElement('span')
     mainContent.innerHTML = this.innerHTML
@@ -74,7 +135,7 @@ class ContentEdit extends HTMLElement {
     }
 
     this.shadowRoot.innerHTML = `
-            <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+            ${this.maybeCssDependency}
             ${html}
         `
 

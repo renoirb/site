@@ -39,4 +39,4 @@ L'exemple de droite explique souvent comment nous <u><strong><em>Aimerions</em><
 J'ai l'intention de donner quelques trucs que l'<a href="https://sensible.com/about/" title="Steve Krug" target="_blank">auteur</a> a plaçé dans son ouvrage.  Étant un ouvrage en anglais, je prendrai soin de traduire pour que tous puissent en profiter.
 
 Pour ceux qui ont la chance de comprendre l'anglais, ça vaut la peine de se le procurer!
-<!--#TODO-inline-edit--> Il y a probablement aussi une version en Français.
+<rb-content-edit type="ins" date="2024-10-10">Il y a probablement aussi une version en Français.</rb-content-edit>
