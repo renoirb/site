@@ -13,6 +13,7 @@ categories:
   - tranche-de-vie
 tags:
   - geeknight
+  - entrepreneurial-life
 keywords:
   - devlab
   - montreal
@@ -24,7 +25,7 @@ webarchiveSnapshots:
   snapshots:
   - https://web.archive.org/web/20100309195343/http://www.webnotwar.ca/ftw/
 coverImage:
-  src: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
+  src: ~/assets/content/blog/2010/03/devlab.png
   alt: devLabMtl.org
   text: |
     Dev Lab Montréal, un «Lab» d’expérimentation pour partager et
@@ -36,17 +37,17 @@ preamble:
     Ces événements récurrents ont cessés vers 2012. Ils auront duré
     entre 2010-2012.
     J’y ai rencontré de bons amis et bonnes conaissances avec qui je garde de beaux souvenirs.
-    Voici ce à quoi le site ressemblait sur [**DevLabMtl.org** en 2011 via Le *Web Archive*](https://web.archive.org/web/20110814135755/http://devlabmtl.org/).
+    Voici ce à quoi le site ressemblait sur [**devLABMtl.org** en 2011 via Le *Web Archive*](https://web.archive.org/web/20110814135755/http://devlabmtl.org/).
 ---
 
 Moi et mes partenaires d’affaires des [GeekNights][1] (_Stéphan Champagne_,
 _Etienne Lachance_) planifions un projet qu’on a baptisé
-<em lang="en">devLab</em> Montréal.
+<em lang="en">devLAB</em> Montréal.
 
 <!--#TODO-inline-edit probablement ajouter lien vers page décrivant Evocatio etc. -->
 
 Nos [GeekNights][1] étaient bien plaisants a nous trois mais nous voulons
-partager avec d’autres passionnés. C’est l’origine de l’idée du <em lang="en">devLab</em>.
+partager avec d’autres passionnés. C’est l’origine de l’idée du <em lang="en">devLAB</em>.
 
 Nous avons choisi le nom «Lab», parce que l’idée est d’augmenter ses capacités
 avec des gens expérimentés et de partager lors d’une soirée ou une fin de
@@ -101,7 +102,7 @@ les alliances pour permettre ce type d’événement d’une façon récurrente.
 <app-image figcaption="MonDev Open Source Week Montreal" alt="MonDev: Montreal Developer community" src="~/assets/content/blog/2010/03/mondev_logo.jpg">
 </app-image>
 
-Nous serons présents lors de la première de ~~MonDev~~ et nous participerons
+Nous serons présents lors de la première de *MonDev* et nous participerons
 aussi à la compétition «[For the Web coding competition][webnotwar-ftw]» sponsorisé par
 Microsoft Canada. Venez nous voir!
 

@@ -11,16 +11,14 @@ migrateImages: true
 gallery: false
 caption: false
 categories:
-  - tranche-de-vie
-tags:
-  - accessibility
   - events
+tags:
   - html
   - linux
   - php
   - virtualisation
-  - vulgarisation
   - web
+  - entrepreneurial-life
 webarchiveSnapshots:
   - key: devlabmtl
     orig: http://devlabmtl.org/
@@ -51,7 +49,7 @@ webarchiveSnapshots:
   - key: facebook-page
     orig: http://www.facebook.com/devlabmtl
 coverImage:
-  src: ~/assets/content/blog/2010/03/devLAB_LogoURL_Coul_small.png
+  src: ~/assets/content/blog/2010/03/devlab.png
   alt: devLabMtl.org
   text: |
     Dev Lab Montréal, un «Lab» d’expérimentation pour partager et

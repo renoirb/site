@@ -9,7 +9,8 @@ status: publish
 revising: true
 categories:
   - tranche-de-vie
-tags: []
+tags:
+  - entrepreneurial-life
 coverImage:
   src: ~/assets/content/blog/2010/01/IMG_0325-225x300.jpg
   srcset:

@@ -7,8 +7,9 @@ canonical: >-
   https://renoirboulanger.com/blog/2010/01/installation-dun-paradis-du-geek-pour-trois-colocataires-partie-2/
 status: publish
 revising: true
-tags: []
 categories: []
+tags:
+  - entrepreneurial-life
 coverImage:
   src: ~/assets/content/blog/2010/01/geek_cartoon.jpg
   alt: |

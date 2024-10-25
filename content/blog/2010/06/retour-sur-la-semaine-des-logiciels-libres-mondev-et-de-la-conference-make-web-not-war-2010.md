@@ -12,8 +12,10 @@ revising: true
 migrateLinks: true
 migrateImages: true
 gallery: true
-categories: []
-tags: []
+categories:
+  - events
+tags:
+  - entrepreneurial-life
 coverImage:
   src: ~/assets/content/blog/2010/05/Codefest.jpg
   alt: Des gens de PHP Québec et devLAB Montréal sur la même table

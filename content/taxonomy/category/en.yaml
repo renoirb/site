@@ -19,6 +19,12 @@ human:
     description: |
       Projects I’ve worked on
 
+  - key: snippet
+    text: Snippets
+    description: |
+      Bits of code I’ve written after long research, but had eventually to undo and doesn't want to lose them.
+      Mainly those where I had to dig into the documentation and want to keep them in memory.
+
   - key: tranche-de-vie
     text: Sharing about my life
     description: |

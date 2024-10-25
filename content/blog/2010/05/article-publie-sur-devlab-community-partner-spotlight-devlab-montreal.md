@@ -16,8 +16,8 @@ categories:
   - events
 tags:
   - web
-  - windows
-  - published
+  - open-source
+  - entrepreneurial-life
 coverImage:
   src: ~/assets/content/blog/2010/04/mwnw_logo.png
   alt: Make Web Not War logo
@@ -36,14 +36,14 @@ involvement in the MWNW 2010 event.
 ## Community Partner Spotlight: DevLAB Montreal
 
 This year MWNW will be having a codefest portion co-hosted by the coolest geeks
-in town, DevLab Montreal. The folks at devLab MTL are very passionate about new
+in town, DevLab Montreal. The folks at devLAB MTL are very passionate about new
 technologies and Open Source, so we're thrilled to have them on board with Make
-Web not War. We asked Renoir Boulanger, Co-Founder of DevLab MTL, a few
+Web not War. We asked Renoir Boulanger, Co-Founder of devLAB MTL, a few
 questions:
 
-## What is devLab Montreal?
+## What is devLAB Montreal?
 
-devLab Montreal is the natural movement toward the open-source community because
+devLAB Montreal is the natural movement toward the open-source community because
 it first started as friends gathering together every week only to play with
 technologies. Be it: Virtualization, Trying stuff with frameworks, Optimizing a
 minimal Linux virtual machine or computer, playing with monitoring, and so on.
@@ -51,10 +51,11 @@ During the years, we talked about our gatherings and people got interested in
 joining, so we started to get out with the Open-source community and meet people
 that loves as much open source software as we do. Then it came naturally. When
 we founded Evocatio, we HAD to put some structure in it and bring something
-that's missing in the Montreal's events scene… something for us, geeks. devLab
+that's missing in the Montreal's events scene… something for us, geeks. devLAB
 is our way to give back to the community. We scheduled meetings through the next
 year so we could teach and learn from each other. Each meeting will have a
-theme. Stored procedures optimization with either MySQL or Microsoft SQL.
+theme. Stored procedures optimization with either <abbr>MySQL</abbr>
+or Microsoft <abbr>SQL</abbr>.
 Database modeling and normalization. Bugwacking sessions on projects of our
 choice.
 
@@ -68,5 +69,5 @@ as it happens many times Open source software have to work with Proprietary
 software. We embrace Microsoft initiative to listen to what we have to say as
 Open Source Enthusiasts.
 
-Sign up for the codefest if you want to hack out some code with the devLab folks
-at MWNW.
+Sign up for the codefest if you want to hack out some code with the devLAB folks
+at <abbr>MWNW</abbr>.

@@ -16,6 +16,7 @@ categories:
 tags:
   - open-source
   - published
+  - entrepreneurial-life
 webarchiveSnapshots:
   - key: port25-original
     orig: https://web.archive.org/web/20100601083657/http://port25.ca/archive/2010/05/27/why-the-amp-is-microsoft-doing-this.aspx

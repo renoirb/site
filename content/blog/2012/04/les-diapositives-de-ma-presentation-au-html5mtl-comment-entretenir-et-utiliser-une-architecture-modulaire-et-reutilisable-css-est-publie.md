@@ -9,7 +9,11 @@ status: publish
 revising: true
 created: '2012-04-29'
 updated: '2013-03-27'
-tags: []
+tags:
+  - entrepreneurial-life
+  - events
+  - slides
+  - conference
 categories: []
 excerpt: ''
 ---

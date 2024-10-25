@@ -101,6 +101,11 @@ human:
       Articles written about the craft of managing scalable, predictable and reliable distributed
       computing infrastructure for the Web.
 
+  - key: past-work-project
+    text: Past Work Project
+    description: |
+      Articles written about projects I’ve worked on in the past and that I could share what I've learned.
+
   - key: procedure
     text: Procedure
     description: |

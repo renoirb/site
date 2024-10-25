@@ -15,7 +15,8 @@ gallery: false
 images: false
 categories:
   - Uncategorized
-tags: []
+tags:
+  - entrepreneurial-life
 coverImage:
   src: ~/assets/content/blog/2010/03/mondev_logo.png
   alt: Event Logo

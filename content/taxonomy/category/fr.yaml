@@ -20,6 +20,12 @@ human:
     description: |
       Projets sur lesquels j’ai travaillé ou publié.
 
+  - key: snippet
+    text: Bouts de Code
+    description: |
+      Petits morceaux de code écrits après de longues recherches, mais que j’ai finalement dû enlever et que je ne veux pas perdre.
+      Principalement ceux ou j’ai du fouiller la documentation et que j’aimerai garder en mémoire.
+
   - key: tranche-de-vie
     text: Tranche de vie
     description: |

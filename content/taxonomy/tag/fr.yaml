@@ -97,6 +97,11 @@ human:
       Essais écrits en relation au métier de gérer une infrastructure informatique ou infonuagique
       et comment entretenir des systèmes pour des Applications Web résilientes et stables.
 
+  - key: past-work-project
+    text: Projets passés
+    description: |
+      Projets passés sur lesquels j’ai travaillé chez mes employeurs précédents et que je veux partager ce que j'ai appris.
+
   - key: procedure
     text: Procédure
     description: |

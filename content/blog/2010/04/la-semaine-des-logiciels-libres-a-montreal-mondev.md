@@ -14,6 +14,7 @@ tags:
   - events
   - logiciel-libre
   - web
+  - entrepreneurial-life
 categories:
   - technologies
 excerpt: ''
