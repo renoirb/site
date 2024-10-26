@@ -112,10 +112,15 @@ libellés adaptés à chaque langue.
 Bien que le site soit maintenant fonctionnel, plusieurs améliorations sont
 prévues :
 
-- Finalisation de l'interface bilingue
+- Finalisation de l'interface multilingue (voir
+  [ticket **renoirb/site** #77](https://github.com/renoirb/site/issues/77))
 - Migration des images et ressources médias restantes
-- Optimisation des performances
 - Amélioration de l'expérience de développement
+- Mise a jour de Vue, Nuxt, et Nuxt Content
+- Restructuration dans le code pour que le projet Nuxt (e.g. dans
+  [GitHub **renoirb/site**](https://github.com/renoirb/site)), qu'il n'y ait que
+  le contenu, la définition des routes et que le reste soit dans des modules
+  écrits en isolation.
 
 [own-website-migration-2020]:
   /blog/2020/09/porting-all-my-content
