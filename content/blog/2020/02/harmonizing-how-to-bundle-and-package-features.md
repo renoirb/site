@@ -12,7 +12,6 @@ tags:
   - frontend
   - packaging
   - architecture
-  - on-front-page
 description:
   Research summary on experiments made in 2018 and 2019 about related to
   ECMASCript/JavaScript packaging, publishing and bundling
