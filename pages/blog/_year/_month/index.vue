@@ -35,12 +35,11 @@
     components: {
       'blog-list-model-by-year': BlogListModelByYear,
     },
-    async asyncData({ $content, route, params }) {
+    async asyncData({ $content, params }) {
       let contents: INuxtContentIndexResult[] = []
       try {
         contents = await queryNuxtContent(
           $content,
-          route,
           params.year,
           params.month,
         )
