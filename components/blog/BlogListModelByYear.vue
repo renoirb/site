@@ -6,7 +6,6 @@
         class="no-underline"
         :to="{
           path: `/blog/${inThatYear[0]}`,
-          query: { q: q ? q : undefined },
         }"
       >
         <h2 class="my-4 font-serif text-2xl italic">{{ inThatYear[0] }}</h2>
@@ -76,7 +75,6 @@
   }
   export interface Props {
     contents: INuxtContentResult[]
-    q: string
     showYear: boolean
   }
   export default Vue.extend<Data, Methods, Computed, Props>({
@@ -85,10 +83,6 @@
       contents: {
         type: Array,
         default: () => [],
-      },
-      q: {
-        type: String,
-        default: '',
       },
       showYear: {
         type: Boolean,
