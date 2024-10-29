@@ -141,9 +141,6 @@ export const queryNuxtContent = async (
   month?: string,
 ): Promise<INuxtContentResult[]> => {
   let contents: INuxtContentResult[] = []
-  const { query = {} as Context['route']['query'] } = route
-  let { q = '' } = query
-  q = typeof q === 'string' ? q : ''
   /**
    * Bookmarks:
    * - https://github.com/techfort/LokiJS/wiki/Query-Examples#find-queries
