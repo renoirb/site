@@ -72,7 +72,6 @@
         class="my-10"
         :prev="prev"
         :next="next"
-        style="display: none"
       />
     </div>
   </div>

@@ -43,9 +43,9 @@
     components: {
       'blog-list-model-by-year': BlogListModelByYear,
     },
-    async asyncData({ $content, route }) {
+    async asyncData({ $content }) {
       let contents: INuxtContentIndexResult[] = []
-      contents = await queryNuxtContent($content, route)
+      contents = await queryNuxtContent($content)
       return {
         contents,
         pageTitle: 'Blog',

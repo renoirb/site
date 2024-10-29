@@ -136,11 +136,11 @@ export const isNuxtContentResult = (
 
 export const queryNuxtContent = async (
   $content: Context['$content'],
-  route: Context['route'],
   year?: string,
   month?: string,
 ): Promise<INuxtContentResult[]> => {
   let contents: INuxtContentResult[] = []
+  let db: INuxtContentInstance
   /**
    * Bookmarks:
    * - https://github.com/techfort/LokiJS/wiki/Query-Examples#find-queries
@@ -152,7 +152,14 @@ export const queryNuxtContent = async (
    * - http://localhost:3000/_content/blog?deep=true
    * - http://localhost:3000/_content/blog?deep=true&created_defined=asdf
    */
-  const db = $content('blog', { deep: true })
+  if (year && month) {
+    db = $content('blog', year, month, { deep: true })
+  } else if (year) {
+    db = $content('blog', year, { deep: true })
+  } else {
+    db = $content('blog', { deep: true })
+  }
+  db = db
     .sortBy('createdAt', 'desc')
     .only([
       'createdAt',
@@ -168,9 +175,6 @@ export const queryNuxtContent = async (
     ])
 
   contents = await db.fetch()
-  contents = contents.filter((a) =>
-    findExcludingRedirectPredicate(a as INuxtContentResult),
-  )
 
   return contents
 }
