@@ -262,8 +262,16 @@ const main: NuxtConfig = {
     // No need to cache for eternity, under heavy traffic, it's OK
     // Same file served from browser cache not too long.
     filenames: {
-      app: () => '[name].js',
-      chunk: () => '[name].js',
+      // rel=#79
+      // https://github.com/renoirb/site/issues/79
+      app: ({ isDev, isModern }) =>
+        isDev
+          ? `[name]${isModern ? '.modern' : ''}.js`
+          : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+      chunk: ({ isDev, isModern }) =>
+        isDev
+          ? `[name]${isModern ? '.modern' : ''}.js`
+          : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
       css: () => '[name].css',
       img: () => '[path][name].[ext]',
       font: () => '[path][name].[ext]',
