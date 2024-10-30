@@ -1,5 +1,8 @@
 import { Context } from '@nuxt/types'
-import { getColorModeClassName } from '../lib'
+import {
+  getColorModeClassName,
+  /*                       */
+} from '../lib'
 
 /**
  * Initial state.

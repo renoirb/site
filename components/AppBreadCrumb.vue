@@ -2,8 +2,11 @@
   import { VNode } from 'vue'
   import { Route } from 'vue-router'
   import { defineComponent } from '@nuxtjs/composition-api'
-  import { routeToCrumbs, typeGuardIsRoute } from '~/lib'
-
+  import {
+    routeToCrumbs,
+    typeGuardIsRoute,
+    /*                       */
+  } from '~/lib'
   export interface Props {
     route: Route
   }

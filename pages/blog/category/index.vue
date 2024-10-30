@@ -5,8 +5,12 @@
     Methods,
     Computed,
     Props,
+    /*                       */
   } from '../tag/index.vue'
-  import { nuxtPageAsyncDataForTaxonomyIndex } from '~/lib'
+  import {
+    nuxtPageAsyncDataForTaxonomyIndex,
+    /*                       */
+  } from '~/lib'
   export default Vue.extend<Data, Methods, Computed, Props>({
     extends: NuxtPageTagIndex,
     async asyncData(ctx) {

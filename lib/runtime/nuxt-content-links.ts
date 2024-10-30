@@ -1,5 +1,15 @@
-import type { INuxtContentResult, INuxtContentBodyType, VueNodeTag } from '..'
-import { getVueNodeChildren, getVueNodeType, getVueNodeTag } from '../model'
+import type {
+  INuxtContentResult,
+  INuxtContentBodyType,
+  VueNodeTag,
+  /*                       */
+} from '..'
+import {
+  getVueNodeChildren,
+  getVueNodeType,
+  getVueNodeTag,
+  /*                       */
+} from '../model'
 
 export const extractVueTreeLinks = (document: INuxtContentResult): string[] => {
   // Cannot use Set() because that's only for one page here. And we'll have to merge them all.

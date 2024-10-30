@@ -2,8 +2,12 @@ import type {
   contentFunc as baseContentFunc,
   NuxtContentInstance,
   Result,
+  /*                       */
 } from '@nuxt/content'
-import type { Context as BaseContext } from '@nuxt/types'
+import type {
+  Context as BaseContext,
+  /*                       */
+} from '@nuxt/types'
 
 /**
  * Nuxt content function typings to help (Renoir’s) memory.

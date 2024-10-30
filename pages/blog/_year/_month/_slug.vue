@@ -82,10 +82,6 @@
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
   import {
-    IFrontMatterInnerDocument,
-    /*                       */
-  } from '../../../../lib'
-  import {
     abbreviatize,
     createNuxtContentParsedDocument,
     createVueMetaHeadScriptForHypothesis,
@@ -96,6 +92,7 @@
   import type {
     IAbbreviatize,
     IFrontMatterCoverImageInnerDocument,
+    IFrontMatterInnerDocument,
     INuxtContentParsedDocument,
     INuxtContentPrevNext,
     INuxtContentResult,

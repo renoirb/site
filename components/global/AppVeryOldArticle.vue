@@ -2,6 +2,7 @@
   import Vue, { PropOptions } from 'vue'
   import AppAlertBox, {
     Data as IAppAlertBoxData,
+    /*                       */
   } from '@/components/global/AppAlertBox.vue'
   import {
     FALLBACK_LANG_CODE,
@@ -10,8 +11,8 @@
     YEAR_CONSIDERED_OLD,
     IAlertType,
     IFrontMatterPreambleInnerDocument,
+    /*                       */
   } from '~/lib'
-
   export interface Data extends IAppAlertBoxData {
     alertType: IAlertType
   }

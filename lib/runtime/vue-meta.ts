@@ -5,8 +5,12 @@ import type {
   Flatten,
   IAppIdentity,
   RefreshMetaInfo,
+  /*                       */
 } from '../types'
-import { sanitizeHtmlTagAttributeExpectingOneWord } from '.'
+import {
+  sanitizeHtmlTagAttributeExpectingOneWord,
+  /*                       */
+} from '.'
 
 export const identityFallbackValues: IAppIdentity = {
   email: 'hello@renoirboulanger.com',

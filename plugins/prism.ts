@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Prism from 'prismjs'
-import { Plugin } from '@nuxt/types'
+import type { Plugin } from '@nuxt/types'
 
 import 'prism-themes/themes/prism-material-oceanic.css'
 

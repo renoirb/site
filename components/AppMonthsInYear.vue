@@ -25,7 +25,15 @@
 
 <script lang="ts">
   import Vue, { PropOptions } from 'vue'
-  import { getMonthNames, IMonthNames, isValidYear } from '~/lib'
+  import {
+    getMonthNames,
+    isValidYear,
+    /*                       */
+  } from '~/lib'
+  import type {
+    IMonthNames,
+    /*                       */
+  } from '~/lib'
   export interface Props {
     year: string
     currentMonth: string
@@ -34,6 +42,7 @@
   export interface Computed {}
   export interface Data {
     months: IMonthNames
+    locale: string
   }
   export default Vue.extend<Data, Methods, Computed, Props>({
     props: {

@@ -1,6 +1,16 @@
-import { Temporal } from '@js-temporal/polyfill'
-import { FALLBACK_LOCALE, FALLBACK_CALENDAR_NAME } from '../consts'
-import { extractYearFromDateString } from './content'
+import {
+  Temporal,
+  /*                       */
+} from '@js-temporal/polyfill'
+import {
+  FALLBACK_LOCALE,
+  FALLBACK_CALENDAR_NAME,
+  /*                       */
+} from '../consts'
+import {
+  extractYearFromDateString,
+  /*                       */
+} from './content'
 
 const CALENDAR = [
   'buddhist',

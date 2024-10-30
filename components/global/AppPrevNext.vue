@@ -27,7 +27,10 @@
 
 <script lang="ts">
   import Vue, { PropOptions } from 'vue'
-  import { INuxtContentPrevNext } from '~/lib'
+  import {
+    INuxtContentPrevNext,
+    /*                       */
+  } from '~/lib'
   export interface Data {}
   export interface Methods {}
   export interface Computed {}

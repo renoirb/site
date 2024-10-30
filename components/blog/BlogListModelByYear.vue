@@ -65,6 +65,7 @@
     abbreviatize,
     IAbbreviatize,
     INuxtContentIndexResultByYears,
+    /*                       */
   } from '~/lib'
   export interface Data {}
   export interface Methods {

@@ -60,7 +60,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { IAppIdentity } from '~/lib'
+  import type {
+    IAppIdentity,
+    /*                       */
+  } from '~/lib'
   export interface Data {}
   export interface Methods {}
   export interface Computed {}

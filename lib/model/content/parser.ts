@@ -1,5 +1,12 @@
-import type { NuxtOptions } from '@nuxt/types'
-import type { INuxtContentResult, IBaseNuxtContentResult } from './model'
+import type {
+  NuxtOptions,
+  /*                       */
+} from '@nuxt/types'
+import type {
+  INuxtContentResult,
+  IBaseNuxtContentResult,
+  /*                       */
+} from './model'
 
 type INuxtContentParser = Record<
   'toJSON',

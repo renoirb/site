@@ -9,7 +9,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { isPrismSupportedLanguage } from '~/lib'
+  import {
+    isPrismSupportedLanguage,
+    /*                       */
+  } from '~/lib'
   export interface Data {}
   export interface Methods {}
   export interface Computed {

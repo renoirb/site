@@ -1,5 +1,11 @@
-import { getPrettyfiedTemporalDate } from '../date'
-import { INuxtContentIndexResult } from './model'
+import {
+  getPrettyfiedTemporalDate,
+  /*                       */
+} from '../date'
+import {
+  INuxtContentIndexResult,
+  /*                       */
+} from './model'
 
 export type INuxtContentIndexResultByYears = [
   number,

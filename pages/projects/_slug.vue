@@ -17,6 +17,9 @@
   import Vue from 'vue'
   import {
     abbreviatize,
+    /*                       */
+  } from '~/lib'
+  import type {
     IAbbreviatize,
     INuxtContentResult,
     /*                       */

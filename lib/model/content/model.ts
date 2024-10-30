@@ -1,19 +1,25 @@
 import type { IPrettyfiedTemporalDate } from '../date'
 import {
-  ITaxonomyHuman,
-  ITaxonomyItem,
-  toTaxonomyItemCollection,
   extractTaxonomyHuman,
   hydrateTaxonomyCollection,
+  toTaxonomyItemCollection,
+  /*                       */
+} from '../taxonomy'
+import type {
+  ITaxonomyHuman,
+  ITaxonomyItem,
+  /*                       */
 } from '../taxonomy'
 import type {
   Context,
   INuxtContentInstance,
   IResult,
+  /*                       */
 } from './imports'
 import type {
   IFrontMatterPreambleInnerDocument,
   IFrontMatterCoverImageInnerDocument,
+  /*                       */
 } from './front-matter-inner-document'
 
 export type INuxtContentResolver = (

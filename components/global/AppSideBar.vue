@@ -84,7 +84,10 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { IAppHeaderNavItems } from '~/lib'
+  import type {
+    IAppHeaderNavItems,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     appTitle: string
     isOpen: boolean

@@ -1,4 +1,7 @@
-import { trimText } from './runtime'
+import {
+  trimText,
+  /*                       */
+} from './runtime'
 
 /**
  * This file is imported by any part of the project build

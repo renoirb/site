@@ -1,5 +1,8 @@
 import { Context } from '@nuxt/types'
-import { createMaybeRedirectTo } from '../lib'
+import {
+  createMaybeRedirectTo,
+  /*                       */
+} from '../lib'
 
 const redirects: [RegExp, string, true?][] = [
   /*

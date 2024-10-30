@@ -1,9 +1,30 @@
-import type { FeedOptions, Author, Feed, Item } from 'feed'
-import type { contentFunc } from '@nuxt/content'
-import { Temporal } from '@js-temporal/polyfill'
-import type { IAppIdentity } from '../types'
-import type { INuxtContentResult } from '../model'
-import { findExcludingRedirectPredicate } from '../index'
+import {
+  Temporal,
+  /*                       */
+} from '@js-temporal/polyfill'
+import type {
+  FeedOptions,
+  Author,
+  Feed,
+  Item,
+  /*                       */
+} from 'feed'
+import type {
+  contentFunc,
+  /*                       */
+} from '@nuxt/content'
+import {
+  findExcludingRedirectPredicate,
+  /*                       */
+} from '../index'
+import type {
+  IAppIdentity,
+  /*                       */
+} from '../types'
+import type {
+  INuxtContentResult,
+  /*                       */
+} from '../model'
 
 // eslint-disable-next-line
 const EXAMPLE_NUXT_CONTENT_RESULT: Partial<INuxtContentResult>[] = [

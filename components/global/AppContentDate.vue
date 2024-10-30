@@ -6,11 +6,16 @@
 
 <script lang="ts">
   import Vue, { PropOptions } from 'vue'
-  import type { INuxtContentResult, ITemporalFormat } from '~/lib'
   import {
     getPrettyfiedTemporalDate,
     formatTemporal,
     isNuxtContentResult,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
+    ITemporalFormat,
+    /*                       */
   } from '~/lib'
   export interface Data {}
   export interface Methods {

@@ -15,7 +15,14 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import { IAppHeaderNavItems, appHeaderNav } from '~/lib'
+  import {
+    appHeaderNav,
+    /*                       */
+  } from '~/lib'
+  import type {
+    IAppHeaderNavItems,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     nav: IAppHeaderNavItems[]
   }

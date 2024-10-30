@@ -1,4 +1,7 @@
-import type { ScriptPropertyBase } from 'vue-meta'
+import type {
+  ScriptPropertyBase,
+  /*                       */
+} from 'vue-meta'
 
 export const createVueMetaHeadScriptForHypothesis = (): ScriptPropertyBase => ({
   // <script src="https://hypothes.is/embed.js" async></script>

@@ -1,6 +1,15 @@
-import { extractFrontMatterTagsAndNormalize } from '..'
-import type { INuxtOptionsHooks } from '..'
-import { extractVueTreeLinks } from './nuxt-content-links'
+import {
+  extractFrontMatterTagsAndNormalize,
+  /*                       */
+} from '..'
+import type {
+  INuxtOptionsHooks,
+  /*                       */
+} from '..'
+import {
+  extractVueTreeLinks,
+  /*                       */
+} from './nuxt-content-links'
 
 const allPages = new Map<string, Record<string, string | string[]>>()
 const allLinks: string[] = []

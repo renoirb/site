@@ -1,13 +1,20 @@
 import { strict as assert } from 'assert'
-import { abbreviatize } from '../..'
+import {
+  abbreviatize,
+  /*                       */
+} from '../..'
 import type {
   INuxtContentParsedDocument,
   VueNodeTreeType,
   VueNodeTree,
   VueNodeTreeNonRoot,
   VueNodeTag,
+  /*                       */
 } from '../../types'
-import type { contentFunc } from './imports'
+import type {
+  contentFunc,
+  /*                       */
+} from './imports'
 
 export interface IFrontMatterInnerDocument {
   /**

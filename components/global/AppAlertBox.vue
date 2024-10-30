@@ -27,7 +27,15 @@
 
 <script lang="ts">
   import Vue, { PropOptions } from 'vue'
-  import { abbreviatize, IAbbreviatize, IAlertType } from '~/lib'
+  import {
+    abbreviatize,
+    /*                       */
+  } from '~/lib'
+  import type {
+    IAbbreviatize,
+    IAlertType,
+    /*                       */
+  } from '~/lib'
   export interface Data {
     messageTextContent: string
     titleTextContent: string

@@ -1,6 +1,15 @@
-import { Context } from '@nuxt/types'
-import { RE_FULL_PATH_BLOG_INDEX } from '../consts'
-import { transformToPrettyfiedTemporalDate } from './date'
+import {
+  Context,
+  /*                       */
+} from '@nuxt/types'
+import {
+  RE_FULL_PATH_BLOG_INDEX,
+  /*                       */
+} from '../consts'
+import {
+  transformToPrettyfiedTemporalDate,
+  /*                       */
+} from './date'
 
 export const pageTitleForBlogIndex = (
   route: Context['route'],

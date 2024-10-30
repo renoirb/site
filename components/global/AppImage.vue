@@ -40,6 +40,7 @@
     FALLBACK_BLANK_IMAGE,
     IAbbreviatize,
     PUBLIC_SITE_ASSETS_ORIGIN,
+    /*                       */
   } from '~/lib'
   // const images = require.context('~assets/', false, /\.(?:png|jpg|svg|gif)$/i)
   const RE_WEBPACK_ASSETS = /^[@~]\/assets\//

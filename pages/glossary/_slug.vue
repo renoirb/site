@@ -37,8 +37,11 @@
   /** eslint-disable @typescript-eslint/no-unused-vars no-unused-vars */
   import Vue from 'vue'
   import {
-    INuxtContentResult,
     abbreviatize,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
     IAbbreviatize,
     /*                       */
   } from '~/lib'

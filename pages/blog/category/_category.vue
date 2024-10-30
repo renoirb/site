@@ -5,6 +5,7 @@
     Methods,
     Computed,
     Props,
+    /*                       */
   } from '../tag/_tag.vue'
   import {
     nuxtPageAsyncDataForTaxonomyList,

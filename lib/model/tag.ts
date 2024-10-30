@@ -1,5 +1,11 @@
-import type { INuxtContentResult } from '../model'
-import { toTaxonomyItemCollection } from './taxonomy'
+import {
+  toTaxonomyItemCollection,
+  /*                       */
+} from './taxonomy'
+import type {
+  INuxtContentResult,
+  /*                       */
+} from '../model'
 
 export const extractFrontMatterTagsAndNormalize = (
   taxonomyPredicateKey: string,

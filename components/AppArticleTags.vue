@@ -44,12 +44,17 @@
 <script lang="ts">
   import Vue, { PropOptions } from 'vue'
   import {
-    INuxtContentResult,
+    Labeler,
+    abbreviatize,
     isNuxtContentResult,
+    /*                       */
+  } from '~/lib'
+  import type {
+    INuxtContentResult,
     Labeler,
     ILabeler,
-    abbreviatize,
     IAbbreviatize,
+    /*                       */
   } from '~/lib'
   export interface Data {
     labeler: ILabeler
