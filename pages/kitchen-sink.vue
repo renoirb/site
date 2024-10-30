@@ -75,8 +75,6 @@
     /*                      */ '/blog/2015/',
     // 'https://renoirboulanger.com/blog/2014/08/thoughts-learn-code-movement-managers-might-missing/',
     // /*                      */ '/blog/2014/08/thoughts-learn-code-movement-managers-might-missing/',
-    'https://renoirboulanger.com/blog/2009/11/realisation-du-site-et-de-limage-«branding»-de-beebox-2008/',
-    /*                      */ '/blog/2009/11/realisation-du-site-et-de-limage-«branding»-de-beebox-2008/',
     // 'https://renoirboulanger.com/styleguide/',
     // /*                      */ '/styleguide/',
     // 'https://renoirboulanger.com/styleguide/post/',
