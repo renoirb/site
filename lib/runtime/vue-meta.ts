@@ -72,7 +72,7 @@ export const createVueMetaInfo = ({
   description = '',
   keywords = [],
   redirect = '',
-}: CreateVueMetaInfoOptions): MetaInfo => {
+}: Partial<CreateVueMetaInfoOptions>): MetaInfo => {
   const htmlAttrs: MetaInfo['htmlAttrs'] = {}
   const meta: (Flatten<MetaInfo['meta']> | RefreshMetaInfo)[] = []
 
