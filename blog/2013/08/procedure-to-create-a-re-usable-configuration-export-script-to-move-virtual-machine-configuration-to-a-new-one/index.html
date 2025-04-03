@@ -1,0 +1,287 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Procedure to create a re-usable configuration export script to move a virtual machine configuration to a new one - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><script data-n-head="ssr" src="./main.mjs" type="module" defer></script><link rel="preload" href="/_nuxt/a2417c9.js" as="script"><link rel="preload" href="/_nuxt/4f6fc7e.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/40c1dae.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/53143b1.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/1c0b1e2.js" as="script"><link rel="preload" href="/_nuxt/643194b.js" as="script"><link rel="preload" href="/_nuxt/b579a54.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/8197f60.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1743662357/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one/state.js" as="script"><link rel="preload" href="/_nuxt/static/1743662357/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-69448e2c data-v-45eee548><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-69448e2c><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-69448e2c><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-69448e2c><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-69448e2c><path d="M4 6h16M4 12h16M4 18h16" data-v-69448e2c></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-69448e2c>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-69448e2c><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-69448e2c><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-45eee548>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-69448e2c><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-69448e2c><a href="/" class="identity__text nuxt-link-active" data-v-69448e2c>Renoir Boulanger</a></div> <div data-v-69448e2c><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-a3d5a040><ol class="list-none p-0 inline-flex" data-v-a3d5a040><li class="flex items-center" data-v-a3d5a040><a href="/blog" class="nuxt-link-active" data-v-a3d5a040>blog</a></li><li class="flex items-center" data-v-a3d5a040><a href="/blog/2013" class="nuxt-link-active" data-v-a3d5a040>2013</a></li><li class="flex items-center" data-v-a3d5a040><a href="/blog/2013/08" class="nuxt-link-active" data-v-a3d5a040>08</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-9a5f8e1a><div data-v-9a5f8e1a><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-9a5f8e1a data-v-9a5f8e1a><!----> <!----> <div class="nuxt-content" data-v-9a5f8e1a></div></rb-notice-box></div> <div class="document document--item z-30" data-v-9a5f8e1a><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-9a5f8e1a><h1 data-v-9a5f8e1a>Procedure to create a re-usable configuration export script to move a virtual machine configuration to a new one</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-9a5f8e1a><time datetime="2013-08-07" data-v-9a5f8e1a>
+        mercredi 7 août 2013
+      </time> <a href="https://renoirboulanger.com/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-9a5f8e1a>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-9a5f8e1a><strong id="tags__271" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__271" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/linux" class="no-underline">linux</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/logiciel-libre" class="no-underline">logiciel-libre</nuxtlink></li> <!----></ul></div> <div class="body mt-10" data-v-9a5f8e1a><!----> <div class="nuxt-content" data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>The following procedure is about deprecating an old Linux server, and 
+move crucial configuration to a new fresh install that has the desired 
+configuration by cloning it, then applying the <em data-v-9a5f8e1a data-v-9a5f8e1a>Old VM</em>'s configuration.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>The steps will go as follows:</p>
+<ol data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Grab the original machine's configuration</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Clone the <em data-v-9a5f8e1a data-v-9a5f8e1a>New VM</em> that will replace the Old</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Disable the <em data-v-9a5f8e1a data-v-9a5f8e1a>Old VM</em> web application</li>
+</ol>
+<h3 data-v-9a5f8e1a data-v-9a5f8e1a>1. Grab the original machine's configuration</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>The steps will create a tar file with the configurations.</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Connect to the production vm (morpheus) through the cloud provider console (e.g. vSphere client, or VCloud director webapp or Open Stack console)
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Connect through Putty, or your local development VM terminal the follwing lines (the console do not share the clipboard)</li>
+</ul></li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>ssh username@morpheus.networkname.net
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Create this file</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>vi ~/make-migrate.sh
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Enter in vim paste mode</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>:set paste
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Paste this content</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>#!/bin/bash 
+cd ~ 
+mkdir -p ~/migrate/etc/network 
+sudo cp /etc/network/interfaces ~/migrate/etc/network/ 
+sudo cp /etc/hostname ~/migrate/etc/ 
+sudo cp /etc/resolv.conf ~/migrate/etc/ 
+mkdir -p ~/migrate/etc/ssh 
+sudo cp /etc/ssh/ssh_host* ~/migrate/etc/ssh/ 
+mkdir -p ~/migrate/home/username/.ssh 
+cp ~/.ssh/* ~/migrate/home/username/.ssh/ 
+mkdir -p ~/migrate/home/username/_prod/app/config 
+cp ~/_prod/app/config/parameters.ini ~/migrate/home/username/_prod/app/config 
+mkdir -p ~/migrate/etc/apache2/sites-available 
+sudo cp /etc/apache2/sites-available/* ~/migrate/etc/apache2/sites-available/ 
+sudo cp /etc/resolv.conf ~/migrate/etc/ 
+sudo chown -R username:username ~/migrate 
+tar cfz ~/migrate.tar.gz ~/migrate 
+mv migrate.tar.gz _prod/web/
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Execute it</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>/bin/bash ~/make-migrate.sh
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>The latter moves into the </li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Download https://morpheus.networkname.net/migrate.tar.gz</li>
+</ul>
+
+<h3 data-v-9a5f8e1a data-v-9a5f8e1a>2. Clone the <em data-v-9a5f8e1a data-v-9a5f8e1a>New VM</em> that will replace the Old</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>This step is about cloning the functionnal VM.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Since it is specific to your cloud management system, I will not describe any way to do so.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Important points to consider while doing so, ensure that you:</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>disable or isolate networking</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>have access to an alternate console</li>
+</ul>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Otherwise you might just create conflicts.</p>
+<h3 data-v-9a5f8e1a data-v-9a5f8e1a>2. Render the production machine unavailable</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>You should have a copy of the original VM (e.g. morpheus-stg) with the config working the way you want.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>This step is specific to the way you might commission or decomission your web app.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>You may even not need to decomission it if you have multiple database servers not on the same host.</p>
+<h3 data-v-9a5f8e1a data-v-9a5f8e1a>3. Prepare the <em data-v-9a5f8e1a data-v-9a5f8e1a>New VM</em> to use the <em data-v-9a5f8e1a data-v-9a5f8e1a>Original VM</em></h3>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Start the cloned VM</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Connect through the vCenter console</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Download the file, sorry, no cut in paste in the cloud provider console :(</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Assuming you are in <code data-v-9a5f8e1a data-v-9a5f8e1a>/home/username</code></li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>pwd
+/home/username
+wget --no-check-certificate https://morpheus.networkname.net/migrate.tar.gz
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Get the migrate folder from the extracted archive (it will be in a 'home' folder after extracting)</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>tar xfz migrate.tar.gz
+mv home/username/migrate .
+rm -rf home
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Disable the network configuration</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>  sudo /etc/init.d/networking stop
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Run the following commands:
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Echo the content of the files inside the <code data-v-9a5f8e1a data-v-9a5f8e1a>migrate/</code> folder, into their original locations</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>See the file  listing:</li>
+</ul></li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>find migrate/ -type f
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Create the migrate file original contents</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>cd migrate
+find . -type f > prepare.sh
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Warning, the following commands we will be using vim to prepare our import script, follow the keyboard types in that sequence:</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>vim prepare.sh
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>(in the top left corner, where it starts), do:</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>NOTE: <em data-v-9a5f8e1a data-v-9a5f8e1a><em data-v-9a5f8e1a data-v-9a5f8e1a>FOLLOW BLINDLY THOSE VIM COMMANDS</em></em> ... they written in the form of {modifier key}+{letter}, such as: CTRL+v, SHIFT+A, means the key combination like you would on a Graphical user interface, the + in this list is only to mean together.</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>dd
+CTRL+v
+100j
+$
+y
+SHIFT+A
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Add a few spaces, to make the cursor go further than the longest line</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>ESC
+p
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>The following commands, you have to be in ESC mode, and press ENTER when finished:</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>:%s/  \./ /
+:%s/\./cp \./
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>All is done, write and quit</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>:wq
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Check the file</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>cat prepare.sh
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>You will end up with a file similar to</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>cp ./home/username/_prod/app/config/parameters.ini    /home/username/_prod/app/config/parameters.ini  
+cp ./home/username/.ssh/id_rsa                        /home/username/.ssh/id_rsa  
+cp ./home/username/.ssh/geritt_dsa.pub                /home/username/.ssh/geritt_dsa.pub  
+cp ./home/username/.ssh/geritt_dsa                    /home/username/.ssh/geritt_dsa  
+cp ./home/username/.ssh/authorized_keys2              /home/username/.ssh/authorized_keys2  
+cp ./home/username/.ssh/config                        /home/username/.ssh/config  
+cp ./home/username/.ssh/known_hosts                   /home/username/.ssh/known_hosts 
+cp ./home/username/.ssh/id_rsa.pub                    /home/username/.ssh/id_rsa.pub 
+cp ./etc/ssh/ssh_host_rsa_key.pub                     /etc/ssh/ssh_host_rsa_key.pub  
+cp ./etc/ssh/ssh_host_dsa_key                         /etc/ssh/ssh_host_dsa_key 
+cp ./etc/ssh/ssh_host_dsa_key.pub                     /etc/ssh/ssh_host_dsa_key.pub  
+cp ./etc/ssh/ssh_host_ecdsa_key.pub                   /etc/ssh/ssh_host_ecdsa_key.pub 
+cp ./etc/ssh/ssh_host_rsa_key                         /etc/ssh/ssh_host_rsa_key  
+cp ./etc/ssh/ssh_host_ecdsa_key                       /etc/ssh/ssh_host_ecdsa_key 
+cp ./etc/hostname                                     /etc/hostname  
+cp ./etc/resolv.conf                                  /etc/resolv.conf  
+cp ./etc/network/interfaces                           /etc/network/interfaces
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Execute that newly created script, first check you are in <code data-v-9a5f8e1a data-v-9a5f8e1a>/home/username/migrate</code></li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>pwd
+/home/username/migrate
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>We'll run as root</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>sudo -s
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Echo a file or two, to test BEFORE->AFTER</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>cat /etc/network/interfaces
+...
+cat /etc/hostname
+morpheus-stg
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Now, run the file</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>/bin/bash ./prepare.sh
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>they should be different :)</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>cat /etc/network/interfaces
+...
+cat /etc/hostname
+morpheus.networkname.net
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Make sure the <code data-v-9a5f8e1a data-v-9a5f8e1a>/etc/hosts</code> file reflects, and points at <code data-v-9a5f8e1a data-v-9a5f8e1a>127.0.0.1</code></li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>127.0.0.1   localhost morpheus.networkname.net morpheus
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>You can use vim regex like so:</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>sudo vim /etc/hosts
+:%s/morpheus-stg/morpheus/
+:wq
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Use apache command tools to disable the old site and enable the prod ones:</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>sudo ll /etc/apache/sites-available
+...
+-rw-r--r-- 1 root root 1052 Feb 20 19:19 /etc/apache2/sites-available/default
+-rw-r--r-- 1 root root 7469 Feb  6  2012 /etc/apache2/sites-available/default-ssl
+-rw-r--r-- 1 root root 1917 Feb 20 15:48 /etc/apache2/sites-available/ssl
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Enable only <code data-v-9a5f8e1a data-v-9a5f8e1a>ssl</code>, and <code data-v-9a5f8e1a data-v-9a5f8e1a>default</code> (NOT '<code data-v-9a5f8e1a data-v-9a5f8e1a>default-ssl</code>')</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>sudo a2dissite
+10-project.local.conf
+sudo a2ensite
+default ssl
+</code></pre>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Restart the server</li>
+</ul>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>sudo service apache2 restart
+</code></pre>
+<h3 data-v-9a5f8e1a data-v-9a5f8e1a>3. Decomission the original, use the new VM as the new Production</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>This is, again, specific to the way you might commission or decomission your web app</p></div> <div class="clearfix" data-v-9a5f8e1a></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-e0c1750e data-v-9a5f8e1a><div class="text-left" data-v-e0c1750e><a href="/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project" lang="en-CA" class="hover:underline item-prev" data-v-e0c1750e>
+      I am joining W3C to work on the WebPlatform project!
+    </a></div> <div class="text-right" data-v-e0c1750e><a href="/blog/2013/09/how-to-create-a-patch-and-ensure-it-is-applied-within-salt-stack" lang="en-CA" class="hover:underline item-next" data-v-e0c1750e>
+      How to create a patch and ensure it is applied within Salt Stack
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-94d2db4a><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-94d2db4a><dl class="contact items-item disposition-item" data-v-94d2db4a><dt class="mb-4 font-serif text-2xl" data-v-94d2db4a><a href="/contact" class="underline" data-v-94d2db4a>Contact</a></dt> <dd data-v-94d2db4a>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-94d2db4a>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-94d2db4a><span id="why-fou-de-la-pouitte" class="sr-only" data-v-94d2db4a>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://mastodon.social/@renoirb" data-v-94d2db4a>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://w3c.social/@renoirb" data-v-94d2db4a>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-94d2db4a>v4.0.1-dev</dd> <span class="inline-flex" data-v-94d2db4a><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-94d2db4a><dl lang="fr-CA" class="see-also" data-v-94d2db4a><dt data-v-94d2db4a>Voir aussi…</dt> <dd data-v-94d2db4a><a href="/ligne-editoriale" data-v-94d2db4a> Ligne éditoriale </a></dd> <dd data-v-94d2db4a><a href="/projects" data-v-94d2db4a> Projets </a></dd> <dd data-v-94d2db4a><a href="/glossary" lang="en" data-v-94d2db4a> Glossary </a></dd> <dd data-v-94d2db4a><a href="/code-review" lang="en" data-v-94d2db4a>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1743662357/blog/2013/08/procedure-to-create-a-re-usable-configuration-export-script-to-move-virtual-machine-configuration-to-a-new-one/state.js"></script><script src="/_nuxt/a2417c9.js" defer></script><script src="/_nuxt/1c0b1e2.js" defer></script><script src="/_nuxt/643194b.js" defer></script><script src="/_nuxt/b579a54.js" defer></script><script src="/_nuxt/8197f60.js" defer></script><script src="/_nuxt/4f6fc7e.js" defer></script><script src="/_nuxt/40c1dae.js" defer></script><script src="/_nuxt/53143b1.js" defer></script>
+  </body>
+</html>

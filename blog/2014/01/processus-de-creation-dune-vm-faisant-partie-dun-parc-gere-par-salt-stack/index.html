@@ -1,0 +1,116 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Processus de création d'une VM faisant partie d'un parc géré par Salt Stack - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="description-processus-de-cr" name="description" content="Processus de création d'une VM faisant partie d'un parc Salt stack"><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><script data-n-head="ssr" src="./main.mjs" type="module" defer></script><link rel="preload" href="/_nuxt/a2417c9.js" as="script"><link rel="preload" href="/_nuxt/4f6fc7e.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/40c1dae.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/53143b1.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/1c0b1e2.js" as="script"><link rel="preload" href="/_nuxt/643194b.js" as="script"><link rel="preload" href="/_nuxt/b579a54.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/8197f60.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1743662357/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/state.js" as="script"><link rel="preload" href="/_nuxt/static/1743662357/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-69448e2c data-v-45eee548><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-69448e2c><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-69448e2c><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-69448e2c><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-69448e2c><path d="M4 6h16M4 12h16M4 18h16" data-v-69448e2c></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-69448e2c>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-69448e2c><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-69448e2c><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-45eee548>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-69448e2c><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-69448e2c><a href="/" class="identity__text nuxt-link-active" data-v-69448e2c>Renoir Boulanger</a></div> <div data-v-69448e2c><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-a3d5a040><ol class="list-none p-0 inline-flex" data-v-a3d5a040><li class="flex items-center" data-v-a3d5a040><a href="/blog" class="nuxt-link-active" data-v-a3d5a040>blog</a></li><li class="flex items-center" data-v-a3d5a040><a href="/blog/2014" class="nuxt-link-active" data-v-a3d5a040>2014</a></li><li class="flex items-center" data-v-a3d5a040><a href="/blog/2014/01" class="nuxt-link-active" data-v-a3d5a040>01</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-9a5f8e1a><div data-v-9a5f8e1a><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-9a5f8e1a data-v-9a5f8e1a><!----> <!----> <div class="nuxt-content" data-v-9a5f8e1a></div></rb-notice-box></div> <div class="document document--item z-30" data-v-9a5f8e1a><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-9a5f8e1a><h1 data-v-9a5f8e1a>Processus de création d'une <abbr lang="en" title="Virtual Machine">VM</abbr> faisant partie d'un parc géré par Salt Stack</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-9a5f8e1a><time datetime="2014-01-22" data-v-9a5f8e1a>
+        mercredi 22 janvier 2014
+      </time> <a href="https://renoirboulanger.com/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-9a5f8e1a>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-9a5f8e1a><strong id="tags__255" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__255" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/cloud-computing" class="no-underline">cloud-computing</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/favourites" class="no-underline">favourites</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/best-practices" class="no-underline">best-practices</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/logiciel-libre" class="no-underline">logiciel-libre</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/salt-stack" class="no-underline">salt-stack</nuxtlink></li> <!----></ul></div> <div class="body mt-10" data-v-9a5f8e1a><figure class="document-cover md:float-right lg:w-1/3 md:pl-5 sm:w-1/2 relative z-30 float-none pb-5 pl-0 mx-auto mt-1 app-image is-loading has-image" data-v-36517952 data-v-9a5f8e1a><img anonymous loading="lazy" src="https://renoirb.github.io/site-assets/assets/content/blog/2014/01/salt-spill-300x280.jpg" alt="Une salière a coté d’un déversement de sel, avec le mot sel écrit en anglais." data-remote="https://renoirb.github.io/site-assets/assets/content/blog/2014/01/salt-spill-300x280.jpg" class="object-cover w-full rounded" data-v-36517952> <figcaption class="relative z-30 p-4 mt-2 text-sm rounded-md shadow-md" data-v-36517952><span class="figcaption-contents" data-v-36517952> </span> <div class="nuxt-content" data-v-36517952 data-v-9a5f8e1a></div></figcaption></figure> <div class="nuxt-content" data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>A mon <a href="/blog/2013/08/i-am-joining-w3c-to-work-on-the-webplatform-project/" title="I am joining the W3C to work on WebPlatform.org!" data-v-9a5f8e1a>emploi <em data-v-9a5f8e1a>actuel</em></a> je gère un parc de machines virtuelles (VMs) qui est automatisé par un système de gestion de configuration appelé <strong data-v-9a5f8e1a data-v-9a5f8e1a><a href="http://www.saltstack.com/community/" title="Salt Stack, The Salt Open Source Software Project" data-v-9a5f8e1a data-v-9a5f8e1a>Salt Stack</a></strong>.</p>
+<blockquote data-v-9a5f8e1a data-v-9a5f8e1a>
+  <p data-v-9a5f8e1a data-v-9a5f8e1a><a href="http://www.saltstack.com/community/" title="Salt Stack, The Salt Open Source Software Project" data-v-9a5f8e1a data-v-9a5f8e1a>Salt stack</a> est un outil permettant de décrire quel est l’état désiré d’un serveur. Comme d’autres outils avec une utilité similaire, <em data-v-9a5f8e1a data-v-9a5f8e1a>Salt Stack</em> peut être utilisé dans des <em data-v-9a5f8e1a data-v-9a5f8e1a>environnements hétérogènes</em> sous <strong data-v-9a5f8e1a data-v-9a5f8e1a>GNU/Linux</strong>, <strong data-v-9a5f8e1a data-v-9a5f8e1a>Mac OS</strong>, et <strong data-v-9a5f8e1a data-v-9a5f8e1a>Windows</strong>, <strong data-v-9a5f8e1a data-v-9a5f8e1a>FreeBSD</strong>, etc.</p>
+</blockquote>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>L’environment que nous utilisons est un serveur avec des «blades». Chaque «blade» fournit les services créant un cluster OpenStack. Dans le futur, nous risquons d'avoir plus d'un fournisseur OpenStack. Pour automatiser comme nous l'aimons, nous utilisons grandement la ligne de commande avec le paquet <code data-v-9a5f8e1a data-v-9a5f8e1a>python-novaclient</code>.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Chaque machine virtuelle roule une version <em data-v-9a5f8e1a data-v-9a5f8e1a>LTS</em> («Long Term Support») de Ubuntu.</p>
+<blockquote data-v-9a5f8e1a data-v-9a5f8e1a>
+  <p data-v-9a5f8e1a data-v-9a5f8e1a>Absolument toutes les configurations sont appliqués via <em data-v-9a5f8e1a data-v-9a5f8e1a>Salt Stack</em>, la seule chose qui est fait manuellement en
+  ce moment est de créer la nouvelle instance, et de l'ajouter au «master» de Salt Stack.</p>
+</blockquote>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Même là, ça risque de changer lorsque nous aurons déployé <a href="http://www.saltstack.com/salt-cloud/" title="Salt Cloud, a Salt Stack component specialized in helping automating cloud deployment" data-v-9a5f8e1a data-v-9a5f8e1a>Salt Cloud</a>.</p>
+<h2 data-v-9a5f8e1a data-v-9a5f8e1a>Procédure</h2>
+<p data-v-9a5f8e1a data-v-9a5f8e1a><strong data-v-9a5f8e1a data-v-9a5f8e1a>Mise à jour Mars 2015</strong>: <em data-v-9a5f8e1a data-v-9a5f8e1a>Un nouvel article sur le même sujet</em> a été écrit (en anglais) et illustre <a href="/blog/2015/03/creating-new-ubuntu-salt-master-terminal-using-cloud-init/" title="Creating a new Ubuntu salt-master from the terminal using Cloud-Init" data-v-9a5f8e1a>comment faire une nouvelle VM avec encore moins d’étapes</a></p>
+<ol data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Boot une nouvelle node avec Nova</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>joe@master:~$ nova boot --image lucid-minion-template --flavor wpdn.large --key-name renoirb app6
+</code></pre></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Donner un nom en fonction du type de serveur a déployer avec un numéro à la fin. Exemple: <code data-v-9a5f8e1a data-v-9a5f8e1a>app6</code></p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a><em data-v-9a5f8e1a data-v-9a5f8e1a>NOTE</em> Dans mon cas, j'ai notamment: app, db, memcached, etc.</p></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Ajoute l'adresse floating dans <code data-v-9a5f8e1a data-v-9a5f8e1a>/srv/pillar/nodes/init.sls</code> comme les autres</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>nodes:
+  master:
+    public:  ####IP PUBLIQUE CACHÉE####
+    private: 10.0.0.1
+
+  app1:
+    public:  ####IP PUBLIQUE CACHÉE####
+    private: 10.0.0.7
+
+  memcache2:
+    public:  ####IP PUBLIQUE CACHÉE####
+    private: 10.0.0.4
+
+  app5:
+    public:  ####IP PUBLIQUE CACHÉE####
+    private: 10.0.0.3
+</code></pre></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Prend le fichier <code data-v-9a5f8e1a data-v-9a5f8e1a>/home/ubuntu/runme</code> de n'importe quel autre serveur et colle le dans la nouvelle machine. Puis execute (<code data-v-9a5f8e1a data-v-9a5f8e1a>sudo /bin/bash runme</code>)</p></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Ajouter une ligne dans le nouveau serveir dans <code data-v-9a5f8e1a data-v-9a5f8e1a>/etc/salt/minion.d/master.conf</code></p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>id: app6
+</code></pre>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>... Voir les autres nodes</p></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Restart salt-minion</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>ubuntu@node6:~$ sudo service salt-minion restart
+</code></pre></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Ajoute la clée au master</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>joe@master:~$ sudo salt-key -a app6
+</code></pre>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>... Le '-a foo' est optionnel et tu peux lister Les nodes.</p></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Run state.highstate</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>joe@master:~$ sudo salt app6 state.highstate
+</code></pre></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Uploader le code via rsync dans la nouvelle app node, puis re-rouler state.highstate (certains scripts prennent pour aquis que le code est déjà déployé)</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>joe@master:~$ sudo salt app6 state.sls code.node_app
+joe@master:~$ sudo salt app6 state.highstate
+</code></pre>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Comme je disais, parfois, le premier <code data-v-9a5f8e1a data-v-9a5f8e1a>state.highstate</code> ne marche pas a cause du code pas déployé.</p></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Rafraichir les autorisations pour storage</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>joe@master:~$ sudo salt 'storage*' state.highstate
+joe@master:~$ sudo salt 'monitor*' state.highstate
+</code></pre></li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>Updater le hosts file de quelque nodes</p>
+<pre data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>joe@master:~$ sudo salt 'app*' state.sls hosts
+joe@master:~$ sudo salt 'db*' state.sls hosts
+joe@master:~$ sudo salt 'memcache*' state.sls hosts
+</code></pre></li>
+</ol>
+</div> <div class="clearfix" data-v-9a5f8e1a></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-e0c1750e data-v-9a5f8e1a><div class="text-left" data-v-e0c1750e><a href="/blog/2013/10/project-idea-creating-a-home-made-openstack-cluster-for-development-purposes" lang="en-CA" class="hover:underline item-prev" data-v-e0c1750e>
+      Project idea: Creating a home made OpenStack cluster for development purposes
+    </a></div> <div class="text-right" data-v-e0c1750e><a href="/blog/2014/05/choses-que-jaurai-souhaite-apprendre-plus-tot" lang="fr-CA" class="hover:underline item-next" data-v-e0c1750e>
+      Recette du succès en quelques règles simples
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-94d2db4a><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-94d2db4a><dl class="contact items-item disposition-item" data-v-94d2db4a><dt class="mb-4 font-serif text-2xl" data-v-94d2db4a><a href="/contact" class="underline" data-v-94d2db4a>Contact</a></dt> <dd data-v-94d2db4a>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-94d2db4a>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-94d2db4a><span id="why-fou-de-la-pouitte" class="sr-only" data-v-94d2db4a>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://mastodon.social/@renoirb" data-v-94d2db4a>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://w3c.social/@renoirb" data-v-94d2db4a>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-94d2db4a>v4.0.1-dev</dd> <span class="inline-flex" data-v-94d2db4a><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-94d2db4a><dl lang="fr-CA" class="see-also" data-v-94d2db4a><dt data-v-94d2db4a>Voir aussi…</dt> <dd data-v-94d2db4a><a href="/ligne-editoriale" data-v-94d2db4a> Ligne éditoriale </a></dd> <dd data-v-94d2db4a><a href="/projects" data-v-94d2db4a> Projets </a></dd> <dd data-v-94d2db4a><a href="/glossary" lang="en" data-v-94d2db4a> Glossary </a></dd> <dd data-v-94d2db4a><a href="/code-review" lang="en" data-v-94d2db4a>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1743662357/blog/2014/01/processus-de-creation-dune-vm-faisant-partie-dun-parc-gere-par-salt-stack/state.js"></script><script src="/_nuxt/a2417c9.js" defer></script><script src="/_nuxt/1c0b1e2.js" defer></script><script src="/_nuxt/643194b.js" defer></script><script src="/_nuxt/b579a54.js" defer></script><script src="/_nuxt/8197f60.js" defer></script><script src="/_nuxt/4f6fc7e.js" defer></script><script src="/_nuxt/40c1dae.js" defer></script><script src="/_nuxt/53143b1.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1743662357",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2007\u002F09\u002Frevue-de-dont-make-me-think",config:{content:{dbHash:"1b0c476e"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

@@ -1,0 +1,158 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>J'ai refait et migré tout mon site web - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><meta data-n-head="ssr" data-hid="keywords-migration-wordp" name="keywords" content="migration wordpress, site statique, nuxt content, taxonomie, tailwind css"><meta data-n-head="ssr" data-hid="description-récit-technique" name="description" content="Récit technique de la migration d'un site WordPress vers une solution moderne basée sur Nuxt et Vue.js, incluant un système de taxonomie multilingue et une gestion de contenu optimisée pour les développeurs."><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><script data-n-head="ssr" src="./main.mjs" type="module" defer></script><link rel="preload" href="/_nuxt/a2417c9.js" as="script"><link rel="preload" href="/_nuxt/4f6fc7e.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/_nuxt/40c1dae.js" as="script"><link rel="preload" href="/_nuxt/app.css" as="style"><link rel="preload" href="/_nuxt/53143b1.js" as="script"><link rel="preload" href="/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/_nuxt/1c0b1e2.js" as="script"><link rel="preload" href="/_nuxt/643194b.js" as="script"><link rel="preload" href="/_nuxt/b579a54.js" as="script"><link rel="preload" href="/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/_nuxt/8197f60.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.css"><link rel="stylesheet" href="/_nuxt/app.css"><link rel="stylesheet" href="/_nuxt/pages/blog.css"><link rel="stylesheet" href="/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/_nuxt/static/1743662357/blog/2024/10/refonte-majeure-de-mon-site-web/state.js" as="script"><link rel="preload" href="/_nuxt/static/1743662357/blog/2024/10/refonte-majeure-de-mon-site-web/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-69448e2c data-v-45eee548><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-69448e2c><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-69448e2c><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-69448e2c><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-69448e2c><path d="M4 6h16M4 12h16M4 18h16" data-v-69448e2c></path></svg></button> <a href="/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-69448e2c>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-69448e2c><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-69448e2c><a href="/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-45eee548>
+      Blog
+    </a><a href="/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Projects
+    </a><a href="/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Resume
+    </a><a href="/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-69448e2c><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-69448e2c><a href="/" class="identity__text nuxt-link-active" data-v-69448e2c>Renoir Boulanger</a></div> <div data-v-69448e2c><a href="/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Blog
+        </span></a><a href="/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Projects
+        </span></a><a href="/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Resume
+        </span></a><a href="/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-a3d5a040><ol class="list-none p-0 inline-flex" data-v-a3d5a040><li class="flex items-center" data-v-a3d5a040><a href="/blog" class="nuxt-link-active" data-v-a3d5a040>blog</a></li><li class="flex items-center" data-v-a3d5a040><a href="/blog/2024" class="nuxt-link-active" data-v-a3d5a040>2024</a></li><li class="flex items-center" data-v-a3d5a040><a href="/blog/2024/10" class="nuxt-link-active" data-v-a3d5a040>10</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-9a5f8e1a><div data-v-9a5f8e1a><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-9a5f8e1a data-v-9a5f8e1a><!----> <!----> <div class="nuxt-content" data-v-9a5f8e1a></div></rb-notice-box></div> <div class="document document--item z-30" data-v-9a5f8e1a><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-9a5f8e1a><h1 data-v-9a5f8e1a>J'ai refait et migré tout mon site web</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-9a5f8e1a><time datetime="2024-10-26" data-v-9a5f8e1a>
+        samedi 26 octobre 2024
+      </time> <!----></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-9a5f8e1a><strong id="tags__197" class="taxonomy-label">
+    Tags
+  </strong> <ul aria-labelled-by="tags__197" class="taxonomy-items"><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/vuejs" class="no-underline">vuejs</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/nuxt" class="no-underline">nuxt</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/migration" class="no-underline">migration</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/wordpress" class="no-underline">wordpress</nuxtlink></li><li class="px-2 py-1 mb-3 mr-3 is-hoverizable"><nuxtlink to="/blog/tag/static-site" class="no-underline">static-site</nuxtlink></li> <li class="category px-2 py-1 mb-3 mr-3 is-hoverizable"><a href="/blog/category/projects" class="no-underline">📁 projects</a></li></ul></div> <div class="body mt-10" data-v-9a5f8e1a><!----> <div class="nuxt-content" data-v-9a5f8e1a data-v-9a5f8e1a><h2 id="un-projet-de-longue-haleine" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#un-projet-de-longue-haleine" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Un projet de longue haleine</h2>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>En 2020, j'<a href="/blog/2020/09/porting-all-my-content" title="Porting all my content into a static-site" data-v-9a5f8e1a>avais commencé la refonte de mon site
+web</a>. Le projet était déjà bien avancé avec environ
+80% du travail complété, incluant :</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Une ré-implémentation complète du système de taxonomie (étiquettes,
+catégories)</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>L'intégration de <a href="https://v1.tailwindcss.com/" rel="nofollow noopener noreferrer" target="_blank" title="A utility-first CSS framework for rapidly building custom designs." data-v-9a5f8e1a data-v-9a5f8e1a>Tailwind CSS</a>, qui commençait alors à
+gagner en popularité</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Une base solide pour une architecture moderne</li>
+</ul>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Puis la pandémie de <abbr title="Coronavirus disease 2019" lang="en" data-v-9a5f8e1a data-v-9a5f8e1a>COVID-19</abbr>
+est arrivée, me forçant à mettre le projet en pause pour me concentrer sur mon
+emploi. En 2022, un heureux événement est venu bouleverser mes priorités : je
+suis devenu père. Après avoir bénéficié du
+<a href="https://www.rqap.gouv.qc.ca/fr" rel="nofollow noopener noreferrer" target="_blank" data-v-9a5f8e1a data-v-9a5f8e1a>Régime Québécois d'Assurance Parentale</a> avec
+mon épouse, j'ai choisi de devenir père à temps plein.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Ce n'est qu'à l'automne 2024, lorsque mon enfant a commencé la garderie, que
+j'ai pu reprendre ce projet qui ne m'avait jamais vraiment quitté l'esprit.</p>
+<h2 id="objectifs-du-projet" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#objectifs-du-projet" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Objectifs du projet</h2>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Mon but est de faire un site qui est :</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Multilingue et fait ainsi nativement. Si je peux me permettre; d'adapter
+l'expression
+<a lang="en" href="https://www.interaction-design.org/literature/topics/mobile-first" data-v-9a5f8e1a data-v-9a5f8e1a>Mobile first</a>,
+je dirais: <span lang="en" data-v-9a5f8e1a data-v-9a5f8e1a>Multilingual first</span> — puis pouvoir
+afficher correctement et de façon adaptée aux préférences du visiteur les
+dates, nombres, libellés de navigation, fuseau horaire, etc.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Pouvoir travailler avec le contenu comme je le fais avec mes notes. Des
+fichiers texte, dans des dossiers. Bien que j'utilise Markdown tous les jours
+depuis 2013, mon site web n'était pas fait pour me permettre ceci sans que
+j'ai a faire tout ce travail.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Minimiser la dépendance d'un serveur pour mon site web, quelque chose comme
+des fichiers HTML peut vivre très longtemps</li>
+</ul>
+<h2 id="le-défi-de-la-migration" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#le-d%C3%A9fi-de-la-migration" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Le défi de la migration</h2>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Les derniers 20% du projet représentaient un défi majeur : la migration du
+contenu. Pour faciliter ce processus, j'ai développé et publié un outil
+spécialisé: <a href="https://github.com/renoirb/process-wordpress-xml" rel="nofollow noopener noreferrer" target="_blank" title="Extract WordPress Contents by processing WordPress XML backup" data-v-9a5f8e1a data-v-9a5f8e1a>process-wordpress-xml</a>, qui permet
+d'extraire le contenu des sauvegardes WordPress au format XML.</p>
+<h3 id="processus-de-migration-automatisé" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#processus-de-migration-automatis%C3%A9" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Processus de migration automatisé</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Le processus de migration comprend plusieurs étapes :</p>
+<ol data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Export du contenu WordPress en format XML</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Traitement automatisé avec <code data-v-9a5f8e1a data-v-9a5f8e1a>process-wordpress-xml</code> pour :
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Extraire les articles et pages</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Préserver les métadonnées</li>
+</ul>
+</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Organisation des fichiers dans la nouvelle structure</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Validation et nettoyage du contenu converti</li>
+</ol>
+<rb-notice-box variant="info" class="my-5" data-v-9a5f8e1a data-v-9a5f8e1a>
+<strong slot="header" data-v-9a5f8e1a data-v-9a5f8e1a>Pourquoi un nouvel outil ?</strong>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>J'ai choisi de développer mon propre outil de migration car je n'en avais pas
+trouvé qui permettait de prendre le contenu directement du fichier de sauvegarde
+de WordPress au format XML.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Ce format me semblait très approprié pour une migration car il est déjà utilisé
+pour faire des migrations.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Aussi, j'ai pu:</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Débroussailler les articles écrits en Français et ceux en Anglais, puis
+détecter et ajouter un attribut <code data-v-9a5f8e1a data-v-9a5f8e1a>locale: fr-CA</code> (et <code data-v-9a5f8e1a data-v-9a5f8e1a>en-CA</code>) pour chaque page.
+Je compte rendre ce site complètement multilingue et de savoir la langue pour
+chaque page va aider.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Adapter plus spécifiquement pour mon choix technologique de fichiers HTML
+statique dans un dossier.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Faciliter la réutilisation pour d'autres projets similaires</li>
+</ul>
+</rb-notice-box>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Une fois les données extraites du fichier backup en <abbr data-v-9a5f8e1a data-v-9a5f8e1a>XML</abbr> de
+WordPress, je pourrai graduellement:</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Faire une conversion Markdown</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Remplacer et ajuster les balises
+<a href="https://wordpress.com/support/wordpress-editor/blocks/shortcode-block/" lang="en" title="A WordPress-specific code that would normally require lots of complicated code." data-v-9a5f8e1a data-v-9a5f8e1a>WordPress "short codes"</a>
+comme par exemple «<a href="https://codex.wordpress.org/Gallery_Shortcode" rel="nofollow noopener noreferrer" target="_blank" data-v-9a5f8e1a data-v-9a5f8e1a><code data-v-9a5f8e1a data-v-9a5f8e1a>[gallery]</code></a>»,
+«<code data-v-9a5f8e1a data-v-9a5f8e1a>[youtube]</code>» et autre du genre.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Ajuster ou je ferai héberger séparément les médias du contenu pour les faire
+héberger sur un CDN. Je les entretiens sur
+<a href="https://github.com/renoirb/site-assets/" rel="nofollow noopener noreferrer" target="_blank" data-v-9a5f8e1a data-v-9a5f8e1a>GitHub.com/renoirb/site-assets</a> et
+j'ai pu y ajouter un alias du genre
+<code data-v-9a5f8e1a data-v-9a5f8e1a>~/assets/content/blog/2020/02/storybook-value-number.png</code> et savoir ou aller
+chercher l'image dynamiquement et de façon "lazy" ce qui aidera la vitesse de
+chargement de la page.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Annoter dans le <abbr data-v-9a5f8e1a data-v-9a5f8e1a>HTML</abbr> les abbreviations, et les mots qui ne sont
+pas dans la langue de l'article</li>
+</ul>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Pour cette partie de la conversion, j'ai décidé d'expérimenter avec les
+<span lang="en" data-v-9a5f8e1a data-v-9a5f8e1a>Large Language Models</span> (<abbr data-v-9a5f8e1a data-v-9a5f8e1a>LLM</abbr>) et peux
+conserver le même contenu. Extraire le contenu et l'écrire dans des fichiers,
+c'est facile. Mais ré-écrire et normaliser des fichiers textes qui changent
+beaucoup d'une page a l'autre, un <abbr data-v-9a5f8e1a data-v-9a5f8e1a>LLM</abbr> peux faire ça très bien!</p>
+<h3 id="système-de-taxonomie-amélioré" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#syst%C3%A8me-de-taxonomie-am%C3%A9lior%C3%A9" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Système de taxonomie amélioré</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>L'un des aspects les plus intéressants de cette migration a été la mise en place
+d'un système de taxonomie flexible et multilingue qui permet :</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>La gestion des tags et catégories via des fichiers YAML</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Des libellés personnalisés en Français et en Anglais</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Une structure claire pour la navigation et la découverte du contenu</li>
+</ul>
+<h2 id="prochaines-étapes" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#prochaines-%C3%A9tapes" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Prochaines étapes</h2>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Bien que le site soit maintenant fonctionnel, plusieurs améliorations sont
+prévues :</p>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Finalisation de l'interface multilingue (voir
+<a href="https://github.com/renoirb/site/issues/77" rel="nofollow noopener noreferrer" target="_blank" data-v-9a5f8e1a data-v-9a5f8e1a>ticket <strong data-v-9a5f8e1a data-v-9a5f8e1a>renoirb/site</strong> #77</a>)</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Mise a jour de Vue, Nuxt, et Nuxt Content</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Restructuration dans le code pour que le projet Nuxt (e.g. dans
+<a href="https://github.com/renoirb/site" rel="nofollow noopener noreferrer" target="_blank" data-v-9a5f8e1a data-v-9a5f8e1a>GitHub <strong data-v-9a5f8e1a data-v-9a5f8e1a>renoirb/site</strong></a>), qu'il n'y ait que
+le contenu, la définition des routes et que le reste soit dans des modules
+écrits en isolation.</li>
+</ul></div> <div class="clearfix" data-v-9a5f8e1a></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-e0c1750e data-v-9a5f8e1a><div class="text-left" data-v-e0c1750e><a href="/blog/2024/10/insert-custom-javascript-in-nuxt-config" lang="en-CA" class="hover:underline item-prev" data-v-e0c1750e>
+      Insert ESM Module as custom script tag with contents with Nuxt v2
+    </a></div> <div class="text-right" data-v-e0c1750e><span data-v-e0c1750e> </span></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-94d2db4a><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-94d2db4a><dl class="contact items-item disposition-item" data-v-94d2db4a><dt class="mb-4 font-serif text-2xl" data-v-94d2db4a><a href="/contact" class="underline" data-v-94d2db4a>Contact</a></dt> <dd data-v-94d2db4a>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-94d2db4a>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-94d2db4a><span id="why-fou-de-la-pouitte" class="sr-only" data-v-94d2db4a>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://mastodon.social/@renoirb" data-v-94d2db4a>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://w3c.social/@renoirb" data-v-94d2db4a>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-94d2db4a>v4.0.1-dev</dd> <span class="inline-flex" data-v-94d2db4a><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-94d2db4a><dl lang="fr-CA" class="see-also" data-v-94d2db4a><dt data-v-94d2db4a>Voir aussi…</dt> <dd data-v-94d2db4a><a href="/ligne-editoriale" data-v-94d2db4a> Ligne éditoriale </a></dd> <dd data-v-94d2db4a><a href="/projects" data-v-94d2db4a> Projets </a></dd> <dd data-v-94d2db4a><a href="/glossary" lang="en" data-v-94d2db4a> Glossary </a></dd> <dd data-v-94d2db4a><a href="/code-review" lang="en" data-v-94d2db4a>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/_nuxt/static/1743662357/blog/2024/10/refonte-majeure-de-mon-site-web/state.js"></script><script src="/_nuxt/a2417c9.js" defer></script><script src="/_nuxt/1c0b1e2.js" defer></script><script src="/_nuxt/643194b.js" defer></script><script src="/_nuxt/b579a54.js" defer></script><script src="/_nuxt/8197f60.js" defer></script><script src="/_nuxt/4f6fc7e.js" defer></script><script src="/_nuxt/40c1dae.js" defer></script><script src="/_nuxt/53143b1.js" defer></script>
+  </body>
+</html>
