@@ -1,7 +1,7 @@
 ---
 meta:
   theme: elegant
-  lastModified: 2024-10-24T12:22:00
+  lastModified: 2025-04-03T12:22:00
   canonical: http://registry.jsonresume.org/renoirb
   alternate: https//renoirb.github.io/site/resume
   source: https://gist.github.com/renoirb/65fccabc7dea76fea70dccb14077ab0d#gistcomment-3010170
@@ -16,18 +16,11 @@ basics:
   url: &url https://renoirboulanger.com
   website: *url
   summary: |
-    Deep technical expert in the Open Web Platform, crafting framework-agnostic solutions through native
-    browser capabilities and Web Standards.
-    Full-stack developer with comprehensive depth - from  kernel-level system tracing through
-    JavaScript framework internals to precise CSS implementations.
-    Approaches solutions with systematic analysis across all layers, emphasizing longevity through
-    standards-based patterns over framework-specific features.
-    Ensures thoughtful attention to visual details, accessibility, and internationalization to
-    support diverse user needs across languages and cultures.
-    Creates verifiable solutions through test-driven development (TDD), detailed technical
-    specifications, and systematic package management.
-    Demonstrates expertise in high-performance web server infrastructure and frontend implementations,
-    maintaining careful consideration for speed, visual consistency, and adaptability.
+    Experienced full-stack developer dedicated to creating framework-agnostic web solutions that excel in Accessibility,
+    Performance, and Code Quality. Strong emphasis on Web Standards, continuous testing, and test-driven development (TDD).
+    A polyglot programmer contributing to open-source projects and architecting robust package management systems.
+    Designed and maintained hosting infrastructure for high-visibility sites with expertise in Cloud IaC,
+    Containers, and continuous deployment systems focusing on reproducible builds and consistent environments.
   location:
     city: Montréal
     region: Quebec
@@ -46,14 +39,48 @@ basics:
       username: renoirb
       url: https://gitlab.com/renoirb
   highlights:
-    - 'Polyglot programmer implementing precise solutions in TypeScript, ECMAScript, JavaScript, PHP, Bash, GNU Make, C#, Python'
+    - 'Polyglot programmer implementing precise solutions in Deno, TypeScript, ECMAScript, JavaScript, PHP, Bash, GNU Make, C#, Python'
+    - 'Expertise in Web Standards, Accessibility (WCAG), Internationalization (i18n), and Localization (l10n)'
     - 'Experience in Infrastructure As Code with Salt Stack, Vagrant, Ansible, Puppet'
     - 'Technical contributor to open-source projects with publicly available implementations: Nuxt.js documentation, Alpine Linux package maintenance, MediaWiki compatibility tables, and Mozilla Firefox Accounts'
     - 'Developed and documented reusable technical solutions like type-safe bitmask operations in JavaScript, Salt Stack infrastructure states, and automated MediaWiki content conversion tools'
     - 'Architected documented hosting infrastructure for high-visibility sites including W3C’s WebPlatform Docs project https://webplatform.github.io/ and The World Wide Web’s 25th anniversary site https://www.w3.org/webat25/'
-    - 'Deep expertise in Cloud IaaS, Containers, and continuous deployment systems with emphasis on reproducible builds and consistent environments'
 
 work:
+  - name: &name Self-Employed
+    company: *name
+    position: Open Source Web Components Specialist (part time)
+    location: Montréal, QC, Canada
+    remote: false
+    contract: false
+    startDate: 2024-09-01
+    url: &url 'https://renoirb.com/resume/rework.html'
+    website: *url
+    summary: >
+      Developing framework-agnostic "headless UI" web component libraries using native browser capabilities and Web Standards.
+      Implementing modern serverless architectures with Deno and CloudFlare Workers for edge computing.
+      Creating a modular system that implements W3C Web Components Community Group "Context" community protocol to enable
+      seamless integration across any JavaScript framework environment.
+    highlights:
+      - "Creating and documenting implementations of the W3C Web Components Community Group's Context API protocol, enabling sophisticated component communication without direct dependencies"
+      - 'Architected renoirb-esm-modules (https://github.com/renoirb/renoirb-esm-modules/): A collection of unstyled, framework-agnostic Web Components that consume structured data to generate consistent, accessible experiences'
+      - 'Developed a data-driven document generation system where a single YAML source produces both PDF documents and interactive web experiences —or this document—, demonstrating clear separation of content and presentation.'
+      - 'Created Archivator (npm: archivator): A system for content preservation enabling historical comparison, indexing, and offline search capabilities (https://renoirb.github.io/archivator-demo/)'
+      - 'Created tuples-boolean-bitmasker (npm: tuples-boolean-bitmasker): A library that converts object boolean properties into bitmasks for efficient, type-safe testing of complex conditional states in JavaScript applications'
+    contributions:
+      - name: '@renoirb/app-layout'
+        url: https://github.com/renoirb/renoirb-esm-modules/tree/main/packages/app-layout-element
+        description: Application shell component providing consistent document structure and navigation
+      - name: '@renoirb/context-api'
+        url: https://github.com/renoirb/renoirb-esm-modules/tree/main/packages/context-api
+        description: Implementation of W3C Context API protocol for cross-component communication
+      - name: archivator
+        url: https://www.npmjs.com/package/archivator
+        description: Content preservation system with indexing and search capabilities
+      - name: tuples-boolean-bitmasker
+        url: https://www.npmjs.com/package/tuples-boolean-bitmasker
+        description: Type-safe bitmask operations for efficient state management
+
   - name: &name Full-time parenting
     company: *name
     position: Father
@@ -62,8 +89,6 @@ work:
     contract: false
     startDate: 2022-06-01
     endDate: 2024-09-01
-    url: &url 'https://renoirboulanger.com/blog/'
-    website: *url
     summary: Full-time caregiver for children.
 
   - name: &name GoTo Inc.
@@ -251,80 +276,79 @@ work:
     company: *name
     position: Senior Software Developer
     remote: false
-    contract: false
+    contract: true
     url: &url https://www.alayacare.com
     website: *url
     hidden: false
     startDate: '2016-11-07'
-    endDate: '2017-05-01'
-    summary:
-      During my tenure at AlayaCare, I focused on optimizing Docker Compose
-      builds and enhancing team productivity through streamlined workspace
-      setups. I led initiatives to automate development environment
-      configurations, reducing setup time from days to hours. My efforts
-      significantly improved collaboration and efficiency across the software
-      development team.
+    endDate: '2017-02-17'
+    summary: >-
+      During my time at AlayaCare, I focused on infrastructure automation and developer
+      experience improvements. I implemented comprehensive Docker Compose configurations that
+      standardized development environments, reducing new developer onboarding time from days to hours.
+      I also developed automated testing infrastructure using headless browsers in Docker containers
+      with Ansible configuration management, improving their quality assurance processes.
     highlights:
-      - Overhaul of the Software development team’s workspace setup, which
-        allowed anyone to have exactly the same setup by invoking a few simple
-        commands. A fresh computer would be ready after 1h instead of taking
-        multiple days and asking around to other colleagues.
+      - Designed and implemented a complete workspace automation system that reduced developer
+        onboarding time from multiple days to approximately one hour through consistent Docker
+        Compose configurations.
+      - Created a headless browser testing infrastructure using Docker and Ansible playbooks for
+        automated end-to-end testing, allowing to have tailored testing environments run locally
+        and within infrastructure with the same runtime configuration as production
+      - Prototyped an HTML/CSS solution for complex medical form generation that converted
+        structured API data into print-ready documents, using DOM visibility calculations to
+        automatically distribute content between form fields and annexes
     technologies:
       - GNU Make
       - Ansible
       - Docker Compose
       - Docker
+      - Headless Browsers
+      - Automated Testing
+      - CI/CD
 
-  - name: Colloquial/Betastream via 6973051 Canada Inc. (remote)
+  - name: Colloquial/Betastream via 6973051 Canada Inc.
     client: &client Colloquial / Betastream
     company: *client
-    position: Systems Delivery Blueprinting Specialist (remote)
+    position: DevOps Automation Specialist
     remote: true
     contract: true
-    url: &url http://colloquial.com/
-    website: *url
     hidden: false
     startDate: '2016-01-01'
     endDate: '2016-06-17'
-    description:
-      The J. Walter Thompson Company (JWT) has teamed up with Group SJR, a unit
-      of Hill+Knowlton Strategies, to launch a new content marketing unit called
-      Colloquial. Headquartered at JWT’s New York office, Colloquial is primed
-      to be the “the intersection of advertising, publishing and public
-      relations, with storytelling and creativity at its core.”
-    summary:
-      I designed and implemented robust cloud orchestration solutions, automating
-      deployment processes across multiple cloud platforms.
+    description: >-
+      The J. Walter Thompson Company (JWT) partnered with Group SJR to launch Colloquial,
+      a content marketing unit based in New York. Betastream provided technical
+      implementation services for Colloquial's client projects, serving major brands
+      including Johnson & Johnson, Exxon Mobil, FannieMae, and Walmart.
+    summary: >-
+      Designed and implemented a comprehensive infrastructure architecture to replace manual
+      AWS deployments, establishing a vendor-neutral cloud orchestration system with standardized
+      deployment patterns across environments. Created a security-focused approach with clear
+      separation between public-facing and administrative interfaces, mandatory TLS encryption,
+      and consistent naming conventions across all system components.
     highlights:
-      - Introduce and coach the team Continuous Delivery and Code release, and
-        deployment system.
-      - Plan, Review, and Build a next-generation infrastructure and deployment
-        system for the project production pipeline.
+      - Architected complete cloud orchestration solution using SaltStack that worked consistently
+        across AWS, Google Cloud, and Azure, with standardized naming conventions and deployment paths
+      - Established comprehensive security model separating public origins from admin interfaces with
+        distinct hostnames, IP restrictions, and client certificate authentication
+      - Implemented atomic deployment system using timestamped archives and symbolic links, enabling
+        zero-downtime deployments and instant rollbacks across all application servers
+      - Integrated Fastly CDN with custom Varnish Configuration Language (VCL) testing environment
+        and consistent TLS implementation across all communication layers
     highlights.more:
-      - Released a Cloud Orchestration solution using Salt Stack, running on
-        Amazon AWS, Google Cloud Platform and Microsoft Azure, where we can
-        manage automatically Web Applications, deployment levels, build steps
-        and dependencies consistently;
-      - Introduced HashiCorp Vagrant workflow to automatically manage Web
-        Developer’s PHP setup using VirtualBox and Canonical Ubuntu Linux 16.04
-        LTS. By doing so, every developer got the same Web Server setup as in
-        production;
-      - Introduced automated packaging for every WordPress projects, by
-        leveraging Composer’s archive feature. The automated build process would
-        first pull all dependencies, run code-quality linters, and if
-        successful, create a Zip archive. By merging on master on Bitbucket
-        would generate an archive, and the continuous-delivery system make all
-        web server nodes to download the archive, extract its contents in a
-        folder. Deploying a release would be changing the “live” symbolic to the
-        newly extracted package;
-      - Introduced advanced Varnish caching with Fastly. Created HashiCorp
-        Vagrant workspace network (e.g. one Web Server VM, one Database server,
-        one Varnish VM) to allow working on Varnish VCL caching scripts.
+      - Created systematic naming conventions for all system components (hostnames, database names,
+        certificate paths, archive storage) ensuring predictable infrastructure management
+      - Developed self-healing capabilities for critical services with automatic monitoring and recovery
+      - Established standardized methods for database management including automated anonymization
+        for development environments and consistent backup procedures
+      - Designed developer workspace automation allowing identical environments across all team members
     technologies:
       - AWS
       - Azure
       - CloudFlare
       - EC2
+      - Fastly
       - GCP
       - Jenkins
       - Monit
@@ -339,7 +363,7 @@ work:
   - name: CAE via 6973051 Canada Inc.
     client: &client CAE
     company: *client
-    position: Systems Delivery Blueprinting Specialist
+    position: DevOps Automation Specialist
     location: Montréal, QC, Canada
     remote: false
     contract: true
@@ -350,31 +374,34 @@ work:
     endDate: '2016-06-01'
     description:
       CAE is a global leader in training for the civil aviation, defence and
-      security, and healthcare markets. Backed by a record of more than 70 years
-      of industry firsts, we continue to help define global training standards
-      with our innovative virtual-to-live training solutions to make flying
-      safer.
+      security, and healthcare markets. Their systems operate in highly secure,
+      air-gapped environments with strict compliance requirements.
     summary:
-      At CAE, I provided expert guidance on continuous delivery and code release
-      strategies, contributing to the evaluation and implementation of real-time
-      monitoring solutions. I collaborated with cross-functional teams to assess
-      and recommend open-source tools, ensuring compliance with stringent
-      security requirements. My initiatives facilitated seamless deployment and
-      monitoring of critical systems.
+      Deliberately brought in as a "disruptor" to introduce modern Infrastructure as Code
+      (IaC) practices to CAE's established environment. While another department used Chef
+      (Ruby-based), I implemented accessible solutions using Bash scripts - a language
+      the existing team was already comfortable with. I developed deployment and monitoring
+      solutions for air-gapped networks with self-managed TLS certificate authorities,
+      establishing patterns for securely automating systems that were previously manually
+      configured, while meeting strict aerospace industry security requirements.
     highlights:
-      - Introduce and coach the team Continuous Delivery and Code release, and
-        deployment system. Including techniques for preparing “playbooks”
-        packages for deployment within the airtight (securized) private network.
-      - Compared Prometheus, Heka, Ganglia, Grafana, Kibana, and other
-        TimeSeries aggregation and visualization systems. The ideal system had
-        to take into account the airtight networking policies which included
-        corporate TLS certificate, and deployment targets would often be
-        inaccessible to the Internet.
+      - Collaboratively introduced Infrastructure as Code (IaC) principles through accessible
+        technologies (Bash), meeting the team where they were comfortable rather than imposing
+        unfamiliar Ruby-based solutions
+      - Created automation scripts that configured developer tools (Git, Python, NPM, cURL)
+        to explicitly trust internal certificate chains, solving a common pain point in
+        secured environments
+      - Developed deployment techniques for "playbooks" packages that could function
+        within airtight network boundaries while maintaining consistency across environments
+      - Evaluated and implemented monitoring solutions including Prometheus, Mozilla Heka,
+        Monit, and Grafana, adapting them to function with corporate TLS certificates
     highlights.more:
-      - Introduced a method to maintain network of Virtual Machines with
-        HashiCorp Vagrant leveraging VirtualBox private networking
-      - Proposed a configuration management using Bash 4 so that current system
-        administrators could use a language they already know.
+      - Established patterns for downloading dependencies to predictable locations for
+        approved transfer across security boundaries
+      - Demonstrated reproducible environment creation using HashiCorp Vagrant with
+        VirtualBox private networking
+      - Created documentation for TLS certificate handling that became reference
+        material for other secured environments
     technologies:
       - Beats
       - ElasticSearch Kibana
@@ -401,26 +428,28 @@ work:
     hidden: false
     startDate: '2015-08-01'
     endDate: '2016-01-01'
-    description:
+    description: >-
       Mozilla is a global, nonprofit organization dedicated to making the Web
       better. We emphasize principle over profit and believe that the Web is a
       shared public resource to be cared for, not a commodity to be sold. We
       work with a worldwide community to create open source products like
       Mozilla Firefox, and to innovate for the benefit of the individual and the
       betterment of the Web.
-    summary:
-      As a Subject Matter Expert on the Compatibility Data Project at Mozilla, I
-      spearheaded software architecture discussions and collaborated with
-      stakeholders to define project requirements. My contributions included
-      developing innovative solutions for data visualization and storage,
-      enabling developers to access accurate compatibility information across
-      various web browsers.
+    summary: >-
+      Contracted as a Product Owner for the Browser Compatibility Data project based on my previous
+      experience with W3C's WebPlatform project. My role primarily involved participating in
+      discussions regarding identifier systems for browser compatibility data, attending meetings,
+      and preparing documentation and slide decks to communicate technical concepts to stakeholders.
     highlights:
-      - Communicate with various stakeholders about the requirements and
-        features for the system.
-    highlights.more:
-      - Created a client-side DataTable rendering system with Vanilla JavaScript
-      - Prototyped a file-based Compatibility data storage
+      - Communicated with various stakeholders about the requirements and features for the
+        compatibility data system
+      - Participated in discussions about identifier schema designs for browser compatibility data
+      - Created presentation materials and documentation explaining technical concepts
+      - Attended meetings to represent the project's technical needs
+    technologies:
+      - HTML/CSS
+      - Documentation
+      - Technical Communication
 
   - name: W3C/MIT via 6973051 Canada Inc. (remote)
     client: &client W3C/MIT
@@ -440,12 +469,14 @@ work:
       and CEO Jeffrey Jaffe, W3C’s mission is to lead the Web to its full
       potential.
     summary:
-      At W3C/MIT, I played a key role in maintaining and enhancing the
-      WebPlatform Docs project, overseeing infrastructure stability and feature
-      development. I implemented robust monitoring solutions and streamlined
-      deployment processes, ensuring optimal performance and reliability. My
-      efforts contributed to the project's success in becoming a premier
-      resource for web developers worldwide.
+      At W3C/MIT, my role was to maintain stability, improve features,
+      strengthen the infrastructure of the WebPlatform Docs project site,
+      and act as a technical liaison with Open-source communities.
+      The project lost its funding in August 2015 and was meant to become
+      an independent Web Developer documentation site maintained by an
+      international community of contributors, sponsored by Adobe, Apple,
+      DreamHost, Fastly, Facebook, Google, Intel, Mozilla, Microsoft, Nokia,
+      and Opera.
     highlights:
       - Convert and preserve many hundred thousand edits, and keep trace of the
         content edition contributors and date of the change from MediaWiki into

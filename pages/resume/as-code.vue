@@ -30,6 +30,15 @@
             </li>
             <li>
               <a
+                href="https://renoirb.com/resume/rework.html"
+                title="Renoir Boulanger Resume with Web Components reading JSONResume"
+                target="_blank"
+              >
+                HTML using Web Components reading JSONResume
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://registry.jsonresume.org/renoirb"
                 title="Renoir Boulanger Resume in HTML"
                 target="_blank"
