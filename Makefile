@@ -43,4 +43,4 @@ deploy-prod:
 	node_modules/.bin/nuxt-ts generate
 	cp static/resume/index.html dist/resume/
 	cp -r content dist/content
-	node_modules/.bin/push-dir --dir=dist --branch=cf-pages --local-branch-name=2020 --cleanup
+	node_modules/.bin/push-dir --dir=dist --branch=cf-pages-prod --local-branch-name=2020 --cleanup
