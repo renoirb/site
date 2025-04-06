@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1743910512",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2009\u002F10\u002Frealisation-du-site-ecurie-royale",config:{content:{dbHash:"4475a028"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

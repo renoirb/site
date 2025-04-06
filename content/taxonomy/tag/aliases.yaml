@@ -1,0 +1,9 @@
+aliases:
+  - key: fraude
+    to: fraud
+  - key: evenements
+    to: events
+  - key: securite
+    to: security
+  - key: mysql
+    to: data-persistence

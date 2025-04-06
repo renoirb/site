@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1743910512",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2013\u002F04\u002Fastuce-concernant-le-rafraichissement-du-contenu-des-pages-avec-utilisation-dajax",config:{content:{dbHash:"4475a028"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

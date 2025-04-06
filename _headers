@@ -1,0 +1,15 @@
+#
+# CloudFlare Pages headers
+#
+#
+# Bookmarks:
+# - https://developers.cloudflare.com/pages/configuration/headers/
+# - https://blog.cloudflare.com/custom-headers-for-pages/
+#
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/esm-modules/*.mjs
+  Content-Type: text/javascript
+

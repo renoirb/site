@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1743910512",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2011\u002F02\u002Fconfoo-cest-dans-moins-de-14-jours",config:{content:{dbHash:"4475a028"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

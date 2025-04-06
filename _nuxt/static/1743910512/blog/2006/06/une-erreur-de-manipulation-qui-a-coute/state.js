@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1743910512",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2006\u002F06\u002Fune-erreur-de-manipulation-qui-a-coute",config:{content:{dbHash:"4475a028"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

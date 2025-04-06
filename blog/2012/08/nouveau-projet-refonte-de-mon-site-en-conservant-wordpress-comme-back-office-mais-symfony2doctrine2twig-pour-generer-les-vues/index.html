@@ -1,0 +1,115 @@
+<!doctype html>
+<html data-n-head-ssr class="layout--default zone__sandwich light-mode" lang="fr-CA" data-n-head="%7B%22class%22:%7B%22ssr%22:%5B%22layout--default%22,%22zone__sandwich%22,%22light-mode%22%5D%7D,%22lang%22:%7B%22ssr%22:%22fr-CA%22%7D%7D">
+  <head>
+    <title>Nouveau projet: Refonte de mon site en conservant WordPress comme back-office, mais Symfony2 / Doctrine2 / Twig pour générer les vues - Renoir Boulanger</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content=""><meta data-n-head="ssr" property="og:image" content="https://secure.gravatar.com/avatar/cbf8c9036c204fe85e15155f9d70faec?s=400"><meta data-n-head="ssr" property="twitter:card" content="summary_large_image"><meta data-n-head="ssr" property="twitter:site" content="@renoirb"><base href="/site/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="alternate" type="application/rss+xml" title="Renoir Boulanger’s Page Updates RSS Feed" href="https://renoirboulanger.com/feed.xml"><link data-n-head="ssr" rel="alternate" type="application/feed+json" title="Renoir Boulanger’s Page Updates Feed" href="https://renoirboulanger.com/feed.json"><script data-n-head="ssr" src="./main.mjs" type="module" defer></script><link rel="preload" href="/site/_nuxt/8ca6126.js" as="script"><link rel="preload" href="/site/_nuxt/4f6fc7e.js" as="script"><link rel="preload" href="/site/_nuxt/vendors/app.css" as="style"><link rel="preload" href="/site/_nuxt/a42d236.js" as="script"><link rel="preload" href="/site/_nuxt/app.css" as="style"><link rel="preload" href="/site/_nuxt/53143b1.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog.css" as="style"><link rel="preload" href="/site/_nuxt/1c0b1e2.js" as="script"><link rel="preload" href="/site/_nuxt/643194b.js" as="script"><link rel="preload" href="/site/_nuxt/b579a54.js" as="script"><link rel="preload" href="/site/_nuxt/pages/blog/_year/_month/_slug.css" as="style"><link rel="preload" href="/site/_nuxt/8197f60.js" as="script"><link rel="stylesheet" href="/site/_nuxt/vendors/app.css"><link rel="stylesheet" href="/site/_nuxt/app.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog.css"><link rel="stylesheet" href="/site/_nuxt/pages/blog/_year/_month/_slug.css"><link rel="preload" href="/site/_nuxt/static/1743910512/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues/state.js" as="script"><link rel="preload" href="/site/_nuxt/static/1743910512/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues/payload.js" as="script">
+  </head>
+  <body>
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function (){"use strict";var e=window,t=document,s=t.documentElement,n=["dark","light"],a=function(e){for(var s=e+"=",n=t.cookie.split(";"),a=0;a<n.length;a++){for(var o=n[a];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(s))return o.substring(s.length,o.length)}return null}("nuxt-color-mode")||"light",o="system"===a?i():a;function r(e){var t=e+"-mode";s.classList?s.classList.add(t):s.className+=" "+t}function c(t){return e.matchMedia("(prefers-color-scheme"+t+")")}function i(){if(e.matchMedia&&"not all"!==c("").media)for(var t of n)if(c(":"+t).matches)return t;return"light"}r(o),e["__NUXT_COLOR_MODE__"]={preference:a,value:o,getColorScheme:i,addClass:r,removeClass:function(e){var t=e+"-mode";s.classList?s.classList.remove(t):s.className=s.className.replace(new RegExp(t,"g"),"")}}}();
+</script><div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="layouts--default"><!----> <nav class="app-side-bar--component fixed z-40 w-full top z-50" data-v-69448e2c data-v-45eee548><div class="zone__sandwich__top container flex items-center justify-between py-4 mx-auto" style="position:relative" data-v-69448e2c><!----> <div class="app-side-bar__identity md:px-5 flex items-center" data-v-69448e2c><button aria-label="Open Menu" class="md:hidden ml-5 mr-2" data-v-69448e2c><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8" data-v-69448e2c><path d="M4 6h16M4 12h16M4 18h16" data-v-69448e2c></path></svg></button> <a href="/site/" data-wip="components/global/AppSideBar.vue" class="identity__text font-semibold nuxt-link-active" data-v-69448e2c>
+        Renoir Boulanger
+      </a></div> <div class="app-side-bar__nav flex items-center" data-v-69448e2c><div class="md:flex md:justify-between md:bg-transparent text-is-italicized hidden" data-v-69448e2c><a href="/site/blog" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded nuxt-link-active" data-v-45eee548>
+      Blog
+    </a><a href="/site/projects" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Projects
+    </a><a href="/site/resume/as-code" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      Resume
+    </a><a href="/site/hello" class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded" data-v-45eee548>
+      About
+    </a></div></div></div> <aside class="md:invisible app-side-bar__aside fixed top-0 left-0 visible w-64 h-full overflow-auto transition-all duration-500 ease-in-out transform -translate-x-full" data-v-69448e2c><div class="app-side-bar__identity flex items-center w-full h-16 p-4 border-b" data-v-69448e2c><a href="/site/" class="identity__text nuxt-link-active" data-v-69448e2c>Renoir Boulanger</a></div> <div data-v-69448e2c><a href="/site/blog" class="hover:bg-teal-500 hover:text-white flex items-center p-4 nuxt-link-active" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Blog
+        </span></a><a href="/site/projects" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Projects
+        </span></a><a href="/site/resume/as-code" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          Resume
+        </span></a><a href="/site/hello" class="hover:bg-teal-500 hover:text-white flex items-center p-4" data-v-69448e2c><span class="mr-2" data-v-69448e2c>
+          About
+        </span></a></div></aside></nav> <div class="fixed inset-0 z-40 transition-opacity" style="display:none"><div class="absolute inset-0 bg-black opacity-75"></div></div> <main class="zone__sandwich__meat middle container z-40 mx-auto"><div data-wip="layout/default.vue" class="md:m-10 grid grid-cols-1 m-5"><section data-wip="pages/blog.vue" class="pages__blog--parent"><div class="pages-blog--parent--top justify-items-stretch sm:grid-cols-2 sm:grid-flow-row md:grid-flow-col-dense grid grid-cols-1 gap-4"><nav class="breadcrumb" data-v-a3d5a040><ol class="list-none p-0 inline-flex" data-v-a3d5a040><li class="flex items-center" data-v-a3d5a040><a href="/site/blog" class="nuxt-link-active" data-v-a3d5a040>blog</a></li><li class="flex items-center" data-v-a3d5a040><a href="/site/blog/2012" class="nuxt-link-active" data-v-a3d5a040>2012</a></li><li class="flex items-center" data-v-a3d5a040><a href="/site/blog/2012/08" class="nuxt-link-active" data-v-a3d5a040>08</a></li></ol></nav></div> <!----> <div class="pages-blog--parent--bottom"><div><!----> <div><div class="pages__blog__year__month--parent"><div class="pages__blog__year__month__slug--item" data-v-9a5f8e1a><div data-v-9a5f8e1a><rb-notice-box variant="warn" role="alert" class="disposition-parent app-alert-box my-4" data-v-9a5f8e1a data-v-9a5f8e1a><!----> <!----> <div class="nuxt-content" data-v-9a5f8e1a><p data-v-9a5f8e1a>Il semble que je n’ait pas continué sur cette idée, ni rien publié de concrêt.</p>
+<p data-v-9a5f8e1a><a href="/site/blog/2024/10/refonte-majeure-de-mon-site-web" data-v-9a5f8e1a>Renoir de <time datetime="2024-10" data-v-9a5f8e1a>2024</time></a>:
+Par contre, cette nouvelle mouture de mon site web fait en 2020, et terminé quatre
+ans plus tard (en 2024) a suivi l’ambition de séparer le contenu et le contenant
+en prenant soin de séparer les préoccupations.</p>
+<p data-v-9a5f8e1a>Sauf que j’utilise maintenant <abbr data-v-9a5f8e1a>ECMA</abbr>Script et Vue.js et du JavaScript natif
+comme des <a href="https://developer.mozilla.org/fr/docs/Web/API/Web_components/Using_custom_elements" rel="nofollow noopener noreferrer" target="_blank" title="Je veux bien écrire en Français des trucs de programmation, mais là la. C’est LAID!" data-v-9a5f8e1a><em data-v-9a5f8e1a>éléments <abbr data-v-9a5f8e1a>HTML</abbr> personnalisés</em></a>
+("<span lang="en" data-v-9a5f8e1a>Custom Elements</span>").</p>
+<p data-v-9a5f8e1a>Puis encore, je risque d’aller vers encore plus simple lorsque tout ce contenu sera bien migré.</p></div></rb-notice-box></div> <div class="document document--item z-30" data-v-9a5f8e1a><div data-wip="pages/blog/_year/_month/_slug.vue" class="title page-title lg:pr-64 mb-4 font-serif text-2xl italic" data-v-9a5f8e1a><h1 data-v-9a5f8e1a>Nouveau projet: Refonte de mon site en conservant WordPress comme back-office, mais Symfony2 / Doctrine2 / Twig pour générer les vues</h1></div> <div class="mt-0 mb-5 font-serif text-sm italic" data-v-9a5f8e1a><time datetime="2012-08-10" data-v-9a5f8e1a>
+        vendredi 10 août 2012
+      </time> <a href="https://renoirboulanger.com/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues/" lang="en" target="_blank" title="Canonical link, the URL it is meant to replace" class="canonical-link hidden" data-v-9a5f8e1a>
+        Canonical
+      </a></div> <div class="taxonomy mt-0 mb-5 taxonomy-hoverizable" data-v-9a5f8e1a><strong id="tags__318" class="taxonomy-label">
+    Tags
+  </strong> <!----></div> <div class="body mt-10" data-v-9a5f8e1a><!----> <div class="nuxt-content" data-v-9a5f8e1a data-v-9a5f8e1a><p data-v-9a5f8e1a data-v-9a5f8e1a>J'ai décidé de refaire mon site web. J'aime bien utiliser le backend de
+WordPress mais je n'aime pas utiliser ce qui y est fourni coté code pour faire
+le "frontend" d'un site web.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Il s'agit d'une première élaboration brute des concepts qui motivent mon choix
+d'implémentation.</p>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>Je suis en plein effort d'élaboration des requis et si vous voulez voir le
+<a href="/site/blog/2012/08/project-manifest-content-management-publishing-platform-to-implement-accessibility-semantic-markup-and-ease-web-publishing" data-v-9a5f8e1a>pendant rédigé en anglais, j'ai publié ici</a>.</p>
+<h3 id="but-ultime-des-fonctionnalités" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#but-ultime-des-fonctionnalit%C3%A9s" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>But ultime des fonctionnalités</h3>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Utiliser l'administration de WordPress pour gerer le contenu</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Avoir la latitude de Symfony2/Twig/Doctrine2 pour gerer le contenu e le code</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Aggreger le contenu provenant de d'autres sources (marqué favoris de Google
+reader, Tweets, status divers de d'autres services: forrst, github, geeklist,
+etc)</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Creer une libraire de macros Twig qui genere du HTML selon les formats de
+Schema.org</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Contribuer a un outil qui pourraitservir aux webmestres qui desirent utiliser
+WordPress mais qui veulent ce que Twig/Doctrine offre.</li>
+</ul>
+<h3 id="fonctionnalités-prévues" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#fonctionnalit%C3%A9s-pr%C3%A9vues" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Fonctionnalités prévues</h3>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Extraire, purifier/harmoniser le html, et convertir les billets de blog en
+format markdown (version cachée)</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Utilisation des billets format markdown comme cache</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Conversion markdown a html pour consultation</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Commit-push des billets format markdown dans repository git configurable</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Processus Migration données WordPress (galleries, commentaires) vers version
+markdown</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Suite de macros reutilisable au format schema.org qui n'est pas lié a la base
+de donné</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Conversion de format markdown avec annotations des medias, publication, lien
+canonical, etc)</li>
+</ul>
+<h3 id="lignes-guides-dun-cms-idéal" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#lignes-guides-dun-cms-id%C3%A9al" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Lignes guides d'un CMS idéal</h3>
+<ul data-v-9a5f8e1a data-v-9a5f8e1a>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Le contenu doit être libéré de son système de conteneur.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Le contenu doit être le plus vanille possible, le plus près possible du texte
+brut.</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>annotation dans le contenu (titre, lien, gras, italique) doit être écrit dans
+un format texte SEULEMENT (markdown, reStructured, Textile). Permet l'édition
+sans avoir a maîtriser toutes les nuances du balisage (markup html) qui est
+requis pour l'accessibilité, ou la sémantique</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Les éléments de contenus sont des blocs de HTML distincts du contenur qui
+l'affiche. Dans le sens que la page et le style doit être aussi flexible que
+possible et que l'intégrateur ne soit pas emêtré dans des syntaxes abstraites</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Le système doit permettre d'utiliser plusieurs fournisseurs de contenu (une
+base de donnée WordPress, Drupal, un repository Git, etc)</li>
+<li data-v-9a5f8e1a data-v-9a5f8e1a>Le système doit permettre de comprendre l'entité de contenu et générer
+automatiquement le bloc HTML sémantique approprié pour être affiché dans son
+conteneur</li>
+</ul>
+<h3 id="le-code" data-v-9a5f8e1a data-v-9a5f8e1a><a href="#le-code" aria-hidden="true" tabindex="-1" data-v-9a5f8e1a data-v-9a5f8e1a><span class="icon icon-link" data-v-9a5f8e1a data-v-9a5f8e1a></span></a>Le Code</h3>
+<p data-v-9a5f8e1a data-v-9a5f8e1a>J'utilise présentement mon implémentation en lisant la base de donnée WordPress
+de mon site, et utiliser Symfony2/Doctrine2/Twig pour le "frontend". <del data-v-9a5f8e1a data-v-9a5f8e1a>On peut
+voir la différence de vitesse d'exécution et le look entre
+<code data-v-9a5f8e1a data-v-9a5f8e1a>beta.renoirboulanger.com</code>, à l'inverse de la version hébergée sur le domaine
+non "<code data-v-9a5f8e1a data-v-9a5f8e1a>beta</code>"</del>. <ins data-v-9a5f8e1a data-v-9a5f8e1a>Nous ne pouvons voir, l’<abbr data-v-9a5f8e1a data-v-9a5f8e1a>URL</abbr> n’a
+<a href="https://web.archive.org/web/20121226050718/http://beta.renoirboulanger.com/" rel="nofollow noopener noreferrer" target="_blank" data-v-9a5f8e1a data-v-9a5f8e1a>pas si bien archivé sur le Internet Web Archive</a></ins></p>
+</div> <div class="clearfix" data-v-9a5f8e1a></div></div> <div class="text-md grid grid-cols-2 my-10" data-v-e0c1750e data-v-9a5f8e1a><div class="text-left" data-v-e0c1750e><a href="/site/blog/2012/08/resume-dune-discussion-et-notes-sur-ce-que-jaurai-aime-comprendre-plus-rapidement-lors-de-mon-apprentissage-symfony2-et-doctrine2" lang="fr-CA" class="hover:underline item-prev" data-v-e0c1750e>
+      Résumé d'une discussion et notes sur ce que j'aurai aimé comprendre plus rapidement lors de mon apprentissage Symfony2 et Doctrine2
+    </a></div> <div class="text-right" data-v-e0c1750e><a href="/site/blog/2012/08/my-answer-to-people-asking-whether-they-should-or-not-use-a-framework-on-their-programming-language" lang="fr-CA" class="hover:underline item-next" data-v-e0c1750e>
+      My answer to People asking whether they should or not use a framework on their programming language
+    </a></div></div></div></div></div></div></div></div></section></div></main> <div timezone="America/New_York" class="app-footer--component disposition-parent w-full bottom" data-v-94d2db4a><footer class="zone__sandwich__bottom container flex items-center justify-between p-10 mx-auto" style="position:relative" data-v-94d2db4a><dl class="contact items-item disposition-item" data-v-94d2db4a><dt class="mb-4 font-serif text-2xl" data-v-94d2db4a><a href="/site/contact" class="underline" data-v-94d2db4a>Contact</a></dt> <dd data-v-94d2db4a>Fascinated By The Open Web Platform</dd> <dd aria-errormessage="why-fou-de-la-pouitte" data-v-94d2db4a>
+        Send your remarks using
+        <em data-fou-de-la-pouitte title="Please type this manually" class="underline" data-v-94d2db4a><span id="why-fou-de-la-pouitte" class="sr-only" data-v-94d2db4a>
+            An email address written using CSS, apologies for obfuscating
+            this.
+          </span></em></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://mastodon.social/@renoirb" data-v-94d2db4a>
+          @renoirb@mastodon.social
+        </a></dd> <dd class="underline sr-only" data-v-94d2db4a><a rel="me" href="https://w3c.social/@renoirb" data-v-94d2db4a>
+          @renoirb@w3c.social
+        </a></dd> <dd class="font-mono" data-v-94d2db4a>v4.0.1-dev</dd> <span class="inline-flex" data-v-94d2db4a><button aria-label="Color Mode" class="hover:text-primary-500 focus:outline-none transition duration-150 ease-in-out rounded-md"><!----> <!----></button></span></dl> <div class="items-item disposition-item" data-v-94d2db4a><dl lang="fr-CA" class="see-also" data-v-94d2db4a><dt data-v-94d2db4a>Voir aussi…</dt> <dd data-v-94d2db4a><a href="/site/ligne-editoriale" data-v-94d2db4a> Ligne éditoriale </a></dd> <dd data-v-94d2db4a><a href="/site/projects" data-v-94d2db4a> Projets </a></dd> <dd data-v-94d2db4a><a href="/site/glossary" lang="en" data-v-94d2db4a> Glossary </a></dd> <dd data-v-94d2db4a><a href="/site/code-review" lang="en" data-v-94d2db4a>
+            Code-Review notes
+          </a></dd></dl></div></footer></div></div></div></div><script defer src="/site/_nuxt/static/1743910512/blog/2012/08/nouveau-projet-refonte-de-mon-site-en-conservant-wordpress-comme-back-office-mais-symfony2doctrine2twig-pour-generer-les-vues/state.js"></script><script src="/site/_nuxt/8ca6126.js" defer></script><script src="/site/_nuxt/1c0b1e2.js" defer></script><script src="/site/_nuxt/643194b.js" defer></script><script src="/site/_nuxt/b579a54.js" defer></script><script src="/site/_nuxt/8197f60.js" defer></script><script src="/site/_nuxt/4f6fc7e.js" defer></script><script src="/site/_nuxt/a42d236.js" defer></script><script src="/site/_nuxt/53143b1.js" defer></script>
+  </body>
+</html>
