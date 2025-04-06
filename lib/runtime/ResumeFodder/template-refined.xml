@@ -1275,6 +1275,25 @@
 							</w:r>
 						</w:p>
 						{{ end }}
+						{{ if .Basics.Label }}
+						<w:p wsp:rsidR="00F354C8" wsp:rsidRPr="00344245" wsp:rsidRDefault="00344245" wsp:rsidP="00F354C8">
+							<w:pPr>
+								<w:rPr>
+									<w:rFonts w:ascii="Cambria" w:h-ansi="Cambria"/>
+									<wx:font wx:val="Cambria"/>
+									<w:lang w:val="EN-CA"/>
+								</w:rPr>
+							</w:pPr>
+							<w:r wsp:rsidRPr="00344245">
+								<w:rPr>
+									<w:rFonts w:ascii="Cambria" w:h-ansi="Cambria"/>
+									<wx:font wx:val="Cambria"/>
+									<w:lang w:val="EN-CA"/>
+								</w:rPr>
+								<w:t>{{ html .Basics.Label }}</w:t>
+							</w:r>
+						</w:p>
+						{{ end }}
 						<w:p
 							wsp:rsidR="00F354C8"
 							wsp:rsidRPr="00F354C8"
@@ -1390,6 +1409,18 @@
 								</w:rPr>
 								<w:t>{{ html .Position }}</w:t>
 							</w:r>
+							{{ if or .remote .contract }}
+							<w:r wsp:rsidR="00344245" wsp:rsidRPr="00344245">
+								<w:rPr>
+									<w:rStyle w:val="SubtleEmphasis"/>
+									<w:b w:val="off"/>
+									<w:i w:val="off"/>
+									<w:sz w:val="16"/>
+									<w:sz-cs w:val="16"/>
+								</w:rPr>
+								<w:t>({{ if .remote }}remote{{ if .contract }}, contract{{ end }}{{ else }}{{ if .contract }}contract{{ end }}{{ end }})</w:t>
+							</w:r>
+							{{ end }}
 						</w:p>
 						{{ if .StartDate }}
 						<w:p
@@ -1409,7 +1440,7 @@
 									<w:sz-cs w:val="20" />
 								</w:rPr>
 								<w:t
-								>{{ html .StartDate | MMMMYYYY }} - {{ if .EndDate }}{{ html .EndDate | MMMMYYYY }}{{ else }}Present{{ end }}</w:t>
+								>{{ html .StartDate | formatDate "2006-01" }} - {{ if .EndDate }}{{ html .EndDate | formatDate "2006-01" }}{{ else }}Present{{ end }}</w:t>
 							</w:r>
 						</w:p>
 						{{ end }}
@@ -1533,7 +1564,7 @@
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
 								<w:t
-								>{{ html .StartDate | MMMMYYYY }}{{ if .EndDate }} – {{ html .EndDate | MMMMYYYY }}{{ end }}</w:t>
+								>{{ html .StartDate | formatDate "2006-01" }}{{ if .EndDate }} – {{ html .EndDate | formatDate "2006-01" }}{{ end }}</w:t>
 							</w:r>
 						</w:p>
 						{{ end }}
@@ -1883,7 +1914,7 @@
 								<w:spacing w:after="0" w:line="240" w:line-rule="auto" />
 							</w:pPr>
 							<w:r wsp:rsidRPr="00826FD0">
-								<w:t>{{ html .EndDate | MMMMYYYY }}</w:t>
+								<w:t>{{ html .EndDate | formatDate "2006-01" }}</w:t>
 							</w:r>
 						</w:p>
 												{{ if lt (plus1 $index) $numberOfEducation }}
