@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="fr-CA">
+  <head>
+    <meta charset=utf-8 />
+    <!-- meta http-equiv="refresh" content="5; url=../resume/as-code/" / -->
+    <title>Curriculum Vitæ ✪  Renoir Boulanger</title>
+    <link rel=stylesheet href="../assets/legacy-stuff/pre-2020-renoirboulanger-com.min.css" />
+
+    <script type="module">
+      /**
+       * #WIP-Mingle-CustomElements-From-ESM-Modules: Added on 2024-09-18 during migration.
+       */
+      import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+      import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
+      registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+    </script>
+
+    <style>
+
+      /* Far reaching ones */
+      body { line-height: 30px; font-size: 16px; }
+      li { line-height: 30px; }
+      .table li { line-height: 20px; }
+
+
+      /* Too much padding for the resume version of the main layout */
+      .resume .zone .zone-top { padding: 20px; }
+
+
+      /* Hopefully I won't get more spam than I already get */
+      [data-fou-de-la-pouitte]:after {
+        unicode-bidi:bidi-override;
+        direction: rtl;
+      }
+
+
+      /* Definition list, they all get no padding or margin adjustment. */
+      dt,
+      dd {
+        line-height: 24px;
+      }
+      dd + dt { margin-top: 16px; }
+      dd { margin-left: 0; }
+      /* /Definition list, they all get no padding... */
+
+
+      /* Page top warning */
+      .warn {
+        padding:10px;
+        background:#333;
+        color:#FFF;
+        font-size:0.9em;
+        content: "";
+        line-height:18px;
+      }
+      /* /Page top warning */
+
+
+      /* summary arrow replacement */
+      .details details summary::-webkit-details-marker {
+        /* Hide summary arrow at beginning.
+           Non blink/webkit browsers will have two arrows. */
+          display:none;
+      }
+      .details details summary:after {
+        content: "\25BA"; /* ► */
+        display: block;
+      }
+      .details details[open] summary:after { content: "\25BC"; /* ▼ */ }
+      .details details[open] summary { margin-left: -30px; }
+      .details details[open] { margin-left: 30px; }
+      .details details summary { cursor: zoom-in; }
+      .details details[open] { cursor: zoom-out; }
+      /* /summary arrow replacement */
+
+
+      /* Float dl on the right */
+      #summary dl,
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl {
+        float: right;
+        width: 45%;
+        margin: 0 0 20px 20px;
+        border-left: 1px dashed #ddd;
+        padding: 0 20px;
+      }
+      .detailed #work-experience dl,
+      .detailed #selected-projects dl  {
+        margin-top: -36px; /* Which is line-height of h1,h2,h3 */
+        padding-top: 0;
+      }
+      .detailed #work-experience details,
+      .detailed #selected-project details {
+        clear:none;
+      }
+      #work-experience section,
+      #selected-projects section {
+        overflow: hidden;
+      }
+      #work-experience section + section,
+      #selected-projects section + section {
+        border-top: 1px dashed #ddd;
+        margin-top: 10px;
+        padding-top: 10px;
+      }
+      /* /Float dl on the right */
+
+      /* On non detailed resume, compact things up */
+      .not-detailed section:not(#summary) dl { margin-top: -10px; }
+      .not-detailed section:not(#summary) dt:first-child { display:none; }
+      .not-detailed section:not(#summary) dt { float:left; padding-right: 10px; }
+      .not-detailed section:not(#summary) dt:after { content: ":   "; }
+      .not-detailed section:not(#summary) dd + dt { margin-top: 0 !important; }
+
+      /* On non detailed resume, remove line separator between sections */
+      .not-detailed #work-experience section + section,
+      .not-detailed #selected-projects section + section {
+        border-top: none !important;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      /* On non detailed resume, let's put experience in two columns */
+      .not-detailed #work-experience, .not-detailed #technologies { clear: both; }
+      .not-detailed #work-experience section {
+        float: left;
+        width: 50%;
+      }
+      .not-detailed #work-experience section:nth-child(2n+0) {
+        clear: left;
+      }
+
+      /* Adjust past-employers SVG logos to harmonize them visually */
+      #past-employers img {
+        max-height: 80px;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        opacity: 0.7;
+      }
+      #past-employers a:hover img {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+        opacity: 1;
+      }
+      #past-employers img[alt="Mozilla"] { max-height:57px; }
+      #past-employers img[alt="W3C"] { max-height:57px; }
+      #past-employers a:hover { background: none; }
+      #past-employers a + a {
+        margin-left: 4%;
+      }
+      #past-employers p {
+        text-align: center;
+      }
+      /* /Adjust past-employers SVG logos */
+
+      .label {
+        border-radius: 5px;
+      }
+
+
+      @media print {
+        @page {
+          margin: 1.1cm;
+        }
+
+        /* Hide some links location in print media */
+        a[href*="renoirboulanger"]:after,
+        a[href^="tel"]:after,
+        a[href^="/"]:after,
+        a[href^="#"]:after,
+        .no-print ,
+        .details .detailed summary:before {
+          display:none;
+        }
+
+        .details .detailed details:not([open]) summary:after {
+          content: "\25B7   (More details available online, you can expand this section if you load my resume in your Web browser)";
+          font-size: 0.8em;
+        }
+      }
+    </style>
+  </head>
+  <body class="page resume">
+    <header>
+        <div class="zone">
+            <div class="zone-tools container">
+                <div class="row">&nbsp;
+                    <!--nav class="span12">
+                        <ul class="nav nav-pills pull-right">
+                            <li><a href="http://feeds.feedburner.com/RenoirBoulanger"><i class="icon-rss"></i> RSS</a></li>
+                            <li class="tooltipify" title="Me rejoindre"><a href="/fr/me-joindre"><i class="icon-envelope"></i> Me joindre</a></li>
+                        </ul>
+                    </nav-->
+                </div>
+            </div>
+        </div>
+        <div class="zone">
+            <div class="zone-top container">
+                <div class="row">
+                    <div class="span4">
+                        <h1>
+                            <a href="https://renoirboulanger.com/">Renoir Boulanger</a>
+                        </h1>
+                    </div>
+                    <div class="span8 behavior-fade">
+                      <!-- Same margin and line-height as title, it's fine to tagsoup here I say. -->
+                      <p class="pull-right" style="font-size: 1.5em; font-weight: 100; margin: 10px 0px;">FULL-STACK-DEVELOPER &amp; DEVOPS ENGINEER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main" role="main" class="zone">
+      <div class="zone-content container">
+
+        <rb-notice-box
+          variant="warn"
+        >
+          <div slot="header">
+            <strong>
+              Version désuète
+            </strong>
+          </div>
+          <p>Cette version n’est plus entretenue depuis 2015. Je vous recommande de consulter la version <a href="../resume/as-code" lang="en">/resume/as-code</a>.</p>
+          <p lang="en">This version is currently outdated, refer to the <a href="../resume/as-code">/resume/as-code</a> version of my resume.</p>
+        </rb-notice-box>
+
+        <div class="wrap container" role="document">
+          <div class="content row">
+            <div class="main span12" role="main">
+              <div class=boxes>
+
+
+<h2><span id="availability">Disponibilité</span></h2>
+<p>Non-Disponible pour le moment. Date de renouvellement de contrat: Février 2016</p>
+<h2>Sommaire</h2>
+<ul>
+<li>Était <strong><em>en poste au sein du W3C</em></strong>, l’organisation internationale qui gère les normes pour les navigateurs web</li>
+<li>14 ans d’expérience professionnelle</strong> dans les Technologies de l’Information et du Web</li>
+<li>Expérience en <strong>design et entretien d’un “cloud” applicatif web complexe</strong> en utilisant les techniques de déploiement continu</li>
+<li>Certifié «&nbsp;Zend Certified Engineer&nbsp;» (<a href="https://web.archive.org/web/20160507192340/https://www.zend.com/en/yellow-pages/ZEND011184" data-href="https://www.zend.com/en/yellow-pages/ZEND011184">ZCE</a>) avec PHP 5.3</li>
+<li>Expérience dans la participation/livraison parmi plusieurs communautés de logiciels libres</li>
+<li>Grande familiarité avec les tendances et bonnes pratiques de développement web: HTML, CSS, Pré-processurs CSS (LESS, SASS, Compass), Outils de qualité, etc.</li>
+<li>Maintenu plusieurs sites, notamment pour; <a href="https://webplatform.github.io/">WebPlatform</a>, <a href="https://www.w3.org/webat25/">Web at 25</a> pour le symposium du 20e anniversaire du World Wide Web Consortium (W3C) (2014), l’<a href="https://uda.ca/">Union des Artistes</a> (2009), et la <a href="http://www.ville.sherbrooke.qc.ca/">Ville de Sherbrooke</a> (2005)</li>
+<li>Formation en <strong>accessibilité du web</strong> selon le <a href="http://www.w3.org/WAI/intro/wcag" title="Web Content Accessibility Guidelines">WCAG 1</a>, à l’Université de Montreal</li>
+<li>Réalisé plus de <strong>150 sites web</strong> entre 2002 et 2009</li>
+<li>Crée et maintenu mon propre «CMS»/générateur de site statique, fait en PHP 4 (2001-2007)</li>
+<li><strong>Conférencier d’occasion</strong> sur le thème des techniques de programmation web d’actualité</li>
+<li>Bilingue (anglais, français)</li>
+</ul>
+<h3>Forces</h3>
+<ul>
+<li><strong>Architecture de balisage HTML</strong>, conception de composantes HTML/CSS/JavaScript réutilisable</li>
+<li><strong>Passionné des bonnes pratiques en programmation et architecture d’applications web</strong></li>
+<li>Intégration web fidèle aux requis graphiques sur tous les navigateurs, de façon adaptative et «future friendly»</li>
+<li>Mise en place de processus d’automatisation incluant; <strong>Salt Stack</strong>, Cloud-Init, etc.</li>
+<li>Administration système GNU/Linux (utilisateur depuis 1998)</li>
+</ul>
+<h3>Outils et langages</h3>
+<h4>«Hotlist»</h4>
+<p>Outils de travail de prédilection couramment utilisés.</p>
+<ul>
+<li>Salt Stack</li>
+<li>Elastic Search</li>
+<li>Vagrant, Open Stack, Docker, Docker Compose</li>
+<li>BackboneJS, Underscore, Yeoman, Grunt, Bower, Gulp</li>
+</ul>
+<h4>Outils maîtrisés</h4>
+<ul>
+<li>PHP</li>
+<li>XML/HTML/CSS</li>
+<li>JavaScript/AJAX/UnderscoreJS</li>
+<li>MySQL/MariaDB et réplication</li>
+<li>Frameworks: Symfony2, RequireJS, BackboneJS, MediaWiki, Twitter Bootstrap, Html5Boilerplate</li>
+<li>Git, Gerrit</li>
+<li>vim, Sublime Text, Eclipse</li>
+<li>Linux Ubuntu, Debian, RedHat, Gentoo</li>
+</ul>
+<h4>Autres technologies déjà utilisés</h4>
+<ul>
+<li>HHVM</li>
+<li>Puppet</li>
+<li>PHP frameworks: symfony 1.x, Zend Framework, Kohana</li>
+<li>CMS: MediaWiki, Drupal, MODx</li>
+<li>Microsoft Access, Microsoft SharePoint</li>
+<li>Phabricator</li>
+<li>Apache Solr</li>
+<li>IBM WebSphere Datapower</li>
+<li>XSLT/XML</li>
+</ul>
+<h4>Code publié</h4>
+<p><a href="https://github.com/renoirb?tab=activity">profil GitHub</a>.</p>
+<h5>RoughDraft.js</h5>
+<p>RoughDraft est un outil qui permet de faire des maquettes HTML sans avoir a créer de contenu temporaire tels que des images, textes, et données utilisateur. Cet outil permet à l’intégrateur de se concentrer sur les gabarits HTML et comment y ajuster le style.</p>
+<p>Contributions:</p>
+<ul>
+<li>Générateur de noms de classes CSS dans un ordre prévisible</li>
+<li>Amélioration variés permettant d’utiliser l’outil sans avoir besoin d’appeler des services web extérieurs</li>
+</ul>
+<p><em>«Pull requests» sur GitHub</em>; <a href="https://github.com/ndreckshage/roughdraft.js/pull/9">#9</a>, <a href="https://github.com/ndreckshage/roughdraft.js/pull/14">#14</a></p>
+<h4>Mots clés</h4>
+<p>Web, DevOps, CSS, Preprocessors, Git, OOCSS, HTML5, MySQL, Responsive design, progressive enhancement, WCAG, A11y, Accessibility, Micro formats, RDF, Best practices, Linux, Open source software, WebSphere DataPower, Continuous Integration, Coutinuous builds, SNMP, nagios, NGINX, SMTP, SpamAssassin, Exim, QMail, Postfix</p>
+<hr>
+<h2>Experience de travail</h2>
+<h3>Developer Operations engineer <small><strong lang="en-CA" title="World Wide Web Consortium">W3C</strong>/<abbr title="Massachussets Institute of Technology" lang="en-CA">MIT</abbr>, <em>août 2013 - août 2015</em></small></h3>
+<p>Montreal, Quebec</p>
+<p>Assurer la stabilité, implanter de nouvelles fonctionnalités, améliorer les processus de gestion des serveurs,  et agent de liaison avec les communautés de logiciels libres pour le projet <a href="https://web.archive.org/web/20130115092509/http://www.webplatform.org/">WebPlatform.org</a>.</p>
+<ul>
+<li>Mise en place d’un portail d’authentification et Single Sign-On (“SSO”)</li>
+<li>Contribution a Mozilla Firefox Accounts pour l’utiliser comme système d’authentification</li>
+<li>Documentation de processus; e.g. <a href="https://webplatform.github.io/docs/WPD/Projects/SSO/OAuth2_handshake_process_in_a_few_cURL_calls">Vulgarisation des échanges du protocole OAuth2</a>, <a href="https://webplatform.github.io/docs/WPD/Projects/SSO/Adapt_Firefox_Accounts_for_WebPlatform">Analyse de tâche</a></li>
+<li>Déplacement de HPCloud à un cluster OpenStack privé de tous les serveurs</li>
+<li>Amélioration des scripts d’entretien Salt Stack; rendre possible plusieurs déploiements, et publication des scripts</li>
+<li>Mise en ligne du site <a href="https://www.w3.org/webat25/" data-orig-href="http://www.webat25.org">Web at 25</a></li>
+</ul>
+<h3>Programmeur web <small><strong>TEKsystems</strong>, <em>juin 2013 - août 2013</em></small></h3>
+<p>Montreal, Quebec</p>
+<p>Développement de modules JavaScript sur une application web de gestion de compte pour un organisme à l’international.</p>
+<ul>
+<li>Instauration d’outils d’entretien de code pour les autres dévelopeurs (Grunt, Uglify2, concat)</li>
+<li>Dévelopement de plusieurs modules: Communication AJAX, Communication API avec une couche ODAF existante</li>
+</ul>
+<h3>Programmeur web <small><strong>Ericsson</strong>, <em>février 2012 - juin 2013</em> (consultant)</small></h3>
+<p>Montreal Québec</p>
+<p>Concevoir une application web de gestion de demandes communiquant avec des services externes dispersés autour du monde.</p>
+<p>L’application devait tenir compte notamment; des fuseaux horaires, des avis par courriel, de fournir certains services qui avaient plusieurs fournisseurs/versions possibles, un système de tâches en arrière-plan, et de tâches planifiées.</p>
+<ul>
+<li>Conçu un module d’exposition en service web REST d’entités provenant de la base de donnée</li>
+<li>Enseigner les principes de la plateforme web, des standards, et outils et transferts de connaissances pour les employés permanents</li>
+<li>Conceptualisation de l’architecture logicielle, et le modèle («<strong>Domain Model</strong>»)</li>
+<li>Gestion des serveurs de tests, acceptation, production, et stations de travail avec <strong>Puppet</strong></li>
+<li>Migration des données lors des changements majeurs dans le modèle de donnée</li>
+</ul>
+<h4>Outils</h4>
+<p>Symfony2, Doctrine 2, Sublime Text 2, Git, LESS, Twitter Bootstrap, NodeJS, Puppet, Vagrant, jQuery, UnderscoreJS, Chef</p>
+<h3>Programmeur web, cofondateur <small><strong>Evocatio Solutions technologiques Inc.</strong>, <em>janvier 2010 - février 2012</em></small></h3>
+<p>Montreal, Québec</p>
+<p>J’ai participé au démarrage d’Evocatio et j’ai contribué à plusieurs projets avec de grands défis techniques. Pour quelques projets, nous avions augmenté notre équipe jusqu’à dix.</p>
+<p>Malheureusement je dois taire les noms de certains clients et les détails de leur projets car nous avons signé un contrat de non-divulgation.</p>
+<p>Voici une liste classée par thèmes des aspects auxquels j’ai participé:</p>
+<h4>Taches</h4>
+<ul>
+<li>Référence pour les normes du W3C/Accessibilité</li>
+<li>Développement («Frontend») d’interface utilisateur pour divers Jeux, et applications web</li>
+<li>Participation aux analyses et élaboration des requis</li>
+<li>Architecture de balisage en HTML/CSS modulaire instaurée dans tous les projets</li>
+</ul>
+<h4>Projets</h4>
+<p>Ma participation aux projets suivants inclut principalement l’intégration web.</p>
+<h5>Amigo</h5>
+<p>Intégration web et programmation d’une interface web communiquant a un backend SharePoint 2010 «form tracker» directement utilisant Visual Basic .NET</p>
+<h5>Advisor.ca version pour iPad</h5>
+<p>Application web mobile servant à conserver une copie sur l’appareil mobile des nouvelles du site pour lecture hors-ligne.</p>
+<ul>
+<li>Réalisé avec les technologies «HTML5», notamment le localStorage, les transitions, et effets CSS3</li>
+<li>Module servant à sérialiser les articles à partir des fils RSS</li>
+</ul>
+<p><a href="http://dundee.advisor.ca/">Visiter</a></p>
+<h5>Application «Echange de cadeaux»</h5>
+<p>Jeu en ligne d’échange de cadeaux en tant que carte de Noël interactive qui a été utilisé deux années de suite.</p>
+<p>Le jeu a été utilisé pendant deux ans, avec variantes dans les règles:</p>
+<ul>
+<li><em>2009</em>: 40 participants, 40 cadeaux, 9 chances. Voir l’article  sur mon <a href="https://renoirboulanger.com/blog/2010/02/realisation-dune-application-dechange-de-cadeau-avec-red-lagence">blogue l’article illustrant cette variante</a>.</li>
+<li><em>2010</em>: «<em>Échange pas très équitable</em>» (Gagnant Grenier d’Or). Un seul cadeau, devinez quel bas de Noël le contient, quatre indices, 9 chances.</li>
+</ul>
+<h5>Capital Magazine</h5>
+<p>Intégration de la version web du Magazine Canadian Capital avec WordPress. Le site est maintenant hors-ligne.</p>
+<h5>Buro de post</h5>
+<p>Une application web servant à envoyer des courriels aux membres de l’UDA</p>
+<ul>
+<li>Analyse des besoins systèmes: Syslog, Postfix, se désinscrire, suivi des messages ouverts, gestion des «bounces»</li>
+</ul>
+<h5>Refonte du site de l’UDA</h5>
+<p>Un projet qui a été étendu sur deux phases. En 2009 et en 2011. La première phase était de refaire, dans un très court délai, le site avec les fonctionnalités du site fait en .NET C#, en se montant une architecture qui nous permettrait d’ajouter de nouvelles fonctionnalités.</p>
+<p>Durant le temps ou j’ai participé, nous avons notamment:</p>
+<ul>
+<li>Moteur de recherche d’artiste sur multiples critères: couleur cheveux, instruments de musique, qualifications, etc.</li>
+<li>Moteur de recherche public indexant plusieurs types de documents: PDF,Microsoft Word, contenu des ententes collectives, et contenu provenant du CMS</li>
+<li>Les agents d’artistes peuvent proposer leur choix de candidats par courriel pour des auditions</li>
+<li>L’artiste a plus de contrôle sur les informations visibles selon le type d’utilisateurs: public, gérants, autres artistes</li>
+<li>Permettre aux artistes de s’inscrire aux avis de changements des ententes collectives qui les concernent</li>
+</ul>
+<p>Pendant la phase de 2011, nous avons profité de l’occasion pour instaurer symfony 1.x comme noyau et de remplacer le balisage XHTML par un nouveau balisage repensé en HTML5 créant une bibliothèque de composantes réutilisables.</p>
+<h4>Outils</h4>
+<p>WAI WCAG, Paper prototyping, Git, Balsamiq mockups, Adobe Photoshop, SMACSS, OOCSS, Twitter Bootstrap, Zurb Foundation, Apache Solr, Apache Tomcat, JavaScript, PHP, symfony 1.x, Atlassian Jira, Atlassian Confluence, HTML5Boilerplate, Netbeans, VirtualBox, Agile, Compass, SASS, SCSS, LESS, jQuery, HTML5, CSS3</p>
+<h3>Programmeur web <small><strong>Groupe Informatique TechSolCom Inc.</strong>,  <em>octobre 2006 - août 2009</em></small></h3>
+<p>Montreal, Québec</p>
+<h4>Taches</h4>
+<ul>
+<li>Entretenir l’image corporative de TechSolCom (2006-2009)</li>
+<li>Travailler en équipe avec les membres du groupe Expérience Utilisateur volet Accessibilité et intégration web</li>
+<li>Participation a la programmation des projets et conception de leur image de marque:</li>
+<li>Namminik (2008)</li>
+<li>TSCM, renommé plus tard Beebox (2007,2009)</li>
+<li>Quelques jeux facebook</li>
+</ul>
+<h4>Projets</h4>
+<h5>Site web de TechSolCom</h5>
+<ul>
+<li>Réalisé la version 2007 avec Géranium CMS</li>
+<li>Version 2009; Intégration attention particulière aux normes du <a href="http://www.w3.org/WAI/intro/wcag" title="Web Content Accessibility Guidelines">WCAG</a></li>
+</ul>
+<h5>Projet «Namminik»</h5>
+<p>Participation au développement en mode «Agile», comme intégrateur, et interaction designer</p>
+<p>Namminik est une application de gestion d’inventaire personnel construit en utilisant JSF (“Java Server Faces”), le front end utilisait YUI2.</p>
+<h5>Beebox</h5>
+<p>Beebox est un outil d’intégration continue. Il était distribué comme exécutable J2EE gratuitement et utilisé par les clients de TechSolCom.</p>
+<ul>
+<li>Intégration web en environnement IBM Rational et WebSphere Portal</li>
+<li>Élaboration de librairies de balisage utilisant <em>Struts</em></li>
+<li>Participation à la documentation du produit</li>
+<li>Conception du site (hors-ligne)</li>
+</ul>
+<h5>«SiteFinder»</h5>
+<p>Participation à l’élaboration d’une solution de géo-localisation de succursale pour iOS, notamment le Localisateur Desjardins. J’ai aussi participé à la conception interface web d’administration et quelques vues de rapports. L’outil a été notamment utilisé pour le «Localisateur Desjardins» (2009-2011).</p>
+<h4>Administration système</h4>
+<ul>
+<li>Géré plusieurs serveurs VMWare ESXi et VMware Server, ainsi que plusieurs machines virtuelles</li>
+<li>Instauration d’un système de surveillance des infrastructures et applications avec Nagios et le protocole SNMP</li>
+<li>Administration et tests d’<strong>Intégration SOA</strong> avec l’instance <strong>IBM DataPower</strong> allouée à la compagnie</li>
+<li>Crée un relai de courriels SMTP avec autres filtres</li>
+</ul>
+<h4>Consultation</h4>
+<p><strong>Jacob.ca</strong></p>
+<ul>
+<li>Outil de recherche de succursales</li>
+<li>Conception du schéma XML, des feuilles de style XSL pour consommation, et de clients JavaScript</li>
+<li>Formulaire «nous joindre» communiquant avec un API sur un serveur externe</li>
+</ul>
+<p><strong>Telefilm Canada</strong></p>
+<p>Intégration maquette Photoshop utilisant YUI2 pour deux applications internes</p>
+<h4>Outils</h4>
+<p>JSF, Struts, Agile, Ant, IBM WebSphere DataPower, Apache Tomcat, JDBC, SNMP, Maven2, Adobe Photoshop, WAI WCAG, Balsamiq mockups, XML, XSL, YUI2, Mootools, Debian Linux, RedHat Enterprise Linux, Confluence, Jira, jQuery, MySQL, JSON, WSDL, Subversion, CVS</p>
+<h3>Programmeur web <small><strong>Câble Axion Digitel Inc.</strong>,  <em>octobre 2005 - novembre 2006</em></small></h3>
+<p>Magog, Québec</p>
+<p>Câble Axion est une entreprise de distribution de service par câble. Leur réseau s’étend à partir de la région au sud de la Rive-Sud de Montreal et monte jusqu’en Beauce.</p>
+<h4>Projets</h4>
+<h5>Site web corporatif</h5>
+<ul>
+<li>Intégration maquette Photoshop</li>
+<li>Développement PHP + MySQL du CMS maison (basé sur <em>Géranium CMS</em>)</li>
+</ul>
+<h5>Entretien d’un outil de gestion de billets de service fait avec Microsoft Access</h5>
+<ul>
+<li>Génération automatisée d’une demande de service dans le presse-papier, pour envoi par courriel</li>
+<li>Outil de feuille de temps et rapports d’interventions</li>
+</ul>
+<h4>Outils</h4>
+<p>SVN, Subversion, MySQL, Adobe Photoshop, Microsoft Access</p>
+<h3>Programmeur web <small><strong>Inexis solution web Inc.</strong>, <em>février 2003 - novembre 2006</em> (Travailleur autonome)</small></h3>
+<p>Sherbrooke, Quebec</p>
+<p>Inexis solution web, était une entreprise de service de programmation et de services web. L’entreprise avait plusieurs agences de graphisme de la région de l’Estrie comme client et leur permettait d’offrir des services web sans avoir à entretenir leur propre département TI.</p>
+<ul>
+<li>Intégration web à partir des maquettes Photoshop</li>
+<li>Gestion de listes d’envois de courriels au nom des clients avec PHPList et quelques gabarits pour liste d’envoi</li>
+<li>Entretien du site de la Ville de Sherbrooke, du projet «Sherbrooke, Ville étudiante», de la MRC du Val-Saint-François, Mont Bellevue, Hydro-Sherbrooke</li>
+</ul>
+<h4>Applications web</h4>
+<h5>Geranium</h5>
+<ul>
+<li>«CMS Maison» (propriétaire) fait en PHP 4 et MySQL</li>
+<li>Module formatage du contenu avec syntaxe wiki</li>
+<li>Module génération de pages HTML statique et archives</li>
+<li>Module gestion de relations clients, renouvellement contrats</li>
+</ul>
+<h4>Consultation</h4>
+<h5>Callio Technologies</h5>
+<p>Intégrer vues rapports à imprimer qui devait être compatible à Internet Explorer 6</p>
+<h5>Evolubiz</h5>
+<p>Participer au dévelopement de quelques modules sous OSCommerce, et mettre à jour leur infrastructure de serveurs interne.</p>
+<h4>Outils</h4>
+<p>CVS, Subversion, MySQL, Adobe Photoshop, CSS, HTML, RedHat Linux 9</p>
+<hr>
+<h2>Divers</h2>
+<h3>Certifications <img style="float:right" src="../wp-content/themes/renoirb/assets/img/zce_logo.jpg" alt="Zend Certified Engineer PHP 5.3" lang="en" width="80" /></h3>
+<ul>
+<li><strong>2013</strong> <em>Zend Certified Engineer PHP 5.3</em> <a href="https://web.archive.org/web/20160507192340/https://www.zend.com/en/yellow-pages/ZEND011184">Certification link</a></li>
+<li><strong>2011</strong> <em>Cote de sécurité</em> validée par service <a href="http://www.tpsgc-pwgsc.gc.ca/comm/index-fra.html" title="Public Works and Government Services Canada">PWGSC</a>, requise pour les fournisseurs au Gouvernement fédéral</li>
+<li><strong>2007</strong> <em>IBM WebSphere DataPower</em> SOA Appliance (training)</li>
+<li><strong>2008</strong> <em>Accessibilité du web</em> (WCAG 1) à l’Institut Nazareth &amp; Louis Braille (Université de Montreal)</li>
+<li><strong>2004</strong> Linux System Administration General (Brainbench Individual certification)</li>
+</ul>
+<h3>Merites et honneurs</h3>
+<ul>
+<li><strong>2011 Prix Grenier d’Or</strong> catégorie Jeu et interactivité, pour l’application <em>Échange pas très équitable</em> <a href="http://agencered.ca/">RED l’agence</a></li>
+</ul>
+<h3>Implications</h3>
+<ul>
+<!--
+  https://github.com/webplatform/salt-states/commits/master/?author=renoirb
+-->
+<li><em>2013-…</em>, Contributeur WebPlatform Docs (voir <a href="https://github.com/webplatform/docs/commits/manual-edits/?author=renoirb">contributions dans la documentation</a>)</li>
+<li><em>2011-2013</em>, Membre du conseil d’administration W3Québec</li>
+<li><em>2010-2012</em>, fondateur événement hebdomadaire «devLAB Montreal»</li>
+<li><em>2010</em>, comité organisation Make Web Not War, pour la zone «code-fest», organisé par Microsoft</li>
+<li><em>2008-2010</em>, Chef d’unité (“Akela”), Scouts du canada</li>
+</ul>
+<h3>Publications</h3>
+<ul>
+<li>André Santanchè, (2013), chapitres traitant de «Markup architecture», «Events», et «Web Storage» dans  «<a href="http://dl.acm.org/citation.cfm?doid=2526188.2528541&amp;preflayout=flat">Mobile development using web technologies focusing on games</a>». <a href="http://www.acm.org/">ACM</a> library</li>
+<li>Conférence: <a href="https://speakerdeck.com/renoirb/comment-evaluer-la-qualite-dun-site-web-selon-les-techniques-dintegration-web-dactualite">Comment évaluer le niveau de qualité d’un site web selon les techniques d’intégration web d’actualité</a>, présenté au WebIn 2013, et au Web à Québec (WAQ) 2013</li>
+<li>Conférence: <a href="http://www.slideshare.net/renoirb/how-to-manage-a-big-scale-htmlcss-project">Comment gérer un projet grande échelle en HTML/CSS</a>, présenté au Make Web Not War 2011</li>
+<li><a href="http://www.webnotwar.ca/devlab-montreals-latest-developer-meetup/">devLAB: Montreal’s latest developer meetup</a> sur le site WebNotWar.ca</li>
+<li><a href="http://www.webnotwar.ca/traduction-libre-de-l-article-171-why-the-amp-is-microsoft-doing-all-this-187/">Traduction libre de l’article: Why Microsoft is doing all this</a> sur le site WebNotWar.ca</li>
+<li>Article o-écrit dans rezopointzero.ca: <a href="http://www.rezopointzero.com/2010/11/24/rien-quune-question-de-gros-bon-sens/">Logiciels libres en affaire</a></li>
+</ul>
+
+              </div><!-- /.boxes -->
+            </div><!-- /.main -->
+          </div><!-- /.content -->
+        </div><!-- /.wrap -->
+      </div><!-- end of .zone-content.container -->
+    </div><!-- end of #main.zone -->
+    <footer id="content-info" role="contentinfo">
+        <div class="zone">
+            <div class="zone-bottom container">
+                <div class="zone-bottom-padding">&nbsp;</div>
+            </div>
+        </div>
+    </footer>
+    <!--RBx script src="../js/main.js"></script-->
+    <style>[data-fou-de-la-pouitte]:after {content:"moc.regnaluobrioner\0040olleh";}</style>
+    <script>
+        function querySelectorApply(selectorString, closure) {
+          Array.prototype.slice.call(document.querySelectorAll(String(selectorString))).forEach(closure);
+        }
+        function openAllDetailsElements() {
+          querySelectorApply('details', function expandHTMLDetailsElement (HTMLDetailsElement){
+            HTMLDetailsElement.setAttribute('open','');
+          });
+        }
+        /**
+         * Make label looking tags and
+         * append as child to a QuerySelector friendly location
+         * in the DOM
+         */
+        function addLabelTo(text_or_array, qs, tag) {
+          var tagType = tag||'span',
+              tagElement = document.createElement(tagType),
+              whereSelector = document.querySelector(qs||'body'),
+              tagsTexts = [],
+              loopCounter = -1;
+          tagElement.setAttribute('class', 'label label-success');
+          if (!!text_or_array &&  text_or_array.constructor == String) {
+            tagsTexts = [text_or_array];
+          }
+          if (!!text_or_array && text_or_array.constructor == Array) {
+            tagsTexts = text_or_array;
+          }
+
+          while (++loopCounter < tagsTexts.length){
+            var newTag = tagElement.cloneNode(false);
+            newTag.textContent = String(tagsTexts[loopCounter]);
+            whereSelector.appendChild(newTag);
+          }
+        }
+        window.onload = function resumeOnloadHandler() {
+          var documentClassNames = document.getElementsByTagName('html')[0].getAttribute('class'),
+              bodyClassesNames = document.body.getAttribute('class');
+
+          /**
+           * Test if we’re reading the detailed resume or not. Add different className on body
+           **/
+          if (/detailed(\/|\.html)$/.test(window.location.pathname)) {
+            bodyClassesNames += ' detailed';
+            addLabelTo('Detailed resume', '.zone-top h1:first-child', 'sup');
+          } else {
+            bodyClassesNames += ' not-detailed';
+          }
+
+          /**
+           * Very minimal feature detect for details HTML5 tag
+           *
+           * Test for existence of details element
+           *     !!window.HTMLDetailsElement
+           * or like this
+           *     !!HTMLDetailsElement && document.querySelectorAll('details')[0].constructor.prototype.constructor === window.HTMLDetailsElement
+           */
+           if (!!window.HTMLDetailsElement === true) {
+             documentClassNames += ' details';
+           } else {
+             documentClassNames += ' no-details';
+           }
+           document.body.setAttribute('class', bodyClassesNames);
+           document.getElementsByTagName('html')[0].setAttribute('class', documentClassNames);
+        };
+    </script>
+  </body>
+</html>

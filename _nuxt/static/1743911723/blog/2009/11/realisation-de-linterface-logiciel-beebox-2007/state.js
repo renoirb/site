@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1743911723",layout:"default",error:null,serverRendered:a,routePath:"\u002Fblog\u002F2009\u002F11\u002Frealisation-de-linterface-logiciel-beebox-2007",config:{content:{dbHash:"4e522474"}},ssrRefs:{},colorMode:{preference:b,value:b,unknown:a}}}(true,"light"));

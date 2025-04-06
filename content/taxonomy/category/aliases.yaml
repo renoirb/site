@@ -1,0 +1,13 @@
+aliases:
+  - key: portfolio
+    to: projects
+  - key: logiciel-libre
+    to: open-source
+  - key: evenements
+    to: events
+  - key: fraude
+    to: fraud
+  - key: actualites
+    to: news
+  - key: salt-stack
+    to: salt
