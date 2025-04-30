@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-CA" class="layout--default zone__sandwich light-mode">
+  <head>
+    <meta charset="utf-8" />
+    <title>My curriculum vitæ - Renoir Boulanger</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex" />
+    <script type="importmap">
+      {
+        "imports": {
+          "https://renoirb.com/esm-modules/element-utils": "https://dist.renoirb.com/esm/own/element-utils/v0.1.0/browser.mjs",
+          "https://renoirb.com/esm-modules/context-api": "https://dist.renoirb.com/esm/own/context-api/v0.1.0/browser.mjs",
+          "@renoirb/app-layout-element": "https://dist.renoirb.com/esm/own/app-layout-element/v0.1.0/browser.mjs",
+          "@renoirb/notice-box-element": "https://dist.renoirb.com/esm/own/notice-box-element/v0.2.0/browser.mjs",
+          "@renoirb/work-experience-element": "https://dist.renoirb.com/esm/own/work-experience-element/v0.1.0/browser.mjs",
+          "@renoirb/value-date-element": "https://dist.renoirb.com/esm/own/value-date-element/v0.1.0/browser.mjs",
+          "@renoirb/context-api": "https://dist.renoirb.com/esm/own/context-api/v0.1.0/browser.mjs",
+          "@renoirb/element-utils": "https://dist.renoirb.com/esm/own/element-utils/v0.1.0/browser.mjs"
+        }
+      }
+    </script>
+    <script type="module">
+      import {
+        /*                                  */
+        ContextRequest_DateConversion,
+        assertIsDateConversionContextPayload,
+      } from '@renoirb/value-date-element'
+
+      import dayjs from 'https://cdn.skypack.dev/dayjs'
+      import 'https://cdn.skypack.dev/dayjs/locale/pt'
+      import weekday from 'https://cdn.skypack.dev/dayjs/plugin/weekday'
+      import customParseFormat from 'https://cdn.skypack.dev/dayjs/plugin/customParseFormat'
+      dayjs.extend(weekday)
+      dayjs.extend(customParseFormat)
+
+      /**
+       * From the client-side, and early in the document, we
+       * register handlers for each supported context-request data models
+       * and that's where we mount any dependencies
+       */
+      const dateConversionContextResponder = (event) => {
+        console.log('dateConversionContext', event)
+        if (event.context === ContextRequest_DateConversion) {
+          event.stopPropagation()
+          const host = event.contextTarget
+          const datetime = host.getAttribute('datetime')
+          const format = host.dataset.dateFormat || 'MMM D, YYYY'
+          const formatLocale = host.dataset.dateLocale || 'en'
+          if (datetime) {
+            const formatter = dayjs(datetime)
+            const unixEpoch = formatter.unix()
+            const isoString = formatter.toISOString()
+            const human = formatter
+              .locale(formatLocale)
+              .format(format, formatLocale)
+            const payload = { date: datetime, human, isoString, unixEpoch }
+            assertIsDateConversionContextPayload(payload)
+            event.callback(payload)
+          }
+        }
+      }
+      window.document.body.addEventListener(
+        'context-request',
+        dateConversionContextResponder,
+      )
+    </script>
+  </head>
+  <body>
+    <app-layout class="nuxt-content">
+      <div class="document document--item">
+        <div class="title page-title">
+          <h1>My curriculum vitæ</h1>
+        </div>
+        <div class="body">
+          <section>
+            <h2>Work Experience</h2>
+            <div id="work-experience">
+              <app-work-experience
+                workFor="GoTo Inc."
+                workForUrl="https://www.GoTo.com/"
+                workPosition="Staff Software Developer"
+                dateBegin="2021-01-01"
+                dateEnd="2022-05-01"
+              >
+                <p>
+                  Contributed to an established micro-frontend architecture
+                  based on Web Components and lit-element, helping teams
+                  leverage its framework-agnostic foundations. Provided
+                  technical guidance on native Web Platform capabilities,
+                  demonstrating how to maintain accessibility and performance
+                  while integrating with React, and other frameworks. Created
+                  documentation and working examples showing how to effectively
+                  use the existing component system across different technology
+                  stacks.
+                </p>
+              </app-work-experience>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div slot="top-right"></div>
+    </app-layout>
+
+    <script type="module">
+      import { AppLayoutAlphaElement } from '@renoirb/app-layout-element'
+      import { NoticeBoxElement } from '@renoirb/notice-box-element'
+      import { WorkExperienceElement } from '@renoirb/work-experience-element'
+      import {
+        ValueDateRangeElement,
+        BaseValueDateElement,
+      } from '@renoirb/value-date-element'
+      customElements.define('app-layout', AppLayoutAlphaElement)
+      customElements.define('app-notice', NoticeBoxElement)
+      customElements.define('app-work-experience', WorkExperienceElement)
+      customElements.define('value-date', BaseValueDateElement)
+      customElements.define('value-date-range', ValueDateRangeElement)
+    </script>
+
+    <script type="module" defer>
+      const JSONRESUME =
+        'https://renoirboulanger.com/files/resume/jsonresume-renoirb.json'
+      const request = new Request(JSONRESUME)
+      const response = await fetch(request)
+      const data = await response.json()
+      document.getElementById('work-experience').innerHTML = ''
+      const fragment = new DocumentFragment()
+      const { work = [] } = data
+      for (const experience of work) {
+        const {
+          company = '',
+          endDate = '',
+          startDate = '',
+          url,
+          position = '',
+          summary,
+          description,
+          hilights = [],
+        } = experience
+        const el = document.createElement('app-work-experience')
+        el.setAttribute('workFor', company)
+        el.setAttribute('workPosition', position)
+        el.setAttribute('dateBegin', startDate)
+        el.setAttribute('dateEnd', endDate)
+        if (url) {
+          el.setAttribute('workForUrl', url)
+        }
+        if (summary) {
+          el.innerHTML = `<p>${summary}</p>`
+        }
+        fragment.append(el)
+      }
+      document.getElementById('work-experience').appendChild(fragment)
+    </script>
+  </body>
+</html>
