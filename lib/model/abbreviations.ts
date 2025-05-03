@@ -134,6 +134,9 @@ const ABBREVIATION_TEXT = new Map<IAbbreviationName, string>([
   ],
   ['xml', 'eXtensible Markup Language'],
   ['yaml', 'YAML Ain’t Markup Language'],
+  ['jsx', '...'],
+  ['ui', ''],
+  ['', '']
 ])
 
 const createAbbreviateHtmlTagString: IAbbreviatize = (key: string): string => {
