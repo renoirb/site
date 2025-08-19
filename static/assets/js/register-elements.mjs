@@ -9,38 +9,62 @@
  * rel=#WIP-Mingle-CustomElements-From-ESM-Modules
  */
 
-import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
+import {
+  /*                    */
+  NoticeBoxElement,
+} from "@renoirb/notice-box-element";
+import ValueDateElement, {
+  ValueDateRangeElement,
+} from "@renoirb/value-date-element";
+import {
+  /*                    */
+  InlineNoteElement,
+} from "@renoirb/inline-note-element";
 
 const ELEMENTS = [
-  ['rb-notice-box', import('https://renoirb.com/esm-modules/notice-box-element.mjs')],
-]
+  {
+    name: "rb-notice-box",
+    element: NoticeBoxElement,
+  },
+  {
+    name: "value-date-range",
+    element: ValueDateRangeElement,
+  },
+  {
+    name: "value-date",
+    element: ValueDateElement,
+  },
+  {
+    name: "rb-inline-note",
+    element: InlineNoteElement,
+  },
+];
 
-const main = async ({ SITE_ROOT_BASE_URL = './' }) => {
-  await Promise.resolve()
+const main = async () => {
+  await import(
+    "https://dist.renoirb.com/esm/own/value-date-element/v0.5.0/example-context-api.mjs?setup&delay"
+  );
+  await Promise.resolve();
 
-  ELEMENTS.push(
-    ['rb-content-edit', import(`${SITE_ROOT_BASE_URL}esm-modules/element-content-edit/0.1.0/index.mjs`)],
-  )
+  const loaded = [];
+  const errored = [];
 
-  const loaded = []
-  const errored = []
-
-  ELEMENTS.forEach(async ([elementName, importator]) => {
-    const closature = await importator
-    try {
-      registerCustomElement(window, elementName, closature.default)
-      loaded.push(elementName)
-    } catch {
-      const message = `Element ${elementName} is already loaded`
-      console.warn(message)
-      errored.push(elementName)
+  for (const { name, element } of ELEMENTS) {
+    if (name && element) {
+      try {
+        customElements.define(name, element);
+        loaded.push(name);
+      } catch (e) {
+        console.error(`Failed to register ${name}`, e); // eslint-disable-line no-console
+        errored.push(name);
+      }
     }
-  })
+  }
 
   return {
     loaded,
     errored,
-  }
-}
+  };
+};
 
-export default main
+export default main;

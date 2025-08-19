@@ -63,11 +63,12 @@ script tag like the following:
 ```html
 <script type="module" defer>
   //
-  // Anything you might want. That's just something I've done.
+  // Anything you might want.
+  // Here, we're importing directly the entry point, but that can get messy quickly!
   //
-  import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
-  import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
-  registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+  import { NoticeBoxElement } from "https://dist.renoirb.com/esm/own/notice-box-element/v0.2.0/browser.mjs";
+  // Which, in this case will load the element from https://dist.renoirb.com/esm/own/notice-box-element/v0.2.0/src/browser/element.mjs
+  customElements.define("rb-notice-box", NoticeBoxElement);
 </script>
 ```
 
@@ -164,9 +165,8 @@ import { NuxtConfig } from '@nuxt/types'
 // ...
 
 const THE_SCRIPT_CONTENTS_STATIC_STRING = `
-import { registerCustomElement } from 'https://renoirb.com/esm-modules/element-utils.mjs'
-import NoticeBoxElement from 'https://renoirb.com/esm-modules/notice-box-element.mjs'
-registerCustomElement(window, 'rb-notice-box', NoticeBoxElement)
+import { NoticeBoxElement } from "https://dist.renoirb.com/esm/own/notice-box-element/v0.2.0/browser.mjs";
+customElements.define("rb-notice-box", NoticeBoxElement);
 `
 
 const main: NuxtConfig = {

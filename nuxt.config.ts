@@ -35,7 +35,10 @@ const main: NuxtConfig = {
   target: 'static',
   vue: {
     config: {
-      ignoredElements: [/^rb-/],
+      ignoredElements: [
+        /^rb-/ /* rel=#WIP-Mingle-CustomElements-From-ESM-Modules */,
+        /^value-date/ /* rel=#WIP-Mingle-CustomElements-From-ESM-Modules */,
+      ],
     },
   },
   /*
@@ -86,6 +89,10 @@ const main: NuxtConfig = {
       // <script src="https://myawesome-lib.js"></script>
       // { src: 'https://awesome-lib.js' },
       // https://vue-meta.nuxtjs.org/api/#script
+      {
+        src: './static-import-map.js',
+        vmid: 'load-from-static-slash-import-map',
+      },
       {
         src: './main.mjs',
         type: 'module',

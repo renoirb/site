@@ -1,4 +1,9 @@
 <template>
+  <!--
+    Historical Info:
+    This was before the file where I wrote first the rb-notice-box.
+    Now it's using https://github.com/renoirb/renoirb-esm-modules/
+  -->
   <rb-notice-box
     v-if="shouldBeVisible"
     :variant="alertType"
