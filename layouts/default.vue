@@ -1,35 +1,36 @@
 <template>
-  <div :class="{ 'layouts--default': true, 'is-side-bar-open': isOpen }">
-    <inline-svg
-      :src="require('~/assets/images/2235845.svg')"
-      width="1200"
-      height="1200"
-      style="
-        fill: var(--color-sandwich-left-splat-bg) !important;
-        position: fixed;
-        left: -580px;
-        z-index: -2;
-        top: 1%;
-        margin-top: -300px;
-      "
-      class="lg:visible z-10 invisible"
-    ></inline-svg>
-    <app-header class="top z-50" @side-bar-open="onOpen($event)" />
-    <div v-show="isOpen" class="fixed inset-0 z-40 transition-opacity">
-      <div class="absolute inset-0 bg-black opacity-75"></div>
+  <rb-app-layout>
+    <div slot="top-left">
+      <NuxtLink
+        to="/"
+        class="text-2xl font-semibold"
+        style="color: var(--color-sandwich-text); opacity: 1"
+        data-wip="From AppSideBar"
+      >
+        {{ appTitle }}
+      </NuxtLink>
     </div>
-    <main class="zone__sandwich__meat middle container z-40 mx-auto">
-      <div class="md:m-10 grid grid-cols-1 m-5" data-wip="layout/default.vue">
-        <nuxt />
-      </div>
+    <div slot="top-right" class="container flex items-center justify-between">
+      <NuxtLink
+        v-for="({ label, to }, index) of nav"
+        :key="`${label}--${index}`"
+        :to="to"
+        class="hover:opacity-100 opacity-80 hover:underline flex items-center p-3 px-4 py-2 mr-2 font-medium text-center rounded"
+      >
+        {{ label }}
+      </NuxtLink>
+    </div>
+    <main>
+      <nuxt />
     </main>
-    <app-footer v-bind="appIdentity" class="bottom" />
-  </div>
+    <app-footer slot="footer-left" v-bind="appIdentity" />
+  </rb-app-layout>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
   import {
+    appHeaderNav,
     fromNuxtContextToAppIdentity,
     fromPackageToAppIdentity,
     IAppIdentity,
@@ -38,7 +39,12 @@
     getColorModeClassName,
     /*                       */
   } from '~/lib'
+  import type {
+    IAppHeaderNavItems,
+    /*                       */
+  } from '~/lib'
   export interface Data {
+    nav: IAppHeaderNavItems[]
     appIdentity: IAppIdentity
     colorModeClassName: string
     pageTitle: string
@@ -62,7 +68,10 @@
         ...appIdentityFallback,
         ...appIdentityPicks,
       }
+      const appTitle = appIdentity?.name || 'Renoir B. - Blog'
       return {
+        appTitle,
+        nav: appHeaderNav,
         appIdentity,
         colorModeClassName,
         isOpen: false,
