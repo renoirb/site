@@ -5,6 +5,8 @@
  */
 (function () {
   const imports = {
+    "@renoirb/app-layout-element":
+      "http://localhost:8000/packages/app-layout-element/browser.mjs",
     "@renoirb/notice-box-element":
       "https://dist.renoirb.com/esm/own/notice-box-element/v0.2.0/browser.mjs",
     "@renoirb/value-date-element":
@@ -13,10 +15,16 @@
       "https://dist.renoirb.com/esm/own/inline-note-element/v0.2.0/browser.mjs",
     "@renoirb/context-api":
       "https://dist.renoirb.com/esm/own/context-api/v1.0.0/browser.mjs",
+    "@renoirb/jsonresume-utils":
+      "https://dist.renoirb.com/esm/own/jsonresume-utils/v0.1.0/core.mjs",
     "@renoirb/http-utils":
       "https://dist.renoirb.com/esm/own/http-utils/v0.1.0/browser.mjs",
+    "@renoirb/jsonresume-element":
+      "https://dist.renoirb.com/esm/own/jsonresume-element/v0.1.0/browser.mjs",
     "@renoirb/element-utils":
       "https://dist.renoirb.com/esm/own/element-utils/v0.4.0/browser.mjs",
+    "@renoirb/markdown-content-element":
+      "https://dist.renoirb.com/esm/own/markdown-content-element/v0.2.0/browser.mjs",
   };
   const importMap = document.createElement("script");
   importMap.type = "importmap";

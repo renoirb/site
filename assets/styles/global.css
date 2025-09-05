@@ -35,3 +35,7 @@ a[href^="https://web.archive.org/"]:after
   unicode-bidi:bidi-override;
   direction: rtl;
 }
+
+:not(:defined) {
+  display: none;
+}

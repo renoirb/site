@@ -11,6 +11,10 @@
 
 import {
   /*                    */
+  AppLayoutAlphaElement,
+} from "@renoirb/app-layout-element";
+import {
+  /*                    */
   NoticeBoxElement,
 } from "@renoirb/notice-box-element";
 import ValueDateElement, {
@@ -22,6 +26,10 @@ import {
 } from "@renoirb/inline-note-element";
 
 const ELEMENTS = [
+  {
+    name: "rb-app-layout",
+    element: AppLayoutAlphaElement,
+  },
   {
     name: "rb-notice-box",
     element: NoticeBoxElement,
